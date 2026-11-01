@@ -1,0 +1,3118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Wrestling Club | Olympic Lineage & Elite Wrestling in Hayward, CA</title>
+  <meta name="description" content="Hayward's premier Olympic wrestling, youth academy, and adult combat sports club. Founded by 1980 Moscow Olympian Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology). Claim your $15 3-day pass today.">
+  
+  <!-- Favicon / Fonts -->
+  <link rel="icon" type="image/png" href="../live_site_content/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "United Wrestling Club",
+    "alternateName": "UWC Hayward",
+    "url": "https://www.unitedwrestlingclub.com/",
+    "description": "Hayward's premier Olympic wrestling academy, youth scholastic training, and adult combat grappling. Founded by 1980 Moscow Olympian Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology).",
+    "logo": "https://www.unitedwrestlingclub.com/live_site_content/assets/logo.png",
+    "image": "https://www.unitedwrestlingclub.com/video_assets/stills_selected/still_06_dummy_takedown_drill.jpg",
+    "telephone": "(510) 303-4869",
+    "email": "unitedwrestlingclub@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30139 Industrial Pkwy SW Ste C",
+      "addressLocality": "Hayward",
+      "addressRegion": "CA",
+      "postalCode": "94544",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.6033,
+      "longitude": -122.0538
+    },
+    "areaServed": [
+      "Hayward",
+      "Union City",
+      "Fremont",
+      "Newark",
+      "Castro Valley",
+      "San Leandro"
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "16:30",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Karim Zemaryalai",
+      "jobTitle": "1980 Moscow Olympian & Founder"
+    },
+    "coach": {
+      "@type": "Person",
+      "name": "Naweed Zemaryalai",
+      "jobTitle": "Head Wrestling Coach & Kinesiologist"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "3-Day Mat Pass",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "3 consecutive wrestling practices, gear fitting, and coach assessment."
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Unlimited Academy Membership",
+        "price": "139.99",
+        "priceCurrency": "USD",
+        "description": "Unlimited weekly practices, Saturday open mat access, zero initiation fees, zero contracts."
+      },
+      {
+        "@type": "Offer",
+        "name": "Single Mat Drop-In",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "Single practice or Saturday open mat session."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       DESIGN TOKENS (Extracted from unitedwrestlingclub-com-DESIGN.md & Tokens)
+       ========================================================================== */
+    :root {
+      /* Brand Color System */
+      --color-primary: #902524;
+      --color-primary-hover: #a82e2d;
+      --color-primary-deep: #5e1515;
+      --color-primary-glow: rgba(144, 37, 36, 0.45);
+      --color-primary-subtle: rgba(144, 37, 36, 0.12);
+      
+      /* Pure Mat & Industrial Neutrals */
+      --color-canvas: #090a0d;
+      --color-canvas-rgb: 9, 10, 13;
+      --color-surface-base: #111318;
+      --color-surface-raised: #181b22;
+      --color-surface-hover: #222630;
+      --color-border: #232733;
+      --color-border-subtle: #191c24;
+      --color-border-accent: rgba(144, 37, 36, 0.35);
+
+      /* Typography Grays */
+      --color-text-bright: #ffffff;
+      --color-text-main: #f0f2f5;
+      --color-text-muted: #9fa6b2;
+      --color-text-dim: #646b7a;
+
+      /* Radii */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+      --radius-pill: 9999px;
+
+      /* Spacing & Typography */
+      --container-max: 1260px;
+      --section-pad: clamp(70px, 9vw, 130px);
+      --font-brand: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+    }
+
+    /* CSS Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: var(--color-canvas);
+      color: var(--color-text-main);
+      font-family: var(--font-brand);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      max-width: 100%;
+      position: relative;
+      font-size: 16px;
+    }
+
+    /* Typography & Orphan Prevention */
+    h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+    }
+
+    p, li, blockquote, .card-desc, .hero-subtitle, .section-lead, .safety-desc, .price-desc, .review-quote {
+      text-wrap: pretty;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(20px, 4vw, 40px);
+      padding-right: clamp(20px, 4vw, 40px);
+    }
+
+    /* Subtle Grit Texture Overlay */
+    .noise-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0);
+      background-size: 24px 24px;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.8;
+    }
+
+    /* ==========================================================================
+       TOP ANNOUNCEMENT / INFINITE SCROLLING TRUST MARQUEE
+       ========================================================================== */
+    .top-bar {
+      background-color: #07080a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      height: 34px;
+      min-height: 34px;
+      max-height: 34px;
+      padding: 0;
+      color: var(--color-text-muted);
+      position: relative;
+      z-index: 101;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      contain: paint;
+      width: 100%;
+      max-width: 100%;
+      user-select: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24px, #000 calc(100% - 24px), transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, #000 24px, #000 calc(100% - 24px), transparent 100%);
+    }
+
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marqueeScroll 32s linear infinite;
+    }
+
+    .top-bar:hover .marquee-track,
+    .top-bar:active .marquee-track,
+    .top-bar:focus-within .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marqueeScroll {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+    }
+
+    .marquee-item a,
+    .marquee-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(34, 197, 94, 0.16);
+      border: 1px solid rgba(34, 197, 94, 0.40);
+      cursor: pointer;
+      pointer-events: auto !important;
+      touch-action: manipulation;
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 20;
+    }
+
+    .marquee-item a:hover,
+    .marquee-link:hover,
+    .marquee-link:focus,
+    .marquee-link:active {
+      color: #ffffff;
+      background: rgba(34, 197, 94, 0.32);
+      border-color: #22c55e;
+      transform: translateY(-1px);
+    }
+
+    .marquee-divider {
+      color: rgba(255, 255, 255, 0.20);
+      user-select: none;
+      flex-shrink: 0;
+      font-size: 0.65rem;
+    }
+
+    .marquee-highlight {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .marquee-phone {
+      color: #ffffff;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+    }
+
+    .marquee-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(144, 37, 36, 0.25);
+      border: 1px solid rgba(144, 37, 36, 0.45);
+      color: #ff8584;
+      font-size: 0.64rem;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+    }
+
+    .dot-pulse {
+      width: 7px;
+      height: 7px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+      animation: dotPulse 2.2s infinite ease-in-out;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    @keyframes dotPulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
+      }
+      50% {
+        opacity: 0.45;
+        transform: scale(0.85);
+        box-shadow: 0 0 3px rgba(34, 197, 94, 0.25);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+        overflow-x: auto;
+      }
+    }
+
+    /* ==========================================================================
+       STICKY NAVIGATION WITH OFFICIAL EMBLEM
+       ========================================================================== */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: rgba(7, 8, 10, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      z-index: 100;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      gap: 16px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      max-width: 48px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 8px rgba(144, 37, 36, 0.35));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+    }
+
+    .nav-brand:hover .brand-logo-img {
+      transform: scale(1.05);
+      filter: drop-shadow(0 3px 14px rgba(144, 37, 36, 0.55));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    .brand-name {
+      font-family: var(--font-brand);
+      font-size: 0.98rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.15;
+      color: #ffffff;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      font-family: var(--font-brand);
+      font-size: 0.60rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #902524;
+      text-transform: uppercase;
+      margin-top: 2px;
+      line-height: 1;
+      display: block;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .nav-link {
+      font-family: var(--font-brand);
+      font-size: 0.77rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #9FA6B2;
+      text-decoration: none;
+      position: relative;
+      padding: 6px 0;
+      display: inline-block;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #ffffff;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #902524;
+      border-radius: 1px;
+      transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffffff;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.80rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.2s ease;
+    }
+
+    .nav-phone:hover {
+      color: #a82e2d;
+    }
+
+    .nav-phone svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      color: #902524;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-phone:hover svg {
+      transform: rotate(-6deg) scale(1.1);
+      color: #a82e2d;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 14px 26px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      text-align: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Sleek CTA Button inside Navigation */
+    .site-nav .btn,
+    .btn.btn-nav-cta {
+      background: linear-gradient(135deg, #a82e2d 0%, #902524 50%, #761d1c 100%);
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 3px 12px rgba(144, 37, 36, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      white-space: nowrap;
+      flex-shrink: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      height: 42px;
+      min-height: 42px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .site-nav .btn:hover,
+    .btn.btn-nav-cta:hover {
+      background: linear-gradient(135deg, #b83332 0%, #a02928 50%, #82201f 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 20px rgba(144, 37, 36, 0.65), 0 0 16px rgba(144, 37, 36, 0.4);
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .site-nav .btn:active,
+    .btn.btn-nav-cta:active {
+      transform: scale(0.97);
+      box-shadow: 0 1px 6px rgba(144, 37, 36, 0.4);
+    }
+
+    .btn-text-mobile {
+      display: none;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 18px var(--color-primary-glow);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(144, 37, 36, 0.6);
+    }
+
+    .btn-outline {
+      background-color: rgba(255, 255, 255, 0.04);
+      color: var(--color-text-bright);
+      border: 1px solid var(--color-border);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: var(--color-text-muted);
+      transform: translateY(-2px);
+    }
+
+    .btn-accent-glow {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-accent-glow::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .btn-accent-glow:hover::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ==========================================================================
+       HERO SECTION WITH 1080P VIDEO & GRUNGE TEXTURE OVERLAY
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      min-height: 680px;
+      max-height: 840px;
+      display: flex;
+      align-items: center;
+      padding: 60px 0 70px;
+      background-color: #060709;
+      border-bottom: 1px solid var(--color-border);
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 38%;
+      filter: brightness(0.42) contrast(1.15) saturate(1.1);
+    }
+
+    /* Unsplash Grunge 001 Texture Overlay */
+    .hero-grunge-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../unsplash-grunge-001.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: overlay;
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hero-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at 25% 45%, rgba(9, 10, 13, 0.6) 0%, rgba(9, 10, 13, 0.94) 75%),
+                  linear-gradient(180deg, rgba(9, 10, 13, 0.3) 0%, rgba(9, 10, 13, 0.98) 100%);
+      z-index: 2;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-content {
+      max-width: 820px;
+    }
+
+    .hero-body-block {
+      display: block;
+    }
+
+    /* Universal No-Wrap & Box Sizing on All Pill Badges */
+    .hero-badge-strip,
+    .hero-badge-strip span,
+    .trial-callout-pill,
+    .trial-callout-pill span,
+    .trial-callout-pill strong,
+    .card-badge,
+    .coach-role-tag,
+    .featured-tag {
+      white-space: nowrap !important;
+    }
+
+    .hero-badge-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      background: rgba(144, 37, 36, 0.16);
+      border: 1px solid var(--color-border-accent);
+      border-radius: var(--radius-pill);
+      margin-bottom: 24px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hero-badge-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ff5252;
+    }
+
+    .hero-badge-divider {
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    .hero-badge-location {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6.2vw, 4.6rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 22px;
+    }
+
+    .hero-title span.crimson {
+      color: #ba1c1c;
+      text-shadow: 0 0 30px rgba(186, 28, 28, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      margin-bottom: 36px;
+      max-width: 700px;
+    }
+
+    .hero-subtitle strong {
+      color: var(--color-text-bright);
+      font-weight: 600;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .trial-callout-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 18px;
+      background: rgba(18, 20, 26, 0.85);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+    }
+
+    .trial-price {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #ffffff;
+      font-family: var(--font-mono);
+      line-height: 1;
+    }
+
+    .trial-desc {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.75rem;
+      line-height: 1.25;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .trial-desc strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .hero-phone-direct {
+      margin-top: -32px;
+      margin-bottom: 38px;
+    }
+
+    .hero-phone-direct-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #9FA6B2;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .hero-phone-direct-link:hover {
+      color: #ffffff;
+    }
+
+    .hero-phone-direct-link svg {
+      color: #ff5e5d;
+      flex-shrink: 0;
+    }
+
+    .hero-phone-direct-link .hero-phone-num {
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    /* Trust Pill Bar inside Hero - Exact 4 Columns to Prevent Orphans */
+    .hero-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      max-width: 820px;
+    }
+
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proof-stat {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: var(--color-text-bright);
+      letter-spacing: -0.02em;
+      font-family: var(--font-mono);
+      line-height: 1.1;
+    }
+
+    .proof-stat span {
+      color: var(--color-primary);
+    }
+
+    .proof-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       PHYSICAL FACILITY & LOCAL FOOTPRINT BAR - Balanced 3 Columns
+       ========================================================================== */
+    .facility-bar {
+      background-color: var(--color-surface-base);
+      border-bottom: 1px solid var(--color-border);
+      padding: 24px 0;
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .fac-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .fac-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    .fac-text-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-bright);
+    }
+
+    .fac-text-sub {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    .fac-text-sub a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       SECTION HEADINGS & UTILITIES
+       ========================================================================== */
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.8vw, 2.9rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+      max-width: 640px;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       PROGRAM SILOS SECTION - Exact 4 Columns to Prevent Orphan Cards
+       ========================================================================== */
+    .programs-section {
+      padding: var(--section-pad) 0;
+      background-color: var(--color-canvas);
+      position: relative;
+    }
+
+    .programs-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    /* Balanced 4-column desktop grid: 0 orphans */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .program-card {
+      background-color: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .program-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(144, 37, 36, 0.45);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 20px rgba(144, 37, 36, 0.2);
+    }
+
+    .card-media {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+      background-color: #1a1c22;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .program-card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(9, 10, 13, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .card-body {
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.22rem;
+      font-weight: 800;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      padding-top: 16px;
+      border-top: 1px solid var(--color-border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-link {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-link:hover {
+      color: var(--color-primary);
+    }
+
+    /* ==========================================================================
+       OLYMPIC PEDIGREE & COACHING MOAT SECTION - Textured with Unsplash Grunge
+       ========================================================================== */
+    .lineage-section {
+      padding: var(--section-pad) 0;
+      background-color: #0b0d11;
+      background-image: linear-gradient(180deg, rgba(11, 13, 17, 0.94) 0%, rgba(11, 13, 17, 0.98) 100%), url('../unsplash-grunge-001.jpg');
+      background-size: cover;
+      background-position: center;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    .lineage-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: clamp(40px, 6vw, 70px);
+      align-items: center;
+    }
+
+    .lineage-visual {
+      position: relative;
+    }
+
+    .lineage-frame {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background-color: var(--color-surface-base);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .lineage-frame img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .lineage-floating-badge {
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+      background: var(--color-surface-raised);
+      border: 1px solid var(--color-primary);
+      padding: 16px 22px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .floating-badge-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .floating-badge-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .floating-badge-year {
+      font-size: 1.6rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .floating-badge-text {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-primary);
+      margin-top: 3px;
+    }
+
+    .lineage-editorial {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .coach-roster {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .coach-card-line {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(17, 19, 24, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--color-primary);
+    }
+
+    .coach-info-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .coach-role-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      background: rgba(144, 37, 36, 0.2);
+      color: #ff6b6b;
+      border-radius: 3px;
+    }
+
+    .coach-info-bio {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      margin-top: 6px;
+    }
+
+    /* ==========================================================================
+       FACILITY SAFETY & PARENT ASSURANCE BLOCK - Exact 4 Columns: 0 Orphans
+       ========================================================================== */
+    .safety-section {
+      padding: var(--section-pad) 0;
+      background-color: var(--color-canvas);
+    }
+
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 48px;
+    }
+
+    .safety-card {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      padding: 28px 24px;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .safety-num {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .safety-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .safety-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       MEMBERSHIP & PRICING TRANSPARENCY - Balanced 3 Columns: 0 Orphans
+       ========================================================================== */
+    .pricing-section {
+      padding: var(--section-pad) 0;
+      background-color: #0b0c10;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 48px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      background: linear-gradient(180deg, #181b24 0%, #111319 100%);
+      border: 2px solid var(--color-primary);
+      box-shadow: 0 12px 40px rgba(144, 37, 36, 0.25);
+      transform: scale(1.02);
+    }
+
+    .featured-tag {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+
+    .price-name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .price-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+      min-height: 40px;
+    }
+
+    .price-figure {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .price-val {
+      font-size: 2.8rem;
+      font-weight: 900;
+      font-family: var(--font-mono);
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .price-period {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-text-dim);
+      text-transform: uppercase;
+    }
+
+    .price-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+      flex-grow: 1;
+    }
+
+    .price-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--color-text-main);
+    }
+
+    .feature-check {
+      color: #22c55e;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       COMMUNITY PROOF & REAL TEAM ROSTER PHOTO
+       ========================================================================== */
+    .community-section {
+      padding: var(--section-pad) 0;
+      background-color: var(--color-canvas);
+    }
+
+    .roster-banner {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      margin-top: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .roster-banner img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: contrast(1.1) brightness(0.9);
+    }
+
+    .roster-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px;
+      background: linear-gradient(180deg, transparent 0%, rgba(9, 10, 13, 0.95) 85%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .roster-overlay-text {
+      max-width: 600px;
+    }
+
+    .roster-overlay-title {
+      font-size: 1.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .roster-overlay-sub {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Reviews Grid - Balanced 3 Columns */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .review-card {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .review-stars {
+      color: #f59e0b;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .review-quote {
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: var(--color-text-main);
+      margin-bottom: 18px;
+      flex-grow: 1;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--color-border-subtle);
+      padding-top: 14px;
+    }
+
+    .author-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--color-primary-deep);
+      border: 1px solid var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: #ffffff;
+    }
+
+    .author-info-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .author-info-city {
+      font-size: 0.74rem;
+      color: var(--color-text-dim);
+    }
+
+    /* ==========================================================================
+       FAQ ACCORDION
+       ========================================================================== */
+    .faq-section {
+      padding: var(--section-pad) 0;
+      background-color: #0b0d11;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .faq-container {
+      max-width: 860px;
+      margin: 40px auto 0;
+    }
+
+    .faq-item {
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-base);
+      border-radius: var(--radius-sm);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 22px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .faq-toggle {
+      font-size: 1.4rem;
+      color: var(--color-primary);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 26px 22px;
+      font-size: 0.94rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      display: none;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* ==========================================================================
+       PRE-FOOTER CALL TO ACTION BANNER - Textured with Unsplash Grunge
+       ========================================================================== */
+    .cta-banner {
+      padding: clamp(60px, 8vw, 100px) 0;
+      background: linear-gradient(135deg, rgba(17, 19, 26, 0.94) 0%, rgba(27, 14, 14, 0.92) 50%, rgba(9, 10, 13, 0.96) 100%), url('../unsplash-grunge-001.jpg');
+      background-size: cover;
+      background-position: center;
+      border-top: 1px solid var(--color-border-accent);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .cta-banner-title {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .cta-banner-sub {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      margin-bottom: 34px;
+    }
+
+    /* ==========================================================================
+       COMPREHENSIVE FOOTER & LOCAL NAP
+       ========================================================================== */
+    .site-footer {
+      background-color: #060709;
+      padding: 70px 0 30px;
+      font-size: 0.88rem;
+      color: var(--color-text-dim);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-col-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-nap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid var(--color-border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.78rem;
+    }
+
+    /* ==========================================================================
+       NATIVE 1-CLICK TRIAL MODAL (HIGH-CONVERTING INTAKE)
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(5, 6, 8, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: var(--color-surface-raised);
+      border: 1px solid var(--color-border);
+      border-top: 4px solid var(--color-primary);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-width: 520px;
+      padding: 36px 32px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(144, 37, 36, 0.25);
+      transform: translateY(20px) scale(0.97);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-overlay.open .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--color-text-muted);
+      border-radius: 50%;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .modal-close:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .modal-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .modal-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .modal-title {
+      font-size: 1.45rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .modal-sub {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-bright);
+      margin-bottom: 6px;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      background: var(--color-canvas);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 0.92rem;
+      color: #ffffff;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px rgba(144, 37, 36, 0.25);
+    }
+
+    .modal-success-state {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-icon {
+      font-size: 3rem;
+      color: #22c55e;
+      margin-bottom: 12px;
+    }
+
+    .desktop-only {
+      display: inherit;
+    }
+    .subtitle-mobile {
+      display: none;
+    }
+    .mobile-proof-band {
+      display: none;
+    }
+
+    /* Responsive Grid Controls to Prevent Layout Orphans */
+    @media (max-width: 1220px) {
+      .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 1240px) {
+      .nav-links {
+        gap: 15px;
+      }
+      .nav-link {
+        font-size: 0.74rem;
+      }
+      .nav-actions {
+        gap: 12px;
+      }
+      .nav-phone {
+        font-size: 0.78rem;
+      }
+      .site-nav .btn,
+      .btn.btn-nav-cta {
+        padding: 9px 14px;
+        font-size: 0.74rem;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .nav-links {
+        gap: 12px;
+      }
+      .nav-link {
+        font-size: 0.72rem;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .lineage-layout {
+        grid-template-columns: 1fr;
+      }
+      .lineage-frame img {
+        height: 380px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header nav {
+        display: none !important;
+      }
+      .desktop-only {
+        display: none !important;
+      }
+      .subtitle-full {
+        display: none !important;
+      }
+      .subtitle-mobile {
+        display: inline !important;
+      }
+      .mobile-proof-band {
+        display: block;
+        background: #08090c;
+        border-bottom: 1px solid var(--color-border);
+        padding: 24px 0;
+      }
+      .mobile-proof-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 20px;
+      }
+
+      /* 1. Drop brand text on mobile so only clean emblem mark shines */
+      .brand-text {
+        display: none !important;
+      }
+      .brand-logo-img {
+        height: 42px;
+        width: auto;
+        max-width: 46px;
+      }
+      .nav-inner {
+        height: 64px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .nav-actions {
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* 2. Hide call icon from sticky nav on mobile (prominently clickable in top marquee) */
+      .nav-phone {
+        display: none !important;
+      }
+
+      /* 3. Bold, prominent mobile Nav CTA */
+      .site-nav .btn,
+      .btn.btn-nav-cta {
+        height: 38px;
+        min-height: 38px;
+        padding: 0 16px;
+        font-size: 0.80rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        box-shadow: 0 3px 12px rgba(144, 37, 36, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        white-space: nowrap;
+      }
+      .btn-text-full {
+        display: none !important;
+      }
+      .btn-text-mobile {
+        display: inline !important;
+      }
+
+      /* 4. Mobile Hero - Center Video Clearance Layout */
+      .hero-section {
+        min-height: calc(100svh - 98px);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 !important;
+        position: relative;
+        border-bottom: 1px solid var(--color-border);
+        box-sizing: border-box;
+      }
+      .hero-container {
+        width: 100%;
+        min-height: calc(100svh - 98px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 55px; /* ~60px from the top within the hero border */
+        padding-bottom: 55px; /* ~60px to the bottom within the hero border */
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: calc(100svh - 98px - 110px);
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+      }
+      .hero-badge-strip {
+        align-self: flex-start;
+        margin: 0;
+        font-size: 0.72rem;
+        padding: 6px 14px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      }
+      .hero-body-block {
+        width: 100%;
+        margin-top: auto; /* Drops H1, subtitle, and CTA down to the bottom */
+        padding-top: 36px;
+      }
+      .hero-title {
+        font-size: clamp(2.1rem, 9.2vw, 2.75rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+      }
+      .hero-subtitle {
+        font-size: clamp(0.92rem, 3.8vw, 1.04rem);
+        line-height: 1.48;
+        color: #e2e8f0;
+        margin-bottom: 22px;
+        max-width: 95%;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      }
+      .hero-cta-group {
+        display: block;
+        width: 100%;
+        max-width: 340px;
+        margin-bottom: 0;
+      }
+      .hero-cta-group .btn.btn-primary {
+        width: 100%;
+        height: 50px;
+        min-height: 50px;
+        padding: 0 20px;
+        font-size: 0.90rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 24px rgba(186, 28, 28, 0.6), 0 0 20px rgba(186, 28, 28, 0.4);
+      }
+      .hero-video {
+        filter: brightness(0.78) contrast(1.12) saturate(1.15) !important;
+        object-position: center 36% !important;
+      }
+      .hero-grunge-overlay {
+        opacity: 0.05 !important;
+      }
+      /* Center clearance scrim: completely open center for takedown video visibility */
+      .hero-scrim {
+        background: linear-gradient(
+          180deg,
+          rgba(9, 10, 13, 0.50) 0%,
+          rgba(9, 10, 13, 0.12) 18%,
+          rgba(9, 10, 13, 0.02) 45%,
+          rgba(9, 10, 13, 0.45) 70%,
+          rgba(9, 10, 13, 0.95) 100%
+        ) !important;
+      }
+
+      /* Grids and Section Headings */
+      .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .card-badge {
+        font-size: 0.62rem;
+        padding: 3px 7px;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+      }
+      .safety-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Pricing Grid & Card Responsive Hygiene: Zero Card Orphans, Zero Blowout */
+      .pricing-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .pricing-card {
+        padding: 28px 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pricing-card.featured {
+        transform: none !important;
+      }
+      .pricing-card .btn {
+        width: 100% !important;
+        padding: 14px 16px !important;
+        font-size: 0.85rem !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Roster Banner Mobile */
+      .roster-banner img {
+        height: 280px;
+        object-position: center 25%;
+      }
+      .roster-overlay {
+        padding: 20px 16px;
+        gap: 12px;
+      }
+      .roster-overlay-title {
+        font-size: 1.25rem;
+      }
+      .roster-overlay-sub {
+        font-size: 0.82rem;
+      }
+      .roster-overlay .btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Pre-Footer CTA Banner Mobile */
+      .cta-banner .btn,
+      .cta-banner-btn {
+        width: 100% !important;
+        max-width: 360px !important;
+        padding: 16px 20px !important;
+        font-size: 0.88rem !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+      }
+
+      /* Modal Mobile Hygiene */
+      .modal-card {
+        padding: 26px 18px !important;
+        width: 92% !important;
+        max-width: 480px !important;
+        margin: 16px auto !important;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      /* Tighten container padding for clean mobile edges */
+      .container {
+        padding-left: clamp(14px, 4vw, 24px);
+        padding-right: clamp(14px, 4vw, 24px);
+      }
+
+      /* Pills: Strict Zero Line Breaks */
+      .hero-badge-strip {
+        display: inline-flex;
+        align-items: center;
+        padding: 3px 8px;
+        gap: 5px;
+        margin-bottom: 12px;
+        white-space: nowrap;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .hero-badge-tag {
+        font-size: clamp(0.48rem, 1.8vw, 0.60rem);
+        letter-spacing: 0.03em;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .hero-badge-divider {
+        font-size: 0.50rem;
+        opacity: 0.35;
+        white-space: nowrap;
+      }
+      .hero-badge-location {
+        font-size: clamp(0.46rem, 1.7vw, 0.58rem);
+        letter-spacing: 0.01em;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-badge-strip {
+        padding: 3px 6px;
+        gap: 4px;
+      }
+      .hero-badge-tag {
+        font-size: 0.48rem;
+        letter-spacing: 0.02em;
+      }
+      .hero-badge-location {
+        font-size: 0.46rem;
+        letter-spacing: 0em;
+      }
+      .nav-inner {
+        gap: 6px;
+      }
+      .nav-actions {
+        gap: 6px;
+      }
+      .site-nav .btn,
+      .btn.btn-nav-cta {
+        padding: 0 10px;
+        font-size: 0.72rem;
+      }
+    }
+  
+    .fac-icon-svg {
+      width: 22px;
+      height: 22px;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .footer-social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-muted);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .footer-social-link:hover {
+      color: #ffffff;
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(144, 37, 36, 0.4);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="noise-bg"></div>
+
+  <!-- 1. Top Local Sanctioning & Schedule Marquee -->
+  <aside class="top-bar" aria-label="Sanctioning, schedule, and facility announcements">
+    <div class="marquee-track">
+      <!-- Sequence A -->
+      <div class="marquee-group">
+        <div class="marquee-item">
+          <span class="dot-pulse" aria-hidden="true"></span>
+          <span>USA WRESTLING RTC #513 SANCTIONED</span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>HAYWARD, CA <span class="marquee-highlight">• 30139 INDUSTRIAL PKWY SW</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 4:30 PM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10:00 AM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <a href="tel:5103034869" class="marquee-link" aria-label="Call (510) 303-4869">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>CALL / TEXT: <strong class="marquee-phone">(510) 303-4869</strong></span>
+          </a>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span class="marquee-pill">TRIAL PASS</span>
+          <span>3 CONSECUTIVE DAYS ONLY <strong class="marquee-highlight">$15</strong></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+      </div>
+
+      <!-- Sequence B (Identical Duplicate for Seamless Infinite Loop) -->
+      <div class="marquee-group" aria-hidden="true">
+        <div class="marquee-item">
+          <span class="dot-pulse" aria-hidden="true"></span>
+          <span>USA WRESTLING RTC #513 SANCTIONED</span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>HAYWARD, CA <span class="marquee-highlight">• 30139 INDUSTRIAL PKWY SW</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 4:30 PM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10:00 AM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <a href="tel:5103034869" class="marquee-link" aria-label="Call or text United Wrestling Club at (510) 303-4869">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>CALL / TEXT: <strong class="marquee-phone">(510) 303-4869</strong></span>
+          </a>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span class="marquee-pill">TRIAL PASS</span>
+          <span>3 CONSECUTIVE DAYS ONLY <strong class="marquee-highlight">$15</strong></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Sticky Navigation with Real UWC Emblem -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand" aria-label="United Wrestling Club Homepage">
+        <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Emblem" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">UNITED WRESTLING</span>
+          <span class="brand-sub">HAYWARD OLYMPIC CLUB</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#lineage" class="nav-link">Olympic Lineage</a></li>
+          <li><a href="#facility" class="nav-link">The Mat Room</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing ($139/mo)</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:5103034869" class="nav-phone" aria-label="Call United Wrestling Club at 510-303-4869">
+          <svg class="phone-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span class="phone-number">(510)&nbsp;303-4869</span>
+        </a>
+        <button class="btn btn-nav-cta open-trial-modal">
+          <span class="btn-text-full">Claim $15 3-Day Pass</span>
+          <span class="btn-text-mobile">Claim $15 Pass</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section with 1080p Video & Unsplash Grunge Texture Overlay -->
+  <section class="hero-section">
+    <div class="hero-media">
+      <video class="hero-video" autoplay loop muted playsinline poster="../video_assets/stills_selected/still_06_dummy_takedown_drill.jpg">
+        <source src="../video_assets/loops/loop_homepage_hero_18s.mp4" type="video/mp4">
+        <!-- Fallback Poster Still if video fails -->
+        <img src="../video_assets/stills_selected/still_06_dummy_takedown_drill.jpg" alt="United Wrestling Club youth athlete executing takedown drill in Hayward">
+      </video>
+      <div class="hero-grunge-overlay"></div>
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge-strip">
+          <span class="hero-badge-tag">FOUNDED BY 1980 OLYMPIAN</span>
+          <span class="hero-badge-divider">•</span>
+          <span class="hero-badge-location">HAYWARD, CA</span>
+        </div>
+
+        <div class="hero-body-block">
+          <h1 class="hero-title">
+            EXCELLENCE. <br>
+            DISCIPLINE. <br>
+            <span class="crimson">CHAMPIONS.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            <span class="subtitle-full">Northern California's premier Olympic and Folkstyle wrestling room. Founded by <strong>1980 Moscow Olympian Karim Zemaryalai</strong> and directed by collegiate kinesiologists. We forge mental discipline, championship takedown technique, and podium contenders in <strong>Hayward,&nbsp;California</strong>.</span>
+            <span class="subtitle-mobile">Northern California's premier Olympic wrestling room in Hayward. Founded by <strong>1980 Olympian Karim Zemaryalai</strong>.</span>
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-accent-glow open-trial-modal">
+              Claim Your $15 3-Day Pass
+            </button>
+            
+            <div class="trial-callout-pill desktop-only">
+              <span class="trial-price">$15</span>
+              <div class="trial-desc">
+                <strong>3-Day Mat Pass</strong>
+                <span>New Members • All Programs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-phone-direct desktop-only">
+            <a href="tel:5103034869" class="hero-phone-direct-link" aria-label="Direct mat room line: call or text 510-303-4869">
+              <svg class="phone-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <span>Questions? Call or text direct: <strong class="hero-phone-num">(510) 303-4869</strong></span>
+            </a>
+          </div>
+
+          <!-- 4 Balanced Columns: No Orphans -->
+          <div class="hero-proof-grid desktop-only">
+            <div class="proof-item">
+              <div class="proof-stat">1980 <span>MOSCOW</span></div>
+              <div class="proof-label">Olympian & Dagestan Lineage</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-stat">1:6 <span>RATIO</span></div>
+              <div class="proof-label">Coach-to-Athlete Focus</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-stat">3,000 <span>SQ FT</span></div>
+              <div class="proof-label">Dollamur Seamless Mats</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-stat">5.0 ★ <span>GOOGLE</span></div>
+              <div class="proof-label">42+ Verified Parent Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Proof Stats Band (Revealed on Scroll Below Hero) -->
+  <section class="mobile-proof-band" aria-label="Key Proof Metrics">
+    <div class="container">
+      <div class="mobile-proof-grid">
+        <div class="proof-item">
+          <div class="proof-stat">1980 <span>MOSCOW</span></div>
+          <div class="proof-label">Olympian & Dagestan Lineage</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-stat">1:6 <span>RATIO</span></div>
+          <div class="proof-label">Coach-to-Athlete Focus</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-stat">3,000 <span>SQ FT</span></div>
+          <div class="proof-label">Dollamur Seamless Mats</div>
+        </div>
+        <div class="proof-item">
+          <div class="proof-stat">5.0 ★ <span>GOOGLE</span></div>
+          <div class="proof-label">42+ Verified Parent Reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Physical Facility Footprint Bar - Balanced 3 Columns -->
+  <section class="facility-bar" id="facility">
+    <div class="container facility-grid">
+      <div class="fac-item">
+        <div class="fac-icon">📍</div>
+        <div>
+          <div class="fac-text-title">Hayward Headquarters</div>
+          <div class="fac-text-sub">30139 Industrial Pkwy SW Ste C, Hayward CA 94544 (<a href="https://maps.google.com" target="_blank">Get Directions</a>)</div>
+        </div>
+      </div>
+      <div class="fac-item">
+        <div class="fac-icon">🛡️</div>
+        <div>
+          <div class="fac-text-title">Olympic Lineage Pedigree</div>
+          <div class="fac-text-sub">Coached by Karim & Naweed Zemaryalai (SFSU Kinesiology)</div>
+        </div>
+      </div>
+      <div class="fac-item">
+        <div class="fac-icon">🤝</div>
+        <div>
+          <div class="fac-text-title">Transparent Membership</div>
+          <div class="fac-text-sub">Flat $139.99/mo • No Contracts • Cancel Anytime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Structured Program Silos (Balanced 4 Columns: Zero Orphans) -->
+  <section class="programs-section" id="programs">
+    <div class="container">
+      <div class="programs-header-row">
+        <div>
+          <span class="section-eyebrow">CHAMPIONSHIP CURRICULUM</span>
+          <h2 class="section-title">Programs For Every&nbsp;Stage</h2>
+          <p class="section-lead">
+            From first-time 5-year-olds building spatial discipline to CIF state medalists and adult grappling competitors mastering high-impact takedowns.
+          </p>
+        </div>
+        <button class="btn btn-outline open-trial-modal">View Full Class Schedule</button>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Youth Academy -->
+        <div class="program-card">
+          <div class="card-media">
+            <span class="card-badge">Ages 5 – 13</span>
+            <img class="card-img" src="../video_assets/stills_selected/still_07_youth_single_elevation.jpg" alt="Youth wrestling academy single-leg elevation takedown drill at United Wrestling Club">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Youth Wrestling&nbsp;Academy</h3>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon / Wed / Fri • 5:00 PM – 6:15 PM</div>
+            <p class="card-desc">
+              Foundational Folkstyle and Freestyle fundamentals designed to build athletic confidence, spatial awareness, anti-bullying resilience, and respectful sportsmanship.
+            </p>
+            <div class="card-footer">
+              <a href="#trial" class="card-link open-trial-modal">Book $15 Youth Trial &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Varsity High School -->
+        <div class="program-card">
+          <div class="card-media">
+            <span class="card-badge">Ages 14 – 18</span>
+            <img class="card-img" src="../video_assets/stills_selected/still_03_varsity_stance_focus.jpg" alt="Varsity high school wrestler in intense stance drill at United Wrestling Club Hayward">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Varsity & Scholastic&nbsp;Prep</h3>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon – Fri • 6:15 PM – 7:45 PM</div>
+            <p class="card-desc">
+              High-intensity competition training for East Bay high schoolers pursuing CIF state qualification and collegiate recruitment. Advanced hand-fighting, chained takedowns, and live simulation.
+            </p>
+            <div class="card-footer">
+              <a href="#trial" class="card-link open-trial-modal">Book $15 Varsity Pass &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adult Wrestle-Jitsu -->
+        <div class="program-card">
+          <div class="card-media">
+            <span class="card-badge">Ages 18+</span>
+            <img class="card-img" src="../video_assets/stills_selected/still_16_naweed_adult_collar_tie.jpg" alt="Coach Naweed hand fighting collar tie in adult wrestling and Wrestle-Jitsu class">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Adult Wrestling & Wrestle-Jitsu</h3>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Tue / Thu • 7:30 PM – 9:00 PM</div>
+            <p class="card-desc">
+              Collegiate wrestling tailored for adults, BJJ practitioners, and combat athletes. Master takedown defense, cage control, and underhooks in an ego-free, high-camaraderie room.
+            </p>
+            <div class="card-footer">
+              <a href="#trial" class="card-link open-trial-modal">Book $15 Adult Trial &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saturday Open Mat -->
+        <div class="program-card">
+          <div class="card-media">
+            <span class="card-badge">All Levels</span>
+            <img class="card-img" src="../video_assets/stills_selected/still_01_olympic_flag.jpg" alt="USA Wrestling RTC clock and Olympic banner inside United Wrestling Club mat room">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Saturday Open&nbsp;Mat</h3>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Saturday • 10:00 AM – 12:30 PM</div>
+            <p class="card-desc">
+              Bay Area combat open mat. Live situational sparring, positional rounds, and technique exchanges under coach supervision. $15 mat fee for guests, free for academy members.
+            </p>
+            <div class="card-footer">
+              <a href="#trial" class="card-link open-trial-modal">Join Saturday Mat &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Olympic Lineage & Coaching Moat (Textured with Unsplash Grunge) -->
+  <section class="lineage-section" id="lineage">
+    <div class="container">
+      <div class="lineage-layout">
+        <div class="lineage-visual">
+          <div class="lineage-frame">
+            <img src="../video_assets/stills_selected/still_05_coach_naweed_profile.jpg" alt="Head Wrestling Coach Naweed Zemaryalai directing practice at United Wrestling Club Hayward">
+          </div>
+          <div class="lineage-floating-badge">
+            <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Crest" class="floating-badge-logo">
+            <div class="floating-badge-text-wrap">
+              <span class="floating-badge-year">1980</span>
+              <span class="floating-badge-text">Olympic Lineage Pedigree</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lineage-editorial">
+          <span class="section-eyebrow">UNMATCHED PEDIGREE</span>
+          <h2 class="section-title">Coached by Champions, Grounded in&nbsp;Science</h2>
+          <p class="section-lead">
+            Most local gyms offer fitness cardio or strip-mall belt tests. United Wrestling Club delivers authentic, international-grade wrestling forged in Dagestan, the Olympics, and NCAA collegiate competition.
+          </p>
+
+          <div class="coach-roster">
+            <div class="coach-card-line">
+              <div>
+                <div class="coach-info-title">
+                  Karim Zemaryalai
+                  <span class="coach-role-tag"><svg width="11" height="11" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"/></svg>Founder & Master Coach</span>
+                </div>
+                <div class="coach-info-bio">
+                  1980 Moscow Olympics qualifier and bronze medalist at the world-renowned Ali Aliyev Tournament in Makhachkala, Dagestan. Karim brought authentic Dagestani hand-fighting, ankle picks, and relentless mat pressure directly to Northern California.
+                </div>
+              </div>
+            </div>
+
+            <div class="coach-card-line">
+              <div>
+                <div class="coach-info-title">
+                  Naweed Zemaryalai
+                  <span class="coach-role-tag"><svg width="13" height="13" viewBox="0 0 640 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"/></svg>Head Coach & Kinesiologist</span>
+                </div>
+                <div class="coach-info-bio">
+                  Son of Karim; former standout collegiate wrestler at Chabot College and San Francisco State University (B.S. in Kinesiology). Current wrestling coach at Chabot College. Naweed integrates modern biomechanics, active injury prevention, and chain-wrestling systems into every practice.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Mat Safety & Parent Assurance Block - Balanced 4 Columns: 0 Orphans -->
+  <section class="safety-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+        <span class="section-eyebrow">SAFETY & INTEGRITY</span>
+        <h2 class="section-title">The Cleanest, Safest Mat Room in the East&nbsp;Bay</h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          We believe high-level combat athletics require the strictest safety standards, cleanest facilities, and highest coach-to-athlete attention.
+        </p>
+      </div>
+
+      <div class="safety-grid">
+        <div class="safety-card">
+          <div class="safety-num">01</div>
+          <h3 class="safety-title">Hospital-Grade Disinfection</h3>
+          <p class="safety-desc">
+            Our Dollamur competition mats undergo dual-daily industrial sanitization with medical-grade antimicrobials to eliminate ringworm, staph, and mat grime.
+          </p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-num">02</div>
+          <h3 class="safety-title">3,000 Sq Ft Seamless Foam</h3>
+          <p class="safety-desc">
+            2-inch cross-linked polyethylene shock absorption engineered to cushion high-velocity takedowns and protect developing youth joints and spines.
+          </p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-num">03</div>
+          <h3 class="safety-title">1:6 Coach-to-Student Ratio</h3>
+          <p class="safety-desc">
+            No athlete gets lost in the crowd. Our assistant coaches ensure every student receives immediate technical corrections and disciplined supervision.
+          </p>
+        </div>
+
+        <div class="safety-card">
+          <div class="safety-num">04</div>
+          <h3 class="safety-title">Dedicated Parent Lounge</h3>
+          <p class="safety-desc">
+            Full mat visibility with comfortable seating and Wi-Fi. Parents are always encouraged to watch practices, see their child's progress, and talk with coaches.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Pricing & The $15 Mat Pass - Balanced 3 Columns: 0 Orphans -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+        <span class="section-eyebrow">TRANSPARENT TUITION</span>
+        <h2 class="section-title">No Contracts. No Hidden&nbsp;Fees.</h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          We don't lock families into 12-month predatory gym contracts. Our results on the mat keep athletes coming back month after month.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Trial Card -->
+        <div class="pricing-card">
+          <h3 class="price-name">3-Day Mat Pass</h3>
+          <p class="price-desc">Experience our room, meet the coaches, and try 3 full practices before committing.</p>
+          <div class="price-figure">
+            <span class="price-val">$15</span>
+            <span class="price-period">/ 3&nbsp;Sessions</span>
+          </div>
+          <ul class="price-features">
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 3 consecutive practices in any age-appropriate class</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 1-on-1 technique assessment with Coach Naweed</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Loaner headgear & gear fitting assistance</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Valid for Youth, Varsity, or Adult programs</li>
+          </ul>
+          <button class="btn btn-outline open-trial-modal">Claim $15 3-Day Pass</button>
+        </div>
+
+        <!-- Monthly Unlimited (Featured) -->
+        <div class="pricing-card featured">
+          <span class="featured-tag">MOST POPULAR ACADEMY PASS</span>
+          <h3 class="price-name">Monthly Unlimited</h3>
+          <p class="price-desc">Full access to all wrestling practices, technique clinics, and Saturday open mats.</p>
+          <div class="price-figure">
+            <span class="price-val">$139.99</span>
+            <span class="price-period">/&nbsp;Month</span>
+          </div>
+          <ul class="price-features">
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Unlimited weekly training sessions</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Free admission to all Saturday Open Mats ($60/mo value)</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> <strong>Zero initiation fees & zero contracts</strong></li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Tournament coaching at SCYWAY & CIF events</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 15% Sibling / Family Member discount</li>
+          </ul>
+          <button class="btn btn-primary btn-accent-glow open-trial-modal">Start Monthly Membership</button>
+        </div>
+
+        <!-- Single Mat Drop-In -->
+        <div class="pricing-card">
+          <h3 class="price-name">Single Mat Drop-In</h3>
+          <p class="price-desc">For visiting wrestlers, collegiate athletes home on break, or Saturday open mat visitors.</p>
+          <div class="price-figure">
+            <span class="price-val">$15</span>
+            <span class="price-period">/&nbsp;Class</span>
+          </div>
+          <ul class="price-features">
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 1 Full practice or 2.5-hour Saturday Open Mat</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Access to Dollamur mat room & locker areas</li>
+            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> USA Wrestling sanctioning coverage</li>
+          </ul>
+          <button class="btn btn-outline open-trial-modal">Pay Drop-In at Door</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Real Community Proof & Roster Portrait -->
+  <section class="community-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+        <span class="section-eyebrow">FAMILY & BROTHERHOOD</span>
+        <h2 class="section-title">A Mat Family Built on&nbsp;Respect</h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          United Wrestling Club is more than a gym. It is an East Bay family of 45+ youth athletes, parents, and dedicated competitors pushing each other to achieve greatness.
+        </p>
+      </div>
+
+      <!-- Real 45+ Member Roster Photo -->
+      <div class="roster-banner">
+        <img src="../video_assets/stills_selected/still_20_champions_family_outro.jpg" alt="United Wrestling Club 45-person team celebration and family flex under gym mural in Hayward">
+        <div class="roster-overlay">
+          <div class="roster-overlay-text">
+            <div class="roster-overlay-title">Join the UWC Family</div>
+            <div class="roster-overlay-sub">Over 45 youth and varsity athletes training side-by-side every afternoon in Hayward.</div>
+          </div>
+          <button class="btn btn-primary open-trial-modal">Step Onto the Mat</button>
+        </div>
+      </div>
+
+      <!-- Verified Parent Reviews - Balanced 3 Columns -->
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            "Coach Naweed and Karim have completely transformed my 9-year-old son's confidence and discipline. The coach-to-student ratio is unlike any other gym in the East Bay. Clean mats, respectful kids, zero arrogance."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-info-name">Marcus Rodriguez</div>
+              <div class="author-info-city">Hayward Parent • Youth Academy</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            "I'm a BJJ brown belt and came to UWC to fix my takedowns. The level of detail Naweed teaches on hand fighting and underhook control is incredible. Best wrestling room in Northern California hands down."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">DK</div>
+            <div>
+              <div class="author-info-name">David Kim</div>
+              <div class="author-info-city">Fremont, CA • Adult Wrestle-Jitsu</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            "My daughter wrestled for her high school and needed off-season technique to make CIF state. In 6 months at UWC, her stance, re-attacks, and bottom escapes leveled up dramatically. Outstanding coaches."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">SL</div>
+            <div>
+              <div class="author-info-name">Sarah Lin</div>
+              <div class="author-info-city">Union City, CA • Varsity Parent</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ Section for AI Search & Parent Clarity -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+        <span class="section-eyebrow">COMMON QUESTIONS</span>
+        <h2 class="section-title">Frequently Asked&nbsp;Questions</h2>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>What age can my child begin training?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Children can start as early as age 5 in our Youth Wrestling Academy. At this age, curriculum focuses on agility, tumbling, balance, basic stances, and listening discipline in an engaging, supportive environment.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What gear does my child need for their 3-day trial?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            For the 3-day trial pass, your child just needs comfortable athletic shorts (without zippers or pockets) and a t-shirt. Wrestling shoes are recommended but socks are acceptable for their first trial days. We provide loaner headgear if needed.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are there contracts or cancellation fees?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            No. All memberships are flat $139.99 month-to-month. There are no initiation fees, no belt exam fees, and you may cancel or pause your membership anytime with 7 days advance notice before your billing cycle.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Where is the gym located and which cities do you serve?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            United Wrestling Club is located at 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544, easily accessible via I-880 and Highway 92. We serve families and competitors from Hayward, Union City, Fremont, Newark, Castro Valley, and San Leandro.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Pre-Footer Call to Action (Textured with Unsplash Grunge) -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-content">
+        <span class="section-eyebrow" style="color: #ff6b6b;">STEP ONTO THE MAT THIS WEEK</span>
+        <h2 class="cta-banner-title">Experience Olympic Lineage in&nbsp;Hayward</h2>
+        <p class="cta-banner-sub">
+          Claim your 3-day mat pass for just $15. Meet Head Coach Naweed, experience our mat culture, and see why East Bay champions train at UWC.
+        </p>
+        <button class="btn btn-primary btn-accent-glow open-trial-modal cta-banner-btn">
+          Claim Your $15 3-Day Mat Pass
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Comprehensive Footer with Real Emblem & NAP -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom: 16px;">
+            <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Logo" class="brand-logo-img" style="height: 48px;">
+            <div class="brand-text">
+              <span class="brand-name">UNITED WRESTLING</span>
+              <span class="brand-sub">HAYWARD OLYMPIC CLUB</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px;">
+            Northern California's premier Olympic and Folkstyle wrestling academy. Building athletic discipline, character, and state champions in the East Bay.
+          </p>
+          <div style="font-size: 0.78rem; color: #ff5252; font-weight: 700;">
+            USA WRESTLING RTC #513 SANCTIONED CLUB
+          </div>
+          <div class="footer-social-row">
+            <a href="https://instagram.com/uwc_wrestling" target="_blank" class="footer-social-link" aria-label="United Wrestling Club on Instagram">
+              <svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@UnitedWrestlingClub" target="_blank" class="footer-social-link" aria-label="United Wrestling Club on YouTube">
+              <svg width="16" height="16" viewBox="0 0 576 512" fill="currentColor"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-link" aria-label="United Wrestling Club on Facebook">
+              <svg width="16" height="16" viewBox="0 0 512 512" fill="currentColor"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Programs</div>
+          <ul class="footer-links">
+            <li><a href="#programs">Youth Wrestling (Ages 5–13)</a></li>
+            <li><a href="#programs">Varsity Scholastic Prep (14–18)</a></li>
+            <li><a href="#programs">Adult Wrestling & Grappling</a></li>
+            <li><a href="#programs">Combat Sambo & BJJ</a></li>
+            <li><a href="#programs">Saturday Open Mat ($15)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Academy</div>
+          <ul class="footer-links">
+            <li><a href="#lineage">Olympic Heritage</a></li>
+            <li><a href="#lineage">Coach Naweed Zemaryalai</a></li>
+            <li><a href="#lineage">Karim Zemaryalai (1980)</a></li>
+            <li><a href="#facility">Facility & Dollamur Mats</a></li>
+            <li><a href="#pricing">Tuition & Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Hayward Headquarters</div>
+          <div class="footer-nap">
+            <div><strong>United Wrestling Club</strong></div>
+            <div>30139 Industrial Pkwy SW Ste C<br>Hayward, CA 94544</div>
+            <div style="margin-top: 6px;">
+              <a href="tel:5103034869" style="color: #ffffff; font-weight: 700;">(510) 303-4869</a>
+            </div>
+            <div>
+              <a href="mailto:unitedwrestlingclub@gmail.com">unitedwrestlingclub@gmail.com</a>
+            </div>
+            <div style="margin-top: 6px; font-size: 0.8rem;">
+              Mon–Fri: 4:30 PM – 9:00 PM<br>
+              Saturday: 9:00 AM – 1:00 PM
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 United Wrestling Club. All rights reserved. Registered USA Wrestling RTC #513.</div>
+        <div>
+          Serving Hayward • Union City • Fremont • San Leandro • Castro Valley • Newark, CA
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. Interactive 1-Click Native Trial Modal with Real Emblem -->
+  <div class="modal-overlay" id="trialModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      
+      <div id="modalFormContainer">
+        <div class="modal-brand-row">
+          <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Emblem" class="modal-logo">
+          <div>
+            <span class="section-eyebrow" style="margin-bottom: 2px;">3-DAY MAT PASS • $15</span>
+            <h3 class="modal-title">Step Onto the&nbsp;Mat</h3>
+          </div>
+        </div>
+        <p class="modal-sub">Enter your details below to claim your 3 consecutive training sessions. Coach Naweed will reach out to confirm your gear and class time.</p>
+
+        <form id="trialForm">
+          <div class="form-group">
+            <label class="form-label">Athlete Full Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Jordan Smith" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Parent / Guardian Name (If Youth Athlete)</label>
+            <input type="text" class="form-input" placeholder="e.g. Michael Smith">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Phone Number (For SMS Confirmation)</label>
+            <input type="tel" class="form-input" placeholder="(510) 000-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Target Program</label>
+            <select class="form-select" required>
+              <option value="youth">Youth Wrestling Academy (Ages 5–13)</option>
+              <option value="varsity">Varsity & Scholastic Prep (Ages 14–18)</option>
+              <option value="adult">Adult Wrestling & Wrestle-Jitsu (18+)</option>
+              <option value="openmat">Saturday Open Mat ($15 Drop-in)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-accent-glow" style="width: 100%; margin-top: 10px; padding: 16px;">
+            Confirm $15 3-Day Pass
+          </button>
+          
+          <div style="font-size: 0.72rem; color: var(--color-text-dim); text-align: center; margin-top: 12px;">
+            Secure intake routed directly to WrestlingIQ (Team #513). No spam ever.
+          </div>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="modal-success-state" id="modalSuccessState">
+        <div class="success-icon">✓</div>
+        <h3 class="modal-title" style="color: #22c55e;">Pass Reserved!</h3>
+        <p class="modal-sub" style="margin-top: 8px;">
+          Coach Naweed has received your request. We've sent an SMS confirmation to your number with directions and mat room instructions.
+        </p>
+        <div style="background: var(--color-canvas); padding: 16px; border-radius: var(--radius-sm); margin: 20px 0; text-align: left; font-size: 0.82rem;">
+          <div><strong>Address:</strong> 30139 Industrial Pkwy SW Ste C, Hayward, CA</div>
+          <div style="margin-top: 4px;"><strong>Locker Arrival:</strong> 15 minutes before scheduled class</div>
+          <div style="margin-top: 4px;"><strong>Attire:</strong> T-shirt and gym shorts (no pockets)</div>
+        </div>
+        <button class="btn btn-outline" id="modalDoneBtn" style="width: 100%;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for Interactive FAQ and Modal -->
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Native Trial Modal Handling
+    const modal = document.getElementById('trialModal');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    const doneBtn = document.getElementById('modalDoneBtn');
+    const form = document.getElementById('trialForm');
+    const formContainer = document.getElementById('modalFormContainer');
+    const successState = document.getElementById('modalSuccessState');
+
+    document.querySelectorAll('.open-trial-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('open');
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('open');
+      setTimeout(() => {
+        formContainer.style.display = 'block';
+        successState.style.display = 'none';
+        form.reset();
+      }, 300);
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+    doneBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Simulate WrestlingIQ webhook dispatch
+      formContainer.style.display = 'none';
+      successState.style.display = 'block';
+    });
+
+    // Pause marquee immediately when touched on mobile so phone CTA is effortless to tap
+    const topBar = document.querySelector('.top-bar');
+    if (topBar) {
+      topBar.addEventListener('touchstart', () => {
+        const track = topBar.querySelector('.marquee-track');
+        if (track) track.style.animationPlayState = 'paused';
+      }, { passive: true });
+      topBar.addEventListener('touchend', () => {
+        const track = topBar.querySelector('.marquee-track');
+        if (track) {
+          setTimeout(() => {
+            track.style.animationPlayState = 'running';
+          }, 1500);
+        }
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
