@@ -813,7 +813,7 @@ button {
   background: var(--color-surface-raised);
   border: 1px solid var(--color-border-subtle);
   padding: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .timetable-header {
@@ -831,11 +831,20 @@ button {
 
 .timetable-row {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding-block: 0.5rem;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-block: 0.65rem;
   border-bottom: 1px solid var(--color-border-subtle);
   font-size: 0.92rem;
+}
+
+@media (min-width: 520px) {
+  .timetable-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
 }
 
 .timetable-row:last-child {
@@ -846,14 +855,35 @@ button {
 .timetable-day {
   color: var(--color-text-white);
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.day-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  color: #FFA5A5;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0;
+  flex-shrink: 0;
 }
 
 .timetable-time {
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: #FFFFFF;
   letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
 .timetable-note {
@@ -861,6 +891,228 @@ button {
   color: var(--color-text-dim);
   margin-top: 0.75rem;
   font-style: italic;
+  line-height: 1.45;
+}
+
+@media (max-width: 639px) {
+  .program-panel-body .btn {
+    width: 100%;
+  }
+}
+
+/* Master Mon-Sat Schedule Matrix */
+.weekly-matrix-box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  margin-top: 2rem;
+}
+
+.weekly-matrix-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .weekly-matrix-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.scroll-hint-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  padding: 4px 10px;
+  align-self: flex-start;
+}
+
+@media (min-width: 900px) {
+  .scroll-hint-badge {
+    display: none;
+  }
+}
+
+.day-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.day-pill {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s var(--ease);
+  border-radius: 0;
+  min-height: 40px;
+}
+
+.day-pill:hover {
+  color: var(--color-text-white);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.day-pill.active {
+  background: var(--color-crimson);
+  color: #FFFFFF;
+  border-color: var(--color-crimson);
+}
+
+.matrix-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-border);
+  background: var(--color-canvas);
+}
+
+.matrix-table-scroll:focus-visible {
+  outline: 2px solid var(--color-gold);
+}
+
+.schedule-matrix-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  text-align: left;
+}
+
+.schedule-matrix-table th {
+  background: var(--color-surface-raised);
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.schedule-matrix-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.schedule-matrix-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-matrix-table tbody tr {
+  transition: opacity 0.2s var(--ease);
+}
+
+.schedule-matrix-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.matrix-day-badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-white);
+  white-space: nowrap;
+}
+
+.matrix-day-badge.gold {
+  border-color: rgba(245, 158, 11, 0.4);
+  color: var(--color-gold);
+}
+
+.matrix-day-badge.crimson {
+  border-color: rgba(220, 38, 38, 0.4);
+  color: #FFA5A5;
+}
+
+.col-time {
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  color: var(--color-gold);
+}
+
+.col-prog {
+  line-height: 1.35;
+}
+
+.col-focus {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  min-width: 200px;
+}
+
+.col-action {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.matrix-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-white);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  min-height: 40px;
+  transition: all 0.2s var(--ease);
+}
+
+.matrix-action-btn:hover {
+  background: var(--color-crimson);
+  border-color: var(--color-crimson);
+  color: #FFFFFF;
+}
+
+.matrix-footnote {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-top: 1rem;
+  font-style: italic;
+  line-height: 1.45;
 }
 
 /* 6. SPLIT COACHING DOSSIER */
@@ -1238,8 +1490,15 @@ button {
   padding: 1.75rem;
 }
 
+.hours-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .hours-table {
   width: 100%;
+  min-width: 280px;
   border-collapse: collapse;
   font-size: 0.92rem;
 }
@@ -1256,10 +1515,17 @@ button {
   padding: 0.65rem 0;
 }
 
+.hours-table td:first-child {
+  color: var(--color-text-white);
+  font-weight: 600;
+  padding-right: 0.75rem;
+}
+
 .hours-table td:last-child {
   text-align: right;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-gold);
+  white-space: nowrap;
 }
 
 /* 10. CLOSING FOLD CALL TO ACTION */
@@ -1362,11 +1628,15 @@ button {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--color-border);
-  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
   display: flex;
   align-items: center;
   gap: 0.75rem;
   box-shadow: 0 -8px 25px rgba(0,0,0,0.5);
+}
+
+body.modal-open .mobile-tactical-dock {
+  display: none !important;
 }
 
 .dock-call-btn {
@@ -2013,11 +2283,11 @@ dialog#signup-modal::backdrop {
                   <span>PRACTICE SCHEDULE &bull; HAYWARD ROOM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Monday & Wednesday (Pre-K to 5th)</span>
+                  <span class="timetable-day"><span class="day-tag">MON &bull; WED</span> Youth Foundations (Pre-K to 5th)</span>
                   <span class="timetable-time">6:30 PM &ndash; 7:30 PM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Monday &ndash; Thursday (Youth Competition Team)</span>
+                  <span class="timetable-day"><span class="day-tag">MON &ndash; THU</span> Youth Competition Team</span>
                   <span class="timetable-time">5:00 PM &ndash; 6:30 PM</span>
                 </div>
                 <div class="timetable-note">*Athletes are placed strictly by weight, maturity, and developmental readiness.</div>
@@ -2048,11 +2318,11 @@ dialog#signup-modal::backdrop {
                   <span>VARSITY SCHEDULE &bull; HAYWARD ROOM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Monday &ndash; Thursday (Evening Intensive)</span>
+                  <span class="timetable-day"><span class="day-tag">MON &ndash; THU</span> Evening Intensive</span>
                   <span class="timetable-time">7:30 PM &ndash; 9:00 PM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Tuesday & Thursday (Morning Technique)</span>
+                  <span class="timetable-day"><span class="day-tag">TUE &bull; THU</span> Morning Technique</span>
                   <span class="timetable-time">8:00 AM &ndash; 9:30 AM</span>
                 </div>
                 <div class="timetable-note">*Includes strength kinetic conditioning & video analysis review.</div>
@@ -2083,15 +2353,15 @@ dialog#signup-modal::backdrop {
                   <span>ADULT SCHEDULE &bull; HAYWARD ROOM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Monday &ndash; Thursday (Takedowns & Control)</span>
+                  <span class="timetable-day"><span class="day-tag">MON &ndash; THU</span> Takedowns & Control</span>
                   <span class="timetable-time">7:30 PM &ndash; 9:00 PM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Friday (Freestyle & Submission Wrestling)</span>
+                  <span class="timetable-day"><span class="day-tag">FRIDAY</span> Freestyle & Submission Wrestling</span>
                   <span class="timetable-time">8:00 PM &ndash; 9:30 PM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Tuesday & Thursday (Morning Mat Time)</span>
+                  <span class="timetable-day"><span class="day-tag">TUE &bull; THU</span> Morning Mat Time</span>
                   <span class="timetable-time">8:00 AM &ndash; 9:30 AM</span>
                 </div>
                 <div class="timetable-note">*Adult beginners welcome. No previous wrestling experience required.</div>
@@ -2122,11 +2392,11 @@ dialog#signup-modal::backdrop {
                   <span>SATURDAY OPEN MAT &bull; TIMING</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Every Saturday Morning</span>
+                  <span class="timetable-day"><span class="day-tag">SATURDAY</span> Every Saturday Morning</span>
                   <span class="timetable-time">10:00 AM &ndash; 12:00 PM</span>
                 </div>
                 <div class="timetable-row">
-                  <span class="timetable-day">Drop-in Fee / Members</span>
+                  <span class="timetable-day"><span class="day-tag">RATES</span> Drop-in Fee / Members</span>
                   <span class="timetable-time">$15 / Included Free</span>
                 </div>
                 <div class="timetable-note">*Open to all clubs and affiliations. Clean wrestling shoes or mat footwear strictly enforced.</div>
@@ -2136,6 +2406,91 @@ dialog#signup-modal::backdrop {
               <button class="btn btn-crimson" type="button" data-offer="dropin" data-select="open">Book Saturday Drop-In ($15) &nearr;</button>
             </div>
           </div>
+        </div>
+
+        <!-- Master Mon-Sat Schedule Matrix -->
+        <div class="weekly-matrix-box" id="weekly-matrix">
+          <div class="weekly-matrix-top">
+            <div>
+              <div class="tag-badge" style="margin-bottom: 0.35rem;">FULL FACILITY CALENDAR</div>
+              <h3 style="font-size: 1.8rem; margin: 0;">MON–SAT PRACTICE SCHEDULE MATRIX</h3>
+            </div>
+            <div class="scroll-hint-badge" aria-hidden="true">
+              <span>&larr; Scroll Schedule &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Interactive Day Selector Pills -->
+          <div class="day-filter-bar" role="group" aria-label="Filter schedule by day">
+            <button class="day-pill active" type="button" data-day="all">ALL DAYS</button>
+            <button class="day-pill" type="button" data-day="mon">MON</button>
+            <button class="day-pill" type="button" data-day="tue">TUE</button>
+            <button class="day-pill" type="button" data-day="wed">WED</button>
+            <button class="day-pill" type="button" data-day="thu">THU</button>
+            <button class="day-pill" type="button" data-day="fri">FRI</button>
+            <button class="day-pill" type="button" data-day="sat">SAT</button>
+          </div>
+
+          <div class="matrix-table-scroll" tabindex="0" aria-label="Mon through Sat wrestling schedule">
+            <table class="schedule-matrix-table">
+              <thead>
+                <tr>
+                  <th scope="col">DAY</th>
+                  <th scope="col">TIME (PACIFIC)</th>
+                  <th scope="col">DIVISION / PROGRAM</th>
+                  <th scope="col">FOCUS &amp; ROOM DETAILS</th>
+                  <th scope="col" style="text-align: right;">ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-days="mon tue wed thu">
+                  <td class="col-day"><span class="matrix-day-badge">MON–THU</span></td>
+                  <td class="col-time">5:00 PM &ndash; 6:30 PM</td>
+                  <td class="col-prog"><strong class="text-white">Youth Competition Team</strong><br><small class="text-muted">Ages 7–13 &bull; Mat Room A</small></td>
+                  <td class="col-focus">High-pace situational wrestling, takedown chain drilling, core elevation mechanics.</td>
+                  <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="trial" data-select="youth">Pass ($15) &nearr;</button></td>
+                </tr>
+                <tr data-days="mon wed">
+                  <td class="col-day"><span class="matrix-day-badge">MON &bull; WED</span></td>
+                  <td class="col-time">6:30 PM &ndash; 7:30 PM</td>
+                  <td class="col-prog"><strong class="text-white">Youth Foundations</strong><br><small class="text-muted">Pre-K to 5th Grade</small></td>
+                  <td class="col-focus">Coordination, safe breakfalls, basic single &amp; double-leg setups, sportsmanship.</td>
+                  <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="trial" data-select="youth">Pass ($15) &nearr;</button></td>
+                </tr>
+                <tr data-days="tue thu">
+                  <td class="col-day"><span class="matrix-day-badge gold">TUE &bull; THU</span></td>
+                  <td class="col-time">8:00 AM &ndash; 9:30 AM</td>
+                  <td class="col-prog"><strong class="text-white">AM Varsity &amp; Adult</strong><br><small class="text-muted">All Skill Levels</small></td>
+                  <td class="col-focus">Morning kinematic movement drills, hand-fighting setups, high-repetition technique.</td>
+                  <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="trial" data-select="varsity">Pass ($15) &nearr;</button></td>
+                </tr>
+                <tr data-days="mon tue wed thu">
+                  <td class="col-day"><span class="matrix-day-badge">MON–THU</span></td>
+                  <td class="col-time">7:30 PM &ndash; 9:00 PM</td>
+                  <td class="col-prog"><strong class="text-white">Varsity &amp; Adult Wrestle-Jitsu</strong><br><small class="text-muted">Ages 14+ &bull; High School / Adult</small></td>
+                  <td class="col-focus">Collegiate finishes, counter-takedowns, front headlock series, live 6-minute rounds.</td>
+                  <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="trial" data-select="adult">Pass ($15) &nearr;</button></td>
+                </tr>
+                <tr data-days="fri">
+                  <td class="col-day"><span class="matrix-day-badge crimson">FRIDAY</span></td>
+                  <td class="col-time">8:00 PM &ndash; 9:30 PM</td>
+                  <td class="col-prog"><strong class="text-white">Freestyle &amp; Submission Wrestling</strong><br><small class="text-muted">Adults &amp; BJJ Grapplers</small></td>
+                  <td class="col-focus">No-gi takedown mastery, cage scramble recovery, par terre &amp; ride dominance.</td>
+                  <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="trial" data-select="adult">Pass ($15) &nearr;</button></td>
+                </tr>
+                <tr data-days="sat">
+                  <td class="col-day"><span class="matrix-day-badge gold">SATURDAY</span></td>
+                  <td class="col-time">10:00 AM &ndash; 12:00 PM</td>
+                  <td class="col-prog"><strong class="text-white">Bay Area Open Mat</strong><br><small class="text-muted">All Affiliations Welcome</small></td>
+                  <td class="col-focus">5,000 sq ft live situational rounds. Free for members or $15 single drop-in.</td>
+                  <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="dropin" data-select="open">Drop-In ($15) &nearr;</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="matrix-footnote">
+            *All sessions held at 30139 Industrial Pkwy SW Ste C, Hayward, CA. Schedule subject to minor adjustments for major CIF and USA Wrestling tournaments. Text Coach Naweed at (510) 303-4869 to confirm your first practice.
+          </p>
         </div>
 
       </div>
@@ -2413,34 +2768,36 @@ dialog#signup-modal::backdrop {
             <svg width="14" height="14" viewBox="0 0 512 512" fill="currentColor"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>
             <span>MAT ROOM OPERATING HOURS</span>
           </div>
-          <table class="hours-table">
-            <tbody>
-              <tr>
-                <td>Monday & Wednesday</td>
-                <td>5:00 PM &ndash; 9:00 PM</td>
-              </tr>
-              <tr>
-                <td>Tuesday & Thursday (Morning)</td>
-                <td>8:00 AM &ndash; 9:30 AM</td>
-              </tr>
-              <tr>
-                <td>Tuesday & Thursday (Evening)</td>
-                <td>5:00 PM &ndash; 9:00 PM</td>
-              </tr>
-              <tr>
-                <td>Friday (Adult / Grappling)</td>
-                <td>8:00 PM &ndash; 9:30 PM</td>
-              </tr>
-              <tr>
-                <td>Saturday (Open Mat)</td>
-                <td>10:00 AM &ndash; 12:00 PM</td>
-              </tr>
-              <tr>
-                <td>Sunday</td>
-                <td>Closed (Recovery)</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="hours-table-wrap">
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td>Monday & Wednesday</td>
+                  <td>5:00 PM &ndash; 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Tuesday & Thursday (Morning)</td>
+                  <td>8:00 AM &ndash; 9:30 AM</td>
+                </tr>
+                <tr>
+                  <td>Tuesday & Thursday (Evening)</td>
+                  <td>5:00 PM &ndash; 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Friday (Adult / Grappling)</td>
+                  <td>8:00 PM &ndash; 9:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday (Open Mat)</td>
+                  <td>10:00 AM &ndash; 12:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Closed (Recovery)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <p style="margin-top: 1.25rem; font-size: 0.82rem; color: var(--color-text-dim);">
             *First-time visitors must arrive 15 minutes prior to practice for equipment verification and waiver check-in.
           </p>
@@ -2672,6 +3029,33 @@ dialog#signup-modal::backdrop {
     });
   });
 
+  // Schedule Matrix Day Filtering
+  const dayPills = document.querySelectorAll('.day-pill');
+  const matrixRows = document.querySelectorAll('.schedule-matrix-table tbody tr');
+
+  if (dayPills.length > 0 && matrixRows.length > 0) {
+    dayPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        dayPills.forEach(p => {
+          p.classList.remove('active');
+          p.setAttribute('aria-pressed', 'false');
+        });
+        pill.classList.add('active');
+        pill.setAttribute('aria-pressed', 'true');
+
+        const day = pill.dataset.day || 'all';
+        matrixRows.forEach(row => {
+          if (day === 'all') {
+            row.hidden = false;
+          } else {
+            const days = (row.dataset.days || '').split(/\s+/);
+            row.hidden = !days.includes(day);
+          }
+        });
+      });
+    });
+  }
+
   // Hero Video Control & Accessibility
   const heroVideo = document.getElementById('hero-video');
   const videoBtn = document.getElementById('video-toggle');
@@ -2804,8 +3188,24 @@ dialog#signup-modal::backdrop {
 
     modal.addEventListener('cancel', () => {
       document.body.classList.remove('modal-open');
+      if (lastFocusedElement) {
+        lastFocusedElement.focus({ preventScroll: true });
+      }
+    });
+
+    modal.addEventListener('close', () => {
+      document.body.classList.remove('modal-open');
+      if (lastFocusedElement) {
+        lastFocusedElement.focus({ preventScroll: true });
+      }
     });
   }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.open) {
+      closeModal();
+    }
+  });
 
   // Form Validation & Verification
   function validateField(field) {

@@ -33,8 +33,8 @@
   --space: clamp(1.25rem, 5vw, 5rem);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 6rem; overflow-x: hidden; }
-body { margin: 0; overflow-x: hidden; background: var(--paper); color: var(--ink); font: 1rem/1.65 var(--body); -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; overflow-x: clip; }
+body { margin: 0; overflow-x: clip; background: var(--paper); color: var(--ink); font: 1rem/1.65 var(--body); -webkit-font-smoothing: antialiased; }
 body.modal-open { overflow: hidden; }
 img, video { display: block; max-width: 100%; }
 img { height: auto; }
@@ -49,7 +49,7 @@ button:disabled { cursor: wait; opacity: .6; }
 p { margin: 0 0 1.25rem; max-width: 68ch; }
 h1, h2, h3 { margin: 0; }
 h1, h2, .display { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .005em; line-height: 1; }
-h1 { font-size: clamp(3.1rem, 6.3vw, 6.4rem); }
+h1 { font-size: clamp(2.65rem, 6.8vw, 6.4rem); }
 h2 { font-size: clamp(2.7rem, 5vw, 5.2rem); text-wrap: balance; }
 h3 { font-size: 1.25rem; line-height: 1.25; }
 ul { padding: 0; list-style: none; margin: 0; }
@@ -68,7 +68,7 @@ section { scroll-margin-top: 1rem; }
 .btn.full { width: 100%; }
 button:active, .btn:active { transform: translateY(1px); }
 .text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .9375rem; font-weight: 700; gap: 1rem; }
-.skip { position: fixed; top: 8px; left: 8px; z-index: 300; padding: 12px; background: var(--paper); transform: translateY(-160%); }
+.skip { position: fixed; top: 8px; left: 8px; z-index: 300; min-height: 44px; display: inline-flex; align-items: center; padding: .6rem 1rem; background: var(--paper); border: 1px solid var(--line); font-weight: 700; transform: translateY(-160%); transition: transform .2s var(--ease); }
 .skip:focus { transform: translateY(0); }
 [hidden] { display: none !important; }
 /* A compact, quiet arrival. */
@@ -79,9 +79,9 @@ button:active, .btn:active { transform: translateY(1px); }
 .brand { display: inline-flex; align-items: center; text-decoration: none; margin-right: auto; line-height: 0; }
 .brand-logo { height: 44px; width: auto; max-width: 195px; object-fit: contain; display: block; transition: opacity .2s ease; }
 .brand:hover .brand-logo, .brand:focus-visible .brand-logo { opacity: .88; }
-.nav-toggle { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: .75rem; font-weight: 700; }
+.nav-toggle { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; border: 1px solid var(--line); border-radius: 2px; background: transparent; color: var(--ink); font-size: .75rem; font-weight: 700; }
 .header-cta { display: none; }
-.nav { display: none; position: absolute; inset: 100% 0 auto; background: var(--paper); border-bottom: 1px solid var(--line); padding: 1rem var(--space) 1.5rem; }
+.nav { display: none; position: absolute; inset: 100% 0 auto; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 16px 32px oklch(20% .009 25 / .08); border-radius: 0 0 2px 2px; padding: 1rem var(--space) 1.5rem; }
 .nav.is-open { display: grid; gap: .25rem; }
 .nav a { display: flex; align-items: center; min-height: 48px; text-decoration: none; font-size: .875rem; font-weight: 700; }
 .nav .mobile-nav-cta { color: var(--red); }
@@ -163,7 +163,7 @@ h1 span { color: var(--paper); }
 .coach-photo { position: relative; }
 .coach-photo img { width: 100%; aspect-ratio: 16/11; object-fit: cover; }
 .coach-info { padding-top: 1.5rem; }
-.coach-grid article:last-child { background: var(--red); padding: 1rem; }
+.coach-grid article:last-child { background: var(--red); padding: 1rem; border-radius: 2px; }
 .coach-grid article:last-child .coach-info { padding: 1.5rem .5rem .75rem; }
 .coach-grid article:last-child .coach-info p { color: var(--paper); }
 .coach-grid article:last-child .coach-credentials { border-color: oklch(96% .008 25 / .4); }
@@ -175,22 +175,22 @@ h1 span { color: var(--paper); }
 .room-note strong { color: var(--paper); }
 /* The monthly membership carries the weight; entry passes stay compact. */
 .pricing-grid { display: grid; gap: 1.5rem; }
-.plan { padding: 1.75rem 0; border-block: 1px solid var(--line); }
+.plan { padding: 1.75rem 0; border-block: 1px solid var(--line); display: flex; flex-direction: column; }
 .plan h3 { font-size: 1.25rem; }
 .plan .eyebrow { margin-bottom: .75rem; }
 .plan-price { font-family: var(--display); font-size: 3.5rem; line-height: 1.1; margin-block: .75rem; letter-spacing: -.01em; }
 .plan-price small { font-family: var(--body); font-size: 1rem; letter-spacing: 0; }
 .plan-description { font-size: .9375rem; }
-.plan ul { margin: 1.5rem 0; }
+.plan ul { margin: 1.25rem 0; clear: both; }
 .plan li { font-size: .9375rem; padding: .65rem 0; border-top: 1px solid var(--line); }
 .plan li::before { content: '✓'; margin-right: .65rem; color: var(--red); font-weight: 700; }
-.plan.featured { order: -1; background: var(--red); color: var(--paper); border: 0; padding: 2rem 1.5rem; }
+.plan.featured { order: -1; background: var(--red); color: var(--paper); border: 0; border-radius: 2px; padding: 2rem 1.5rem; }
 .featured .plan-marker { display: inline-block; border: 1px solid oklch(96% .008 25 / .5); padding: .25rem .6rem; margin-bottom: 2rem; font-size: .6875rem; text-transform: uppercase; font-weight: 700; letter-spacing: .09em; }
 .featured .plan-price { font-size: clamp(4.2rem, 8vw, 6rem); }
 .featured li { border-color: oklch(96% .008 25 / .3); }
 .featured li::before { color: var(--paper); }
 .featured .btn { margin-top: 1rem; }
-.plan:not(.featured) ul { display: none; }
+.plan .btn { margin-top: auto; }
 .pricing-footnote { margin: 1.5rem 0 0; font-size: .875rem; color: var(--muted); }
 .pricing-footnote a { display: inline-flex; align-items: center; min-height: 44px; }
 /* Questions, arrival and one last invitation. */
@@ -212,6 +212,7 @@ details[open] summary::after { content: '−'; }
 .visit-phone { font-family: var(--display); font-size: 2rem; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; margin-bottom: 1rem; }
 .service-area { font-size: .9375rem; max-width: 45ch; }
 .visit-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+.visit-actions .btn { width: 100%; }
 .visit .btn.outline { color: var(--paper); border-color: oklch(96% .008 25 / .6); }
 .visit-detail { border-block: 1px solid oklch(96% .008 25 / .4); padding-block: 2rem; align-self: center; }
 .visit-detail h3 { margin-bottom: 1.2rem; font-size: 1.5rem; }
@@ -224,7 +225,7 @@ details[open] summary::after { content: '−'; }
 .closing .wrap { padding-block: 4rem; }
 .closing h2 { max-width: 14ch; }
 .closing p { margin-top: 1.5rem; }
-.closing .btn { margin-top: .5rem; }
+.closing .btn { margin-top: .5rem; width: 100%; max-width: 380px; }
 .footer { background: var(--ink); color: var(--on-dark); padding: 2.5rem 0 7rem; }
 .footer-main { display: flex; flex-direction: column; gap: 1.5rem; }
 .footer .brand { color: var(--paper); }
@@ -239,7 +240,7 @@ details[open] summary::after { content: '−'; }
 dialog { background: var(--paper); color: var(--ink); padding: 0; border: 0; border-radius: 3px; width: min(520px, calc(100% - 24px)); max-height: calc(100dvh - 24px); overscroll-behavior: contain; }
 dialog::backdrop { background: oklch(20% .009 25 / .85); }
 .dialog-inner { padding: 2rem 1.5rem; position: relative; }
-.dialog-close { position: absolute; right: 10px; top: 10px; width: 44px; height: 44px; font-size: 1.5rem; border: 1px solid var(--line); background: transparent; color: var(--ink); }
+.dialog-close { position: absolute; right: 10px; top: 10px; width: 44px; height: 44px; font-size: 1.5rem; border: 1px solid var(--line); border-radius: 2px; background: transparent; color: var(--ink); display: flex; align-items: center; justify-content: center; line-height: 1; }
 .dialog-inner .eyebrow { padding-right: 2rem; }
 .dialog-inner h2 { font-size: 2.75rem; margin-bottom: 1rem; }
 .dialog-intro { font-size: .9375rem; color: var(--muted); }
@@ -283,12 +284,14 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   .coach-grid { grid-template-columns: .9fr 1.1fr; align-items: start; gap: 2.5rem; }
   .coach-grid article:first-child { margin-top: 3rem; }
   .coach-grid article:last-child .coach-photo img { aspect-ratio: 4/3; }
+  .visit-actions .btn { width: auto; }
+  .closing .btn { width: auto; max-width: none; }
   .footer-main { flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; }
   .dialog-inner { padding: 2.5rem; }
 }
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
-  .nav { position: static; display: flex !important; gap: 1.5rem; padding: 0; border: 0; background: transparent; }
+  .nav { position: static; display: flex !important; gap: 1.5rem; padding: 0; border: 0; background: transparent; box-shadow: none; }
   .nav a { font-size: .8125rem; }
   .nav .mobile-nav-cta { display: none; }
   .header-inner { gap: 1.5rem; min-height: 88px; }
@@ -328,8 +331,8 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   .plan:not(.featured) { grid-column: 2; padding-block: 1.75rem; }
   .plan:not(.featured) .plan-price { float: right; margin: -.25rem 0 .5rem 1rem; }
   .plan:not(.featured) .plan-price small { display: block; font-size: .875rem; text-align: right; }
-  .plan:not(.featured) .plan-description { margin-block: 1rem; }
-  .plan:not(.featured) .btn { width: auto; }
+  .plan:not(.featured) .plan-description { margin-block: .75rem 1rem; }
+  .plan:not(.featured) .btn { width: auto; align-self: flex-start; }
   .plan:last-child { border-top: 0; }
   .faq-layout { grid-template-columns: 1fr 1.2fr; gap: 5rem; }
   .faq-intro h2 { max-width: 10ch; }
@@ -499,7 +502,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   <a class="brand" href="#" aria-label="United Wrestling Club home"><img class="brand-logo" src="../live_site_content/assets/uwc_lockup_horizontal.svg" alt="United Wrestling Club" width="208" height="52"></a>
   <nav class="nav" id="navigation" aria-label="Main navigation"><a href="#programs">Programs & times</a><a href="#coaches">Our coaches</a><a href="#pricing">Membership</a><a href="#visit">Visit UWC</a><a class="mobile-nav-cta" href="#mat-pass">Get the $15 Mat Pass ↗</a></nav>
   <a class="btn header-cta" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get the $15 Mat Pass <span class="arrow" aria-hidden="true">↗</span></a>
-  <button class="nav-toggle" aria-expanded="false" aria-controls="navigation" type="button">MENU</button>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation menu" type="button">MENU</button>
  </div>
 </header>
 <main id="main">
@@ -590,12 +593,14 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   function closeMenu() {
     nav.classList.remove('is-open');
     menu.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-label', 'Open navigation menu');
     menu.textContent = 'MENU';
   }
   menu.addEventListener('click', () => {
     const open = menu.getAttribute('aria-expanded') !== 'true';
     nav.classList.toggle('is-open', open);
     menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     menu.textContent = open ? 'CLOSE' : 'MENU';
   });
   $$('a', nav).forEach(link => link.addEventListener('click', closeMenu));

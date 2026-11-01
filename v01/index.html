@@ -21,7 +21,7 @@
     "alternateName": "UWC Hayward",
     "url": "https://www.unitedwrestlingclub.com/",
     "description": "Hayward's premier Olympic wrestling academy, youth scholastic training, and adult combat grappling. Founded by 1980 Moscow Olympian Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology).",
-    "logo": "https://www.unitedwrestlingclub.com/live_site_content/assets/logo.png",
+    "logo": "https://www.unitedwrestlingclub.com/live_site_content/assets/uwc_lockup_horizontal.svg",
     "image": "https://www.unitedwrestlingclub.com/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg",
     "telephone": "(510) 303-4869",
     "email": "unitedwrestlingclub@gmail.com",
@@ -125,7 +125,7 @@
       --color-text-bright: #ffffff;
       --color-text-main: #f0f2f5;
       --color-text-muted: #9fa6b2;
-      --color-text-dim: #646b7a;
+      --color-text-dim: #8e95a5;
 
       /* Radii */
       --radius-sm: 4px;
@@ -251,6 +251,8 @@
       width: max-content;
       white-space: nowrap;
       will-change: transform;
+      backface-visibility: hidden;
+      transform: translate3d(0, 0, 0);
       animation: marqueeScroll 32s linear infinite;
     }
 
@@ -294,7 +296,9 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 2px 8px;
+      padding: 6px 12px;
+      min-height: 44px;
+      box-sizing: border-box;
       border-radius: 4px;
       background: rgba(34, 197, 94, 0.16);
       border: 1px solid rgba(34, 197, 94, 0.40);
@@ -413,13 +417,231 @@
     }
 
     .brand-logo-img {
-      height: 44px;
+      height: 42px;
       width: auto;
-      max-width: 48px;
+      max-width: 68px;
       object-fit: contain;
       flex-shrink: 0;
-      filter: drop-shadow(0 2px 8px rgba(144, 37, 36, 0.35));
+      filter: drop-shadow(0 2px 8px rgba(186, 28, 28, 0.45));
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+    }
+
+
+    /* ==========================================================================
+       MOBILE MENU TOGGLE & ACCESSIBLE DRAWER OVERLAY
+       ========================================================================== */
+    .mobile-menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      color: #ffffff;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      transition: background 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .mobile-menu-toggle:hover,
+    .mobile-menu-toggle:focus {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .hamburger-bar {
+      width: 20px;
+      height: 2px;
+      background-color: #ffffff;
+      border-radius: 2px;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s;
+    }
+
+    .mobile-menu-toggle.active .hamburger-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-menu-toggle.active .hamburger-bar:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-menu-toggle.active .hamburger-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile Nav Backdrop */
+    .mobile-nav-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 5, 8, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+    }
+
+    .mobile-nav-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile Nav Drawer */
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(320px, 86vw);
+      background: #0d0f15;
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(100%);
+      visibility: hidden;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .mobile-nav-drawer.open {
+      transform: translateX(0);
+      visibility: visible;
+    }
+
+    .mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 14px;
+    }
+
+    .mobile-nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-nav-logo {
+      height: 36px;
+      width: auto;
+      max-width: 60px;
+      object-fit: contain;
+    }
+
+    .mobile-nav-close {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      color: #ffffff;
+      font-size: 1.6rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .mobile-nav-close:hover {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex-grow: 1;
+    }
+
+    .mobile-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 48px;
+      padding: 12px 14px;
+      font-family: var(--font-brand);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: background 0.2s, color 0.2s, padding-left 0.2s;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link:active {
+      background: rgba(186, 28, 28, 0.16);
+      color: #ffffff;
+      padding-left: 18px;
+    }
+
+    .mobile-nav-footer {
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mobile-nav-cta {
+      width: 100%;
+      height: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .mobile-nav-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mobile-nav-contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 6px 4px;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav-contact-link:hover {
+      color: #ffffff;
     }
 
     .nav-brand:hover .brand-logo-img {
@@ -956,6 +1178,23 @@
       margin-top: 2px;
     }
 
+    .fac-directions-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ff5252;
+      min-height: 44px;
+      padding: 6px 0;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .fac-directions-link:hover {
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
     .fac-text-sub a {
       color: #ffffff;
       text-decoration: underline;
@@ -1122,6 +1361,10 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      min-height: 44px;
+      padding: 10px 0;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
     }
 
     .card-link:hover {
@@ -1185,6 +1428,7 @@
     .floating-badge-logo {
       height: 44px;
       width: auto;
+      max-width: 68px;
       object-fit: contain;
     }
 
@@ -1672,7 +1916,28 @@
       gap: 12px;
     }
 
+    .footer-links a {
+      color: var(--color-text-dim);
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 4px 0;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
     .footer-links a:hover {
+      color: #ffffff;
+    }
+    .footer-nap a {
+      color: var(--color-text-dim);
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 4px 0;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    .footer-nap a:hover {
       color: #ffffff;
     }
 
@@ -1741,17 +2006,22 @@
 
     .modal-close {
       position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 32px;
-      height: 32px;
+      top: 14px;
+      right: 14px;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: var(--color-text-muted);
       border-radius: 50%;
-      transition: color 0.2s, background 0.2s;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: color 0.2s, background 0.2s, border-color 0.2s;
     }
 
     .modal-close:hover {
@@ -1769,6 +2039,7 @@
     .modal-logo {
       height: 44px;
       width: auto;
+      max-width: 68px;
       object-fit: contain;
     }
 
@@ -1802,6 +2073,7 @@
 
     .form-input, .form-select {
       width: 100%;
+      min-height: 46px;
       background: var(--color-canvas);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-sm);
@@ -1811,6 +2083,7 @@
       font-family: inherit;
       outline: none;
       transition: border-color 0.2s;
+      box-sizing: border-box;
     }
 
     .form-input:focus, .form-select:focus {
@@ -1890,8 +2163,12 @@
       .lineage-frame img {
         height: 380px;
       }
+      .desktop-nav,
       .nav-links {
-        display: none;
+        display: none !important;
+      }
+      .mobile-menu-toggle {
+        display: inline-flex;
       }
       .facility-grid {
         grid-template-columns: 1fr;
@@ -1940,17 +2217,24 @@
         display: none !important;
       }
       .brand-logo-img {
-        height: 42px;
+        height: 38px;
         width: auto;
-        max-width: 46px;
+        max-width: 64px;
+      }
+      .nav-brand {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
       }
       .nav-inner {
         height: 64px;
-        gap: 10px;
+        gap: 8px;
         justify-content: space-between;
       }
       .nav-actions {
-        gap: 10px;
+        gap: 8px;
         align-items: center;
       }
 
@@ -1959,12 +2243,12 @@
         display: none !important;
       }
 
-      /* 3. Bold, prominent mobile Nav CTA */
+      /* 3. Bold, prominent mobile Nav CTA (min 44px touch target) */
       .site-nav .btn,
       .btn.btn-nav-cta {
-        height: 38px;
-        min-height: 38px;
-        padding: 0 16px;
+        height: 44px;
+        min-height: 44px;
+        padding: 0 14px;
         font-size: 0.80rem;
         font-weight: 800;
         letter-spacing: 0.04em;
@@ -1980,7 +2264,7 @@
 
       /* 4. Mobile Hero - Center Video Clearance Layout */
       .hero-section {
-        min-height: calc(100svh - 98px);
+        min-height: calc(100svh - 108px);
         height: auto;
         display: flex;
         flex-direction: column;
@@ -1992,12 +2276,12 @@
       }
       .hero-container {
         width: 100%;
-        min-height: calc(100svh - 98px);
+        min-height: calc(100svh - 108px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 55px; /* ~60px from the top within the hero border */
-        padding-bottom: 55px; /* ~60px to the bottom within the hero border */
+        padding-top: 48px;
+        padding-bottom: 48px;
         box-sizing: border-box;
         position: relative;
         z-index: 3;
@@ -2007,7 +2291,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        min-height: calc(100svh - 98px - 110px);
+        min-height: calc(100svh - 108px - 96px);
         width: 100%;
         max-width: 100%;
         text-align: left;
@@ -2223,6 +2507,8 @@
       .btn.btn-nav-cta {
         padding: 0 10px;
         font-size: 0.72rem;
+        height: 44px;
+        min-height: 44px;
       }
     }
   
@@ -2242,8 +2528,10 @@
     }
 
     .footer-social-link {
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      min-height: 44px;
       border-radius: var(--radius-sm);
       background: var(--color-surface-base);
       border: 1px solid var(--color-border);
@@ -2343,14 +2631,14 @@
   <header class="site-nav">
     <div class="container nav-inner">
       <a href="/" class="nav-brand" aria-label="United Wrestling Club Homepage">
-        <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Emblem" class="brand-logo-img">
+        <img src="../live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Emblem" class="brand-logo-img">
         <div class="brand-text">
           <span class="brand-name">UNITED WRESTLING</span>
           <span class="brand-sub">HAYWARD OLYMPIC CLUB</span>
         </div>
       </a>
 
-      <nav aria-label="Main Navigation">
+      <nav aria-label="Main Navigation" class="desktop-nav">
         <ul class="nav-links">
           <li><a href="#programs" class="nav-link">Programs</a></li>
           <li><a href="#lineage" class="nav-link">Olympic Lineage</a></li>
@@ -2371,9 +2659,56 @@
           <span class="btn-text-full">Claim $15 3-Day Pass</span>
           <span class="btn-text-mobile">Claim $15 Pass</span>
         </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="mobile-nav-brand">
+        <img src="../live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Emblem" class="mobile-nav-logo">
+        <div class="brand-text">
+          <span class="brand-name" style="font-size: 0.88rem;">UNITED WRESTLING</span>
+          <span class="brand-sub" style="font-size: 0.58rem;">HAYWARD OLYMPIC CLUB</span>
+        </div>
+      </div>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <nav aria-label="Mobile Navigation Links">
+      <ul class="mobile-nav-links">
+        <li><a href="#programs" class="mobile-nav-link">Programs & Schedule</a></li>
+        <li><a href="#lineage" class="mobile-nav-link">Olympic Lineage</a></li>
+        <li><a href="#facility" class="mobile-nav-link">The Mat Room & Safety</a></li>
+        <li><a href="#pricing" class="mobile-nav-link">Pricing ($139/mo)</a></li>
+        <li><a href="#faq" class="mobile-nav-link">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-nav-footer">
+      <button class="btn btn-primary mobile-nav-cta open-trial-modal">
+        Claim $15 3-Day Pass
+      </button>
+      <div class="mobile-nav-contact">
+        <a href="tel:5103034869" class="mobile-nav-contact-link" aria-label="Call (510) 303-4869">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          (510) 303-4869
+        </a>
+        <a href="https://maps.google.com/?q=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" class="mobile-nav-contact-link" aria-label="Directions to Hayward gym">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          30139 Industrial Pkwy SW, Hayward
+        </a>
+      </div>
+    </div>
+  </aside>
+
 
   <!-- 3. Hero Section with 1080p Video & Unsplash Grunge Texture Overlay -->
   <section class="hero-section">
@@ -2485,7 +2820,8 @@
         <div class="fac-icon">📍</div>
         <div>
           <div class="fac-text-title">Hayward Headquarters</div>
-          <div class="fac-text-sub">30139 Industrial Pkwy SW Ste C, Hayward CA 94544 (<a href="https://maps.google.com" target="_blank">Get Directions</a>)</div>
+          <div class="fac-text-sub">30139 Industrial Pkwy SW Ste C, Hayward CA 94544</div>
+          <a href="https://maps.google.com/?q=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" class="fac-directions-link">Get Directions &rarr;</a>
         </div>
       </div>
       <div class="fac-item">
@@ -2604,7 +2940,7 @@
             <img src="../video_assets/stills_selected/still_31_naweed_headshot_united_wall.jpg" alt="Head Wrestling Coach Naweed Zemaryalai under the United Wrestling Club wall in Hayward">
           </div>
           <div class="lineage-floating-badge">
-            <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Crest" class="floating-badge-logo">
+            <img src="../live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Crest" class="floating-badge-logo">
             <div class="floating-badge-text-wrap">
               <span class="floating-badge-year">1980</span>
               <span class="floating-badge-text">Olympic Lineage Pedigree</span>
@@ -2907,7 +3243,7 @@
       <div class="footer-grid">
         <div>
           <div class="nav-brand" style="margin-bottom: 16px;">
-            <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Logo" class="brand-logo-img" style="height: 48px;">
+            <img src="../live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Logo" class="brand-logo-img" style="height: 44px; max-width: 72px;">
             <div class="brand-text">
               <span class="brand-name">UNITED WRESTLING</span>
               <span class="brand-sub">HAYWARD OLYMPIC CLUB</span>
@@ -2989,7 +3325,7 @@
       
       <div id="modalFormContainer">
         <div class="modal-brand-row">
-          <img src="../live_site_content/assets/logo.png" alt="United Wrestling Club Official Emblem" class="modal-logo">
+          <img src="../live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Emblem" class="modal-logo">
           <div>
             <span class="section-eyebrow" style="margin-bottom: 2px;">3-DAY MAT PASS • $15</span>
             <h3 class="modal-title">Step Onto the&nbsp;Mat</h3>
@@ -3050,13 +3386,27 @@
     </div>
   </div>
 
-  <!-- JavaScript for Interactive FAQ and Modal -->
+  <!-- JavaScript for Interactive FAQ, Modal, and Mobile Nav Drawer -->
   <script>
-    // FAQ Accordion
+    // FAQ Accordion with Keyboard Support
     document.querySelectorAll('.faq-question').forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.parentElement;
-        item.classList.toggle('active');
+      header.setAttribute('tabindex', '0');
+      header.setAttribute('role', 'button');
+      const item = header.parentElement;
+      const isInitiallyActive = item.classList.contains('active');
+      header.setAttribute('aria-expanded', isInitiallyActive ? 'true' : 'false');
+
+      const toggleFAQ = () => {
+        const isActive = item.classList.toggle('active');
+        header.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      };
+
+      header.addEventListener('click', toggleFAQ);
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFAQ();
+        }
       });
     });
 
@@ -3068,33 +3418,110 @@
     const formContainer = document.getElementById('modalFormContainer');
     const successState = document.getElementById('modalSuccessState');
 
-    document.querySelectorAll('.open-trial-modal').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('open');
-      });
-    });
+    function openModal() {
+      if (!modal) return;
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      const firstInput = form ? form.querySelector('input') : null;
+      if (firstInput) setTimeout(() => firstInput.focus(), 100);
+    }
 
     function closeModal() {
+      if (!modal) return;
       modal.classList.remove('open');
+      document.body.style.overflow = '';
       setTimeout(() => {
-        formContainer.style.display = 'block';
-        successState.style.display = 'none';
-        form.reset();
+        if (formContainer) formContainer.style.display = 'block';
+        if (successState) successState.style.display = 'none';
+        if (form) form.reset();
       }, 300);
     }
 
-    closeBtn.addEventListener('click', closeModal);
-    doneBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
+    document.querySelectorAll('.open-trial-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
     });
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Simulate WrestlingIQ webhook dispatch
-      formContainer.style.display = 'none';
-      successState.style.display = 'block';
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (doneBtn) doneBtn.addEventListener('click', closeModal);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simulate WrestlingIQ webhook intake
+        if (formContainer) formContainer.style.display = 'none';
+        if (successState) successState.style.display = 'block';
+      });
+    }
+
+    // Mobile Menu Toggle & Drawer Handling
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    function openMobileNav() {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.add('open');
+      if (mobileNavBackdrop) mobileNavBackdrop.classList.add('open');
+      if (mobileMenuToggle) {
+        mobileMenuToggle.classList.add('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'true');
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileNav() {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.remove('open');
+      if (mobileNavBackdrop) mobileNavBackdrop.classList.remove('open');
+      if (mobileMenuToggle) {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (mobileNavDrawer.classList.contains('open')) {
+          closeMobileNav();
+        } else {
+          openMobileNav();
+        }
+      });
+    }
+
+    if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileNav);
+
+    // Close mobile nav when clicking any link within it
+    if (mobileNavDrawer) {
+      mobileNavDrawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          closeMobileNav();
+        });
+      });
+    }
+
+    // Global Escape Key Listener for Modal and Mobile Drawer
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (modal && modal.classList.contains('open')) {
+          closeModal();
+        }
+        if (mobileNavDrawer && mobileNavDrawer.classList.contains('open')) {
+          closeMobileNav();
+        }
+      }
     });
 
     // Pause marquee immediately when touched on mobile so phone CTA is effortless to tap
