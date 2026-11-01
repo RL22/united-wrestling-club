@@ -112,6 +112,11 @@
       padding: 0;
     }
 
+    html {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
     body {
       background-color: var(--color-canvas);
       color: var(--color-text-main);
@@ -120,6 +125,8 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+      max-width: 100%;
+      position: relative;
       font-size: 16px;
     }
 
@@ -176,18 +183,18 @@
     }
 
     /* ==========================================================================
-       TOP ANNOUNCEMENT / TRUST BAR
+       TOP ANNOUNCEMENT / INFINITE SCROLLING TRUST MARQUEE
        ========================================================================== */
     .top-bar {
       background-color: #07080a;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       font-size: 0.72rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-weight: 600;
-      height: 32px;
-      min-height: 32px;
-      max-height: 32px;
+      height: 34px;
+      min-height: 34px;
+      max-height: 34px;
       padding: 0;
       color: var(--color-text-muted);
       position: relative;
@@ -195,41 +202,102 @@
       display: flex;
       align-items: center;
       overflow: hidden;
-    }
-
-    .top-bar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      contain: paint;
       width: 100%;
-      height: 100%;
-      gap: 16px;
-      white-space: nowrap;
-      overflow: hidden;
+      max-width: 100%;
+      user-select: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24px, #000 calc(100% - 24px), transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, #000 24px, #000 calc(100% - 24px), transparent 100%);
     }
 
-    .top-bar-left {
+    .marquee-track {
       display: flex;
       align-items: center;
-      gap: 12px;
+      width: max-content;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      min-width: 0;
+      will-change: transform;
+      animation: marqueeScroll 32s linear infinite;
     }
 
-    .top-bar-item {
+    .top-bar:hover .marquee-track,
+    .top-bar:active .marquee-track,
+    .top-bar:focus-within .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marqueeScroll {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+    }
+
+    .marquee-item a,
+    .marquee-link {
+      color: inherit;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap;
-      flex-shrink: 0;
+      transition: color 0.2s ease;
     }
 
-    .top-bar-divider {
-      color: rgba(255, 255, 255, 0.25);
+    .marquee-item a:hover,
+    .marquee-link:hover {
+      color: #ffffff;
+    }
+
+    .marquee-divider {
+      color: rgba(255, 255, 255, 0.20);
       user-select: none;
       flex-shrink: 0;
+      font-size: 0.65rem;
+    }
+
+    .marquee-highlight {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .marquee-phone {
+      color: #ffffff;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+    }
+
+    .marquee-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(144, 37, 36, 0.25);
+      border: 1px solid rgba(144, 37, 36, 0.45);
+      color: #ff8584;
+      font-size: 0.64rem;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
     }
 
     .dot-pulse {
@@ -237,7 +305,7 @@
       height: 7px;
       background-color: #22c55e;
       border-radius: 50%;
-      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
       animation: dotPulse 2.2s infinite ease-in-out;
       display: inline-block;
       flex-shrink: 0;
@@ -247,7 +315,7 @@
       0%, 100% {
         opacity: 1;
         transform: scale(1);
-        box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+        box-shadow: 0 0 8px rgba(34, 197, 94, 0.7);
       }
       50% {
         opacity: 0.45;
@@ -256,29 +324,11 @@
       }
     }
 
-    .top-bar-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-      font-weight: 600;
-      color: var(--color-text-muted);
-      flex-shrink: 0;
-    }
-
-    .top-bar-right .top-bar-highlight {
-      color: #ffffff;
-      font-weight: 700;
-    }
-
-    .top-bar-right a {
-      color: var(--color-text-bright);
-      font-weight: 700;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-    .top-bar-right a:hover {
-      color: var(--color-primary);
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+        overflow-x: auto;
+      }
     }
 
     /* ==========================================================================
@@ -470,16 +520,16 @@
     /* Sleek CTA Button inside Navigation */
     .site-nav .btn,
     .btn.btn-nav-cta {
-      background-color: #902524;
+      background: linear-gradient(135deg, #a82e2d 0%, #902524 50%, #761d1c 100%);
       color: #ffffff;
-      padding: 10px 18px;
-      font-size: 0.76rem;
+      padding: 10px 20px;
+      font-size: 0.82rem;
       font-weight: 800;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 2px 10px rgba(144, 37, 36, 0.35);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 3px 12px rgba(144, 37, 36, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
       white-space: nowrap;
       flex-shrink: 0;
       cursor: pointer;
@@ -487,20 +537,24 @@
       align-items: center;
       justify-content: center;
       line-height: 1;
+      height: 42px;
+      min-height: 42px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .site-nav .btn:hover,
     .btn.btn-nav-cta:hover {
-      background-color: #a82e2d;
+      background: linear-gradient(135deg, #b83332 0%, #a02928 50%, #82201f 100%);
       transform: translateY(-1px);
-      box-shadow: 0 4px 18px rgba(144, 37, 36, 0.5), 0 0 12px rgba(144, 37, 36, 0.35);
+      box-shadow: 0 5px 20px rgba(144, 37, 36, 0.65), 0 0 16px rgba(144, 37, 36, 0.4);
+      border-color: rgba(255, 255, 255, 0.35);
     }
 
     .site-nav .btn:active,
     .btn.btn-nav-cta:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(144, 37, 36, 0.4);
+      transform: scale(0.97);
+      box-shadow: 0 1px 6px rgba(144, 37, 36, 0.4);
     }
 
     .btn-text-mobile {
@@ -624,6 +678,18 @@
       max-width: 820px;
     }
 
+    /* Universal No-Wrap & Box Sizing on All Pill Badges */
+    .hero-badge-strip,
+    .hero-badge-strip span,
+    .trial-callout-pill,
+    .trial-callout-pill span,
+    .trial-callout-pill strong,
+    .card-badge,
+    .coach-role-tag,
+    .featured-tag {
+      white-space: nowrap !important;
+    }
+
     .hero-badge-strip {
       display: inline-flex;
       align-items: center;
@@ -633,6 +699,8 @@
       border: 1px solid var(--color-border-accent);
       border-radius: var(--radius-pill);
       margin-bottom: 24px;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .hero-badge-tag {
@@ -722,6 +790,38 @@
     .trial-desc strong {
       color: #ffffff;
       font-weight: 700;
+    }
+
+    .hero-phone-direct {
+      margin-top: -32px;
+      margin-bottom: 38px;
+    }
+
+    .hero-phone-direct-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #9FA6B2;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .hero-phone-direct-link:hover {
+      color: #ffffff;
+    }
+
+    .hero-phone-direct-link svg {
+      color: #ff5e5d;
+      flex-shrink: 0;
+    }
+
+    .hero-phone-direct-link .hero-phone-num {
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     /* Trust Pill Bar inside Hero - Exact 4 Columns to Prevent Orphans */
@@ -1712,12 +1812,6 @@
     }
 
     @media (max-width: 1040px) {
-      .top-bar-right {
-        display: none;
-      }
-      .nav-phone {
-        display: none;
-      }
       .nav-links {
         gap: 12px;
       }
@@ -1727,19 +1821,13 @@
     }
 
     @media (max-width: 960px) {
-      .top-bar-right {
-        display: none;
-      }
-      .top-bar-inner {
-        justify-content: center;
-      }
       .lineage-layout {
         grid-template-columns: 1fr;
       }
       .lineage-frame img {
         height: 380px;
       }
-      .nav-links, .nav-phone {
+      .nav-links {
         display: none;
       }
       .facility-grid {
@@ -1760,65 +1848,260 @@
     }
 
     @media (max-width: 768px) {
+      header nav {
+        display: none !important;
+      }
       .hero-proof-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+      /* 1. Drop brand text on mobile so only clean emblem mark shines */
+      .brand-text {
+        display: none !important;
+      }
+      .brand-logo-img {
+        height: 42px;
+        width: auto;
+        max-width: 46px;
+      }
+      .nav-inner {
+        height: 64px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .nav-actions {
+        gap: 10px;
+        align-items: center;
+      }
+      /* 2. Tap-to-call phone icon button in sticky header */
+      .nav-phone {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        min-height: 38px;
+        padding: 0;
+        border-radius: var(--radius-sm);
+        background: rgba(34, 197, 94, 0.12);
+        border: 1px solid rgba(34, 197, 94, 0.35);
+        color: #22c55e;
+        text-decoration: none;
+        flex-shrink: 0;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .nav-phone .phone-number {
+        display: none;
+      }
+      .nav-phone svg {
+        width: 15px;
+        height: 15px;
+        color: #22c55e;
+      }
+      .nav-phone:hover,
+      .nav-phone:focus {
+        background: rgba(34, 197, 94, 0.22);
+        border-color: #22c55e;
+        transform: translateY(-1px);
+      }
+      .nav-phone:active {
+        transform: scale(0.95);
+      }
+
+      /* 3. Bold, prominent mobile Nav CTA */
+      .site-nav .btn,
+      .btn.btn-nav-cta {
+        height: 38px;
+        min-height: 38px;
+        padding: 0 14px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        box-shadow: 0 3px 12px rgba(144, 37, 36, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+        white-space: nowrap;
+      }
+      .btn-text-full {
+        display: none !important;
+      }
+      .btn-text-mobile {
+        display: inline !important;
       }
     }
 
     @media (max-width: 640px) {
-      .top-bar-addr-detail {
-        display: none;
+      /* Tighten container padding for clean mobile edges */
+      .container {
+        padding-left: clamp(14px, 4vw, 24px);
+        padding-right: clamp(14px, 4vw, 24px);
       }
-      .brand-logo-img {
-        height: 36px;
-        max-width: 38px;
+
+      /* Hero Mobile Spacing & Vertical Rhythm */
+      .hero-section {
+        padding: clamp(28px, 4.5vh, 40px) 0 clamp(32px, 5vh, 44px);
+        min-height: auto;
       }
-      .brand-name {
+
+      /* Pills: Strict Zero Line Breaks */
+      .hero-badge-strip {
+        display: inline-flex;
+        align-items: center;
+        padding: 3px 8px;
+        gap: 5px;
+        margin-bottom: 12px;
+        white-space: nowrap;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .hero-badge-tag {
+        font-size: clamp(0.48rem, 1.8vw, 0.60rem);
+        letter-spacing: 0.03em;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .hero-badge-divider {
+        font-size: 0.50rem;
+        opacity: 0.35;
+        white-space: nowrap;
+      }
+      .hero-badge-location {
+        font-size: clamp(0.46rem, 1.7vw, 0.58rem);
+        letter-spacing: 0.01em;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      /* Mobile Hero Heading & Subtitle */
+      .hero-title {
+        font-size: clamp(1.85rem, 8.2vw, 2.35rem);
+        line-height: 1.06;
+        letter-spacing: -0.015em;
+        margin-bottom: 12px;
+      }
+      .hero-subtitle {
+        font-size: clamp(0.88rem, 3.6vw, 0.98rem);
+        line-height: 1.48;
+        margin-bottom: 18px;
+      }
+
+      /* Hero CTA Harmonization - Primary Button + Sleek Trust Badge */
+      .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 12px;
+        width: 100%;
+        max-width: 380px;
+      }
+      .hero-cta-group .btn.btn-primary {
+        width: 100%;
+        padding: 13px 20px;
         font-size: 0.88rem;
+        letter-spacing: 0.04em;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(186, 28, 28, 0.35);
       }
-      .brand-sub {
-        display: none;
+      .trial-callout-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 6px 14px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--radius-pill);
+        margin: 0 auto;
+        white-space: nowrap;
       }
-      .site-nav .btn,
-      .btn.btn-nav-cta {
-        padding: 7px 12px;
-        font-size: 0.72rem;
+      .trial-callout-pill .trial-price {
+        font-size: 1.05rem;
+        color: #ff5252;
+        line-height: 1;
+        white-space: nowrap;
       }
+      .trial-callout-pill .trial-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        font-size: 0.64rem;
+        line-height: 1.15;
+        white-space: nowrap;
+      }
+      .trial-callout-pill .trial-desc strong {
+        color: #ffffff;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .trial-callout-pill .trial-desc span {
+        color: var(--color-text-muted);
+        white-space: nowrap;
+      }
+
+      /* Mobile Proof Grid (2x2 Balanced) */
+      .hero-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 14px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .proof-stat {
+        font-size: clamp(1.2rem, 5.2vw, 1.4rem);
+        line-height: 1.1;
+      }
+      .proof-label {
+        font-size: 0.66rem;
+        letter-spacing: 0.04em;
+        margin-top: 2px;
+      }
+
+      /* Grids and Section Headings */
       .programs-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .card-badge {
+        font-size: 0.62rem;
+        padding: 3px 7px;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
       }
       .safety-grid {
         grid-template-columns: 1fr;
       }
+      .hero-phone-direct {
+        margin-top: 6px;
+        margin-bottom: 20px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
       }
-      .hero-section {
-        padding: 50px 0 70px;
-      }
     }
 
-    @media (max-width: 440px) {
-      .brand-name {
-        font-size: 0.82rem;
+    @media (max-width: 380px) {
+      .hero-badge-strip {
+        padding: 3px 6px;
+        gap: 4px;
       }
-      .brand-logo-img {
-        height: 32px;
-        max-width: 34px;
+      .hero-badge-tag {
+        font-size: 0.48rem;
+        letter-spacing: 0.02em;
+      }
+      .hero-badge-location {
+        font-size: 0.46rem;
+        letter-spacing: 0em;
       }
       .nav-inner {
-        height: 60px;
+        gap: 6px;
+      }
+      .nav-actions {
+        gap: 6px;
       }
       .site-nav .btn,
       .btn.btn-nav-cta {
-        padding: 6px 10px;
-        font-size: 0.68rem;
-      }
-      .btn-text-full {
-        display: none;
-      }
-      .btn-text-mobile {
-        display: inline;
+        padding: 0 10px;
+        font-size: 0.72rem;
       }
     }
   
@@ -1864,21 +2147,73 @@
 
   <div class="noise-bg"></div>
 
-  <!-- 1. Top Local Sanctioning Bar -->
-  <aside class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-bar-left">
-        <div class="top-bar-item">
+  <!-- 1. Top Local Sanctioning & Schedule Marquee -->
+  <aside class="top-bar" aria-label="Sanctioning, schedule, and facility announcements">
+    <div class="marquee-track">
+      <!-- Sequence A -->
+      <div class="marquee-group">
+        <div class="marquee-item">
           <span class="dot-pulse" aria-hidden="true"></span>
           <span>USA WRESTLING RTC #513 SANCTIONED</span>
         </div>
-        <div class="top-bar-divider" aria-hidden="true">•</div>
-        <div class="top-bar-item">
-          <span>HAYWARD, CA <span class="top-bar-addr-detail">• 30139 INDUSTRIAL PKWY SW</span></span>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>HAYWARD, CA <span class="marquee-highlight">• 30139 INDUSTRIAL PKWY SW</span></span>
         </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 4:30 PM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10:00 AM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <a href="tel:5103034869" class="marquee-link" aria-label="Call (510) 303-4869">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>CALL / TEXT: <strong class="marquee-phone">(510) 303-4869</strong></span>
+          </a>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span class="marquee-pill">TRIAL PASS</span>
+          <span>3 CONSECUTIVE DAYS ONLY <strong class="marquee-highlight">$15</strong></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
       </div>
-      <div class="top-bar-right">
-        <span>NEW MAT HOURS: <span class="top-bar-highlight">MON–FRI 4:30 PM</span> | SATURDAY OPEN MAT <span class="top-bar-highlight">10:00 AM</span></span>
+
+      <!-- Sequence B (Identical Duplicate for Seamless Infinite Loop) -->
+      <div class="marquee-group" aria-hidden="true">
+        <div class="marquee-item">
+          <span class="dot-pulse" aria-hidden="true"></span>
+          <span>USA WRESTLING RTC #513 SANCTIONED</span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>HAYWARD, CA <span class="marquee-highlight">• 30139 INDUSTRIAL PKWY SW</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 4:30 PM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10:00 AM</span></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <a href="tel:5103034869" class="marquee-link" tabindex="-1">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>CALL / TEXT: <strong class="marquee-phone">(510) 303-4869</strong></span>
+          </a>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
+        <div class="marquee-item">
+          <span class="marquee-pill">TRIAL PASS</span>
+          <span>3 CONSECUTIVE DAYS ONLY <strong class="marquee-highlight">$15</strong></span>
+        </div>
+        <span class="marquee-divider" aria-hidden="true">•</span>
       </div>
     </div>
   </aside>
@@ -1913,7 +2248,7 @@
         </a>
         <button class="btn btn-nav-cta open-trial-modal">
           <span class="btn-text-full">Claim $15 3-Day Pass</span>
-          <span class="btn-text-mobile">$15 3-Day Pass</span>
+          <span class="btn-text-mobile">Claim $15 Pass</span>
         </button>
       </div>
     </div>
@@ -1961,6 +2296,15 @@
               <span>New Members • All Programs</span>
             </div>
           </div>
+        </div>
+
+        <div class="hero-phone-direct">
+          <a href="tel:5103034869" class="hero-phone-direct-link" aria-label="Direct mat room line: call or text 510-303-4869">
+            <svg class="phone-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <span>Questions? Call or text direct: <strong class="hero-phone-num">(510) 303-4869</strong></span>
+          </a>
         </div>
 
         <!-- 4 Balanced Columns: No Orphans -->
