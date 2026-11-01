@@ -1,0 +1,1675 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "United Wrestling Club - Instagram Reels & Video Stills Master Index",
+  "description": "Comprehensive unified index of all curated production stills extracted from United Wrestling Club (@uwc_wrestling) Instagram reels and championship posts, compiled across all extraction reports.",
+  "version": "1.0.0",
+  "updated_at": "2026-11-01T01:20:00-08:00",
+  "compiled_from_markdown_reports": [
+    "instagram_us_open_assets_report.md",
+    "instagram_reel_highlight_stills_report.md",
+    "instagram_reels_high_impact_stills_report.md"
+  ],
+  "summary": {
+    "total_stills_indexed": 27,
+    "total_source_posts": 4,
+    "total_carousel_slides": 3,
+    "total_video_clips": 2,
+    "resolutions_included": [
+      "1440x2560 Ultra HD 2.5K",
+      "1080x1920 Full HD",
+      "1440x1920 Full Res",
+      "720x960 HD"
+    ],
+    "formats_available": [
+      "JPEG",
+      "WebP (<85KB average)"
+    ]
+  },
+  "sources": [
+    {
+      "post_id": "DJDIqQUTGmt",
+      "title": "Coach Naweed US Open 2025 National Championship Carousel & Clips",
+      "url": "https://www.instagram.com/p/DJDIqQUTGmt/",
+      "media_type": "Instagram Carousel Post (Slides + Video Clips)",
+      "items_extracted": [
+        "still_26",
+        "still_27",
+        "still_28",
+        "still_29",
+        "still_30"
+      ],
+      "markdown_report": "instagram_us_open_assets_report.md"
+    },
+    {
+      "post_id": "DYgH12do0c6",
+      "title": "Coach Naweed & UWC Vlog 1: Who We Are",
+      "url": "https://www.instagram.com/reel/DYgH12do0c6/",
+      "media_type": "Instagram Reel (170s, 1080x1920 Full HD)",
+      "items_extracted": [
+        "still_31",
+        "still_32",
+        "still_33",
+        "still_34",
+        "still_35",
+        "still_36",
+        "still_37",
+        "still_38",
+        "still_39",
+        "still_40",
+        "still_41",
+        "still_42",
+        "still_51",
+        "still_52"
+      ],
+      "markdown_report": "instagram_reel_highlight_stills_report.md"
+    },
+    {
+      "post_id": "DdxCH8lSSdx",
+      "title": "Live Wrestling Rounds at UWC ft. UFC Contender Farid Basharat",
+      "url": "https://www.instagram.com/reel/DdxCH8lSSdx/",
+      "media_type": "Instagram Reel (35s, 1440x2560 Ultra HD 2.5K)",
+      "items_extracted": [
+        "still_43",
+        "still_44",
+        "still_45",
+        "still_46"
+      ],
+      "markdown_report": "instagram_reels_high_impact_stills_report.md"
+    },
+    {
+      "post_id": "DeZtKxJIlg5",
+      "title": "Sergio Gomez: 6 Years on the Mat at UWC Hayward Athlete Profile",
+      "url": "https://www.instagram.com/reel/DeZtKxJIlg5/",
+      "media_type": "Instagram Reel (66s, 1080x1920 Full HD)",
+      "items_extracted": [
+        "still_47",
+        "still_48",
+        "still_49",
+        "still_50"
+      ],
+      "markdown_report": "instagram_reels_high_impact_stills_report.md"
+    }
+  ],
+  "stills": [
+    {
+      "id": "still_26",
+      "file_name": "still_26_naweed_us_open_plaque_greco_roman.jpg",
+      "title": "US Open Greco-Roman National Championship Plaque",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DJDIqQUTGmt",
+        "post_url": "https://www.instagram.com/p/DJDIqQUTGmt/",
+        "media_type": "Post Carousel / Video",
+        "source_frame": "slide_02_DJDIqFfTslV_fullres.jpg",
+        "source_resolution": "1440x1918",
+        "source_report": "instagram_us_open_assets_report.md"
+      },
+      "alt_text": "Macro close-up of the official 2025 U.S. Open Masters Greco-Roman National Championship plaque won by Coach Naweed of United Wrestling Club.",
+      "description": "High-resolution macro photography of the solid walnut national championship plaque from USA Wrestling, inscribed with '2025 U.S. Open Masters Greco-Roman Champion, Hayward, California'. Demonstrates verifiable national athletic supremacy.",
+      "use_case": {
+        "primary_placement": "Credentials & Accreditations / Trust Proof Section",
+        "target_audience": "Parents, collegiate wrestling recruits, serious combat athletes",
+        "conversion_goal": "Provide concrete, third-party verified proof of national championship athletic excellence",
+        "suggested_components": [
+          "Credentials Badge",
+          "Trophy Case Modal",
+          "Trust Strip Icon"
+        ]
+      },
+      "tags": [
+        "championship",
+        "usa-wrestling",
+        "us-open-2025",
+        "greco-roman",
+        "national-champion",
+        "plaque",
+        "credentials",
+        "coach-naweed",
+        "social-proof"
+      ],
+      "branding_elements": [
+        "USA Wrestling Olympic seal",
+        "Official gold engraved champion plate"
+      ],
+      "file_path": "video_assets/stills_selected/still_26_naweed_us_open_plaque_greco_roman.jpg",
+      "webp_file_name": "still_26_naweed_us_open_plaque_greco_roman.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_26_naweed_us_open_plaque_greco_roman.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 1918,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 544,
+        "webp": 610
+      }
+    },
+    {
+      "id": "still_27",
+      "file_name": "still_27_naweed_us_open_banner_plaque.jpg",
+      "title": "Coach Naweed USA Wrestling Championship Podium Portrait",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DJDIqQUTGmt",
+        "post_url": "https://www.instagram.com/p/DJDIqQUTGmt/",
+        "media_type": "Post Carousel / Video",
+        "source_frame": "slide_01_DJDIqFizEa8_fullres.jpg",
+        "source_resolution": "1440x1920",
+        "source_report": "instagram_us_open_assets_report.md"
+      },
+      "alt_text": "Coach Naweed holding the 2025 US Open national championship plaque in front of the USA Wrestling tournament banner in Las Vegas.",
+      "description": "Coach Naweed smiling proudly standing center-frame in his competition singlet and UWC hoodie, holding his national championship award before the red, white, and blue USA Wrestling backdrop in Las Vegas.",
+      "use_case": {
+        "primary_placement": "Head Coach Spotlight / About Founder Biography",
+        "target_audience": "Prospective adult and youth athletes seeking elite mentorship",
+        "conversion_goal": "Connect Coach Naweed's personal championship performance directly to coaching pedigree",
+        "suggested_components": [
+          "Coach Bio Hero",
+          "Instructor Card",
+          "Social Proof Split"
+        ]
+      },
+      "tags": [
+        "coach-naweed",
+        "us-open-2025",
+        "usa-wrestling",
+        "national-champion",
+        "champion-portrait",
+        "podium",
+        "las-vegas",
+        "authority"
+      ],
+      "branding_elements": [
+        "USA Wrestling national banner",
+        "United Wrestling Club team apparel"
+      ],
+      "file_path": "video_assets/stills_selected/still_27_naweed_us_open_banner_plaque.jpg",
+      "webp_file_name": "still_27_naweed_us_open_banner_plaque.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_27_naweed_us_open_banner_plaque.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 1920,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 413,
+        "webp": 424
+      }
+    },
+    {
+      "id": "still_28",
+      "file_name": "still_28_naweed_us_open_squad_usa_wrestling.jpg",
+      "title": "UWC National Championship Squad Celebration",
+      "key_figures": [
+        "Coach Naweed",
+        "UWC coaching staff & athletes"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DJDIqQUTGmt",
+        "post_url": "https://www.instagram.com/p/DJDIqQUTGmt/",
+        "media_type": "Post Carousel / Video",
+        "source_frame": "slide_05_DJDIqFYTvU4_fullres.jpg",
+        "source_resolution": "1440x1918",
+        "source_report": "instagram_us_open_assets_report.md"
+      },
+      "alt_text": "Coach Naweed celebrating with his coaching staff and team members in front of the USA Wrestling national championship banner.",
+      "description": "Heartfelt team celebration shot capturing UWC coaches and athletes embracing and raising the national championship plaque together on the tournament floor in Las Vegas.",
+      "use_case": {
+        "primary_placement": "Community & Team Culture / Competition Team Section",
+        "target_audience": "Athletes seeking team camaraderie, brotherhood, and tournament travel",
+        "conversion_goal": "Demonstrate that UWC is a cohesive, supportive team that travels and wins together",
+        "suggested_components": [
+          "Team Gallery Carousel",
+          "Community Grid Card",
+          "Culture Banner"
+        ]
+      },
+      "tags": [
+        "team-celebration",
+        "brotherhood",
+        "us-open",
+        "usa-wrestling",
+        "national-tournament",
+        "squad",
+        "community",
+        "las-vegas"
+      ],
+      "branding_elements": [
+        "USA Wrestling tournament backdrop",
+        "UWC team apparel"
+      ],
+      "file_path": "video_assets/stills_selected/still_28_naweed_us_open_squad_usa_wrestling.jpg",
+      "webp_file_name": "still_28_naweed_us_open_squad_usa_wrestling.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_28_naweed_us_open_squad_usa_wrestling.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 1918,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 479,
+        "webp": 508
+      }
+    },
+    {
+      "id": "still_29",
+      "file_name": "still_29_naweed_us_open_champion_portrait.jpg",
+      "title": "Coach Naweed Candid Post-Match Champion Portrait",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DJDIqQUTGmt",
+        "post_url": "https://www.instagram.com/p/DJDIqQUTGmt/",
+        "media_type": "Video Reel / Interview",
+        "source_frame": "video_03_frame_06.jpg",
+        "source_resolution": "720x960",
+        "source_report": "instagram_us_open_assets_report.md"
+      },
+      "alt_text": "Coach Naweed smiling warmly in his wrestling singlet immediately after winning the US Open national championship match.",
+      "description": "Warm, authentic, sweat-sheened candid portrait of Coach Naweed in his custom UWC wrestling singlet following his championship finals victory in Las Vegas.",
+      "use_case": {
+        "primary_placement": "About Coach / Leadership Quote Card",
+        "target_audience": "Beginners and parents looking for approachable, positive mentors",
+        "conversion_goal": "Disarm intimidating stereotypes about combat sports while highlighting authentic greatness",
+        "suggested_components": [
+          "Testimonial Avatar",
+          "Quote Callout Card",
+          "Founder Bio Micro-Card"
+        ]
+      },
+      "tags": [
+        "coach-naweed",
+        "portrait",
+        "candid",
+        "warmth",
+        "approachability",
+        "champion",
+        "singlet",
+        "post-match"
+      ],
+      "branding_elements": [
+        "United Wrestling Club custom competition singlet"
+      ],
+      "file_path": "video_assets/stills_selected/still_29_naweed_us_open_champion_portrait.jpg",
+      "webp_file_name": "still_29_naweed_us_open_champion_portrait.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_29_naweed_us_open_champion_portrait.webp",
+      "dimensions": {
+        "width": 720,
+        "height": 960,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 75,
+        "webp": 47
+      }
+    },
+    {
+      "id": "still_30",
+      "file_name": "still_30_naweed_us_open_singlet_candid.jpg",
+      "title": "Official UWC Hayward Competition Singlet Detail",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DJDIqQUTGmt",
+        "post_url": "https://www.instagram.com/p/DJDIqQUTGmt/",
+        "media_type": "Video Reel / Interview",
+        "source_frame": "video_03_frame_15.jpg",
+        "source_resolution": "720x960",
+        "source_report": "instagram_us_open_assets_report.md"
+      },
+      "alt_text": "Coach Naweed gesturing in his official United Wrestling Club Hayward California competition singlet.",
+      "description": "Medium action candid of Coach Naweed discussing match strategy in his red, white, and blue UWC Hayward team singlet on the tournament floor.",
+      "use_case": {
+        "primary_placement": "Team Gear & Hayward Roots Showcase",
+        "target_audience": "Local East Bay wrestlers, alumni, and prospective team members",
+        "conversion_goal": "Instill pride in local Hayward wrestling heritage and official team uniform identity",
+        "suggested_components": [
+          "Gear Card",
+          "Team Identity Section",
+          "Merchandise Pill"
+        ]
+      },
+      "tags": [
+        "singlet",
+        "team-gear",
+        "hayward",
+        "competition",
+        "uwc-apparel",
+        "coach-naweed",
+        "east-bay"
+      ],
+      "branding_elements": [
+        "UWC Hayward CA singlet crest",
+        "Competition mat background"
+      ],
+      "file_path": "video_assets/stills_selected/still_30_naweed_us_open_singlet_candid.jpg",
+      "webp_file_name": "still_30_naweed_us_open_singlet_candid.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_30_naweed_us_open_singlet_candid.webp",
+      "dimensions": {
+        "width": 720,
+        "height": 960,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 77,
+        "webp": 47
+      }
+    },
+    {
+      "id": "still_31",
+      "file_name": "still_31_naweed_headshot_united_wall.jpg",
+      "title": "Coach Naweed Definitive Authority Headshot",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_005.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Headshot portrait of Head Coach Naweed in a black UWC hoodie centered in front of the giant United Wrestling Club wall mat logo.",
+      "description": "Commanding square portrait of Head Coach Naweed wearing a clean black UWC hoodie, perfectly centered under the distressed 'UNITED WRESTLING' wall typography.",
+      "use_case": {
+        "primary_placement": "Homepage Hero Coach Spotlight / About Us Lead Portrait",
+        "target_audience": "All website visitors, prospective members, media",
+        "conversion_goal": "Establish undisputed executive and athletic authority of the founder",
+        "suggested_components": [
+          "Head Coach Bio Card",
+          "Hero Split Section",
+          "Leadership Pillar"
+        ]
+      },
+      "tags": [
+        "headshot",
+        "authority",
+        "founder",
+        "coach-naweed",
+        "hoodie",
+        "united-wall",
+        "branding",
+        "executive"
+      ],
+      "branding_elements": [
+        "Distressed 'UNITED WRESTLING' wall typography",
+        "Official UWC black hoodie"
+      ],
+      "file_path": "video_assets/stills_selected/still_31_naweed_headshot_united_wall.jpg",
+      "webp_file_name": "still_31_naweed_headshot_united_wall.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_31_naweed_headshot_united_wall.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 102,
+        "webp": 51
+      }
+    },
+    {
+      "id": "still_32",
+      "file_name": "still_32_naweed_islam_makhachev_ufc_champion.jpg",
+      "title": "Islam Makhachev (UFC P4P #1) & Coach Naweed on AKA Mats",
+      "key_figures": [
+        "Islam Makhachev",
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_105.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "UFC Pound-for-Pound #1 World Champion Islam Makhachev sitting with Coach Naweed on the red AKA mat after live sparring.",
+      "description": "Authentic post-sparring candid on the American Kickboxing Academy (AKA) red canvas mats. Islam Makhachev in compression fight shorts and knee sleeve resting side-by-side with Coach Naweed.",
+      "use_case": {
+        "primary_placement": "Elite Athletes & Pro Fighters Wall / Social Proof Banner",
+        "target_audience": "MMA fighters, no-gi grapplers, combat athletes",
+        "conversion_goal": "Unassailable validation of world-championship training caliber",
+        "suggested_components": [
+          "Celebrity Social Proof Strip",
+          "Pro Wall Grid",
+          "Trust Badge"
+        ]
+      },
+      "tags": [
+        "islam-makhachev",
+        "ufc-champion",
+        "p4p-number-one",
+        "aka",
+        "dagestan",
+        "coach-naweed",
+        "pro-mma",
+        "sparring"
+      ],
+      "branding_elements": [
+        "AKA red competition mats",
+        "UFC championship pedigree"
+      ],
+      "file_path": "video_assets/stills_selected/still_32_naweed_islam_makhachev_ufc_champion.jpg",
+      "webp_file_name": "still_32_naweed_islam_makhachev_ufc_champion.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_32_naweed_islam_makhachev_ufc_champion.webp",
+      "dimensions": {
+        "width": 885,
+        "height": 557,
+        "aspect_ratio": "885:557",
+        "orientation": "landscape"
+      },
+      "file_size_kb": {
+        "jpg": 75,
+        "webp": 46
+      }
+    },
+    {
+      "id": "still_33",
+      "file_name": "still_33_naweed_rvca_posse_rockhold_buchecha_chito_vera.jpg",
+      "title": "RVCA Murderer's Row Combat Sports Posse",
+      "key_figures": [
+        "Marcus 'Buchecha' Almeida",
+        "Luke Rockhold",
+        "Walt Harris",
+        "Marlon 'Chito' Vera",
+        "Jason Parillo",
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_104.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Coach Naweed standing with MMA and BJJ legends Marcus Buchecha Almeida, Luke Rockhold, Walt Harris, Marlon Chito Vera, and Jason Parillo at RVCA Training Center.",
+      "description": "Star-studded combat sports lineup at RVCA Training Center featuring multiple UFC and ADCC world champions shoulder-to-shoulder with Coach Naweed.",
+      "use_case": {
+        "primary_placement": "Combat Sports Network & World Pedigree Banner",
+        "target_audience": "Combat sports fans, serious fighters, BJJ black belts",
+        "conversion_goal": "Demonstrate that elite world champions trust Coach Naweed's wrestling instruction",
+        "suggested_components": [
+          "Social Proof Carousel",
+          "Hall of Fame Roster",
+          "Network Strip"
+        ]
+      },
+      "tags": [
+        "buchecha",
+        "luke-rockhold",
+        "chito-vera",
+        "walt-harris",
+        "jason-parillo",
+        "coach-naweed",
+        "rvca",
+        "ufc",
+        "bjj-world-champion"
+      ],
+      "branding_elements": [
+        "RVCA Training Center",
+        "World champion combat sports coalition"
+      ],
+      "file_path": "video_assets/stills_selected/still_33_naweed_rvca_posse_rockhold_buchecha_chito_vera.jpg",
+      "webp_file_name": "still_33_naweed_rvca_posse_rockhold_buchecha_chito_vera.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_33_naweed_rvca_posse_rockhold_buchecha_chito_vera.webp",
+      "dimensions": {
+        "width": 713,
+        "height": 864,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 183,
+        "webp": 145
+      }
+    },
+    {
+      "id": "still_34",
+      "file_name": "still_34_naweed_jake_shields_sparring.jpg",
+      "title": "Jake Shields Live Grappling Sparring",
+      "key_figures": [
+        "Jake Shields",
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_102.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Coach Naweed grappling on the mat with former Strikeforce World Champion and UFC title challenger Jake Shields.",
+      "description": "Intense live grappling exchange on the mats between Coach Naweed and American Jiu-Jitsu pioneer Jake Shields, demonstrating high-level guard passing and wrestling control.",
+      "use_case": {
+        "primary_placement": "Adult Wrestle-Jitsu / BJJ Cross-Training Section",
+        "target_audience": "BJJ practitioners seeking to fix their takedowns and top control",
+        "conversion_goal": "Prove takedown efficacy against world-class submission grapplers",
+        "suggested_components": [
+          "Wrestle-Jitsu Feature Card",
+          "Program Feature",
+          "Cross-Train Banner"
+        ]
+      },
+      "tags": [
+        "jake-shields",
+        "strikeforce-champion",
+        "american-jiu-jitsu",
+        "sparring",
+        "grappling",
+        "bjj",
+        "takedowns",
+        "coach-naweed"
+      ],
+      "branding_elements": [
+        "Competition training canvas",
+        "Elite MMA grappling lineage"
+      ],
+      "file_path": "video_assets/stills_selected/still_34_naweed_jake_shields_sparring.jpg",
+      "webp_file_name": "still_34_naweed_jake_shields_sparring.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_34_naweed_jake_shields_sparring.webp",
+      "dimensions": {
+        "width": 691,
+        "height": 653,
+        "aspect_ratio": "691:653",
+        "orientation": "landscape"
+      },
+      "file_size_kb": {
+        "jpg": 58,
+        "webp": 33
+      }
+    },
+    {
+      "id": "still_35",
+      "file_name": "still_35_naweed_father_1980_moscow_olympic_delegation.jpg",
+      "title": "Generational Olympic Pedigree & 1980 Moscow Singlet",
+      "key_figures": [
+        "Coach Naweed's Father (Olympic Wrestler)",
+        "Official Afghan Delegation"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_030.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Historic 1980 Moscow Olympics qualifying singlet and official Afghan national sports delegation departure document from 1979.",
+      "description": "Historic split image showing Coach Naweed's father in his national team wrestling singlet alongside the official 1979 Afghan Olympic Committee travel manifest.",
+      "use_case": {
+        "primary_placement": "Heritage, Roots & Legacy Story Section",
+        "target_audience": "Families, community elders, donors, prospective members",
+        "conversion_goal": "Position UWC as an authentic Olympic heritage club with deep generational roots rather than a corporate franchise",
+        "suggested_components": [
+          "Heritage Timeline Card",
+          "Legacy Story Modal",
+          "Founder Lineage Pill"
+        ]
+      },
+      "tags": [
+        "olympics",
+        "moscow-1980",
+        "heritage",
+        "legacy",
+        "generational",
+        "father",
+        "afghan-wrestling",
+        "history"
+      ],
+      "branding_elements": [
+        "Historic Olympic committee documents",
+        "National team singlet"
+      ],
+      "file_path": "video_assets/stills_selected/still_35_naweed_father_1980_moscow_olympic_delegation.jpg",
+      "webp_file_name": "still_35_naweed_father_1980_moscow_olympic_delegation.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_35_naweed_father_1980_moscow_olympic_delegation.webp",
+      "dimensions": {
+        "width": 972,
+        "height": 1075,
+        "aspect_ratio": "972:1075",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 155,
+        "webp": 103
+      }
+    },
+    {
+      "id": "still_36",
+      "file_name": "still_36_arman_tsarukyan_vs_mugzy_raf_fight_card.jpg",
+      "title": "Real American Freestyle 09: Arman Tsarukyan vs Mugzy",
+      "key_figures": [
+        "Arman Tsarukyan (UFC #1 Contender)",
+        "Coach Naweed ('Mugzy')"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_065.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Fox Nation fight card poster for Real American Freestyle RAF 09 featuring UFC #1 Contender Arman Tsarukyan vs Coach Naweed Mugzy.",
+      "description": "Official televised combat event poster for RAF 09 broadcast on Fox Nation, headlining world-class freestyle wrestling between UFC #1 contender Arman Tsarukyan and Coach Naweed.",
+      "use_case": {
+        "primary_placement": "Elite Competition & Media Coverage Wall",
+        "target_audience": "Combat sports enthusiasts, MMA fighters",
+        "conversion_goal": "Prove Coach Naweed competes against active top-tier UFC title contenders on television",
+        "suggested_components": [
+          "Press & Media Grid",
+          "Fight Card Badge",
+          "Televised Bout Banner"
+        ]
+      },
+      "tags": [
+        "arman-tsarukyan",
+        "raf",
+        "real-american-freestyle",
+        "fox-nation",
+        "coach-naweed",
+        "mugzy",
+        "televised",
+        "fight-card"
+      ],
+      "branding_elements": [
+        "Real American Freestyle logo",
+        "Fox Nation network bug"
+      ],
+      "file_path": "video_assets/stills_selected/still_36_arman_tsarukyan_vs_mugzy_raf_fight_card.jpg",
+      "webp_file_name": "still_36_arman_tsarukyan_vs_mugzy_raf_fight_card.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_36_arman_tsarukyan_vs_mugzy_raf_fight_card.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 179,
+        "webp": 114
+      }
+    },
+    {
+      "id": "still_37",
+      "file_name": "still_37_naweed_college_airborne_high_single.jpg",
+      "title": "Collegiate Wrestling Explosive Airborne High Single",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_088.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Coach Naweed hoisting a collegiate wrestling opponent fully airborne with an explosive high-single leg takedown.",
+      "description": "Peak athletic action photo from collegiate competition showing Coach Naweed elevating an opponent 4 feet off the mat with dynamic high-single finish.",
+      "use_case": {
+        "primary_placement": "High School / Collegiate Prep Program Section",
+        "target_audience": "High school wrestlers aiming for college scholarships",
+        "conversion_goal": "Visually demonstrate elite explosive collegiate technique and athletic mastery",
+        "suggested_components": [
+          "Youth / Varsity Program Feature Card",
+          "Action Hero Block"
+        ]
+      },
+      "tags": [
+        "collegiate-wrestling",
+        "high-single",
+        "airborne-takedown",
+        "athleticism",
+        "folkstyle",
+        "college-prep",
+        "coach-naweed"
+      ],
+      "branding_elements": [
+        "Collegiate competition singlet and venue"
+      ],
+      "file_path": "video_assets/stills_selected/still_37_naweed_college_airborne_high_single.jpg",
+      "webp_file_name": "still_37_naweed_college_airborne_high_single.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_37_naweed_college_airborne_high_single.webp",
+      "dimensions": {
+        "width": 756,
+        "height": 691,
+        "aspect_ratio": "756:691",
+        "orientation": "landscape"
+      },
+      "file_size_kb": {
+        "jpg": 104,
+        "webp": 69
+      }
+    },
+    {
+      "id": "still_38",
+      "file_name": "still_38_coach_steve_siroy_chabot_pedigree.jpg",
+      "title": "Coaching Roots under Hall of Famer Steve Siroy",
+      "key_figures": [
+        "Steve Siroy (CA Hall of Fame)",
+        "Coach Naweed",
+        "Chabot College Champions"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_070.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "California Wrestling Hall of Famer Coach Steve Siroy with Coach Naweed and the championship Chabot College wrestling team.",
+      "description": "Team championship portrait celebrating the legendary Steve Siroy coaching era at Chabot College in Hayward, where Coach Naweed trained and coached.",
+      "use_case": {
+        "primary_placement": "Coaching Pedigree & Local Hayward Roots Section",
+        "target_audience": "East Bay parents, high school coaches, alumni",
+        "conversion_goal": "Connect UWC to the most storied 40-year coaching dynasty in East Bay wrestling history",
+        "suggested_components": [
+          "Coaching Heritage Card",
+          "Hayward Legacy Timeline",
+          "Pedigree Strip"
+        ]
+      },
+      "tags": [
+        "steve-siroy",
+        "chabot-college",
+        "hall-of-fame",
+        "hayward",
+        "east-bay-wrestling",
+        "coaching-tree",
+        "championship"
+      ],
+      "branding_elements": [
+        "Chabot College team trophies and championship banners"
+      ],
+      "file_path": "video_assets/stills_selected/still_38_coach_steve_siroy_chabot_pedigree.jpg",
+      "webp_file_name": "still_38_coach_steve_siroy_chabot_pedigree.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_38_coach_steve_siroy_chabot_pedigree.webp",
+      "dimensions": {
+        "width": 864,
+        "height": 653,
+        "aspect_ratio": "4:3",
+        "orientation": "landscape"
+      },
+      "file_size_kb": {
+        "jpg": 124,
+        "webp": 88
+      }
+    },
+    {
+      "id": "still_39",
+      "file_name": "still_39_naweed_raf_backstage_takedown_gear.jpg",
+      "title": "RAF Backstage Tunnel Portrait in TAKEDOWN Gear",
+      "key_figures": [
+        "Coach Naweed ('Mugzy')"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_067.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Coach Naweed standing menacingly in the locker room tunnel in official TAKEDOWN Real American Freestyle gear.",
+      "description": "Cinematic locker room tunnel portrait capturing Coach Naweed hooded and focused in official TAKEDOWN fight gear prior to his televised main-card bout.",
+      "use_case": {
+        "primary_placement": "Hero Atmosphere / Brand Ethos Dark-Mode Banner",
+        "target_audience": "High-drive competitors and adult athletes",
+        "conversion_goal": "Convey raw grit, warrior focus, and elite athletic intensity",
+        "suggested_components": [
+          "Dark-Mode Hero Graphic",
+          "Culture Banner",
+          "Atmosphere Break"
+        ]
+      },
+      "tags": [
+        "raf",
+        "takedown-gear",
+        "backstage",
+        "tunnel-portrait",
+        "intensity",
+        "warrior-focus",
+        "coach-naweed",
+        "mugzy"
+      ],
+      "branding_elements": [
+        "Official TAKEDOWN apparel",
+        "Real American Freestyle credentials"
+      ],
+      "file_path": "video_assets/stills_selected/still_39_naweed_raf_backstage_takedown_gear.jpg",
+      "webp_file_name": "still_39_naweed_raf_backstage_takedown_gear.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_39_naweed_raf_backstage_takedown_gear.webp",
+      "dimensions": {
+        "width": 951,
+        "height": 1037,
+        "aspect_ratio": "951:1037",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 177,
+        "webp": 120
+      }
+    },
+    {
+      "id": "still_40",
+      "file_name": "still_40_naweed_elite_contenders_uwc_gear.jpg",
+      "title": "UWC Contenders Room: Dagestani & National Athletes",
+      "key_figures": [
+        "Coach Naweed",
+        "Dagestani wrestlers & national contenders"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_108.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Elite national wrestlers and Dagestani contenders in official UWC rashguards and fight shorts on the gym wall mats.",
+      "description": "High-energy mat-side team shot of serious international competitors and national qualifiers geared up in custom black-and-gold UWC fight shorts and rashguards.",
+      "use_case": {
+        "primary_placement": "Training Room Atmosphere / Elite Program Card",
+        "target_audience": "Advanced wrestlers, MMA fighters, collegiate transfers",
+        "conversion_goal": "Eliminate fears of lack of high-level training partners in the East Bay",
+        "suggested_components": [
+          "Training Partners Grid",
+          "Room Caliber Spotlight",
+          "Program Feature Card"
+        ]
+      },
+      "tags": [
+        "elite-contenders",
+        "dagestani-wrestling",
+        "mat-room",
+        "uwc-shorts",
+        "rashguards",
+        "training-partners",
+        "hayward"
+      ],
+      "branding_elements": [
+        "UWC crest fight shorts",
+        "Branded rashguards",
+        "Wall pads"
+      ],
+      "file_path": "video_assets/stills_selected/still_40_naweed_elite_contenders_uwc_gear.jpg",
+      "webp_file_name": "still_40_naweed_elite_contenders_uwc_gear.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_40_naweed_elite_contenders_uwc_gear.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 185,
+        "webp": 123
+      }
+    },
+    {
+      "id": "still_41",
+      "file_name": "still_41_naweed_youth_wrestling_academy_squad.jpg",
+      "title": "UWC Youth Wrestling Academy Squad & Family",
+      "key_figures": [
+        "Coach Naweed",
+        "Youth coaching staff",
+        "25+ youth wrestling athletes"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_135.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Over 25 boys and girls from the UWC Youth Wrestling Academy smiling with Coach Naweed on the red competition mats.",
+      "description": "Massive group photo of youth athletes ranging from ages 6 to 14 seated proudly on the red mat circle with Coach Naweed and assistants.",
+      "use_case": {
+        "primary_placement": "Youth & Kids Academy Lead Banner",
+        "target_audience": "Parents of K-8 boys and girls",
+        "conversion_goal": "Reassure parents that UWC has a thriving, safe, structured, and joyful youth community",
+        "suggested_components": [
+          "Youth Academy Landing Section",
+          "Family Trust Proof",
+          "Community Banner"
+        ]
+      },
+      "tags": [
+        "youth-wrestling",
+        "kids-program",
+        "academy-squad",
+        "family",
+        "parent-proof",
+        "diversity",
+        "east-bay-kids",
+        "coach-naweed"
+      ],
+      "branding_elements": [
+        "United Wrestling Club team mats and banner"
+      ],
+      "file_path": "video_assets/stills_selected/still_41_naweed_youth_wrestling_academy_squad.jpg",
+      "webp_file_name": "still_41_naweed_youth_wrestling_academy_squad.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_41_naweed_youth_wrestling_academy_squad.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 238,
+        "webp": 166
+      }
+    },
+    {
+      "id": "still_42",
+      "file_name": "still_42_naweed_headshot_white_uwc_crest.jpg",
+      "title": "Coach Naweed Mentorship & Welcoming Portrait",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_146.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reel_highlight_stills_report.md"
+      },
+      "alt_text": "Head Coach Naweed smiling warmly on the mat in a clean white United Wrestling Club crest shirt.",
+      "description": "Warm, accessible, high-key portrait of Coach Naweed seated relaxed on the mats in a crisp white UWC tee with red crest logo, engaging with students.",
+      "use_case": {
+        "primary_placement": "Free Trial / Contact Us Invitation Section",
+        "target_audience": "First-time beginners, hesitant parents",
+        "conversion_goal": "Reduce friction and anxiety around stepping into a wrestling gym for the first time",
+        "suggested_components": [
+          "Free Trial CTA Card",
+          "Schedule a Visit Form",
+          "Welcome Banner"
+        ]
+      },
+      "tags": [
+        "mentor",
+        "welcoming",
+        "warmth",
+        "white-tee",
+        "uwc-crest",
+        "free-trial",
+        "approachability",
+        "coach-naweed"
+      ],
+      "branding_elements": [
+        "White UWC crest apparel",
+        "Pristine mat background"
+      ],
+      "file_path": "video_assets/stills_selected/still_42_naweed_headshot_white_uwc_crest.jpg",
+      "webp_file_name": "still_42_naweed_headshot_white_uwc_crest.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_42_naweed_headshot_white_uwc_crest.webp",
+      "dimensions": {
+        "width": 691,
+        "height": 1075,
+        "aspect_ratio": "9:16",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 81,
+        "webp": 44
+      }
+    },
+    {
+      "id": "still_43",
+      "file_name": "still_43_farid_basharat_ufc_coach_naweed_uwc.jpg",
+      "title": "Undefeated UFC Contender Farid Basharat & Coach Naweed",
+      "key_figures": [
+        "Farid Basharat (12-0 UFC Contender)",
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DdxCH8lSSdx",
+        "post_url": "https://www.instagram.com/reel/DdxCH8lSSdx/",
+        "media_type": "Reel (35s)",
+        "source_frame": "sec_10.jpg",
+        "source_resolution": "1440x2560",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Undefeated UFC fighter Farid Basharat and Coach Naweed standing together under the massive UWC Wrestling Club wall graphic.",
+      "description": "Ultra HD 2.5K crisp shot of undefeated UFC bantamweight contender Farid Basharat in UFC fight gear alongside Coach Naweed directly beneath the giant 'UWC WRESTLING CLUB' gym wall.",
+      "use_case": {
+        "primary_placement": "UFC Social Proof / Pro Athletes Section",
+        "target_audience": "Serious MMA prospects, combat athletes, parents",
+        "conversion_goal": "Instant verification that active UFC stars train their wrestling at UWC Hayward",
+        "suggested_components": [
+          "Elite Social Proof Banner",
+          "Fighter Spotlight",
+          "Pro Wall Card"
+        ]
+      },
+      "tags": [
+        "farid-basharat",
+        "ufc-contender",
+        "12-0",
+        "coach-naweed",
+        "uwc-wall",
+        "branding",
+        "pro-mma",
+        "authority"
+      ],
+      "branding_elements": [
+        "Massive UWC WRESTLING CLUB wall typography",
+        "UFC apparel",
+        "DWCS shorts"
+      ],
+      "file_path": "video_assets/stills_selected/still_43_farid_basharat_ufc_coach_naweed_uwc.jpg",
+      "webp_file_name": "still_43_farid_basharat_ufc_coach_naweed_uwc.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_43_farid_basharat_ufc_coach_naweed_uwc.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 1440,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 195,
+        "webp": 82
+      }
+    },
+    {
+      "id": "still_44",
+      "file_name": "still_44_coach_naweed_mat_command_uwc_banner.jpg",
+      "title": "Coach Naweed Mat Command & Leadership Address",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DdxCH8lSSdx",
+        "post_url": "https://www.instagram.com/reel/DdxCH8lSSdx/",
+        "media_type": "Reel (35s)",
+        "source_frame": "sec_20.jpg",
+        "source_resolution": "1440x2560",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Head Coach Naweed commanding the mat room in DWCS fight shorts under the United Wrestling Club wall insignia.",
+      "description": "Razor-sharp full-torso portrait of Coach Naweed addressing his class with calm authority, hands clasped, framed by the monumental black-and-white UWC wall banner.",
+      "use_case": {
+        "primary_placement": "Coaching Philosophy / Leadership Section",
+        "target_audience": "Parents seeking discipline and structure for their kids",
+        "conversion_goal": "Instill confidence in the head coach's professional discipline and class management",
+        "suggested_components": [
+          "Head Coach Intro Card",
+          "Philosophy Block",
+          "Leadership Spotlight"
+        ]
+      },
+      "tags": [
+        "leadership",
+        "mat-command",
+        "coach-naweed",
+        "dwcs-shorts",
+        "discipline",
+        "authority",
+        "uwc-banner"
+      ],
+      "branding_elements": [
+        "United Wrestling Club wall graphic",
+        "Dana White's Contender Series shorts"
+      ],
+      "file_path": "video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg",
+      "webp_file_name": "still_44_coach_naweed_mat_command_uwc_banner.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_44_coach_naweed_mat_command_uwc_banner.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 1440,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 128,
+        "webp": 61
+      }
+    },
+    {
+      "id": "still_45",
+      "file_name": "still_45_uwc_youth_grappling_inside_tie_grind.jpg",
+      "title": "Youth Program Live Grappling & Peer Encouragement",
+      "key_figures": [
+        "Youth varsity competitors",
+        "UWC teammates"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DdxCH8lSSdx",
+        "post_url": "https://www.instagram.com/reel/DdxCH8lSSdx/",
+        "media_type": "Reel (35s)",
+        "source_frame": "sec_22.jpg",
+        "source_resolution": "1440x2560",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Two youth wrestlers engaged in high-intensity live grappling while teammates in UWC track pants watch closely.",
+      "description": "Action photo capturing an attacking youth wrestler executing an inside-tie body lock with fierce athletic focus, while opponent wears official UWC Wrestling Club pants and teammates observe.",
+      "use_case": {
+        "primary_placement": "Youth & Middle School Wrestling Page",
+        "target_audience": "Parents looking for serious athletic growth and real grit",
+        "conversion_goal": "Show that kids at UWC learn real, technical, focused wrestling in a supportive environment",
+        "suggested_components": [
+          "Youth Feature Card",
+          "Program Showcase",
+          "Mat Grit Spotlight"
+        ]
+      },
+      "tags": [
+        "youth-wrestling",
+        "grit",
+        "inside-tie",
+        "live-grappling",
+        "uwc-pants",
+        "team-focus",
+        "kids-athletics"
+      ],
+      "branding_elements": [
+        "Official UWC Wrestling Club track pants",
+        "Competition circle mat"
+      ],
+      "file_path": "video_assets/stills_selected/still_45_uwc_youth_grappling_inside_tie_grind.jpg",
+      "webp_file_name": "still_45_uwc_youth_grappling_inside_tie_grind.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_45_uwc_youth_grappling_inside_tie_grind.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 1800,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 153,
+        "webp": 77
+      }
+    },
+    {
+      "id": "still_46",
+      "file_name": "still_46_uwc_live_mat_rounds_gym_community_panorama.jpg",
+      "title": "Live Competition Mat Rounds & Gym Community Panorama",
+      "key_figures": [
+        "Adult/varsity wrestlers",
+        "Spectators & families"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DdxCH8lSSdx",
+        "post_url": "https://www.instagram.com/reel/DdxCH8lSSdx/",
+        "media_type": "Reel (35s)",
+        "source_frame": "sec_28.jpg",
+        "source_resolution": "1440x2560",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Live competition wrestling rounds in the center red ring with spectators, parents, and international flags throughout the UWC gym.",
+      "description": "Panoramic landscape capture showing live wrestling scramble in the center circle surrounded by theater spectator seating, family members, international flags, and competition trophies.",
+      "use_case": {
+        "primary_placement": "Facility & Community Full-Bleed Panorama / Background Banner",
+        "target_audience": "Local families and prospective members",
+        "conversion_goal": "Showcase UWC as a vibrant, welcoming, family-supported wrestling hub",
+        "suggested_components": [
+          "Full-width Hero Banner",
+          "Facility Tour Card",
+          "Community Panorama"
+        ]
+      },
+      "tags": [
+        "gym-panorama",
+        "community",
+        "live-rounds",
+        "spectators",
+        "flags",
+        "trophies",
+        "competition-mat",
+        "atmosphere"
+      ],
+      "branding_elements": [
+        "Red competition circle mat",
+        "Framed RAF jersey",
+        "International flags"
+      ],
+      "file_path": "video_assets/stills_selected/still_46_uwc_live_mat_rounds_gym_community_panorama.jpg",
+      "webp_file_name": "still_46_uwc_live_mat_rounds_gym_community_panorama.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_46_uwc_live_mat_rounds_gym_community_panorama.webp",
+      "dimensions": {
+        "width": 1440,
+        "height": 810,
+        "aspect_ratio": "16:9",
+        "orientation": "landscape"
+      },
+      "file_size_kb": {
+        "jpg": 158,
+        "webp": 74
+      }
+    },
+    {
+      "id": "still_47",
+      "file_name": "still_47_uwc_adult_mat_rounds_wide_banner.jpg",
+      "title": "Adult Wrestling Program Scale & Mat Room Drills",
+      "key_figures": [
+        "Adult wrestling athletes",
+        "Training partners"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DeZtKxJIlg5",
+        "post_url": "https://www.instagram.com/reel/DeZtKxJIlg5/",
+        "media_type": "Reel (66s)",
+        "source_frame": "sec_05.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Adult wrestling class actively drilling on competition circle mats under the massive United Wrestling Club wall typography.",
+      "description": "High-angle wide view of multiple adult pairs drilling hand-fighting and takedown entries across pristine black-and-red mats under the distressed UWC wall lettering.",
+      "use_case": {
+        "primary_placement": "Adult Wrestling & BJJ Takedown Defense Section",
+        "target_audience": "Adult beginners, MMA enthusiasts, BJJ blue/purple/brown belts",
+        "conversion_goal": "Overcome the objection 'Is this gym only for kids?' by proving an active adult wrestling room",
+        "suggested_components": [
+          "Adult Program Card",
+          "Class Schedule Graphic",
+          "Mat Space Card"
+        ]
+      },
+      "tags": [
+        "adult-wrestling",
+        "mat-space",
+        "facility",
+        "drilling",
+        "bjj-cross-training",
+        "scale",
+        "uwc-wall"
+      ],
+      "branding_elements": [
+        "Massive UWC - UNITED WRESTLING CLUB wall lettering"
+      ],
+      "file_path": "video_assets/stills_selected/still_47_uwc_adult_mat_rounds_wide_banner.jpg",
+      "webp_file_name": "still_47_uwc_adult_mat_rounds_wide_banner.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_47_uwc_adult_mat_rounds_wide_banner.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1350,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 120,
+        "webp": 60
+      }
+    },
+    {
+      "id": "still_48",
+      "file_name": "still_48_sergio_gomez_uwc_testimonial_crest_portrait.jpg",
+      "title": "Sergio Gomez Approachable Fighter Testimonial Portrait",
+      "key_figures": [
+        "Sergio Gomez (6-Year UWC Athlete)"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DeZtKxJIlg5",
+        "post_url": "https://www.instagram.com/reel/DeZtKxJIlg5/",
+        "media_type": "Reel (66s)",
+        "source_frame": "sec_42.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Sergio Gomez smiling charismatically in a grey UWC compression rashguard framed by the circular red UWC wall crest.",
+      "description": "Authentic, approachable portrait of fighter Sergio Gomez with a warm smile, wearing a grey UWC compression rashguard with the circular red UWC wall crest directly behind his head.",
+      "use_case": {
+        "primary_placement": "Student Testimonial / Member Spotlight Card",
+        "target_audience": "Beginners worried about intimidating combat sports gyms",
+        "conversion_goal": "Humanize combat sports and prove UWC is welcoming, humble, and ego-free",
+        "suggested_components": [
+          "Testimonial Card",
+          "Member Spotlight Modal",
+          "Trust Badge"
+        ]
+      },
+      "tags": [
+        "sergio-gomez",
+        "testimonial",
+        "fighter-portrait",
+        "warmth",
+        "grey-rashguard",
+        "uwc-crest",
+        "student-story"
+      ],
+      "branding_elements": [
+        "Grey UWC compression rashguard",
+        "Circular red UWC wall shield"
+      ],
+      "file_path": "video_assets/stills_selected/still_48_sergio_gomez_uwc_testimonial_crest_portrait.jpg",
+      "webp_file_name": "still_48_sergio_gomez_uwc_testimonial_crest_portrait.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_48_sergio_gomez_uwc_testimonial_crest_portrait.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 106,
+        "webp": 53
+      }
+    },
+    {
+      "id": "still_49",
+      "file_name": "still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.jpg",
+      "title": "Sergio Gomez Striking Stance under USA Wrestling Olympic Banner",
+      "key_figures": [
+        "Sergio Gomez"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DeZtKxJIlg5",
+        "post_url": "https://www.instagram.com/reel/DeZtKxJIlg5/",
+        "media_type": "Reel (66s)",
+        "source_frame": "sec_32.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Fighter Sergio Gomez in striking stance in full UWC gear before the USA Wrestling banner with Olympic rings.",
+      "description": "Focused full-body action still of Sergio Gomez in an athletic striking stance wearing UWC rashguard and fight shorts, framed by the official USA Wrestling Olympic banner and round timer.",
+      "use_case": {
+        "primary_placement": "MMA & Striking Integration / Combat Pipeline Section",
+        "target_audience": "MMA fighters and multi-discipline combat athletes",
+        "conversion_goal": "Show seamless transition between sanctioned wrestling and cage striking",
+        "suggested_components": [
+          "Combat Pipeline Feature",
+          "Cage Ready Card",
+          "Action Split"
+        ]
+      },
+      "tags": [
+        "striking",
+        "mma",
+        "usa-wrestling",
+        "olympic-rings",
+        "timer",
+        "uwc-shorts",
+        "combat-sports",
+        "sergio-gomez"
+      ],
+      "branding_elements": [
+        "USA Wrestling Olympic banner",
+        "UWC vertical fight shorts lettering"
+      ],
+      "file_path": "video_assets/stills_selected/still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.jpg",
+      "webp_file_name": "still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1350,
+        "aspect_ratio": "4:5",
+        "orientation": "portrait"
+      },
+      "file_size_kb": {
+        "jpg": 101,
+        "webp": 50
+      }
+    },
+    {
+      "id": "still_50",
+      "file_name": "still_50_uwc_collar_tie_rashguard_back_grind.jpg",
+      "title": "Technical Wrestling Clinch & UWC Rashguard Back Graphic",
+      "key_figures": [
+        "Sergio Gomez",
+        "Sparring partner"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DeZtKxJIlg5",
+        "post_url": "https://www.instagram.com/reel/DeZtKxJIlg5/",
+        "media_type": "Reel (66s)",
+        "source_frame": "sec_14.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Close-up of wrestling collar tie clinch showcasing the arched UWC logo and twin wrestlers graphic on the compression rashguard.",
+      "description": "High-angle clinch shot focusing on authentic collar tie and wrist control, featuring crisp typography of the arched 'UWC' logo and twin wrestling silhouettes on the grey rashguard back.",
+      "use_case": {
+        "primary_placement": "Authentic Wrestling Technique / Merchandise Section",
+        "target_audience": "Serious wrestlers, no-gi grapplers",
+        "conversion_goal": "Highlight the gritty, technical reality of folkstyle/freestyle wrestling control",
+        "suggested_components": [
+          "Technique Deep Dive",
+          "Apparel Grid",
+          "Clinch Feature"
+        ]
+      },
+      "tags": [
+        "collar-tie",
+        "clinch",
+        "uwc-rashguard",
+        "back-graphic",
+        "grind",
+        "grappling",
+        "technique"
+      ],
+      "branding_elements": [
+        "Arched UWC back print with twin grappling silhouette insignia"
+      ],
+      "file_path": "video_assets/stills_selected/still_50_uwc_collar_tie_rashguard_back_grind.jpg",
+      "webp_file_name": "still_50_uwc_collar_tie_rashguard_back_grind.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_50_uwc_collar_tie_rashguard_back_grind.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 73,
+        "webp": 26
+      }
+    },
+    {
+      "id": "still_51",
+      "file_name": "still_51_coach_naweed_whistle_authority_title_card.jpg",
+      "title": "Coach Naweed Whistle Authority Title Card",
+      "key_figures": [
+        "Coach Naweed"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_004.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Coach Naweed standing authoritative on the mat with a coaching whistle in his mouth.",
+      "description": "Dynamic opening title frame showing Coach Naweed ready for practice with his silver whistle clamped in mouth, athletic intense gaze, and UWC branded hoodie.",
+      "use_case": {
+        "primary_placement": "Coach Spotlight Hero / Discipline & High Expectations Block",
+        "target_audience": "Parents looking for disciplined coaches who build character",
+        "conversion_goal": "Project instant coaching focus, accountability, and tournament-readiness",
+        "suggested_components": [
+          "Coach Intro Pill",
+          "Feature Micro-Card",
+          "Discipline Card"
+        ]
+      },
+      "tags": [
+        "whistle",
+        "coach-naweed",
+        "discipline",
+        "title-card",
+        "authority",
+        "practice-ready",
+        "mat-coach"
+      ],
+      "branding_elements": [
+        "Official UWC black hoodie",
+        "Practice mat backdrop"
+      ],
+      "file_path": "video_assets/stills_selected/still_51_coach_naweed_whistle_authority_title_card.jpg",
+      "webp_file_name": "still_51_coach_naweed_whistle_authority_title_card.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_51_coach_naweed_whistle_authority_title_card.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 151,
+        "webp": 74
+      }
+    },
+    {
+      "id": "still_52",
+      "file_name": "still_52_uwc_hoodie_back_print_motto.jpg",
+      "title": "Official UWC Club Motto Hoodie: It's Not Personal It's Just Wrestling",
+      "key_figures": [
+        "UWC athlete / coach"
+      ],
+      "source": {
+        "platform": "Instagram",
+        "post_id": "DYgH12do0c6",
+        "post_url": "https://www.instagram.com/reel/DYgH12do0c6/",
+        "media_type": "Reel (170s)",
+        "source_frame": "sec_015.jpg",
+        "source_resolution": "1080x1920",
+        "source_report": "instagram_reels_high_impact_stills_report.md"
+      },
+      "alt_text": "Back view of the official black UWC hoodie featuring the motto 'It's Not Personal It's Just Wrestling'.",
+      "description": "High-contrast shot of the back of the official UWC black fleece hoodie prominently displaying the bold motto typography: 'It's Not Personal It's Just Wrestling'.",
+      "use_case": {
+        "primary_placement": "Club Values & Culture / Official Merchandise Section",
+        "target_audience": "Members, athletes, parents, fans",
+        "conversion_goal": "Brand identity resonance; crystallizes the gritty, competitive yet respectful mindset of UWC",
+        "suggested_components": [
+          "Culture Card",
+          "Club Store Spotlight",
+          "Footer Marquee"
+        ]
+      },
+      "tags": [
+        "motto",
+        "hoodie",
+        "its-not-personal",
+        "club-values",
+        "culture",
+        "typography",
+        "uwc-gear",
+        "merchandise"
+      ],
+      "branding_elements": [
+        "Official UWC typography",
+        "Club motto back-print"
+      ],
+      "file_path": "video_assets/stills_selected/still_52_uwc_hoodie_back_print_motto.jpg",
+      "webp_file_name": "still_52_uwc_hoodie_back_print_motto.webp",
+      "webp_path": "video_assets/stills_selected/webp/still_52_uwc_hoodie_back_print_motto.webp",
+      "dimensions": {
+        "width": 1080,
+        "height": 1080,
+        "aspect_ratio": "1:1",
+        "orientation": "square"
+      },
+      "file_size_kb": {
+        "jpg": 150,
+        "webp": 75
+      }
+    }
+  ],
+  "related_assets": {
+    "carousel_slides_original": [
+      {
+        "id": "slide_01",
+        "file_name": "slide_01_DJDIqFizEa8_fullres.jpg",
+        "file_path": "video_assets/instagram_us_open_2025/slide_01_DJDIqFizEa8_fullres.jpg",
+        "source_post": "DJDIqQUTGmt",
+        "dimensions": {
+          "width": 1440,
+          "height": 1920,
+          "aspect_ratio": "3:4"
+        },
+        "description": "Coach Naweed in front of USA Wrestling banner holding the national championship plaque."
+      },
+      {
+        "id": "slide_02",
+        "file_name": "slide_02_DJDIqFfTslV_fullres.jpg",
+        "file_path": "video_assets/instagram_us_open_2025/slide_02_DJDIqFfTslV_fullres.jpg",
+        "source_post": "DJDIqQUTGmt",
+        "dimensions": {
+          "width": 1440,
+          "height": 1918,
+          "aspect_ratio": "3:4"
+        },
+        "description": "Macro close-up: Official 2025 U.S. Open Masters Greco-Roman National Championship Plaque."
+      },
+      {
+        "id": "slide_05",
+        "file_name": "slide_05_DJDIqFYTvU4_fullres.jpg",
+        "file_path": "video_assets/instagram_us_open_2025/slide_05_DJDIqFYTvU4_fullres.jpg",
+        "source_post": "DJDIqQUTGmt",
+        "dimensions": {
+          "width": 1440,
+          "height": 1918,
+          "aspect_ratio": "3:4"
+        },
+        "description": "Full UWC team celebration in front of USA Wrestling banner."
+      }
+    ],
+    "video_clips_original": [
+      {
+        "id": "video_03",
+        "file_name": "video_03_naweed_us_open_interview_720x960.mp4",
+        "file_path": "video_assets/instagram_us_open_2025/video_03_naweed_us_open_interview_720x960.mp4",
+        "source_post": "DJDIqQUTGmt",
+        "resolution": "720x960",
+        "fps": 30,
+        "description": "Post-match speech in singlet; pristine audio & video without any TikTok overlay text."
+      },
+      {
+        "id": "video_04",
+        "file_name": "video_04_naweed_us_open_match_480x640.mp4",
+        "file_path": "video_assets/instagram_us_open_2025/video_04_naweed_us_open_match_480x640.mp4",
+        "source_post": "DJDIqQUTGmt",
+        "resolution": "480x640",
+        "fps": 30,
+        "description": "Live match action on national championship mat in Las Vegas."
+      }
+    ]
+  }
+}
