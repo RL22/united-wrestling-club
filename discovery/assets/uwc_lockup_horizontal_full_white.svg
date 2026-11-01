@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930 230" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
-  <title>UWC Horizontal Full Lockup (White)</title>
-  <desc>Option 5 with Subtitle on Dark Surface: White monogram and crimson club name.</desc>
-  <g id="uwc-wrestlers-mark" transform="translate(160.00, 108.65) scale(0.24230) translate(-629.69, -259.56)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <title>United Wrestling Club - Horizontal Lockup (Dark Surface)</title>
+  <desc>Primary horizontal brand lockup on dark surface: wrestlers mark, crisp white collegiate UWC monogram, and crimson club name.</desc>
+  <!-- Element 1: Wrestlers Dynamic Mark -->
+  <g id="uwc-element-wrestlers" transform="translate(185.00, 120.00) scale(0.26750) translate(-629.69, -259.56)">
 <g id="uwc-wrestlers" transform="translate(0, 522) scale(0.1, -0.1)">
     <!-- Layer 1: White Highlights, Skin Fills, Laces &amp; Ear Guard -->
     <g id="white-highlights" class="uwc-white-highlights" fill="#FFFFFF">
@@ -711,19 +712,21 @@ M1830 1096 c0 -38 135 -166 176 -166 28 0 24 21 -7 38 -47 25 -95 69 -119 108
 -22 34 -50 46 -50 20z" />
     </g>
   </g>
-</g>
-  <g id="uwc-monogram-block" transform="translate(350.00, 12.85) scale(1.00000) translate(-19.50, -16.00)">
-  <g transform="translate(0, 242) scale(0.1, -0.1)" fill="#FFFFFF" stroke="none">
-    <g id="uwc-monogram" class="uwc-monogram">
+  </g>
+  <!-- Element 2: Collegiate UWC Monogram -->
+  <g id="uwc-element-monogram" transform="translate(380.00, 16.00) scale(1.00000) translate(-19.50, -16.00)">
+    <g transform="translate(0, 242) scale(0.1, -0.1)" fill="#FFFFFF" stroke="none">
+<g id="uwc-monogram" class="uwc-monogram">
       <path id="uwc-u" class="uwc-letter uwc-letter-u" d="M195 1574 l0 -685 25 -20 c23 -18 124 -78 208 -124 21 -11 53 -30 72 -42 40 -26 87 -29 215 -13 97 11 255 26 435 41 148 12 125 3 295 114 43 28 100 64 129 82 28 18 56 36 63 40 15 10 15 7 14 639 l-2 521 -52 7 c-29 3 -99 8 -157 11 -58 3 -130 8 -161 10 l-56 4 -1 -477 c0 -262 -1 -505 -1 -539 l-1 -62 -71 -49 -71 -50 -164 -7 -163 -7 -61 37 c-34 21 -64 43 -67 50 -2 8 -5 271 -6 587 l-2 573 -50 7 c-51 8 -338 38 -359 38 -8 0 -11 -190 -11 -686z m371 179 c-10 -10 -19 5 -10 18 6 11 8 11 12 0 2 -7 1 -15 -2 -18z m-246 -782 c0 -12 -20 -25 -27 -18 -7 7 6 27 18 27 5 0 9 -4 9 -9z m227 -157 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-87 -8 c0 -2 -11 -6 -25 -8 -13 -3 -22 -1 -19 3 5 9 44 13 44 5z" />
       <path id="uwc-w" class="uwc-letter uwc-letter-w" d="M1888 1803 c-1 -175 0 -397 1 -493 l3 -175 137 -131 c75 -72 155 -147 178 -168 l41 -37 189 1 c180 2 189 3 206 23 15 17 18 18 13 5 -4 -15 1 -18 27 -18 18 1 59 1 92 1 l60 0 72 71 72 71 50 -42 c28 -24 51 -46 51 -50 0 -4 14 -18 32 -31 31 -23 37 -23 318 -28 l287 -4 89 89 c49 49 101 102 116 118 14 17 49 51 77 77 85 80 79 36 80 567 l1 474 -67 -7 c-38 -3 -133 -9 -214 -13 l-145 -6 5 -96 c7 -148 7 -407 -1 -610 l-7 -184 -28 -26 c-16 -14 -59 -54 -95 -88 -47 -44 -75 -63 -94 -63 -18 0 -56 26 -130 91 l-104 90 -1 122 c-1 67 -1 266 -1 442 l0 320 -200 0 c-229 0 -218 4 -239 -94 -8 -38 -10 -109 -5 -221 4 -91 9 -254 13 -364 l6 -198 -92 -89 c-80 -77 -97 -89 -127 -89 -32 0 -83 33 -169 111 -11 10 -31 27 -44 37 l-24 19 -1 446 -1 446 -70 5 c-38 3 -134 8 -212 11 l-143 6 -2 -318z m322 217 c0 -5 -4 -10 -9 -10 -6 0 -13 5 -16 10 -3 6 1 10 9 10 9 0 16 -4 16 -10z m1680 -60 c0 -5 -4 -10 -9 -10 -6 0 -13 5 -16 10 -3 6 1 10 9 10 9 0 16 -4 16 -10z m-805 -560 c3 -5 -1 -10 -9 -10 -9 0 -16 5 -16 10 0 6 4 10 9 10 6 0 13 -4 16 -10z m45 -80 c0 -5 -4 -10 -10 -10 -5 0 -10 5 -10 10 0 6 5 10 10 10 6 0 10 -4 10 -10z m-23 -26 c-3 -3 -12 -4 -19 -1 -8 3 -5 6 6 6 11 1 17 -2 13 -5z m-907 -268 c0 -11 -19 -15 -25 -6 -3 5 1 10 9 10 9 0 16 -2 16 -4z" />
       <path id="uwc-c" class="uwc-letter uwc-letter-c" d="M5325 2213 c-95 -11 -318 -33 -430 -43 -71 -6 -151 -12 -178 -15 -36 -3 -65 -16 -120 -53 -71 -49 -122 -81 -225 -144 l-53 -33 -3 -474 -3 -474 68 -43 c37 -24 70 -44 73 -44 8 0 136 -85 174 -116 29 -24 44 -27 160 -35 70 -5 170 -14 222 -20 52 -5 150 -14 217 -19 68 -6 141 -14 164 -19 35 -8 48 -6 86 15 25 13 52 29 60 36 8 6 40 25 72 42 32 17 88 48 124 69 l66 38 0 159 1 160 -113 1 c-61 0 -158 3 -214 5 l-102 4 4 -79 4 -80 -72 -43 c-80 -47 -64 -45 -298 -29 l-132 10 -68 46 -68 46 -1 92 c-1 51 -2 106 -2 122 1 17 0 80 0 140 0 61 0 121 0 135 1 14 3 76 4 139 3 102 5 115 23 125 11 6 43 25 70 42 53 34 78 38 325 50 l95 4 60 -43 c59 -43 60 -44 63 -97 l3 -53 151 7 c83 4 177 9 208 13 l58 6 4 56 c2 31 1 88 -2 128 l-5 72 -60 37 c-33 20 -111 65 -173 100 -118 66 -132 70 -237 57z m15 -243 c0 -5 -5 -10 -11 -10 -5 0 -7 5 -4 10 3 6 8 10 11 10 2 0 4 -4 4 -10z m-830 -240 c0 -5 -5 -10 -11 -10 -5 0 -7 5 -4 10 3 6 8 10 11 10 2 0 4 -4 4 -10z m1230 -670 c0 -5 -7 -7 -15 -4 -8 4 -15 8 -15 10 0 2 7 4 15 4 8 0 15 -4 15 -10z m-90 -130 c0 -5 -4 -10 -9 -10 -6 0 -13 5 -16 10 -3 6 1 10 9 10 9 0 16 -4 16 -10z" />
     </g>
+    </g>
   </g>
-</g>
-  <g id="uwc-subtitle-block" transform="translate(630.40, 182.00) scale(1.00000) translate(-302.76, -196.00)">
-  <g transform="translate(0, 242) scale(0.1, -0.1)" fill="#BA1C1C" stroke="none">
-    <g id="uwc-subtitle" class="uwc-subtitle">
+  <!-- Element 3: United Wrestling Club Arched Subtitle -->
+  <g id="uwc-element-subtitle" transform="translate(660.40, 188.00) scale(1.00000) translate(-302.76, -196.00)">
+    <g transform="translate(0, 242) scale(0.1, -0.1)" fill="#BA1C1C" stroke="none">
+<g id="uwc-subtitle" class="uwc-subtitle">
       <path id="uwc-sub-u-0" class="uwc-sub-char" d="M764 278 c1 -102 1 -103 -23 -106 -35 -5 -51 22 -51 84 0 28 -3 66 -6 83 -6 28 -10 31 -42 31 l-35 0 6 -100 c7 -111 15 -133 57 -155 36 -19 71 -19 114 -1 63 26 74 64 60 205 l-7 61 -36 0 -37 0 0 -102z" />
       <path id="uwc-sub-n-1" class="uwc-sub-char" d="M1089 396 c-2 -3 -2 -40 2 -83 3 -43 4 -79 3 -81 -1 -2 -24 33 -51 78 l-48 81 -50 -3 -50 -3 4 -80 c2 -44 5 -93 7 -110 1 -16 3 -40 3 -52 1 -19 7 -23 35 -23 l34 0 -5 88 -5 87 49 -80 49 -80 50 0 49 0 -3 95 c-5 153 -9 170 -41 170 -15 0 -30 -2 -32 -4z" />
       <path id="uwc-sub-i-2" class="uwc-sub-char" d="M1213 319 c4 -51 7 -112 7 -136 l0 -43 41 0 40 0 -7 118 c-4 64 -8 124 -9 132 -1 10 -15 16 -40 18 l-38 3 6 -92z" />
@@ -744,6 +747,6 @@ M1830 1096 c0 -38 135 -166 176 -166 28 0 24 21 -7 38 -47 25 -95 69 -119 108
       <path id="uwc-sub-u-17" class="uwc-sub-char" d="M4956 307 c-8 -103 0 -138 36 -161 57 -36 152 -25 177 22 11 21 31 201 24 215 -2 4 -19 7 -38 7 l-33 0 -7 -87 c-8 -96 -16 -113 -51 -113 -31 0 -38 30 -30 131 l7 79 -39 0 -39 0 -7 -93z" />
       <path id="uwc-sub-b-18" class="uwc-sub-char" d="M5245 301 c-3 -47 -7 -108 -8 -136 l-2 -50 81 -3 c66 -2 85 1 102 15 31 26 39 76 16 99 -18 18 -18 20 -1 37 12 12 17 29 15 50 -4 41 -48 64 -135 69 l-62 4 -6 -85z m123 -3 c3 -13 -3 -18 -22 -18 -20 0 -26 5 -26 21 0 15 5 20 22 17 13 -2 24 -11 26 -20z m-9 -87 c21 -13 5 -41 -24 -41 -18 0 -25 5 -25 18 0 31 21 41 49 23z" />
     </g>
+    </g>
   </g>
-</g>
 </svg>
