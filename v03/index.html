@@ -13,39 +13,488 @@
 <link rel="icon" href="../live_site_content/assets/logo.png" type="image/png">
 <link rel="preload" as="image" href="../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg" fetchpriority="high">
 <style>
-/* Sol / UWC. Mobile first; no runtime dependencies. */
-:root{--red:oklch(43.5% .145 25);--red-bright:oklch(51% .18 25);--ink:oklch(19% .009 35);--paper:oklch(97% .008 80);--white:oklch(99% .003 80);--muted:oklch(46% .012 45);--line:oklch(84% .012 65);--dark-line:oklch(38% .012 35);--display:Impact,'Arial Narrow','Helvetica Neue',sans-serif;--body:Arial,'Helvetica Neue',sans-serif;--ease:cubic-bezier(.16,1,.3,1);--space:clamp(1.25rem,5vw,5rem)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:6rem}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 var(--body);-webkit-font-smoothing:antialiased}body.modal-open{overflow:hidden}img,video{display:block;max-width:100%}img{height:auto}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}button{cursor:pointer}button:disabled{cursor:wait;opacity:.6}button:active,.btn:active{transform:translateY(1px)}:focus-visible{outline:3px solid var(--red-bright);outline-offset:5px}.hero :focus-visible,.red-section :focus-visible,.featured :focus-visible,.closing :focus-visible{outline-color:var(--white)}p{margin:0 0 1.25rem;max-width:65ch}h1,h2,h3,h4{margin:0;font-weight:400}h1,h2,.display{font-family:var(--display);font-stretch:condensed;text-transform:uppercase;letter-spacing:.005em;line-height:.97}h2{font-size:clamp(2.65rem,5.8vw,5.5rem);text-wrap:balance}h3{font-size:1.3rem;font-weight:700;line-height:1.25}ul{padding:0;list-style:none;margin:0}section{scroll-margin-top:1rem}.wrap{max-width:1440px;margin-inline:auto;padding-inline:var(--space)}.section{padding-block:clamp(4rem,8vw,7.5rem)}.eyebrow{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:1.2rem}.eyebrow::before{content:'';display:inline-block;width:20px;height:2px;background:currentColor;vertical-align:middle;margin-right:10px}.red-text{color:var(--red)}.muted{color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:1.5rem;min-height:54px;padding:.9rem 1.25rem;border:1px solid transparent;border-radius:2px;background:var(--red);color:var(--white);font-weight:700;font-size:.9rem;line-height:1.3;text-decoration:none;transition:background .2s,transform .2s var(--ease)}.btn .arrow{margin-left:auto;font-size:1.3rem;line-height:1}.btn.light{background:var(--paper);color:var(--ink)}.btn.outline{background:transparent;border-color:var(--line);color:var(--ink)}.btn.dark{background:var(--ink)}.btn.full{width:100%}.text-link{display:inline-flex;align-items:center;min-height:44px;font-size:.9rem;font-weight:700;gap:1rem}.skip{position:fixed;top:8px;left:8px;z-index:300;padding:12px;background:var(--paper);transform:translateY(-160%)}.skip:focus{transform:translateY(0)}[hidden]{display:none!important}
-/* Header */
-.topline{background:var(--red);color:var(--white);font-size:.69rem;letter-spacing:.07em;text-align:center;padding:7px 16px}.topline a{text-decoration:none}.site-header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line)}.header-inner{display:flex;align-items:center;gap:1rem;min-height:78px}.brand{display:flex;gap:.6rem;align-items:center;text-decoration:none;margin-right:auto}.brand img{width:49px;height:51px;object-fit:contain}.brand-name{font-weight:900;font-size:.83rem;line-height:1.15;letter-spacing:.025em}.brand-name small{display:block;font-size:.58rem;letter-spacing:.13em;margin-top:4px;font-weight:500}.nav-toggle{display:flex;align-items:center;justify-content:center;min-width:48px;min-height:48px;border:1px solid var(--line);background:transparent;font-size:.73rem;font-weight:700}.header-cta{display:none}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem var(--space) 1.5rem}.nav.is-open{display:grid;gap:.25rem}.nav a{display:flex;align-items:center;min-height:48px;text-decoration:none;font-size:.85rem;font-weight:700}.nav .mobile-nav-cta{color:var(--red)}
-/* Hero */
-.hero{isolation:isolate;position:relative;background:var(--ink);color:var(--white);min-height:690px;display:flex;flex-direction:column;justify-content:flex-end}.hero video,.hero-shade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.hero video{object-position:62% center}.hero-shade{z-index:-1;background:linear-gradient(90deg,rgba(21,19,18,.86),rgba(21,19,18,.25)),linear-gradient(0deg,rgba(21,19,18,.83),transparent 80%)}.hero-content{width:100%;padding-top:4.5rem;padding-bottom:2.5rem}.hero .eyebrow{font-size:.68rem;color:oklch(94% .005 70)}h1{font-size:clamp(3.6rem,8.3vw,8.5rem);max-width:950px;line-height:.98}h1 span{color:oklch(77% .14 38)}.hero-lead{font-size:1.02rem;max-width:420px;margin-top:1.5rem;color:oklch(93% .006 70)}.hero-actions{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;align-items:center;margin-top:1.8rem}.hero-actions .btn{background:var(--red);min-width:240px}.hero-note{font-size:.75rem;color:oklch(89% .006 70);margin-top:.8rem}.hero-bottom{display:flex;justify-content:space-between;gap:1rem;align-items:flex-end;border-top:1px solid rgba(245,242,237,.25);padding-top:1.2rem;margin-top:2.8rem}.hero-caption{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase}.hero-caption strong{display:block;font-size:.8rem;letter-spacing:.02em;margin-top:4px}.video-toggle{flex-shrink:0;width:44px;height:44px;border:1px solid rgba(245,242,237,.6);background:rgba(21,19,18,.5);color:var(--white);font-size:1rem;border-radius:50%}.authority{background:var(--paper);border-bottom:1px solid var(--line)}.authority-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;padding-block:1.5rem}.authority-item{font-size:.7rem;line-height:1.4;color:var(--muted)}.authority-item strong{display:block;color:var(--ink);font-size:.9rem;margin-bottom:4px}.authority-item:first-child{color:var(--red)}
-/* Trial offer */
-.red-section{background:var(--red);color:var(--white)}.trial-layout{display:grid;gap:2.5rem}.trial-heading h2{max-width:650px}.trial-price{display:flex;align-items:center;gap:1.2rem;margin-top:1.8rem}.trial-price .display{font-size:6rem;letter-spacing:-.03em}.trial-price p{font-size:.85rem;max-width:170px;margin:0}.trial-details{max-width:520px}.trial-steps{counter-reset:step;margin:0 0 1.8rem}.trial-steps li{position:relative;padding:1rem 0 1rem 2.5rem;border-top:1px solid rgba(250,247,242,.27);font-size:.94rem}.trial-steps li::before{counter-increment:step;content:'0' counter(step);position:absolute;left:0;top:1rem;font-size:.7rem;letter-spacing:.06em;opacity:.8}.trial-steps strong{display:block}.trial-steps span{font-size:.84rem;opacity:.9}.small{font-size:.76rem;line-height:1.5}.trial-details .small{margin-top:.8rem;opacity:.85}
-/* Program picker */
-.section-heading{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2rem}.section-heading p{max-width:380px;margin:0}.program-layout{display:grid;gap:1.5rem}.program-tabs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}.program-tab{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:100px;padding:1rem;text-align:left;border:0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);background:transparent;color:var(--ink);transition:background .2s,color .2s}.program-tab span{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}.program-tab strong{font-size:.95rem;line-height:1.25}.program-tab[aria-selected=true]{background:var(--ink);color:var(--paper)}.program-tab .tab-arrow{display:none}.program-panel{min-width:0;background:var(--white)}.program-image{position:relative}.program-image img{width:100%;aspect-ratio:16/10;object-fit:cover}.image-label{position:absolute;bottom:16px;left:16px;background:var(--paper);padding:7px 11px;font-size:.64rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.program-body{padding:1.5rem}.program-body h3{font-family:var(--display);font-size:2.25rem;text-transform:uppercase;font-weight:400;letter-spacing:.01em;margin-bottom:.8rem}.program-body p{font-size:.92rem}.schedule{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:1rem;margin-block:1.5rem}.schedule-row{display:flex;justify-content:space-between;gap:1rem;font-size:.84rem;margin-bottom:.5rem}.schedule-row:last-child{margin:0}.schedule-row strong{font-variant-numeric:tabular-nums;text-align:right}.schedule-note{font-size:.73rem!important;color:var(--muted);margin-top:.75rem!important;margin-bottom:0!important}.program-footer{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}.program-footer .tag{font-size:.7rem;color:var(--muted)}.all-schedules{margin-top:1.5rem;font-size:.78rem;color:var(--muted)}
-/* Coaches */
-.coaches{background:var(--ink);color:var(--paper)}.coach-intro{max-width:650px}.coach-intro p{margin-top:1.5rem;color:oklch(81% .012 65)}.coach-grid{display:grid;gap:2.5rem;margin-top:2.5rem}.coach-photo{position:relative}.coach-photo img{width:100%;aspect-ratio:16/11;object-fit:cover}.coach-photo .image-label{color:var(--ink)}.coach-info{padding-top:1.5rem}.coach-info .eyebrow{color:oklch(77% .14 38);margin-bottom:.65rem}.coach-info h3{font-family:var(--display);text-transform:uppercase;font-size:2.15rem;font-weight:400}.coach-info p{font-size:.93rem;color:oklch(81% .012 65);margin:1rem 0}.coach-credentials{font-size:.75rem;border-top:1px solid var(--dark-line);padding-top:1rem;letter-spacing:.02em}.room-note{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--dark-line);display:flex;flex-wrap:wrap;gap:1rem 2.5rem;font-size:.8rem}.room-note strong{color:oklch(77% .14 38)}
-/* Pricing */
-.pricing-grid{display:grid;gap:1rem}.plan{border:1px solid var(--line);padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:flex-start;background:var(--white);position:relative}.plan h3{font-size:1.1rem}.plan-price{font-family:var(--display);font-size:3.7rem;line-height:1.1;margin-block:1rem .25rem;letter-spacing:-.01em}.plan-price small{font-family:var(--body);font-size:.9rem;letter-spacing:0}.plan-description{font-size:.83rem;min-height:2.5rem}.plan ul{width:100%;margin:1rem 0 2rem}.plan li{font-size:.87rem;padding:.55rem 0;border-top:1px solid var(--line)}.plan li::before{content:'✓';margin-right:.65rem;color:var(--red);font-weight:700}.plan .btn{margin-top:auto}.plan.featured{background:var(--red);color:var(--white);border-color:var(--red);padding-top:3rem}.featured .plan-marker{position:absolute;inset:0 0 auto;background:rgba(25,20,18,.18);padding:5px 1.5rem;font-size:.65rem;text-transform:uppercase;font-weight:700;letter-spacing:.14em}.featured li{border-color:rgba(250,247,242,.28)}.featured li::before{color:var(--white)}.pricing-footnote{margin:1.5rem 0 0;text-align:center;font-size:.77rem;color:var(--muted)}
-/* FAQ & visit */
-.faq{border-top:1px solid var(--line)}.faq-layout{display:grid;gap:2rem}.faq-intro p{margin-top:1.5rem;font-size:.95rem}.faq-list details{border-top:1px solid var(--line)}.faq-list details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.98rem;font-weight:700;padding:1.4rem 0}summary::-webkit-details-marker{display:none}summary::after{content:'+';font-size:1.5rem;font-weight:400;flex-shrink:0}details[open] summary::after{content:'−'}.faq-list details p{padding:0 2rem 1.25rem 0;font-size:.91rem;color:var(--muted);margin:0}.visit{background:oklch(91.5% .014 70)}.visit-layout{display:grid;gap:2rem}.visit h2{margin-bottom:1.5rem}.visit address{font-style:normal;margin-bottom:1.25rem;font-size:1.1rem}.visit-phone{font-family:var(--display);font-size:2rem;text-decoration:none;display:inline-block;margin-bottom:1rem}.service-area{font-size:.85rem;max-width:440px}.visit-actions{display:flex;gap:.75rem;flex-wrap:wrap}.visit-detail{border:1px solid oklch(75% .015 70);padding:1.5rem;align-self:center}.visit-detail h3{margin-bottom:1.2rem}.visit-detail li{padding:.75rem 0;border-top:1px solid oklch(79% .015 70);font-size:.88rem;display:flex;gap:1rem;align-items:baseline}.visit-detail li span{color:var(--red);font-size:.7rem;letter-spacing:.1em;flex-shrink:0}.closing{background:var(--ink);color:var(--paper);position:relative;isolation:isolate;min-height:430px;display:flex;align-items:center}.closing::after{content:'';position:absolute;inset:0;background:rgba(22,19,18,.7);z-index:-1}.closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:-2}.closing .wrap{width:100%;padding-block:4rem}.closing h2{max-width:650px}.closing p{margin-top:1.5rem}.closing .btn{margin-top:.5rem}.footer{background:var(--ink);color:oklch(78% .01 70);padding:2.5rem 0 7rem}.footer-main{display:flex;flex-direction:column;gap:1.5rem}.footer .brand{color:var(--paper)}.footer-motto{font-size:.65rem;letter-spacing:.15em}.footer-bottom{border-top:1px solid var(--dark-line);padding-top:1.5rem;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;font-size:.7rem}.sticky-action{position:fixed;bottom:0;left:0;right:0;z-index:150;display:flex;align-items:center;gap:1rem;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--line);box-shadow:0 -4px 20px rgba(25,20,18,.08)}.sticky-action .sticky-copy{font-size:.68rem;line-height:1.4;flex-shrink:0}.sticky-copy strong{display:block;font-size:1.05rem}.sticky-action .btn{flex:1;min-height:48px;padding:.7rem;font-size:.8rem;gap:.6rem}
-/* Native registration dialog */
-dialog{background:var(--paper);color:var(--ink);padding:0;border:0;border-radius:4px;width:min(540px,calc(100% - 28px));max-height:calc(100dvh - 28px);overscroll-behavior:contain}dialog::backdrop{background:rgba(20,17,16,.8)}.dialog-inner{padding:2rem 1.5rem;position:relative}.dialog-close{position:absolute;right:12px;top:12px;width:44px;height:44px;font-size:1.5rem;border:1px solid var(--line);background:transparent;color:var(--ink)}.dialog-inner .eyebrow{padding-right:2rem}.dialog-inner h2{font-size:2.6rem;margin-bottom:1rem}.dialog-intro{font-size:.86rem;color:var(--muted)}.field{margin-bottom:1rem}.field label{display:block;font-size:.82rem;font-weight:700;margin-bottom:.4rem}.field input,.field select{width:100%;min-width:0;min-height:48px;border:1px solid oklch(65% .012 65);border-radius:2px;background:var(--white);padding:.7rem;color:var(--ink);font-size:1rem}.field [aria-invalid=true]{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}.field-error{display:block;color:var(--red);font-size:.75rem;margin-top:.3rem;min-height:0}.field-error:empty{display:none}.consent{display:flex;align-items:flex-start;gap:.65rem;font-size:.76rem;margin:1.2rem 0}.consent input{width:20px;height:20px;flex-shrink:0;accent-color:var(--red);margin:2px 0}.form-note{font-size:.7rem;color:var(--muted);margin:1rem 0 0}.form-errors{font-size:.8rem;color:var(--red);margin-bottom:1rem}.review-list{font-size:.9rem;margin:1.5rem 0}.review-list div{display:grid;grid-template-columns:90px 1fr;gap:1rem;border-top:1px solid var(--line);padding:.6rem 0}.review-list dt{color:var(--muted)}.review-list dd{margin:0;overflow-wrap:anywhere}.review-actions{display:grid;gap:.7rem}.review-note{font-size:.8rem;margin-top:1.2rem;color:var(--muted)}.edit-details{border:0;background:none;color:var(--red);min-height:44px;padding:0;font-weight:700;font-size:.85rem}.no-js-note{padding:1rem;background:var(--paper);color:var(--ink);text-align:center;font-size:.85rem}
-@media(hover:hover){.btn:hover{background:var(--red-bright)}.btn.light:hover{background:oklch(89% .016 70)}.btn.dark:hover{background:oklch(30% .01 35)}.btn.outline:hover{background:oklch(91% .014 70)}.nav a:hover,.text-link:hover{color:var(--red-bright)}.program-tab:not([aria-selected=true]):hover{background:oklch(91% .014 70)}summary:hover{color:var(--red)}.dialog-close:hover{background:oklch(90% .01 70)}}
-@media(min-width:640px){.header-cta{display:inline-flex;min-height:46px;font-size:.78rem}.authority-inner{grid-template-columns:repeat(4,1fr)}.hero{min-height:740px}.hero-content{padding-top:6rem;padding-bottom:2rem}.hero-lead{font-size:1.12rem}.hero-bottom{margin-top:4rem}.program-body{padding:2rem}.coach-grid{grid-template-columns:1fr 1fr;gap:2rem}.footer-main{flex-direction:row;justify-content:space-between;align-items:center}.dialog-inner{padding:2.5rem}.visit-detail{padding:2rem}.trial-price .display{font-size:7.5rem}}
-@media(min-width:900px){.nav-toggle{display:none}.nav{position:static;display:flex!important;gap:1.7rem;padding:0;border:0;background:transparent}.nav a{font-size:.75rem}.nav .mobile-nav-cta{display:none}.header-inner{gap:2rem;min-height:88px}.header-cta{display:none;min-height:48px;padding-inline:1.2rem}.brand img{width:56px;height:58px}.brand-name{font-size:.95rem}.hero{min-height:min(810px,calc(100svh - 116px))}.hero-content{padding-top:4rem}.hero-lead{max-width:440px}.hero-bottom{margin-top:3rem}.hero-caption strong{font-size:.9rem}.authority-inner{padding-block:1.8rem;gap:2rem}.authority-item{font-size:.76rem}.authority-item strong{font-size:1rem}.trial-layout{grid-template-columns:1.1fr 1fr;gap:6rem;align-items:center}.section-heading{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:3rem;margin-bottom:3rem}.section-heading h2{max-width:700px}.program-layout{grid-template-columns:280px minmax(0,1fr);gap:2rem}.program-tabs{display:flex;flex-direction:column;border-left:0}.program-tab{padding:1.6rem 1rem;min-height:125px;border-right:0;position:relative}.program-tab strong{font-size:1.1rem}.program-tab .tab-arrow{display:block;position:absolute;right:1rem;top:50%;font-size:1.5rem;transform:translateY(-50%)}.program-panel{display:grid;grid-template-columns:1fr 1fr}.program-image img{height:100%;aspect-ratio:auto;min-height:500px}.program-body{padding:2rem}.program-body h3{font-size:2.7rem}.program-footer{align-items:flex-start;flex-direction:column;gap:.5rem}.coach-grid{gap:4rem}.coach-photo img{aspect-ratio:16/10}.coach-info h3{font-size:2.7rem}.pricing-grid{grid-template-columns:1fr 1.15fr 1fr;gap:1.5rem;align-items:stretch}.plan{padding:2.5rem 2rem}.plan.featured{padding-top:3.7rem}.plan-price{font-size:4rem}.faq-layout{grid-template-columns:1fr 1.25fr;gap:6rem}.faq-intro h2{max-width:430px}.visit-layout{grid-template-columns:1.2fr 1fr;gap:5rem}.sticky-action{display:none}.footer{padding-bottom:2rem}.closing{min-height:500px}}
-@media(min-width:1200px){.header-cta{display:inline-flex}.program-layout{grid-template-columns:310px minmax(0,1fr)}.program-body{padding:2.5rem}.header-inner{gap:2.5rem}.nav{gap:2rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.hero video{visibility:hidden}.hero{background-image:url('../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg');background-size:cover;background-position:center}}
-@media print{.site-header,.sticky-action,.video-toggle,dialog,.hero video,.topline{display:none}.hero{min-height:auto;background:var(--ink)}.hero-content{padding-block:2rem}.section{padding-block:2rem}.program-panel[hidden]{display:block!important}.program-tabs{display:none}.program-layout,.pricing-grid,.coach-grid{display:block}.plan,.coach-grid article{break-inside:avoid;margin-bottom:1rem}.footer{padding-bottom:1rem}body{font-size:10pt}}
+/* United Wrestling Club. Crucible Guild / Bedrock Standard. */
+:root {
+  --red: oklch(43.5% .145 25);
+  --red-bright: oklch(49% .16 25);
+  --red-dark: oklch(36% .12 25);
+  --ink: oklch(20% .009 25);
+  --paper: oklch(96% .008 25);
+  --white: oklch(99% .005 25);
+  --muted: oklch(46% .009 25);
+  --line: oklch(83% .009 25);
+  --dark-line: oklch(39% .009 25);
+  --soft: oklch(91% .009 25);
+  --on-dark: oklch(82% .008 25);
+  --display: Impact, 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --space: clamp(1.25rem, 5vw, 5rem);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; overflow-x: hidden; }
+body { margin: 0; overflow-x: hidden; background: var(--paper); color: var(--ink); font: 1rem/1.65 var(--body); -webkit-font-smoothing: antialiased; }
+body.modal-open { overflow: hidden; }
+img, video { display: block; max-width: 100%; }
+img { height: auto; }
+button, input, select { font: inherit; }
+button, a, input, select, summary { -webkit-tap-highlight-color: transparent; }
+button, a { touch-action: manipulation; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .6; }
+:focus-visible { outline: 3px solid var(--red-bright); outline-offset: 4px; }
+.hero :focus-visible, .red-section :focus-visible, .featured :focus-visible, .visit :focus-visible, .closing :focus-visible, .coaches :focus-visible { outline-color: var(--paper); }
+p { margin: 0 0 1.25rem; max-width: 68ch; }
+h1, h2, h3 { margin: 0; }
+h1, h2, .display { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .005em; line-height: 1; }
+h1 { font-size: clamp(3.1rem, 6.3vw, 6.4rem); }
+h2 { font-size: clamp(2.7rem, 5vw, 5.2rem); text-wrap: balance; }
+h3 { font-size: 1.25rem; line-height: 1.25; }
+ul { padding: 0; list-style: none; margin: 0; }
+section { scroll-margin-top: 1rem; }
+.wrap { width: 100%; max-width: 1440px; margin-inline: auto; padding-inline: var(--space); }
+.section { padding-block: clamp(3.75rem, 7.5vw, 7rem); }
+.eyebrow { display: block; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 750; margin-bottom: 1.25rem; line-height: 1.5; }
+.red-text { color: var(--red); }
+.muted { color: var(--muted); }
+.small { font-size: .875rem; line-height: 1.6; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 1.25rem; min-height: 54px; padding: .9rem 1.25rem; border: 1px solid transparent; border-radius: 2px; background: var(--red); color: var(--white); font-weight: 750; font-size: .9375rem; line-height: 1.4; text-decoration: none; transition: background .24s var(--ease), color .24s var(--ease), transform .24s var(--ease); }
+.btn .arrow { margin-left: auto; font-size: 1.25rem; line-height: 1; }
+.btn.light { background: var(--paper); color: var(--ink); }
+.btn.outline { background: transparent; border-color: var(--line); color: var(--ink); }
+.btn.dark { background: var(--ink); }
+.btn.full { width: 100%; }
+button:active, .btn:active { transform: translateY(1px); }
+.text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .9375rem; font-weight: 700; gap: 1rem; }
+.skip { position: fixed; top: 8px; left: 8px; z-index: 300; padding: 12px; background: var(--paper); transform: translateY(-160%); }
+.skip:focus { transform: translateY(0); }
+[hidden] { display: none !important; }
+/* A compact, quiet arrival. */
+.topline { background: var(--ink); color: var(--paper); font-size: .75rem; letter-spacing: .035em; text-align: center; }
+.topline a { display: flex; justify-content: center; align-items: center; gap: .5rem; min-height: 44px; padding: .4rem 1rem; text-decoration: none; }
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--paper); border-bottom: 1px solid var(--line); }
+.header-inner { display: flex; align-items: center; gap: 1rem; min-height: 76px; }
+.brand { display: flex; gap: .65rem; align-items: center; text-decoration: none; margin-right: auto; }
+.brand img { width: 47px; height: 49px; object-fit: contain; }
+.brand-name { font-weight: 850; font-size: .8125rem; line-height: 1.15; letter-spacing: .025em; }
+.brand-name small { display: block; font-size: .625rem; letter-spacing: .08em; margin-top: 5px; font-weight: 600; }
+.nav-toggle { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: .75rem; font-weight: 700; }
+.header-cta { display: none; }
+.nav { display: none; position: absolute; inset: 100% 0 auto; background: var(--paper); border-bottom: 1px solid var(--line); padding: 1rem var(--space) 1.5rem; }
+.nav.is-open { display: grid; gap: .25rem; }
+.nav a { display: flex; align-items: center; min-height: 48px; text-decoration: none; font-size: .875rem; font-weight: 700; }
+.nav .mobile-nav-cta { color: var(--red); }
+/* On a phone the whole mat is visible, with no headline across the action. */
+.hero { position: relative; background: var(--red); color: var(--paper); display: flex; flex-direction: column; }
+.hero-media { position: relative; aspect-ratio: 16/9; background: var(--ink); overflow: hidden; }
+.hero video { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-media::after { content: ''; position: absolute; inset: 65% 0 0; background: linear-gradient(transparent, oklch(20% .009 25 / .72)); pointer-events: none; }
+.media-caption { position: absolute; left: var(--space); bottom: 17px; z-index: 1; font-size: .6875rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.video-toggle { position: absolute; right: 16px; bottom: 12px; z-index: 2; width: 44px; height: 44px; border: 1px solid oklch(96% .008 25 / .7); background: var(--ink); color: var(--paper); font-size: 1rem; border-radius: 50%; }
+.hero-content { padding-block: 2rem 2.5rem; }
+.hero .eyebrow { margin-bottom: 1rem; font-size: .6875rem; }
+h1 span { color: var(--paper); }
+.hero-lead { font-size: 1rem; max-width: 39ch; margin-top: 1.25rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; margin-top: 1.5rem; }
+.hero-actions .btn { width: 100%; }
+.hero-note { font-size: .8125rem; margin: .8rem 0 0; }
+.hero-lineage { border-top: 1px solid oklch(96% .008 25 / .3); padding-top: 1rem; margin: 1.5rem 0 0; font-size: .8125rem; line-height: 1.6; }
+.hero-lineage strong { display: block; }
+.authority { background: var(--ink); color: var(--paper); }
+.authority-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; padding-block: 1.75rem; }
+.authority-item { font-size: .8125rem; line-height: 1.5; color: var(--on-dark); }
+.authority-item strong { display: block; color: var(--paper); font-size: .9375rem; margin-bottom: 5px; }
+/* Belonging is an explicit standard, alongside the technical standard. */
+.belonging-layout { display: grid; gap: 2.5rem; }
+.belonging-intro > p { margin-top: 1.5rem; color: var(--muted); }
+.standard-list { margin: 0; padding: 0; list-style: none; }
+.standard-list li { display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; border-top: 1px solid var(--line); padding-block: 1.25rem; }
+.standard-list li:last-child { border-bottom: 1px solid var(--line); }
+.standard-list .number { color: var(--red); font-weight: 750; font-size: .8125rem; padding-top: .1rem; }
+.standard-list h3 { font-size: 1.125rem; margin-bottom: .5rem; }
+.standard-list p { color: var(--muted); font-size: .9375rem; margin: 0; }
+.standard-caption { margin: 1.25rem 0 0; font-size: .875rem; font-weight: 650; }
+.red-section { background: var(--red); color: var(--paper); }
+.trial-layout { display: grid; gap: 2.5rem; }
+.trial-heading h2 { max-width: 12ch; }
+.trial-price { display: flex; align-items: center; gap: 1.25rem; margin-top: 1.75rem; }
+.trial-price .display { font-size: 6rem; letter-spacing: -.03em; }
+.trial-price p { font-size: .875rem; max-width: 190px; margin: 0; }
+.trial-details { max-width: 540px; }
+.trial-steps { counter-reset: step; margin: 0 0 1.75rem; padding: 0; list-style: none; }
+.trial-steps li { position: relative; padding: 1rem 0 1rem 2.5rem; border-top: 1px solid oklch(96% .008 25 / .3); font-size: 1rem; }
+.trial-steps li::before { counter-increment: step; content: '0' counter(step); position: absolute; left: 0; top: 1.1rem; font-size: .75rem; }
+.trial-steps strong { display: block; }
+.trial-steps span { font-size: .9375rem; }
+.trial-details .small { margin: .8rem 0 0; }
+/* Four disciplines share one changing practice dossier. */
+.section-heading { display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem; }
+.section-heading p { max-width: 36ch; margin: 0; }
+.program-layout { display: grid; gap: 1.25rem; }
+.program-tabs { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.program-tab { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; min-width: 0; min-height: 104px; padding: 1rem .875rem; text-align: left; border: 0; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); background: transparent; color: var(--ink); transition: background .24s var(--ease), color .24s var(--ease); }
+.program-tab > span { font-size: .6875rem; letter-spacing: .04em; text-transform: uppercase; }
+.program-tab strong { font-size: .9375rem; line-height: 1.35; }
+.program-tab[aria-selected=true] { background: var(--red); color: var(--paper); }
+.program-tab .tab-arrow { display: none; }
+.program-panel { min-width: 0; background: var(--white); }
+.program-image { position: relative; min-width: 0; }
+.program-image img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.image-label { position: absolute; bottom: 14px; left: 14px; right: 14px; width: fit-content; max-width: calc(100% - 28px); background: var(--paper); color: var(--ink); padding: 7px 10px; font-size: .6875rem; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; }
+.program-body { padding: 1.5rem; min-width: 0; }
+.program-body h3 { font-family: var(--display); font-size: 2.5rem; text-transform: uppercase; font-weight: 400; letter-spacing: .01em; line-height: 1; margin-bottom: 1rem; }
+.program-body p { font-size: .9375rem; }
+.schedule { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 1rem; margin-block: 1.5rem; }
+.schedule-row { display: flex; justify-content: space-between; gap: .75rem; font-size: .875rem; margin-bottom: .5rem; }
+.schedule-row:last-child { margin: 0; }
+.schedule-row strong { font-variant-numeric: tabular-nums; text-align: right; flex-shrink: 0; }
+.schedule-note { font-size: .8125rem !important; color: var(--muted); margin: .75rem 0 0 !important; }
+.program-footer { display: flex; align-items: flex-start; flex-direction: column; gap: .5rem; }
+.program-footer .btn { width: 100%; }
+.program-footer .tag { font-size: .8125rem; color: var(--muted); }
+.all-schedules { margin: 1.5rem 0 0; font-size: .875rem; color: var(--muted); max-width: 72ch; }
+.all-schedules a { display: inline-flex; align-items: center; min-height: 44px; }
+/* An archive and a present-day coach, each with their own composition. */
+.coaches { background: var(--ink); color: var(--paper); }
+.coach-intro { max-width: 750px; }
+.coach-intro p { margin-top: 1.5rem; color: var(--on-dark); }
+.coach-grid { display: grid; gap: 3rem; margin-top: 2.5rem; }
+.coach-photo { position: relative; }
+.coach-photo img { width: 100%; aspect-ratio: 16/11; object-fit: cover; }
+.coach-info { padding-top: 1.5rem; }
+.coach-grid article:last-child { background: var(--red); padding: 1rem; }
+.coach-grid article:last-child .coach-info { padding: 1.5rem .5rem .75rem; }
+.coach-grid article:last-child .coach-info p { color: var(--paper); }
+.coach-grid article:last-child .coach-credentials { border-color: oklch(96% .008 25 / .4); }
+.coach-info .eyebrow { margin-bottom: .65rem; color: var(--paper); }
+.coach-info h3 { font-family: var(--display); text-transform: uppercase; font-size: 2.25rem; font-weight: 400; line-height: 1.05; }
+.coach-info p { font-size: 1rem; color: var(--on-dark); margin: 1rem 0; }
+.coach-credentials { font-size: .875rem; border-top: 1px solid var(--dark-line); padding-top: 1rem; }
+.room-note { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--dark-line); display: flex; flex-wrap: wrap; gap: .75rem 2.5rem; font-size: .875rem; color: var(--on-dark); }
+.room-note strong { color: var(--paper); }
+/* The monthly membership carries the weight; entry passes stay compact. */
+.pricing-grid { display: grid; gap: 1.5rem; }
+.plan { padding: 1.75rem 0; border-block: 1px solid var(--line); }
+.plan h3 { font-size: 1.25rem; }
+.plan .eyebrow { margin-bottom: .75rem; }
+.plan-price { font-family: var(--display); font-size: 3.5rem; line-height: 1.1; margin-block: .75rem; letter-spacing: -.01em; }
+.plan-price small { font-family: var(--body); font-size: 1rem; letter-spacing: 0; }
+.plan-description { font-size: .9375rem; }
+.plan ul { margin: 1.5rem 0; }
+.plan li { font-size: .9375rem; padding: .65rem 0; border-top: 1px solid var(--line); }
+.plan li::before { content: '✓'; margin-right: .65rem; color: var(--red); font-weight: 700; }
+.plan.featured { order: -1; background: var(--red); color: var(--paper); border: 0; padding: 2rem 1.5rem; }
+.featured .plan-marker { display: inline-block; border: 1px solid oklch(96% .008 25 / .5); padding: .25rem .6rem; margin-bottom: 2rem; font-size: .6875rem; text-transform: uppercase; font-weight: 700; letter-spacing: .09em; }
+.featured .plan-price { font-size: clamp(4.2rem, 8vw, 6rem); }
+.featured li { border-color: oklch(96% .008 25 / .3); }
+.featured li::before { color: var(--paper); }
+.featured .btn { margin-top: 1rem; }
+.plan:not(.featured) ul { display: none; }
+.pricing-footnote { margin: 1.5rem 0 0; font-size: .875rem; color: var(--muted); }
+.pricing-footnote a { display: inline-flex; align-items: center; min-height: 44px; }
+/* Questions, arrival and one last invitation. */
+.faq { border-top: 1px solid var(--line); }
+.faq-layout { display: grid; gap: 2rem; }
+.faq-intro p { margin-top: 1.5rem; }
+.faq-list details { border-top: 1px solid var(--line); }
+.faq-list details:last-child { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; font-size: 1rem; font-weight: 700; padding: 1.25rem 0; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; font-size: 1.5rem; font-weight: 400; flex-shrink: 0; }
+details[open] summary::after { content: '−'; }
+.faq-list details p { padding: 0 1rem 1.25rem 0; font-size: .9375rem; color: var(--muted); margin: 0; }
+.visit { background: var(--red); color: var(--paper); }
+.visit .red-text, .visit .muted { color: inherit; }
+.visit-layout { display: grid; gap: 2.5rem; }
+.visit h2 { margin-bottom: 1.5rem; }
+.visit address { font-style: normal; margin-bottom: 1.25rem; font-size: 1.0625rem; }
+.visit-phone { font-family: var(--display); font-size: 2rem; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; margin-bottom: 1rem; }
+.service-area { font-size: .9375rem; max-width: 45ch; }
+.visit-actions { display: flex; gap: .75rem; flex-wrap: wrap; }
+.visit .btn.outline { color: var(--paper); border-color: oklch(96% .008 25 / .6); }
+.visit-detail { border-block: 1px solid oklch(96% .008 25 / .4); padding-block: 2rem; align-self: center; }
+.visit-detail h3 { margin-bottom: 1.2rem; font-size: 1.5rem; }
+.visit-detail li { padding: .85rem 0; border-top: 1px solid oklch(96% .008 25 / .3); font-size: .9375rem; display: flex; gap: 1rem; align-items: baseline; }
+.visit-detail li span { font-size: .75rem; letter-spacing: .1em; flex-shrink: 0; }
+.visit-detail .small { margin: 1.5rem 0 0; }
+.closing { background: var(--ink); color: var(--paper); position: relative; isolation: isolate; min-height: 440px; display: flex; align-items: center; }
+.closing::after { content: ''; position: absolute; inset: 0; background: oklch(20% .009 25 / .8); z-index: -1; }
+.closing > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; z-index: -2; }
+.closing .wrap { padding-block: 4rem; }
+.closing h2 { max-width: 14ch; }
+.closing p { margin-top: 1.5rem; }
+.closing .btn { margin-top: .5rem; }
+.footer { background: var(--ink); color: var(--on-dark); padding: 2.5rem 0 7rem; }
+.footer-main { display: flex; flex-direction: column; gap: 1.5rem; }
+.footer .brand { color: var(--paper); }
+.footer-motto { font-size: .75rem; letter-spacing: .08em; }
+.footer-bottom { border-top: 1px solid var(--dark-line); padding-top: 1.5rem; margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; font-size: .8125rem; align-items: center; }
+.footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+.sticky-action { position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; display: flex; align-items: center; gap: 1rem; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--paper); border-top: 1px solid var(--line); }
+.sticky-copy { font-size: .6875rem; line-height: 1.4; flex-shrink: 0; }
+.sticky-copy strong { display: block; font-size: 1rem; }
+.sticky-action .btn { flex: 1; min-height: 48px; padding: .7rem; font-size: .875rem; gap: .5rem; }
+/* Native dialog keeps focus, Escape and inert background behavior. */
+dialog { background: var(--paper); color: var(--ink); padding: 0; border: 0; border-radius: 3px; width: min(520px, calc(100% - 24px)); max-height: calc(100dvh - 24px); overscroll-behavior: contain; }
+dialog::backdrop { background: oklch(20% .009 25 / .85); }
+.dialog-inner { padding: 2rem 1.5rem; position: relative; }
+.dialog-close { position: absolute; right: 10px; top: 10px; width: 44px; height: 44px; font-size: 1.5rem; border: 1px solid var(--line); background: transparent; color: var(--ink); }
+.dialog-inner .eyebrow { padding-right: 2rem; }
+.dialog-inner h2 { font-size: 2.75rem; margin-bottom: 1rem; }
+.dialog-intro { font-size: .9375rem; color: var(--muted); }
+.field { margin-bottom: 1rem; }
+.field label { display: block; font-size: .875rem; font-weight: 700; margin-bottom: .4rem; }
+.field input, .field select { width: 100%; min-width: 0; min-height: 50px; border: 1px solid oklch(62% .009 25); border-radius: 2px; background: var(--white); padding: .7rem; color: var(--ink); font-size: 1rem; }
+.field [aria-invalid=true] { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
+.field-error { display: block; color: var(--red); font-size: .8125rem; margin-top: .3rem; }
+.field-error:empty { display: none; }
+.form-note { font-size: .8125rem; color: var(--muted); margin: 1rem 0 0; }
+.form-errors { font-size: .875rem; color: var(--red); margin-bottom: 1rem; }
+.review-list { font-size: .9375rem; margin: 1.5rem 0; }
+.review-list div { display: grid; grid-template-columns: 75px 1fr; gap: 1rem; border-top: 1px solid var(--line); padding: .6rem 0; }
+.review-list dt { color: var(--muted); }
+.review-list dd { margin: 0; overflow-wrap: anywhere; }
+.review-actions { display: grid; gap: .7rem; }
+.review-note { font-size: .875rem; margin-top: 1.2rem; color: var(--muted); }
+.edit-details { border: 0; background: none; color: var(--red); min-height: 44px; padding: 0; font-weight: 700; font-size: .875rem; }
+.no-js-note { padding: 1rem 1rem 6rem; background: var(--paper); color: var(--ink); text-align: center; font-size: .9375rem; }
+@media (hover: hover) {
+  .btn:hover { background: var(--red-bright); }
+  .btn.light:hover { background: var(--soft); }
+  .btn.dark:hover { background: var(--dark-line); }
+  .btn.outline:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .visit .btn.outline:hover { background: var(--paper); color: var(--red); }
+  .nav a:hover, .text-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+  .program-tab:not([aria-selected=true]):hover { background: var(--soft); }
+  .nav-toggle:hover, .dialog-close:hover { background: var(--soft); }
+  .video-toggle:hover { background: var(--red); }
+  summary:hover { color: var(--red); }
+}
+@media (min-width: 640px) {
+  .header-cta { display: inline-flex; min-height: 48px; font-size: .8125rem; }
+  .hero-media { aspect-ratio: 16/8; }
+  .hero-content { padding-block: 2.75rem; }
+  h1 { font-size: clamp(4rem, 7vw, 6.4rem); }
+  .hero-actions .btn { width: auto; min-width: 260px; }
+  .authority-inner { grid-template-columns: repeat(4, 1fr); }
+  .trial-price .display { font-size: 7.5rem; }
+  .program-body { padding: 2rem; }
+  .coach-grid { grid-template-columns: .9fr 1.1fr; align-items: start; gap: 2.5rem; }
+  .coach-grid article:first-child { margin-top: 3rem; }
+  .coach-grid article:last-child .coach-photo img { aspect-ratio: 4/3; }
+  .footer-main { flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+  .dialog-inner { padding: 2.5rem; }
+}
+@media (min-width: 900px) {
+  .nav-toggle { display: none; }
+  .nav { position: static; display: flex !important; gap: 1.5rem; padding: 0; border: 0; background: transparent; }
+  .nav a { font-size: .8125rem; }
+  .nav .mobile-nav-cta { display: none; }
+  .header-inner { gap: 1.5rem; min-height: 88px; }
+  .header-cta { display: none; }
+  .brand img { width: 54px; height: 56px; }
+  .brand-name { font-size: .875rem; }
+  .hero { flex-direction: row; min-height: 620px; max-width: 1920px; margin-inline: auto; }
+  .hero-media { position: absolute; inset: 0 0 0 47%; aspect-ratio: auto; }
+  .hero video { object-position: 52% center; }
+  .media-caption { left: 24px; }
+  .hero-content { margin: 0; width: 47%; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 3.5rem clamp(1.5rem, 3vw, 3rem) 3.5rem max(var(--space), calc((100vw - 1440px) / 2 + var(--space))); }
+  h1 { font-size: clamp(3.4rem, 4.8vw, 5.75rem); }
+  .hero-lead { font-size: 1.0625rem; }
+  .hero-actions { gap: .5rem 1rem; }
+  .hero-actions .btn { min-width: 0; }
+  .hero-lineage { margin-top: 1.75rem; }
+  .authority-inner { padding-block: 1.75rem; gap: 2rem; }
+  .belonging-layout { grid-template-columns: 1fr 1.1fr; gap: 6rem; align-items: start; }
+  .belonging-intro h2 { max-width: 11ch; }
+  .trial-layout { grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: center; }
+  .section-heading { flex-direction: row; justify-content: space-between; align-items: flex-end; gap: 3rem; margin-bottom: 3rem; }
+  .program-layout { grid-template-columns: 235px minmax(0, 1fr); gap: 1.5rem; }
+  .program-tabs { display: flex; flex-direction: column; border-left: 0; }
+  .program-tab { padding: 1.5rem 2rem 1.5rem 1rem; min-height: 125px; border-right: 0; position: relative; flex: 1; justify-content: center; }
+  .program-tab strong { font-size: 1.0625rem; }
+  .program-tab .tab-arrow { display: block; position: absolute; right: .75rem; top: 50%; font-size: 1.25rem; transform: translateY(-50%); }
+  .program-panel { display: grid; grid-template-columns: .9fr 1.1fr; }
+  .program-image img { height: 100%; aspect-ratio: auto; min-height: 540px; }
+  .program-body { padding: 2rem 1.5rem; }
+  .coach-intro { max-width: none; display: grid; grid-template-columns: 1.3fr 1fr; gap: 0 5rem; align-items: end; }
+  .coach-intro > .eyebrow { grid-column: 1 / -1; }
+  .coach-intro p { margin: 0; }
+  .coach-grid { gap: 5rem; margin-top: 3rem; }
+  .coach-grid article:first-child { margin-top: 4rem; }
+  .coach-info h3 { font-size: 2.75rem; }
+  .pricing-grid { grid-template-columns: 1.2fr 1fr; gap: 0 3rem; align-items: start; }
+  .plan.featured { grid-column: 1; grid-row: 1 / 3; padding: 2.5rem; align-self: stretch; }
+  .plan:not(.featured) { grid-column: 2; padding-block: 1.75rem; }
+  .plan:not(.featured) .plan-price { float: right; margin: -.25rem 0 .5rem 1rem; }
+  .plan:not(.featured) .plan-price small { display: block; font-size: .875rem; text-align: right; }
+  .plan:not(.featured) .plan-description { margin-block: 1rem; }
+  .plan:not(.featured) .btn { width: auto; }
+  .plan:last-child { border-top: 0; }
+  .faq-layout { grid-template-columns: 1fr 1.2fr; gap: 5rem; }
+  .faq-intro h2 { max-width: 10ch; }
+  .visit-layout { grid-template-columns: 1.2fr 1fr; gap: 5rem; }
+  .sticky-action { display: none; }
+  .footer { padding-bottom: 2rem; }
+  .closing { min-height: 500px; }
+}
+@media (min-width: 1200px) {
+  .header-cta { display: inline-flex; }
+  .header-inner { gap: 2rem; }
+  .nav { gap: 1.75rem; }
+  .hero { min-height: 670px; }
+  .hero-content { padding-right: 3rem; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; }
+  .program-layout { grid-template-columns: 270px minmax(0, 1fr); gap: 2rem; }
+  .program-body { padding: 2.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .site-header, .sticky-action, .video-toggle, dialog, .hero-media, .topline { display: none; }
+  .hero { min-height: auto; }
+  .hero-content { width: 100%; padding: 2rem; }
+  .section { padding-block: 2rem; }
+  .program-panel[hidden] { display: block !important; }
+  .program-tabs { display: none; }
+  .program-layout, .pricing-grid, .coach-grid { display: block; }
+  .plan, .coach-grid article { break-inside: avoid; margin-bottom: 1rem; }
+  .footer { padding-bottom: 1rem; }
+  body { font-size: 10pt; }
+}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["SportsClub","LocalBusiness"],"name":"United Wrestling Club","description":"Olympic-rooted youth, high school and adult wrestling in Hayward. USA Wrestling Regional Training Center #513.","sport":"Wrestling","telephone":"+1-510-303-4869","address":{"@type":"PostalAddress","streetAddress":"30139 Industrial Pkwy SW Ste C","addressLocality":"Hayward","addressRegion":"CA","postalCode":"94544","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Hayward"},{"@type":"City","name":"Union City"},{"@type":"City","name":"Fremont"},{"@type":"City","name":"Newark"},{"@type":"City","name":"Castro Valley"},{"@type":"City","name":"San Leandro"}],"priceRange":"$15–$139.99","founder":{"@type":"Person","name":"Karim Zemaryalai","description":"1980 Moscow Olympian and Ali Aliyev Dagestani International Tournament medalist"},"employee":{"@type":"Person","name":"Naweed Zemaryalai","jobTitle":"Head Coach","description":"B.S. in Kinesiology, San Francisco State University; Chabot College wrestling coach"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Wrestling training","itemListElement":[{"@type":"Offer","name":"3-Day Mat Pass","price":"15.00","priceCurrency":"USD","description":"Three consecutive age-appropriate practices for new members, gear fitting and a one-on-one technique assessment."},{"@type":"Offer","name":"Unlimited Membership","price":"139.99","priceCurrency":"USD","description":"Monthly unlimited training, free Saturday open mats, no initiation fees and no contracts."},{"@type":"Offer","name":"Single Mat Drop-In","price":"15.00","priceCurrency":"USD","description":"One practice or Saturday open mat."}]}}
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "SportsClub",
+    "LocalBusiness"
+  ],
+  "name": "United Wrestling Club",
+  "description": "Olympic-rooted youth, scholastic and adult wrestling in Hayward. USA Wrestling Regional Training Center.",
+  "sport": "Wrestling",
+  "telephone": "+1-510-303-4869",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30139 Industrial Pkwy SW Ste C",
+    "addressLocality": "Hayward",
+    "addressRegion": "CA",
+    "postalCode": "94544",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Hayward"
+    },
+    {
+      "@type": "City",
+      "name": "Union City"
+    },
+    {
+      "@type": "City",
+      "name": "Fremont"
+    },
+    {
+      "@type": "City",
+      "name": "Newark"
+    },
+    {
+      "@type": "City",
+      "name": "Castro Valley"
+    },
+    {
+      "@type": "City",
+      "name": "San Leandro"
+    }
+  ],
+  "priceRange": "$15–$139.99",
+  "founder": {
+    "@type": "Person",
+    "name": "Karim Zemaryalai",
+    "description": "1980 Moscow Olympic qualifier and Ali Aliyev International Tournament medalist in Dagestan"
+  },
+  "employee": {
+    "@type": "Person",
+    "name": "Naweed Zemaryalai",
+    "jobTitle": "Head Coach",
+    "description": "B.S. in Kinesiology, San Francisco State University; Chabot College wrestling coach"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wrestling training",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "3-Day Mat Pass",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "Three consecutive age-appropriate practices for new members, gear fitting and a one-on-one technique assessment.",
+        "url": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "3-Day Mat Pass",
+          "provider": {
+            "@type": "SportsClub",
+            "name": "United Wrestling Club"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Unlimited Training",
+        "price": "139.99",
+        "priceCurrency": "USD",
+        "description": "Monthly unlimited training, free Saturday open mats ($60/month value), 15% family discount, zero initiation fees and no contracts.",
+        "url": "https://www.wrestlingiq.com/uwc/register",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Unlimited Training",
+          "provider": {
+            "@type": "SportsClub",
+            "name": "United Wrestling Club"
+          }
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "139.99",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Single Mat Drop-In",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "One practice or Saturday open mat.",
+        "url": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&show_registration=true&team_id=513",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Single Mat Drop-In",
+          "provider": {
+            "@type": "SportsClub",
+            "name": "United Wrestling Club"
+          }
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Youth Wrestling Academy (ages 5–13)",
+    "Varsity & Scholastic Prep (ages 14–18)",
+    "Adult Wrestling & Wrestle-Jitsu (ages 18+)",
+    "Saturday Open Mat for Bay Area grapplers"
+  ]
+}
 </script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="topline"><a href="#mat-pass">YOUR FIRST 3 DAYS ON THE MAT. JUST $15. <span aria-hidden="true">↗</span></a></div>
+<div class="topline"><a href="#mat-pass">HAYWARD, CA · YOUR FIRST 3 PRACTICES, $15. <span aria-hidden="true">↗</span></a></div>
 <header class="site-header">
  <div class="wrap header-inner">
   <a class="brand" href="#" aria-label="United Wrestling Club home"><img src="../live_site_content/assets/logo.png" alt="" width="49" height="51"><span class="brand-name">UNITED<br>WRESTLING CLUB<small>HAYWARD, CALIFORNIA</small></span></a>
@@ -56,150 +505,362 @@ dialog{background:var(--paper);color:var(--ink);padding:0;border:0;border-radius
 </header>
 <main id="main">
 <section class="hero" aria-labelledby="hero-title">
- <video id="hero-video" muted loop playsinline preload="none" poster="../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg" aria-hidden="true"><source data-src="../video_assets/loops/loop_homepage_hero_18s.mp4" type="video/mp4"></video>
- <div class="hero-shade"></div>
+ <div class="hero-media">
+  <video id="hero-video" muted loop playsinline preload="none" poster="../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg" aria-hidden="true"><source data-src="../video_assets/loops/loop_homepage_hero_18s.mp4" type="video/mp4"></video>
+  <span class="media-caption">Inside our Hayward mat room</span>
+  <button class="video-toggle" id="video-toggle" type="button" aria-label="Play training footage" aria-pressed="false">▶</button>
+ </div>
  <div class="wrap hero-content">
   <span class="eyebrow">Olympic roots. East Bay grit.</span>
   <h1 id="hero-title">Built on the mat.<br><span>Ready for life.</span></h1>
-  <p class="hero-lead">Confidence for your kid. An edge for your season. A new challenge for you. Find it here in Hayward.</p>
-  <div class="hero-actions"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Start my 3 days for $15 <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="#programs">Find your program <span aria-hidden="true">↓</span></a></div>
-  <p class="hero-note">Three practices. Gear fitting. A coach in your corner.</p>
-  <div class="hero-bottom"><div class="hero-caption">United Wrestling Club / Hayward, CA<strong>Real coaching. Every athlete. Every practice.</strong></div><button class="video-toggle" id="video-toggle" type="button" aria-label="Play background video" aria-pressed="false">▶</button></div>
+  <p class="hero-lead">Confidence for your child. An edge for your next match. Olympic-rooted wrestling, right here in Hayward.</p>
+  <div class="hero-actions"><a class="btn light" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my $15 3-Day Mat Pass <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="#programs">Find your program <span aria-hidden="true">↓</span></a></div>
+  <p class="hero-note">Gear fitting + a 1-on-1 assessment with Coach Naweed.</p>
+  <p class="hero-lineage"><strong>1980 Olympic lineage. Coached in person.</strong>Karim Zemaryalai’s legacy. Naweed’s SFSU Kinesiology training and Chabot College coaching.</p>
  </div>
 </section>
-<div class="authority" aria-label="Club credentials"><div class="wrap authority-inner"><div class="authority-item"><strong>1980 Olympic legacy</strong>Founded by Karim Zemaryalai</div><div class="authority-item"><strong>Science behind the sport</strong>Coach Naweed · SFSU Kinesiology B.S.</div><div class="authority-item"><strong>USA Wrestling RTC #513</strong>Regional Training Center</div><div class="authority-item"><strong>Beginners belong here</strong>Youth, high school & adults</div></div></div>
+<div class="authority" aria-label="The UWC standard"><div class="wrap authority-inner">
+ <div class="authority-item"><strong>Olympic technique</strong>Karim Zemaryalai, 1980 Moscow qualifier</div>
+ <div class="authority-item"><strong>Close coaching</strong>1:6 coach-to-athlete focus</div>
+ <div class="authority-item"><strong>Respect comes first</strong>Beginners, competitors, teammates</div>
+ <div class="authority-item"><strong>A clean place to train</strong>Hospital-grade mat sanitization</div>
+</div></div>
+<section class="section belonging" aria-labelledby="belonging-heading"><div class="wrap belonging-layout">
+ <div class="belonging-intro"><span class="eyebrow red-text">The Crucible Guild / Our first rule</span><h2 id="belonging-heading">Belonging before proficiency.</h2><p>Your child doesn’t need to be fearless. You don’t need a wrestling background. We build the trust, habits and fundamentals that make the next step possible.</p><a class="text-link red-text" href="#mat-pass">Here’s how your first three days work <span aria-hidden="true">↓</span></a></div>
+ <div><ol class="standard-list">
+  <li><span class="number" aria-hidden="true">01</span><div><h3>A coach who sees the individual.</h3><p>With 1:6 coach-to-athlete focus, instruction meets your athlete’s age and experience. First, learn the stance. Then build the confidence to use it.</p></div></li>
+  <li><span class="number" aria-hidden="true">02</span><div><h3>Care is part of the discipline.</h3><p>Hospital-grade antimicrobial sanitization on seamless mats. Controlled technique, suitable training partners and respect for everyone in the room.</p></div></li>
+  <li><span class="number" aria-hidden="true">03</span><div><h3>Character carries beyond the circle.</h3><p>Show up prepared. Listen. Help your partner improve. The habits we practice here belong in the classroom, at home and in competition.</p></div></li>
+ </ol><p class="standard-caption">Serious about the work. Welcoming from day one.</p></div>
+</div></section>
 <section class="red-section section" id="mat-pass" aria-labelledby="trial-heading">
- <div class="wrap trial-layout"><div class="trial-heading"><span class="eyebrow">Less thinking. More wrestling.</span><h2 id="trial-heading">Meet your coach.<br>Find your feet.</h2><div class="trial-price"><span class="display">$15</span><p>One Mat Pass.<br>Three consecutive practices.<br>No membership commitment.</p></div></div><div class="trial-details"><ol class="trial-steps"><li><strong>Pick your program.</strong><span>We’ll help find the right age and experience group.</span></li><li><strong>Show up. We’ll take it from there.</strong><span>Gear fitting and a 1-on-1 technique assessment with Coach Naweed.</span></li><li><strong>Give yourself three practices.</strong><span>Meet the team, learn the fundamentals, feel the difference.</span></li></ol><a class="btn light full" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my $15 3-Day Mat Pass <span class="arrow" aria-hidden="true">↗</span></a><p class="small">For new members. Three consecutive practices in an age-appropriate class. No experience needed.</p></div></div>
+ <div class="wrap trial-layout"><div class="trial-heading"><span class="eyebrow">The $15 3-Day Mat Pass</span><h2 id="trial-heading">Three practices.<br>A real beginning.</h2><div class="trial-price"><span class="display">$15</span><p>One Mat Pass.<br>Three consecutive practices.<br>No membership commitment.</p></div></div><div class="trial-details"><ol class="trial-steps"><li><strong>Pick your program.</strong><span>We’ll help find the right age and experience group.</span></li><li><strong>Show up. We’ll take it from there.</strong><span>Gear fitting and a 1-on-1 technique assessment with Coach Naweed.</span></li><li><strong>Give yourself three practices.</strong><span>Meet the team, learn the fundamentals, feel the difference.</span></li></ol><a class="btn light full" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my $15 3-Day Mat Pass <span class="arrow" aria-hidden="true">↗</span></a><p class="small">For new members. Three consecutive practices in an age-appropriate class. No experience needed.</p></div></div>
 </section>
 <section class="section" id="programs" aria-labelledby="programs-heading">
  <div class="wrap"><div class="section-heading"><div><span class="eyebrow red-text">A place for your next step</span><h2 id="programs-heading">Find your kind<br>of mat time.</h2></div><p class="muted">First takedown or next tournament, start with the room that fits you. Choose a program to see practice times.</p></div>
- <div class="program-layout"><div class="program-tabs" role="tablist" aria-label="Wrestling programs"><button class="program-tab" id="tab-youth" role="tab" aria-selected="true" aria-controls="panel-youth" tabindex="0" data-program="youth"><span>01 / Ages 5–13</span><strong>Youth Wrestling</strong><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="program-tab" id="tab-varsity" role="tab" aria-selected="false" aria-controls="panel-varsity" tabindex="-1" data-program="varsity"><span>02 / Ages 14–18</span><strong>Varsity & Scholastic</strong><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="program-tab" id="tab-adult" role="tab" aria-selected="false" aria-controls="panel-adult" tabindex="-1" data-program="adult"><span>03 / Ages 18+</span><strong>Adult & Wrestle-Jitsu</strong><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="program-tab" id="tab-open" role="tab" aria-selected="false" aria-controls="panel-open" tabindex="-1" data-program="open"><span>04 / Every Saturday</span><strong>Open Mat</strong><span class="tab-arrow" aria-hidden="true">↗</span></button></div>
- <article class="program-panel" id="panel-youth" role="tabpanel" aria-labelledby="tab-youth" tabindex="0"><div class="program-image"><img src="../video_assets/stills_selected/still_41_naweed_youth_wrestling_academy_squad.jpg" alt="Coach Naweed with 25+ youth wrestling academy squad on the red mats at United Wrestling Club" loading="lazy" width="1920" height="1080"><span class="image-label">Small steps. Strong foundations.</span></div><div class="program-body"><span class="eyebrow red-text">Youth Wrestling / 5–13</span><h3>Confidence<br>you can see.</h3><p>Balance, coordination and the courage to try again. Kids learn wrestling fundamentals, sportsmanship and how to stand a little taller.</p><div class="schedule"><div class="schedule-row"><span>Mon & Wed · Kids*</span><strong>6:30–7:30 PM</strong></div><div class="schedule-row"><span>Mon–Thu · Team</span><strong>5–6:30 PM</strong></div><p class="schedule-note">*Kids session serves pre-K–5th grade. Coach confirms placement by age and experience.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial" data-select="youth">Try youth wrestling <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">Beginners welcome</span></div></div></article>
- <article class="program-panel" id="panel-varsity" role="tabpanel" aria-labelledby="tab-varsity" tabindex="0" hidden><div class="program-image"><img src="../video_assets/stills_selected/still_37_naweed_college_airborne_high_single.jpg" alt="Explosive collegiate airborne high single takedown demonstrating varsity-level wrestling technique" loading="lazy" width="1920" height="1080"><span class="image-label">Build your competitive edge.</span></div><div class="program-body"><span class="eyebrow red-text">Varsity & Scholastic / 14–18</span><h3>Put in work.<br>Take it further.</h3><p>Sharpen your hand fighting, improve your shot and build match-ready conditioning. Train toward CIF competition and collegiate opportunities.</p><div class="schedule"><div class="schedule-row"><span>Mon–Thu</span><strong>7:30–9 PM</strong></div><div class="schedule-row"><span>Tue & Thu · AM option</span><strong>8–9:30 AM</strong></div><p class="schedule-note">High school sessions share the mat with adult and college athletes. Ask about team practice placement.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial" data-select="varsity">Try varsity training <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">Prepare beyond the school season</span></div></div></article>
- <article class="program-panel" id="panel-adult" role="tabpanel" aria-labelledby="tab-adult" tabindex="0" hidden><div class="program-image"><img src="../video_assets/stills_selected/still_47_uwc_adult_mat_rounds_wide_banner.jpg" alt="Adult wrestling and Wrestle-Jitsu class drilling technique on the red mats under the United Wrestling Club banner" loading="lazy" width="1920" height="1080"><span class="image-label">More technique. Zero ego.</span></div><div class="program-body"><span class="eyebrow red-text">Adult & Wrestle-Jitsu / 18+</span><h3>Your ground game<br>starts standing.</h3><p>Learn takedowns, develop control and connect wrestling to your BJJ. Serious instruction for adult beginners and experienced grapplers alike.</p><div class="schedule"><div class="schedule-row"><span>Mon–Thu</span><strong>7:30–9 PM</strong></div><div class="schedule-row"><span>Friday · Wrestling</span><strong>8–9:30 PM</strong></div><div class="schedule-row"><span>Tue & Thu · AM option</span><strong>8–9:30 AM</strong></div><p class="schedule-note">Coach can help choose the right wrestling or Wrestle-Jitsu session for your goals.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial" data-select="adult">Try adult training <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">No wrestling background required</span></div></div></article>
- <article class="program-panel" id="panel-open" role="tabpanel" aria-labelledby="tab-open" tabindex="0" hidden><div class="program-image"><img src="../video_assets/stills_selected/still_46_uwc_live_mat_rounds_gym_community_panorama.jpg" alt="United Wrestling Club community panorama during live competition mat rounds in Hayward" loading="lazy" width="1920" height="1080"><span class="image-label">Your Saturday. Your mat time.</span></div><div class="program-body"><span class="eyebrow red-text">Saturday Open Mat</span><h3>Different teams.<br>Same love of work.</h3><p>Find a partner, drill your details and get quality rounds with the East Bay wrestling community. Visiting wrestlers are welcome.</p><div class="schedule"><div class="schedule-row"><span>Every Saturday</span><strong>10 AM–12 PM</strong></div><div class="schedule-row"><span>Drop-in / Members</span><strong>$15 / Free</strong></div><p class="schedule-note">Text us before bringing a youth athlete so we can confirm suitable training partners.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&amp;show_registration=true&amp;team_id=513" data-offer="dropin" data-select="open">Join Saturday open mat <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">Included with unlimited membership</span></div></div></article>
+ <div class="program-layout"><div class="program-tabs" role="tablist" aria-label="Wrestling programs"><button class="program-tab" id="tab-youth" role="tab" aria-selected="true" aria-controls="panel-youth" tabindex="0" data-program="youth"><span>01 / Ages 5–13</span><strong>Youth Academy</strong><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="program-tab" id="tab-varsity" role="tab" aria-selected="false" aria-controls="panel-varsity" tabindex="-1" data-program="varsity"><span>02 / Ages 14–18</span><strong>Varsity & Scholastic Prep</strong><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="program-tab" id="tab-adult" role="tab" aria-selected="false" aria-controls="panel-adult" tabindex="-1" data-program="adult"><span>03 / Ages 18+</span><strong>Adult Wrestling & Wrestle-Jitsu</strong><span class="tab-arrow" aria-hidden="true">↗</span></button><button class="program-tab" id="tab-open" role="tab" aria-selected="false" aria-controls="panel-open" tabindex="-1" data-program="open"><span>04 / Every Saturday</span><strong>Open Mat</strong><span class="tab-arrow" aria-hidden="true">↗</span></button></div>
+ <article class="program-panel" id="panel-youth" role="tabpanel" aria-labelledby="tab-youth" tabindex="0"><div class="program-image"><img src="../video_assets/stills_selected/still_41_naweed_youth_wrestling_academy_squad.jpg" alt="Coach Naweed with 25+ youth wrestling academy squad on the red mats at United Wrestling Club" loading="lazy" width="1920" height="1080"><span class="image-label">Small steps. Strong foundations.</span></div><div class="program-body"><span class="eyebrow red-text">Youth Wrestling Academy / 5–13</span><h3>Confidence<br>you can see.</h3><p>Balance, coordination and the courage to try again. Kids learn wrestling fundamentals, sportsmanship and how to stand a little taller. Belonging comes first; proficiency follows with practice.</p><div class="schedule"><div class="schedule-row"><span>Mon & Wed · Kids*</span><strong>6:30–7:30 PM</strong></div><div class="schedule-row"><span>Mon–Thu · Team</span><strong>5–6:30 PM</strong></div><p class="schedule-note">*Kids session serves pre-K–5th grade. Coach confirms placement by age and experience.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial" data-select="youth">Try youth wrestling <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">Beginners welcome</span></div></div></article>
+ <article class="program-panel" id="panel-varsity" role="tabpanel" aria-labelledby="tab-varsity" tabindex="0" hidden><div class="program-image"><img src="../video_assets/stills_selected/still_37_naweed_college_airborne_high_single.jpg" alt="Explosive collegiate airborne high single takedown demonstrating varsity-level wrestling technique" loading="lazy" width="1920" height="1080"><span class="image-label">Build your competitive edge.</span></div><div class="program-body"><span class="eyebrow red-text">Varsity & Scholastic / 14–18</span><h3>Put in work.<br>Take it further.</h3><p>Sharpen your hand fighting, improve your shot and build match-ready conditioning. Train toward CIF competition and collegiate opportunities with technical drilling, situational rounds and the discipline to finish strong.</p><div class="schedule"><div class="schedule-row"><span>Mon–Thu</span><strong>7:30–9 PM</strong></div><div class="schedule-row"><span>Tue & Thu · AM option</span><strong>8–9:30 AM</strong></div><p class="schedule-note">High school sessions share the mat with adult and college athletes. Ask about team practice placement.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial" data-select="varsity">Try varsity training <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">Prepare beyond the school season</span></div></div></article>
+ <article class="program-panel" id="panel-adult" role="tabpanel" aria-labelledby="tab-adult" tabindex="0" hidden><div class="program-image"><img src="../video_assets/stills_selected/still_47_uwc_adult_mat_rounds_wide_banner.jpg" alt="Adult wrestling and Wrestle-Jitsu class drilling technique on the red mats under the United Wrestling Club banner" loading="lazy" width="1920" height="1080"><span class="image-label">More technique. Zero ego.</span></div><div class="program-body"><span class="eyebrow red-text">Adult & Wrestle-Jitsu / 18+</span><h3>Your ground game<br>starts standing.</h3><p>Learn takedowns, develop control and connect wrestling to your BJJ. Collegiate hand fighting, single legs and positional rounds. Technical depth for experienced grapplers, clear foundations for adult beginners. Zero ego required.</p><div class="schedule"><div class="schedule-row"><span>Mon–Thu</span><strong>7:30–9 PM</strong></div><div class="schedule-row"><span>Friday · Wrestling</span><strong>8–9:30 PM</strong></div><div class="schedule-row"><span>Tue & Thu · AM option</span><strong>8–9:30 AM</strong></div><p class="schedule-note">Coach can help choose the right wrestling or Wrestle-Jitsu session for your goals.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial" data-select="adult">Try adult training <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">No wrestling background required</span></div></div></article>
+ <article class="program-panel" id="panel-open" role="tabpanel" aria-labelledby="tab-open" tabindex="0" hidden><div class="program-image"><img src="../video_assets/stills_selected/still_46_uwc_live_mat_rounds_gym_community_panorama.jpg" alt="United Wrestling Club community panorama during live competition mat rounds in Hayward" loading="lazy" width="1920" height="1080"><span class="image-label">Your Saturday. Your mat time.</span></div><div class="program-body"><span class="eyebrow red-text">Saturday Open Mat</span><h3>Different teams.<br>Same love of work.</h3><p>Find a partner, drill your details and get quality rounds with the East Bay wrestling community. All Bay Area grapplers and affiliations are welcome. Bring a respectful approach and a willingness to work.</p><div class="schedule"><div class="schedule-row"><span>Every Saturday</span><strong>10 AM–12 PM</strong></div><div class="schedule-row"><span>Drop-in / Members</span><strong>$15 / Free</strong></div><p class="schedule-note">Text us before bringing a youth athlete so we can confirm suitable training partners.</p></div><div class="program-footer"><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&amp;show_registration=true&amp;team_id=513" data-offer="dropin" data-select="open">Join Saturday open mat <span class="arrow" aria-hidden="true">↗</span></a><span class="tag">Included with unlimited membership</span></div></div></article>
  </div><p class="all-schedules">All times Pacific, at our Hayward mat room. Schedules may change around holidays and tournaments. <a href="sms:+15103034869">Text (510) 303-4869 to confirm your first practice.</a></p>
  </div>
 </section>
-<section class="coaches section" id="coaches" aria-labelledby="coaches-heading"><div class="wrap"><div class="coach-intro"><span class="eyebrow">A legacy you train with</span><h2 id="coaches-heading">Olympic knowledge.<br>Personal attention.</h2><p>Technique passed down through generations. Coaching that meets you where you are. This is a family’s life’s work, and you’re invited in.</p></div><div class="coach-grid"><article><div class="coach-photo"><img src="../video_assets/stills_selected/still_35_naweed_father_1980_moscow_olympic_delegation.jpg" alt="Founder Karim Zemaryalai 1980 Moscow Olympic singlet and official Afghan Olympic delegation document" loading="lazy" width="1920" height="1080"><span class="image-label">The foundation / 1980 Moscow Olympics</span></div><div class="coach-info"><span class="eyebrow">Founder & Olympic legacy</span><h3>Karim Zemaryalai</h3><p>A 1980 Moscow Olympian and Ali Aliyev Dagestani International Tournament medalist. His international experience laid the foundation for UWC’s commitment to technical excellence.</p><div class="coach-credentials">Olympian · International medalist · UWC founder</div></div></article><article><div class="coach-photo"><img src="../video_assets/stills_selected/still_31_naweed_headshot_united_wall.jpg" alt="Head Coach Naweed Zemaryalai under the United Wrestling Club wall in Hayward" loading="lazy" width="1920" height="1080"><span class="image-label">Your corner / Coach Naweed</span></div><div class="coach-info"><span class="eyebrow">Head coach</span><h3>Naweed Zemaryalai</h3><p>Olympic technique meets modern biomechanics. Naweed pairs a B.S. in Kinesiology from San Francisco State with his coaching experience at Chabot College to develop complete athletes.</p><div class="coach-credentials">SFSU Kinesiology B.S. · Chabot College coach</div></div></article></div><div class="room-note"><span><strong>1:6</strong> coach-to-athlete focus</span><span><strong>3,000 sq ft</strong> seamless Dollamur mats</span><span><strong>One standard:</strong> respect everyone in the room</span></div></div></section>
-<section class="section" id="pricing" aria-labelledby="pricing-heading"><div class="wrap"><div class="section-heading"><div><span class="eyebrow red-text">Your work. Your pace.</span><h2 id="pricing-heading">Serious training.<br>Straight-up pricing.</h2></div><p class="muted">Start small. Stay because you love it.<br>No initiation fees. No contracts.</p></div><div class="pricing-grid"><article class="plan"><span class="eyebrow red-text">Start here</span><h3>3-Day Mat Pass</h3><div class="plan-price">$15<small> / once</small></div><p class="plan-description">Your first three practices, sorted.</p><ul><li>3 consecutive practices</li><li>Any age-appropriate class</li><li>Gear fitting included</li><li>1-on-1 technique assessment</li></ul><a class="btn outline full" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my Mat Pass <span class="arrow" aria-hidden="true">↗</span></a></article><article class="plan featured"><span class="plan-marker">The full UWC experience</span><span class="eyebrow">Make it your routine</span><h3>Unlimited Membership</h3><div class="plan-price">$139.99<small> / mo</small></div><p class="plan-description">More mat time. More room to grow.</p><ul><li>Unlimited weekly training</li><li>Free Saturday open mats ($60/mo value)</li><li>15% family / sibling discount</li><li>Zero initiation fees</li><li>No contracts</li></ul><a class="btn light full" href="https://www.wrestlingiq.com/uwc/register" data-offer="membership">Join the club <span class="arrow" aria-hidden="true">↗</span></a></article><article class="plan"><span class="eyebrow red-text">Keep it flexible</span><h3>Single Mat Drop-In</h3><div class="plan-price">$15<small> / visit</small></div><p class="plan-description">In town? In season? Come get rounds.</p><ul><li>One practice or open mat</li><li>Visiting competitors welcome</li><li>No monthly commitment</li><li>Train with the UWC community</li></ul><a class="btn outline full" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&amp;show_registration=true&amp;team_id=513" data-offer="dropin">Book a drop-in <span class="arrow" aria-hidden="true">↗</span></a></article></div><p class="pricing-footnote">Mat Pass is for new members. Membership bills monthly. Questions about family pricing? <a href="tel:+15103034869">Call Coach Naweed.</a></p></div></section>
+<section class="coaches section" id="coaches" aria-labelledby="coaches-heading"><div class="wrap"><div class="coach-intro"><span class="eyebrow">The unbroken line / Moscow to Hayward</span><h2 id="coaches-heading">The craft runs<br>in the family.</h2><p>Technique passed down through generations. Coaching that meets you where you are. Karim built the foundation. His son Naweed brings it into every practice, with collegiate experience and the science behind the movement.</p></div><div class="coach-grid"><article><div class="coach-photo"><img src="../video_assets/stills_selected/still_35_naweed_father_1980_moscow_olympic_delegation.jpg" alt="Founder Karim Zemaryalai 1980 Moscow Olympic singlet and official Afghan Olympic delegation document" loading="lazy" width="1920" height="1080"><span class="image-label">The foundation / Moscow 1980</span></div><div class="coach-info"><span class="eyebrow">Founder & Olympic legacy</span><h3>Karim Zemaryalai</h3><p>A 1980 Moscow Olympic qualifier and Ali Aliyev International Tournament medalist in Dagestan. His international experience laid the foundation for UWC’s commitment to technical excellence.</p><div class="coach-credentials">1980 Olympic qualifier · International medalist · Founder</div></div></article><article><div class="coach-photo"><img src="../video_assets/stills_selected/still_31_naweed_headshot_united_wall.jpg" alt="Head Coach Naweed Zemaryalai under the United Wrestling Club wall in Hayward" loading="lazy" width="1920" height="1080"><span class="image-label">Your corner / Coach Naweed</span></div><div class="coach-info"><span class="eyebrow">Head coach</span><h3>Naweed Zemaryalai</h3><p>Olympic technique meets modern biomechanics. Naweed pairs a B.S. in Kinesiology from San Francisco State with his coaching experience at Chabot College to develop complete athletes.</p><div class="coach-credentials">SFSU Kinesiology B.S. · Chabot College coach</div></div></article></div><div class="room-note"><span><strong>1:6</strong> coach-to-athlete focus</span><span><strong>3,000 sq ft</strong> seamless Dollamur mats</span><span><strong>One standard:</strong> respect everyone in the room</span></div></div></section>
+<section class="section" id="pricing" aria-labelledby="pricing-heading"><div class="wrap"><div class="section-heading"><div><span class="eyebrow red-text">Honest tuition. Every option upfront.</span><h2 id="pricing-heading">Serious training.<br>Straight-up pricing.</h2></div><p class="muted">Start small. Stay because you love it.<br>No initiation fees. No contracts.</p></div><div class="pricing-grid"><article class="plan"><span class="eyebrow red-text">Start here</span><h3>3-Day Mat Pass</h3><div class="plan-price">$15<small> / once</small></div><p class="plan-description">Three age-appropriate practices, gear fitting and a 1-on-1 technique assessment. For new members.</p><ul><li>3 consecutive practices</li><li>Any age-appropriate class</li><li>Gear fitting included</li><li>1-on-1 technique assessment</li></ul><a class="btn outline full" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my Mat Pass <span class="arrow" aria-hidden="true">↗</span></a></article><article class="plan featured"><span class="plan-marker">The Bedrock Standard</span><span class="eyebrow">Make it your routine</span><h3>Unlimited Training</h3><div class="plan-price">$139.99<small> / mo</small></div><p class="plan-description">More mat time. More room to grow.</p><ul><li>Unlimited weekly training</li><li>Free Saturday open mats ($60/mo value)</li><li>15% family / sibling discount</li><li>Zero initiation fees</li><li>No contracts</li></ul><a class="btn light full" href="https://www.wrestlingiq.com/uwc/register" data-offer="membership">Start unlimited training <span class="arrow" aria-hidden="true">↗</span></a></article><article class="plan"><span class="eyebrow red-text">Keep it flexible</span><h3>Single Mat Drop-In</h3><div class="plan-price">$15<small> / visit</small></div><p class="plan-description">One practice or Saturday open mat. Visiting grapplers and all affiliations welcome.</p><ul><li>One practice or open mat</li><li>Visiting competitors welcome</li><li>No monthly commitment</li><li>Train with the UWC community</li></ul><a class="btn outline full" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&amp;show_registration=true&amp;team_id=513" data-offer="dropin">Book a drop-in <span class="arrow" aria-hidden="true">↗</span></a></article></div><p class="pricing-footnote">Mat Pass is for new members. Membership bills monthly. Questions about family pricing? <a href="tel:+15103034869">Call Coach Naweed.</a></p></div></section>
 <section class="faq section" id="faq" aria-labelledby="faq-heading"><div class="wrap faq-layout"><div class="faq-intro"><span class="eyebrow red-text">For the parent in your corner</span><h2 id="faq-heading">Big questions.<br>Honest answers.</h2><p class="muted">A new sport can feel like a big step. We’ll help you and your athlete take the first one.</p><a class="text-link red-text" href="sms:+15103034869">Ask Coach Naweed a question <span aria-hidden="true">↗</span></a></div><div class="faq-list"><details open><summary>My child has never wrestled. Is that okay?</summary><p>Absolutely. Beginners learn stance, movement and basic technique before progressing. Your child joins an age-appropriate group, and the coach helps match training partners by size and experience. The Mat Pass is a chance to get comfortable, not a tryout.</p></details><details><summary>Is wrestling safe? What about injuries?</summary><p>Wrestling is a contact sport, so risk can’t be eliminated. We teach controlled technique and build intensity as athletes develop. Coaches supervise practice and emphasize suitable partners, communication and respect. Tell Coach Naweed about any injury or limitation before training.</p></details><details><summary>What if my child is shy or nervous?</summary><p>That’s a normal first-day feeling. Let the coach know before you arrive. We focus on small wins, clear instruction and learning to be a good partner. You don’t need a competitive personality to start building confidence here.</p></details><details><summary>What should we bring to the first practice?</summary><p>Bring water and clean, comfortable athletic clothes without zippers or jewelry. The Mat Pass includes gear fitting. Text us about footwear before your visit, and we’ll help you get ready without buying a full kit first.</p></details><details><summary>How do you keep the mats clean?</summary><p>Our room has 3,000 square feet of seamless Dollamur mats with hospital-grade antimicrobial sanitization. Clean training clothes, proper mat footwear and good personal hygiene are part of every athlete’s responsibility. Don’t train with an illness or suspected skin infection; contact the coach first.</p></details><details><summary>Do I need to sign a long-term contract?</summary><p>No. Unlimited training is $139.99 per month with no contracts or initiation fees. Try the $15 3-Day Mat Pass first. If it feels like your room, talk to us about membership and the 15% family / sibling discount.</p></details><details><summary>Can adults start with no wrestling experience?</summary><p>Yes. Adult beginners and BJJ practitioners train here, too. Tell the coach your experience and goals so you can start with appropriate technique and partners. You don’t have to get in shape before showing up.</p></details></div></div></section>
-<section class="visit section" id="visit" aria-labelledby="visit-heading"><div class="wrap visit-layout"><div><span class="eyebrow red-text">Your local mat room</span><h2 id="visit-heading">East Bay.<br>All in.</h2><address><strong>United Wrestling Club</strong><br>30139 Industrial Pkwy SW, Ste C<br>Hayward, CA 94544</address><a class="visit-phone" href="tel:+15103034869">(510) 303-4869</a><p class="service-area muted">Call or text before your first practice. Welcoming athletes and families from Hayward, Union City, Fremont, Newark, Castro Valley and San Leandro.</p><div class="visit-actions"><a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" rel="noopener noreferrer">Get directions <span class="arrow" aria-hidden="true">↗</span></a><a class="btn outline" href="sms:+15103034869">Text the coach</a></div></div><div class="visit-detail"><span class="eyebrow red-text">First practice, made easy</span><h3>You bring the effort.<br>We’ll help with the rest.</h3><ol><li><span>01</span>Choose a program and get your Mat Pass.</li><li><span>02</span>Text us to confirm your first session.</li><li><span>03</span>Arrive a few minutes early to meet your coach.</li></ol><p class="small muted" style="margin:1.5rem 0 0">USA Wrestling Regional Training Center #513<br>Excellence. Discipline. Champions.</p></div></div></section>
+<section class="visit section" id="visit" aria-labelledby="visit-heading"><div class="wrap visit-layout"><div><span class="eyebrow red-text">Your local mat room</span><h2 id="visit-heading">East Bay.<br>All in.</h2><address><strong>United Wrestling Club</strong><br>30139 Industrial Pkwy SW, Ste C<br>Hayward, CA 94544</address><a class="visit-phone" href="tel:+15103034869">(510) 303-4869</a><p class="service-area muted">Call or text before your first practice. Welcoming athletes and families from Hayward, Union City, Fremont, Newark, Castro Valley and San Leandro.</p><div class="visit-actions"><a class="btn light" href="https://www.google.com/maps/dir/?api=1&amp;destination=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" rel="noopener noreferrer">Get directions <span class="arrow" aria-hidden="true">↗</span></a><a class="btn outline" href="sms:+15103034869">Text the coach</a></div></div><div class="visit-detail"><span class="eyebrow red-text">First practice, made easy</span><h3>You bring the effort.<br>We’ll help with the rest.</h3><ol><li><span>01</span>Choose a program and get your Mat Pass.</li><li><span>02</span>Text us to confirm your first session.</li><li><span>03</span>Arrive a few minutes early to meet your coach.</li></ol><p class="small muted" >USA Wrestling Regional Training Center<br>Excellence. Discipline. Champions.</p></div></div></section>
 <section class="closing" aria-labelledby="closing-heading"><img src="../video_assets/stills_selected/still_52_uwc_hoodie_back_print_motto.jpg" alt="United Wrestling Club hoodie featuring the motto It's Not Personal It's Just Wrestling" loading="lazy" width="1920" height="1080"><div class="wrap"><span class="eyebrow">There’s room for you here</span><h2 id="closing-heading">Every wrestler<br>starts somewhere.</h2><p>Make this your place. Make today your start.</p><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Start my 3 days for $15 <span class="arrow" aria-hidden="true">↗</span></a></div></section>
 </main>
-<footer class="footer"><div class="wrap"><div class="footer-main"><a class="brand" href="#" aria-label="United Wrestling Club home"><img src="../live_site_content/assets/logo.png" alt="" width="49" height="51" loading="lazy"><span class="brand-name">UNITED<br>WRESTLING CLUB<small>HAYWARD, CALIFORNIA</small></span></a><span class="footer-motto">EXCELLENCE &nbsp; / &nbsp; DISCIPLINE &nbsp; / &nbsp; CHAMPIONS</span><a class="text-link" href="tel:+15103034869">Call (510) 303-4869 ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> United Wrestling Club. All rights reserved.</span><span>USA Wrestling RTC #513 · Hayward, CA</span><a href="https://www.wrestlingiq.com/uwc/register">Member registration ↗</a></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-main"><a class="brand" href="#" aria-label="United Wrestling Club home"><img src="../live_site_content/assets/logo.png" alt="" width="49" height="51" loading="lazy"><span class="brand-name">UNITED<br>WRESTLING CLUB<small>HAYWARD, CALIFORNIA</small></span></a><span class="footer-motto">EXCELLENCE &nbsp; / &nbsp; DISCIPLINE &nbsp; / &nbsp; CHAMPIONS</span><a class="text-link" href="tel:+15103034869">Call (510) 303-4869 ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> United Wrestling Club. All rights reserved.</span><span>USA Wrestling Regional Training Center · Hayward, CA</span><a href="https://www.wrestlingiq.com/uwc/register">Member registration ↗</a></div></div></footer>
 <div class="sticky-action" aria-label="Quick registration"><div class="sticky-copy"><strong>$15 / 3 days</strong>Your first step starts here.</div><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my Mat Pass <span aria-hidden="true">↗</span></a></div>
-<dialog id="signup-dialog" aria-labelledby="dialog-heading" aria-describedby="dialog-description"><div class="dialog-inner"><button class="dialog-close" type="button" aria-label="Close signup">×</button><span class="eyebrow red-text" id="dialog-offer">$15 / 3-Day Mat Pass</span><h2 id="dialog-heading">Your first step.</h2><p class="dialog-intro" id="dialog-description">Tell us who’s hitting the mat. Review your details, then text the coach or finish registration in WrestlingIQ.</p>
-<form id="lead-form" novalidate>
- <div class="field"><label for="program">Training program</label><select id="program" name="program" required aria-describedby="program-error"><option value="">Choose your program</option><option value="youth">Youth Wrestling (5–13)</option><option value="varsity">Varsity & Scholastic (14–18)</option><option value="adult">Adult & Wrestle-Jitsu (18+)</option><option value="open">Saturday Open Mat</option></select><span class="field-error" id="program-error"></span></div>
- <div class="field"><label for="athlete">Athlete’s name</label><input id="athlete" name="athlete" autocomplete="name" maxlength="100" required aria-describedby="athlete-error"><span class="field-error" id="athlete-error"></span></div>
- <div class="field" id="guardian-field"><label for="guardian">Parent / guardian’s name <span id="guardian-optional">(if under 18)</span></label><input id="guardian" name="guardian" autocomplete="section-parent name" maxlength="100" aria-describedby="guardian-error"><span class="field-error" id="guardian-error"></span></div>
- <div class="field"><label for="mobile">Mobile number</label><input id="mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" placeholder="(510) 555-0123" required aria-describedby="mobile-error"><span class="field-error" id="mobile-error"></span></div>
- <label class="consent"><input id="adult-confirm" type="checkbox" required aria-describedby="confirm-error"><span>I’m 18 or older, or I’m the athlete’s parent / legal guardian.</span></label><span class="field-error" id="confirm-error"></span>
- <p class="form-errors" id="form-errors" role="alert" hidden></p><button class="btn full" type="submit">Review my details <span class="arrow" aria-hidden="true">↗</span></button>
- <p class="form-note">Your details stay in this page until you choose to send a text. Registration and payment are completed securely through WrestlingIQ. No payment is taken here.</p>
-</form>
-<div id="lead-review" hidden><h3>Ready to meet your coach?</h3><dl class="review-list" id="review-list"></dl><div class="review-actions"><a id="send-details" class="btn full" href="sms:+15103034869">Text my details to UWC <span class="arrow" aria-hidden="true">↗</span></a><a id="registration-link" class="btn outline full" href="https://www.wrestlingiq.com/uwc/register">Continue to WrestlingIQ <span class="arrow" aria-hidden="true">↗</span></a></div><p class="review-note">Texting opens your messaging app. Press Send there to share your details with the coach. Nothing has been sent or reserved yet. WrestlingIQ handles your registration and payment separately.</p><button class="edit-details" type="button">← Edit my details</button></div>
-</div></dialog>
+<dialog id="signup-dialog" aria-labelledby="dialog-heading" aria-describedby="dialog-description">
+ <div class="dialog-inner">
+  <button class="dialog-close" type="button" aria-label="Close signup">×</button>
+  <span class="eyebrow red-text" id="dialog-offer">$15 / 3-Day Mat Pass</span>
+  <h2 id="dialog-heading">Step into your corner.</h2>
+  <p class="dialog-intro" id="dialog-description">Choose your program and add your details. Then continue to WrestlingIQ to register, or text Coach Naweed for help.</p>
+  <form id="lead-form" novalidate>
+   <div class="field"><label for="athlete">Athlete’s name</label><input id="athlete" name="athlete" autocomplete="name" maxlength="100" required aria-describedby="athlete-error"><span class="field-error" id="athlete-error"></span></div>
+   <div class="field"><label for="mobile">Mobile number (parent’s if under 18)</label><input id="mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" placeholder="(510) 555-0123" required aria-describedby="mobile-error"><span class="field-error" id="mobile-error"></span></div>
+   <div class="field"><label for="program">Training program</label><select id="program" name="program" required aria-describedby="program-error"><option value="">Choose your program</option><option value="youth">Youth Wrestling Academy (5–13)</option><option value="varsity">Varsity & Scholastic Prep (14–18)</option><option value="adult">Adult Wrestling & Wrestle-Jitsu (18+)</option><option value="open">Saturday Open Mat</option></select><span class="field-error" id="program-error"></span></div>
+   <p class="form-errors" id="form-errors" role="alert" hidden></p>
+   <button class="btn full" type="submit">Review & continue <span class="arrow" aria-hidden="true">→</span></button>
+   <p class="form-note" id="form-note">All fields required. The Mat Pass covers three consecutive age-appropriate practices. Open mat is a separate $15 drop-in.</p>
+   <p class="form-note">Details stay on this page until you choose to text them. WrestlingIQ collects registration details and payment separately. Nothing is charged here.</p>
+  </form>
+  <div id="lead-review" hidden>
+   <dl class="review-list" id="review-list"></dl>
+   <div class="review-actions"><a id="registration-link" class="btn full" href="https://www.wrestlingiq.com/uwc/register">Continue to WrestlingIQ <span class="arrow" aria-hidden="true">↗</span></a><a id="send-details" class="btn outline full" href="sms:+15103034869">Text details to Coach Naweed <span class="arrow" aria-hidden="true">↗</span></a></div>
+   <p class="review-note">Your place isn’t reserved yet. Finish registration and payment with WrestlingIQ. You’ll enter your details there. To ask about placement first, open the text and press Send in your messaging app.</p>
+   <button class="edit-details" type="button">← Edit my details</button>
+  </div>
+ </div>
+</dialog>
 <noscript><div class="no-js-note">For all programs and times, call or text <a href="tel:+15103034869">(510) 303-4869</a>. Mat Pass links go directly to WrestlingIQ registration.</div><style>.nav-toggle,.video-toggle{display:none}.nav{display:flex;position:static;flex-wrap:wrap;padding:.5rem 0}.header-inner{flex-wrap:wrap}.program-tabs{display:none}.program-panel[hidden]{display:grid!important}.program-layout{display:block}.program-panel{margin-bottom:2rem}</style></noscript>
 <script>
 (() => {
- 'use strict';
- const $ = (selector, root = document) => root.querySelector(selector);
- const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
- $('#year').textContent = new Date().getFullYear();
- // Compact navigation retains ordinary anchor behavior.
- const menu = $('.nav-toggle'), nav = $('#navigation');
- const closeMenu = () => { nav.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.textContent = 'MENU'; };
- menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; nav.classList.toggle('is-open', open); menu.setAttribute('aria-expanded', String(open)); menu.textContent = open ? 'CLOSE' : 'MENU'; });
- $$('a', nav).forEach(link => link.addEventListener('click', closeMenu));
- document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
- document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
- const wide = matchMedia('(min-width:900px)'); wide.addEventListener('change', closeMenu);
- // Roving tabs support mouse, touch, arrows and Home / End.
- const tabs = $$('.program-tab');
- let selectedProgram = 'youth';
- function selectProgram(tab, focus = false) {
-  selectedProgram = tab.dataset.program;
-  tabs.forEach(item => { const active = item === tab; item.setAttribute('aria-selected', String(active)); item.tabIndex = active ? 0 : -1; $('#' + item.getAttribute('aria-controls')).hidden = !active; });
-  if (focus) tab.focus();
- }
- tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => selectProgram(tab));
-  tab.addEventListener('keydown', event => { let next = index; if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % tabs.length; else if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + tabs.length) % tabs.length; else if (event.key === 'Home') next = 0; else if (event.key === 'End') next = tabs.length - 1; else return; event.preventDefault(); selectProgram(tabs[next], true); });
- });
- // Reduced-motion and data-saving users receive the poster without downloading video.
- const video = $('#hero-video'), videoButton = $('#video-toggle');
- const motion = matchMedia('(prefers-reduced-motion: reduce)');
- let userPaused = false;
- function syncVideoButton() { const playing = !video.paused; videoButton.textContent = playing ? 'Ⅱ' : '▶'; videoButton.setAttribute('aria-label', playing ? 'Pause background video' : 'Play background video'); videoButton.setAttribute('aria-pressed', String(playing)); }
- function loadVideo() { const source = $('source', video); if (!source.src) { source.src = source.dataset.src; video.load(); } }
- async function playVideo() { loadVideo(); try { await video.play(); } catch { syncVideoButton(); } }
- video.addEventListener('play', syncVideoButton); video.addEventListener('pause', syncVideoButton);
- video.addEventListener('error', () => { videoButton.hidden = true; });
- videoButton.addEventListener('click', () => { if (video.paused) { userPaused = false; playVideo(); } else { userPaused = true; video.pause(); } });
- const dataSaver = navigator.connection && navigator.connection.saveData;
- if (!motion.matches && !dataSaver) playVideo();
- videoButton.hidden = motion.matches;
- motion.addEventListener('change', () => { videoButton.hidden = motion.matches; if (motion.matches) video.pause(); else if (!userPaused && !dataSaver) playVideo(); });
- document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); else if (!userPaused && !motion.matches && !dataSaver && !dialog.open) playVideo(); });
- // No simulated lead endpoint or persistent storage. Personal details move only
- // through the user's explicit SMS action; checkout uses verified Team 513 URLs.
- const dialog = $('#signup-dialog'), form = $('#lead-form'), review = $('#lead-review');
- const program = $('#program'), guardian = $('#guardian'), athlete = $('#athlete'), mobile = $('#mobile'), confirm = $('#adult-confirm');
- const offers = {
-  trial: { label: '$15 / 3-Day Mat Pass', url: 'https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513' },
-  dropin: { label: '$15 / Single Mat Drop-In', url: 'https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&show_registration=true&team_id=513' },
-  membership: { label: '$139.99 / month · Unlimited', url: 'https://www.wrestlingiq.com/uwc/register' }
- };
- let currentOffer = 'trial', returnFocus;
- function updateGuardian() { const minor = ['youth', 'varsity'].includes(program.value); guardian.required = minor; $('#guardian-optional').textContent = minor ? '(required)' : '(if under 18)'; }
- $$('[data-offer]').forEach(link => link.addEventListener('click', event => {
-  if (typeof dialog.showModal !== 'function') return;
-  event.preventDefault(); returnFocus = link; currentOffer = link.dataset.offer;
-  $('#dialog-offer').textContent = offers[currentOffer].label;
-  if (link.dataset.select) program.value = link.dataset.select;
-  else if (!program.value) program.value = selectedProgram;
-  updateGuardian(); form.hidden = false; review.hidden = true; $('#dialog-heading').textContent = 'Your first step.';
-  closeMenu(); dialog.showModal(); document.body.classList.add('modal-open'); video.pause();
- }));
- function closeDialog() { dialog.close(); }
- $('.dialog-close').addEventListener('click', closeDialog);
- dialog.addEventListener('click', event => { if (event.target !== dialog) return; const bounds = dialog.getBoundingClientRect(); if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeDialog(); });
- dialog.addEventListener('close', () => { document.body.classList.remove('modal-open'); if (returnFocus) returnFocus.focus({ preventScroll: true }); if (!userPaused && !motion.matches && !dataSaver && !document.hidden) playVideo(); });
- function validate(field) {
-  let message = '';
-  if (field === program && !program.value) message = 'Choose a training program.';
-  if (field === athlete && !athlete.value.trim()) message = 'Enter the athlete’s name.';
-  if (field === guardian && guardian.required && !guardian.value.trim()) message = 'Enter a parent or guardian’s name for this athlete.';
-  if (field === mobile) { const digits = mobile.value.replace(/\D/g, ''); if (!/^(1\d{10}|\d{10})$/.test(digits)) message = 'Enter a 10-digit US mobile number, with optional +1.'; }
-  if (field === confirm && !confirm.checked) message = 'Please confirm you’re an adult or the athlete’s parent / guardian.';
-  const errorId = field === confirm ? 'confirm-error' : field.id + '-error';
-  $('#' + errorId).textContent = message; field.setAttribute('aria-invalid', String(Boolean(message)));
-  return !message;
- }
- const fields = [program, athlete, guardian, mobile, confirm];
- fields.forEach(field => { field.addEventListener('blur', () => validate(field)); field.addEventListener('input', () => { if (field.getAttribute('aria-invalid') === 'true') validate(field); }); });
- program.addEventListener('change', () => { updateGuardian(); validate(program); if (guardian.getAttribute('aria-invalid') === 'true') validate(guardian); });
- confirm.addEventListener('change', () => validate(confirm));
- form.addEventListener('submit', event => {
-  event.preventDefault(); updateGuardian();
-  const invalid = fields.filter(field => !validate(field));
-  $('#form-errors').hidden = !invalid.length;
-  if (invalid.length) { $('#form-errors').textContent = 'Check the highlighted fields to continue.'; invalid[0].focus(); return; }
-  const programName = program.options[program.selectedIndex].text;
-  const details = [['Offer', offers[currentOffer].label], ['Athlete', athlete.value.trim()], ...(guardian.value.trim() ? [['Guardian', guardian.value.trim()]] : []), ['Mobile', mobile.value.trim()], ['Program', programName]];
-  const list = $('#review-list'); list.replaceChildren();
-  details.forEach(([label, value]) => { const row = document.createElement('div'), term = document.createElement('dt'), definition = document.createElement('dd'); term.textContent = label; definition.textContent = value; row.append(term, definition); list.append(row); });
-  const message = 'Hi UWC! I’m interested in ' + offers[currentOffer].label + '.\n' + details.slice(1).map(([label, value]) => label + ': ' + value).join('\n') + '\nPlease help me confirm my first practice.';
-  const separator = /iPad|iPhone|iPod/.test(navigator.userAgent) ? '&' : '?';
-  $('#send-details').href = 'sms:+15103034869' + separator + 'body=' + encodeURIComponent(message);
-  $('#registration-link').href = offers[currentOffer].url;
-  form.hidden = true; review.hidden = false; $('#dialog-heading').textContent = 'Make it official.';
-  dialog.scrollTop = 0; $('#send-details').focus({ preventScroll: true });
- });
- $('.edit-details').addEventListener('click', () => { form.hidden = false; review.hidden = true; $('#dialog-heading').textContent = 'Your first step.'; program.focus(); });
+  'use strict';
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  $('#year').textContent = new Date().getFullYear();
+  const menu = $('.nav-toggle');
+  const nav = $('#navigation');
+  const wide = matchMedia('(min-width:900px)');
+  const tablist = $('.program-tabs');
+  function closeMenu() {
+    nav.classList.remove('is-open');
+    menu.setAttribute('aria-expanded', 'false');
+    menu.textContent = 'MENU';
+  }
+  menu.addEventListener('click', () => {
+    const open = menu.getAttribute('aria-expanded') !== 'true';
+    nav.classList.toggle('is-open', open);
+    menu.setAttribute('aria-expanded', String(open));
+    menu.textContent = open ? 'CLOSE' : 'MENU';
+  });
+  $$('a', nav).forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.site-header')) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      menu.focus();
+    }
+  });
+  function syncBreakpoint() {
+    closeMenu();
+    tablist.setAttribute('aria-orientation', wide.matches ? 'vertical' : 'horizontal');
+  }
+  wide.addEventListener('change', syncBreakpoint);
+  syncBreakpoint();
+
+  const tabs = $$('.program-tab');
+  let selectedProgram = 'youth';
+  function selectProgram(tab, focus = false) {
+    selectedProgram = tab.dataset.program;
+    tabs.forEach(item => {
+      const active = item === tab;
+      item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
+      $('#' + item.getAttribute('aria-controls')).hidden = !active;
+    });
+    if (focus) tab.focus();
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectProgram(tab));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % tabs.length;
+      else if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectProgram(tabs[next], true);
+    });
+  });
+
+  const dialog = $('#signup-dialog');
+  const video = $('#hero-video');
+  const videoButton = $('#video-toggle');
+  const source = $('source', video);
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const dataSaver = Boolean(navigator.connection && navigator.connection.saveData);
+  let userPaused = false;
+  let userRequestedPlay = false;
+  let videoFailed = false;
+  function shouldPlay() {
+    return !document.hidden && !dialog.open && !userPaused && !videoFailed &&
+      (userRequestedPlay || (!motion.matches && !dataSaver));
+  }
+  function syncVideoButton() {
+    const playing = !video.paused;
+    videoButton.textContent = playing ? 'Ⅱ' : '▶';
+    videoButton.setAttribute('aria-label', playing ? 'Pause training footage' : 'Play training footage');
+    videoButton.setAttribute('aria-pressed', String(playing));
+  }
+  async function playVideo() {
+    if (!shouldPlay()) return;
+    if (!source.getAttribute('src')) {
+      source.src = source.dataset.src;
+      video.load();
+    }
+    try {
+      await video.play();
+      if (!shouldPlay()) video.pause();
+    } catch {
+      syncVideoButton();
+    }
+  }
+  function syncPlayback() {
+    if (shouldPlay()) playVideo();
+    else video.pause();
+  }
+  function videoError() {
+    if (videoFailed) return;
+    videoFailed = true;
+    videoButton.hidden = true;
+    // An image in the same frame is a reliable fallback for a failed source.
+    const poster = document.createElement('img');
+    poster.src = video.poster;
+    poster.alt = '';
+    poster.width = 1920;
+    poster.height = 1080;
+    poster.style.cssText = 'width:100%;height:100%;object-fit:cover';
+    video.replaceWith(poster);
+  }
+  video.addEventListener('play', syncVideoButton);
+  video.addEventListener('pause', syncVideoButton);
+  video.addEventListener('error', videoError, { once: true });
+  source.addEventListener('error', () => { if (!videoFailed) videoError(); }, { once: true });
+  videoButton.addEventListener('click', () => {
+    if (video.paused) {
+      userPaused = false;
+      userRequestedPlay = true;
+    } else userPaused = true;
+    syncPlayback();
+  });
+  motion.addEventListener('change', () => {
+    userRequestedPlay = false;
+    syncPlayback();
+  });
+  document.addEventListener('visibilitychange', syncPlayback);
+  syncPlayback();
+
+  // No duplicate fixed CTA over the initial hero; it arrives as the hero leaves.
+  if ('IntersectionObserver' in window) {
+    const sticky = $('.sticky-action');
+    sticky.hidden = true;
+    new IntersectionObserver(entries => {
+      sticky.hidden = entries[0].isIntersecting;
+    }).observe($('.hero'));
+  }
+
+  const form = $('#lead-form');
+  const review = $('#lead-review');
+  const program = $('#program');
+  const athlete = $('#athlete');
+  const mobile = $('#mobile');
+  const fields = [athlete, mobile, program];
+  const offers = {
+    trial: {
+      label: '$15 / 3-Day Mat Pass',
+      note: 'All fields required. Three consecutive age-appropriate practices. Saturday open mat is a separate $15 drop-in.',
+      url: 'https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513'
+    },
+    dropin: {
+      label: '$15 / Single Mat Drop-In',
+      note: 'All fields required. One practice or Saturday open mat. Choose the program you’d like to visit.',
+      url: 'https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&show_registration=true&team_id=513'
+    },
+    membership: {
+      label: '$139.99 / month · Unlimited',
+      note: 'All fields required. Choose your main training program. Saturday open mats are included with membership.',
+      url: 'https://www.wrestlingiq.com/uwc/register'
+    }
+  };
+  const membershipSessions = { youth: '4981', varsity: '2286', adult: '1084' };
+  let currentOffer = 'trial';
+  let returnFocus;
+  function clearErrors() {
+    fields.forEach(field => {
+      field.removeAttribute('aria-invalid');
+      $('#' + field.id + '-error').textContent = '';
+    });
+    $('#form-errors').hidden = true;
+  }
+  function showForm() {
+    form.hidden = false;
+    review.hidden = true;
+    $('#dialog-heading').textContent = 'Step into your corner.';
+    $('#dialog-description').textContent = 'Choose your program and add your details. Then continue to WrestlingIQ to register, or text Coach Naweed for help.';
+  }
+  $$('[data-offer]').forEach(link => link.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+      typeof dialog.showModal !== 'function') return;
+    event.preventDefault();
+    returnFocus = link;
+    currentOffer = link.dataset.offer;
+    $('#dialog-offer').textContent = offers[currentOffer].label;
+    $('#form-note').textContent = offers[currentOffer].note;
+    const openOption = $('option[value="open"]', program);
+    openOption.disabled = currentOffer !== 'dropin';
+    const nextProgram = link.dataset.select || program.value || selectedProgram;
+    program.value = nextProgram === 'open' && openOption.disabled ? '' : nextProgram;
+    showForm();
+    clearErrors();
+    closeMenu();
+    dialog.showModal();
+    dialog.scrollTop = 0;
+    document.body.classList.add('modal-open');
+    video.pause();
+    $('#dialog-heading').setAttribute('tabindex', '-1');
+    $('#dialog-heading').focus({ preventScroll: true });
+  }));
+  $('.dialog-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('modal-open');
+    if (returnFocus) returnFocus.focus({ preventScroll: true });
+    syncPlayback();
+  });
+  function validate(field) {
+    let message = '';
+    if (field === program && (!program.value || program.selectedOptions[0].disabled)) message = 'Choose a training program.';
+    if (field === athlete && !athlete.value.trim()) message = 'Enter the athlete’s name.';
+    if (field === mobile) {
+      const digits = mobile.value.replace(/\D/g, '');
+      if (!/^[+()\d\s.\-]+$/.test(mobile.value) || !/^(1\d{10}|\d{10})$/.test(digits))
+        message = 'Enter a 10-digit US mobile number, with optional +1.';
+    }
+    $('#' + field.id + '-error').textContent = message;
+    field.setAttribute('aria-invalid', String(Boolean(message)));
+    return !message;
+  }
+  fields.forEach(field => {
+    field.addEventListener('blur', () => {
+      if (field.value || field.getAttribute('aria-invalid') === 'true') validate(field);
+    });
+    field.addEventListener('input', () => {
+      if (field.getAttribute('aria-invalid') === 'true') validate(field);
+    });
+  });
+  program.addEventListener('change', () => validate(program));
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const invalid = fields.filter(field => !validate(field));
+    $('#form-errors').hidden = !invalid.length;
+    if (invalid.length) {
+      $('#form-errors').textContent = 'Check the highlighted fields to continue.';
+      invalid[0].focus();
+      return;
+    }
+    const details = [
+      ['Offer', offers[currentOffer].label],
+      ['Athlete', athlete.value.trim()],
+      ['Mobile', mobile.value.trim()],
+      ['Program', program.selectedOptions[0].text]
+    ];
+    const list = $('#review-list');
+    list.replaceChildren();
+    details.forEach(([label, value]) => {
+      const row = document.createElement('div');
+      const term = document.createElement('dt');
+      const definition = document.createElement('dd');
+      term.textContent = label;
+      definition.textContent = value;
+      row.append(term, definition);
+      list.append(row);
+    });
+    const message = 'Hi UWC! I’m interested in ' + offers[currentOffer].label + '.\n' +
+      details.slice(1).map(([label, value]) => label + ': ' + value).join('\n') +
+      '\nPlease help me confirm my first practice.';
+    const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    $('#send-details').href = 'sms:+15103034869' + (ios ? '&' : '?') + 'body=' + encodeURIComponent(message);
+    $('#registration-link').href = currentOffer === 'membership'
+      ? 'https://www.wrestlingiq.com/users/sign_up?paid_session_id=' + membershipSessions[program.value] + '&show_registration=true&team_id=513'
+      : offers[currentOffer].url;
+    form.hidden = true;
+    review.hidden = false;
+    $('#dialog-heading').textContent = 'Your next move.';
+    $('#dialog-description').textContent = 'Check your details, then finish your registration with WrestlingIQ.';
+    dialog.scrollTop = 0;
+    $('#registration-link').focus({ preventScroll: true });
+  });
+  $('.edit-details').addEventListener('click', () => {
+    showForm();
+    athlete.focus();
+  });
 })();
+
 </script>
 </body>
 </html>
