@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UWC Wrestlers SVG Inspection & Multi-Surface Showcase</title>
+  <style>
+    :root {
+      --bg: #07080b;
+      --card-dark: #101218;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --crimson: #ba1c1c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge {
+      background: rgba(186, 28, 28, 0.2);
+      border: 1px solid rgba(186, 28, 28, 0.4);
+      color: #ff8584;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    p.subtitle {
+      color: #94a3b8;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .card {
+      background: var(--card-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-header h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+    .card-header span {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .stage {
+      padding: 36px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .stage img {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      display: block;
+    }
+    .dark-surface { background: #101218; }
+    .crimson-surface { background: #ba1c1c; }
+    .white-surface { background: #ffffff; }
+    .meta {
+      padding: 12px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-top: 1px solid var(--card-border);
+      font-family: ui-monospace, monospace;
+      font-size: 11px;
+      color: #94a3b8;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>
+        UWC Wrestlers Standalone Vector SVG
+        <span class="badge">Pure Vector &bull; 51.4 KB</span>
+      </h1>
+      <p class="subtitle">Multi-surface inspection of <code>video_assets/uwc_wrestlers.svg</code> (isolated duo &bull; 4 semantic layers &bull; zero background fringing).</p>
+    </div>
+
+    <div class="stack">
+      <!-- Dark Stage -->
+      <div class="card">
+        <div class="card-header">
+          <h2>1. Athletic Dark Slate Surface</h2>
+          <span>Background: #101218</span>
+        </div>
+        <div class="stage dark-surface">
+          <img src="../video_assets/uwc_wrestlers.svg" alt="UWC Wrestlers on Dark" />
+        </div>
+        <div class="meta">
+          <div>Layer 1: White Highlights (#FFFFFF)</div>
+          <div>Layer 2: Metallic Silver Singlets (#9DA2A7)</div>
+          <div>Layer 3: Charcoal Soles (#858A90)</div>
+          <div>Layer 4: Black Linework (#111111)</div>
+        </div>
+      </div>
+
+      <!-- Crimson Stage -->
+      <div class="card">
+        <div class="card-header">
+          <h2>2. UWC Crimson Mat Surface</h2>
+          <span>Background: #BA1C1C</span>
+        </div>
+        <div class="stage crimson-surface">
+          <img src="../video_assets/uwc_wrestlers.svg" alt="UWC Wrestlers on Crimson" />
+        </div>
+        <div class="meta">
+          <div>Zero color bleeding</div>
+          <div>Negative space transparent between hands &amp; legs</div>
+        </div>
+      </div>
+
+      <!-- White Stage -->
+      <div class="card">
+        <div class="card-header">
+          <h2>3. Pure White Surface</h2>
+          <span>Background: #FFFFFF</span>
+        </div>
+        <div class="stage white-surface">
+          <img src="../video_assets/uwc_wrestlers.svg" alt="UWC Wrestlers on White" />
+        </div>
+        <div class="meta">
+          <div>High contrast outline definition</div>
+          <div>Print and apparel ready</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
