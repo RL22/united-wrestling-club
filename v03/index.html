@@ -10,7 +10,8 @@
 <meta property="og:description" content="Olympic roots. East Bay grit. Youth, varsity and adult wrestling in Hayward. Find your place on the mat.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg">
-<link rel="icon" href="../live_site_content/assets/logo.png" type="image/png">
+<link rel="icon" href="../live_site_content/assets/uwc_wrestlers.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../live_site_content/assets/logo.png" type="image/png">
 <link rel="preload" as="image" href="../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg" fetchpriority="high">
 <style>
 /* United Wrestling Club. Crucible Guild / Bedrock Standard. */
@@ -75,10 +76,9 @@ button:active, .btn:active { transform: translateY(1px); }
 .topline a { display: flex; justify-content: center; align-items: center; gap: .5rem; min-height: 44px; padding: .4rem 1rem; text-decoration: none; }
 .site-header { position: sticky; top: 0; z-index: 100; background: var(--paper); border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 76px; }
-.brand { display: flex; gap: .65rem; align-items: center; text-decoration: none; margin-right: auto; }
-.brand img { width: 47px; height: 49px; object-fit: contain; }
-.brand-name { font-weight: 850; font-size: .8125rem; line-height: 1.15; letter-spacing: .025em; }
-.brand-name small { display: block; font-size: .625rem; letter-spacing: .08em; margin-top: 5px; font-weight: 600; }
+.brand { display: inline-flex; align-items: center; text-decoration: none; margin-right: auto; line-height: 0; }
+.brand-logo { height: 44px; width: auto; max-width: 195px; object-fit: contain; display: block; transition: opacity .2s ease; }
+.brand:hover .brand-logo, .brand:focus-visible .brand-logo { opacity: .88; }
 .nav-toggle { display: flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; border: 1px solid var(--line); background: transparent; color: var(--ink); font-size: .75rem; font-weight: 700; }
 .header-cta { display: none; }
 .nav { display: none; position: absolute; inset: 100% 0 auto; background: var(--paper); border-bottom: 1px solid var(--line); padding: 1rem var(--space) 1.5rem; }
@@ -293,8 +293,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   .nav .mobile-nav-cta { display: none; }
   .header-inner { gap: 1.5rem; min-height: 88px; }
   .header-cta { display: none; }
-  .brand img { width: 54px; height: 56px; }
-  .brand-name { font-size: .875rem; }
+  .brand-logo { height: 52px; max-width: 225px; }
   .hero { flex-direction: row; min-height: 620px; max-width: 1920px; margin-inline: auto; }
   .hero-media { position: absolute; inset: 0 0 0 47%; aspect-ratio: auto; }
   .hero video { object-position: 52% center; }
@@ -497,7 +496,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
 <div class="topline"><a href="#mat-pass">HAYWARD, CA · YOUR FIRST 3 PRACTICES, $15. <span aria-hidden="true">↗</span></a></div>
 <header class="site-header">
  <div class="wrap header-inner">
-  <a class="brand" href="#" aria-label="United Wrestling Club home"><img src="../live_site_content/assets/logo.png" alt="" width="49" height="51"><span class="brand-name">UNITED<br>WRESTLING CLUB<small>HAYWARD, CALIFORNIA</small></span></a>
+  <a class="brand" href="#" aria-label="United Wrestling Club home"><img class="brand-logo" src="../live_site_content/assets/uwc_lockup_horizontal.svg" alt="United Wrestling Club" width="208" height="52"></a>
   <nav class="nav" id="navigation" aria-label="Main navigation"><a href="#programs">Programs & times</a><a href="#coaches">Our coaches</a><a href="#pricing">Membership</a><a href="#visit">Visit UWC</a><a class="mobile-nav-cta" href="#mat-pass">Get the $15 Mat Pass ↗</a></nav>
   <a class="btn header-cta" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get the $15 Mat Pass <span class="arrow" aria-hidden="true">↗</span></a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="navigation" type="button">MENU</button>
@@ -552,7 +551,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
 <section class="visit section" id="visit" aria-labelledby="visit-heading"><div class="wrap visit-layout"><div><span class="eyebrow red-text">Your local mat room</span><h2 id="visit-heading">East Bay.<br>All in.</h2><address><strong>United Wrestling Club</strong><br>30139 Industrial Pkwy SW, Ste C<br>Hayward, CA 94544</address><a class="visit-phone" href="tel:+15103034869">(510) 303-4869</a><p class="service-area muted">Call or text before your first practice. Welcoming athletes and families from Hayward, Union City, Fremont, Newark, Castro Valley and San Leandro.</p><div class="visit-actions"><a class="btn light" href="https://www.google.com/maps/dir/?api=1&amp;destination=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" rel="noopener noreferrer">Get directions <span class="arrow" aria-hidden="true">↗</span></a><a class="btn outline" href="sms:+15103034869">Text the coach</a></div></div><div class="visit-detail"><span class="eyebrow red-text">First practice, made easy</span><h3>You bring the effort.<br>We’ll help with the rest.</h3><ol><li><span>01</span>Choose a program and get your Mat Pass.</li><li><span>02</span>Text us to confirm your first session.</li><li><span>03</span>Arrive a few minutes early to meet your coach.</li></ol><p class="small muted" >USA Wrestling Regional Training Center<br>Excellence. Discipline. Champions.</p></div></div></section>
 <section class="closing" aria-labelledby="closing-heading"><img src="../video_assets/stills_selected/still_52_uwc_hoodie_back_print_motto.jpg" alt="United Wrestling Club hoodie featuring the motto It's Not Personal It's Just Wrestling" loading="lazy" width="1920" height="1080"><div class="wrap"><span class="eyebrow">There’s room for you here</span><h2 id="closing-heading">Every wrestler<br>starts somewhere.</h2><p>Make this your place. Make today your start.</p><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Start my 3 days for $15 <span class="arrow" aria-hidden="true">↗</span></a></div></section>
 </main>
-<footer class="footer"><div class="wrap"><div class="footer-main"><a class="brand" href="#" aria-label="United Wrestling Club home"><img src="../live_site_content/assets/logo.png" alt="" width="49" height="51" loading="lazy"><span class="brand-name">UNITED<br>WRESTLING CLUB<small>HAYWARD, CALIFORNIA</small></span></a><span class="footer-motto">EXCELLENCE &nbsp; / &nbsp; DISCIPLINE &nbsp; / &nbsp; CHAMPIONS</span><a class="text-link" href="tel:+15103034869">Call (510) 303-4869 ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> United Wrestling Club. All rights reserved.</span><span>USA Wrestling Regional Training Center · Hayward, CA</span><a href="https://www.wrestlingiq.com/uwc/register">Member registration ↗</a></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-main"><a class="brand" href="#" aria-label="United Wrestling Club home"><img class="brand-logo" src="../live_site_content/assets/uwc_lockup_horizontal_white.svg" alt="United Wrestling Club" width="208" height="52" loading="lazy"></a><span class="footer-motto">EXCELLENCE &nbsp; / &nbsp; DISCIPLINE &nbsp; / &nbsp; CHAMPIONS</span><a class="text-link" href="tel:+15103034869">Call (510) 303-4869 ↗</a></div><div class="footer-bottom"><span>© <span id="year">2026</span> United Wrestling Club. All rights reserved.</span><span>USA Wrestling Regional Training Center · Hayward, CA</span><a href="https://www.wrestlingiq.com/uwc/register">Member registration ↗</a></div></div></footer>
 <div class="sticky-action" aria-label="Quick registration"><div class="sticky-copy"><strong>$15 / 3 days</strong>Your first step starts here.</div><a class="btn" href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" data-offer="trial">Get my Mat Pass <span aria-hidden="true">↗</span></a></div>
 <dialog id="signup-dialog" aria-labelledby="dialog-heading" aria-describedby="dialog-description">
  <div class="dialog-inner">
