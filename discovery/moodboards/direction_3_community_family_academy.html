@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UWC Brand Direction 3: Community Family Academy & Civic Empowerment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Direction 3 Color Tokens */
+      --uwc-crimson: #9E2A2B;
+      --uwc-crimson-hover: #832223;
+      --uwc-crimson-subtle: #FDF2F2;
+      --uwc-navy: #0F172A;
+      --uwc-navy-light: #1E293B;
+      --uwc-navy-surface: #334155;
+      --uwc-slate-text: #334155;
+      --uwc-slate-muted: #64748B;
+      --uwc-parchment: #FDFBF7;
+      --uwc-linen: #F5F2EB;
+      --uwc-sand-border: #EAE5DB;
+      --uwc-amber: #F59E0B;
+      --uwc-amber-hover: #D97706;
+      --uwc-amber-subtle: #FEF3C7;
+      --uwc-laurel: #15803D;
+      --uwc-laurel-subtle: #DCFCE7;
+      --uwc-white: #FFFFFF;
+
+      /* Dynamic Theme Variables */
+      --bg-page: var(--uwc-parchment);
+      --bg-card: var(--uwc-white);
+      --bg-card-subtle: var(--uwc-linen);
+      --text-heading: var(--uwc-navy);
+      --text-body: var(--uwc-slate-text);
+      --text-muted: var(--uwc-slate-muted);
+      --border-color: var(--uwc-sand-border);
+      --card-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      --header-bg: rgba(253, 251, 247, 0.92);
+
+      /* Typography */
+      --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Radii */
+      --radius-sm: 6px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-pill: 9999px;
+
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="dark"] {
+      --bg-page: #0B1120;
+      --bg-card: #131E32;
+      --bg-card-subtle: #1E293B;
+      --text-heading: #F8FAFC;
+      --text-body: #CBD5E1;
+      --text-muted: #94A3B8;
+      --border-color: #2D3A54;
+      --card-shadow: 0 14px 30px -5px rgba(0, 0, 0, 0.4);
+      --header-bg: rgba(11, 17, 32, 0.92);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      transition: background-color var(--transition-smooth), color var(--transition-smooth);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Sticky Navigation Header */
+    .top-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 0;
+      transition: all var(--transition-fast);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--uwc-crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: -0.5px;
+      box-shadow: 0 4px 12px rgba(158, 42, 43, 0.35);
+    }
+    .brand-titles h1 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .brand-titles span {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--uwc-crimson);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .theme-toggle-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-heading);
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition-fast);
+    }
+    .theme-toggle-btn:hover {
+      background: var(--bg-card-subtle);
+      border-color: var(--uwc-crimson);
+    }
+    .cta-quick-modal-btn {
+      background: var(--uwc-crimson);
+      color: white;
+      border: none;
+      padding: 9px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(158, 42, 43, 0.3);
+      transition: all var(--transition-fast);
+    }
+    .cta-quick-modal-btn:hover {
+      background: var(--uwc-crimson-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Banner Area */
+    .hero-banner {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border-color);
+      background: radial-gradient(circle at 85% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(158, 42, 43, 0.05) 0%, transparent 50%);
+    }
+    .hero-pretitle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--uwc-amber-subtle);
+      color: #92400E;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    [data-theme="dark"] .hero-pretitle {
+      background: rgba(245, 158, 11, 0.2);
+      color: #FCD34D;
+    }
+    .hero-title {
+      font-size: clamp(32px, 4.5vw, 54px);
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      max-width: 900px;
+      margin-bottom: 20px;
+    }
+    .hero-title .highlight-crimson {
+      color: var(--uwc-crimson);
+    }
+    .hero-lead {
+      font-size: clamp(16px, 1.8vw, 19px);
+      line-height: 1.6;
+      color: var(--text-body);
+      max-width: 820px;
+      margin-bottom: 32px;
+    }
+
+    /* Trust Pill Strip */
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-heading);
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+    .trust-pill.gold {
+      border-color: rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.05);
+    }
+    .trust-pill.green {
+      border-color: rgba(21, 128, 61, 0.35);
+      background: rgba(21, 128, 61, 0.05);
+    }
+    .trust-pill.crimson {
+      border-color: rgba(158, 42, 43, 0.35);
+      background: rgba(158, 42, 43, 0.05);
+    }
+
+    /* Section Headers */
+    .section-title-wrap {
+      margin: 64px 0 32px;
+    }
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--uwc-crimson);
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.02em;
+    }
+    .section-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      max-width: 720px;
+    }
+
+    /* Color Palette Swatch Grid */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .swatch-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      cursor: pointer;
+      position: relative;
+    }
+    .swatch-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.12);
+    }
+    .swatch-color-preview {
+      height: 120px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px 16px;
+    }
+    .swatch-hex-badge {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      color: white;
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .swatch-details {
+      padding: 18px;
+    }
+    .swatch-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 4px;
+    }
+    .swatch-role {
+      font-size: 12px;
+      color: var(--uwc-crimson);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .swatch-specs {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-family: monospace;
+    }
+    .copy-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      color: var(--uwc-slate-muted);
+      margin-top: 10px;
+      font-family: var(--font-body);
+    }
+
+    /* Toast Notification for Clipboard Copy */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--uwc-navy);
+      color: white;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      z-index: 999;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Typography Playground */
+    .type-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      box-shadow: var(--card-shadow);
+    }
+    .type-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 28px;
+    }
+    .live-text-input {
+      flex: 1;
+      min-width: 260px;
+      padding: 10px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-color);
+      background: var(--bg-card-subtle);
+      color: var(--text-heading);
+      font-size: 14px;
+      outline: none;
+      transition: border var(--transition-fast);
+    }
+    .live-text-input:focus {
+      border-color: var(--uwc-crimson);
+    }
+    .type-specimen-row {
+      padding: 20px 0;
+      border-bottom: 1px dashed var(--border-color);
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      align-items: baseline;
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .type-specimen-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+    .type-meta {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-family: monospace;
+    }
+    .type-meta strong {
+      color: var(--uwc-crimson);
+      display: block;
+      font-size: 13px;
+      font-family: var(--font-body);
+    }
+
+    /* Interactive 4-Track Family Grid Mockup */
+    .tracks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 24px;
+    }
+    .track-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: var(--card-shadow);
+      transition: all var(--transition-smooth);
+    }
+    .track-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.1);
+      border-color: rgba(158, 42, 43, 0.4);
+    }
+    .track-card.featured {
+      border: 2px solid var(--uwc-crimson);
+      background: linear-gradient(180deg, var(--bg-card) 0%, rgba(158, 42, 43, 0.02) 100%);
+    }
+    .card-top-tag {
+      position: absolute;
+      top: -12px;
+      left: 24px;
+      background: var(--uwc-crimson);
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 4px 10px rgba(158, 42, 43, 0.3);
+    }
+    .card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-card-subtle);
+      color: var(--text-heading);
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    .card-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .card-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .card-price-wrap {
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .price-num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text-heading);
+    }
+    .price-term {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .card-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .card-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: var(--text-body);
+      line-height: 1.45;
+    }
+    .card-bullets li svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: var(--uwc-crimson);
+    }
+    .card-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .card-btn.primary {
+      background: var(--uwc-crimson);
+      color: white;
+      box-shadow: 0 4px 14px rgba(158, 42, 43, 0.25);
+    }
+    .card-btn.primary:hover {
+      background: var(--uwc-crimson-hover);
+      transform: translateY(-1px);
+    }
+    .card-btn.secondary {
+      background: var(--bg-card-subtle);
+      color: var(--text-heading);
+      border: 1px solid var(--border-color);
+    }
+    .card-btn.secondary:hover {
+      background: var(--border-color);
+    }
+
+    /* Photography Art Direction Carousel / Grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .photo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-frame {
+      height: 200px;
+      background: var(--bg-card-subtle);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .photo-card:hover .photo-frame img {
+      transform: scale(1.05);
+    }
+    .photo-pillar-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.04em;
+    }
+    .photo-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .photo-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 6px;
+    }
+    .photo-desc {
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.5;
+    }
+    .photo-specs-tag {
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--uwc-crimson);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Modal Component Prototype */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-window {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      max-width: 580px;
+      width: 100%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      transform: translateY(20px) scale(0.97);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-backdrop.open .modal-window {
+      transform: translateY(0) scale(1);
+    }
+    .modal-header {
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .modal-header h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.01em;
+    }
+    .modal-header p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .close-modal-btn {
+      background: var(--bg-card-subtle);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-heading);
+      font-size: 18px;
+      transition: background var(--transition-fast);
+    }
+    .close-modal-btn:hover {
+      background: var(--border-color);
+    }
+    .modal-body {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+    .track-radio-selector {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .track-option {
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-heading);
+      background: var(--bg-card-subtle);
+      transition: all var(--transition-fast);
+    }
+    .track-option.active {
+      border-color: var(--uwc-crimson);
+      background: var(--uwc-crimson-subtle);
+      color: var(--uwc-crimson);
+    }
+    [data-theme="dark"] .track-option.active {
+      background: rgba(158, 42, 43, 0.2);
+    }
+    .form-input {
+      padding: 11px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      background: var(--bg-card-subtle);
+      color: var(--text-heading);
+      font-size: 14px;
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: var(--uwc-crimson);
+    }
+    .optout-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+      background: var(--bg-card-subtle);
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--border-color);
+    }
+    .modal-footer {
+      padding: 20px 28px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .submit-trial-btn {
+      width: 100%;
+      background: var(--uwc-crimson);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(158, 42, 43, 0.3);
+      transition: all var(--transition-fast);
+    }
+    .submit-trial-btn:hover {
+      background: var(--uwc-crimson-hover);
+    }
+    .modal-guarantee-note {
+      font-size: 12px;
+      text-align: center;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Simulation Success Message in Modal */
+    .success-simulation {
+      display: none;
+      background: var(--uwc-laurel-subtle);
+      border: 1px solid rgba(21, 128, 61, 0.3);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      color: #14532D;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .success-simulation strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Header -->
+  <header class="top-header">
+    <div class="container header-inner">
+      <div class="brand-cluster">
+        <div class="brand-logo-badge">UWC</div>
+        <div class="brand-titles">
+          <h1>Direction 3: Community Family Academy</h1>
+          <span>Visual Identity & Interactive Moodboard</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+          <span id="themeIcon">🌙</span> <span id="themeLabel">Evening Mode</span>
+        </button>
+        <button class="cta-quick-modal-btn" onclick="openTrialModal()">
+          Simulate 1-Click Modal
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner Area -->
+  <section class="hero-banner">
+    <div class="container">
+      <div class="hero-pretitle">
+        <span>🏛️</span> Hayward Civic Martial Arts Institution & Family Sanctuary
+      </div>
+      <h2 class="hero-title">
+        Building East Bay <span class="highlight-crimson">Character, Strength & Family Confidence</span> from Pre-K to College.
+      </h2>
+      <p class="hero-lead">
+        Direction 3 repositions United Wrestling Club from a gritty underground cage into the East Bay’s most trusted multi-generational combat academy. Blending 1980 Moscow Olympic lineage with warm, sunlit family safety, female-led personal empowerment, and active civic partnerships.
+      </p>
+
+      <!-- Trust Strip -->
+      <div class="trust-strip">
+        <div class="trust-pill gold">
+          <span>★</span> 5.0 Rating (42 East Bay Families)
+        </div>
+        <div class="trust-pill crimson">
+          <span>🏅</span> 1980 Moscow Olympic Roots (Karim & Naweed)
+        </div>
+        <div class="trust-pill green">
+          <span>🛡️</span> Official Hayward DSAL Community Partner
+        </div>
+        <div class="trust-pill">
+          <span>🥋</span> Female-Led Defense (Louisa, Neha's Sis, Ja Shia)
+        </div>
+        <div class="trust-pill">
+          <span>🤝</span> 14-Day Mat-Fit Tuition Guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Section 1: Color Token System -->
+    <div class="section-title-wrap">
+      <div class="section-eyebrow">Design Tokens // 60-30-10 Palette</div>
+      <h2 class="section-title">Color Palette Architecture & Contrast Testing</h2>
+      <p class="section-desc">Click any swatch to copy its hex token. Every color is calibrated for warm family trust and exceeds WCAG AA/AAA contrast guidelines.</p>
+    </div>
+
+    <div class="color-grid">
+      <!-- Swatch 1: Warm Trust Crimson -->
+      <div class="swatch-card" onclick="copyToken('#9E2A2B', 'Warm Trust Crimson')">
+        <div class="swatch-color-preview" style="background-color: #9E2A2B;">
+          <span class="swatch-hex-badge">#9E2A2B</span>
+        </div>
+        <div class="swatch-details">
+          <div class="swatch-name">Warm Trust Crimson</div>
+          <div class="swatch-role">Primary Action Accent</div>
+          <div class="swatch-specs">
+            <span>RGB: 158, 42, 43</span>
+            <span>HSL: 359°, 58%, 39%</span>
+            <span>WCAG: 7.42:1 (AAA on Parchment)</span>
+          </div>
+          <div class="copy-hint">📋 Click to copy token</div>
+        </div>
+      </div>
+
+      <!-- Swatch 2: Deep Pacific Slate -->
+      <div class="swatch-card" onclick="copyToken('#0F172A', 'Deep Pacific Slate')">
+        <div class="swatch-color-preview" style="background-color: #0F172A;">
+          <span class="swatch-hex-badge">#0F172A</span>
+        </div>
+        <div class="swatch-details">
+          <div class="swatch-name">Deep Pacific Slate</div>
+          <div class="swatch-role">Structural Authority / Headlines</div>
+          <div class="swatch-specs">
+            <span>RGB: 15, 23, 42</span>
+            <span>HSL: 222°, 47%, 11%</span>
+            <span>WCAG: 16.89:1 (AAA on Parchment)</span>
+          </div>
+          <div class="copy-hint">📋 Click to copy token</div>
+        </div>
+      </div>
+
+      <!-- Swatch 3: Warm Parchment Canvas -->
+      <div class="swatch-card" onclick="copyToken('#FDFBF7', 'Warm Parchment Canvas')">
+        <div class="swatch-color-preview" style="background-color: #FDFBF7; border-bottom: 1px solid #EAE5DB;">
+          <span class="swatch-hex-badge" style="background: rgba(15,23,42,0.8);">#FDFBF7</span>
+        </div>
+        <div class="swatch-details">
+          <div class="swatch-name">Warm Parchment Canvas</div>
+          <div class="swatch-role">Base Page Background</div>
+          <div class="swatch-specs">
+            <span>RGB: 253, 251, 247</span>
+            <span>HSL: 40°, 43%, 98%</span>
+            <span>Warm, non-glare educational feel</span>
+          </div>
+          <div class="copy-hint">📋 Click to copy token</div>
+        </div>
+      </div>
+
+      <!-- Swatch 4: Card Linen / Sand -->
+      <div class="swatch-card" onclick="copyToken('#F5F2EB', 'Card Linen / Sand')">
+        <div class="swatch-color-preview" style="background-color: #F5F2EB; border-bottom: 1px solid #EAE5DB;">
+          <span class="swatch-hex-badge" style="background: rgba(15,23,42,0.8);">#F5F2EB</span>
+        </div>
+        <div class="swatch-details">
+          <div class="swatch-name">Card Linen / Sand</div>
+          <div class="swatch-role">Elevated Container Fill</div>
+          <div class="swatch-specs">
+            <span>RGB: 245, 242, 235</span>
+            <span>HSL: 42°, 31%, 94%</span>
+            <span>Subtle contrast container layer</span>
+          </div>
+          <div class="copy-hint">📋 Click to copy token</div>
+        </div>
+      </div>
+
+      <!-- Swatch 5: Sunrise Amber -->
+      <div class="swatch-card" onclick="copyToken('#F59E0B', 'Sunrise Amber')">
+        <div class="swatch-color-preview" style="background-color: #F59E0B;">
+          <span class="swatch-hex-badge">#F59E0B</span>
+        </div>
+        <div class="swatch-details">
+          <div class="swatch-name">Sunrise Amber</div>
+          <div class="swatch-role">Energy, Stars & Youth Badges</div>
+          <div class="swatch-specs">
+            <span>RGB: 245, 158, 11</span>
+            <span>HSL: 38°, 92%, 50%</span>
+            <span>Optimism & Achievement Accent</span>
+          </div>
+          <div class="copy-hint">📋 Click to copy token</div>
+        </div>
+      </div>
+
+      <!-- Swatch 6: Civic Laurel Green -->
+      <div class="swatch-card" onclick="copyToken('#15803D', 'Civic Laurel Green')">
+        <div class="swatch-color-preview" style="background-color: #15803D;">
+          <span class="swatch-hex-badge">#15803D</span>
+        </div>
+        <div class="swatch-details">
+          <div class="swatch-name">Civic Laurel Green</div>
+          <div class="swatch-role">Hayward DSAL & Civic Shield</div>
+          <div class="swatch-specs">
+            <span>RGB: 21, 128, 61</span>
+            <span>HSL: 141°, 72%, 29%</span>
+            <span>WCAG: 6.21:1 (AA on Parchment)</span>
+          </div>
+          <div class="copy-hint">📋 Click to copy token</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Typography Hierarchy Playground -->
+    <div class="section-title-wrap">
+      <div class="section-eyebrow">Typography System // Plus Jakarta Sans</div>
+      <h2 class="section-title">Athletic Geometric Type Hierarchy</h2>
+      <p class="section-desc">Replacing rigid legacy uppercase with friendly, curved-terminal athletic geometry that resonates with parents and youth.</p>
+    </div>
+
+    <div class="type-container">
+      <div class="type-controls">
+        <div style="font-weight: 700; color: var(--text-heading);">Live Type Inspector:</div>
+        <input type="text" id="typeInput" class="live-text-input" value="Where East Bay Champions & Confident Families Grow" oninput="updateSpecimens(this.value)">
+      </div>
+
+      <!-- H1 Specimen -->
+      <div class="type-specimen-row">
+        <div class="type-meta">
+          <strong>Display H1</strong>
+          <span>56px / 800 Weight</span>
+          <span>-0.025em tracking</span>
+        </div>
+        <div class="specimen-text" style="font-size: clamp(32px, 4vw, 54px); font-weight: 800; color: var(--text-heading); line-height: 1.15; letter-spacing: -0.025em;" id="specimen-h1">
+          Where East Bay Champions & Confident Families Grow
+        </div>
+      </div>
+
+      <!-- H2 Specimen -->
+      <div class="type-specimen-row">
+        <div class="type-meta">
+          <strong>Section H2</strong>
+          <span>36px / 700 Weight</span>
+          <span>-0.02em tracking</span>
+        </div>
+        <div class="specimen-text" style="font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--text-heading); line-height: 1.25; letter-spacing: -0.02em;" id="specimen-h2">
+          Olympic Pedigree Grounded in Hayward Community Pride
+        </div>
+      </div>
+
+      <!-- H3 Specimen -->
+      <div class="type-specimen-row">
+        <div class="type-meta">
+          <strong>Subhead H3</strong>
+          <span>24px / 600 Weight</span>
+          <span>-0.01em tracking</span>
+        </div>
+        <div class="specimen-text" style="font-size: 24px; font-weight: 600; color: var(--text-heading); line-height: 1.35;" id="specimen-h3">
+          Junior Olympian Kids Track (Pre-K – 5th Grade)
+        </div>
+      </div>
+
+      <!-- Body Lead Specimen -->
+      <div class="type-specimen-row">
+        <div class="type-meta">
+          <strong>Body Lead</strong>
+          <span>18px / 500 Weight</span>
+          <span>1.6 line height</span>
+        </div>
+        <div class="specimen-text" style="font-size: 18px; font-weight: 500; color: var(--text-body); line-height: 1.6;" id="specimen-lead">
+          Our beginner youth programs prioritize balance, spatial safety, anti-bullying discipline, and positive emotional resilience under the direct mentorship of Olympic coaches.
+        </div>
+      </div>
+
+      <!-- UI Badges Specimen -->
+      <div class="type-specimen-row">
+        <div class="type-meta">
+          <strong>UI Micro Badges</strong>
+          <span>12px / 700 Weight</span>
+          <span>+0.05em tracking</span>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="background: var(--uwc-crimson); color: white; padding: 4px 10px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 700; letter-spacing: 0.05em;">HAYWARD DSAL ALLIANCE</span>
+          <span style="background: var(--uwc-amber-subtle); color: #92400E; padding: 4px 10px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 700; letter-spacing: 0.05em;">BEGINNER FRIENDLY</span>
+          <span style="background: var(--uwc-laurel-subtle); color: #166534; padding: 4px 10px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 700; letter-spacing: 0.05em;">FEMALE COACH BENCH</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: 4 Outcome-Driven Family Cards Mockup -->
+    <div class="section-title-wrap">
+      <div class="section-eyebrow">Program Architecture // 4 Family Tracks</div>
+      <h2 class="section-title">The Multi-Generational Family Offering Cards</h2>
+      <p class="section-desc">Replacing raw WrestlingIQ utility checkout tables with 4 outcome-driven family tracks that solve specific parent and beginner objections.</p>
+    </div>
+
+    <div class="tracks-grid">
+      <!-- Card 1: Junior Olympian Kids -->
+      <div class="track-card">
+        <div class="card-badge">AGES 4–11 • PRE-K TO 5TH</div>
+        <div class="card-title">Junior Olympian Kids Foundation</div>
+        <div class="card-subtitle">Anti-bullying confidence, coordination, and tumbling safety.</div>
+        <div class="card-price-wrap">
+          <span class="price-num">$89.99</span>
+          <span class="price-term">/ month (2-day)</span>
+        </div>
+        <ul class="card-bullets">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Weight & age-matched drilling (never paired with older teens)</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>No gear required for first 30 days (shorts & t-shirt)</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>14-Day 100% Mat-Fit Money-Back Guarantee</span>
+          </li>
+        </ul>
+        <button class="card-btn primary" onclick="openTrialModal('kids')">
+          Claim Free Kids Trial Pass
+        </button>
+      </div>
+
+      <!-- Card 2: Varsity & CIF Competition -->
+      <div class="track-card featured">
+        <div class="card-top-tag">MOST POPULAR</div>
+        <div class="card-badge" style="background: rgba(158,42,43,0.1); color: var(--uwc-crimson);">GRADES 6–12 • VARSITY</div>
+        <div class="card-title">Scholastic CIF Varsity Pipeline</div>
+        <div class="card-subtitle">MVAL/WACC league dominance and college recruiting pathway.</div>
+        <div class="card-price-wrap">
+          <span class="price-num">$139.99</span>
+          <span class="price-term">/ month (6-day unlimited)</span>
+        </div>
+        <ul class="card-bullets">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Direct coaching from 1980 Olympian Karim & Coach Naweed</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Saturday Regional Open Mat included (10am–12pm)</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Chabot College & NCAA JuCo recruiting mentorship</span>
+          </li>
+        </ul>
+        <button class="card-btn primary" onclick="openTrialModal('varsity')">
+          Book Varsity Evaluation Pass
+        </button>
+      </div>
+
+      <!-- Card 3: Adult Wrestle-Jitsu -->
+      <div class="track-card">
+        <div class="card-badge">AGES 18+ • ADULT ALL-ACCESS</div>
+        <div class="card-title">Adult Takedown & Wrestle-Jitsu</div>
+        <div class="card-subtitle">Dominant takedowns for BJJ, Sambo & combat conditioning.</div>
+        <div class="card-price-wrap">
+          <span class="price-num">$139.99</span>
+          <span class="price-term">/ month (BJJ $100/mo)</span>
+        </div>
+        <ul class="card-bullets">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Progressive live-go scaling (safe for adult beginners)</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Multi-discipline access: Wrestling, Gi/NoGi BJJ, Sambo, Boxing</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Honest month-to-month tuition (zero cancellation fees)</span>
+          </li>
+        </ul>
+        <button class="card-btn primary" onclick="openTrialModal('adult')">
+          Try Adult Wrestle-Jitsu
+        </button>
+      </div>
+
+      <!-- Card 4: Women's Self-Defense -->
+      <div class="track-card" style="border-color: rgba(245, 158, 11, 0.4);">
+        <div class="card-badge" style="background: rgba(245, 158, 11, 0.15); color: #B45309;">FEMALE-LED BENCH • AGES 14+</div>
+        <div class="card-title">Women’s Real-World Defense</div>
+        <div class="card-subtitle">Practical street leverage, ground escape, and decisive striking.</div>
+        <div class="card-price-wrap">
+          <span class="price-num">$49</span>
+          <span class="price-term">workshop / $199 6-wk cohort</span>
+        </div>
+        <ul class="card-bullets">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Led by Louisa (Boxing), Neha's Sis (Police Officer), Ja Shia</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>100% female-only safe mat; zero male intimidation</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>100% Tuition Rollover into recurring UWC membership</span>
+          </li>
+        </ul>
+        <button class="card-btn primary" style="background: #B45309;" onclick="openTrialModal('womens')">
+          Reserve Defense Seminar Spot
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 4: Photography Art Direction Moodboard -->
+    <div class="section-title-wrap">
+      <div class="section-eyebrow">Visual Narrative // Art Direction</div>
+      <h2 class="section-title">Photography Moodboard & Framing Principles</h2>
+      <p class="section-desc">Direction 3 shifts imagery from dark brutalist grappling caves to natural California sunlight, warm emotional resonance, and dignified Olympic mentorship.</p>
+    </div>
+
+    <div class="photo-grid">
+      <!-- Mood Card 1 -->
+      <div class="photo-card">
+        <div class="photo-frame">
+          <img src="../live_site_content/assets/head-coach.jpg" alt="Coach Naweed Zemaryalai" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80';">
+          <div class="photo-pillar-tag">PILLAR 1: COACH MENTORSHIP</div>
+        </div>
+        <div class="photo-body">
+          <div class="photo-title">Eye-Level Youth Guidance</div>
+          <p class="photo-desc">Coaches kneeling down to child eye-level. High-fives, headgear adjustments, encouraging smiles that remove beginner fear.</p>
+          <div class="photo-specs-tag">Natural Light • +7K Warmth • f/2.2 Isolation</div>
+        </div>
+      </div>
+
+      <!-- Mood Card 2 -->
+      <div class="photo-card">
+        <div class="photo-frame">
+          <img src="../live_site_content/assets/uwc_place.webp" alt="United Wrestling Club Mat Arena" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format&fit=crop&q=80';">
+          <div class="photo-pillar-tag">PILLAR 2: SUNLIT SANCTUARY</div>
+        </div>
+        <div class="photo-body">
+          <div class="photo-title">Open, Clean Industrial Pkwy Mats</div>
+          <p class="photo-desc">Spacious, brightly-lit Olympic mats with high ceilings and roll-up doors open to East Bay breezes. Impeccable cleanliness.</p>
+          <div class="photo-specs-tag">Wide Angle • Clean Mat Borders • Deep Slates</div>
+        </div>
+      </div>
+
+      <!-- Mood Card 3 -->
+      <div class="photo-card">
+        <div class="photo-frame">
+          <img src="../live_site_content/assets/founder.jpg" alt="Founder Karim Zemaryalai" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&auto=format&fit=crop&q=80';">
+          <div class="photo-pillar-tag">PILLAR 3: OLYMPIC HERITAGE</div>
+        </div>
+        <div class="photo-body">
+          <div class="photo-title">Master Teacher Dignity</div>
+          <p class="photo-desc">Karim Zemaryalai coaching with patience and precision. The warmth of a wise mentor rather than an intimidating drill sergeant.</p>
+          <div class="photo-specs-tag">Mat-Side Portrait • Genuine Connection</div>
+        </div>
+      </div>
+
+      <!-- Mood Card 4 -->
+      <div class="photo-card">
+        <div class="photo-frame">
+          <img src="../live_site_content/assets/co-founder.jpg" alt="Co-Founder Rashad Rahimi" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&auto=format&fit=crop&q=80';">
+          <div class="photo-pillar-tag">PILLAR 4: FEMALE & CIVIC AUTONOMY</div>
+        </div>
+        <div class="photo-body">
+          <div class="photo-title">Empowerment & Calm Strength</div>
+          <p class="photo-desc">Louisa, Neha’s Sister (police officer), and Ja Shia leading focused workshops. Practical leverage and dignified sisterhood.</p>
+          <div class="photo-specs-tag">Dynamic Action • Authentic Technique</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive 1-Click Trial Pass Modal Simulator -->
+  <div class="modal-backdrop" id="trialModal" onclick="handleBackdropClick(event)">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <h3>Claim Your Free 2-Class Assessment Pass</h3>
+          <p>United Wrestling Club • 30139 Industrial Pkwy SW Ste C, Hayward</p>
+        </div>
+        <button class="close-modal-btn" onclick="closeTrialModal()">&times;</button>
+      </div>
+
+      <div class="modal-body" id="modalForm">
+        <div class="form-group">
+          <label class="form-label">Select Recommended Track:</label>
+          <div class="track-radio-selector">
+            <div class="track-option active" id="track-opt-kids" onclick="selectTrack('kids')">
+              <span>🤼</span> Kids (Pre-K – 5th)
+            </div>
+            <div class="track-option" id="track-opt-varsity" onclick="selectTrack('varsity')">
+              <span>🏅</span> Varsity (Grades 6–12)
+            </div>
+            <div class="track-option" id="track-opt-adult" onclick="selectTrack('adult')">
+              <span>🥋</span> Adult Wrestle-Jitsu
+            </div>
+            <div class="track-option" id="track-opt-womens" onclick="selectTrack('womens')">
+              <span>🛡️</span> Women's Self-Defense
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="parentName">Parent or Athlete Name:</label>
+          <input type="text" id="parentName" class="form-input" placeholder="e.g. Sarah Jenkins">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="parentPhone">Mobile Phone (for First-Day SMS guide & parking pin):</label>
+          <input type="tel" id="parentPhone" class="form-input" placeholder="(510) 555-0192">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="parentEmail">Email Address:</label>
+          <input type="email" id="parentEmail" class="form-input" placeholder="sarah.jenkins@gmail.com">
+        </div>
+
+        <div class="optout-box">
+          <input type="checkbox" id="mediaOptOut" style="margin-top: 2px;">
+          <label for="mediaOptOut">
+            <strong>Optional Media Opt-Out:</strong> Check this box if you prefer your child or yourself NOT to be included in team training photography or social media technique clips.
+          </label>
+        </div>
+
+        <div class="success-simulation" id="successSim">
+          <strong>🎉 Trial Pass Reserved via SMS Concierge!</strong>
+          <p>A confirmation SMS with your Industrial Pkwy parking map and First-Day Gear Checklist has been queued to <span id="simPhone" style="font-weight:700;">your phone</span> from Coach Naweed Zemaryalai.</p>
+        </div>
+      </div>
+
+      <div class="modal-footer" id="modalFooter">
+        <button class="submit-trial-btn" onclick="submitTrialForm()">
+          Confirm Free 2-Class Pass (Zero Obligation)
+        </button>
+        <div class="modal-guarantee-note">
+          <span>🔒</span> 100% Free • No Credit Card Required • Instant SMS Confirmation
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Token Copied to Clipboard!</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>United Wrestling Club Design Direction 3 Specification • Prepared by Sprintz Growth OS</p>
+      <p style="margin-top: 6px;">30139 Industrial Pkwy SW Ste C, Hayward, CA 94544 • Phone: (510) 303-4869</p>
+    </div>
+  </footer>
+
+  <!-- Script for Theme Toggle & Interactive Controls -->
+  <script>
+    // Theme Switcher
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      const isDark = currentTheme === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+      
+      body.setAttribute('data-theme', newTheme);
+      document.getElementById('themeIcon').textContent = isDark ? '🌙' : '☀️';
+      document.getElementById('themeLabel').textContent = isDark ? 'Evening Mode' : 'Parchment Mode';
+    }
+
+    // Clipboard Copy Helper
+    function copyToken(hex, name) {
+      navigator.clipboard.writeText(hex).then(() => {
+        showToast(`Copied ${hex} (${name}) to clipboard!`);
+      }).catch(() => {
+        showToast(`Selected ${hex}`);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Live Typography Inspector
+    function updateSpecimens(text) {
+      const val = text.trim() === '' ? 'Where East Bay Champions & Confident Families Grow' : text;
+      document.getElementById('specimen-h1').textContent = val;
+      document.getElementById('specimen-h2').textContent = val;
+      document.getElementById('specimen-h3').textContent = val;
+    }
+
+    // Modal Simulator Controls
+    function openTrialModal(track = 'kids') {
+      selectTrack(track);
+      document.getElementById('trialModal').classList.add('open');
+      document.getElementById('successSim').style.display = 'none';
+      document.getElementById('modalFooter').style.display = 'flex';
+    }
+
+    function closeTrialModal() {
+      document.getElementById('trialModal').classList.remove('open');
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === 'trialModal') {
+        closeTrialModal();
+      }
+    }
+
+    function selectTrack(track) {
+      const options = ['kids', 'varsity', 'adult', 'womens'];
+      options.forEach(opt => {
+        const el = document.getElementById(`track-opt-${opt}`);
+        if (el) {
+          if (opt === track) {
+            el.classList.add('active');
+          } else {
+            el.classList.remove('active');
+          }
+        }
+      });
+    }
+
+    function submitTrialForm() {
+      const phoneInput = document.getElementById('parentPhone').value || '(510) 303-4869';
+      document.getElementById('simPhone').textContent = phoneInput;
+      document.getElementById('successSim').style.display = 'block';
+      document.getElementById('modalFooter').style.display = 'none';
+      showToast('SMS Trial Pass confirmation triggered!');
+    }
+  </script>
+</body>
+</html>

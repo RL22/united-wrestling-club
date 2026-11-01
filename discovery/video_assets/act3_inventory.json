@@ -1,0 +1,240 @@
+{
+  "act": 3,
+  "title": "Act 3: High School Mastery, Adult Wrestle-Jitsu, Conditioning, & Academy Huddle",
+  "timestamp_range": "01:00 - 01:34",
+  "frames_count": 17,
+  "frames_analyzed": "thumb_031.jpg through thumb_047.jpg",
+  "narrative_arc": "Act 3 serves as the emotional and athletic climax of the UWC Hero Video. It bridges youth tournament drilling into explosive high school throws, old-school conditioning (ceiling rope climb), high-intensity adult Wrestle-Jitsu and Sambo hand-fighting, and culminates in a 45+ person multi-generational team huddle and victory chant under the iconic UWC wall banner.",
+  "frames": [
+    {
+      "frame_id": "thumb_031.jpg",
+      "timestamp": "01:00",
+      "duration_approx": "01:00 - 01:02 (2.0s)",
+      "scene_type": "Youth Scholastic Wrestling / Mat Control & Breakdown",
+      "visual_description": "Medium action shot at mat level on the red wrestling canvas. In the foreground, a youth wrestler wearing a custom grey/black camouflage 'USA UWC' singlet is in referee's bottom base, actively ridden and controlled by a training partner in a white singlet with blue trim. In the background against the grey wall padding, a young teammate in a white/red UWC singlet and red socks sits resting against the wall, closely studying the mat work.",
+      "people_identified": ["Youth scholastic wrestlers", "UWC youth team members", "Mat-side youth observer"],
+      "technique_or_activity": "Folkstyle referee's position, spiral ride / breakdown mechanics, mat observation",
+      "tags": ["#youth-wrestling", "#folkstyle-drilling", "#mat-control", "#uwc-singlet", "#scholastic-athletes", "#hayward-wrestling"],
+      "b_roll_utility": "Background looping video for /classes/youth-wrestling, breakdown of Folkstyle fundamentals, youth tournament training gallery"
+    },
+    {
+      "frame_id": "thumb_032.jpg",
+      "timestamp": "01:02",
+      "duration_approx": "01:02 - 01:04 (2.0s)",
+      "scene_type": "Youth Scholastic Wrestling / Pinning Combination Mechanics",
+      "visual_description": "High-angle overhead close-up shot focused directly on the red mat. A youth athlete in a white singlet with crisp red trim demonstrates tight top pressure, driving his chest into his opponent's back and breaking him down flat to the canvas while working a half-nelson/cross-face pinning progression.",
+      "people_identified": ["Youth tournament competitors", "Junior division wrestlers"],
+      "technique_or_activity": "Top breakdown to belly, hip pressure driving, pinning combination progression",
+      "tags": ["#pinning-combinations", "#top-pressure", "#mat-wrestling", "#folkstyle-mechanics", "#youth-grappling"],
+      "b_roll_utility": "Feature visual for 'Wrestling Fundamentals' curriculum card, youth training progression illustration, B-roll micro-clip"
+    },
+    {
+      "frame_id": "thumb_033.jpg",
+      "timestamp": "01:04",
+      "duration_approx": "01:04 - 01:06 (2.0s)",
+      "scene_type": "Youth Scholastic Wrestling / Grit & Tournament Intensity",
+      "visual_description": "Intimate, high-intensity close-up ground shot from above on the red mat. Two youth wrestlers are locked in an intense battle for head and arm control. The top wrestler in a white UWC singlet ('UNITED WRESTLING CLUB HAYWARD CA' with American flag emblem) has secured a tight front headlock/cross-face lock; the bottom athlete grits his teeth in pure determination, fighting off the hold.",
+      "people_identified": ["Youth tournament wrestlers", "UWC competition team athletes"],
+      "technique_or_activity": "Front headlock defense, cross-face cradle battle, competitive resilience",
+      "tags": ["#wrestling-grit", "#front-headlock", "#unshakeable-mindset", "#youth-intensity", "#uwc-hayward", "#championship-culture"],
+      "b_roll_utility": "Lead visual for 'Building Mental Toughness & Resilience' section, high-emotion promotional still, youth competition team hero card"
+    },
+    {
+      "frame_id": "thumb_034.jpg",
+      "timestamp": "01:06",
+      "duration_approx": "01:06 - 01:08 (2.0s)",
+      "scene_type": "High School & Scholastic Wrestling / High-Amplitude Throw",
+      "visual_description": "Dynamic, mid-air action shot capturing a high school wrestler in a white singlet with red trim (stamped 'K. HO...') executing a high-amplitude lateral drop / upper-body throw, hoisting his opponent completely airborne above the red mats. A younger wrestler watches from the foreground in awe; Monster Energy claw logo on wall padding in background.",
+      "people_identified": ["High school varsity wrestlers", "Adolescent competition athletes", "Youth spectator"],
+      "technique_or_activity": "Greco-Roman / Freestyle lateral drop, body-lock throw, explosive takedown",
+      "tags": ["#high-school-wrestling", "#freestyle-throw", "#lateral-drop", "#explosive-takedown", "#cif-wrestling", "#bay-area-athletes"],
+      "b_roll_utility": "Hero header background for /classes/high-school-wrestling, high-speed reel highlight, CIF state preparation program banner"
+    },
+    {
+      "frame_id": "thumb_035.jpg",
+      "timestamp": "01:08",
+      "duration_approx": "01:08 - 01:10 (2.0s)",
+      "scene_type": "Wrestling Practice Live Sparring / Training Room Atmosphere",
+      "visual_description": "Wide, atmospheric room shot during live sparring rounds. In the center, a varsity athlete in a white UWC singlet ('USA G. MARTIN') works a sit-out escape against a top rider. To the left, a tired wrestler rests with hands on knees. Along the padded wall under Monster Energy and Reebok banners, numerous youth athletes rest, hydrate, and observe live matches.",
+      "people_identified": ["Competitive high school wrestlers", "Youth squad members", "G. Martin (student athlete)"],
+      "technique_or_activity": "Live match situational sparring, sit-out escape attempt, room-wide live round energy",
+      "tags": ["#live-wrestling", "#training-room", "#grind-culture", "#uwc-athletes", "#hayward-athletics", "#competition-prep"],
+      "b_roll_utility": "Facility and training environment section, 'A Day at UWC' photo narrative, membership expectation guide"
+    },
+    {
+      "frame_id": "thumb_036.jpg",
+      "timestamp": "01:10",
+      "duration_approx": "01:10 - 01:12 (2.0s)",
+      "scene_type": "Mat Impact & Kinetic Scramble / Fast-Motion Action",
+      "visual_description": "Low-angle kinetic action frame captured with dynamic motion blur on the glossy red canvas. A wrestler has just been taken down hard, legs kicked upward in a scramble, captured mid-impact at mat level while spectators' legs frame the perimeter. Emphasizes raw kinetic power and fast-paced athletic tempo.",
+      "people_identified": ["Scholastic tournament wrestlers mid-scramble"],
+      "technique_or_activity": "Mat return impact, explosive scramble, scramble recovery",
+      "tags": ["#mat-impact", "#kinetic-speed", "#explosive-scramble", "#wrestling-pace", "#raw-athletics"],
+      "b_roll_utility": "Fast-cut transition clip in hero video reel, action divider section, social video teaser loop"
+    },
+    {
+      "frame_id": "thumb_037.jpg",
+      "timestamp": "01:12",
+      "duration_approx": "01:12 - 01:14 (2.0s)",
+      "scene_type": "Athletic Conditioning & Functional Strength / Ceiling Rope Climb",
+      "visual_description": "Vertical medium shot looking upward into the warehouse rafters. A young athletic wrestler in a white and blue singlet ('USA D. VALDEZ') climbs a heavy ceiling-suspended natural fiber rope high above the gym floor. Industrial warehouse beams, exposed wooden roof trusses, bright fluorescent bay lights, and California Republic flag visible below.",
+      "people_identified": ["D. Valdez (UWC youth/scholastic athlete)"],
+      "technique_or_activity": "Ceiling rope climb, upper body pulling endurance, grip strength functional conditioning",
+      "tags": ["#rope-climb", "#functional-strength", "#conditioning", "#grip-strength", "#athletic-development", "#old-school-training"],
+      "b_roll_utility": "Feature visual for 'Strength & Conditioning / Athletic Development' program card, proof of comprehensive physical preparation, youth grit highlight"
+    },
+    {
+      "frame_id": "thumb_038.jpg",
+      "timestamp": "01:14",
+      "duration_approx": "01:14 - 01:16 (2.0s)",
+      "scene_type": "Adult Wrestle-Jitsu & Hand-Fighting / Elite Takedown Control",
+      "visual_description": "Intense medium close-up of two adult grapplers locked in a fierce hand-fighting and collar tie battle. On the right, a powerful bearded coach/fighter (Coach Naweed Zemaryalai) in a black UWC training shirt with taped wrists establishes inside tie and heavy collar control; on the left, an adult practitioner in a white rashguard contests head position. Heavy bags and pull-up rig in background.",
+      "people_identified": ["Coach Naweed Zemaryalai (Head Coach)", "Adult grappler / Wrestle-Jitsu student"],
+      "technique_or_activity": "Heavy collar tie, wrist control snap, inside tie, head-position wrestling for BJJ/MMA",
+      "tags": ["#adult-wrestling", "#wrestle-jitsu", "#collar-tie", "#hand-fighting", "#mma-takedowns", "#coach-naweed"],
+      "b_roll_utility": "Main header image for /classes/adult-wrestling, Wrestle-Jitsu program banner, adult membership conversion modal"
+    },
+    {
+      "frame_id": "thumb_039.jpg",
+      "timestamp": "01:16",
+      "duration_approx": "01:16 - 01:18 (2.0s)",
+      "scene_type": "Adult Wrestling & Sambo Takedowns / Live Media Production",
+      "visual_description": "Medium shot of an adult heavyweight grappling sequence. A burly, bearded heavyweight fighter in a black shirt defends a deep single-leg/high-crotch shot driven by an adult athlete in a white UWC compression rashguard with black graphics ('UWC'). In the background on the left, a professional videographer with a shoulder-mounted camera rig films the live round up close. Pull-up bars and American flag in background.",
+      "people_identified": ["Heavyweight adult grapplers", "Adult MMA/wrestling athletes", "Gym videographer/cameraman"],
+      "technique_or_activity": "Single-leg takedown entry, whizzer and sprawl defense, high-level sparring",
+      "tags": ["#adult-grappling", "#single-leg-takedown", "#heavyweight-wrestling", "#uwc-rashguard", "#combat-sports", "#hayward-mma"],
+      "b_roll_utility": "Adult program 'Live Sparring & Mat Time' section, 'Media & Production Quality' trust badge, adult class feature grid"
+    },
+    {
+      "frame_id": "thumb_040.jpg",
+      "timestamp": "01:18",
+      "duration_approx": "01:18 - 01:20 (2.0s)",
+      "scene_type": "Combat Sambo Heritage & Team Warm-up / International Pedigree",
+      "visual_description": "Front-facing medium tracking shot of adult athletes jogging in rhythm around the mats during warm-up conditioning. Leading the frame is a smiling Central Asian / Kyrgyz athlete in a bright royal blue shirt bearing a traditional Kyrgyz sun/nomadic emblem (representing UWC's Combat Sambo program and Central Asian grappling lineage). Teammates jog behind him in formation. Punching bags and training equipment line the background.",
+      "people_identified": ["Combat Sambo practitioner / Kyrgyz athlete", "Adult team grapplers"],
+      "technique_or_activity": "Team warm-up run, metabolic conditioning, cultural camaraderie",
+      "tags": ["#combat-sambo", "#kyrgyz-lineage", "#central-asian-grappling", "#team-warmup", "#adult-conditioning", "#uwc-diversity"],
+      "b_roll_utility": "Key visual for /classes/combat-sambo program page, proof of authentic international coaching lineage, culture & community block"
+    },
+    {
+      "frame_id": "thumb_041.jpg",
+      "timestamp": "01:20",
+      "duration_approx": "01:20 - 01:22 (2.0s)",
+      "scene_type": "Adult Community Conditioning / Welcoming Gym Culture",
+      "visual_description": "Front tracking shot of diverse adult gym members jogging in unison during group conditioning. Leading is an athletic member in a maroon 'Nursing @ HAVASU' t-shirt, pumping his arms with focus. Flanked closely behind him is a smiling bearded adult in a black UWC circle logo shirt and another muscular teammate. Demonstrates that UWC welcomes working professionals, healthcare workers, and hobbyists alongside elite fighters.",
+      "people_identified": ["Diverse adult gym members", "Working professionals / hobbyist grapplers", "Adult fitness athletes"],
+      "technique_or_activity": "Group cardio conditioning, warm-up pacing, inclusive team atmosphere",
+      "tags": ["#adult-fitness", "#community-gym", "#all-fitness-levels", "#hayward-fitness", "#working-professionals", "#team-cohesion"],
+      "b_roll_utility": "'Who We Train / All Levels Welcome' section, Adult Fitness / Conditioning module, adult beginner reassurance block"
+    },
+    {
+      "frame_id": "thumb_042.jpg",
+      "timestamp": "01:22",
+      "duration_approx": "01:22 - 01:24 (2.0s)",
+      "scene_type": "Club Identity & Team Camaraderie / High-Energy Warm-up",
+      "visual_description": "Medium tracking shot of an adult athlete with a neatly trimmed beard and confident smile jogging forward in a black tee featuring the iconic red circular 'UWC' chest emblem. Behind him, a young wrestler in a red camouflage singlet and other teammates jog the perimeter of the facility, surrounded by heavy bags and Monster Energy banners.",
+      "people_identified": ["Adult club member in UWC apparel", "Youth teammate in red camo singlet", "General membership squad"],
+      "technique_or_activity": "Continuous movement warm-up, club apparel display, cross-generational training",
+      "tags": ["#uwc-apparel", "#club-pride", "#multigenerational", "#bay-area-grappling", "#gym-energy", "#hayward-ca"],
+      "b_roll_utility": "Lead visual for 'Join the United Movement' membership section, adult testimonial intro card, video carousel slide"
+    },
+    {
+      "frame_id": "thumb_043.jpg",
+      "timestamp": "01:24",
+      "duration_approx": "01:24 - 01:26 (2.0s)",
+      "scene_type": "Core Conditioning & Stamina / End-of-Practice Burnout",
+      "visual_description": "Ground-level profile close-up on the red mat during post-practice abdominal conditioning. An athlete in a white shirt with red accents lies on the canvas performing crunches and core burnouts, breathing hard after grueling training rounds. Teammates are lined up beside him in synchronization, pushing through exhaustion together.",
+      "people_identified": ["Adult and youth grapplers performing core work"],
+      "technique_or_activity": "Group abdominal burnout, crunches, mental discipline through physical fatigue",
+      "tags": ["#core-conditioning", "#ab-burnout", "#mental-resilience", "#end-of-practice", "#work-ethic", "#athletic-stamina"],
+      "b_roll_utility": "Visual feature for 'Discipline & Work Ethic' core value card, HIIT / Conditioning class breakdown, testimonial background"
+    },
+    {
+      "frame_id": "thumb_044.jpg",
+      "timestamp": "01:26",
+      "duration_approx": "01:26 - 01:28 (2.0s)",
+      "scene_type": "Academy-Wide Team Portrait / Giant Community Huddle",
+      "visual_description": "Magnificent wide group portrait on the red mat capturing the massive UWC family. Over 45 members—spanning youth wrestlers, high school state contenders, adult grapplers, female athletes (front center in red UWC tee and black training pants), and head coaches—are gathered together in front of the giant black-and-white 'UWC - UNITED WRESTLING CLUB' wall banner. Front rows kneeling, back rows standing shoulder-to-shoulder.",
+      "people_identified": [
+        "Head Coach Naweed Zemaryalai",
+        "Founder Karim Zemaryalai",
+        "Youth competition team",
+        "High school varsity squad",
+        "Adult Wrestle-Jitsu / Sambo members",
+        "Female grappling athletes"
+      ],
+      "technique_or_activity": "Full-academy end-of-practice team photo, collective unity and family bond",
+      "tags": ["#uwc-family", "#community-scale", "#all-ages-all-levels", "#united-wrestling-club", "#hayward-community", "#womens-grappling"],
+      "b_roll_utility": "Primary hero proof image on Homepage ('The East Bay's Premier Wrestling Academy'), /about page team hero banner, footer anchor visual"
+    },
+    {
+      "frame_id": "thumb_045.jpg",
+      "timestamp": "01:28",
+      "duration_approx": "01:28 - 01:30 (2.0s)",
+      "scene_type": "Team Camaraderie & Spontaneous Celebration / Post-Practice Flex",
+      "visual_description": "Wide shot of the 45+ member team beginning to transition into a spontaneous celebratory team cheer. Smiles break out across all faces; front-row female athletes and younger kids laugh together, while back-row adult competitors start flexing arms and smiling proudly under the towering 'UWC UNITED WRESTLING CLUB' banner.",
+      "people_identified": ["Full UWC academy roster", "Youth wrestlers", "Female athletes", "Adult fighters", "Coaching staff"],
+      "technique_or_activity": "Spontaneous laughter, post-workout endorphin rush, team camaraderie celebration",
+      "tags": ["#team-camaraderie", "#wrestling-culture", "#smiles-and-sweat", "#youth-and-adults", "#bay-area-family", "#hayward-pride"],
+      "b_roll_utility": "'Our Community & Culture' photo grid lead, student & parent review section backdrop, 'Why Parents Choose UWC' highlight"
+    },
+    {
+      "frame_id": "thumb_046.jpg",
+      "timestamp": "01:30",
+      "duration_approx": "01:30 - 01:32 (2.0s)",
+      "scene_type": "Team Chant & Bicep Flex / Climax of Academy Spirit",
+      "visual_description": "High-energy wide shot capturing the peak of the team celebration. Back-row athletes flex their biceps with triumphant roars, front-row youth and adult competitors hold clenched fists, and open mouths shout the unified club motto ('1, 2, 3... UNITED!'). The collective energy is electrifying, passionate, and cohesive.",
+      "people_identified": ["45+ UWC athletes and coaches shouting team chant"],
+      "technique_or_activity": "Unified team cheer, bicep flex celebration, team motto declaration ('UNITED!')",
+      "tags": ["#team-chant", "#bicep-flex", "#championship-spirit", "#united-motto", "#hard-work-pays-off", "#high-energy"],
+      "b_roll_utility": "Climactic visual on /about page, 'Claim Your Free Trial' booking section background, Instagram / TikTok brand trailer finale"
+    },
+    {
+      "frame_id": "thumb_047.jpg",
+      "timestamp": "01:34",
+      "duration_approx": "01:32 - 01:34 (2.0s)",
+      "scene_type": "Hero Video Climax & Outro Resolution / Championship Family",
+      "visual_description": "Final video climax frame holding on the triumphant team flex under the massive 'UWC UNITED WRESTLING CLUB' banner. Front-center female wrestlers beam with proud smiles, young kids stand tall with champions' confidence, and adult grapplers flex alongside coaches, embodying the club's motto: 'Where passion meets expertise and dedication yields champions.'",
+      "people_identified": ["Complete United Wrestling Club family", "Next-gen female wrestlers", "Championship coaching lineage"],
+      "technique_or_activity": "Final victory pose, video outro freeze-frame, brand legacy culmination",
+      "tags": ["#video-outro", "#team-pride", "#inclusive-wrestling", "#womens-empowerment", "#hayward-champions", "#uwc-legacy"],
+      "b_roll_utility": "Final call-to-action banner ('Become Part of the United Family'), /schedule trial page header, press kit lead image"
+    }
+  ],
+  "act_summary": {
+    "total_duration_analyzed": "34 seconds (01:00 to 01:34)",
+    "key_storyline_beats": [
+      "1. Youth Scholastic Mastery (01:00 - 01:06): Technical mat breakdowns, grueling pinning battles, and resilient front-headlock defenses.",
+      "2. High School Varsity Firepower (01:06 - 01:12): High-amplitude lateral drop throw, live match scrambles, and warehouse ceiling rope climbs.",
+      "3. Adult Wrestle-Jitsu & International Lineage (01:14 - 01:24): Heavy collar tie hand-fighting led by Coach Naweed, single-leg takedown attacks, Kyrgyz Sambo heritage, and multi-generational cardio/ab conditioning.",
+      "4. The Grand Finale: 45+ Person United Huddle (01:26 - 01:34): A massive, multi-generational team huddle with boys, girls, men, women, and coaches flexing and shouting the club motto under the giant UWC banner."
+    ],
+    "high_value_conversion_assets": [
+      {
+        "frame": "thumb_034.jpg",
+        "description": "Airborne lateral drop throw",
+        "recommended_placement": "/classes/high-school-wrestling hero banner"
+      },
+      {
+        "frame": "thumb_038.jpg",
+        "description": "Coach Naweed heavy collar tie hand-fight",
+        "recommended_placement": "/classes/adult-wrestling header & Wrestle-Jitsu card"
+      },
+      {
+        "frame": "thumb_040.jpg",
+        "description": "Kyrgyz Combat Sambo athlete warm-up jog",
+        "recommended_placement": "/classes/combat-sambo & heritage profile"
+      },
+      {
+        "frame": "thumb_044.jpg",
+        "description": "Giant 45+ person academy team photo under UWC banner",
+        "recommended_placement": "Homepage social proof hero & /about main banner"
+      },
+      {
+        "frame": "thumb_047.jpg",
+        "description": "Unified team flex and victory shout",
+        "recommended_placement": "Final trial booking CTA banner ('Join the United Family')"
+      }
+    ]
+  }
+}

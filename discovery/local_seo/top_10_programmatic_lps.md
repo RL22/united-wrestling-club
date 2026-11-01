@@ -1,28 +1,29 @@
 # Top 10 Data-Driven Programmatic Landing Pages: United Wrestling Club
 
-> **Target Territory:** Alameda County (Hayward, Tri-City: Fremont/Union City/Newark, Castro Valley, San Leandro, Oakland)  
-> **Framework:** Discipline + Geo-Intent Programmatic SEO Architecture  
+> **Target Territory:** Alameda County (Hayward HQ, Tri-City: Fremont/Union City/Newark, Castro Valley, San Leandro)  
+> **Framework:** 5 Location Feeder Pages + 5 Core Discipline Pages (Programmatic SEO Architecture)  
 > **Data Sources:** OpenSEO Labs Ranked Keywords, Local SERPs, Google Ads Search Volumes & CPC Metrics  
+> **Sitemap Alignment:** Strictly locked to the 32-Route Information Architecture (`website_rebuild_spec.md` & `local_seo_keyword_reroute_map.md`)  
 > **Updated:** October 30, 2026  
 
 ---
 
 ## 1. Matrix Overview: Top 10 High-Intent Programmatic Pages
 
-To capture high-intent demand across Alameda County, this matrix blends **pure wrestling query patterns** with **high-volume, high-CPC buyer-intent martial arts keywords** (where parents and adult grapplers actively search for combat sports instruction).
+To capture high-intent demand across Alameda County and the East Bay, this matrix targets the **Top 10 Programmatic Landing Pages** locked in the site architecture. It divides symmetrically into **5 Location Feeder Pages** (capturing high-intent geo queries across the I-880 corridor) and **5 Core Discipline Pages** (capturing specific training programs, age groups, and martial arts expansion searchers).
 
-| # | Page Route | Target Region | Core Target Keyword Cluster | Monthly Search Volume | KD | Est. CPC | Intent / Value Angle |
-| :-: | :--- | :--- | :--- | :-: | :-: | :-: | :--- |
-| **1** | `/wrestling-hayward-ca` | Hayward (HQ) | "wrestling gym" / "wrestling club" | 8,300 | 4–10 | $1.89 | Core brand & hometown academy anchor |
-| **2** | `/youth-wrestling-east-bay` | Tri-City / Central County | "youth wrestling near me" / "youth wrestling clubs" | 7,600 | 4–6 | $3.22 | High-converting parent enrollment funnel |
-| **3** | `/kids-martial-arts-hayward` | Hayward / Castro Valley | "martial arts for kids" / "kids martial arts near me" | 18,100 | 0–12 | $4.73 | High-value parent capture vs. commercial karate |
-| **4** | `/wrestling-classes-fremont-ca` | Fremont (Tri-City) | "wrestling classes near me" / "wrestling Fremont" | 1,900 | 2 | $2.31 | Capture 230k population Tri-City vacuum |
-| **5** | `/wrestling-club-union-city` | Union City (Tri-City) | "wrestling clubs near me" / "wrestling Union City" | 8,100 | 2 | $1.40 | James Logan High / MVAL scholastic pipeline |
-| **6** | `/adult-wrestling-bay-area` | Alameda County / East Bay | "adult wrestling clubs near me" / "club wrestling adults" | 2,740 | 4–12 | $1.82 | Adult takedowns & fitness without college room |
-| **7** | `/bjj-takedowns-wrestle-jitsu` | Alameda County / NorCal | "bjj near me" / "bjj classes near me" / "bjj takedowns" | 68,480 | 17–21 | $3.96 | Guard-puller antidote for East Bay grapplers |
-| **8** | `/martial-arts-fremont-ca` | Fremont / Newark | "martial arts fremont ca" / "mixed martial arts near me" | 40,710 | 0–13 | $2.86 | Captures Tri-City combat sports searchers |
-| **9** | `/competition-team-pre-k-12` | NorCal / CIF / SCYWAY | "wrestling teams" / "wrestling tournaments near me" | 2,600 | 4–20 | $3.87 | Elite scholastic year-round travel squad |
-| **10** | `/open-mat-wrestling-grappling` | East Bay / Oakland / Fremont | "open mat wrestling near me" / "open mat bay area" | 1,070 | 0–19 | $1.23 | Regional Saturday 10AM–12PM $15 drop-in magnet |
+| # | Page Route | Parent Silo | Target Region / Audience | Core Target Keyword Cluster | Monthly Search Volume | KD | Est. CPC | Intent / Value Angle |
+| :-: | :--- | :---: | :--- | :--- | :-: | :-: | :-: | :--- |
+| **1** | `/locations/hayward-ca` | `/locations` | Hayward (HQ / Central Alameda County) | `wrestling gym`, `wrestling club`, `wrestling near me`, `wrestling academy near me` | 26,300 | 4–10 | $1.89 | Hometown HQ local pack anchor; captures core wrestling demand right at the facility |
+| **2** | `/locations/union-city-ca` | `/locations` | Union City (Tri-City / Whipple Corridor) | `union city wrestling`, `wrestling union city ca`, `james logan wrestling club` | 480 | 0–2 | $1.40 | James Logan High feeder & MVAL scholastic pipeline (6 min via Whipple/I-880) |
+| **3** | `/locations/fremont-ca` | `/locations` | Fremont (Tri-City / 230k Population Hub) | `wrestling fremont ca`, `wrestling classes fremont`, `fremont martial arts`, `martial arts fremont ca` | 2,320 | 0–13 | $2.86 | Tri-City combat sports vacuum; intercepts karate searchers (9 min via I-880 N) |
+| **4** | `/locations/newark-ca` | `/locations` | Newark (Tri-City / Cedar Blvd Corridor) | `wrestling newark ca`, `newark martial arts`, `bjj newark ca` | 640 | 0–5 | $1.90 | Newark youth & adult grappling feeder (11 min via I-880 N) |
+| **5** | `/locations/castro-valley-ca` | `/locations` | Castro Valley / San Leandro / Eden Area | `wrestling castro valley`, `kids martial arts castro valley`, `wrestling san leandro` | 890 | 0–6 | $2.15 | Castro Valley & San Leandro feeder (8 min via I-880 S / A St) |
+| **6** | `/classes/kid-wrestling` | `/classes` | Pre-K–5th (Ages 4–11) & Parents | `youth wrestling near me`, `youth wrestling clubs`, `youth wrestling programs`, `kids wrestling` | 8,530 | 0–6 | $3.22 | High-converting parent enrollment funnel; youth foundation & motor mechanics ($89.99–$139.99/mo) |
+| **7** | `/classes/youth-wrestling` | `/classes` | Grades K–12 Competition & Scholastic | `wrestling teams`, `competition youth wrestling`, `scway wrestling clubs`, `freestyle wrestling near me` | 4,300 | 4–20 | $3.87 | Elite scholastic year-round travel squad & MS/HS competitive pipeline ($139.99–$150/mo) |
+| **8** | `/classes/adult-wrestling` | `/classes` | Adults 18+ / College / MMA Grapplers | `adult wrestling clubs near me`, `club wrestling for adults`, `wrestling clubs for adults`, `adult wrestling gym` | 3,530 | 0–15 | $1.82 | Adult Folkstyle, Freestyle & takedown room without needing collegiate roster ($139.99/mo) |
+| **9** | `/classes/nogi-jiu-jitsu` | `/classes` | East Bay Grapplers & BJJ Students | `wrestle jitsu`, `bjj takedowns`, `wrestling for bjj`, `no gi jiu jitsu near me` | 4,200 | 3–14 | $2.75 | No-Gi "Wrestle-Jitsu" takedowns & heavy top control; guard-puller antidote ($100–$139.99/mo) |
+| **10** | `/classes/womens-self-defense` | `/classes` | Women & Teen Girls (Hayward / East Bay) | `women's self defense classes hayward`, `womens self defense east bay`, `girls wrestling east bay` | 1,420 | 0–4 | $3.50 | Practical self-defense, escapes & striking co-led by Louisa, Neha's Sister & Ja Shia |
 
 ---
 
@@ -44,10 +45,12 @@ flowchart TD
 ```
 
 #### Section 1: Hero & Conversion Hook (`<header>` / `<section class="hero">`)
-* **H1 Tag Pattern:** `[Core Discipline / Keyword] in [City / Region] | United Wrestling Club`
-* **Subheadline Pattern:** Specific value proposition highlighting Olympic lineage, age brackets (Pre-K to Adult), and beginner-friendly environment.
+* **H1 Tag Patterns:**
+  * *Location Feeder Pages (`/locations/*`):* `[City] Wrestling & Combat Sports Training | United Wrestling Club`
+  * *Discipline Pages (`/classes/*`):* `[Discipline Name] Classes in Hayward & East Bay | United Wrestling Club`
+* **Subheadline Pattern:** Specific value proposition highlighting Olympic lineage, exact age brackets (Pre-K to Adult), and beginner-friendly environment.
 * **Trust Badges:** `1980 Olympic Qualifier Lineage` · `5.0★ Google Rated (42 Reviews)` · `Hayward, CA Facility`.
-* **Primary CTA:** High-contrast button: `Claim Free 1-Day Trial Pass` (opens native modal, no external redirect).
+* **Primary CTA:** High-contrast button: `Claim Free 1-Day Trial Pass` (opens native modal or links directly to [`/register`](/register)).
 * **Secondary CTA:** `Call / Text Coach Naweed: (510) 303-4869`.
 
 #### Section 2: Authority & Social Proof Bar (`<section class="proof-bar">`)
@@ -55,15 +58,16 @@ flowchart TD
   * 42 Five-Star Google Reviews (100% 5-Star).
   * 1980 Moscow Olympics Qualified Founder (Karim Zemaryalai).
   * Collegiate Kinesiology & Chabot College Coaching Staff (Naweed Zemaryalai).
-  * 30139 Industrial Pkwy SW Location (Minutes from I-880).
+  * Verified Facility Location: `30139 Industrial Pkwy SW Ste C, Hayward, CA 94544` (Minutes from I-880).
 
 #### Section 3: Curriculum & Technical Breakdown (`<section class="curriculum">`)
 * **H2:** `What You Will Learn in Our [City / Discipline] Program`
 * **Structure:** 3–4 card grid detailing:
-  1. *Stance, Motion & Level Changes:* Biomechanical foundations.
+  1. *Stance, Motion & Level Changes:* Biomechanical foundations and kinetic chain positioning.
   2. *High-Percentage Takedowns:* Folkstyle & Freestyle leg attacks, upper-body throws, and snap-downs.
   3. *Mat Control & Defense:* Escapes, reversals, ride time, and safe falling mechanics.
-  4. *Live Mat Application:* Controlled situational drilling and live goes matched by size and skill.
+  4. *Live Mat Application:* Controlled situational drilling and live goes matched strictly by size and skill.
+* **Internal Link:** Points to full program catalog at [`/classes`](/classes).
 
 #### Section 4: The Strategic Contrast Matrix (`<section class="comparison">`)
 * **H2:** `How United Wrestling Club Compares to Typical [City] Martial Arts Schools`
@@ -77,34 +81,48 @@ flowchart TD
 | **Sparring & Pressure** | Zero full-contact resistance | **Controlled live wrestling against resisting partners** |
 | **Pricing Model** | $250+/mo long-term lock-in contracts | **Flexible monthly memberships ($89.99–$150/mo), no long contracts** |
 
+* **Internal Link:** Points to transparent pricing details at [`/pricing`](/pricing).
+
 #### Section 5: Coaching Pedigree Spotlight (`<section class="coaches">`)
 * **H2:** `Led by Real Competitors and Collegiate Coaches`
 * **Coach Cards:**
   * *Naweed Zemaryalai:* Head Coach, Chabot College Coach, SF State Kinesiology.
   * *Karim Zemaryalai:* Founder, 1980 Olympian, Ali Aliyev Tournament Medalist.
-  * *Discipline Specialists:* Sandeep Singh Gosal (Youth Comp), Farid (Boxing), Sambo Master Instructor (Kyrgyzstan).
+  * *Discipline Specialists:* Sandeep Singh Gosal (Youth Comp), Farid Siddiq (Boxing), Kyrgyz Sambo Master Instructor, Louisa / Ja Shia (Women's Self-Defense).
+* **Internal Link:** Points to complete Olympic coaching bios at [`/about`](/about).
 
 #### Section 6: Schedule, Facility & Map (`<section class="schedule-location">`)
-* **H2:** `Class Schedule & Easy Commute from [City]`
-* **Schedule Snippet:** Exact class days and times for the targeted program.
-* **Directions Snippet:** *"Located right off I-880 on Industrial Pkwy SW. 6 minutes from Union City, 9 minutes from Fremont, 8 minutes from Castro Valley."*
-* **Embedded Google Map:** Responsive iframe pointing to `CID: 16896090141452237997`.
+* **H2:** `Class Schedule & Facility Commute from [City]`
+* **Verified Physical Address:** `30139 Industrial Pkwy SW Ste C, Hayward, CA 94544`
+* **Directions & Commute Snippet:**
+  * *From Union City:* 6 minutes via Whipple Rd and I-880 N.
+  * *From Fremont:* 9 minutes via I-880 N (exit Industrial Pkwy W).
+  * *From Castro Valley / San Leandro:* 8–10 minutes via I-880 S or Mission Blvd.
+  * *From Newark:* 11 minutes via Cedar Blvd and I-880 N.
+* **Parking & Facility Access:** Dedicated commercial park lot with ample free parking directly in front of Suite C entrance.
+* **Primary Phone Inquiry Note:** *"Questions about schedule, directions, or parking? Call or text Coach Naweed directly at (510) 303-4869."*
+* **Interactive Schedule CTA:** Direct internal link to the full filterable weekly matrix at [`/schedule`](/schedule).
+* **Embedded Google Map:** Responsive iframe pointing to `CID: 16896090141452237997` (`30139 Industrial Pkwy SW Ste C, Hayward, CA 94544`).
 
 #### Section 7: Local FAQ Accordion (`<section class="faq">`)
 * **H2:** `Frequently Asked Questions About [Program] in [City]`
-* 4–5 expandable questions incorporating structured FAQPage schema:
+* 4–5 expandable questions incorporating structured `FAQPage` schema:
   1. *Do I or my child need prior wrestling or martial arts experience?*
   2. *What gear or clothing is required for the first free class?*
   3. *How does wrestling help student athletes in high school or other sports?*
   4. *Where exactly is the facility located and where do we park?*
+* **Internal Links:** Direct links to [`/faqs`](/faqs) for extended answers and [`/rules`](/rules) for club hygiene standards.
 
 #### Section 8: Final High-Converting Trial Intake (`<section class="final-cta">`)
+* **Verified Physical Address Anchor:** `30139 Industrial Pkwy SW Ste C, Hayward, CA 94544`
+* **Primary Phone Inquiry Note:** *"Prefer to talk or text first? Call or text Coach Naweed directly at (510) 303-4869 for immediate trial scheduling and family inquiries."*
 * **Form Embed:** 4-field frictionless lead capture:
   * Name (Parent / Athlete)
-  * Phone Number (for SMS confirmation)
+  * Phone Number (for automated SMS confirmation)
   * Email Address
   * Select Class Date (Mon/Tue/Wed/Thu/Fri/Sat)
-* **Button:** `Confirm Free Trial Class →`
+* **Button:** `Confirm Free Trial Class →` (submits directly into native [`/register`](/register) intake pipeline).
+* **Trust & Conversion Links:** Internal links to [`/pricing`](/pricing) (no long-term contracts), [`/schedule`](/schedule) (view class slots), and [`/register`](/register) (direct checkout).
 
 ---
 
@@ -115,39 +133,77 @@ While wrestling has dedicated organic searchers, queries containing *"martial ar
 * *"martial arts near me"*: **90,500/mo** (KD: 9, CPC: $2.68).
 * *"mixed martial arts near me"*: **40,500/mo** (KD: 13, CPC: $1.70).
 * *"martial arts for kids near me"*: **18,100/mo** (KD: 0, CPC: $4.73).
-* *"fremont martial arts"* / *"martial arts fremont ca"*: **420/mo** combined (KD: 0, CPC: $2.86).
+* *"fremont martial arts"* / *"martial arts fremont ca"*: **2,320/mo** combined (KD: 0–13, CPC: $2.86).
 
 Parents searching for "martial arts" generally want three core outcomes:
-1. **Discipline and self-confidence.**
-2. **Real self-defense against bullies.**
-3. **High-energy physical fitness.**
+1. **Discipline, accountability, and self-confidence.**
+2. **Practical self-defense against bullying without striking injuries.**
+3. **High-energy physical fitness, coordination, and athletic foundation.**
 
-By deploying dedicated martial arts landing pages (Pages #3 and #8), UWC intercepts parents before they enroll in expensive, low-intensity strip-mall karate studios, positioning Olympic wrestling and Brazilian Jiu-Jitsu as **the ultimate, practical martial art**.
+### Surgical Intent-to-Silo Keyword Rerouting
+Rather than building orphan pages outside the site structure, all martial arts search intent is routed directly into locked sitemap routes:
+* **Fremont Martial Arts Searchers:** Intercepted by [`/locations/fremont-ca`](/locations/fremont-ca).
+* **Newark Martial Arts Searchers:** Intercepted by [`/locations/newark-ca`](/locations/newark-ca).
+* **Kids Martial Arts Parents:** Intercepted by [`/classes/kid-wrestling`](/classes/kid-wrestling) and authority guide [`/guides/youth-wrestling-vs-martial-arts`](/guides/youth-wrestling-vs-martial-arts).
+* **BJJ & Submission Grappling Searchers:** Intercepted by [`/classes/nogi-jiu-jitsu`](/classes/nogi-jiu-jitsu) and [`/classes/gi-jiu-jitsu`](/classes/gi-jiu-jitsu).
+* **Women's Self-Defense:** Intercepted by [`/classes/womens-self-defense`](/classes/womens-self-defense).
+
+This positions Olympic wrestling and Brazilian Jiu-Jitsu as **the ultimate, practical martial arts alternative** to expensive, low-intensity strip-mall karate studios.
 
 ---
 
 ## 4. Deep-Dive Blueprints for Key Strategic Pages
 
-### Blueprint 3: `/kids-martial-arts-hayward`
-* **Target Intent:** Parents searching for kids karate, taekwondo, or martial arts in Hayward and Castro Valley.
-* **Primary Keyword:** *"kids martial arts near me"* (18,100 vol, KD 0, CPC $4.73), *"hayward martial arts"* (40 vol, KD 0, CPC $4.16).
-* **Strategic Positioning:** *"Why Olympic Wrestling & BJJ Beat Traditional Karate for Kids."*
-* **Content Angle:** Explain how wrestling teaches practical takedown defense, body control, and mental toughness without striking or concussion risk.
-* **Target Offer:** Free Youth Mat Assessment & Trial Class.
+### Blueprint 1: `/locations/fremont-ca` (Tri-City Feeder & Combat Sports Vacuum)
+* **Parent Silo:** [`/locations`](/locations)
+* **Breadcrumb Path:** Home (`/`) → Locations (`/locations`) → Fremont, CA (`/locations/fremont-ca`)
+* **Target Intent:** Fremont parents and adult athletes seeking high-level combat sports training just 9 minutes up I-880.
+* **Primary Keywords:** *"wrestling fremont ca"* (KD 0, CPC $2.86), *"wrestling classes fremont"* (KD 2, CPC $2.31), *"fremont martial arts"* / *"martial arts fremont ca"* (KD 0–13, CPC $2.86).
+* **Strategic Positioning:** *"Fremont's Gateway to Olympic Wrestling, No-Gi Jiu-Jitsu & Combat Sambo (Just 9 Minutes Away on Industrial Pkwy SW)."*
+* **Facility & Commute Copy:** "Located at 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544. A straight 9-minute shot north on I-880 from Fremont Blvd or Auto Mall Pkwy."
+* **Direct Inquiry:** Call or text Coach Naweed at (510) 303-4869.
+* **Target Offer:** Free 1-Day Trial Pass via [`/register`](/register).
 
-### Blueprint 7: `/bjj-takedowns-wrestle-jitsu`
-* **Target Intent:** Adult grapplers in Hayward, Fremont, and Oakland frustrated with guard-pulling culture who want aggressive takedowns and top control.
-* **Primary Keyword:** *"bjj near me"* (40,500 vol, KD 21, CPC $1.97), *"bjj classes near me"* (27,100 vol, KD 17, CPC $3.96), *"wrestle jitsu"* (880 vol, KD 3).
-* **Strategic Positioning:** *"The Missing Link in Your BJJ Game: High-Percentage Olympic Takedowns & Dominant Heavy Top Pressure."*
-* **Content Angle:** Taught by collegiate wrestlers who hold legitimate BJJ black belts. Bridges the gap between IBJJF rules, ADCC submission grappling, and collegiate wrestling ride time.
-* **Target Offer:** Free Grappler Takedown Diagnostic Session.
+### Blueprint 2: `/locations/union-city-ca` (James Logan Feeder & Scholastic Pipeline)
+* **Parent Silo:** [`/locations`](/locations)
+* **Breadcrumb Path:** Home (`/`) → Locations (`/locations`) → Union City, CA (`/locations/union-city-ca`)
+* **Target Intent:** Union City wrestlers and parents seeking high-caliber technique to compete for James Logan High School and MVAL championships.
+* **Primary Keywords:** *"union city wrestling"* (KD 0, CPC $1.40), *"wrestling union city ca"*, *"james logan wrestling club"*.
+* **Strategic Positioning:** *"Elite Wrestling Development for Union City Athletes (6 Minutes from James Logan High School via Whipple Rd)."*
+* **Facility & Commute Copy:** "Located at 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544. Just 6 minutes from central Union City via Whipple Rd and I-880."
+* **Direct Inquiry:** Call or text Coach Naweed at (510) 303-4869.
+* **Target Offer:** Free 1-Day Trial Pass via [`/register`](/register).
 
-### Blueprint 8: `/martial-arts-fremont-ca`
-* **Target Intent:** Adults and parents in Fremont searching for high-level combat sports training.
-* **Primary Keyword:** *"martial arts fremont ca"* (210 vol, KD 0, CPC $2.86), *"fremont martial arts"* (210 vol, KD 0, CPC $2.86), *"mixed martial arts near me"* (40,500 vol, KD 13).
-* **Strategic Positioning:** *"Fremont's Gateway to Olympic Wrestling, No-Gi Jiu-Jitsu & Combat Sambo (Just 7 Minutes Away)."*
-* **Content Angle:** Compare UWC's multi-discipline combat coaching against generic strip-mall studios. Easy commute up I-880 or Mission Blvd.
-* **Target Offer:** Free 1-Day All-Access Pass.
+### Blueprint 3: `/classes/kid-wrestling` (Pre-K–5th Youth Foundation & Parent Capture)
+* **Parent Silo:** [`/classes`](/classes)
+* **Breadcrumb Path:** Home (`/`) → Classes (`/classes`) → Kids Wrestling (`/classes/kid-wrestling`)
+* **Target Intent:** East Bay parents searching for kids wrestling, tumbling, motor mechanics, or martial arts alternatives for children ages 4–11.
+* **Primary Keywords:** *"youth wrestling near me"* (8,530 vol, KD 0–6, CPC $3.22), *"kids wrestling"*, *"youth wrestling programs"*.
+* **Strategic Positioning:** *"Kids Wrestling Classes (Ages 4–11) | Foundation Movement, Agility, and Unshakeable Confidence."*
+* **Facility & Commute Copy:** "Taught at our Hayward Olympic training facility (30139 Industrial Pkwy SW Ste C, Hayward, CA 94544) with hospital-grade sanitized mats and spectator seating."
+* **Direct Inquiry:** Call or text Coach Naweed at (510) 303-4869.
+* **Target Offer:** Free Youth Mat Assessment & Trial Class via [`/register`](/register).
+
+### Blueprint 4: `/classes/nogi-jiu-jitsu` (No-Gi Wrestle-Jitsu & Guard-Puller Antidote)
+* **Parent Silo:** [`/classes`](/classes)
+* **Breadcrumb Path:** Home (`/`) → Classes (`/classes`) → No-Gi Jiu-Jitsu (`/classes/nogi-jiu-jitsu`)
+* **Target Intent:** Adult grapplers and BJJ practitioners frustrated with guard-pulling culture who want explosive takedowns, submission defense, and heavy top control.
+* **Primary Keywords:** *"wrestle jitsu"* (880 vol, KD 3), *"bjj takedowns"*, *"wrestling for bjj"*, *"no gi jiu jitsu near me"* (4,200 vol, KD 3–14, CPC $2.75).
+* **Strategic Positioning:** *"The Missing Link in Your BJJ Game: Olympic Takedowns, Scramble Mastery & Dominant Top Pressure."*
+* **Facility & Commute Copy:** "Conveniently located for grapplers across Alameda County at 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544."
+* **Direct Inquiry:** Call or text Coach Naweed at (510) 303-4869.
+* **Target Offer:** Free Grappler Mat Assessment via [`/register`](/register).
+
+### Blueprint 5: `/classes/womens-self-defense` (Women's Self-Defense & Striking Seminar)
+* **Parent Silo:** [`/classes`](/classes)
+* **Breadcrumb Path:** Home (`/`) → Classes (`/classes`) → Women's Self-Defense (`/classes/womens-self-defense`)
+* **Target Intent:** Women and teen girls in Hayward and the East Bay seeking realistic, pressure-tested self-defense, escaping pins, and striking technique in a supportive environment.
+* **Primary Keywords:** *"women's self defense classes hayward"* (KD 0, CPC $3.50), *"womens self defense east bay"*, *"girls wrestling east bay"*.
+* **Strategic Positioning:** *"Women's Self-Defense & Striking | Practical Escape Mechanics, Positional Control & Striking Defense."*
+* **Leadership Copy:** Co-led by experienced female coaches Louisa, Neha's Sister, and Ja Shia.
+* **Facility & Commute Copy:** "Held at United Wrestling Club, 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544."
+* **Direct Inquiry:** Call or text Coach Naweed at (510) 303-4869.
+* **Target Offer:** Free Trial Session via [`/register`](/register).
 
 ---
 
@@ -203,14 +259,14 @@ Every page template will automatically inject standardized Schema.org JSON-LD li
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Programs",
-          "item": "https://www.unitedwrestlingclub.com/classes"
+          "name": "Locations",
+          "item": "https://www.unitedwrestlingclub.com/locations"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "[Page Program Name]",
-          "item": "https://www.unitedwrestlingclub.com/[page-slug]"
+          "name": "Fremont Wrestling & Combat Sports",
+          "item": "https://www.unitedwrestlingclub.com/locations/fremont-ca"
         }
       ]
     },
@@ -232,6 +288,14 @@ Every page template will automatically inject standardized Schema.org JSON-LD li
             "@type": "Answer",
             "text": "Athletic shorts (without zippers or pockets) and a clean t-shirt or rashguard. Wrestling shoes or bare feet on the mats. Bring a water bottle."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the gym located and how do I contact the coaches?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "United Wrestling Club is located at 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544, right off I-880. For questions, call or text Coach Naweed directly at (510) 303-4869."
+          }
         }
       ]
     }
@@ -240,13 +304,45 @@ Every page template will automatically inject standardized Schema.org JSON-LD li
 </script>
 ```
 
+### Breadcrumb Canonical Rules
+To maintain search engine silo purity, breadcrumbs strictly follow one of two active sitemap hierarchies:
+1. **Location Feeder Pages:** `Home (/) → Locations (/locations) → [City Name] (/locations/[city-slug]-ca)`
+2. **Discipline Program Pages:** `Home (/) → Classes (/classes) → [Program Name] (/classes/[discipline-slug])`
+
+### Active Internal Linking Silo Rules
+All internal page links across all 10 templates must resolve strictly to active sitemap routes:
+* **Discipline & Program Hub:** [`/classes`](/classes)
+* **Location Feeder Hub:** [`/locations`](/locations)
+* **Class Schedule & Booking:** [`/schedule`](/schedule)
+* **Tuition & Memberships:** [`/pricing`](/pricing)
+* **Free Trial & Registration:** [`/register`](/register)
+* **Olympic Pedigree & Coaches:** [`/about`](/about)
+* **Facility & Contact:** [`/contact`](/contact)
+* **Club Rules & Mat Hygiene:** [`/rules`](/rules)
+* **Frequently Asked Questions:** [`/faqs`](/faqs)
+
 ---
 
 ## 6. Implementation Rollout Schedule
 
 ```
-Phase 1 (Week 1): Deploy /wrestling-hayward-ca, /youth-wrestling-east-bay, and /kids-martial-arts-hayward.
-Phase 2 (Week 2): Deploy Tri-City pages (/wrestling-classes-fremont-ca, /wrestling-club-union-city, /martial-arts-fremont-ca).
-Phase 3 (Week 3): Deploy adult grappling pages (/adult-wrestling-bay-area, /bjj-takedowns-wrestle-jitsu, /open-mat-wrestling-grappling).
-Phase 4 (Week 4): Deploy /competition-team-pre-k-12 and connect automated SMS trial reminders.
+Phase 1 (Week 1): Deploy Core Feeder & Youth Pipeline:
+  - /locations/hayward-ca
+  - /classes/kid-wrestling
+  - /classes/youth-wrestling
+
+Phase 2 (Week 2): Deploy Tri-City Feeder Corridor:
+  - /locations/union-city-ca
+  - /locations/fremont-ca
+  - /locations/newark-ca
+
+Phase 3 (Week 3): Deploy Adult Grappling & Specialized Disciplines:
+  - /classes/adult-wrestling
+  - /classes/nogi-jiu-jitsu
+  - /classes/womens-self-defense
+
+Phase 4 (Week 4): Deploy Eden Area Feeder & Trial Pipeline:
+  - /locations/castro-valley-ca
+  - Connect automated SMS trial confirmations via (510) 303-4869
+  - Final verification of native /register intake endpoints
 ```

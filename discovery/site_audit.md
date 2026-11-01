@@ -38,30 +38,48 @@ Homepage (/)
 └── Contact (/contact)
 ```
 
-### Target Site Structure (Recommended)
+### Target Site Structure (Locked Zero-Redirect-Bloat IA)
 ```text
-Homepage (/)
-├── About Us (/about)
-│   ├── Coaching Pedigree & Olympic Heritage (/about/coaches)
-│   └── Facility & Location (/about/facility)
-├── Programs (/programs)
-│   ├── Youth Wrestling: Ages 4–11 (/programs/youth-wrestling)
-│   ├── Middle & High School Comp Team (/programs/competition-team)
-│   ├── Adult Wrestling & MMA Grappling (/programs/adult-wrestling)
-│   ├── Brazilian Jiu-Jitsu (Gi & No-Gi) (/programs/jiu-jitsu)
-│   ├── Combat Sambo (/programs/sambo)
-│   └── Boxing Fundamentals & Striking (/programs/boxing)
-├── Schedule & Class Times (/schedule)
-├── Memberships & Pricing (/pricing)
-├── Free Trial / Drop-In Intake (/free-trial) [High-Converting Native Funnel]
-├── Tournaments & Events (/events)
-├── Club Rules & Athlete Creed (/rules)
-├── FAQs (/faqs)
-├── Contact Us (/contact)
-└── Machine Discovery
-    ├── robots.txt
-    ├── sitemap.xml
-    └── llms.txt [GEO Engine Document]
+Homepage (/)                                                         [EXISTING - REDESIGN]
+├── About & Coaches (/about)                                         [EXISTING - UPGRADE]
+├── Classes & Programs Hub (/classes)                                [EXISTING - POPULATE EMPTY SHELL]
+│   ├── [Youth & Scholastic]
+│   │   ├── Kids Wrestling: Ages 4–11 (/classes/kid-wrestling)       [EXISTING - UPGRADE]
+│   │   └── Competition Youth & HS: K–12 (/classes/youth-wrestling)  [EXISTING - UPGRADE]
+│   ├── [Adult Grappling & Striking]
+│   │   ├── Adult Wrestling & MMA (/classes/adult-wrestling)         [EXISTING - UPGRADE]
+│   │   ├── No-Gi "Wrestle-Jitsu" (/classes/nogi-jiu-jitsu)          [EXISTING - UPGRADE]
+│   │   ├── Gi Brazilian Jiu-Jitsu (/classes/gi-jiu-jitsu)           [EXISTING - UPGRADE]
+│   │   ├── Combat Sambo (/classes/sambo)                            [EXISTING - UPGRADE]
+│   │   └── Boxing Fundamentals (/classes/boxing-fundamentals)       [EXISTING - UPGRADE]
+│   └── [Seminars & Open Mat]
+│       ├── Women's Self-Defense (/classes/womens-self-defense)      [✨ NEW]
+│       └── Saturday Open Mat (/classes/open-mat)                    [EXISTING - UPGRADE]
+├── Schedule & Class Times (/schedule)                               [EXISTING - FIX 7:30/8PM BUG]
+├── Memberships & Pricing (/pricing)                                 [EXISTING - ADD VALUE STACKS]
+├── Tournaments & Events (/events)                                   [EXISTING - 41 EVENTS + MIXER]
+├── Start Trial Intake Funnel (/register)                            [EXISTING - NATIVE 1-CLICK FUNNEL]
+├── East Bay Locations Served (/locations)                           [✨ NEW HUB]
+│   ├── Hayward, CA (/locations/hayward-ca)                          [✨ NEW]
+│   ├── Union City, CA (/locations/union-city-ca)                    [✨ NEW]
+│   ├── Fremont, CA (/locations/fremont-ca)                          [✨ NEW]
+│   ├── Newark, CA (/locations/newark-ca)                            [✨ NEW]
+│   └── Castro Valley & San Leandro (/locations/castro-valley-ca)    [✨ NEW]
+├── East Bay Wrestling Guides (/guides)                              [✨ NEW HUB]
+│   ├── Adult Wrestling in the Bay Area (/guides/adult-wrestling-bay-area)         [✨ NEW]
+│   ├── Youth Wrestling vs. Karate (/guides/youth-wrestling-vs-martial-arts)       [✨ NEW]
+│   ├── Takedowns for BJJ Grapplers (/guides/wrestling-for-bjj-takedowns)          [✨ NEW]
+│   ├── Off-Season HS Wrestling (/guides/high-school-off-season-wrestling)         [✨ NEW]
+│   └── DSAL Hayward to Olympic Pathway (/guides/dsal-hayward-wrestling-pathway)   [✨ NEW]
+├── Contact & Parking Map (/contact)                                 [EXISTING - UPGRADE]
+├── Parent & Athlete FAQs (/faqs)                                    [EXISTING - EXPAND 10 → 16]
+├── Club Rules & Mat Hygiene (/rules)                                [EXISTING - UPGRADE]
+├── Youth Scholarship Fund (/donate)                                 [EXISTING - POPULATE OR HIDE]
+└── Machine Discovery Feeds
+    ├── /robots.txt                                                  [✨ NEW - FIXES 404]
+    ├── /sitemap.xml                                                 [✨ NEW - FIXES 404]
+    ├── /llms.txt                                                    [✨ NEW - FIXES 404]
+    └── /llms-full.txt                                               [✨ NEW - FIXES 404]
 ```
 
 ---

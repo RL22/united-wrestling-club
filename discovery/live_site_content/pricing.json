@@ -1,0 +1,78 @@
+{
+  "pageTitle": "Membership Options",
+  "subtitle": "Invest in your wrestling journey with our flexible membership plans designed to fit your needs",
+  "homepageSpecialTrialOffer": {
+    "name": "Special Trial Offer (3 Day Trial)",
+    "price": 15.0,
+    "period": "for a 3 Day Trial",
+    "note": "New members only",
+    "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513",
+    "paidSessionId": 6327,
+    "teamId": 513
+  },
+  "plans": [
+    {
+      "name": "DROP IN",
+      "price": "15.00",
+      "period": "per day",
+      "schedule": "Flexible attendance",
+      "featured": false,
+      "paidSessionId": 2664,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&show_registration=true&team_id=513"
+    },
+    {
+      "name": "Kids (Pre k - 5th) 2 Day",
+      "price": "89.99",
+      "period": "/mo",
+      "schedule": "Monday & Wednesday Only",
+      "featured": false,
+      "paidSessionId": 1087,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=1087&show_registration=true&team_id=513"
+    },
+    {
+      "name": "4 Day Kids",
+      "price": "139.99",
+      "period": "/mo",
+      "schedule": "Monday - Thursday",
+      "featured": false,
+      "paidSessionId": 4981,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=4981&show_registration=true&team_id=513"
+    },
+    {
+      "name": "Middle School / High School",
+      "price": "139.99",
+      "period": "/mo",
+      "schedule": "Monday - Saturday",
+      "featured": false,
+      "paidSessionId": 2286,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2286&show_registration=true&team_id=513"
+    },
+    {
+      "name": "Competition Youth (Pre K - 12th)",
+      "price": "150.00",
+      "period": "/mo",
+      "schedule": "Monday - Saturday",
+      "featured": true,
+      "paidSessionId": 3574,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=3574&show_registration=true&team_id=513"
+    },
+    {
+      "name": "ADULT / COLLEGE / HIGHSCHOOL",
+      "price": "139.99",
+      "period": "/mo",
+      "schedule": "Monday - Saturday",
+      "featured": false,
+      "paidSessionId": 1084,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=1084&show_registration=true&team_id=513"
+    },
+    {
+      "name": "BJJ / 3 days",
+      "price": "100",
+      "period": "/mo",
+      "schedule": "",
+      "featured": false,
+      "paidSessionId": 9536,
+      "wrestlingIqUrl": "https://www.wrestlingiq.com/users/sign_up?paid_session_id=9536&show_registration=true&team_id=513"
+    }
+  ]
+}
