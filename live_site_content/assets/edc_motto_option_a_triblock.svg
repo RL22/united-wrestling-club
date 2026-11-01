@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <title>UWC Motto Treatment — Option A: The Heavyweight EDC Tri-Block</title>
+  <desc>Collegiate distressed block monogram 'E D C' with transparent masked cutout stripes, housing the full words EXCELLENCE, DISCIPLINE, CHAMPIONS.</desc>
+  
+  <defs>
+    <!-- Procedural Mat Scuff & Vintage Screenprint Grit Filter -->
+    <filter id="uwc-mat-grit-a" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045 0.85" numOctaves="4" seed="42" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -7.5" in="noise" result="gritMask" />
+      <feComposite in="SourceGraphic" in2="gritMask" operator="in" />
+    </filter>
+
+    <!-- Linear Chamfered Drop Shadow for Athletic Block Depth -->
+    <filter id="block-shadow" x="-5%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="8" dy="12" stdDeviation="0" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+
+    <!-- Knockout Mask: Carves Horizontal Negative Channels & Grit Through Letters -->
+    <mask id="triblock-knockout-mask">
+      <!-- Base white fill = 100% opaque -->
+      <rect width="100%" height="100%" fill="#FFFFFF" />
+      
+      <!-- Negative Cutout Channel 1: Upper Racing Stripe -->
+      <rect x="0" y="236" width="1280" height="22" fill="#000000" />
+      
+      <!-- Negative Cutout Channel 2: Lower Racing Stripe -->
+      <rect x="0" y="382" width="1280" height="22" fill="#000000" />
+
+      <!-- Built-in Vector Mat Scuffs & Wear Slits -->
+      <!-- Letter E Distress Notches -->
+      <polygon points="170,138 200,138 190,154 160,154" fill="#000000" />
+      <polygon points="360,160 395,160 382,182 347,182" fill="#000000" />
+      <polygon points="128,308 158,308 150,326 120,326" fill="#000000" />
+      <polygon points="285,475 330,475 318,502 273,502" fill="#000000" />
+      
+      <!-- Letter D Distress Notches -->
+      <polygon points="515,134 550,134 542,152 507,152" fill="#000000" />
+      <polygon points="718,278 748,278 736,306 706,306" fill="#000000" />
+      <polygon points="476,338 506,338 498,356 468,356" fill="#000000" />
+      <polygon points="675,468 712,468 698,498 661,498" fill="#000000" />
+
+      <!-- Letter C Distress Notches -->
+      <polygon points="865,142 902,142 890,166 853,166" fill="#000000" />
+      <polygon points="1088,188 1124,188 1112,216 1076,216" fill="#000000" />
+      <polygon points="836,328 872,328 864,346 828,346" fill="#000000" />
+      <polygon points="1065,446 1112,446 1094,476 1047,476" fill="#000000" />
+
+      <!-- Horizontal Mat Scuff Lines -->
+      <rect x="220" y="188" width="850" height="2.5" fill="#000000" opacity="0.85" />
+      <rect x="150" y="308" width="980" height="3" fill="#000000" opacity="0.9" />
+      <rect x="200" y="440" width="880" height="2.5" fill="#000000" opacity="0.85" />
+    </mask>
+
+    <style>
+      .collegiate-header { font-family: 'Montserrat', 'Impact', sans-serif; font-size: 15px; font-weight: 900; letter-spacing: 0.38em; fill: #C5A059; text-anchor: middle; }
+      .pillar-subtext { font-family: 'Montserrat', 'Arial Black', sans-serif; font-size: 26px; font-weight: 900; letter-spacing: 0.18em; fill: #FFFFFF; text-anchor: middle; }
+      .meta-tag { font-family: 'Montserrat', monospace, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 0.3em; fill: #A0A0A0; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Graphic Root Container -->
+  <g id="option-a-tri-block">
+    
+    <!-- TOP INDUSTRIAL METADATA STRIP -->
+    <g id="top-meta" transform="translate(640, 68)">
+      <!-- Left & Right Accent Ticks -->
+      <line x1="-540" y1="-5" x2="-340" y2="-5" stroke="#C5A059" stroke-width="2" stroke-dasharray="16 6" />
+      <line x1="340" y1="-5" x2="540" y2="-5" stroke="#C5A059" stroke-width="2" stroke-dasharray="16 6" />
+      <text x="0" y="0" class="collegiate-header">UNITED WRESTLING CLUB • USA RTC #513 • HAYWARD CA</text>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- LAYER 1: OUTER OFFSET CONTOUR STROKES (Collegiate Jacket Trim) -->
+    <!-- ======================================================== -->
+    <g id="outer-contours" fill="none" stroke="#C5A059" stroke-width="3.5" stroke-linejoin="miter" opacity="0.85">
+      <!-- Letter E Contour Box -->
+      <polygon points="120,160 152,120 368,120 398,150 398,206 364,228 298,228 280,244 280,266 298,282 356,282 378,304 378,336 356,358 298,358 280,374 280,396 298,412 364,412 398,434 398,490 368,520 152,520 120,480" />
+      
+      <!-- Letter D Contour Box -->
+      <polygon points="460,160 492,120 678,120 760,202 760,438 678,520 492,520 460,480" />
+      
+      <!-- Letter C Contour Box -->
+      <polygon points="1108,120 1140,152 1140,216 1104,238 976,238 934,276 934,364 976,402 1104,402 1140,424 1140,488 1108,520 862,520 820,476 820,164 862,120" />
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- LAYER 2: PRIMARY HEAVYWEIGHT MONOGRAM BLOCK (E D C)      -->
+    <!-- Masked with horizontal knockout strips & mat distress      -->
+    <!-- ======================================================== -->
+    <g id="triblock-letters" mask="url(#triblock-knockout-mask)" filter="url(#uwc-mat-grit-a)">
+      
+      <!-- LETTER E (Chamfered Athletic Collegiate Block) -->
+      <g id="letter-e" filter="url(#block-shadow)">
+        <polygon points="130,160 160,130 360,130 390,160 390,200 360,220 290,220 270,240 270,270 290,290 350,290 370,310 370,330 350,350 290,350 270,370 270,400 290,420 360,420 390,440 390,480 360,510 160,510 130,480"
+                 fill="#902524" stroke="#BA1C1C" stroke-width="4" stroke-linejoin="bevel" />
+        <!-- Inner Contrast Bevel Accent -->
+        <polygon points="144,166 168,142 352,142 376,166 376,194 352,210 282,210 258,234 258,276 282,300 342,300 356,314 356,326 342,340 282,340 258,364 258,406 282,430 352,430 376,446 376,474 352,498 168,498 144,474"
+                 fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.32" />
+      </g>
+
+      <!-- LETTER D (Chamfered Athletic Collegiate Block with Counter) -->
+      <g id="letter-d" filter="url(#block-shadow)">
+        <!-- Outer Solid Shell -->
+        <polygon points="470,160 500,130 670,130 750,210 750,430 670,510 500,510 470,480"
+                 fill="#902524" stroke="#BA1C1C" stroke-width="4" stroke-linejoin="bevel" />
+        <!-- Inner Counter Cutout (Window) -->
+        <polygon points="560,220 630,220 660,250 660,390 630,420 560,420"
+                 fill="#0B0B0C" opacity="0.96" />
+        <!-- Inner Contrast Bevel Accent -->
+        <polygon points="484,166 508,142 662,142 736,216 736,424 662,498 508,498 484,474"
+                 fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.32" />
+      </g>
+
+      <!-- LETTER C (Chamfered Athletic Collegiate Block) -->
+      <g id="letter-c" filter="url(#block-shadow)">
+        <polygon points="1100,130 1130,160 1130,210 1100,230 970,230 930,270 930,370 970,410 1100,410 1130,430 1130,480 1100,510 870,510 830,470 830,170 870,130"
+                 fill="#902524" stroke="#BA1C1C" stroke-width="4" stroke-linejoin="bevel" />
+        <!-- Inner Contrast Bevel Accent -->
+        <polygon points="1092,142 1118,168 1118,202 1092,220 962,220 918,264 918,376 962,420 1092,420 1118,438 1118,472 1092,498 878,498 842,462 842,178 878,142"
+                 fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.32" />
+      </g>
+
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- LAYER 3: PILLAR WORDS ANCHORED DIRECTLY BENEATH EACH MONO -->
+    <!-- ======================================================== -->
+    <g id="pillar-labels" transform="translate(0, 568)">
+      <!-- Label 1: EXCELLENCE (under E) -->
+      <g id="label-excellence" transform="translate(260, 0)">
+        <rect x="-120" y="-30" width="240" height="42" fill="#0E0E0E" rx="2" stroke="#BA1C1C" stroke-width="1.5" />
+        <text x="0" y="0" class="pillar-subtext">EXCELLENCE</text>
+      </g>
+
+      <!-- Label 2: DISCIPLINE (under D) -->
+      <g id="label-discipline" transform="translate(610, 0)">
+        <rect x="-120" y="-30" width="240" height="42" fill="#0E0E0E" rx="2" stroke="#FFFFFF" stroke-width="1.5" />
+        <text x="0" y="0" class="pillar-subtext">DISCIPLINE</text>
+      </g>
+
+      <!-- Label 3: CHAMPIONS (under C) -->
+      <g id="label-champions" transform="translate(980, 0)">
+        <rect x="-120" y="-30" width="240" height="42" fill="#0E0E0E" rx="2" stroke="#C5A059" stroke-width="1.5" />
+        <text x="0" y="0" class="pillar-subtext" style="fill: #C5A059;">CHAMPIONS</text>
+      </g>
+    </g>
+
+    <!-- ======================================================== -->
+    <!-- LAYER 4: BOTTOM FOUNDATION ANCHOR BAR                   -->
+    <!-- ======================================================== -->
+    <g id="bottom-anchor" transform="translate(640, 650)">
+      <rect x="-540" y="-18" width="1080" height="36" fill="#141414" stroke="#262626" stroke-width="1.5" />
+      <text x="0" y="6" class="meta-tag">FOUNDED BY 1980 MOSCOW OLYMPIAN KARIM ZEMARYALAI // HAYWARD INDUSTRIAL MATS</text>
+      
+      <!-- Tactical Chevron End Caps -->
+      <polygon points="-540,-18 -520,0 -540,18" fill="#BA1C1C" />
+      <polygon points="540,-18 520,0 540,18" fill="#BA1C1C" />
+    </g>
+
+  </g>
+</svg>
