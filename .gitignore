@@ -1,6 +1,7 @@
 # Ignore large video files over GitHub 100MB limit
 discovery/video_assets/UWC_1080p_remastered.mp4
 discovery/video_assets/UWC_1080p_silent.mp4
+discovery/scratch/
 
 # OS metadata
 .DS_Store
