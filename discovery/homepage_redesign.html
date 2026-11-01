@@ -19,6 +19,8 @@
     "@type": "SportsClub",
     "name": "United Wrestling Club",
     "alternateName": "UWC Hayward",
+    "url": "https://www.unitedwrestlingclub.com/",
+    "description": "Hayward's premier Olympic wrestling academy, youth scholastic training, and adult combat grappling. Founded by 1980 Moscow Olympian Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology).",
     "logo": "https://www.unitedwrestlingclub.com/live_site_content/assets/logo.png",
     "image": "https://www.unitedwrestlingclub.com/video_assets/stills_selected/still_06_dummy_takedown_drill.jpg",
     "telephone": "(510) 303-4869",
@@ -36,7 +38,17 @@
       "latitude": 37.6033,
       "longitude": -122.0538
     },
+    "areaServed": [
+      "Hayward",
+      "Union City",
+      "Fremont",
+      "Newark",
+      "Castro Valley",
+      "San Leandro"
+    ],
     "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -60,7 +72,30 @@
       "@type": "Person",
       "name": "Naweed Zemaryalai",
       "jobTitle": "Head Wrestling Coach & Kinesiologist"
-    }
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "3-Day Mat Pass",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "3 consecutive wrestling practices, gear fitting, and coach assessment."
+      },
+      {
+        "@type": "Offer",
+        "name": "Monthly Unlimited Academy Membership",
+        "price": "139.99",
+        "priceCurrency": "USD",
+        "description": "Unlimited weekly practices, Saturday open mat access, zero initiation fees, zero contracts."
+      },
+      {
+        "@type": "Offer",
+        "name": "Single Mat Drop-In",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "Single practice or Saturday open mat session."
+      }
+    ]
   }
   </script>
 
@@ -2056,6 +2091,73 @@
       .safety-grid {
         grid-template-columns: 1fr;
       }
+
+      /* Pricing Grid & Card Responsive Hygiene: Zero Card Orphans, Zero Blowout */
+      .pricing-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .pricing-card {
+        padding: 28px 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pricing-card.featured {
+        transform: none !important;
+      }
+      .pricing-card .btn {
+        width: 100% !important;
+        padding: 14px 16px !important;
+        font-size: 0.85rem !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Roster Banner Mobile */
+      .roster-banner img {
+        height: 280px;
+        object-position: center 25%;
+      }
+      .roster-overlay {
+        padding: 20px 16px;
+        gap: 12px;
+      }
+      .roster-overlay-title {
+        font-size: 1.25rem;
+      }
+      .roster-overlay-sub {
+        font-size: 0.82rem;
+      }
+      .roster-overlay .btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Pre-Footer CTA Banner Mobile */
+      .cta-banner .btn,
+      .cta-banner-btn {
+        width: 100% !important;
+        max-width: 360px !important;
+        padding: 16px 20px !important;
+        font-size: 0.88rem !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
+      }
+
+      /* Modal Mobile Hygiene */
+      .modal-card {
+        padding: 26px 18px !important;
+        width: 92% !important;
+        max-width: 480px !important;
+        margin: 16px auto !important;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -2792,7 +2894,7 @@
         <p class="cta-banner-sub">
           Claim your 3-day mat pass for just $15. Meet Head Coach Naweed, experience our mat culture, and see why East Bay champions train at UWC.
         </p>
-        <button class="btn btn-primary btn-accent-glow open-trial-modal" style="padding: 18px 36px; font-size: 1rem;">
+        <button class="btn btn-primary btn-accent-glow open-trial-modal cta-banner-btn">
           Claim Your $15 3-Day Mat Pass
         </button>
       </div>
