@@ -259,12 +259,26 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.2s ease;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(34, 197, 94, 0.16);
+      border: 1px solid rgba(34, 197, 94, 0.40);
+      cursor: pointer;
+      pointer-events: auto !important;
+      touch-action: manipulation;
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 20;
     }
 
     .marquee-item a:hover,
-    .marquee-link:hover {
+    .marquee-link:hover,
+    .marquee-link:focus,
+    .marquee-link:active {
       color: #ffffff;
+      background: rgba(34, 197, 94, 0.32);
+      border-color: #22c55e;
+      transform: translateY(-1px);
     }
 
     .marquee-divider {
@@ -676,6 +690,10 @@
 
     .hero-content {
       max-width: 820px;
+    }
+
+    .hero-body-block {
+      display: block;
     }
 
     /* Universal No-Wrap & Box Sizing on All Pill Badges */
@@ -1901,39 +1919,9 @@
         align-items: center;
       }
 
-      /* 2. Tap-to-call phone icon button in sticky header */
+      /* 2. Hide call icon from sticky nav on mobile (prominently clickable in top marquee) */
       .nav-phone {
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        width: 38px;
-        height: 38px;
-        min-height: 38px;
-        padding: 0;
-        border-radius: var(--radius-sm);
-        background: rgba(34, 197, 94, 0.12);
-        border: 1px solid rgba(34, 197, 94, 0.35);
-        color: #22c55e;
-        text-decoration: none;
-        flex-shrink: 0;
-        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .nav-phone .phone-number {
-        display: none;
-      }
-      .nav-phone svg {
-        width: 15px;
-        height: 15px;
-        color: #22c55e;
-      }
-      .nav-phone:hover,
-      .nav-phone:focus {
-        background: rgba(34, 197, 94, 0.22);
-        border-color: #22c55e;
-        transform: translateY(-1px);
-      }
-      .nav-phone:active {
-        transform: scale(0.95);
+        display: none !important;
       }
 
       /* 3. Bold, prominent mobile Nav CTA */
@@ -1941,8 +1929,8 @@
       .btn.btn-nav-cta {
         height: 38px;
         min-height: 38px;
-        padding: 0 14px;
-        font-size: 0.78rem;
+        padding: 0 16px;
+        font-size: 0.80rem;
         font-weight: 800;
         letter-spacing: 0.04em;
         box-shadow: 0 3px 12px rgba(144, 37, 36, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.22);
@@ -1955,45 +1943,71 @@
         display: inline !important;
       }
 
-      /* 4. Mobile Hero - Cinematic Breathing Room & Video Visibility */
+      /* 4. Mobile Hero - Center Video Clearance Layout */
       .hero-section {
         min-height: calc(100svh - 98px);
+        height: auto;
         display: flex;
-        align-items: center;
-        padding: clamp(32px, 6vh, 52px) 0;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 !important;
+        position: relative;
         border-bottom: 1px solid var(--color-border);
+        box-sizing: border-box;
       }
-      .hero-video {
-        filter: brightness(0.70) contrast(1.1) saturate(1.15) !important;
-        object-position: center 30% !important;
-      }
-      .hero-grunge-overlay {
-        opacity: 0.07 !important;
-      }
-      .hero-scrim {
-        background: linear-gradient(180deg, rgba(9, 10, 13, 0.15) 0%, rgba(9, 10, 13, 0.38) 45%, rgba(9, 10, 13, 0.88) 100%) !important;
+      .hero-container {
+        width: 100%;
+        min-height: calc(100svh - 98px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 55px; /* ~60px from the top within the hero border */
+        padding-bottom: 55px; /* ~60px to the bottom within the hero border */
+        box-sizing: border-box;
+        position: relative;
+        z-index: 3;
       }
       .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        min-height: calc(100svh - 98px - 110px);
+        width: 100%;
         max-width: 100%;
         text-align: left;
+      }
+      .hero-badge-strip {
+        align-self: flex-start;
+        margin: 0;
+        font-size: 0.72rem;
+        padding: 6px 14px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      }
+      .hero-body-block {
+        width: 100%;
+        margin-top: auto; /* Drops H1, subtitle, and CTA down to the bottom */
+        padding-top: 36px;
       }
       .hero-title {
         font-size: clamp(2.1rem, 9.2vw, 2.75rem);
         line-height: 1.05;
         letter-spacing: -0.02em;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
       }
       .hero-subtitle {
         font-size: clamp(0.92rem, 3.8vw, 1.04rem);
         line-height: 1.48;
-        color: #c4cad4;
-        margin-bottom: 26px;
-        max-width: 92%;
+        color: #e2e8f0;
+        margin-bottom: 22px;
+        max-width: 95%;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
       }
       .hero-cta-group {
         display: block;
         width: 100%;
-        max-width: 330px;
+        max-width: 340px;
         margin-bottom: 0;
       }
       .hero-cta-group .btn.btn-primary {
@@ -2007,7 +2021,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 6px 24px rgba(186, 28, 28, 0.55), 0 0 20px rgba(186, 28, 28, 0.35);
+        box-shadow: 0 6px 24px rgba(186, 28, 28, 0.6), 0 0 20px rgba(186, 28, 28, 0.4);
+      }
+      .hero-video {
+        filter: brightness(0.78) contrast(1.12) saturate(1.15) !important;
+        object-position: center 36% !important;
+      }
+      .hero-grunge-overlay {
+        opacity: 0.05 !important;
+      }
+      /* Center clearance scrim: completely open center for takedown video visibility */
+      .hero-scrim {
+        background: linear-gradient(
+          180deg,
+          rgba(9, 10, 13, 0.50) 0%,
+          rgba(9, 10, 13, 0.12) 18%,
+          rgba(9, 10, 13, 0.02) 45%,
+          rgba(9, 10, 13, 0.45) 70%,
+          rgba(9, 10, 13, 0.95) 100%
+        ) !important;
       }
 
       /* Grids and Section Headings */
@@ -2190,7 +2222,7 @@
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
-          <a href="tel:5103034869" class="marquee-link" tabindex="-1">
+          <a href="tel:5103034869" class="marquee-link" aria-label="Call or text United Wrestling Club at (510) 303-4869">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             <span>CALL / TEXT: <strong class="marquee-phone">(510) 303-4869</strong></span>
           </a>
@@ -2261,57 +2293,59 @@
           <span class="hero-badge-location">HAYWARD, CA</span>
         </div>
 
-        <h1 class="hero-title">
-          EXCELLENCE. <br>
-          DISCIPLINE. <br>
-          <span class="crimson">CHAMPIONS.</span>
-        </h1>
+        <div class="hero-body-block">
+          <h1 class="hero-title">
+            EXCELLENCE. <br>
+            DISCIPLINE. <br>
+            <span class="crimson">CHAMPIONS.</span>
+          </h1>
 
-        <p class="hero-subtitle">
-          <span class="subtitle-full">Northern California's premier Olympic and Folkstyle wrestling room. Founded by <strong>1980 Moscow Olympian Karim Zemaryalai</strong> and directed by collegiate kinesiologists. We forge mental discipline, championship takedown technique, and podium contenders in <strong>Hayward,&nbsp;California</strong>.</span>
-          <span class="subtitle-mobile">Northern California's premier Olympic wrestling room in Hayward. Founded by <strong>1980 Olympian Karim Zemaryalai</strong>.</span>
-        </p>
+          <p class="hero-subtitle">
+            <span class="subtitle-full">Northern California's premier Olympic and Folkstyle wrestling room. Founded by <strong>1980 Moscow Olympian Karim Zemaryalai</strong> and directed by collegiate kinesiologists. We forge mental discipline, championship takedown technique, and podium contenders in <strong>Hayward,&nbsp;California</strong>.</span>
+            <span class="subtitle-mobile">Northern California's premier Olympic wrestling room in Hayward. Founded by <strong>1980 Olympian Karim Zemaryalai</strong>.</span>
+          </p>
 
-        <div class="hero-cta-group">
-          <button class="btn btn-primary btn-accent-glow open-trial-modal">
-            Claim Your $15 3-Day Pass
-          </button>
-          
-          <div class="trial-callout-pill desktop-only">
-            <span class="trial-price">$15</span>
-            <div class="trial-desc">
-              <strong>3-Day Mat Pass</strong>
-              <span>New Members • All Programs</span>
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-accent-glow open-trial-modal">
+              Claim Your $15 3-Day Pass
+            </button>
+            
+            <div class="trial-callout-pill desktop-only">
+              <span class="trial-price">$15</span>
+              <div class="trial-desc">
+                <strong>3-Day Mat Pass</strong>
+                <span>New Members • All Programs</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="hero-phone-direct desktop-only">
-          <a href="tel:5103034869" class="hero-phone-direct-link" aria-label="Direct mat room line: call or text 510-303-4869">
-            <svg class="phone-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-            </svg>
-            <span>Questions? Call or text direct: <strong class="hero-phone-num">(510) 303-4869</strong></span>
-          </a>
-        </div>
+          <div class="hero-phone-direct desktop-only">
+            <a href="tel:5103034869" class="hero-phone-direct-link" aria-label="Direct mat room line: call or text 510-303-4869">
+              <svg class="phone-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <span>Questions? Call or text direct: <strong class="hero-phone-num">(510) 303-4869</strong></span>
+            </a>
+          </div>
 
-        <!-- 4 Balanced Columns: No Orphans -->
-        <div class="hero-proof-grid desktop-only">
-          <div class="proof-item">
-            <div class="proof-stat">1980 <span>MOSCOW</span></div>
-            <div class="proof-label">Olympian & Dagestan Lineage</div>
-          </div>
-          <div class="proof-item">
-            <div class="proof-stat">1:6 <span>RATIO</span></div>
-            <div class="proof-label">Coach-to-Athlete Focus</div>
-          </div>
-          <div class="proof-item">
-            <div class="proof-stat">3,000 <span>SQ FT</span></div>
-            <div class="proof-label">Dollamur Seamless Mats</div>
-          </div>
-          <div class="proof-item">
-            <div class="proof-stat">5.0 ★ <span>GOOGLE</span></div>
-            <div class="proof-label">42+ Verified Parent Reviews</div>
+          <!-- 4 Balanced Columns: No Orphans -->
+          <div class="hero-proof-grid desktop-only">
+            <div class="proof-item">
+              <div class="proof-stat">1980 <span>MOSCOW</span></div>
+              <div class="proof-label">Olympian & Dagestan Lineage</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-stat">1:6 <span>RATIO</span></div>
+              <div class="proof-label">Coach-to-Athlete Focus</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-stat">3,000 <span>SQ FT</span></div>
+              <div class="proof-label">Dollamur Seamless Mats</div>
+            </div>
+            <div class="proof-item">
+              <div class="proof-stat">5.0 ★ <span>GOOGLE</span></div>
+              <div class="proof-label">42+ Verified Parent Reviews</div>
+            </div>
           </div>
         </div>
       </div>
@@ -2960,6 +2994,23 @@
       formContainer.style.display = 'none';
       successState.style.display = 'block';
     });
+
+    // Pause marquee immediately when touched on mobile so phone CTA is effortless to tap
+    const topBar = document.querySelector('.top-bar');
+    if (topBar) {
+      topBar.addEventListener('touchstart', () => {
+        const track = topBar.querySelector('.marquee-track');
+        if (track) track.style.animationPlayState = 'paused';
+      }, { passive: true });
+      topBar.addEventListener('touchend', () => {
+        const track = topBar.querySelector('.marquee-track');
+        if (track) {
+          setTimeout(() => {
+            track.style.animationPlayState = 'running';
+          }, 1500);
+        }
+      }, { passive: true });
+    }
   </script>
 </body>
 </html>

@@ -1,0 +1,213 @@
+{
+  "pageTitle": "Class Schedule",
+  "subtitle": "View our comprehensive class schedule and find the perfect time to train",
+  "ctaButton": "Download Schedule (triggers html2canvas download of schedule.png)",
+  "referenceImage": "assets/schedule_grid_reference.png",
+  "timeRows": [
+    "6:30 AM",
+    "8:00 AM",
+    "10:00 AM",
+    "5:00 PM",
+    "6:30 PM",
+    "7:30 PM",
+    "8:00 PM",
+    "9:00 PM",
+    "9:30 PM",
+    "9:45 PM"
+  ],
+  "days": {
+    "Monday": [
+      {
+        "time": "6:30 AM - 8:00 AM",
+        "title": "Gi Jiu Jitsu",
+        "category": "gi-jiu-jitsu"
+      },
+      {
+        "time": "5:00 PM - 6:30 PM",
+        "title": "UWC TEAM / COMPETITION (GRADES K-12th)",
+        "category": "competition"
+      },
+      {
+        "time": "6:30 PM - 7:30 PM",
+        "title": "KIDS (GRADES pre-K-5th)",
+        "category": "kids"
+      },
+      {
+        "time": "7:30 PM - 9:00 PM",
+        "title": "ADULT / HIGH SCHOOL",
+        "category": "adult"
+      },
+      {
+        "time": "9:00 PM - 9:30 PM",
+        "title": "OPEN / TECHNIQUE / CONDITIONING / STRENGTH",
+        "category": "open"
+      },
+      {
+        "time": "9:30 PM - 9:45 PM",
+        "title": "CLEAN-UP",
+        "category": "clean-up"
+      },
+      {
+        "time": "9:45 PM",
+        "title": "CLOSED",
+        "category": "closed"
+      }
+    ],
+    "Tuesday": [
+      {
+        "time": "8:00 AM - 9:30 AM",
+        "title": "ADULT / COLLEGE / HIGHSCHOOL",
+        "category": "adult"
+      },
+      {
+        "time": "5:00 PM - 6:30 PM",
+        "title": "UWC TEAM / COMPETITION (GRADES K-12th)",
+        "category": "competition"
+      },
+      {
+        "time": "6:30 PM - 7:30 PM",
+        "title": "Gi Jiu Jitsu",
+        "category": "gi-jiu-jitsu"
+      },
+      {
+        "time": "7:30 PM - 9:00 PM",
+        "title": "ADULT / HIGH SCHOOL",
+        "category": "adult"
+      },
+      {
+        "time": "9:00 PM - 9:30 PM",
+        "title": "OPEN / TECHNIQUE / CONDITIONING / STRENGTH",
+        "category": "open"
+      },
+      {
+        "time": "9:30 PM - 9:45 PM",
+        "title": "CLEAN-UP",
+        "category": "clean-up"
+      },
+      {
+        "time": "9:45 PM",
+        "title": "CLOSED",
+        "category": "closed"
+      }
+    ],
+    "Wednesday": [
+      {
+        "time": "6:30 AM - 8:00 AM",
+        "title": "Gi Jiu Jitsu",
+        "category": "gi-jiu-jitsu"
+      },
+      {
+        "time": "5:00 PM - 6:30 PM",
+        "title": "UWC TEAM / COMPETITION (GRADES K-12th)",
+        "category": "competition"
+      },
+      {
+        "time": "6:30 PM - 7:30 PM",
+        "title": "KIDS (GRADES pre-K-5th)",
+        "category": "kids"
+      },
+      {
+        "time": "7:30 PM - 9:00 PM",
+        "title": "ADULT / HIGH SCHOOL",
+        "category": "adult"
+      },
+      {
+        "time": "9:00 PM - 9:30 PM",
+        "title": "OPEN / TECHNIQUE / CONDITIONING / STRENGTH",
+        "category": "open"
+      },
+      {
+        "time": "9:30 PM - 9:45 PM",
+        "title": "CLEAN-UP",
+        "category": "clean-up"
+      },
+      {
+        "time": "9:45 PM",
+        "title": "CLOSED",
+        "category": "closed"
+      }
+    ],
+    "Thursday": [
+      {
+        "time": "8:00 AM - 9:30 AM",
+        "title": "ADULT / COLLEGE / HIGHSCHOOL",
+        "category": "adult"
+      },
+      {
+        "time": "5:00 PM - 6:30 PM",
+        "title": "UWC TEAM / COMPETITION (GRADES K-12th)",
+        "category": "competition"
+      },
+      {
+        "time": "6:30 PM - 7:30 PM",
+        "title": "Gi Jiu Jitsu",
+        "category": "gi-jiu-jitsu"
+      },
+      {
+        "time": "7:30 PM - 9:00 PM",
+        "title": "ADULT / HIGH SCHOOL",
+        "category": "adult"
+      },
+      {
+        "time": "9:00 PM - 9:30 PM",
+        "title": "OPEN / TECHNIQUE / CONDITIONING / STRENGTH",
+        "category": "open"
+      },
+      {
+        "time": "9:30 PM - 9:45 PM",
+        "title": "CLEAN-UP",
+        "category": "clean-up"
+      },
+      {
+        "time": "9:45 PM",
+        "title": "CLOSED",
+        "category": "closed"
+      }
+    ],
+    "Friday": [
+      {
+        "time": "6:30 AM - 8:00 AM",
+        "title": "Gi Jiu Jitsu",
+        "category": "gi-jiu-jitsu"
+      },
+      {
+        "time": "5:00 PM - 6:30 PM",
+        "title": "Kids comp",
+        "category": "competition"
+      },
+      {
+        "time": "6:30 PM - 8:00 PM",
+        "title": "Boxing / No Gi Jiu Jitsu",
+        "category": "boxing"
+      },
+      {
+        "time": "8:00 PM - 9:30 PM",
+        "title": "Adult Wrestling",
+        "category": "adult"
+      },
+      {
+        "time": "9:30 PM - 9:45 PM",
+        "title": "CLEAN-UP",
+        "category": "clean-up"
+      },
+      {
+        "time": "9:45 PM",
+        "title": "CLOSED",
+        "category": "closed"
+      }
+    ],
+    "Saturday": [
+      {
+        "time": "8:00 AM - 10:00 AM",
+        "title": "Gi Jiu Jitsu",
+        "category": "gi-jiu-jitsu"
+      },
+      {
+        "time": "10:00 AM - 12:00 PM",
+        "title": "OPEN MAT",
+        "category": "open"
+      }
+    ],
+    "Sunday": []
+  }
+}
