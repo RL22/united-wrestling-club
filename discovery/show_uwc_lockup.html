@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UWC Logo Concept Lockup: 1x1 Wrestlers + Monogram</title>
+  <title>United Wrestling Club - Official Logo Suite & Lockup System</title>
   <style>
     :root {
       --bg: #07080b;
       --card-dark: #101218;
       --card-border: rgba(255, 255, 255, 0.08);
       --crimson: #ba1c1c;
+      --gold: #d97706;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -26,37 +27,68 @@
     .header {
       margin-bottom: 32px;
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 20px;
+      padding-bottom: 24px;
     }
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 800;
       color: #fff;
       display: flex;
       align-items: center;
       gap: 12px;
+      letter-spacing: -0.02em;
     }
     .badge {
       background: rgba(186, 28, 28, 0.2);
       border: 1px solid rgba(186, 28, 28, 0.4);
       color: #ff8584;
       font-size: 12px;
-      font-weight: 600;
-      padding: 3px 10px;
+      font-weight: 700;
+      padding: 4px 12px;
       border-radius: 9999px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     p.subtitle {
       color: #94a3b8;
-      margin-top: 6px;
-      font-size: 14px;
+      margin-top: 8px;
+      font-size: 15px;
+    }
+    .grid-math-box {
+      background: rgba(186, 28, 28, 0.08);
+      border: 1px solid rgba(186, 28, 28, 0.25);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      color: #cbd5e1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .grid-math-box span { color: #ff8584; font-weight: 700; }
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #f1f5f9;
+      margin: 40px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 20px;
+      background: var(--crimson);
+      border-radius: 2px;
     }
     .stack {
       display: flex;
       flex-direction: column;
       gap: 28px;
-      margin-bottom: 48px;
+      margin-bottom: 36px;
     }
     .card {
       background: var(--card-dark);
@@ -83,16 +115,21 @@
       color: #94a3b8;
     }
     .stage {
-      padding: 36px 32px;
+      padding: 40px 32px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .stage img {
       width: 100%;
-      max-width: 720px;
       height: auto;
       display: block;
+    }
+    .stage.inline-stage img {
+      max-width: 760px;
+    }
+    .stage.stacked-stage img {
+      max-width: 460px;
     }
     .dark-surface { background: #101218; }
     .white-surface { background: #ffffff; }
@@ -108,6 +145,7 @@
       gap: 24px;
       flex-wrap: wrap;
     }
+    .meta strong { color: #e2e8f0; }
     .scale-row {
       background: var(--card-dark);
       border: 1px solid var(--card-border);
@@ -116,7 +154,7 @@
       margin-bottom: 48px;
     }
     .scale-row h3 {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
       color: #f1f5f9;
       margin-bottom: 20px;
@@ -139,7 +177,7 @@
       font-family: ui-monospace, monospace;
     }
     .surface-strip {
-      padding: 12px 20px;
+      padding: 14px 24px;
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -151,104 +189,193 @@
   <div class="wrap">
     <div class="header">
       <h1>
-        UWC New Logo Concept Lockup
-        <span class="badge">1x1 Wrestlers + Monogram</span>
+        United Wrestling Club - Official Logo System
+        <span class="badge">Master Grid U=16</span>
       </h1>
-      <p class="subtitle">Wrestlers illustration fitted 1:1 on the left + collegiate UWC monogram on the right across light, dark, and crimson surfaces.</p>
+      <p class="subtitle">Mathematically unified lockup architecture: 1x1 wrestlers mark + collegiate UWC monogram + arched club subtitle.</p>
+      
+      <div class="grid-math-box">
+        <div><span>Master Unit:</span> U = 16 SVG units</div>
+        <div><span>Monogram Cap Height:</span> H = 12U = 192 units</div>
+        <div><span>Monogram Scale:</span> k = 1.212627</div>
+        <div><span>Inline ViewBox:</span> 1248 &times; 336 (78U &times; 21U)</div>
+        <div><span>Stacked ViewBox:</span> 752 &times; 624 (47U &times; 39U)</div>
+      </div>
     </div>
 
+    <!-- Section 1: Inline (Horizontal) Lockups -->
+    <div class="section-title">1. Inline (Horizontal) Lockups</div>
     <div class="stack">
-      <!-- Concept 1: Clean Dark on Light Surface -->
+      <!-- 1A: Frameless Inline (Light) -->
       <div class="card">
         <div class="card-header">
-          <h2>1. Horizontal Lockup (Light Surface)</h2>
-          <span>File: uwc_lockup_horizontal.svg</span>
+          <h2>Frameless Inline Lockup (Light Surface)</h2>
+          <span>assets/uwc_lockup_horizontal.svg</span>
         </div>
-        <div class="stage white-surface">
-          <img src="../discovery/assets/uwc_lockup_horizontal.svg" alt="UWC Lockup on Light" />
+        <div class="stage inline-stage white-surface">
+          <img src="assets/uwc_lockup_horizontal.svg" alt="Frameless Inline Light" />
         </div>
         <div class="meta">
-          <div>Left: 1x1 Wrestlers (Square 180&times;180)</div>
-          <div>Right: Dark UWC Monogram (#111111)</div>
-          <div>ViewBox: 0 0 830 200</div>
-          <div>Transparent Background</div>
+          <div><strong>Mark:</strong> Height = 192 (12U, matches cap height)</div>
+          <div><strong>Typography:</strong> Dark Slate (#111111)</div>
+          <div><strong>Gap:</strong> 32 (2U)</div>
+          <div><strong>ViewBox:</strong> 0 0 1248 336</div>
         </div>
       </div>
 
-      <!-- Concept 2: High Contrast on Dark Surface -->
+      <!-- 1B: Frameless Inline (Dark) -->
       <div class="card">
         <div class="card-header">
-          <h2>2. Horizontal Lockup (Dark Athletic Surface)</h2>
-          <span>File: uwc_lockup_horizontal_white.svg</span>
+          <h2>Frameless Inline Lockup (Dark Athletic Surface)</h2>
+          <span>assets/uwc_lockup_horizontal_white.svg</span>
         </div>
-        <div class="stage dark-surface">
-          <img src="../discovery/assets/uwc_lockup_horizontal_white.svg" alt="UWC Lockup on Dark" />
+        <div class="stage inline-stage dark-surface">
+          <img src="assets/uwc_lockup_horizontal_white.svg" alt="Frameless Inline Dark" />
         </div>
         <div class="meta">
-          <div>Left: 1x1 Wrestlers (White skin + silver singlets)</div>
-          <div>Right: White UWC Monogram (#FFFFFF)</div>
-          <div>Optimized for dark navigation header</div>
+          <div><strong>Mark:</strong> High-Contrast White + Silver</div>
+          <div><strong>Typography:</strong> High-Contrast White (#FFFFFF)</div>
+          <div><strong>Subtitle:</strong> Crimson Accent (#BA1C1C)</div>
+          <div><strong>ViewBox:</strong> 0 0 1248 336</div>
         </div>
       </div>
 
-      <!-- Concept 3: Crimson Mat Surface -->
+      <!-- 1C: Chamfered Badge Inline (Crimson) -->
       <div class="card">
         <div class="card-header">
-          <h2>3. Horizontal Lockup (Crimson Mat Surface)</h2>
-          <span>Surface: #BA1C1C</span>
+          <h2>Chamfered Athletic Badge Inline Lockup (Crimson)</h2>
+          <span>assets/uwc_lockup_badge_crimson.svg</span>
         </div>
-        <div class="stage crimson-surface">
-          <img src="../discovery/assets/uwc_lockup_horizontal_white.svg" alt="UWC Lockup on Crimson" />
+        <div class="stage inline-stage dark-surface">
+          <img src="assets/uwc_lockup_badge_crimson.svg" alt="Badge Inline Crimson" />
         </div>
         <div class="meta">
-          <div>Zero color bleeding</div>
-          <div>Negative space transparent between wrestling arms</div>
+          <div><strong>Badge:</strong> 288&times;288 (18U&times;18U), Chamfer=16 (1U)</div>
+          <div><strong>Wrestlers:</strong> Centered at Y=176, Width=256 (16U)</div>
+          <div><strong>ViewBox:</strong> 0 0 1072 352</div>
         </div>
       </div>
 
-      <!-- Concept 4: Crimson Badge Lockup -->
+      <!-- 1D: Chamfered Badge Inline (Dark) -->
       <div class="card">
         <div class="card-header">
-          <h2>4. Badge Lockup Variant (1x1 Crimson Container)</h2>
-          <span>File: uwc_lockup_badge_crimson.svg</span>
+          <h2>Chamfered Athletic Badge Inline Lockup (Dark Athletic Slate)</h2>
+          <span>assets/uwc_lockup_badge_dark.svg</span>
         </div>
-        <div class="stage dark-surface">
-          <img src="../discovery/assets/uwc_lockup_badge_crimson.svg" alt="UWC Badge Lockup" />
+        <div class="stage inline-stage dark-surface">
+          <img src="assets/uwc_lockup_badge_dark.svg" alt="Badge Inline Dark" />
         </div>
         <div class="meta">
-          <div>Left: Rounded crimson badge container (180&times;180)</div>
-          <div>Right: Crisp white UWC collegiate lettering</div>
+          <div><strong>Badge:</strong> Dark Slate (#181B24) + Subtle White Rim</div>
+          <div><strong>Typography:</strong> High-Contrast White (#FFFFFF)</div>
+          <div><strong>ViewBox:</strong> 0 0 1072 352</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Stacked (Vertical) Lockups -->
+    <div class="section-title">2. Stacked (Vertical) Lockups</div>
+    <div class="stack">
+      <!-- 2A: Frameless Stacked (Light) -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Frameless Stacked Lockup (Light Surface)</h2>
+          <span>assets/uwc_lockup_stacked.svg</span>
+        </div>
+        <div class="stage stacked-stage white-surface">
+          <img src="assets/uwc_lockup_stacked.svg" alt="Frameless Stacked Light" />
+        </div>
+        <div class="meta">
+          <div><strong>Silhouette:</strong> Symmetrical Monumental Athletic Pyramid</div>
+          <div><strong>Top Wrestlers:</strong> Width = 608 (38U) centered at X=376</div>
+          <div><strong>Typography:</strong> Dark Slate (#111111)</div>
+          <div><strong>ViewBox:</strong> 0 0 752 624</div>
+        </div>
+      </div>
+
+      <!-- 2B: Frameless Stacked (Dark) -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Frameless Stacked Lockup (Dark Athletic Surface)</h2>
+          <span>assets/uwc_lockup_stacked_white.svg</span>
+        </div>
+        <div class="stage stacked-stage dark-surface">
+          <img src="assets/uwc_lockup_stacked_white.svg" alt="Frameless Stacked Dark" />
+        </div>
+        <div class="meta">
+          <div><strong>Silhouette:</strong> Perfect vertical axis of symmetry X=376</div>
+          <div><strong>Typography:</strong> High-Contrast White (#FFFFFF)</div>
+          <div><strong>Subtitle:</strong> Crimson Accent (#BA1C1C)</div>
+          <div><strong>ViewBox:</strong> 0 0 752 624</div>
+        </div>
+      </div>
+
+      <!-- 2C: Chamfered Badge Stacked (Crimson) -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Chamfered Athletic Badge Stacked Lockup (Crimson)</h2>
+          <span>assets/uwc_lockup_stacked_badge_crimson.svg</span>
+        </div>
+        <div class="stage stacked-stage dark-surface">
+          <img src="assets/uwc_lockup_stacked_badge_crimson.svg" alt="Badge Stacked Crimson" />
+        </div>
+        <div class="meta">
+          <div><strong>Badge:</strong> 480&times;480 (30U&times;30U), Chamfer=16 (1U) centered at X=376</div>
+          <div><strong>Wrestlers:</strong> Width = 448 (28U) centered at Y=272</div>
+          <div><strong>ViewBox:</strong> 0 0 752 848</div>
+        </div>
+      </div>
+
+      <!-- 2D: Chamfered Badge Stacked (Dark) -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Chamfered Athletic Badge Stacked Lockup (Dark Slate)</h2>
+          <span>assets/uwc_lockup_stacked_badge_dark.svg</span>
+        </div>
+        <div class="stage stacked-stage dark-surface">
+          <img src="assets/uwc_lockup_stacked_badge_dark.svg" alt="Badge Stacked Dark" />
+        </div>
+        <div class="meta">
+          <div><strong>Badge:</strong> Dark Slate (#181B24)</div>
+          <div><strong>Typography:</strong> White (#FFFFFF) + Crimson (#BA1C1C) Subtitle</div>
+          <div><strong>ViewBox:</strong> 0 0 752 848</div>
         </div>
       </div>
     </div>
 
     <!-- Multi-Scale Optical Test -->
     <div class="scale-row">
-      <h3>Multi-Scale Optical Test (Header &amp; Nav Sizing)</h3>
+      <h3>Multi-Scale Optical Test (Responsive Header &amp; Nav Sizing)</h3>
       <div class="scales">
         <div class="scale-item">
           <div class="surface-strip" style="background: #101218;">
-            <img src="../discovery/assets/uwc_lockup_horizontal_white.svg" style="height: 36px; width: auto;" alt="36px" />
+            <img src="assets/uwc_lockup_horizontal_white.svg" style="height: 36px; width: auto;" alt="36px" />
           </div>
           <span>36px (Compact Mobile Nav)</span>
         </div>
         <div class="scale-item">
           <div class="surface-strip" style="background: #101218;">
-            <img src="../discovery/assets/uwc_lockup_horizontal_white.svg" style="height: 48px; width: auto;" alt="48px" />
+            <img src="assets/uwc_lockup_horizontal_white.svg" style="height: 48px; width: auto;" alt="48px" />
           </div>
           <span>48px (Standard Desktop Nav)</span>
         </div>
         <div class="scale-item">
           <div class="surface-strip" style="background: #101218;">
-            <img src="../discovery/assets/uwc_lockup_horizontal_white.svg" style="height: 72px; width: auto;" alt="72px" />
+            <img src="assets/uwc_lockup_horizontal_white.svg" style="height: 72px; width: auto;" alt="72px" />
           </div>
           <span>72px (Prominent Header)</span>
         </div>
         <div class="scale-item">
           <div class="surface-strip" style="background: #101218;">
-            <img src="../discovery/assets/uwc_lockup_horizontal_white.svg" style="height: 110px; width: auto;" alt="110px" />
+            <img src="assets/uwc_lockup_badge_crimson.svg" style="height: 72px; width: auto;" alt="72px badge" />
           </div>
-          <span>110px (Hero / Splash)</span>
+          <span>72px (Crimson Badge)</span>
+        </div>
+        <div class="scale-item">
+          <div class="surface-strip" style="background: #101218;">
+            <img src="assets/uwc_lockup_stacked_white.svg" style="height: 120px; width: auto;" alt="120px stacked" />
+          </div>
+          <span>120px (Stacked Mark)</span>
         </div>
       </div>
     </div>

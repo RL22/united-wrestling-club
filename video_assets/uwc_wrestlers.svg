@@ -3,7 +3,7 @@
   <title>United Wrestling Club - Wrestlers Illustration</title>
   <desc>Clean multi-layered vector extraction of the two wrestlers from the United Wrestling Club crest logo.</desc>
   <g id="uwc-wrestlers" transform="translate(0, 522) scale(0.1, -0.1)">
-    <!-- Layer 1: White Highlights, Skin Fills, Laces & Ear Guard -->
+    <!-- Layer 1: White Highlights, Skin Fills, Laces &amp; Ear Guard -->
     <g id="white-highlights" class="uwc-white-highlights" fill="#FFFFFF">
       <path d="M7763 5200 c-120 -18 -210 -44 -287 -85 -45 -24 -118 -53 -163 -65
 -44 -12 -137 -49 -204 -82 -140 -67 -213 -87 -280 -77 -59 9 -195 78 -253 129
@@ -277,7 +277,7 @@ M9384 1475 c0 -82 2 -115 3 -72 2 43 2 110 0 150 -1 40 -3 5 -3 -78z M853
 -4 7 -14 8 -22z m81 -29 c0 -8 -4 -12 -9 -9 -5 3 -6 10 -3 15 9 13 12 11 12
 -6z" />
     </g>
-    <!-- Layer 3: Shoe Soles & Accents -->
+    <!-- Layer 3: Shoe Soles &amp; Accents -->
     <g id="shoe-accents" class="uwc-shoe-accents" fill="#858A90">
       <path d="M863 983 c-7 -2 -66 -68 -132 -146 -66 -78 -144 -169 -172 -202 -29
 -33 -58 -75 -66 -93 -13 -30 -9 -82 6 -82 8 0 71 120 71 135 0 6 14 18 30 27
@@ -299,7 +299,7 @@ M9384 1475 c0 -82 2 -115 3 -72 2 43 2 110 0 150 -1 40 -3 5 -3 -78z M853
 7 42 -23 112 -63 148 -59 54 -149 128 -156 128 -5 0 -8 -12 -8 -27z M12098 73
 c23 -2 59 -2 80 0 20 2 1 4 -43 4 -44 0 -61 -2 -37 -4z" />
     </g>
-    <!-- Layer 4: Black Linework, Contours & Shading -->
+    <!-- Layer 4: Black Linework, Contours &amp; Shading -->
     <g id="black-linework" class="uwc-black-linework" fill="#111111">
       <path d="M7763 5200 c-120 -18 -210 -44 -287 -85 -45 -24 -118 -53 -163 -65
 -44 -12 -137 -49 -204 -82 -140 -67 -213 -87 -280 -77 -59 9 -195 78 -253 129
