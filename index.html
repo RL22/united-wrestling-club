@@ -558,6 +558,325 @@
       font-size: 1.1rem;
     }
 
+    /* INTERACTIVE GROWTH & REVENUE SIMULATOR */
+    .calc-container {
+      margin-top: 28px;
+      background: rgba(8, 9, 13, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: clamp(20px, 3vw, 32px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .calc-header-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .calc-title-box h3 {
+      font-size: 1.25rem;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calc-title-box p {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+    }
+
+    .calc-presets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .calc-preset-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--color-text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .calc-preset-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .calc-preset-btn.active {
+      background: rgba(186, 28, 28, 0.25);
+      color: #ff9e9d;
+      border-color: rgba(186, 28, 28, 0.6);
+      box-shadow: 0 0 12px rgba(186, 28, 28, 0.3);
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Sliders / Inputs Column */
+    .calc-inputs-col {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .calc-control-group {
+      background: rgba(15, 17, 23, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 12px 16px;
+      transition: border-color 0.2s ease;
+    }
+
+    .calc-control-group:hover, .calc-control-group:focus-within {
+      border-color: rgba(186, 28, 28, 0.4);
+    }
+
+    .calc-control-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .calc-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .calc-sublabel {
+      font-size: 0.68rem;
+      color: var(--color-text-dim);
+      font-family: var(--font-mono);
+      font-weight: 400;
+    }
+
+    .calc-val-badge {
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      font-weight: 800;
+      color: #ff8584;
+      background: rgba(144, 37, 36, 0.2);
+      border: 1px solid rgba(144, 37, 36, 0.4);
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .calc-slider-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .calc-slider {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: #1c202c;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ba1c1c;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 8px rgba(186, 28, 28, 0.6);
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .calc-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      background: #dc2626;
+    }
+
+    .calc-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ba1c1c;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 8px rgba(186, 28, 28, 0.6);
+      cursor: pointer;
+    }
+
+    .calc-slider-bounds {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.64rem;
+      color: var(--color-text-dim);
+      font-family: var(--font-mono);
+      margin-top: 4px;
+    }
+
+    /* Output Results Column */
+    .calc-output-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .calc-big-stat-card {
+      background: linear-gradient(135deg, rgba(144, 37, 36, 0.28) 0%, rgba(10, 11, 15, 0.95) 100%);
+      border: 1px solid rgba(186, 28, 28, 0.55);
+      border-radius: 10px;
+      padding: 22px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(144, 37, 36, 0.25);
+    }
+
+    .calc-big-stat-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(186, 28, 28, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .calc-big-tag {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #ff8584;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .calc-big-figure {
+      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+      font-family: var(--font-display);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1;
+      margin: 8px 0;
+      text-shadow: 0 2px 16px rgba(186, 28, 28, 0.4);
+    }
+
+    .calc-big-sub {
+      font-size: 0.88rem;
+      color: #4ade80;
+      font-weight: 700;
+      font-family: var(--font-mono);
+    }
+
+    .calc-metrics-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .calc-metric-box {
+      background: rgba(15, 17, 23, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .calc-metric-title {
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      color: var(--color-text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .calc-metric-val {
+      font-size: 1.45rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .calc-metric-delta {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+    }
+
+    .calc-payback-box {
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .calc-payback-icon {
+      font-size: 1.4rem;
+      color: #4ade80;
+      line-height: 1;
+    }
+
+    .calc-payback-text strong {
+      display: block;
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .calc-payback-text span {
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      line-height: 1.35;
+    }
+
     /* 3. SIMPLIFIED CONCEPTS GRID */
     .concepts-header-box {
       text-align: center;
@@ -1036,91 +1355,207 @@
 
     </section>
 
-    <!-- 2. KPI PROJECTIONS SECTION -->
+    <!-- 2. KPI PROJECTIONS & INTERACTIVE GROWTH CALCULATOR SECTION -->
     <section class="kpi-deck-section" id="kpi-projections">
       <div class="deck-header">
         <div class="deck-badge" style="display:inline-block; background:rgba(144,37,36,0.25); border:1px solid var(--color-border-accent); color:#ff8584; font-family:var(--font-mono); font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 12px; border-radius:999px; margin-bottom:12px;">
-          Executive Growth Model • Data-Backed Benchmarks
+          Interactive Revenue &amp; Growth Simulator • Enter Your Real Numbers
         </div>
-        <h2 class="deck-title">Why This Redesign Generates <span class="crimson" style="color:#ba1c1c;">+$84,000 ARR</span></h2>
+        <h2 class="deck-title">Interactive ROI &amp; Revenue <span class="crimson" style="color:#ba1c1c;">Growth Calculator</span></h2>
         <p class="deck-sub">
-          Modeling UWC's $139.99/mo tuition against verified martial arts academy conversion benchmarks. Eliminating the external WrestlingIQ checkout leak turns existing East Bay search traffic into recurring mat memberships.
+          Test your real-world membership numbers, monthly tuition, churn, and website traffic. See how capturing existing Alameda County search volume transforms UWC's bottom line in real time.
         </p>
       </div>
 
-      <!-- KPI Stat Grid -->
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">Mobile Bounce Rate</div>
-          <div class="kpi-comparison">
-            <span class="kpi-baseline">71.4%</span>
-            <span class="kpi-arrow">&rarr;</span>
-            <span class="kpi-projected">28.5%</span>
+      <!-- Quick Preset Selector & Interactive Engine -->
+      <div class="calc-container">
+        <div class="calc-header-flex">
+          <div class="calc-title-box">
+            <h3><span>⚡</span> Real-Time Revenue Modeler</h3>
+            <p>Drag the sliders or select a pre-calibrated scenario to simulate cash flow and roster growth.</p>
           </div>
-          <div class="kpi-delta positive">-60.1% Relative Drop</div>
-          <p class="kpi-caption">Instant video hero, sub-second LCP, zero layout shift</p>
+          <div class="calc-presets">
+            <button type="button" class="calc-preset-btn" id="preset-baseline">Baseline (45 Athletes)</button>
+            <button type="button" class="calc-preset-btn active" id="preset-90day">90-Day Target (75 Athletes)</button>
+            <button type="button" class="calc-preset-btn" id="preset-12mo">12-Mo Capacity (120 Athletes)</button>
+            <button type="button" class="calc-preset-btn" id="btn-reset-calc">Reset</button>
+          </div>
         </div>
 
-        <div class="kpi-card">
-          <div class="kpi-label">Time to First Action</div>
-          <div class="kpi-comparison">
-            <span class="kpi-baseline">48.5s</span>
-            <span class="kpi-arrow">&rarr;</span>
-            <span class="kpi-projected">4.2s</span>
-          </div>
-          <div class="kpi-delta positive">-91.3% Speedup</div>
-          <p class="kpi-caption">Immediate hero CTA + persistent tactical mobile dock</p>
-        </div>
+        <div class="calc-grid">
+          <!-- Input Controls Column -->
+          <div class="calc-inputs-col">
+            <!-- 1. Active Athletes -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-roster">Current Active Athletes <span class="calc-sublabel">(WrestlingIQ Roster)</span></label>
+                <span class="calc-val-badge" id="badge-roster">45 athletes</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-roster" min="15" max="150" step="1" value="45">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>15 Min</span>
+                <span>45 Baseline</span>
+                <span>150 Mat Max</span>
+              </div>
+            </div>
 
-        <div class="kpi-card">
-          <div class="kpi-label">Visitor &rarr; Trial Pass Rate</div>
-          <div class="kpi-comparison">
-            <span class="kpi-baseline">1.4%</span>
-            <span class="kpi-arrow">&rarr;</span>
-            <span class="kpi-projected">8.6%</span>
-          </div>
-          <div class="kpi-delta positive">+514% (6.1x Lift)</div>
-          <p class="kpi-caption">Native 1-click modal replaces external checkout</p>
-        </div>
+            <!-- 2. Average Monthly Tuition -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-tuition">Average Monthly Tuition <span class="calc-sublabel">(Blended ARPU)</span></label>
+                <span class="calc-val-badge" id="badge-tuition">$139.99 / mo</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-tuition" min="80" max="225" step="5" value="139.99">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>$80 (2-Day Kids)</span>
+                <span>$139.99 Core Standard</span>
+                <span>$225 Bay MMA Comp</span>
+              </div>
+            </div>
 
-        <div class="kpi-card featured-kpi">
-          <div class="kpi-label">Monthly Paid Mat Passes</div>
-          <div class="kpi-comparison">
-            <span class="kpi-baseline">10 / mo</span>
-            <span class="kpi-arrow">&rarr;</span>
-            <span class="kpi-projected">52 / mo</span>
-          </div>
-          <div class="kpi-delta highlight">+42 Trials / Mo</div>
-          <p class="kpi-caption">12-13 qualified prospective students on mat weekly</p>
-        </div>
-      </div>
+            <!-- 3. Monthly Churn Rate -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-churn">Monthly Churn Rate <span class="calc-sublabel">(Seasonal Drop-off)</span></label>
+                <span class="calc-val-badge" id="badge-churn">4.5% / mo</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-churn" min="1.5" max="12.0" step="0.5" value="4.5">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>1.5% Elite Lock</span>
+                <span>4.5% 90-Day Target</span>
+                <span>7.5% Baseline Unmanaged</span>
+              </div>
+            </div>
 
-      <!-- ARR Revenue Expansion Bar -->
-      <div class="revenue-expansion-panel">
-        <div class="rev-left">
-          <div class="rev-tag">Annual Value Creation</div>
-          <div class="rev-figure">+$83,994 <span>/ year</span></div>
-          <div class="rev-sub">+$6,999.50 New Monthly Recurring Revenue (MRR)</div>
-        </div>
-        <div class="rev-right">
-          <div class="rev-calc-item">
-            <strong>52 Trials / Mo</strong>
-            <span>1-Click Modal Intake</span>
+            <!-- 4. Monthly Site Visitors -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-traffic">Monthly Search Traffic <span class="calc-sublabel">(OpenSEO Baseline)</span></label>
+                <span class="calc-val-badge" id="badge-traffic">2,086 visits</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-traffic" min="500" max="6000" step="50" value="2086">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>500 Visits</span>
+                <span>2,086 Current Organic</span>
+                <span>6,000+ Geo-Targeted</span>
+              </div>
+            </div>
+
+            <!-- 5. Visitor to Trial Rate -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-trial-rate">Visitor &rarr; Trial Pass Rate <span class="calc-sublabel">(1-Click Modal vs. 1.4% Base)</span></label>
+                <span class="calc-val-badge" id="badge-trial-rate">4.5%</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-trial-rate" min="0.5" max="8.0" step="0.1" value="4.5">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>1.4% Legacy Checkout</span>
+                <span>4.5% Target Intake</span>
+                <span>8.0% Top Decile</span>
+              </div>
+            </div>
+
+            <!-- 6. Trial to Member Close Rate -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-close-rate">Trial &rarr; Member Close Rate <span class="calc-sublabel">(On-Mat Assessment)</span></label>
+                <span class="calc-val-badge" id="badge-close-rate">60% close</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-close-rate" min="20" max="80" step="5" value="60">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>35% Unstructured</span>
+                <span>60% Target Standard</span>
+                <span>80% Olympic Pedigree</span>
+              </div>
+            </div>
+
+            <!-- 7. Auxiliary / Seminar Revenue -->
+            <div class="calc-control-group">
+              <div class="calc-control-top">
+                <label class="calc-label" for="input-aux">Auxiliary &amp; Seminar Revenue <span class="calc-sublabel">(Women's / PIF)</span></label>
+                <span class="calc-val-badge" id="badge-aux">$1,250 / mo</span>
+              </div>
+              <div class="calc-slider-row">
+                <input type="range" class="calc-slider" id="input-aux" min="0" max="4000" step="50" value="1250">
+              </div>
+              <div class="calc-slider-bounds">
+                <span>$0 Baseline</span>
+                <span>$1,250 1 Cohort/Mo</span>
+                <span>$4,000+ Corporate Clinics</span>
+              </div>
+            </div>
           </div>
-          <div class="rev-operator">&times;</div>
-          <div class="rev-calc-item">
-            <strong>60% Close Rate</strong>
-            <span>Mat Assessment Standard</span>
-          </div>
-          <div class="rev-operator">&times;</div>
-          <div class="rev-calc-item">
-            <strong>$139.99 / Mo</strong>
-            <span>Unlimited Membership</span>
-          </div>
-          <div class="rev-operator">=</div>
-          <div class="rev-calc-item net-gain">
-            <strong>+50 Members</strong>
-            <span>Target Roster Capacity</span>
+
+          <!-- Live Projections Output Column -->
+          <div class="calc-output-col">
+            <!-- Hero ARR Expansion Card -->
+            <div class="calc-big-stat-card">
+              <div class="calc-big-tag">Projected Annual Revenue Expansion</div>
+              <div class="calc-big-figure" id="out-net-arr">+$65,412 / yr</div>
+              <div class="calc-big-sub" id="out-mrr-gain">+$5,451 / mo New Cash Flow</div>
+            </div>
+
+            <!-- 4 Metrics Row -->
+            <div class="calc-metrics-row">
+              <div class="calc-metric-box">
+                <span class="calc-metric-title">Monthly Paid Trials</span>
+                <span class="calc-metric-val" id="out-trials-mo">94 / mo</span>
+                <span class="calc-metric-delta" id="out-trials-delta">+78 vs. baseline</span>
+              </div>
+
+              <div class="calc-metric-box">
+                <span class="calc-metric-title">New Enrolled Members</span>
+                <span class="calc-metric-val" id="out-new-members">+56 / mo</span>
+                <span class="calc-metric-delta" id="out-members-delta">Gross Inflow</span>
+              </div>
+
+              <div class="calc-metric-box">
+                <span class="calc-metric-title">Projected Total MRR</span>
+                <span class="calc-metric-val" id="out-total-mrr">$11,750 / mo</span>
+                <span class="calc-metric-delta" id="out-mrr-delta">Base: $6,299 / mo</span>
+              </div>
+
+              <div class="calc-metric-box">
+                <span class="calc-metric-title">Projected Total ARR</span>
+                <span class="calc-metric-val" id="out-total-arr">$141,000 / yr</span>
+                <span class="calc-metric-delta" id="out-arr-delta">Base: $75,588 / yr</span>
+              </div>
+            </div>
+
+            <div class="calc-metrics-row">
+              <div class="calc-metric-box">
+                <span class="calc-metric-title">Customer Lifetime Value (LTV)</span>
+                <span class="calc-metric-val" id="out-ltv">$3,111</span>
+                <span class="calc-metric-delta" id="out-ltv-delta">+66.6% vs. $1,867 baseline</span>
+              </div>
+
+              <div class="calc-metric-box">
+                <span class="calc-metric-title">Simulated Net Roster</span>
+                <span class="calc-metric-val" id="out-sim-roster">75 Athletes</span>
+                <span class="calc-metric-delta" id="out-roster-cap">Safe 3,000 sq ft Cap: 120</span>
+              </div>
+            </div>
+
+            <!-- Payback Guarantee -->
+            <div class="calc-payback-box">
+              <div class="calc-payback-icon">🛡️</div>
+              <div class="calc-payback-text">
+                <strong id="out-breakeven">Sprintz Payback Breakeven: Just 2 Net Recurring Athletes</strong>
+                <span>At <span id="out-breakeven-dues">$139.99/mo</span> tuition, adding just 2 active athletes pays for this entire modernization platform indefinitely. Every additional athlete directly grows net gym profit.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1233,6 +1668,183 @@
     </footer>
 
   </main>
+
+  <!-- Interactive Growth Calculator Script -->
+  <script>
+  (() => {
+    'use strict';
+
+    // Elements
+    const inputRoster = document.getElementById('input-roster');
+    const inputTuition = document.getElementById('input-tuition');
+    const inputChurn = document.getElementById('input-churn');
+    const inputTraffic = document.getElementById('input-traffic');
+    const inputTrialRate = document.getElementById('input-trial-rate');
+    const inputCloseRate = document.getElementById('input-close-rate');
+    const inputAux = document.getElementById('input-aux');
+
+    const badgeRoster = document.getElementById('badge-roster');
+    const badgeTuition = document.getElementById('badge-tuition');
+    const badgeChurn = document.getElementById('badge-churn');
+    const badgeTraffic = document.getElementById('badge-traffic');
+    const badgeTrialRate = document.getElementById('badge-trial-rate');
+    const badgeCloseRate = document.getElementById('badge-close-rate');
+    const badgeAux = document.getElementById('badge-aux');
+
+    const outNetArr = document.getElementById('out-net-arr');
+    const outMrrGain = document.getElementById('out-mrr-gain');
+    const outTrialsMo = document.getElementById('out-trials-mo');
+    const outTrialsDelta = document.getElementById('out-trials-delta');
+    const outNewMembers = document.getElementById('out-new-members');
+    const outTotalMrr = document.getElementById('out-total-mrr');
+    const outTotalArr = document.getElementById('out-total-arr');
+    const outLtv = document.getElementById('out-ltv');
+    const outLtvDelta = document.getElementById('out-ltv-delta');
+    const outSimRoster = document.getElementById('out-sim-roster');
+    const outBreakevenDues = document.getElementById('out-breakeven-dues');
+
+    const presetBaseline = document.getElementById('preset-baseline');
+    const preset90day = document.getElementById('preset-90day');
+    const preset12mo = document.getElementById('preset-12mo');
+    const btnResetCalc = document.getElementById('btn-reset-calc');
+    const presetBtns = [presetBaseline, preset90day, preset12mo];
+
+    function fmtMoney(num) {
+      return '$' + Math.round(num).toLocaleString('en-US');
+    }
+
+    function calculate() {
+      if (!inputRoster) return;
+      const roster = parseFloat(inputRoster.value) || 45;
+      const tuition = parseFloat(inputTuition.value) || 139.99;
+      const churn = parseFloat(inputChurn.value) || 4.5;
+      const traffic = parseFloat(inputTraffic.value) || 2086;
+      const trialRate = parseFloat(inputTrialRate.value) || 4.5;
+      const closeRate = parseFloat(inputCloseRate.value) || 60;
+      const aux = parseFloat(inputAux.value) || 1250;
+
+      // Update Badges
+      if (badgeRoster) badgeRoster.textContent = roster + ' athletes';
+      if (badgeTuition) badgeTuition.textContent = '$' + tuition.toFixed(2) + ' / mo';
+      if (badgeChurn) badgeChurn.textContent = churn.toFixed(1) + '% / mo';
+      if (badgeTraffic) badgeTraffic.textContent = traffic.toLocaleString('en-US') + ' visits';
+      if (badgeTrialRate) badgeTrialRate.textContent = trialRate.toFixed(1) + '%';
+      if (badgeCloseRate) badgeCloseRate.textContent = closeRate + '% close';
+      if (badgeAux) badgeAux.textContent = '$' + Math.round(aux).toLocaleString('en-US') + ' / mo';
+      if (outBreakevenDues) outBreakevenDues.textContent = '$' + tuition.toFixed(2) + '/mo';
+
+      // Baseline figures (Today's state)
+      const baseRoster = 45;
+      const baseTuition = 139.99;
+      const baseMrr = baseRoster * baseTuition; // ~$6,299.55
+      const baseArr = baseMrr * 12; // ~$75,594
+      const baseLtv = baseTuition / (0.075); // ~$1,867
+
+      // Simulated projections
+      // Monthly Trials Generated
+      const monthlyTrials = Math.round(traffic * (trialRate / 100));
+      // Monthly New Enrolled Members from trials
+      const monthlyNewMembers = Math.round(monthlyTrials * (closeRate / 100));
+      
+      const simRoster = roster;
+
+      // Projected MRR and ARR
+      const projectedMrr = (simRoster * tuition) + aux;
+      const projectedArr = projectedMrr * 12;
+
+      // Net ARR and MRR Gain vs Baseline
+      const netArrGain = projectedArr - baseArr;
+      const netMrrGain = projectedMrr - baseMrr;
+
+      // Customer LTV
+      const simLtv = tuition / (churn / 100);
+      const ltvDeltaPct = ((simLtv - baseLtv) / baseLtv) * 100;
+
+      // Render Outputs
+      if (outNetArr) outNetArr.textContent = (netArrGain >= 0 ? '+' : '-') + fmtMoney(Math.abs(netArrGain)) + ' / yr';
+      if (outMrrGain) outMrrGain.textContent = (netMrrGain >= 0 ? '+' : '-') + fmtMoney(Math.abs(netMrrGain)) + ' / mo New Cash Flow';
+      if (outTrialsMo) outTrialsMo.textContent = monthlyTrials + ' / mo';
+      if (outTrialsDelta) outTrialsDelta.textContent = (monthlyTrials >= 16 ? '+' : '') + (monthlyTrials - 16) + ' vs. 16 base';
+      if (outNewMembers) outNewMembers.textContent = '+' + monthlyNewMembers + ' / mo';
+      if (outTotalMrr) outTotalMrr.textContent = fmtMoney(projectedMrr) + ' / mo';
+      if (outTotalArr) outTotalArr.textContent = fmtMoney(projectedArr) + ' / yr';
+      if (outLtv) outLtv.textContent = fmtMoney(simLtv);
+      if (outLtvDelta) outLtvDelta.textContent = (ltvDeltaPct >= 0 ? '+' : '') + ltvDeltaPct.toFixed(1) + '% vs. $1,867 base';
+      if (outSimRoster) outSimRoster.textContent = simRoster + ' Athletes';
+    }
+
+    function setActivePreset(activeBtn) {
+      presetBtns.forEach(b => b && b.classList.remove('active'));
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    // Presets
+    if (presetBaseline) {
+      presetBaseline.addEventListener('click', () => {
+        setActivePreset(presetBaseline);
+        inputRoster.value = 45;
+        inputTuition.value = 139.99;
+        inputChurn.value = 7.5;
+        inputTraffic.value = 2086;
+        inputTrialRate.value = 1.4;
+        inputCloseRate.value = 35;
+        inputAux.value = 0;
+        calculate();
+      });
+    }
+
+    if (preset90day) {
+      preset90day.addEventListener('click', () => {
+        setActivePreset(preset90day);
+        inputRoster.value = 75;
+        inputTuition.value = 139.99;
+        inputChurn.value = 4.5;
+        inputTraffic.value = 2086;
+        inputTrialRate.value = 4.5;
+        inputCloseRate.value = 60;
+        inputAux.value = 1250;
+        calculate();
+      });
+    }
+
+    if (preset12mo) {
+      preset12mo.addEventListener('click', () => {
+        setActivePreset(preset12mo);
+        inputRoster.value = 120;
+        inputTuition.value = 140.00;
+        inputChurn.value = 3.2;
+        inputTraffic.value = 3200;
+        inputTrialRate.value = 5.5;
+        inputCloseRate.value = 65;
+        inputAux.value = 2800;
+        calculate();
+      });
+    }
+
+    if (btnResetCalc) {
+      btnResetCalc.addEventListener('click', () => {
+        if (preset90day) preset90day.click();
+      });
+    }
+
+    // Input Listeners
+    [inputRoster, inputTuition, inputChurn, inputTraffic, inputTrialRate, inputCloseRate, inputAux].forEach(input => {
+      if (input) {
+        input.addEventListener('input', () => {
+          setActivePreset(null);
+          calculate();
+        });
+      }
+    });
+
+    // Initial Run - default to 90-Day Target
+    if (preset90day) {
+      preset90day.click();
+    } else {
+      calculate();
+    }
+  })();
+  </script>
 
 </body>
 </html>
