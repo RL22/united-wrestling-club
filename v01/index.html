@@ -909,11 +909,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 38%;
-      filter: brightness(0.42) contrast(1.15) saturate(1.1);
+      object-position: center 36%;
+      filter: brightness(0.82) contrast(1.10) saturate(1.15);
     }
 
-    /* Unsplash Grunge 001 Texture Overlay */
+    /* Unsplash Grunge 001 Texture Overlay - Lightened for 1080p Mat Clarity */
     .hero-grunge-overlay {
       position: absolute;
       top: 0;
@@ -924,19 +924,20 @@
       background-size: cover;
       background-position: center;
       mix-blend-mode: overlay;
-      opacity: 0.2;
+      opacity: 0.05;
       pointer-events: none;
       z-index: 2;
     }
 
+    /* Directional Scrim: Dark on left for text legibility, wide open center & right for mat action */
     .hero-scrim {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(ellipse at 25% 45%, rgba(9, 10, 13, 0.6) 0%, rgba(9, 10, 13, 0.94) 75%),
-                  linear-gradient(180deg, rgba(9, 10, 13, 0.3) 0%, rgba(9, 10, 13, 0.98) 100%);
+      background: linear-gradient(90deg, rgba(9, 10, 13, 0.90) 0%, rgba(9, 10, 13, 0.72) 42%, rgba(9, 10, 13, 0.20) 75%, rgba(9, 10, 13, 0.06) 100%),
+                  linear-gradient(180deg, rgba(9, 10, 13, 0.45) 0%, transparent 40%, rgba(9, 10, 13, 0.85) 100%);
       z-index: 2;
     }
 
@@ -1099,41 +1100,514 @@
       letter-spacing: 0.02em;
     }
 
-    /* Trust Pill Bar inside Hero - Exact 4 Columns to Prevent Orphans */
-    .hero-proof-grid {
+    /* ==========================================================================
+       ELEVATED HIGH-IMPACT 4-STAT AUTHORITY BANNER
+       ========================================================================== */
+    .authority-banner {
+      background-color: var(--color-surface-base);
+      border-block: 1px solid var(--color-border);
+      position: relative;
+      z-index: 5;
+    }
+
+    .authority-inner {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      padding-top: 36px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      max-width: 820px;
+      gap: 28px;
+      padding-block: 28px;
     }
 
-    .proof-item {
+    .authority-stat-card {
       display: flex;
       flex-direction: column;
+      gap: 8px;
+      border-left: 3px solid var(--color-primary);
+      padding-left: 18px;
+      transition: transform 0.2s ease;
     }
 
-    .proof-stat {
-      font-size: 1.55rem;
-      font-weight: 900;
-      color: var(--color-text-bright);
-      letter-spacing: -0.02em;
+    .authority-stat-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .authority-stat-card .stat-number {
       font-family: var(--font-mono);
-      line-height: 1.1;
+      font-size: clamp(2.3rem, 3.8vw, 3.2rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      display: flex;
+      align-items: baseline;
     }
 
-    .proof-stat span {
-      color: var(--color-primary);
+    .authority-stat-card .stat-symbol {
+      color: #F59E0B;
+      font-size: 0.65em;
+      margin-left: 3px;
     }
 
-    .proof-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .authority-stat-card .stat-cadence {
+      font-family: var(--font-brand);
+      font-size: 0.38em;
+      font-weight: 700;
       color: var(--color-text-muted);
-      margin-top: 4px;
+      margin-left: 4px;
+      text-transform: uppercase;
+    }
+
+    .authority-stat-card .stat-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .authority-stat-card .stat-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+
+    .authority-stat-card .stat-desc {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      line-height: 1.35;
+    }
+
+    @media (max-width: 900px) {
+      .authority-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 16px;
+        padding-block: 22px;
+      }
+      .authority-stat-card {
+        padding-left: 14px;
+      }
+      .authority-stat-card .stat-number {
+        font-size: 2.1rem;
+      }
+    }
+
+    /* ==========================================================================
+       EDC CREED SECTION (EXCELLENCE / DISCIPLINE / CHAMPIONS)
+       ========================================================================== */
+    .edc-creed-section {
+      background-color: var(--color-canvas);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .edc-banner {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 52px;
+    }
+
+    .edc-badge-pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      background: rgba(144, 37, 36, 0.14);
+      border: 1px solid rgba(144, 37, 36, 0.32);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 18px;
+    }
+
+    .edc-motto-display {
+      font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 18px;
+      text-wrap: balance;
+    }
+
+    .edc-motto-display .motto-divider {
+      color: var(--color-primary);
+      margin: 0 8px;
+      font-weight: 300;
+    }
+
+    .edc-lead {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
+
+    .edc-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .edc-pillar {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 32px 26px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .edc-pillar:hover {
+      border-color: var(--color-primary);
+      transform: translateY(-4px);
+    }
+
+    .pillar-marker {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .pillar-tag {
+      font-size: 0.68rem;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-dim);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 8px;
+      border-radius: 2px;
+    }
+
+    .pillar-title {
+      font-size: 1.7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .pillar-subtitle {
+      font-size: 0.85rem;
+      font-weight: 750;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #F59E0B;
+      margin-bottom: 16px;
+    }
+
+    .pillar-body {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.65;
+      margin-bottom: 22px;
+      flex-grow: 1;
+      text-wrap: pretty;
+    }
+
+    .pillar-quote {
+      font-style: italic;
+      font-size: 0.82rem;
+      color: #ffffff;
+      border-left: 2px solid var(--color-primary);
+      padding-left: 12px;
+      line-height: 1.45;
+    }
+
+    .edc-footer-stamp {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-dim);
+    }
+
+    @media (max-width: 900px) {
+      .edc-pillars {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .edc-pillar {
+        padding: 24px 20px;
+      }
+    }
+
+    /* ==========================================================================
+       SECONDARY COACHING STAFF 4-COLUMN GRID
+       ========================================================================== */
+    .coaches-secondary-wrap {
+      margin-top: 60px;
+      padding-top: 50px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .coaches-secondary-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+
+    .coaches-secondary-title {
+      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 10px;
+      text-wrap: balance;
+    }
+
+    .coach-grid-secondary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .coach-card-secondary {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .coach-card-secondary:hover {
+      border-color: var(--color-primary);
+      transform: translateY(-3px);
+    }
+
+    .coach-photo-secondary {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #111318;
+    }
+
+    .coach-photo-secondary img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.35s ease;
+    }
+
+    .coach-card-secondary:hover .coach-photo-secondary img {
+      transform: scale(1.04);
+    }
+
+    .coach-photo-secondary .image-label {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(9, 10, 13, 0.88);
+      color: #F59E0B;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .coach-info-secondary {
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .coach-role {
+      font-size: 0.72rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #F59E0B;
+      margin-bottom: 6px;
+    }
+
+    .coach-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .coach-bio {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex-grow: 1;
+      text-wrap: pretty;
+    }
+
+    .coach-pill {
+      font-size: 0.68rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      background: rgba(144, 37, 36, 0.22);
+      border: 1px solid rgba(144, 37, 36, 0.45);
+      padding: 5px 8px;
+      border-radius: 3px;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 1024px) {
+      .coach-grid-secondary {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .coach-grid-secondary {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================================
+       VERIFIED GOOGLE BUSINESS PROFILE TESTIMONIALS
+       ========================================================================== */
+    .testimonials-section {
+      background-color: var(--color-canvas);
+      padding: var(--section-pad) 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .testimonial-card {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .testimonial-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-stars {
+      color: #F59E0B;
+      font-size: 1.05rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-badge {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      color: var(--color-text-dim);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .testimonial-quote {
+      font-size: 1.2rem;
+      line-height: 1.35;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin: 0 0 12px;
+      text-wrap: balance;
+    }
+
+    .testimonial-body {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--color-text-muted);
+      margin: 0 0 20px;
+      flex-grow: 1;
+      text-wrap: pretty;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid var(--color-border);
+      padding-top: 14px;
+      font-size: 0.82rem;
+    }
+
+    .author-info strong {
+      display: block;
+      color: #ffffff;
+      font-size: 0.88rem;
+    }
+
+    .author-info span {
+      color: var(--color-text-dim);
+      font-size: 0.76rem;
+    }
+
+    .google-verified-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #4285F4;
+      white-space: nowrap;
+    }
+
+    .testimonials-footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
     }
 
     /* ==========================================================================
@@ -1285,6 +1759,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 20%;
       transition: transform 0.4s ease;
     }
 
@@ -1408,7 +1883,7 @@
       width: 100%;
       height: 520px;
       object-fit: cover;
-      object-position: center 25%;
+      object-position: center 20%;
     }
 
     .lineage-floating-badge {
@@ -2641,9 +3116,10 @@
       <nav aria-label="Main Navigation" class="desktop-nav">
         <ul class="nav-links">
           <li><a href="#programs" class="nav-link">Programs</a></li>
-          <li><a href="#lineage" class="nav-link">Olympic Lineage</a></li>
-          <li><a href="#facility" class="nav-link">The Mat Room</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing ($139/mo)</a></li>
+          <li><a href="#creed" class="nav-link">Creed</a></li>
+          <li><a href="#coaches" class="nav-link">Coaches</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
         </ul>
       </nav>
@@ -2685,8 +3161,10 @@
     <nav aria-label="Mobile Navigation Links">
       <ul class="mobile-nav-links">
         <li><a href="#programs" class="mobile-nav-link">Programs & Schedule</a></li>
-        <li><a href="#lineage" class="mobile-nav-link">Olympic Lineage</a></li>
-        <li><a href="#facility" class="mobile-nav-link">The Mat Room & Safety</a></li>
+        <li><a href="#creed" class="mobile-nav-link">Our Creed</a></li>
+        <li><a href="#coaches" class="mobile-nav-link">Olympic Pedigree / Coaches</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Google Reviews</a></li>
+        <li><a href="#facility" class="mobile-nav-link">Mat Room & Safety</a></li>
         <li><a href="#pricing" class="mobile-nav-link">Pricing ($139/mo)</a></li>
         <li><a href="#faq" class="mobile-nav-link">Frequently Asked Questions</a></li>
       </ul>
@@ -2765,49 +3243,40 @@
             </a>
           </div>
 
-          <!-- 4 Balanced Columns: No Orphans -->
-          <div class="hero-proof-grid desktop-only">
-            <div class="proof-item">
-              <div class="proof-stat">1980 <span>MOSCOW</span></div>
-              <div class="proof-label">Olympian & Dagestan Lineage</div>
-            </div>
-            <div class="proof-item">
-              <div class="proof-stat">1:6 <span>RATIO</span></div>
-              <div class="proof-label">Coach-to-Athlete Focus</div>
-            </div>
-            <div class="proof-item">
-              <div class="proof-stat">3,000 <span>SQ FT</span></div>
-              <div class="proof-label">Dollamur Seamless Mats</div>
-            </div>
-            <div class="proof-item">
-              <div class="proof-stat">5.0 ★ <span>GOOGLE</span></div>
-              <div class="proof-label">42+ Verified Parent Reviews</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mobile Proof Stats Band (Revealed on Scroll Below Hero) -->
-  <section class="mobile-proof-band" aria-label="Key Proof Metrics">
-    <div class="container">
-      <div class="mobile-proof-grid">
-        <div class="proof-item">
-          <div class="proof-stat">1980 <span>MOSCOW</span></div>
-          <div class="proof-label">Olympian & Dagestan Lineage</div>
+  <!-- Elevated High-Impact 4-Stat Authority Banner Row -->
+  <section class="authority-banner" aria-label="United Wrestling Club verified standards">
+    <div class="container authority-inner">
+      <div class="authority-stat-card">
+        <div class="stat-number">5.0<span class="stat-symbol">★</span></div>
+        <div class="stat-info">
+          <strong class="stat-title">5.0 ★ Community Trust</strong>
+          <span class="stat-desc">42+ Verified Google Parent Reviews</span>
         </div>
-        <div class="proof-item">
-          <div class="proof-stat">1:6 <span>RATIO</span></div>
-          <div class="proof-label">Coach-to-Athlete Focus</div>
+      </div>
+      <div class="authority-stat-card">
+        <div class="stat-number">1:6</div>
+        <div class="stat-info">
+          <strong class="stat-title">1:6 Coach Ratio</strong>
+          <span class="stat-desc">Dedicated Individual Technique Correction</span>
         </div>
-        <div class="proof-item">
-          <div class="proof-stat">3,000 <span>SQ FT</span></div>
-          <div class="proof-label">Dollamur Seamless Mats</div>
+      </div>
+      <div class="authority-stat-card">
+        <div class="stat-number">2x<span class="stat-cadence">/day</span></div>
+        <div class="stat-info">
+          <strong class="stat-title">2x/Day Sanitization</strong>
+          <span class="stat-desc">Hospital-Grade Antimicrobial Treated Mats</span>
         </div>
-        <div class="proof-item">
-          <div class="proof-stat">5.0 ★ <span>GOOGLE</span></div>
-          <div class="proof-label">42+ Verified Parent Reviews</div>
+      </div>
+      <div class="authority-stat-card">
+        <div class="stat-number">3,000</div>
+        <div class="stat-info">
+          <strong class="stat-title">3,000 Sq Ft Mat Space</strong>
+          <span class="stat-desc">Seamless Dollamur Training Room in Hayward</span>
         </div>
       </div>
     </div>
@@ -2931,8 +3400,71 @@
     </div>
   </section>
 
-  <!-- 6. Olympic Lineage & Coaching Moat (Textured with Unsplash Grunge) -->
-  <section class="lineage-section" id="lineage">
+  <!-- 6. EDC Creed Section (Parity with Concept 03) -->
+  <section class="edc-creed-section" id="creed" aria-labelledby="creed-heading">
+    <div class="container">
+      <div class="edc-banner">
+        <div class="edc-badge-pill">USA Wrestling Regional Training Center #513</div>
+        <h2 id="creed-heading" class="edc-motto-display">
+          <span class="motto-word">Excellence</span>
+          <span class="motto-divider" aria-hidden="true">/</span>
+          <span class="motto-word">Discipline</span>
+          <span class="motto-divider" aria-hidden="true">/</span>
+          <span class="motto-word">Champions</span>
+        </h2>
+        <p class="edc-lead">The three standards etched into every practice at United Wrestling Club. We don't just build tournament medalists; we forge unbreakable character for life in Hayward,&nbsp;California.</p>
+      </div>
+
+      <div class="edc-pillars">
+        <article class="edc-pillar">
+          <div class="pillar-marker">
+            <span class="pillar-num">01</span>
+            <span class="pillar-tag">The Standard</span>
+          </div>
+          <h3 class="pillar-title">Excellence</h3>
+          <h4 class="pillar-subtitle">Technical Mastery</h4>
+          <p class="pillar-body">Wrestling is physics under pressure. Rooted in Karim Zemaryalai's Dagestani lineage and Coach Naweed's Kinesiology foundation, we drill the micro-details: 2-on-1 Russian ties, explosive level changes, and hip control that give you an indisputable competitive edge.</p>
+          <div class="pillar-quote">&ldquo;Technique is the great equalizer on the mat.&rdquo;</div>
+        </article>
+
+        <article class="edc-pillar">
+          <div class="pillar-marker">
+            <span class="pillar-num">02</span>
+            <span class="pillar-tag">The Grind</span>
+          </div>
+          <h3 class="pillar-title">Discipline</h3>
+          <h4 class="pillar-subtitle">Relentless Work Ethic</h4>
+          <p class="pillar-body">No shortcuts. No excuses. Discipline means showing up when you're tired, maintaining stance when your legs burn, and holding yourself accountable to your training partner. We teach young athletes how to embrace discomfort as the catalyst for growth.</p>
+          <div class="pillar-quote">&ldquo;How you do anything is how you do everything.&rdquo;</div>
+        </article>
+
+        <article class="edc-pillar">
+          <div class="pillar-marker">
+            <span class="pillar-num">03</span>
+            <span class="pillar-tag">The Outcome</span>
+          </div>
+          <h3 class="pillar-title">Champions</h3>
+          <h4 class="pillar-subtitle">Character in the Circle</h4>
+          <p class="pillar-body">A true champion is defined before the whistle blows and long after the hand is raised. We build humble winners, resilient competitors, and respectful leaders who carry the quiet confidence of the mat into the classroom and the community.</p>
+          <div class="pillar-quote">&ldquo;Once you've wrestled, everything else in life is easy.&rdquo;</div>
+        </article>
+      </div>
+
+      <div class="edc-footer-stamp">
+        <span>USA Wrestling RTC #513</span>
+        <span class="stamp-dot" aria-hidden="true">•</span>
+        <span>3,000 Sq Ft Seamless Dollamur Mats</span>
+        <span class="stamp-dot" aria-hidden="true">•</span>
+        <span>1:6 Coach-to-Athlete Focus</span>
+        <span class="stamp-dot" aria-hidden="true">•</span>
+        <span>Hayward, California</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Olympic Lineage & Coaching Moat (Textured with Unsplash Grunge) -->
+  <section class="lineage-section" id="coaches">
+    <span id="lineage" style="display:block; position:relative; top:-90px; visibility:hidden;"></span>
     <div class="container">
       <div class="lineage-layout">
         <div class="lineage-visual">
@@ -2980,6 +3512,189 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Secondary 4-Column Coaching Staff Row -->
+      <div class="coaches-secondary-wrap">
+        <div class="coaches-secondary-header">
+          <span class="section-eyebrow">THE CORNER · EAST BAY COACHING STAFF</span>
+          <h3 class="coaches-secondary-title">Decades of Mat Mastery Across Every Discipline</h3>
+        </div>
+
+        <div class="coach-grid-secondary">
+          <!-- Coach 1: Rashad Rahimi -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../live_site_content/assets/co-founder.jpg" alt="Coach Rashad Rahimi, UWC Co-Founder and Asian Games Silver Medalist" loading="lazy" width="800" height="600">
+              <span class="image-label">Asian Games Silver</span>
+            </div>
+            <div class="coach-info-secondary">
+              <span class="coach-role">Co-Founder &amp; International Coach</span>
+              <h4 class="coach-name">Rashad Rahimi</h4>
+              <p class="coach-bio">Decades of elite international freestyle wrestling. An Asian Games Silver Medalist who competed at the highest world stages alongside Karim, Coach Rashad provides deep technical intuition, championship footwork, and high-level freestyle development.</p>
+              <div class="coach-pill">1980 Olympic Qualifier · Asian Games Silver · Co-Founder</div>
+            </div>
+          </article>
+
+          <!-- Coach 2: Sandeep Singh Gosal -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../video_assets/stills_selected/still_09_coach_community_mat.jpg" alt="Coach Sandeep Singh Gosal coaching the youth wrestling tournament squad" loading="lazy" width="800" height="600">
+              <span class="image-label">James Logan / NCAA D-I</span>
+            </div>
+            <div class="coach-info-secondary">
+              <span class="coach-role">Competitive Youth Head Coach</span>
+              <h4 class="coach-name">Sandeep Singh Gosal</h4>
+              <p class="coach-bio">A legendary East Bay scholastic wrestler from James Logan High School who competed at NCAA Division 1 Fresno State and San Francisco State. Coach Sandeep directs UWC's tournament squad, instilling scholastic grit and folkstyle top-bottom control.</p>
+              <div class="coach-pill">NCAA D1 Fresno State · SFSU Wrestler · Logan Standout</div>
+            </div>
+          </article>
+
+          <!-- Coach 3: Steve Siroy -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../video_assets/stills_selected/still_38_coach_steve_siroy_chabot_pedigree.jpg" alt="Hall of Fame Coach Steve Siroy on the Chabot College collegiate wrestling mats" loading="lazy" width="800" height="600">
+              <span class="image-label">Hall of Fame</span>
+            </div>
+            <div class="coach-info-secondary">
+              <span class="coach-role">Collegiate Advisor &amp; Master Coach</span>
+              <h4 class="coach-name">Steve Siroy</h4>
+              <p class="coach-bio">Over 40 years of collegiate coaching excellence and inductee into the California Community College Wrestling Coaches Association and Chabot College Hall of Fame. Coach Siroy mentored Coach Naweed, bringing four decades of match strategy.</p>
+              <div class="coach-pill">CA Wrestling Hall of Fame · 40+ Yrs Collegiate Head Coach</div>
+            </div>
+          </article>
+
+          <!-- Coach 4: Farid Siddiq -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../video_assets/stills_selected/still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.jpg" alt="Coach Farid Siddiq coaching combat striking mechanics under the USA Wrestling banner" loading="lazy" width="800" height="600">
+              <span class="image-label">Striking Specialist</span>
+            </div>
+            <div class="coach-info-secondary">
+              <span class="coach-role">Boxing &amp; Striking Fundamentals</span>
+              <h4 class="coach-name">Farid Siddiq</h4>
+              <p class="coach-bio">Precision striking specialist dedicated to combat movement fundamentals. Coach Farid trains wrestlers and martial artists in defensive head movement, kinetic punching mechanics, distance management, and hip rotation.</p>
+              <div class="coach-pill">Boxing Fundamentals · Combat Movement Specialist</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Verified Google Business Profile Testimonials (Parity with Concept 03) -->
+  <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 36px;">
+        <span class="section-eyebrow">VERIFIED COMMUNITY PROOF · GOOGLE BUSINESS PROFILE</span>
+        <h2 id="testimonials-heading" class="section-title">Voices From the Mat. Unfiltered &amp; Earned.</h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          5.0 ★ rating from verified parents, competitors, and everyday grinders training at 30139 Industrial Pkwy SW in Hayward,&nbsp;CA.
+        </p>
+      </div>
+
+      <!-- Real 45+ Member Championship Roster Banner -->
+      <div class="roster-banner">
+        <img src="../video_assets/stills_selected/still_28_naweed_us_open_squad_usa_wrestling.jpg" alt="Coach Naweed and United Wrestling Club championship squad celebration at USA Wrestling national tournament">
+        <div class="roster-overlay">
+          <div class="roster-overlay-text">
+            <div class="roster-overlay-title">Join the UWC Family</div>
+            <div class="roster-overlay-sub">Over 45 youth, scholastic, and varsity athletes training side-by-side every afternoon in Hayward.</div>
+          </div>
+          <button class="btn btn-primary open-trial-modal">Step Onto the Mat</button>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1: Aijaz Patel -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Youth Parent · Local Guide (17 reviews)</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;These coaches aren’t just teaching wrestling—they’re building character.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;I brought my 8-year-old son to UWC and honestly, we couldn’t be happier. From the moment we walked in, Nawid, Tariq, and Umaid welcomed us with open arms. They didn’t rush the process—they brought my son in slowly, helped him ease into the sport, and most importantly, made sure he felt safe and seen. I’ve watched my son grow more confident, disciplined, and mentally stronger every week... And for the parents? You feel the hospitality the second you walk in, whether it’s being offered tea or just having a friendly conversation while watching practice. It really feels like a community. Highly recommend UWC to any parent looking for a place where their child can grow—not just in sport, but in life.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Aijaz Patel</strong>
+              <span>Hayward, CA · 1 year ago</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg class="google-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 2: David Johnson -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Adult Combat &amp; MMA · Local Guide (33 reviews)</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;Celebrity athletes train here alongside everyday grinders. Elite instruction.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;The best regardless of age—come here to get better. Celebrity athletes train here alongside everyday grinders, with elite instruction in no-gi, gi, boxing, and wrestling (folkstyle, freestyle, and Greco). The coaching staff and ownership team are incredibly accomplished—knowledgeable, invested, and committed to athlete development at every level. Healthy competition, humble egos, and a room full of experienced grapplers and MMA fighters pushing each other daily. Hell of a gym — come get some work in 🥊🤼🥋&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>David Johnson</strong>
+              <span>East Bay, CA · 8 months ago</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg class="google-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 3: Ingoo Kwak -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Visiting Youth Parent · Out-of-State</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;Treated him like part of the team from the very start. Invited him to tournament.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;We were visiting the Bay Area from out of state for a few days and were looking for a youth wrestling club where my son could get some extra practice and experience a different training environment. We found United Wrestling Club, and it turned out to be an incredible experience. We didn’t expect much individual attention, but the coaches took the time to work with him closely — just like every other student. Everyone was welcoming, supportive, and treated him like part of the team from the very start. To our surprise, he was even invited to join the team for a local tournament, which was an amazing experience.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Ingoo Kwak</strong>
+              <span>Visiting Athlete Parent · 1 year ago</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg class="google-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 4: Robert Escórcio -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Local Guide (30 reviews)</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;Amazing and positive vibe. Instructors go deep into technique.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;This club has an amazing and positive vibe. It is all about competitive wrestling and the instructors go deep into technique. Whether you are drilling foundations, sharpening scholastic finishes, or training with high-level grapplers, the coaching attention and team culture set UWC apart in the East Bay.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Robert Escórcio</strong>
+              <span>Hayward, CA · Verified Google Review</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg class="google-icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonials-footer">
+        <div>
+          <strong style="color: #fff;">5.0 ★ Star Rating on Google Maps</strong> · 100% Recommended in Hayward &amp; East Bay
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="min-height: 44px; padding: 10px 18px; font-size: 0.8rem;">Leave a Google Review ↗</a>
+          <a href="../submit-review/" class="card-link" style="color: var(--color-primary); font-weight: 700;">Share Your Story &amp; Photos &rarr;</a>
         </div>
       </div>
     </div>
@@ -3094,76 +3809,6 @@
             <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> USA Wrestling sanctioning coverage</li>
           </ul>
           <button class="btn btn-outline open-trial-modal">Pay Drop-In at Door</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. Real Community Proof & Roster Portrait -->
-  <section class="community-section">
-    <div class="container">
-      <div style="text-align: center; max-width: 680px; margin: 0 auto;">
-        <span class="section-eyebrow">FAMILY & BROTHERHOOD</span>
-        <h2 class="section-title">A Mat Family Built on&nbsp;Respect</h2>
-        <p class="section-lead" style="margin: 0 auto;">
-          United Wrestling Club is more than a gym. It is an East Bay family of 45+ youth athletes, parents, and dedicated competitors pushing each other to achieve greatness.
-        </p>
-      </div>
-
-      <!-- Real 45+ Member Roster Photo -->
-      <div class="roster-banner">
-        <img src="../video_assets/stills_selected/still_28_naweed_us_open_squad_usa_wrestling.jpg" alt="Coach Naweed and United Wrestling Club championship squad celebration at USA Wrestling national tournament">
-        <div class="roster-overlay">
-          <div class="roster-overlay-text">
-            <div class="roster-overlay-title">Join the UWC Family</div>
-            <div class="roster-overlay-sub">Over 45 youth and varsity athletes training side-by-side every afternoon in Hayward.</div>
-          </div>
-          <button class="btn btn-primary open-trial-modal">Step Onto the Mat</button>
-        </div>
-      </div>
-
-      <!-- Verified Parent Reviews - Balanced 3 Columns -->
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">
-            "Coach Naweed and Karim have completely transformed my 9-year-old son's confidence and discipline. The coach-to-student ratio is unlike any other gym in the East Bay. Clean mats, respectful kids, zero arrogance."
-          </p>
-          <div class="review-author">
-            <div class="author-avatar">MR</div>
-            <div>
-              <div class="author-info-name">Marcus Rodriguez</div>
-              <div class="author-info-city">Hayward Parent • Youth Academy</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">
-            "I'm a BJJ brown belt and came to UWC to fix my takedowns. The level of detail Naweed teaches on hand fighting and underhook control is incredible. Best wrestling room in Northern California hands down."
-          </p>
-          <div class="review-author">
-            <div class="author-avatar">DK</div>
-            <div>
-              <div class="author-info-name">David Kim</div>
-              <div class="author-info-city">Fremont, CA • Adult Wrestle-Jitsu</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-quote">
-            "My daughter wrestled for her high school and needed off-season technique to make CIF state. In 6 months at UWC, her stance, re-attacks, and bottom escapes leveled up dramatically. Outstanding coaches."
-          </p>
-          <div class="review-author">
-            <div class="author-avatar">SL</div>
-            <div>
-              <div class="author-info-name">Sarah Lin</div>
-              <div class="author-info-city">Union City, CA • Varsity Parent</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

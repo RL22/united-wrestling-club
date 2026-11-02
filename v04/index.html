@@ -7,7 +7,7 @@
 <title>United Wrestling Club | Hayward, CA | USA Wrestling RTC #513</title>
 <meta name="description" content="Train with 1980 Olympian Karim Zemaryalai & Head Coach Naweed at United Wrestling Club in Hayward, CA. USA Wrestling RTC #513. Youth, varsity & adult wrestling. Claim your $15 3-Day Mat Pass.">
 <meta property="og:title" content="United Wrestling Club | Hayward Wrestling | $15 3-Day Mat Pass">
-<meta property="og:description" content="Olympic roots. East Bay grit. USA Wrestling RTC #513 in Hayward, CA. 5,000 sq ft Dollamur mats, 1:6 ratio, world-class coaching.">
+<meta property="og:description" content="Olympic roots. East Bay grit. USA Wrestling RTC #513 in Hayward, CA. 3,000 sq ft Dollamur mats, 1:6 ratio, world-class coaching.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="../video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg">
 <link rel="icon" href="../live_site_content/assets/logo.png" type="image/png">
@@ -84,7 +84,7 @@ body.modal-open {
   z-index: 1;
 }
 
-/* Typography Defaults */
+/* Typography Defaults & Orphan Prevention */
 h1, h2, h3, h4, .headline {
   font-family: var(--font-display);
   text-transform: uppercase;
@@ -92,6 +92,7 @@ h1, h2, h3, h4, .headline {
   line-height: 0.95;
   letter-spacing: 0.01em;
   font-weight: 800;
+  text-wrap: balance;
 }
 
 h1 {
@@ -110,6 +111,11 @@ h3 {
 p {
   margin: 0 0 1.25rem;
   color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+p, li, blockquote, .program-panel-desc, .hero-lead, .coach-bio, .testimonial-body {
+  text-wrap: pretty;
 }
 
 p:last-child {
@@ -366,16 +372,19 @@ button {
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.75rem, 1.4vw, 1.75rem);
 }
 
 .nav-link {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--color-text-muted);
+  white-space: nowrap;
+  padding: 6px 4px;
+  transition: color 0.15s var(--ease);
 }
 
 .nav-link:hover {
@@ -385,30 +394,55 @@ button {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
 .header-phone {
   display: none;
   align-items: center;
   gap: 0.45rem;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: var(--color-text-white);
-  padding: 6px 12px;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
+  padding: 8px 14px;
+  min-height: 40px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(27, 29, 37, 0.85);
+  white-space: nowrap;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease), background-color 0.2s var(--ease);
+}
+
+.header-phone svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
 }
 
 .header-phone:hover {
   border-color: var(--color-gold);
   color: var(--color-gold);
+  background: rgba(27, 29, 37, 1);
 }
 
 .header-btn {
   display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px !important;
+  padding: 8px 18px !important;
+  font-family: var(--font-display);
+  font-size: 0.92rem !important;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 9999px !important;
+  clip-path: none !important;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+  transition: all 0.2s var(--ease);
 }
 
 .mobile-nav-toggle {
@@ -479,21 +513,21 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center 25%;
-  opacity: 0.76;
+  opacity: 0.92;
+  filter: contrast(1.05) saturate(1.1);
 }
 
 /* Open Center Video Window Clearance:
-   On mobile, the middle 340px+ (from 18% to 60% vertical) is almost 100% transparent
-   so the live 1080p takedown loop action is crisp, cinematic, and unobstructed! */
+   The middle area is completely open so the live 1080p takedown loop action is crisp, cinematic, and visible! */
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, 
-    rgba(13, 13, 17, 0.75) 0%, 
-    rgba(13, 13, 17, 0.04) 20%, 
-    rgba(13, 13, 17, 0.12) 55%, 
-    rgba(13, 13, 17, 0.92) 88%, 
-    rgba(13, 13, 17, 0.98) 100%
+    rgba(13, 13, 17, 0.65) 0%, 
+    rgba(13, 13, 17, 0.02) 22%, 
+    rgba(13, 13, 17, 0.08) 55%, 
+    rgba(13, 13, 17, 0.85) 88%, 
+    rgba(13, 13, 17, 0.95) 100%
   );
   pointer-events: none;
   z-index: 1;
@@ -501,16 +535,16 @@ button {
 
 @media (min-width: 900px) {
   .hero-gradient-overlay {
-    background: linear-gradient(180deg, 
-      rgba(13, 13, 17, 0.8) 0%, 
-      rgba(13, 13, 17, 0.15) 30%, 
-      rgba(13, 13, 17, 0.25) 60%, 
-      rgba(13, 13, 17, 0.95) 100%
+    background: linear-gradient(90deg, 
+      rgba(13, 13, 17, 0.88) 0%, 
+      rgba(13, 13, 17, 0.55) 42%, 
+      rgba(13, 13, 17, 0.10) 70%, 
+      transparent 100%
     ),
-    linear-gradient(90deg, 
-      rgba(13, 13, 17, 0.9) 0%, 
-      rgba(13, 13, 17, 0.3) 55%, 
-      rgba(13, 13, 17, 0.8) 100%
+    linear-gradient(180deg, 
+      rgba(13, 13, 17, 0.40) 0%, 
+      transparent 35%, 
+      rgba(13, 13, 17, 0.88) 100%
     );
   }
 }
@@ -774,6 +808,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
 }
 
 .program-panel-badge {
@@ -1147,6 +1182,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.4s var(--ease);
 }
 
@@ -1204,6 +1240,261 @@ button {
   font-size: 0.88rem;
   color: #E2E8F0;
   font-style: italic;
+}
+
+/* Secondary Coaching Staff in Dossier */
+.coaches-secondary-wrap {
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.coaches-secondary-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+
+.coaches-secondary-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.coach-grid-secondary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .coach-grid-secondary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .coach-grid-secondary {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.coach-card-secondary {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.coach-card-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(220, 38, 38, 0.5);
+}
+
+.coach-photo-secondary {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--color-canvas);
+}
+
+.coach-photo-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.35s var(--ease);
+}
+
+.coach-card-secondary:hover .coach-photo-secondary img {
+  transform: scale(1.04);
+}
+
+.coach-photo-secondary .image-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(13, 13, 17, 0.9);
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid var(--color-border);
+}
+
+.coach-info-secondary {
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.coach-info-secondary .coach-role {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+  margin-bottom: 0.25rem;
+}
+
+.coach-info-secondary .coach-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.02em;
+}
+
+.coach-info-secondary .coach-bio {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.coach-info-secondary .coach-pill {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  padding: 5px 8px;
+}
+
+/* 8. VERIFIED GOOGLE BUSINESS PROFILE TESTIMONIALS (CONCEPT 02) */
+.testimonials-section {
+  background: var(--color-canvas);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 800px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.testimonial-stars {
+  color: var(--color-gold);
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-badge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-text-dim);
+  background: var(--color-surface-raised);
+  padding: 4px 8px;
+  border: 1px solid var(--color-border-subtle);
+}
+
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  line-height: 1.25;
+  color: var(--color-text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin: 0 0 1rem;
+}
+
+.testimonial-body {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0 0 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.testimonial-author .author-info strong {
+  display: block;
+  color: var(--color-text-white);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+}
+
+.testimonial-author .author-info span {
+  color: var(--color-text-dim);
+  font-size: 0.8rem;
+}
+
+.google-verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4285F4;
+  white-space: nowrap;
+}
+
+.testimonials-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
 }
 
 /* 7. TRANSPARENT PRICING CARDS */
@@ -2121,10 +2412,10 @@ dialog#signup-modal::backdrop {
 
     <nav class="nav-menu" id="desktop-nav" aria-label="Primary Navigation">
       <a class="nav-link" href="#programs">Programs</a>
-      <a class="nav-link" href="#dossier">Olympic Pedigree</a>
+      <a class="nav-link" href="#dossier">Olympic Pedigree / Coaches</a>
       <a class="nav-link" href="#pricing">Pricing</a>
-      <a class="nav-link" href="#safety">Safety & FAQ</a>
-      <a class="nav-link" href="#location">Location</a>
+      <a class="nav-link" href="#reviews">Reviews</a>
+      <a class="nav-link" href="#safety">Safety &amp; FAQ</a>
     </nav>
 
     <div class="header-actions">
@@ -2138,11 +2429,12 @@ dialog#signup-modal::backdrop {
   </div>
 
   <div class="mobile-nav-panel" id="mobile-nav">
-    <a class="nav-link" href="#programs">Programs & Schedule</a>
-    <a class="nav-link" href="#dossier">Olympic Pedigree</a>
-    <a class="nav-link" href="#pricing">Transparent Pricing</a>
-    <a class="nav-link" href="#safety">Parent Safety & FAQ</a>
-    <a class="nav-link" href="#location">Mat Room & Directions</a>
+    <a class="nav-link" href="#programs">Programs &amp; Schedule</a>
+    <a class="nav-link" href="#dossier">Olympic Pedigree / Coaches</a>
+    <a class="nav-link" href="#pricing">Transparent Pricing ($139/mo)</a>
+    <a class="nav-link" href="#reviews">Parent &amp; Athlete Reviews</a>
+    <a class="nav-link" href="#safety">Parent Safety &amp; FAQ</a>
+    <a class="nav-link" href="#location">Mat Room &amp; Directions</a>
     <button class="btn btn-crimson btn-full" type="button" data-offer="trial" style="margin-top: 0.5rem;">Claim $15 3-Day Mat Pass &nearr;</button>
   </div>
 </header>
@@ -2176,11 +2468,13 @@ dialog#signup-modal::backdrop {
 
       <div class="hero-footer-bar">
         <div class="hero-stats-strip">
-          <span><strong>1980</strong> Olympic Legacy</span>
-          <span class="stat-dot">&bull;</span>
-          <span><strong>5,000 SQ FT</strong> Dollamur</span>
+          <span><strong>5.0 ★</strong> Community Trust</span>
           <span class="stat-dot">&bull;</span>
           <span><strong>1:6</strong> Coach Ratio</span>
+          <span class="stat-dot">&bull;</span>
+          <span><strong>2x/DAY</strong> Sanitization</span>
+          <span class="stat-dot">&bull;</span>
+          <span><strong>3,000 SQ FT</strong> Mat Space</span>
         </div>
       </div>
     </div>
@@ -2226,7 +2520,7 @@ dialog#signup-modal::backdrop {
           </div>
           <div>
             <div class="ribbon-title">1:6 Ratio & Dollamur Mats</div>
-            <p class="ribbon-desc">5,000 sq ft seamless Dollamur mats sanitized daily with hospital-grade antimicrobial wash.</p>
+            <p class="ribbon-desc">3,000 sq ft seamless Dollamur mats sanitized daily with hospital-grade antimicrobial wash.</p>
           </div>
         </div>
       </div>
@@ -2382,7 +2676,7 @@ dialog#signup-modal::backdrop {
           <div class="program-panel-body">
             <div>
               <div class="tag-badge">COMMUNITY OPEN MAT</div>
-              <h3 class="program-panel-title">5,000 SQ FT OF PURE LIVE ROUNDS.</h3>
+              <h3 class="program-panel-title">3,000 SQ FT OF PURE LIVE ROUNDS.</h3>
               <p class="program-panel-desc">
                 Every Saturday morning, wrestlers from across the East Bay and greater Northern California meet at UWC. High schoolers, collegiate wrestlers, and no-gi grapplers sharpen their timing with live situational rounds and mutual technical respect.
               </p>
@@ -2482,7 +2776,7 @@ dialog#signup-modal::backdrop {
                   <td class="col-day"><span class="matrix-day-badge gold">SATURDAY</span></td>
                   <td class="col-time">10:00 AM &ndash; 12:00 PM</td>
                   <td class="col-prog"><strong class="text-white">Bay Area Open Mat</strong><br><small class="text-muted">All Affiliations Welcome</small></td>
-                  <td class="col-focus">5,000 sq ft live situational rounds. Free for members or $15 single drop-in.</td>
+                  <td class="col-focus">3,000 sq ft live situational rounds. Free for members or $15 single drop-in.</td>
                   <td class="col-action"><button class="matrix-action-btn" type="button" data-offer="dropin" data-select="open">Drop-In ($15) &nearr;</button></td>
                 </tr>
               </tbody>
@@ -2542,6 +2836,175 @@ dialog#signup-modal::backdrop {
             </div>
           </div>
         </article>
+      </div>
+
+      <!-- Secondary 4-Column Coaching Staff Row -->
+      <div class="coaches-secondary-wrap">
+        <div class="coaches-secondary-header">
+          <div class="tag-badge">THE CORNER &bull; EAST BAY COACHING STAFF</div>
+          <h3 class="coaches-secondary-title">DECADES OF MAT MASTERY ACROSS EVERY DISCIPLINE.</h3>
+        </div>
+
+        <div class="coach-grid-secondary">
+          <!-- Coach 1: Rashad Rahimi -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../live_site_content/assets/co-founder.jpg" alt="Coach Rashad Rahimi, UWC Co-Founder and Asian Games Silver Medalist" loading="lazy" width="800" height="600">
+              <span class="image-label">Asian Games Silver</span>
+            </div>
+            <div class="coach-info-secondary">
+              <div class="coach-role">Co-Founder &amp; International Coach</div>
+              <h4 class="coach-name">RASHAD RAHIMI</h4>
+              <p class="coach-bio">Decades of elite international freestyle wrestling. An Asian Games Silver Medalist who competed at the highest world stages alongside Karim, Coach Rashad provides deep technical intuition and championship footwork.</p>
+              <div class="coach-pill">1980 Olympic Qualifier &bull; Asian Games Silver</div>
+            </div>
+          </article>
+
+          <!-- Coach 2: Sandeep Singh Gosal -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../video_assets/stills_selected/still_09_coach_community_mat.jpg" alt="Coach Sandeep Singh Gosal coaching the youth wrestling tournament squad" loading="lazy" width="800" height="600">
+              <span class="image-label">James Logan / NCAA D-I</span>
+            </div>
+            <div class="coach-info-secondary">
+              <div class="coach-role">Competitive Youth Head Coach</div>
+              <h4 class="coach-name">SANDEEP SINGH GOSAL</h4>
+              <p class="coach-bio">A legendary East Bay scholastic wrestler from James Logan High School who competed at NCAA Division 1 Fresno State and San Francisco State. Directs UWC's tournament squad, instilling scholastic grit and mat poise.</p>
+              <div class="coach-pill">NCAA D1 Fresno State &bull; Logan Standout</div>
+            </div>
+          </article>
+
+          <!-- Coach 3: Steve Siroy -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../video_assets/stills_selected/still_38_coach_steve_siroy_chabot_pedigree.jpg" alt="Hall of Fame Coach Steve Siroy on the Chabot College collegiate wrestling mats" loading="lazy" width="800" height="600">
+              <span class="image-label">Hall of Fame</span>
+            </div>
+            <div class="coach-info-secondary">
+              <div class="coach-role">Collegiate Advisor &amp; Master Coach</div>
+              <h4 class="coach-name">STEVE SIROY</h4>
+              <p class="coach-bio">Over 40 years of collegiate coaching excellence and inductee into the California Wrestling Hall of Fame and Chabot Athletics Hall of Fame. Coach Siroy mentored Coach Naweed, bringing 40+ years of match strategy.</p>
+              <div class="coach-pill">CA Hall of Fame &bull; 40+ Yrs Head Coach</div>
+            </div>
+          </article>
+
+          <!-- Coach 4: Farid Siddiq -->
+          <article class="coach-card-secondary">
+            <div class="coach-photo-secondary">
+              <img src="../video_assets/stills_selected/still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.jpg" alt="Coach Farid Siddiq coaching combat striking mechanics under the USA Wrestling banner" loading="lazy" width="800" height="600">
+              <span class="image-label">Striking Specialist</span>
+            </div>
+            <div class="coach-info-secondary">
+              <div class="coach-role">Boxing &amp; Striking Fundamentals</div>
+              <h4 class="coach-name">FARID SIDDIQ</h4>
+              <p class="coach-bio">Precision striking specialist dedicated to combat movement fundamentals. Coach Farid trains wrestlers and martial artists in defensive head movement, kinetic punching mechanics, distance management, and hip rotation.</p>
+              <div class="coach-pill">Boxing Fundamentals &bull; Combat Movement</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. VERIFIED GOOGLE BUSINESS PROFILE TESTIMONIALS (CONCEPT 02) -->
+  <section class="testimonials-section section-pad" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="tag-badge">VERIFIED COMMUNITY PROOF &bull; GOOGLE BUSINESS PROFILE</div>
+        <h2 id="reviews-title">VOICES FROM THE MAT. UNFILTERED &amp; EARNED.</h2>
+        <p>5.0 ★ rating from verified parents, competitors, and everyday grinders training at 30139 Industrial Pkwy SW in Hayward,&nbsp;CA.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1: Aijaz Patel -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Youth Parent &bull; Local Guide (17 reviews)</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;These coaches aren’t just teaching wrestling—they’re building character.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;I brought my 8-year-old son to UWC and honestly, we couldn’t be happier. From the moment we walked in, Nawid, Tariq, and Umaid welcomed us with open arms. They didn’t rush the process—they brought my son in slowly, helped him ease into the sport, and most importantly, made sure he felt safe and seen. I’ve watched my son grow more confident, disciplined, and mentally stronger every week... And for the parents? You feel the hospitality the second you walk in, whether it’s being offered tea or just having a friendly conversation while watching practice. It really feels like a community. Highly recommend UWC to any parent looking for a place where their child can grow—not just in sport, but in life.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Aijaz Patel</strong>
+              <span>Hayward, CA &bull; 1 year ago</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 2: David Johnson -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Adult Combat &amp; MMA &bull; Local Guide (33 reviews)</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;Celebrity athletes train here alongside everyday grinders. Elite instruction.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;The best regardless of age—come here to get better. Celebrity athletes train here alongside everyday grinders, with elite instruction in no-gi, gi, boxing, and wrestling (folkstyle, freestyle, and Greco). The coaching staff and ownership team are incredibly accomplished—knowledgeable, invested, and committed to athlete development at every level. Healthy competition, humble egos, and a room full of experienced grapplers and MMA fighters pushing each other daily. Hell of a gym — come get some work in 🥊🤼🥋&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>David Johnson</strong>
+              <span>East Bay, CA &bull; 8 months ago</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 3: Ingoo Kwak -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Visiting Youth Parent &bull; Out-of-State</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;Treated him like part of the team from the very start. Invited him to tournament.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;We were visiting the Bay Area from out of state for a few days and were looking for a youth wrestling club where my son could get some extra practice and experience a different training environment. We found United Wrestling Club, and it turned out to be an incredible experience. We didn’t expect much individual attention, but the coaches took the time to work with him closely — just like every other student. Everyone was welcoming, supportive, and treated him like part of the team from the very start. To our surprise, he was even invited to join the team for a local tournament, which was an amazing experience.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Ingoo Kwak</strong>
+              <span>Visiting Athlete Parent &bull; 1 year ago</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Review 4: Robert Escórcio -->
+        <article class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <span class="testimonial-badge">Local Guide (30 reviews)</span>
+          </div>
+          <h3 class="testimonial-quote">&ldquo;Amazing and positive vibe. Instructors go deep into technique.&rdquo;</h3>
+          <p class="testimonial-body">&ldquo;This club has an amazing and positive vibe. It is all about competitive wrestling and the instructors go deep into technique. Whether you are drilling foundations, sharpening scholastic finishes, or training with high-level grapplers, the coaching attention and team culture set UWC apart in the East Bay.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <strong>Robert Escórcio</strong>
+              <span>Hayward, CA &bull; Verified Google Review</span>
+            </div>
+            <div class="google-verified-tag">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+              <span>Google Review</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonials-footer">
+        <div>
+          <strong class="text-white">5.0 ★ Star Rating on Google Maps</strong> &bull; 100% Recommended in Hayward &amp; East Bay
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="min-height: 42px; padding: 8px 16px; font-size: 0.85rem;">Leave a Google Review &nearr;</a>
+          <a href="../submit-review/" class="hero-sublink" style="color: var(--color-gold); font-weight: 700;">Share Your Story &amp; Photos &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
@@ -2630,7 +3093,7 @@ dialog#signup-modal::backdrop {
             </li>
             <li>
               <svg viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
-              <span>Full access to 5,000 sq ft Dollamur mat room</span>
+              <span>Full access to 3,000 sq ft Dollamur mat room</span>
             </li>
             <li>
               <svg viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
@@ -2666,7 +3129,7 @@ dialog#signup-modal::backdrop {
             <h4>MAT ROOM SAFETY STANDARDS</h4>
             <div class="facility-item">
               <svg viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
-              <span><strong>Antimicrobial Sanitization:</strong> 5,000 sq ft Dollamur mats mopped with hospital-grade fungicidal & virucidal wash twice daily.</span>
+              <span><strong>Antimicrobial Sanitization:</strong> 3,000 sq ft Dollamur mats mopped with hospital-grade fungicidal & virucidal wash twice daily.</span>
             </div>
             <div class="facility-item">
               <svg viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg>
@@ -2696,7 +3159,7 @@ dialog#signup-modal::backdrop {
               <span class="faq-indicator">&plus;</span>
             </summary>
             <div class="faq-answer">
-              Our 5,000 sq ft seamless Dollamur mats are sanitized before and after every training block using hospital-grade antimicrobial solutions (effective against MRSA, ringworm, and staph). Athletes must wear clean gear, and street shoes are strictly forbidden on the wrestling surface.
+              Our 3,000 sq ft seamless Dollamur mats are sanitized before and after every training block using hospital-grade antimicrobial solutions (effective against MRSA, ringworm, and staph). Athletes must wear clean gear, and street shoes are strictly forbidden on the wrestling surface.
             </div>
           </details>
 
