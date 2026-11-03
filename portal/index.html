@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Executive Growth Portal | TravaLab &amp; United Wrestling Club</title>
+  <meta name="description" content="Operational documentation, organic SEO blueprints, unit economics, and team implementation checklists for Naweed Zemaryalai (TravaLab & United Wrestling Club).">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/travalab-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #080c14;
+      --bg-surface: #0f1523;
+      --bg-surface-elevated: #161f33;
+      --bg-surface-card: #121a2c;
+      --border-subtle: #1e293b;
+      --border-accent: rgba(56, 189, 248, 0.25);
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      /* TravaLab Colors */
+      --trava-orange: #fc7417;
+      --trava-pink: #fb7bff;
+      --trava-gradient: linear-gradient(135deg, #fc7417 0%, #fb7bff 100%);
+      --trava-glow: rgba(252, 116, 23, 0.2);
+      
+      /* UWC Colors */
+      --uwc-crimson: #ba1c1c;
+      --uwc-gold: #f59e0b;
+      --uwc-gradient: linear-gradient(135deg, #902524 0%, #ba1c1c 50%, #f59e0b 100%);
+      --uwc-glow: rgba(186, 28, 28, 0.25);
+
+      --color-success: #10b981;
+      --color-warning: #f59e0b;
+      --color-danger: #ef4444;
+      --color-info: #0284c7;
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Barlow Condensed', sans-serif;
+
+      --sidebar-width: 290px;
+      --header-height: 64px;
+      --toc-width: 220px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent),
+        radial-gradient(ellipse 60% 40% at 90% 80%, rgba(251, 123, 255, 0.04), transparent);
+    }
+
+    /* Top Sticky Header */
+    .top-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: var(--header-height);
+      background: rgba(8, 12, 20, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .brand-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-success);
+      box-shadow: 0 0 8px var(--color-success);
+    }
+
+    /* Primary Workspace Switcher in Header */
+    .company-switcher {
+      display: flex;
+      align-items: center;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .co-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 7px;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+
+    .co-tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .co-tab-btn.active.travalab-btn {
+      color: #ffffff;
+      background: #1e293b;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(252, 116, 23, 0.4);
+    }
+
+    .co-tab-btn.active.uwc-btn {
+      color: #ffffff;
+      background: #1e293b;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(186, 28, 28, 0.6);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-link {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-link:hover {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.2);
+      background: var(--bg-surface-elevated);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Layout Structure */
+    .portal-layout {
+      display: flex;
+      max-width: 1540px;
+      margin: 0 auto;
+      min-height: calc(100vh - var(--header-height));
+    }
+
+    /* Left Sidebar */
+    .portal-sidebar {
+      width: var(--sidebar-width);
+      flex-shrink: 0;
+      position: sticky;
+      top: var(--header-height);
+      height: calc(100vh - var(--header-height));
+      overflow-y: auto;
+      border-right: 1px solid var(--border-subtle);
+      padding: 20px 16px 40px;
+      background: rgba(11, 16, 26, 0.7);
+    }
+
+    .sidebar-search {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .sidebar-search input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 8px 12px 8px 32px;
+      font-size: 0.82rem;
+      color: var(--text-main);
+      outline: none;
+      transition: border-color 0.2s;
+      font-family: var(--font-sans);
+    }
+
+    .sidebar-search input:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+    }
+
+    .sidebar-search svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      fill: var(--text-dim);
+    }
+
+    .sidebar-group-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 12px 10px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sidebar-group-badge {
+      font-size: 0.62rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+    }
+
+    .sidebar-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-nav-item a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+
+    .sidebar-nav-item a:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .sidebar-nav-item a.active {
+      color: #ffffff;
+      background: var(--bg-surface-elevated);
+      font-weight: 600;
+      border-left: 2px solid #38bdf8;
+    }
+
+    .sidebar-nav-item .nav-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-dim);
+    }
+
+    .sidebar-card {
+      margin-top: 24px;
+      padding: 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+    }
+
+    .sidebar-card-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .sidebar-card-desc {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Main Docs Content Area */
+    .portal-main {
+      flex: 1;
+      min-width: 0;
+      padding: 36px clamp(20px, 4vw, 56px) 100px;
+    }
+
+    /* Right Sticky Mini-TOC */
+    .portal-toc {
+      width: var(--toc-width);
+      flex-shrink: 0;
+      position: sticky;
+      top: var(--header-height);
+      height: calc(100vh - var(--header-height));
+      overflow-y: auto;
+      padding: 36px 16px 40px 24px;
+      border-left: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .toc-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .toc-list a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      line-height: 1.4;
+      display: block;
+    }
+
+    .toc-list a:hover {
+      color: var(--text-main);
+    }
+
+    /* Doc Workspace Container (Hidden when inactive) */
+    .workspace-view {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    .workspace-view.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Doc Components */
+    .doc-hero {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .doc-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+    }
+
+    .doc-breadcrumbs span.slash {
+      color: var(--border-subtle);
+    }
+
+    .doc-breadcrumbs span.current {
+      color: var(--text-muted);
+    }
+
+    .doc-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .doc-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .doc-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 880px;
+    }
+
+    .doc-section {
+      margin-bottom: 56px;
+      scroll-margin-top: calc(var(--header-height) + 24px);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .uwc-view .section-num {
+      color: #f87171;
+      background: rgba(239, 68, 68, 0.12);
+      border-color: rgba(239, 68, 68, 0.25);
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    .section-lead {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.65;
+    }
+
+    /* Callout Boxes */
+    .callout {
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      display: flex;
+      gap: 14px;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .callout-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+
+    .callout-content strong {
+      color: #ffffff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .callout-mandate {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #e0f2fe;
+    }
+
+    .callout-critical {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      color: #fee2e2;
+    }
+
+    .callout-insight {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: #fef3c7;
+    }
+
+    .callout-telemetry {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #d1fae5;
+    }
+
+    /* Verbatim Quote Box */
+    .quote-box {
+      background: var(--bg-surface);
+      border-left: 3px solid #fc7417;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #f1f5f9;
+    }
+
+    .uwc-view .quote-box {
+      border-left-color: var(--uwc-crimson);
+    }
+
+    .quote-author {
+      font-style: normal;
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-top: 6px;
+      display: block;
+    }
+
+    /* Metric Grid */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .metric-card {
+      background: var(--bg-surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .metric-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .metric-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .metric-card-val {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      font-family: var(--font-sans);
+    }
+
+    .metric-card-val.accent-trava {
+      color: #fc7417;
+    }
+
+    .metric-card-val.accent-uwc {
+      color: #ef4444;
+    }
+
+    .metric-card-val.accent-green {
+      color: #10b981;
+    }
+
+    .metric-card-sub {
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      margin-top: 6px;
+      line-height: 1.35;
+    }
+
+    /* Documentation Tables */
+    .doc-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin: 20px 0;
+      background: var(--bg-surface);
+    }
+
+    .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      text-align: left;
+    }
+
+    .doc-table th {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .doc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+      vertical-align: middle;
+    }
+
+    .doc-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .doc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-main);
+    }
+
+    .doc-table code {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 2px 6px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #38bdf8;
+    }
+
+    /* Interactive Calculators */
+    .calc-container {
+      background: var(--bg-surface-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .calc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .calc-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 860px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .calc-input-group {
+      margin-bottom: 18px;
+    }
+
+    .calc-label-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .calc-val-pill {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 1px 8px;
+      border-radius: 4px;
+    }
+
+    .calc-input-group input[type="range"] {
+      width: 100%;
+      height: 6px;
+      background: var(--border-subtle);
+      border-radius: 3px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .calc-input-group input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+      cursor: pointer;
+    }
+
+    .uwc-calc .calc-val-pill {
+      color: #f87171;
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .uwc-calc input[type="range"]::-webkit-slider-thumb {
+      background: #ef4444;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+    }
+
+    .calc-results-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .calc-result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .calc-result-row:last-child {
+      border-bottom: none;
+      padding-top: 12px;
+    }
+
+    .calc-result-value {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: #ffffff;
+    }
+
+    .calc-highlight-box {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 6px;
+      padding: 12px;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .calc-highlight-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #10b981;
+      margin-bottom: 4px;
+    }
+
+    .calc-highlight-num {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    /* Code Snippets & Terminal Blocks */
+    .code-block {
+      background: #05070c;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin: 16px 0;
+      overflow: hidden;
+      font-family: var(--font-mono);
+    }
+
+    .code-header {
+      background: #0d121c;
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font-mono);
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
+    .code-body {
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+    }
+
+    /* Checklist Drawers */
+    .checklist-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .check-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+
+    .check-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .check-status {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .status-pending {
+      background: rgba(245, 158, 11, 0.15);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .status-done {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .check-content {
+      flex: 1;
+    }
+
+    .check-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .check-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .check-owner {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+    }
+
+    .check-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Commercial Card */
+    .commercial-box {
+      background: linear-gradient(180deg, var(--bg-surface-card) 0%, var(--bg-surface) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 28px;
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .travalab-view .commercial-box {
+      border-top: 3px solid #fc7417;
+    }
+
+    .uwc-view .commercial-box {
+      border-top: 3px solid var(--uwc-crimson);
+    }
+
+    .commercial-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .commercial-price-tag {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .commercial-price-period {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    
+    .co-label-short {
+      display: none;
+    }
+
+    @media (max-width: 820px) {
+      .top-header {
+        padding: 0 12px;
+        gap: 8px;
+      }
+      .brand-badge span:not(.dot) {
+        display: none;
+      }
+      .brand-badge {
+        padding: 6px;
+      }
+      .co-label-full {
+        display: none;
+      }
+      .co-label-short {
+        display: inline;
+      }
+      .co-tab-btn {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+      }
+      .header-link span:first-child {
+        display: none;
+      }
+      .header-link {
+        padding: 6px 8px;
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .portal-toc {
+        display: none;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .portal-sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: var(--header-height);
+        width: 100%;
+        height: calc(100vh - var(--header-height));
+        z-index: 999;
+        background: var(--bg-base);
+      }
+      .portal-sidebar.mobile-open {
+        display: block;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .top-header {
+        padding: 0 16px;
+      }
+      .portal-main {
+        padding: 24px 16px 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="top-header">
+    <div class="header-left">
+      <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+      <div class="brand-badge">
+        <span class="dot"></span>
+        <span>SPRINTZ GROWTH OS // CLIENT PORTAL</span>
+      </div>
+    </div>
+
+    <!-- Company Switcher Pills -->
+    <div class="company-switcher">
+      <button class="co-tab-btn travalab-btn active" id="btn-switch-travalab" onclick="switchCompany('travalab')">
+        <span>🩸</span>
+        <span class="co-label-full">TravaLab (DTC Phlebotomy)</span>
+        <span class="co-label-short">TravaLab</span>
+      </button>
+      <button class="co-tab-btn uwc-btn" id="btn-switch-uwc" onclick="switchCompany('uwc')">
+        <span>🥋</span>
+        <span class="co-label-full">United Wrestling Club (RTC)</span>
+        <span class="co-label-short">UWC</span>
+      </button>
+    </div>
+
+    <div class="header-right">
+      <a href="../index.html" class="header-link">
+        <span>🥋 UWC Live Directory</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Portal Layout -->
+  <div class="portal-layout">
+
+    <!-- Left Sidebar (Dynamic Navigation) -->
+    <aside class="portal-sidebar" id="sidebar-nav">
+      <div class="sidebar-search">
+        <svg viewBox="0 0 24 24"><path d="M21.71 20.29l-5.4-5.4A7.9 7.9 0 0018 10a8 8 0 10-8 8 7.9 7.9 0 004.89-1.69l5.4 5.4a1 1 0 001.42-1.42zM4 10a6 6 0 116 6 6 6 0 01-6-6z"/></svg>
+        <input type="text" id="doc-search-input" placeholder="Quick find in documentation..." onkeyup="filterSidebarNav()">
+      </div>
+
+      <!-- TravaLab Nav Items -->
+      <div id="nav-travalab-group">
+        <div class="sidebar-group-label">
+          <span>TravaLab Documentation</span>
+          <span class="sidebar-group-badge">6 SECTIONS</span>
+        </div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item"><a href="#travalab-mandate" class="active"><span>1. Founder Mandate</span><span class="nav-tag">CORE</span></a></li>
+          <li class="sidebar-nav-item"><a href="#travalab-economics"><span>2. Telemetry &amp; Economics</span><span class="nav-tag">MODEL</span></a></li>
+          <li class="sidebar-nav-item"><a href="#travalab-playbook"><span>3. Austin SEO Playbook</span><span class="nav-tag">SEO</span></a></li>
+          <li class="sidebar-nav-item"><a href="#travalab-frontend"><span>4. Front-End Engine</span><span class="nav-tag">TECH</span></a></li>
+          <li class="sidebar-nav-item"><a href="#travalab-ops"><span>5. Team Handoff &amp; DNS</span><span class="nav-tag">OPS</span></a></li>
+          <li class="sidebar-nav-item"><a href="#travalab-commercial"><span>6. Commercial Agreement</span><span class="nav-tag">$2K/MO</span></a></li>
+        </ul>
+      </div>
+
+      <!-- UWC Nav Items -->
+      <div id="nav-uwc-group" style="display: none;">
+        <div class="sidebar-group-label">
+          <span>United Wrestling Club</span>
+          <span class="sidebar-group-badge">6 SECTIONS</span>
+        </div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item"><a href="#uwc-mandate"><span>1. Founder Mandate</span><span class="nav-tag">CORE</span></a></li>
+          <li class="sidebar-nav-item"><a href="#uwc-economics"><span>2. Roster &amp; Revenue</span><span class="nav-tag">MODEL</span></a></li>
+          <li class="sidebar-nav-item"><a href="#uwc-expansion"><span>3. Dual-GBP Expansion</span><span class="nav-tag">LOCAL</span></a></li>
+          <li class="sidebar-nav-item"><a href="#uwc-concepts"><span>4. Supporting Redesign</span><span class="nav-tag">PROTOTYPES</span></a></li>
+          <li class="sidebar-nav-item"><a href="#uwc-ops"><span>5. Team Handoff &amp; GA4</span><span class="nav-tag">OPS</span></a></li>
+          <li class="sidebar-nav-item"><a href="#uwc-commercial"><span>6. Commercial Agreement</span><span class="nav-tag">$1K/MO</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Executive Card -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Executive Briefing Record</div>
+        <div class="sidebar-card-desc">
+          Prepared for Naweed Zemaryalai following executive call on Nov 2, 2026. Combined \$3,000/mo retainer billed as two independent corporate agreements.
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="portal-main">
+
+      <!-- ========================================== -->
+      <!-- VIEW 1: TRAVALAB EXECUTIVE DOCUMENTATION  -->
+      <!-- ========================================== -->
+      <div id="view-travalab" class="workspace-view travalab-view active">
+        
+        <!-- Doc Hero -->
+        <div class="doc-hero">
+          <div class="doc-breadcrumbs">
+            <span>Client Workspace</span>
+            <span class="slash">/</span>
+            <span>TravaLab Inc.</span>
+            <span class="slash">/</span>
+            <span class="current">Executive Growth Architecture</span>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <img src="assets/travalab-logo.svg" alt="TravaLab Logo" style="height: 34px; width: auto; filter: drop-shadow(0 4px 12px rgba(252,116,23,0.3));">
+          </div>
+          <div class="doc-title-row">
+            <h1 class="doc-title">TravaLab: Direct-To-Consumer Organic Search Acquisition Engine</h1>
+            <div class="brand-badge" style="border-color: rgba(252,116,23,0.3); color: #fc7417;">
+              <span class="dot" style="background:#fc7417; box-shadow:0 0 8px #fc7417;"></span>
+              D2C HEALTHCARE EXPANSION
+            </div>
+          </div>
+          <p class="doc-subtitle">
+            A comprehensive operational blueprint for unlocking high-margin patient-pay mobile phlebotomy demand through pure organic search. Zero ad spend, zero backend disruptions, capacity-gated by verified phlebotomist coverage.
+          </p>
+        </div>
+
+        <!-- Section 1: Mandate -->
+        <section class="doc-section" id="travalab-mandate">
+          <div class="section-header">
+            <span class="section-num">SECTION 01</span>
+            <h2 class="section-title">Executive Brief &amp; Founder Directives</h2>
+          </div>
+          <p class="section-lead">
+            During our executive call on Monday, November 2, 2026, Naweed established strict, non-negotiable strategic boundaries. Sprintz is granted high delegation trust (<em>"whip it how you got to"</em>), but all marketing initiatives must strictly adhere to the three foundational laws below:
+          </p>
+
+          <div class="callout callout-mandate">
+            <div class="callout-icon">🛡️</div>
+            <div class="callout-content">
+              <strong>1. 100% Organic SEO — Absolute Zero-Paid-Ads Policy</strong>
+              Naweed was explicit: <em>"bruh i'm not trying to pay for any paper clip things bruh i'm only looking for like organic."</em> Pay-per-click (PPC) and paid social campaigns burn capital and create zero enterprise asset value. Every dollar and hour is invested exclusively into compounding organic domain authority and local search rankings.
+            </div>
+          </div>
+
+          <div class="callout callout-critical">
+            <div class="callout-icon">⚙️</div>
+            <div class="callout-content">
+              <strong>2. Zero Internal Product / Operational Changes</strong>
+              TravaLab's internal operations portal, phlebotomist dispatch network, and partner routing systems are running efficiently. <em>"Behind the scenes product wise bro we're running pretty efficient right now. I don't want to make any product changes."</em> All growth work lives strictly on the public-facing acquisition layer.
+            </div>
+          </div>
+
+          <div class="callout callout-insight">
+            <div class="callout-icon">💡</div>
+            <div class="callout-content">
+              <strong>3. The Core DTC Awakening Problem</strong>
+              The website redesign is not an artistic vanity exercise; it is the supporting front-end engine to solve one problem:
+            </div>
+          </div>
+
+          <div class="quote-box">
+            "The average patient does not know that mobile phlebotomy exists. The average patient does not like going to a Labcorp or a Quest to get their blood drawn. The average patient does not know that they can pay 90 to 195 bucks to have someone come to their house and draw their Labcorp or Quest draw."
+            <span class="quote-author">— Naweed Zemaryalai, Founder &amp; CEO, TravaLab</span>
+          </div>
+
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 14px;">
+            <strong>The Strategic Pivot:</strong> Our mission is to capture high-intent patients at the exact psychological moment they receive a blood draw order from their doctor and dread the thought of waking up fasting, driving across town, and waiting 45 minutes in a sterile physical lab lobby.
+          </p>
+        </section>
+
+        <!-- Section 2: Economics -->
+        <section class="doc-section" id="travalab-economics">
+          <div class="section-header">
+            <span class="section-num">SECTION 02</span>
+            <h2 class="section-title">Operational Telemetry &amp; Financial Model</h2>
+          </div>
+          <p class="section-lead">
+            Extracted directly from Naweed's live screen-share of the internal TravaLab operations portal. Telemetry establishes our exact performance baseline and payback threshold:
+          </p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-card-label">Total Monthly Volume</div>
+              <div class="metric-card-val">~3,000</div>
+              <div class="metric-card-sub">Draws nationwide per month across all channels</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Patient-Pay Share (DTC)</div>
+              <div class="metric-card-val accent-trava">27%</div>
+              <div class="metric-card-sub">Confirmed portal split (~810 draws/mo). 73% is partner-pay.</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Average Ticket Price</div>
+              <div class="metric-card-val">$92.50</div>
+              <div class="metric-card-sub">$90.00 – $95.00 base (includes first 25 mi)</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Current DTC Gross</div>
+              <div class="metric-card-val accent-green">~$74,925</div>
+              <div class="metric-card-sub">Monthly baseline direct-to-consumer turnover</div>
+            </div>
+          </div>
+
+          <!-- Interactive Calculator -->
+          <div class="calc-container" id="travalab-calc">
+            <div class="calc-header">
+              <div class="calc-title">
+                <span>🧮</span>
+                <span>Interactive TravaLab Growth &amp; Rev-Share Modeler</span>
+              </div>
+              <span class="sidebar-group-badge" style="background: rgba(252,116,23,0.15); color: #fc7417; border: 1px solid rgba(252,116,23,0.3);">
+                LIVE SIMULATION
+              </span>
+            </div>
+
+            <div class="calc-grid">
+              <div class="calc-controls">
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Total Monthly Network Volume:</span>
+                    <span class="calc-val-pill" id="tl-val-total">3,000 draws</span>
+                  </div>
+                  <input type="range" id="tl-input-total" min="1500" max="6000" step="100" value="3000" oninput="updateTravaCalc()">
+                </div>
+
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Patient-Pay Share (% DTC):</span>
+                    <span class="calc-val-pill" id="tl-val-share">27%</span>
+                  </div>
+                  <input type="range" id="tl-input-share" min="15" max="50" step="1" value="27" oninput="updateTravaCalc()">
+                </div>
+
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Average Ticket per Draw:</span>
+                    <span class="calc-val-pill" id="tl-val-ticket">$92.50</span>
+                  </div>
+                  <input type="range" id="tl-input-ticket" min="80" max="130" step="2.5" value="92.5" oninput="updateTravaCalc()">
+                </div>
+
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Target Monthly Organic Draw Lift:</span>
+                    <span class="calc-val-pill" id="tl-val-lift">+120 draws</span>
+                  </div>
+                  <input type="range" id="tl-input-lift" min="10" max="400" step="5" value="120" oninput="updateTravaCalc()">
+                </div>
+              </div>
+
+              <div class="calc-results-box">
+                <div>
+                  <div class="calc-result-row">
+                    <span>Current Baseline DTC Draws:</span>
+                    <span class="calc-result-value" id="tl-res-base-draws">810 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Current Baseline DTC Gross:</span>
+                    <span class="calc-result-value" id="tl-res-base-rev">$74,925 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Gross Incremental Revenue:</span>
+                    <span class="calc-result-value" style="color: #10b981;" id="tl-res-inc-rev">+$11,100 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Performance Rev-Share ($12.50/draw):</span>
+                    <span class="calc-result-value" id="tl-res-rev-share">$1,500 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Sprintz Retainer Fee:</span>
+                    <span class="calc-result-value">$2,000 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Net New Monthly Profit to TravaLab:</span>
+                    <span class="calc-result-value" style="color: #38bdf8;" id="tl-res-net-profit">+$7,600 / mo</span>
+                  </div>
+                </div>
+
+                <div class="calc-highlight-box">
+                  <div class="calc-highlight-title">Retainer Payback Threshold</div>
+                  <div class="calc-highlight-num" id="tl-res-breakeven">22 Incremental Draws</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                    A mere <strong>2.7% organic increase</strong> over current 810 baseline completely covers the $2,000/mo retainer in gross turnover.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: SEO Playbook -->
+        <section class="doc-section" id="travalab-playbook">
+          <div class="section-header">
+            <span class="section-num">SECTION 03</span>
+            <h2 class="section-title">Capacity-Gated Regional SEO Playbook</h2>
+          </div>
+          <p class="section-lead">
+            The single fatal flaw of national medical marketplaces is generating patient demand in territories where certified phlebotomists are unavailable, triggering cancellations and burning brand trust. TravaLab's rollout adheres strictly to <strong>The Zero-Waste Capacity Rule</strong>:
+          </p>
+
+          <div class="callout callout-mandate">
+            <div class="callout-icon">🎯</div>
+            <div class="callout-content">
+              <strong>The Zero-Waste Capacity-Gating Rule</strong>
+              Never build, publish, or index city landing pages in markets where phlebotomist coverage is thin or where draws are actively being cancelled. All page deployment sequences are synchronized directly with Naweed's internal technician-density metrics.
+            </div>
+          </div>
+
+          <h3 style="font-size: 1.1rem; color: #ffffff; margin: 24px 0 12px;">Pilot Market #1: Austin, Texas Metropolitan Area</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+            Austin represents the ideal launch proving ground: high tech-enabled consumer adoption, affluent suburban clusters (Round Rock, Cedar Park, Westlake Hills), dense certified phlebotomist network, and zero dominant local organic competitors targeting home blood draws.
+          </p>
+
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Target Keyword Phrase</th>
+                  <th>Monthly Vol</th>
+                  <th>Intent Profile</th>
+                  <th>Target Page Route</th>
+                  <th>Implementation Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>at home blood draw austin tx</code></td>
+                  <td>720</td>
+                  <td>High-Intent DTC</td>
+                  <td><code>/austin-tx/mobile-phlebotomy/</code></td>
+                  <td>P0 Core City Landing Page</td>
+                </tr>
+                <tr>
+                  <td><code>mobile phlebotomist near me austin</code></td>
+                  <td>880</td>
+                  <td>Immediate Need</td>
+                  <td><code>/austin-tx/</code></td>
+                  <td>Geo-targeted Map Pack &amp; Schema</td>
+                </tr>
+                <tr>
+                  <td><code>labcorp home blood draw austin</code></td>
+                  <td>480</td>
+                  <td>Lab-Specific Alternative</td>
+                  <td><code>/austin-tx/labcorp-draw/</code></td>
+                  <td>Orders Kit / Requisition draw</td>
+                </tr>
+                <tr>
+                  <td><code>quest diagnostics home blood draw austin</code></td>
+                  <td>590</td>
+                  <td>Lab-Specific Alternative</td>
+                  <td><code>/austin-tx/quest-draw/</code></td>
+                  <td>Orders Kit / Requisition draw</td>
+                </tr>
+                <tr>
+                  <td><code>pediatric mobile blood draw austin</code></td>
+                  <td>260</td>
+                  <td>Specialty / Stress-Free</td>
+                  <td><code>/austin-tx/pediatric/</code></td>
+                  <td>Gentle stick certified bios</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 4: Front-End Architecture -->
+        <section class="doc-section" id="travalab-frontend">
+          <div class="section-header">
+            <span class="section-num">SECTION 04</span>
+            <h2 class="section-title">Supporting Front-End &amp; Mobile Intake Engine</h2>
+          </div>
+          <p class="section-lead">
+            The website refresh is explicitly <strong>a supporting vehicle</strong> to maximize SEO crawler discoverability, deliver sub-second mobile Core Web Vitals, and eliminate drop-off between search query and confirmed booking.
+          </p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-card-label">Current Mobile LCP</div>
+              <div class="metric-card-val" style="color: #ef4444;">3.8s</div>
+              <div class="metric-card-sub">2-year-old marketing site causing bounce</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Engineered Mobile LCP</div>
+              <div class="metric-card-val accent-green">0.8s</div>
+              <div class="metric-card-sub">Static Edge CDN delivery via CloudFront / Vercel</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Booking Drop-off Barrier</div>
+              <div class="metric-card-val accent-trava">0 Redirects</div>
+              <div class="metric-card-sub">On-page intake replaces external portal jumps</div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin: 24px 0 10px;">The 3-Step Instant Mobile Intake Funnel</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+            Instead of forcing confused patients into an external medical app, the redesigned front-end delivers an immediate, transparent booking flow directly on the landing page:
+          </p>
+
+          <div class="checklist-container">
+            <div class="check-card">
+              <div class="check-status status-done">1</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">ZIP Code &amp; Mileage Calculator</div>
+                  <span class="check-owner">INSTANT QUOTE</span>
+                </div>
+                <div class="check-desc">
+                  Patient inputs their ZIP code. System instantly verifies technician availability and shows transparent pricing ($92.50 base including 25 miles; IRS standard rate calculated upfront if beyond).
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-done">2</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">Lab Requisition Identification</div>
+                  <span class="check-owner">FASTING &amp; KIT PREP</span>
+                </div>
+                <div class="check-desc">
+                  Selects physician order type (Labcorp, Quest Diagnostics, Specialty Kit, or Self-Pay). Displays clear fasting reminders and specimen requirements so patients know exactly what to expect.
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-done">3</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">Appointment Slot &amp; Dispatch Handoff</div>
+                  <span class="check-owner">DIRECT INTEGRATION</span>
+                </div>
+                <div class="check-desc">
+                  Captures patient contact and preferred morning window. Sends payload directly to TravaLab's existing backend dispatch system with zero disruption to the phlebotomist scheduling workflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Team Operations & DNS -->
+
+          <div class="code-block">
+            <div class="code-header">
+              <span>AWS ROUTE 53 DNS PROTECTION // TRAVALAB.COM</span>
+              <button class="copy-btn" onclick="copyCode(this, 'trava-dns-code')">Copy Records</button>
+            </div>
+            <pre class="code-body"><code id="trava-dns-code">; TravaLab AWS Route 53 DNS Configuration & Subdomain Protection
+travalab.com.               TXT   "google-site-verification=XXXXXXXXXXXXXXXXXXXXX"
+travalab.com.               MX    1 aspmx.l.google.com.
+travalab.com.               TXT   "v=spf1 include:_spf.google.com ~all"
+api.travalab.com.           A     [PRESERVED_INTERNAL_BACKEND_IP]
+portal.travalab.com.        CNAME [PRESERVED_DISPATCH_PORTAL]
+austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
+          </div>
+
+        <section class="doc-section" id="travalab-ops">
+          <div class="section-header">
+            <span class="section-num">SECTION 05</span>
+            <h2 class="section-title">Team Operations &amp; Access Handoff Checklist</h2>
+          </div>
+          <p class="section-lead">
+            To execute without bottlenecking Naweed's schedule, here is the exact access map required. Notice that we ask for <strong>Editor</strong> (never Administrator), ensuring 100% security while giving us the permissions needed to implement fixes:
+          </p>
+
+          <div class="callout callout-critical">
+            <div class="callout-icon">🚨</div>
+            <div class="callout-content">
+              <strong>DNS Cutover Safety Protocol (AWS Route 53)</strong>
+              TravaLab's hosted zone contains mission-critical records that must NEVER be modified or interrupted:
+              <br>• Preserve all 3x <code>google-site-verification</code> TXT records
+              <br>• Preserve all Google Workspace MX, SPF, and DMARC mail routing
+              <br>• Strictly preserve <code>api.travalab.com</code> and <code>portal.travalab.com</code> subdomains
+            </div>
+          </div>
+
+          <div class="checklist-container">
+            <div class="check-card">
+              <div class="check-status status-pending">!</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">GA4 Measurement Fix (Property: 399631041)</div>
+                  <span class="check-owner">ROLE: GA4 EDITOR</span>
+                </div>
+                <div class="check-desc">
+                  Current GA4 data reveals 18,452 sessions with <strong>ZERO key conversion events</strong> recorded. We will instrument <code>begin_booking</code>, <code>quote_viewed</code>, and <code>draw_completed</code> so every dollar in organic search return is tracked.
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-pending">!</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">Google Search Console Verification</div>
+                  <span class="check-owner">ROLE: DELEGATED OWNER</span>
+                </div>
+                <div class="check-desc">
+                  Allows linking GSC to GA4, diagnosing indexing crawl errors, and submitting XML sitemaps for the new high-intent city landing pages.
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-pending">!</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">Aggregate-Only Telemetry Export</div>
+                  <span class="check-owner">FORMAT: CSV EXPORT</span>
+                </div>
+                <div class="check-desc">
+                  Monthly scheduled CSV of aggregated city draw volume, patient-pay split, and technician density. Strictly zero PHI (no names, dates of birth, or medical order records).
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Commercials -->
+        <section class="doc-section" id="travalab-commercial">
+          <div class="section-header">
+            <span class="section-num">SECTION 06</span>
+            <h2 class="section-title">Commercial Engagement (Invoice A)</h2>
+          </div>
+          <p class="section-lead">
+            Structured cleanly as an independent corporate invoice billed directly to <strong>TravaLab Inc.</strong>:
+          </p>
+
+          <div class="commercial-box">
+            <div class="commercial-header">
+              <div>
+                <span class="sidebar-group-badge" style="background: rgba(252,116,23,0.15); color: #fc7417; border: 1px solid rgba(252,116,23,0.3); font-weight:700;">
+                  INVOICE A • TRAVALAB INC.
+                </span>
+                <h3 style="font-size: 1.4rem; color: #ffffff; margin-top: 6px;">TravaLab Organic Search &amp; D2C Growth Engine</h3>
+              </div>
+              <div style="text-align: right;">
+                <div class="commercial-price-tag">$2,000<span class="commercial-price-period"> / mo</span></div>
+                <div style="font-size: 0.76rem; color: var(--text-dim); font-family: var(--font-mono);">FLAT BASE PROFESSIONAL RETAINER</div>
+              </div>
+            </div>
+
+            <div class="doc-table-wrap" style="margin-bottom: 20px;">
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Specification</th>
+                    <th>Deliverable &amp; Accountability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Professional Base Fee</strong></td>
+                    <td><code>$2,000.00 / month</code></td>
+                    <td>Technical SEO, city page generation, front-end speed optimization, weekly analytics oversight.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Performance Rev-Share</strong></td>
+                    <td><code>$12.50 per incremental draw</code></td>
+                    <td>Applies strictly to verified patient-pay draws above the baseline of <strong>810 draws/month</strong>.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Payback Threshold</strong></td>
+                    <td><code>22 Incremental Draws</code></td>
+                    <td>Just 22 new draws covers the entire $2,000 base fee in patient-pay turnover (a 2.7% organic lift).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Contract Boundary</strong></td>
+                    <td><code>Zero Ad Spend &amp; Zero Backend Ops</code></td>
+                    <td>Sprintz operates exclusively on public search and landing pages; no touching backend code.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <strong>Billing Terms:</strong> Invoiced on the 1st of each calendar month. Performance revenue-share calculated and reconciled quarterly using aggregated draw telemetry verified by TravaLab operations.
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+      <!-- ========================================== -->
+      <!-- VIEW 2: UNITED WRESTLING CLUB DOCS         -->
+      <!-- ========================================== -->
+      <div id="view-uwc" class="workspace-view uwc-view">
+        
+        <!-- Doc Hero -->
+        <div class="doc-hero">
+          <div class="doc-breadcrumbs">
+            <span>Client Workspace</span>
+            <span class="slash">/</span>
+            <span>United Wrestling Club LLC</span>
+            <span class="slash">/</span>
+            <span class="current">Olympic RTC Growth Architecture</span>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <img src="assets/uwc_wrestlers.svg" alt="United Wrestling Club Logo" style="height: 48px; width: auto; filter: drop-shadow(0 4px 12px rgba(186,28,28,0.5));">
+          </div>
+<div class="doc-title-row">
+            <h1 class="doc-title">United Wrestling Club: East Bay Local Search Dominance</h1>
+            <div class="brand-badge" style="border-color: rgba(186,28,28,0.5); color: #f87171;">
+              <span class="dot" style="background:#ef4444; box-shadow:0 0 8px #ef4444;"></span>
+              REGIONAL TRAINING CENTER #513
+            </div>
+          </div>
+          <p class="doc-subtitle">
+            Strategic digital blueprint for turning Northern California's premier Olympic heritage wrestling room into the undisputed youth athletics leader across Alameda County. 100% organic local search, Dual-GBP facility expansion, and seamless trial pass intake.
+          </p>
+        </div>
+
+        <!-- Section 1: Mandate -->
+        <section class="doc-section" id="uwc-mandate">
+          <div class="section-header">
+            <span class="section-num">SECTION 01</span>
+            <h2 class="section-title">Executive Brief &amp; Founder Directives</h2>
+          </div>
+          <p class="section-lead">
+            United Wrestling Club (UWC) holds an authentic competitive moat that no rival gym in Northern California can match: sanctioned USA Wrestling Regional Training Center #513 status and direct coaching from Olympic qualifier Karim Zemaryalai and collegiate standout Naweed Zemaryalai. Here are the core directives:
+          </p>
+
+          <div class="callout callout-mandate">
+            <div class="callout-icon">🥋</div>
+            <div class="callout-content">
+              <strong>1. 100% Organic Local Search — Zero Paid Ads</strong>
+              Naweed's mandate carries across both businesses: <em>"bruh i'm not trying to pay for any paper clip things bruh i'm only looking for like organic."</em> Local sports academies do not require expensive PPC ads when local intent searches for youth sports, wrestling, and grappling are already surging across the East Bay.
+            </div>
+          </div>
+
+          <div class="callout callout-critical">
+            <div class="callout-icon">📍</div>
+            <div class="callout-content">
+              <strong>2. Hyper-Local Geographic Acquisition Engine</strong>
+              <em>"The UWC side of things is like a little bit more straightforward because it's local... there's different locations and CDs and searches and zip codes and all that other good stuff."</em> We are building programmatic local footprint across Hayward, Union City, Fremont, Newark, Castro Valley, and San Leandro.
+            </div>
+          </div>
+
+          <div class="callout callout-insight">
+            <div class="callout-icon">🏆</div>
+            <div class="callout-content">
+              <strong>3. The Olympic Credential Moat</strong>
+              Competitors rely on flashy gym gimmicks. UWC's story is authentic Olympic pedigree: Karim representing at the highest international level, paired with Naweed's degree in Kinesiology from San Francisco State. The new digital presence frames this with athletic authority and coaching respect.
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Economics -->
+        <section class="doc-section" id="uwc-economics">
+          <div class="section-header">
+            <span class="section-num">SECTION 02</span>
+            <h2 class="section-title">Academy Roster &amp; Financial Model</h2>
+          </div>
+          <p class="section-lead">
+            Wrestling academy economics are characterized by strong recurring monthly tuition and exceptional athlete lifetime value (LTV) when families commit for seasonal competition cycles:
+          </p>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-card-label">Active Recurring Athletes</div>
+              <div class="metric-card-val accent-uwc">45</div>
+              <div class="metric-card-sub">Baseline recurring roster on mats</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Monthly Member Tuition</div>
+              <div class="metric-card-val">$139.99</div>
+              <div class="metric-card-sub">Recurring monthly club membership fee</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Current Monthly Tuition</div>
+              <div class="metric-card-val">~$6,300</div>
+              <div class="metric-card-sub">Monthly baseline recurring cashflow</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-card-label">Annualized Athlete Value</div>
+              <div class="metric-card-val accent-green">$1,680</div>
+              <div class="metric-card-sub">Gross lifetime tuition value per 12-month athlete</div>
+            </div>
+          </div>
+
+          <!-- Interactive Calculator -->
+          <div class="calc-container uwc-calc" id="uwc-calc">
+            <div class="calc-header">
+              <div class="calc-title">
+                <span>🧮</span>
+                <span>Interactive UWC Roster &amp; Tuition Modeler</span>
+              </div>
+              <span class="sidebar-group-badge" style="background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3);">
+                LIVE SIMULATION
+              </span>
+            </div>
+
+            <div class="calc-grid">
+              <div class="calc-controls">
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Current Active Members:</span>
+                    <span class="calc-val-pill" id="uwc-val-members">45 athletes</span>
+                  </div>
+                  <input type="range" id="uwc-input-members" min="20" max="100" step="1" value="45" oninput="updateUwcCalc()">
+                </div>
+
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Monthly Tuition per Athlete:</span>
+                    <span class="calc-val-pill" id="uwc-val-tuition">$139.99</span>
+                  </div>
+                  <input type="range" id="uwc-input-tuition" min="110" max="190" step="5" value="139.99" oninput="updateUwcCalc()">
+                </div>
+
+                <div class="calc-input-group">
+                  <div class="calc-label-row">
+                    <span>Net New Athletes Enrolled:</span>
+                    <span class="calc-val-pill" id="uwc-val-new">+15 athletes</span>
+                  </div>
+                  <input type="range" id="uwc-input-new" min="2" max="60" step="1" value="15" oninput="updateUwcCalc()">
+                </div>
+              </div>
+
+              <div class="calc-results-box">
+                <div>
+                  <div class="calc-result-row">
+                    <span>Current Baseline Tuition:</span>
+                    <span class="calc-result-value" id="uwc-res-base-tuition">$6,300 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>New Total Monthly Tuition:</span>
+                    <span class="calc-result-value" style="color: #10b981;" id="uwc-res-new-tuition">$8,400 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Incremental Monthly Cashflow:</span>
+                    <span class="calc-result-value" style="color: #f87171;" id="uwc-res-inc-tuition">+$2,100 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>New Annualized Tuition Added:</span>
+                    <span class="calc-result-value" style="color: #38bdf8;" id="uwc-res-annual-added">+$25,200 / yr</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Performance Rev-Share ($25/athlete):</span>
+                    <span class="calc-result-value" id="uwc-res-rev-share">$375 / mo</span>
+                  </div>
+                  <div class="calc-result-row">
+                    <span>Sprintz Base Retainer:</span>
+                    <span class="calc-result-value">$1,000 / mo</span>
+                  </div>
+                </div>
+
+                <div class="calc-highlight-box">
+                  <div class="calc-highlight-title">Retainer Payback Threshold</div>
+                  <div class="calc-highlight-num" id="uwc-res-breakeven">7 Recurring Athletes</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                    Just <strong>7 new recurring athletes</strong> completely pays for the \$1,000/mo retainer in recurring tuition.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Dual-GBP Expansion Strategy -->
+        <section class="doc-section" id="uwc-expansion">
+          <div class="section-header">
+            <span class="section-num">SECTION 03</span>
+            <h2 class="section-title">Physical Expansion &amp; The Dual-GBP Strategy</h2>
+          </div>
+          <p class="section-lead">
+            During our call, Naweed revealed confidential negotiations to acquire the former <strong>Pep Boys automotive facility at 30085 Industrial Pkwy SW</strong>, located under 200 yards from UWC's current home at 30139 Industrial Pkwy SW.
+          </p>
+
+          <div class="callout callout-critical">
+            <div class="callout-icon">🗺️</div>
+            <div class="callout-content">
+              <strong>The Municipal Boundary Discovery: Hayward vs. Union City</strong>
+              Our geographic analysis surfaced a critical search vulnerability:
+              <br>• Current Gym (30139 Industrial Pkwy SW) is legally in <strong>Hayward, CA (ZIP 94544)</strong>.
+              <br>• The Pep Boys Building (30085 Industrial Pkwy SW) is legally across the border in <strong>Union City, CA (ZIP 94587)</strong>.
+              <br><strong>The Risk:</strong> If Naweed executes a simple address move in Google Business Profile, Google treats it as an out-of-city relocation. This risks <em>erasing UWC's Hayward #1 Map Pack rankings and resetting 42 flawless 5.0-star reviews!</em>
+            </div>
+          </div>
+
+          <div class="callout callout-telemetry">
+            <div class="callout-icon">🏆</div>
+            <div class="callout-content">
+              <strong>The Solution: The Dual-GBP Dominance Architecture</strong>
+              Instead of moving the primary profile, we execute a dual-presence strategy:
+              <br>1. <strong>Retain Profile A at 30139 Industrial:</strong> "United Wrestling Club - Olympic Regional Training Center (Hayward)". Locks down Hayward searches.
+              <br>2. <strong>Create Profile B at 30085 Industrial:</strong> "United Wrestling Club - Youth Academy &amp; Expansion Annex (Union City)". Captures the Union City / Fremont market.
+              <br><strong>Result:</strong> UWC owns TWO spots in the regional Google Map Pack, completely boxing out competing BJJ and MMA gyms across southern Alameda County.
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Supporting Website Rebuild -->
+        <section class="doc-section" id="uwc-concepts">
+          <div class="section-header">
+            <span class="section-num">SECTION 04</span>
+            <h2 class="section-title">Supporting Front-End Overhaul &amp; Three Concepts</h2>
+          </div>
+          <p class="section-lead">
+            The redesign supports the organic strategy by eliminating friction that currently causes interested parents to drop off before setting foot in the room:
+          </p>
+
+          <div class="checklist-container">
+            <div class="check-card">
+              <div class="check-status status-done">✓</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">On-Page Trial Pass Intake Modal</div>
+                  <span class="check-owner">FRICTION KILLER</span>
+                </div>
+                <div class="check-desc">
+                  Replaces the premature redirect to WrestlingIQ. Parents can claim a trial mat pass directly on the site with zero account creation friction.
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-done">✓</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">High-Efficiency Video Compression</div>
+                  <span class="check-owner">SPEED ENGINE</span>
+                </div>
+                <div class="check-desc">
+                  Compressed heavy training footage from 50MB+ down to &lt;2MB (94% payload reduction) using VP9/WebM, ensuring lightning-fast mobile playback on cellular.
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-done">✓</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">32-Route Alameda County Programmatic Sitemap</div>
+                  <span class="check-owner">SEO FOOTPRINT</span>
+                </div>
+                <div class="check-desc">
+                  Dedicated high-intent landing pages for every youth wrestling, high school camp, and grappling query across Hayward, Union City, Fremont, and Newark.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin: 24px 0 12px;">Three Live Interactive Design Directions</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+            We engineered three distinct homepage concepts, live and testable on mobile and desktop:
+          </p>
+
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Concept</th>
+                  <th>Design Philosophy</th>
+                  <th>Visual Identity</th>
+                  <th>Live Interactive Preview</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Concept 01</strong></td>
+                  <td>Pure Athletic Focus</td>
+                  <td>High-energy crimson &amp; dark mode, bold typography, instant class schedule access.</td>
+                  <td><a href="../v01/index.html" target="_blank" style="color: #38bdf8; font-weight:600; text-decoration:none;">Open Concept 01 ↗</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Concept 03</strong></td>
+                  <td>Editorial &amp; Heritage</td>
+                  <td>Documentary photography, Karim Zemaryalai Olympic narrative, parent trust framing.</td>
+                  <td><a href="../v03/index.html" target="_blank" style="color: #38bdf8; font-weight:600; text-decoration:none;">Open Concept 03 ↗</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Concept 04 (Recommended)</strong></td>
+                  <td>Modern Olympic High-Performance</td>
+                  <td>Refined athletic luxury, floating trial pass intake, WrestlingIQ frictionless sync.</td>
+                  <td><a href="../v04/index.html" target="_blank" style="color: #f87171; font-weight:700; text-decoration:none;">Open Concept 04 (Recommended) ↗</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 5: Team Operations & GA4 Repair -->
+
+          <div class="code-block">
+            <div class="code-header">
+              <span>AWS ROUTE 53 DNS PROTECTION // UNITEDWRESTLINGCLUB.COM</span>
+              <button class="copy-btn" onclick="copyCode(this, 'uwc-dns-code')">Copy Records</button>
+            </div>
+            <pre class="code-body"><code id="uwc-dns-code">; United Wrestling Club AWS Route 53 DNS Configuration
+unitedwrestlingclub.com.    MX    10 inbound-smtp.us-west-2.amazonaws.com.
+unitedwrestlingclub.com.    TXT   "v=spf1 include:amazonses.com ~all"
+shop.unitedwrestlingclub.com. CNAME shops.myshopify.com.
+www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
+          </div>
+
+        <section class="doc-section" id="uwc-ops">
+          <div class="section-header">
+            <span class="section-num">SECTION 05</span>
+            <h2 class="section-title">Team Operations &amp; Access Handoff Checklist</h2>
+          </div>
+          <p class="section-lead">
+            UWC's digital infrastructure currently suffers from an invisible tracking blackout. Here is how we resolve it immediately:
+          </p>
+
+          <div class="checklist-container">
+            <div class="check-card">
+              <div class="check-status status-pending">!</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">GA4 Measurement Blackout Repair (Property: 562010875)</div>
+                  <span class="check-owner">ROLE: GA4 EDITOR</span>
+                </div>
+                <div class="check-desc">
+                  The live S3 site currently <strong>lacks any GA4 tracking tag</strong>. The property exists in Naweed's account but is recording 0 visitors. We will install the tag and wire up conversion tracking for trial pass bookings and schedule views.
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-pending">!</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">AWS Route 53 DNS Record Safeguards</div>
+                  <span class="check-owner">ROUTE 53 ACCESS</span>
+                </div>
+                <div class="check-desc">
+                  Hosted on GoDaddy/Route 53. Safeguard inbound SES mail routing (<code>amazonses.com</code> MX and SPF) and Shopify merchandise store (<code>shop</code> CNAME record).
+                </div>
+              </div>
+            </div>
+
+            <div class="check-card">
+              <div class="check-status status-pending">!</div>
+              <div class="check-content">
+                <div class="check-title-row">
+                  <div class="check-title">WrestlingIQ Team 513 Direct Linking</div>
+                  <span class="check-owner">IQ ADMIN</span>
+                </div>
+                <div class="check-desc">
+                  Deep-link paid memberships directly to specific age divisions (Youth Folkstyle, High School Freestyle, RTC Senior) to avoid checkout confusion.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Commercials -->
+        <section class="doc-section" id="uwc-commercial">
+          <div class="section-header">
+            <span class="section-num">SECTION 06</span>
+            <h2 class="section-title">Commercial Engagement (Invoice B)</h2>
+          </div>
+          <p class="section-lead">
+            Structured cleanly as an independent corporate invoice billed directly to <strong>United Wrestling Club LLC</strong>:
+          </p>
+
+          <div class="commercial-box">
+            <div class="commercial-header">
+              <div>
+                <span class="sidebar-group-badge" style="background: rgba(186,28,28,0.2); color: #f87171; border: 1px solid rgba(186,28,28,0.4); font-weight:700;">
+                  INVOICE B • UNITED WRESTLING CLUB LLC
+                </span>
+                <h3 style="font-size: 1.4rem; color: #ffffff; margin-top: 6px;">UWC Local Search Dominance &amp; Intake Engine</h3>
+              </div>
+              <div style="text-align: right;">
+                <div class="commercial-price-tag">$1,000<span class="commercial-price-period"> / mo</span></div>
+                <div style="font-size: 0.76rem; color: var(--text-dim); font-family: var(--font-mono);">FLAT BASE PROFESSIONAL RETAINER</div>
+              </div>
+            </div>
+
+            <div class="doc-table-wrap" style="margin-bottom: 20px;">
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Specification</th>
+                    <th>Deliverable &amp; Accountability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Professional Base Fee</strong></td>
+                    <td><code>$1,000.00 / month</code></td>
+                    <td>Alameda County local SEO, Dual-GBP architecture, on-page intake optimization, tracking instrumentation.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Performance Rev-Share</strong></td>
+                    <td><code>$25.00 per incremental athlete</code></td>
+                    <td>Applies strictly to verified recurring active athletes above the baseline of <strong>45 recurring members</strong>.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Payback Threshold</strong></td>
+                    <td><code>7 Recurring Athletes</code></td>
+                    <td>Just 7 new recurring athletes covers the entire $1,000 base fee in monthly tuition.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Combined Program Value</strong></td>
+                    <td><code>$3,000.00 / mo Total Combined</code></td>
+                    <td>Structured as two separate corporate invoices: TravaLab (\$2,000/mo) + UWC (\$1,000/mo).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <strong>Billing Terms:</strong> Invoiced on the 1st of each calendar month. Performance revenue-share calculated and reconciled quarterly based on verified recurring active athletes in WrestlingIQ.
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- Right Sidebar (On This Page TOC) -->
+    <aside class="portal-toc">
+      <div class="toc-title">ON THIS PAGE</div>
+      
+      <!-- TravaLab TOC -->
+      <ul class="toc-list" id="toc-travalab">
+        <li><a href="#travalab-mandate">1. Founder Mandate</a></li>
+        <li><a href="#travalab-economics">2. Telemetry &amp; Economics</a></li>
+        <li><a href="#travalab-playbook">3. Austin SEO Playbook</a></li>
+        <li><a href="#travalab-frontend">4. Front-End Engine</a></li>
+        <li><a href="#travalab-ops">5. Team Handoff &amp; DNS</a></li>
+        <li><a href="#travalab-commercial">6. Commercial Agreement</a></li>
+      </ul>
+
+      <!-- UWC TOC -->
+      <ul class="toc-list" id="toc-uwc" style="display: none;">
+        <li><a href="#uwc-mandate">1. Founder Mandate</a></li>
+        <li><a href="#uwc-economics">2. Roster &amp; Revenue</a></li>
+        <li><a href="#uwc-expansion">3. Dual-GBP Expansion</a></li>
+        <li><a href="#uwc-concepts">4. Supporting Redesign</a></li>
+        <li><a href="#uwc-ops">5. Team Handoff &amp; GA4</a></li>
+        <li><a href="#uwc-commercial">6. Commercial Agreement</a></li>
+      </ul>
+
+      <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.75rem; color: var(--text-dim);">
+        <div>Prepared by Sprintz</div>
+        <div style="font-family: var(--font-mono); margin-top: 4px;">v2.4 • Nov 2026</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    // State management for active company workspace
+    let currentCompany = 'travalab';
+
+    function switchCompany(company, updateHash = true) {
+      currentCompany = company;
+
+      const btnTrava = document.getElementById('btn-switch-travalab');
+      const btnUwc = document.getElementById('btn-switch-uwc');
+      const viewTrava = document.getElementById('view-travalab');
+      const viewUwc = document.getElementById('view-uwc');
+      const navTrava = document.getElementById('nav-travalab-group');
+      const navUwc = document.getElementById('nav-uwc-group');
+      const tocTrava = document.getElementById('toc-travalab');
+      const tocUwc = document.getElementById('toc-uwc');
+
+      if (company === 'travalab') {
+        btnTrava.classList.add('active');
+        btnUwc.classList.remove('active');
+        viewTrava.classList.add('active');
+        viewUwc.classList.remove('active');
+        navTrava.style.display = 'block';
+        navUwc.style.display = 'none';
+        tocTrava.style.display = 'block';
+        tocUwc.style.display = 'none';
+
+        if (updateHash && !window.location.hash.startsWith('#travalab')) {
+          history.replaceState(null, null, '#travalab');
+        }
+      } else {
+        btnTrava.classList.remove('active');
+        btnUwc.classList.add('active');
+        viewTrava.classList.remove('active');
+        viewUwc.classList.add('active');
+        navTrava.style.display = 'none';
+        navUwc.style.display = 'block';
+        tocTrava.style.display = 'none';
+        tocUwc.style.display = 'block';
+
+        if (updateHash && !window.location.hash.startsWith('#uwc')) {
+          history.replaceState(null, null, '#uwc');
+        }
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // TravaLab Calculator Logic
+    function updateTravaCalc() {
+      const totalVolume = parseFloat(document.getElementById('tl-input-total').value);
+      const sharePct = parseFloat(document.getElementById('tl-input-share').value);
+      const ticket = parseFloat(document.getElementById('tl-input-ticket').value);
+      const lift = parseFloat(document.getElementById('tl-input-lift').value);
+
+      document.getElementById('tl-val-total').innerText = totalVolume.toLocaleString() + ' draws';
+      document.getElementById('tl-val-share').innerText = sharePct + '%';
+      document.getElementById('tl-val-ticket').innerText = '$' + ticket.toFixed(2);
+      document.getElementById('tl-val-lift').innerText = '+' + lift + ' draws';
+
+      const baseDraws = Math.round(totalVolume * (sharePct / 100));
+      const baseRev = Math.round(baseDraws * ticket);
+      const incRev = Math.round(lift * ticket);
+      const revShare = Math.round(lift * 12.50);
+      const retainer = 2000;
+      const netProfit = incRev - revShare - retainer;
+      const breakeven = Math.ceil(retainer / ticket);
+
+      document.getElementById('tl-res-base-draws').innerText = baseDraws.toLocaleString() + ' / mo';
+      document.getElementById('tl-res-base-rev').innerText = '$' + baseRev.toLocaleString() + ' / mo';
+      document.getElementById('tl-res-inc-rev').innerText = '+$' + incRev.toLocaleString() + ' / mo';
+      document.getElementById('tl-res-rev-share').innerText = '$' + revShare.toLocaleString() + ' / mo';
+      document.getElementById('tl-res-net-profit').innerText = (netProfit >= 0 ? '+$' : '-$') + Math.abs(netProfit).toLocaleString() + ' / mo';
+      document.getElementById('tl-res-breakeven').innerText = breakeven + ' Incremental Draws';
+    }
+
+    // UWC Calculator Logic
+    function updateUwcCalc() {
+      const members = parseFloat(document.getElementById('uwc-input-members').value);
+      const tuition = parseFloat(document.getElementById('uwc-input-tuition').value);
+      const newAthletes = parseFloat(document.getElementById('uwc-input-new').value);
+
+      document.getElementById('uwc-val-members').innerText = members + ' athletes';
+      document.getElementById('uwc-val-tuition').innerText = '$' + tuition.toFixed(2);
+      document.getElementById('uwc-val-new').innerText = '+' + newAthletes + ' athletes';
+
+      const baseTuition = Math.round(members * tuition);
+      const newTuition = Math.round((members + newAthletes) * tuition);
+      const incTuition = Math.round(newAthletes * tuition);
+      const annualAdded = incTuition * 12;
+      const revShare = Math.round(newAthletes * 25.00);
+      const retainer = 1000;
+      const breakeven = Math.ceil(retainer / tuition);
+
+      document.getElementById('uwc-res-base-tuition').innerText = '$' + baseTuition.toLocaleString() + ' / mo';
+      document.getElementById('uwc-res-new-tuition').innerText = '$' + newTuition.toLocaleString() + ' / mo';
+      document.getElementById('uwc-res-inc-tuition').innerText = '+$' + incTuition.toLocaleString() + ' / mo';
+      document.getElementById('uwc-res-annual-added').innerText = '+$' + annualAdded.toLocaleString() + ' / yr';
+      document.getElementById('uwc-res-rev-share').innerText = '$' + revShare.toLocaleString() + ' / mo';
+      document.getElementById('uwc-res-breakeven').innerText = breakeven + ' Recurring Athletes';
+    }
+
+    // Search and filter sidebar nav items
+    function filterSidebarNav() {
+      const q = document.getElementById('doc-search-input').value.toLowerCase();
+      const currentNavGroup = currentCompany === 'travalab' ? 'nav-travalab-group' : 'nav-uwc-group';
+      const items = document.getElementById(currentNavGroup).getElementsByClassName('sidebar-nav-item');
+
+      for (let item of items) {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(q) ? 'block' : 'none';
+      }
+    }
+
+    
+    // Copy code block to clipboard
+    function copyCode(btn, elementId) {
+      const codeEl = document.getElementById(elementId);
+      if (!codeEl) return;
+      navigator.clipboard.writeText(codeEl.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        btn.style.color = '#10b981';
+        setTimeout(() => {
+          btn.innerText = orig;
+          btn.style.color = '';
+        }, 2000);
+      });
+    }
+
+    // Mobile nav toggle
+    const mobileBtn = document.getElementById('mobile-toggle');
+    const sidebarNav = document.getElementById('sidebar-nav');
+    if (mobileBtn && sidebarNav) {
+      mobileBtn.addEventListener('click', () => {
+        sidebarNav.classList.toggle('mobile-open');
+      });
+    }
+
+    // URL Hash Routing on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      updateTravaCalc();
+      updateUwcCalc();
+      const hash = window.location.hash;
+      if (hash.startsWith('#uwc')) {
+        switchCompany('uwc', false);
+      } else {
+        switchCompany('travalab', false);
+      }
+
+      // If a sub-anchor exists, scroll to it smoothly
+      if (hash && hash !== '#travalab' && hash !== '#uwc') {
+        const target = document.querySelector(hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
+      }
+    });
+
+    // Close mobile menu on nav link click
+    document.querySelectorAll('.sidebar-nav-item a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 820) {
+          sidebarNav.classList.remove('mobile-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
