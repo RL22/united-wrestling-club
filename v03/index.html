@@ -308,6 +308,10 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
 .field [aria-invalid=true] { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
 .field-error { display: block; color: var(--red); font-size: .8125rem; margin-top: .3rem; }
 .field-error:empty { display: none; }
+.tcpa-box { border: 1px solid var(--line); border-radius: 2px; background: var(--white); padding: .75rem .85rem; margin: 1rem 0; }
+.tcpa-label { display: flex; align-items: flex-start; gap: .6rem; font-size: .8125rem; font-weight: 600; color: var(--ink); line-height: 1.45; cursor: pointer; }
+.tcpa-label input[type="checkbox"] { width: 18px; height: 18px; min-height: 18px; margin-top: 2px; accent-color: var(--red); flex-shrink: 0; }
+.tcpa-optout { font-size: .75rem; color: var(--muted); line-height: 1.45; margin: .45rem 0 0 1.7rem; }
 .form-note { font-size: .8125rem; color: var(--muted); margin: 1rem 0 0; }
 .form-errors { font-size: .875rem; color: var(--red); margin-bottom: 1rem; }
 .review-list { font-size: .9375rem; margin: 1.5rem 0; }
@@ -1098,14 +1102,42 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   <span class="eyebrow red-text" id="dialog-offer">$15&nbsp;/ 3-Day&nbsp;Mat&nbsp;Pass</span>
   <h2 id="dialog-heading">Step into your corner.</h2>
   <p class="dialog-intro" id="dialog-description">Choose your program and add your details. Then continue to WrestlingIQ to register, or text Coach&nbsp;Naweed for help.</p>
-  <form id="lead-form" novalidate>
+  <form id="lead-form" action="https://formspree.io/f/xyyavaaj" method="POST" data-uwc-trial-form novalidate>
    <div class="field"><label for="athlete">Athlete’s name</label><input id="athlete" name="athlete" autocomplete="name" maxlength="100" required aria-describedby="athlete-error"><span class="field-error" id="athlete-error"></span></div>
    <div class="field"><label for="mobile">Mobile number (parent’s if under 18)</label><input id="mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" placeholder="(510) 555-0123" required aria-describedby="mobile-error"><span class="field-error" id="mobile-error"></span></div>
-   <div class="field"><label for="program">Training program</label><select id="program" name="program" required aria-describedby="program-error"><option value="">Choose your program</option><option value="youth">Youth Wrestling Academy (5–13)</option><option value="varsity">Varsity & Scholastic Prep (14–18)</option><option value="adult">Adult Wrestling & Wrestle-Jitsu (18+)</option><option value="open">Saturday Open Mat</option></select><span class="field-error" id="program-error"></span></div>
+   <div class="field"><label for="program">Training program</label><select id="program" name="program" required aria-describedby="program-error"><option value="">Choose your program</option><option value="youth">Youth Wrestling Academy (5–13)</option><option value="varsity">Varsity &amp; Scholastic Prep (14–18)</option><option value="adult">Adult Wrestling &amp; Wrestle-Jitsu (18+)</option><option value="open">Saturday Open Mat</option></select><span class="field-error" id="program-error"></span></div>
+   <div class="field"><label for="source">How did you first find United Wrestling Club?</label><select id="source" name="self_reported_source" required aria-describedby="source-error"><option value="">Select one...</option><option value="google_search">Google Search (Wrestling near me)</option><option value="google_maps_reviews">Google Maps / 5-Star Reviews</option><option value="friend_family_referral">UWC Family / Coach / Teammate Referral</option><option value="school_tournament">High School / SCWAY Tournament</option><option value="instagram_social">Instagram / YouTube / Social Media</option><option value="drove_by_industrial_pkwy">Drove by Facility (Industrial Pkwy)</option><option value="other">Other</option></select><span class="field-error" id="source-error"></span></div>
+   <div class="tcpa-box">
+    <label class="tcpa-label" for="v03-sms-opt-in">
+     <input type="checkbox" id="v03-sms-opt-in" name="sms_opt_in" value="true">
+     <span>Text me my 3-Day Mat Pass confirmation, Suite C arrival instructions, and club updates from United Wrestling Club.</span>
+    </label>
+    <p class="tcpa-optout">Optional — consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies (up to 6 msgs/mo). Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help.</p>
+   </div>
+   <!-- Hidden First-Party Attribution & TCPA Consent Audit Fields (Auto-populated by uwc-attribution.js) -->
+   <input type="hidden" name="uwc_lead_id" value="">
+   <input type="hidden" name="ga_client_id" value="">
+   <input type="hidden" name="initial_referrer" value="">
+   <input type="hidden" name="initial_referring_domain" value="">
+   <input type="hidden" name="initial_landing_page" value="">
+   <input type="hidden" name="initial_utm_source" value="">
+   <input type="hidden" name="initial_utm_medium" value="">
+   <input type="hidden" name="initial_utm_campaign" value="">
+   <input type="hidden" name="initial_channel" value="">
+   <input type="hidden" name="initial_taxonomy" value="">
+   <input type="hidden" name="last_utm_source" value="">
+   <input type="hidden" name="last_utm_medium" value="">
+   <input type="hidden" name="last_utm_campaign" value="">
+   <input type="hidden" name="touch_count" value="">
+   <input type="hidden" name="touch_path_json" value="">
+   <input type="hidden" name="consent_timestamp_utc" value="">
+   <input type="hidden" name="consent_source_url" value="">
+   <input type="hidden" name="consent_disclosure_version" value="v1.0-2026-11">
+   <input type="hidden" name="sms_opt_in_status" value="opted_out_or_unchecked">
    <p class="form-errors" id="form-errors" role="alert" hidden></p>
-   <button class="btn full" type="submit">Review & continue <span class="arrow" aria-hidden="true">→</span></button>
+   <button class="btn full" type="submit">Review &amp; continue <span class="arrow" aria-hidden="true">→</span></button>
    <p class="form-note" id="form-note">All fields required. The Mat&nbsp;Pass covers three consecutive age-appropriate practices. Open mat is a separate $15 drop-in.</p>
-   <p class="form-note">Details stay on this page until you choose to text them. WrestlingIQ collects registration details and payment separately. Nothing is charged here.</p>
+   <p class="form-note">Details stay on this page until you choose to text them. WrestlingIQ collects registration details and payment separately. Nothing is charged here. Reply STOP anytime to opt out of texts.</p>
   </form>
   <div id="lead-review" hidden>
    <dl class="review-list" id="review-list"></dl>
@@ -1116,6 +1148,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
  </div>
 </dialog>
 <noscript><div class="no-js-note">For all programs and times, call or text <a href="tel:+15103034869">(510)&nbsp;303-4869</a>. Mat&nbsp;Pass links go directly to WrestlingIQ registration.</div><style>.nav-toggle,.video-toggle{display:none}.nav{display:flex;position:static;flex-wrap:wrap;padding:.5rem 0}.header-inner{flex-wrap:wrap}.program-tabs{display:none}.program-panel[hidden]{display:grid!important}.program-layout{display:block}.program-panel{margin-bottom:2rem}</style></noscript>
+<script src="../assets/js/uwc-attribution.js"></script>
 <script>
 (() => {
   'use strict';
@@ -1263,7 +1296,9 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   const program = $('#program');
   const athlete = $('#athlete');
   const mobile = $('#mobile');
-  const fields = [athlete, mobile, program];
+  const sourceField = $('#source');
+  const smsOptIn = $('#v03-sms-opt-in');
+  const fields = [athlete, mobile, program, sourceField];
   const offers = {
     trial: {
       label: '$15 / 3-Day Mat Pass',
@@ -1312,6 +1347,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
     showForm();
     clearErrors();
     closeMenu();
+    if (window.UWCAttribution) window.UWCAttribution.syncForm();
     dialog.showModal();
     dialog.scrollTop = 0;
     document.body.classList.add('modal-open');
@@ -1334,6 +1370,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
   function validate(field) {
     let message = '';
     if (field === program && (!program.value || program.selectedOptions[0].disabled)) message = 'Choose a training program.';
+    if (field === sourceField && !sourceField.value) message = 'Tell us how you first found UWC.';
     if (field === athlete && !athlete.value.trim()) message = 'Enter the athlete’s name.';
     if (field === mobile) {
       const digits = mobile.value.replace(/\D/g, '');
@@ -1353,6 +1390,7 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
     });
   });
   program.addEventListener('change', () => validate(program));
+  sourceField.addEventListener('change', () => validate(sourceField));
   form.addEventListener('submit', event => {
     event.preventDefault();
     const invalid = fields.filter(field => !validate(field));
@@ -1362,11 +1400,15 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
       invalid[0].focus();
       return;
     }
+    const payload = window.UWCAttribution ? window.UWCAttribution.submitLead(form, { selected_offer: offers[currentOffer].label }) : {};
+    const isOptedIn = Boolean(smsOptIn && smsOptIn.checked);
     const details = [
       ['Offer', offers[currentOffer].label],
       ['Athlete', athlete.value.trim()],
       ['Mobile', mobile.value.trim()],
-      ['Program', program.selectedOptions[0].text]
+      ['Program', program.selectedOptions[0].text],
+      ['Found Us', sourceField.selectedOptions[0].text],
+      ['SMS Alerts', isOptedIn ? 'Opted In (Reply STOP to opt out)' : 'Opted Out']
     ];
     const list = $('#review-list');
     list.replaceChildren();
@@ -1380,14 +1422,15 @@ dialog::backdrop { background: oklch(20% .009 25 / .85); }
       list.append(row);
     });
     const message = 'Hi UWC! I’m interested in ' + offers[currentOffer].label + '.\n' +
-      details.slice(1).map(([label, value]) => label + ': ' + value).join('\n') +
+      details.slice(1, 5).map(([label, value]) => label + ': ' + value).join('\n') +
       '\nPlease help me confirm my first practice.';
     const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     $('#send-details').href = 'sms:+15103034869' + (ios ? '&' : '?') + 'body=' + encodeURIComponent(message);
-    $('#registration-link').href = currentOffer === 'membership'
+    const rawWiqUrl = currentOffer === 'membership'
       ? 'https://www.wrestlingiq.com/users/sign_up?paid_session_id=' + membershipSessions[program.value] + '&show_registration=true&team_id=513'
       : offers[currentOffer].url;
+    $('#registration-link').href = window.UWCAttribution ? window.UWCAttribution.decorateUrl(rawWiqUrl) : rawWiqUrl;
     form.hidden = true;
     review.hidden = false;
     $('#dialog-heading').textContent = 'Your next move.';

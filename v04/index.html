@@ -2088,6 +2088,15 @@ dialog#signup-modal::backdrop {
   flex-shrink: 0;
 }
 
+.tcpa-optout-microcopy {
+  font-size: 0.74rem;
+  color: var(--color-text-dim);
+  line-height: 1.45;
+  margin-top: -0.6rem;
+  margin-bottom: 1.1rem;
+  padding-left: 1.9rem;
+}
+
 .modal-guarantee-note {
   font-size: 0.78rem;
   color: var(--color-text-dim);
@@ -3345,14 +3354,14 @@ dialog#signup-modal::backdrop {
         Experience our Hayward mat room with zero commitment. Enter your details below to lock in your pass and coordinate your gear fitting with Coach Naweed.
       </p>
 
-      <form id="booking-form" novalidate>
+      <form id="booking-form" action="https://formspree.io/f/xyyavaaj" method="POST" data-uwc-trial-form novalidate>
         <div class="form-group">
           <label class="form-label" for="form-program">Select Training Program</label>
           <select class="form-control" id="form-program" name="program" required aria-describedby="error-program">
             <option value="">Select a program...</option>
             <option value="youth" selected>Youth Academy (Ages 5–13)</option>
-            <option value="varsity">Varsity & Scholastic (Ages 14–18)</option>
-            <option value="adult">Adult Wrestling & BJJ (Ages 18+)</option>
+            <option value="varsity">Varsity &amp; Scholastic (Ages 14–18)</option>
+            <option value="adult">Adult Wrestling &amp; BJJ (Ages 18+)</option>
             <option value="open">Saturday Bay Area Open Mat</option>
           </select>
           <span class="field-error-msg" id="error-program"></span>
@@ -3376,15 +3385,59 @@ dialog#signup-modal::backdrop {
           <span class="field-error-msg" id="error-phone"></span>
         </div>
 
+        <div class="form-group">
+          <label class="form-label" for="form-source">How did you first find United Wrestling Club?</label>
+          <select class="form-control" id="form-source" name="self_reported_source" required aria-describedby="error-self_reported_source">
+            <option value="">Select one...</option>
+            <option value="google_search">Google Search (Wrestling near me)</option>
+            <option value="google_maps_reviews">Google Maps / 5-Star Reviews</option>
+            <option value="friend_family_referral">UWC Family / Coach / Teammate Referral</option>
+            <option value="school_tournament">High School / SCWAY Tournament</option>
+            <option value="instagram_social">Instagram / YouTube / Social Media</option>
+            <option value="drove_by_industrial_pkwy">Drove by Facility (Industrial Pkwy)</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="field-error-msg" id="error-self_reported_source"></span>
+        </div>
+
         <div class="consent-row">
           <input id="form-consent" name="consent" type="checkbox" required aria-describedby="error-consent">
-          <label for="form-consent">I am 18+ or the parent/legal guardian of this athlete, and authorize United Wrestling Club to text practice coordination details.</label>
+          <label for="form-consent">I am 18+ or the parent/legal guardian of this athlete.</label>
         </div>
         <span class="field-error-msg" id="error-consent" style="margin-top: -0.5rem; margin-bottom: 1rem;"></span>
 
-        <button class="btn btn-crimson btn-full" type="submit">Verify & Lock In Pass &nearr;</button>
+        <div class="consent-row" style="margin-top: 0.5rem;">
+          <input id="form-sms-opt-in" name="sms_opt_in" type="checkbox" value="true">
+          <label for="form-sms-opt-in">Text me my 3-Day Mat Pass confirmation, Suite C arrival instructions, and club updates from <strong>United Wrestling Club</strong>.</label>
+        </div>
+        <p class="tcpa-optout-microcopy">
+          Optional — consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies (up to 6 msgs/mo). Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help.
+        </p>
+
+        <!-- Hidden First-Party Attribution & TCPA Consent Audit Fields (Auto-populated by uwc-attribution.js) -->
+        <input type="hidden" name="uwc_lead_id" value="">
+        <input type="hidden" name="ga_client_id" value="">
+        <input type="hidden" name="initial_referrer" value="">
+        <input type="hidden" name="initial_referring_domain" value="">
+        <input type="hidden" name="initial_landing_page" value="">
+        <input type="hidden" name="initial_utm_source" value="">
+        <input type="hidden" name="initial_utm_medium" value="">
+        <input type="hidden" name="initial_utm_campaign" value="">
+        <input type="hidden" name="initial_channel" value="">
+        <input type="hidden" name="initial_taxonomy" value="">
+        <input type="hidden" name="last_utm_source" value="">
+        <input type="hidden" name="last_utm_medium" value="">
+        <input type="hidden" name="last_utm_campaign" value="">
+        <input type="hidden" name="touch_count" value="">
+        <input type="hidden" name="touch_path_json" value="">
+        <input type="hidden" name="consent_timestamp_utc" value="">
+        <input type="hidden" name="consent_source_url" value="">
+        <input type="hidden" name="consent_disclosure_version" value="v1.0-2026-11">
+        <input type="hidden" name="sms_opt_in_status" value="opted_out_or_unchecked">
+
+        <button class="btn btn-crimson btn-full" type="submit">Verify &amp; Lock In Pass &nearr;</button>
         <p class="modal-guarantee-note">
-          Instant WrestlingIQ Team #513 integration. No credit card required on this screen.
+          Instant WrestlingIQ Team #513 integration. No credit card required on this screen. Reply STOP anytime to opt out of texts.
         </p>
       </form>
     </div>
@@ -3410,6 +3463,9 @@ dialog#signup-modal::backdrop {
     </div>
   </div>
 </dialog>
+
+<!-- First-Party Attribution & TCPA Consent Stitcher -->
+<script src="../assets/js/uwc-attribution.js"></script>
 
 <!-- Vanilla Interactive Scripts -->
 <script>
@@ -3565,7 +3621,9 @@ dialog#signup-modal::backdrop {
   const inputAthlete = document.getElementById('form-athlete');
   const inputParent = document.getElementById('form-parent');
   const inputPhone = document.getElementById('form-phone');
+  const inputSource = document.getElementById('form-source');
   const inputConsent = document.getElementById('form-consent');
+  const inputSmsOptIn = document.getElementById('form-sms-opt-in');
   const parentReqLabel = document.getElementById('parent-req-label');
 
   const offersMap = {
@@ -3616,6 +3674,8 @@ dialog#signup-modal::backdrop {
 
       formView.hidden = false;
       reviewView.hidden = true;
+
+      if (window.UWCAttribution) window.UWCAttribution.syncForm();
 
       if (modal && typeof modal.showModal === 'function') {
         modal.showModal();
@@ -3686,6 +3746,8 @@ dialog#signup-modal::backdrop {
       if (digits.length < 10) {
         msg = 'Please enter a valid 10-digit mobile phone number.';
       }
+    } else if (field === inputSource && !field.value) {
+      msg = 'Please select how you first found UWC.';
     } else if (field === inputConsent && !field.checked) {
       msg = 'Please acknowledge age or legal guardian authorization.';
     }
@@ -3695,7 +3757,7 @@ dialog#signup-modal::backdrop {
     return !msg;
   }
 
-  [inputProgram, inputAthlete, inputParent, inputPhone, inputConsent].forEach(input => {
+  [inputProgram, inputAthlete, inputParent, inputPhone, inputSource, inputConsent].forEach(input => {
     if (input) {
       input.addEventListener('blur', () => validateField(input));
       input.addEventListener('input', () => {
@@ -3711,7 +3773,7 @@ dialog#signup-modal::backdrop {
       e.preventDefault();
       updateParentRequirement();
 
-      const fields = [inputProgram, inputAthlete, inputParent, inputPhone, inputConsent];
+      const fields = [inputProgram, inputAthlete, inputParent, inputPhone, inputSource, inputConsent];
       let hasError = false;
       fields.forEach(f => {
         if (!validateField(f)) {
@@ -3725,12 +3787,16 @@ dialog#signup-modal::backdrop {
         return;
       }
 
-      // Step 2 Review Render
+      // Step 2 Review Render & Formspree Attribution Dispatch
       const progText = inputProgram.options[inputProgram.selectedIndex].text;
       const athleteName = inputAthlete.value.trim();
       const parentName = inputParent.value.trim() || 'N/A (Adult Athlete)';
       const phoneNum = inputPhone.value.trim();
+      const sourceText = inputSource ? inputSource.options[inputSource.selectedIndex].text : 'Google Search';
+      const isSmsOptedIn = Boolean(inputSmsOptIn && inputSmsOptIn.checked);
       const offerTitle = offersMap[activeOffer] ? offersMap[activeOffer].title : '$15 3-Day Mat Pass';
+
+      const payload = window.UWCAttribution ? window.UWCAttribution.submitLead(bookingForm, { selected_offer: offerTitle }) : {};
 
       reviewContent.innerHTML = `
         <div class="review-item">
@@ -3753,6 +3819,14 @@ dialog#signup-modal::backdrop {
           <span class="review-label">Mobile Phone:</span>
           <span class="review-value">${phoneNum}</span>
         </div>
+        <div class="review-item">
+          <span class="review-label">Found UWC Via:</span>
+          <span class="review-value">${sourceText}</span>
+        </div>
+        <div class="review-item">
+          <span class="review-label">SMS Updates:</span>
+          <span class="review-value">${isSmsOptedIn ? 'Opted In (Reply STOP to opt out)' : 'Opted Out'}</span>
+        </div>
       `;
 
       // Compose SMS URL
@@ -3767,9 +3841,10 @@ dialog#signup-modal::backdrop {
       const smsPrefix = isApple ? 'sms:+15103034869&body=' : 'sms:+15103034869?body=';
       btnSendSms.href = smsPrefix + encodeURIComponent(smsBody);
 
-      // WrestlingIQ Handoff Link
+      // WrestlingIQ Handoff Link (Decorated with uwc_lead_id + First-Touch UTMs)
       if (offersMap[activeOffer]) {
-        btnOpenWiq.href = offersMap[activeOffer].url;
+        const rawWiq = offersMap[activeOffer].url;
+        btnOpenWiq.href = window.UWCAttribution ? window.UWCAttribution.decorateUrl(rawWiq) : rawWiq;
       }
 
       formView.hidden = true;

@@ -2468,11 +2468,47 @@
       border-radius: var(--radius-md);
       width: 100%;
       max-width: 520px;
-      padding: 36px 32px;
+      max-height: calc(100dvh - 32px);
+      overflow-y: auto;
+      padding: 32px 28px;
       position: relative;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(144, 37, 36, 0.25);
       transform: translateY(20px) scale(0.97);
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tcpa-consent-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+
+    .tcpa-checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--color-text-bright);
+      line-height: 1.45;
+      cursor: pointer;
+    }
+
+    .tcpa-checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    .tcpa-optout-note {
+      font-size: 0.72rem;
+      color: var(--color-text-dim);
+      line-height: 1.45;
+      margin-top: 8px;
+      padding-left: 28px;
     }
 
     .modal-overlay.open .modal-card {
@@ -3978,38 +4014,83 @@
         </div>
         <p class="modal-sub">Enter your details below to claim your 3 consecutive training sessions. Coach Naweed will reach out to confirm your gear and class time.</p>
 
-        <form id="trialForm">
+        <form id="trialForm" action="https://formspree.io/f/xyyavaaj" method="POST" data-uwc-trial-form>
           <div class="form-group">
-            <label class="form-label">Athlete Full Name</label>
-            <input type="text" class="form-input" placeholder="e.g. Jordan Smith" required>
+            <label class="form-label" for="v01-athlete">Athlete Full Name</label>
+            <input type="text" id="v01-athlete" name="athlete_name" class="form-input" placeholder="e.g. Jordan Smith" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Parent / Guardian Name (If Youth Athlete)</label>
-            <input type="text" class="form-input" placeholder="e.g. Michael Smith">
+            <label class="form-label" for="v01-parent">Parent / Guardian Name (If Youth Athlete)</label>
+            <input type="text" id="v01-parent" name="parent_name" class="form-input" placeholder="e.g. Michael Smith">
           </div>
 
           <div class="form-group">
-            <label class="form-label">Phone Number (For SMS Confirmation)</label>
-            <input type="tel" class="form-input" placeholder="(510) 000-0000" required>
+            <label class="form-label" for="v01-phone">Phone Number (For SMS Confirmation)</label>
+            <input type="tel" id="v01-phone" name="phone" class="form-input" placeholder="(510) 303-4869" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Target Program</label>
-            <select class="form-select" required>
+            <label class="form-label" for="v01-program">Target Program</label>
+            <select id="v01-program" name="program" class="form-select" required>
               <option value="youth">Youth Wrestling Academy (Ages 5–13)</option>
-              <option value="varsity">Varsity & Scholastic Prep (Ages 14–18)</option>
-              <option value="adult">Adult Wrestling & Wrestle-Jitsu (18+)</option>
+              <option value="varsity">Varsity &amp; Scholastic Prep (Ages 14–18)</option>
+              <option value="adult">Adult Wrestling &amp; Wrestle-Jitsu (18+)</option>
               <option value="openmat">Saturday Open Mat ($15 Drop-in)</option>
             </select>
           </div>
+
+          <div class="form-group">
+            <label class="form-label" for="v01-source">How did you first find United Wrestling Club?</label>
+            <select id="v01-source" name="self_reported_source" class="form-select" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="google_search">Google Search (Wrestling near me)</option>
+              <option value="google_maps_reviews">Google Maps / 5-Star Reviews</option>
+              <option value="friend_family_referral">UWC Family / Coach / Teammate Referral</option>
+              <option value="school_tournament">High School / SCWAY Tournament</option>
+              <option value="instagram_social">Instagram / YouTube / Social Media</option>
+              <option value="drove_by_industrial_pkwy">Drove by Facility (Industrial Pkwy)</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="tcpa-consent-box">
+            <label class="tcpa-checkbox-label" for="v01-sms-opt-in">
+              <input type="checkbox" id="v01-sms-opt-in" name="sms_opt_in" value="true">
+              <span>Text me my 3-Day Mat Pass confirmation, Suite C arrival instructions, and club updates from <strong>United Wrestling Club</strong>.</span>
+            </label>
+            <div class="tcpa-optout-note">
+              Optional — consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies (up to 6 msgs/mo). Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help.
+            </div>
+          </div>
+
+          <!-- Hidden First-Party Attribution & TCPA Consent Audit Fields (Auto-populated by uwc-attribution.js) -->
+          <input type="hidden" name="uwc_lead_id" value="">
+          <input type="hidden" name="ga_client_id" value="">
+          <input type="hidden" name="initial_referrer" value="">
+          <input type="hidden" name="initial_referring_domain" value="">
+          <input type="hidden" name="initial_landing_page" value="">
+          <input type="hidden" name="initial_utm_source" value="">
+          <input type="hidden" name="initial_utm_medium" value="">
+          <input type="hidden" name="initial_utm_campaign" value="">
+          <input type="hidden" name="initial_channel" value="">
+          <input type="hidden" name="initial_taxonomy" value="">
+          <input type="hidden" name="last_utm_source" value="">
+          <input type="hidden" name="last_utm_medium" value="">
+          <input type="hidden" name="last_utm_campaign" value="">
+          <input type="hidden" name="touch_count" value="">
+          <input type="hidden" name="touch_path_json" value="">
+          <input type="hidden" name="consent_timestamp_utc" value="">
+          <input type="hidden" name="consent_source_url" value="">
+          <input type="hidden" name="consent_disclosure_version" value="v1.0-2026-11">
+          <input type="hidden" name="sms_opt_in_status" value="opted_out_or_unchecked">
 
           <button type="submit" class="btn btn-primary btn-accent-glow" style="width: 100%; margin-top: 10px; padding: 16px;">
             Confirm $15 3-Day Pass
           </button>
           
           <div style="font-size: 0.72rem; color: var(--color-text-dim); text-align: center; margin-top: 12px;">
-            Secure intake routed directly to WrestlingIQ (Team #513). No spam ever.
+            Secure intake routed directly to WrestlingIQ (Team #513). Reply STOP anytime to opt out of SMS.
           </div>
         </form>
       </div>
@@ -4018,18 +4099,23 @@
       <div class="modal-success-state" id="modalSuccessState">
         <div class="success-icon">✓</div>
         <h3 class="modal-title" style="color: #22c55e;">Pass Reserved!</h3>
-        <p class="modal-sub" style="margin-top: 8px;">
-          Coach Naweed has received your request. We've sent an SMS confirmation to your number with directions and mat room instructions.
+        <p class="modal-sub" id="v01-success-sub" style="margin-top: 8px;">
+          Coach Naweed has received your request. Complete your registration in WrestlingIQ or text Coach Naweed directly below.
         </p>
         <div style="background: var(--color-canvas); padding: 16px; border-radius: var(--radius-sm); margin: 20px 0; text-align: left; font-size: 0.82rem;">
           <div><strong>Address:</strong> 30139 Industrial Pkwy SW Ste C, Hayward, CA</div>
           <div style="margin-top: 4px;"><strong>Locker Arrival:</strong> 15 minutes before scheduled class</div>
           <div style="margin-top: 4px;"><strong>Attire:</strong> T-shirt and gym shorts (no pockets)</div>
+          <div style="margin-top: 4px;" id="v01-sms-status-row"><strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)</div>
         </div>
+        <a href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" id="v01-wiq-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-accent-glow" style="width: 100%; margin-bottom: 10px;">Complete in WrestlingIQ (Team #513) &nearr;</a>
         <button class="btn btn-outline" id="modalDoneBtn" style="width: 100%;">Close</button>
       </div>
     </div>
   </div>
+
+  <!-- First-Party Attribution & TCPA Consent Stitcher -->
+  <script src="../assets/js/uwc-attribution.js"></script>
 
   <!-- JavaScript for Interactive FAQ, Modal, and Mobile Nav Drawer -->
   <script>
@@ -4065,9 +4151,10 @@
 
     function openModal() {
       if (!modal) return;
+      if (window.UWCAttribution) window.UWCAttribution.syncForm();
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
-      const firstInput = form ? form.querySelector('input') : null;
+      const firstInput = form ? form.querySelector('input:not([type="hidden"])') : null;
       if (firstInput) setTimeout(() => firstInput.focus(), 100);
     }
 
@@ -4079,6 +4166,7 @@
         if (formContainer) formContainer.style.display = 'block';
         if (successState) successState.style.display = 'none';
         if (form) form.reset();
+        if (window.UWCAttribution) window.UWCAttribution.syncForm();
       }, 300);
     }
 
@@ -4100,7 +4188,19 @@
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Simulate WrestlingIQ webhook intake
+        const payload = window.UWCAttribution ? window.UWCAttribution.submitLead(form) : {};
+        const smsOptInBox = document.getElementById('v01-sms-opt-in');
+        const smsStatusRow = document.getElementById('v01-sms-status-row');
+        const wiqBtn = document.getElementById('v01-wiq-btn');
+        if (smsStatusRow) {
+          const isOptedIn = smsOptInBox && smsOptInBox.checked;
+          smsStatusRow.innerHTML = isOptedIn
+            ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
+            : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
+        }
+        if (wiqBtn && window.UWCAttribution) {
+          wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
+        }
         if (formContainer) formContainer.style.display = 'none';
         if (successState) successState.style.display = 'block';
       });
