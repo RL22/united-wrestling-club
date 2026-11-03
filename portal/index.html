@@ -345,49 +345,8 @@
     .portal-main {
       flex: 1;
       min-width: 0;
+      max-width: 1080px;
       padding: 36px clamp(20px, 4vw, 56px) 100px;
-    }
-
-    /* Right Sticky Mini-TOC */
-    .portal-toc {
-      width: var(--toc-width);
-      flex-shrink: 0;
-      position: sticky;
-      top: var(--header-height);
-      height: calc(100vh - var(--header-height));
-      overflow-y: auto;
-      padding: 36px 16px 40px 24px;
-      border-left: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .toc-title {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-dim);
-      margin-bottom: 12px;
-    }
-
-    .toc-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .toc-list a {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.15s ease;
-      line-height: 1.4;
-      display: block;
-    }
-
-    .toc-list a:hover {
-      color: var(--text-main);
     }
 
     /* Doc Workspace Container (Hidden when inactive) */
@@ -1137,7 +1096,7 @@
         <ul class="sidebar-nav-list">
           <li class="sidebar-nav-item"><a href="#uwc-mandate"><span>1. Founder Mandate</span><span class="nav-tag">CORE</span></a></li>
           <li class="sidebar-nav-item"><a href="#uwc-economics"><span>2. Roster &amp; Revenue</span><span class="nav-tag">MODEL</span></a></li>
-          <li class="sidebar-nav-item"><a href="#uwc-expansion"><span>3. Dual-GBP Expansion</span><span class="nav-tag">LOCAL</span></a></li>
+          <li class="sidebar-nav-item"><a href="#uwc-expansion"><span>3. East Bay SEO Playbook</span><span class="nav-tag">LOCAL</span></a></li>
           <li class="sidebar-nav-item"><a href="#uwc-concepts"><span>4. Supporting Redesign</span><span class="nav-tag">PROTOTYPES</span></a></li>
           <li class="sidebar-nav-item"><a href="#uwc-ops"><span>5. Team Handoff &amp; GA4</span><span class="nav-tag">OPS</span></a></li>
           <li class="sidebar-nav-item"><a href="#uwc-commercial"><span>6. Commercial Agreement</span><span class="nav-tag">$1K/MO</span></a></li>
@@ -1148,7 +1107,7 @@
       <div class="sidebar-card">
         <div class="sidebar-card-title">Executive Briefing Record</div>
         <div class="sidebar-card-desc">
-          Prepared for Naweed Zemaryalai following executive call on Nov 2, 2026. Combined \$3,000/mo retainer billed as two independent corporate agreements.
+          Prepared for Naweed Zemaryalai following executive call on Nov 2, 2026. Combined $3,000/mo retainer billed as two independent corporate agreements.
         </div>
       </div>
     </aside>
@@ -1163,26 +1122,12 @@
         
         <!-- Doc Hero -->
         <div class="doc-hero">
-          <div class="doc-breadcrumbs">
-            <span>Client Workspace</span>
-            <span class="slash">/</span>
-            <span>TravaLab Inc.</span>
-            <span class="slash">/</span>
-            <span class="current">Executive Growth Architecture</span>
-          </div>
-          
-          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
             <img src="assets/travalab-logo.svg" alt="TravaLab Logo" style="height: 34px; width: auto; filter: drop-shadow(0 4px 12px rgba(252,116,23,0.3));">
           </div>
-          <div class="doc-title-row">
-            <h1 class="doc-title">TravaLab: Direct-To-Consumer Organic Search Acquisition Engine</h1>
-            <div class="brand-badge" style="border-color: rgba(252,116,23,0.3); color: #fc7417;">
-              <span class="dot" style="background:#fc7417; box-shadow:0 0 8px #fc7417;"></span>
-              D2C HEALTHCARE EXPANSION
-            </div>
-          </div>
+          <h1 class="doc-title" style="margin-bottom: 12px;">Direct-To-Consumer Organic Search Acquisition Engine</h1>
           <p class="doc-subtitle">
-            A comprehensive operational blueprint for unlocking high-margin patient-pay mobile phlebotomy demand through pure organic search. Zero ad spend, zero backend disruptions, capacity-gated by verified phlebotomist coverage.
+            Operational blueprint for unlocking high-margin patient-pay mobile phlebotomy demand through pure organic search. Zero ad spend, zero backend disruptions, capacity-gated by verified phlebotomist coverage.
           </p>
         </div>
 
@@ -1237,31 +1182,8 @@
             <h2 class="section-title">Operational Telemetry &amp; Financial Model</h2>
           </div>
           <p class="section-lead">
-            Extracted directly from Naweed's live screen-share of the internal TravaLab operations portal. Telemetry establishes our exact performance baseline and payback threshold:
+            Extracted directly from Naweed's live screen-share of the internal TravaLab operations portal (~3,000 monthly draws, 27% patient-pay at $90–$95 per draw; first 25 miles included):
           </p>
-
-          <div class="metric-grid">
-            <div class="metric-card">
-              <div class="metric-card-label">Total Monthly Volume</div>
-              <div class="metric-card-val">~3,000</div>
-              <div class="metric-card-sub">Draws nationwide per month across all channels</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-label">Patient-Pay Share (DTC)</div>
-              <div class="metric-card-val accent-trava">27%</div>
-              <div class="metric-card-sub">Confirmed portal split (~810 draws/mo). 73% is partner-pay.</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-label">Average Ticket Price</div>
-              <div class="metric-card-val">$92.50</div>
-              <div class="metric-card-sub">$90.00 – $95.00 base (includes first 25 mi)</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-label">Current DTC Gross</div>
-              <div class="metric-card-val accent-green">~$74,925</div>
-              <div class="metric-card-sub">Monthly baseline direct-to-consumer turnover</div>
-            </div>
-          </div>
 
           <!-- Interactive Calculator -->
           <div class="calc-container" id="travalab-calc">
@@ -1501,21 +1423,6 @@
         </section>
 
         <!-- Section 5: Team Operations & DNS -->
-
-          <div class="code-block">
-            <div class="code-header">
-              <span>AWS ROUTE 53 DNS PROTECTION // TRAVALAB.COM</span>
-              <button class="copy-btn" onclick="copyCode(this, 'trava-dns-code')">Copy Records</button>
-            </div>
-            <pre class="code-body"><code id="trava-dns-code">; TravaLab AWS Route 53 DNS Configuration & Subdomain Protection
-travalab.com.               TXT   "google-site-verification=XXXXXXXXXXXXXXXXXXXXX"
-travalab.com.               MX    1 aspmx.l.google.com.
-travalab.com.               TXT   "v=spf1 include:_spf.google.com ~all"
-api.travalab.com.           A     [PRESERVED_INTERNAL_BACKEND_IP]
-portal.travalab.com.        CNAME [PRESERVED_DISPATCH_PORTAL]
-austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
-          </div>
-
         <section class="doc-section" id="travalab-ops">
           <div class="section-header">
             <span class="section-num">SECTION 05</span>
@@ -1623,11 +1530,6 @@ austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
                     <td>Applies strictly to verified patient-pay draws above the baseline of <strong>810 draws/month</strong>.</td>
                   </tr>
                   <tr>
-                    <td><strong>Payback Threshold</strong></td>
-                    <td><code>22 Incremental Draws</code></td>
-                    <td>Just 22 new draws covers the entire $2,000 base fee in patient-pay turnover (a 2.7% organic lift).</td>
-                  </tr>
-                  <tr>
                     <td><strong>Contract Boundary</strong></td>
                     <td><code>Zero Ad Spend &amp; Zero Backend Ops</code></td>
                     <td>Sprintz operates exclusively on public search and landing pages; no touching backend code.</td>
@@ -1652,26 +1554,12 @@ austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
         
         <!-- Doc Hero -->
         <div class="doc-hero">
-          <div class="doc-breadcrumbs">
-            <span>Client Workspace</span>
-            <span class="slash">/</span>
-            <span>United Wrestling Club LLC</span>
-            <span class="slash">/</span>
-            <span class="current">Olympic RTC Growth Architecture</span>
-          </div>
-          
-          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+          <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
             <img src="assets/uwc_wrestlers.svg" alt="United Wrestling Club Logo" style="height: 48px; width: auto; filter: drop-shadow(0 4px 12px rgba(186,28,28,0.5));">
           </div>
-<div class="doc-title-row">
-            <h1 class="doc-title">United Wrestling Club: East Bay Local Search Dominance</h1>
-            <div class="brand-badge" style="border-color: rgba(186,28,28,0.5); color: #f87171;">
-              <span class="dot" style="background:#ef4444; box-shadow:0 0 8px #ef4444;"></span>
-              REGIONAL TRAINING CENTER #513
-            </div>
-          </div>
+          <h1 class="doc-title" style="margin-bottom: 12px;">East Bay Local Search Dominance</h1>
           <p class="doc-subtitle">
-            Strategic digital blueprint for turning Northern California's premier Olympic heritage wrestling room into the undisputed youth athletics leader across Alameda County. 100% organic local search, Dual-GBP facility expansion, and seamless trial pass intake.
+            Strategic digital blueprint for turning Northern California's premier Olympic heritage wrestling room into the undisputed youth athletics leader across Alameda County. 100% organic local search across 6 East Bay cities, Olympic coaching authority, and seamless trial pass intake.
           </p>
         </div>
 
@@ -1717,31 +1605,8 @@ austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
             <h2 class="section-title">Academy Roster &amp; Financial Model</h2>
           </div>
           <p class="section-lead">
-            Wrestling academy economics are characterized by strong recurring monthly tuition and exceptional athlete lifetime value (LTV) when families commit for seasonal competition cycles:
+            Baseline roster of 45 active recurring athletes at $139.99/mo ($1,680 annual LTV per athlete):
           </p>
-
-          <div class="metric-grid">
-            <div class="metric-card">
-              <div class="metric-card-label">Active Recurring Athletes</div>
-              <div class="metric-card-val accent-uwc">45</div>
-              <div class="metric-card-sub">Baseline recurring roster on mats</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-label">Monthly Member Tuition</div>
-              <div class="metric-card-val">$139.99</div>
-              <div class="metric-card-sub">Recurring monthly club membership fee</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-label">Current Monthly Tuition</div>
-              <div class="metric-card-val">~$6,300</div>
-              <div class="metric-card-sub">Monthly baseline recurring cashflow</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-card-label">Annualized Athlete Value</div>
-              <div class="metric-card-val accent-green">$1,680</div>
-              <div class="metric-card-sub">Gross lifetime tuition value per 12-month athlete</div>
-            </div>
-          </div>
 
           <!-- Interactive Calculator -->
           <div class="calc-container uwc-calc" id="uwc-calc">
@@ -1814,7 +1679,7 @@ austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
                   <div class="calc-highlight-title">Retainer Payback Threshold</div>
                   <div class="calc-highlight-num" id="uwc-res-breakeven">7 Recurring Athletes</div>
                   <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
-                    Just <strong>7 new recurring athletes</strong> completely pays for the \$1,000/mo retainer in recurring tuition.
+                    Just <strong>7 new recurring athletes</strong> completely pays for the $1,000/mo retainer in recurring tuition.
                   </div>
                 </div>
               </div>
@@ -1822,35 +1687,68 @@ austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
           </div>
         </section>
 
-        <!-- Section 3: Dual-GBP Expansion Strategy -->
+        <!-- Section 3: East Bay Local Search Playbook -->
         <section class="doc-section" id="uwc-expansion">
           <div class="section-header">
             <span class="section-num">SECTION 03</span>
-            <h2 class="section-title">Physical Expansion &amp; The Dual-GBP Strategy</h2>
+            <h2 class="section-title">East Bay Local Search Playbook (6-City Footprint)</h2>
           </div>
           <p class="section-lead">
-            During our call, Naweed revealed confidential negotiations to acquire the former <strong>Pep Boys automotive facility at 30085 Industrial Pkwy SW</strong>, located under 200 yards from UWC's current home at 30139 Industrial Pkwy SW.
+            As Naweed noted on our call: <em>"there's different locations and CDs and searches and zip codes and all that other good stuff."</em> While UWC already ranks in Hayward without active SEO, neighboring East Bay families searching for youth wrestling, BJJ takedowns, or offseason high school training never see UWC unless they search by exact brand name.
           </p>
 
-          <div class="callout callout-critical">
-            <div class="callout-icon">🗺️</div>
-            <div class="callout-content">
-              <strong>The Municipal Boundary Discovery: Hayward vs. Union City</strong>
-              Our geographic analysis surfaced a critical search vulnerability:
-              <br>• Current Gym (30139 Industrial Pkwy SW) is legally in <strong>Hayward, CA (ZIP 94544)</strong>.
-              <br>• The Pep Boys Building (30085 Industrial Pkwy SW) is legally across the border in <strong>Union City, CA (ZIP 94587)</strong>.
-              <br><strong>The Risk:</strong> If Naweed executes a simple address move in Google Business Profile, Google treats it as an out-of-city relocation. This risks <em>erasing UWC's Hayward #1 Map Pack rankings and resetting 42 flawless 5.0-star reviews!</em>
-            </div>
+          <div class="doc-table-wrap">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>Target City &amp; ZIP Cluster</th>
+                  <th>Drive Time to Gym</th>
+                  <th>Primary Search Intent</th>
+                  <th>Target Route</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Hayward, CA</strong> (94544, 94541, 94545)</td>
+                  <td>0 – 8 mins</td>
+                  <td><code>youth wrestling hayward ca</code> • <code>wrestling club near me</code></td>
+                  <td><code>/locations/hayward-ca/</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Union City, CA</strong> (94587)</td>
+                  <td>4 – 10 mins</td>
+                  <td><code>kids wrestling union city</code> • <code>olympic wrestling east bay</code></td>
+                  <td><code>/locations/union-city-ca/</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Fremont, CA</strong> (94536, 94538, 94539)</td>
+                  <td>12 – 18 mins</td>
+                  <td><code>fremont youth wrestling</code> • <code>high school wrestling camp</code></td>
+                  <td><code>/locations/fremont-ca/</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Newark, CA</strong> (94560)</td>
+                  <td>10 – 15 mins</td>
+                  <td><code>wrestling classes newark ca</code> • <code>grappling for mma/bjj</code></td>
+                  <td><code>/locations/newark-ca/</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Castro Valley &amp; San Leandro</strong> (94546, 94577)</td>
+                  <td>14 – 20 mins</td>
+                  <td><code>east bay wrestling academy</code> • <code>usa wrestling rtc california</code></td>
+                  <td><code>/locations/castro-valley-ca/</code></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          <div class="callout callout-telemetry">
-            <div class="callout-icon">🏆</div>
+          <div class="callout callout-insight" style="margin-top: 24px;">
+            <div class="callout-icon">🗓️</div>
             <div class="callout-content">
-              <strong>The Solution: The Dual-GBP Dominance Architecture</strong>
-              Instead of moving the primary profile, we execute a dual-presence strategy:
-              <br>1. <strong>Retain Profile A at 30139 Industrial:</strong> "United Wrestling Club - Olympic Regional Training Center (Hayward)". Locks down Hayward searches.
-              <br>2. <strong>Create Profile B at 30085 Industrial:</strong> "United Wrestling Club - Youth Academy &amp; Expansion Annex (Union City)". Captures the Union City / Fremont market.
-              <br><strong>Result:</strong> UWC owns TWO spots in the regional Google Map Pack, completely boxing out competing BJJ and MMA gyms across southern Alameda County.
+              <strong>Backlogged for New Year Follow-Up (Q1 2027): Former Pep Boys Facility (30085 Industrial Pkwy SW)</strong>
+              Naweed is working with the city to reach the property owner of the former Pep Boys building (<200 yards away), but owner contact is not yet confirmed. 
+              <br>• <strong>Status:</strong> Parked in the Q1 2027 backlog — no action required until lease/acquisition talks progress.
+              <br>• <strong>Pre-Staged Safeguard:</strong> Because 30085 Industrial sits across the municipal line in <strong>Union City (94587)</strong> while the current gym at 30139 Industrial is in <strong>Hayward (94544)</strong>, we have a Dual-GBP annex blueprint ready so UWC never risks resetting its Hayward Map Pack rankings or 42 5.0-star reviews if the deal closes in the new year.
             </div>
           </div>
         </section>
@@ -1946,19 +1844,6 @@ austin.travalab.com.        CNAME cname.vercel-dns.com.</code></pre>
         </section>
 
         <!-- Section 5: Team Operations & GA4 Repair -->
-
-          <div class="code-block">
-            <div class="code-header">
-              <span>AWS ROUTE 53 DNS PROTECTION // UNITEDWRESTLINGCLUB.COM</span>
-              <button class="copy-btn" onclick="copyCode(this, 'uwc-dns-code')">Copy Records</button>
-            </div>
-            <pre class="code-body"><code id="uwc-dns-code">; United Wrestling Club AWS Route 53 DNS Configuration
-unitedwrestlingclub.com.    MX    10 inbound-smtp.us-west-2.amazonaws.com.
-unitedwrestlingclub.com.    TXT   "v=spf1 include:amazonses.com ~all"
-shop.unitedwrestlingclub.com. CNAME shops.myshopify.com.
-www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
-          </div>
-
         <section class="doc-section" id="uwc-ops">
           <div class="section-header">
             <span class="section-num">SECTION 05</span>
@@ -2047,7 +1932,7 @@ www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
                   <tr>
                     <td><strong>Professional Base Fee</strong></td>
                     <td><code>$1,000.00 / month</code></td>
-                    <td>Alameda County local SEO, Dual-GBP architecture, on-page intake optimization, tracking instrumentation.</td>
+                    <td>Alameda County 6-city local SEO, GBP optimization, on-page intake modal, tracking instrumentation.</td>
                   </tr>
                   <tr>
                     <td><strong>Performance Rev-Share</strong></td>
@@ -2055,14 +1940,9 @@ www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
                     <td>Applies strictly to verified recurring active athletes above the baseline of <strong>45 recurring members</strong>.</td>
                   </tr>
                   <tr>
-                    <td><strong>Payback Threshold</strong></td>
-                    <td><code>7 Recurring Athletes</code></td>
-                    <td>Just 7 new recurring athletes covers the entire $1,000 base fee in monthly tuition.</td>
-                  </tr>
-                  <tr>
                     <td><strong>Combined Program Value</strong></td>
                     <td><code>$3,000.00 / mo Total Combined</code></td>
-                    <td>Structured as two separate corporate invoices: TravaLab (\$2,000/mo) + UWC (\$1,000/mo).</td>
+                    <td>Structured as two separate corporate invoices: TravaLab ($2,000/mo) + UWC ($1,000/mo).</td>
                   </tr>
                 </tbody>
               </table>
@@ -2077,36 +1957,6 @@ www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
       </div>
 
     </main>
-
-    <!-- Right Sidebar (On This Page TOC) -->
-    <aside class="portal-toc">
-      <div class="toc-title">ON THIS PAGE</div>
-      
-      <!-- TravaLab TOC -->
-      <ul class="toc-list" id="toc-travalab">
-        <li><a href="#travalab-mandate">1. Founder Mandate</a></li>
-        <li><a href="#travalab-economics">2. Telemetry &amp; Economics</a></li>
-        <li><a href="#travalab-playbook">3. Austin SEO Playbook</a></li>
-        <li><a href="#travalab-frontend">4. Front-End Engine</a></li>
-        <li><a href="#travalab-ops">5. Team Handoff &amp; DNS</a></li>
-        <li><a href="#travalab-commercial">6. Commercial Agreement</a></li>
-      </ul>
-
-      <!-- UWC TOC -->
-      <ul class="toc-list" id="toc-uwc" style="display: none;">
-        <li><a href="#uwc-mandate">1. Founder Mandate</a></li>
-        <li><a href="#uwc-economics">2. Roster &amp; Revenue</a></li>
-        <li><a href="#uwc-expansion">3. Dual-GBP Expansion</a></li>
-        <li><a href="#uwc-concepts">4. Supporting Redesign</a></li>
-        <li><a href="#uwc-ops">5. Team Handoff &amp; GA4</a></li>
-        <li><a href="#uwc-commercial">6. Commercial Agreement</a></li>
-      </ul>
-
-      <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.75rem; color: var(--text-dim);">
-        <div>Prepared by Sprintz</div>
-        <div style="font-family: var(--font-mono); margin-top: 4px;">v2.4 • Nov 2026</div>
-      </div>
-    </aside>
 
   </div>
 
@@ -2123,8 +1973,6 @@ www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
       const viewUwc = document.getElementById('view-uwc');
       const navTrava = document.getElementById('nav-travalab-group');
       const navUwc = document.getElementById('nav-uwc-group');
-      const tocTrava = document.getElementById('toc-travalab');
-      const tocUwc = document.getElementById('toc-uwc');
 
       if (company === 'travalab') {
         btnTrava.classList.add('active');
@@ -2133,8 +1981,6 @@ www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
         viewUwc.classList.remove('active');
         navTrava.style.display = 'block';
         navUwc.style.display = 'none';
-        tocTrava.style.display = 'block';
-        tocUwc.style.display = 'none';
 
         if (updateHash && !window.location.hash.startsWith('#travalab')) {
           history.replaceState(null, null, '#travalab');
@@ -2146,8 +1992,6 @@ www.unitedwrestlingclub.com.  CNAME d123456789.cloudfront.net.</code></pre>
         viewUwc.classList.add('active');
         navTrava.style.display = 'none';
         navUwc.style.display = 'block';
-        tocTrava.style.display = 'none';
-        tocUwc.style.display = 'block';
 
         if (updateHash && !window.location.hash.startsWith('#uwc')) {
           history.replaceState(null, null, '#uwc');

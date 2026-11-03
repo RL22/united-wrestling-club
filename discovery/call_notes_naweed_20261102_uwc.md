@@ -21,8 +21,8 @@ On Monday, November 2, 2026, Rodney Lewis met with Naweed Zemaryalai to review t
    Naweed acknowledges the current website is roughly two years old and visually dated, but an aesthetic redesign alone is not the objective. Visual modernization must serve local search ranking, mobile responsiveness, and high-converting lead capture (e.g., paid trial mat passes).
 4. **Local Search Nature:**  
    Unlike national plays, UWC's growth engine is fundamentally geographic: *"the UWC side of things is like a little bit more straightforward because it's local... there's different locations and CDs and searches and zip codes and all that other good stuff."*
-5. **Physical Facility Expansion / Relocation Underway:**  
-   Naweed is actively pursuing acquisition of the former Pep Boys automotive facility located directly on their industrial corridor, with municipal support.
+5. **Physical Facility Expansion (Backlogged for Q1 2027 / New Year Follow-Up):**  
+   Naweed has been trying to contact the property owner of the former Pep Boys automotive facility on their industrial corridor with municipal support, but owner contact is not yet confirmed. Parked in the backlog to revisit after New Year's (Q1 2027).
 
 ---
 
@@ -57,7 +57,9 @@ The following verbatim excerpts document all UWC discussions from the November 2
 
 ---
 
-## 3. Physical Facility Expansion: Strategic Analysis of the "Pep Boys" Site
+## 3. Physical Facility Expansion (BACKLOGGED — Q1 2027 New Year Follow-Up): Strategic Analysis of the "Pep Boys" Site
+
+> **Status:** Unconfirmed / Parked in Backlog for Q1 2027 (New Year's Follow-Up). Naweed and the city have not yet been able to reach the property owner. Keep the Dual-GBP protection plan staged until owner contact is established.
 
 ### A. Location Identification & Ground Reality
 * **Current UWC Facility:** 30139 Industrial Pkwy SW, Hayward, CA 94544
@@ -187,6 +189,7 @@ Addressing Naweed's question (*"these are like organic backlinks or something li
 │ 5.  │ Deploy live GA4 tag & test lead tracking        │ Rodney    │ Day 3  │
 │ 6.  │ Finalize modular multi-location site rebuild    │ Rodney    │ Week 2 │
 │ 7.  │ Launch Hayward & Union City local SEO cluster   │ Rodney    │ Week 3 │
+│ 8.  │ Follow up on Pep Boys owner contact (Backlog)   │ Rodney    │ Jan '27│
 └─────┴─────────────────────────────────────────────────┴───────────┴────────┘
 ```
 
