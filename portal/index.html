@@ -1738,11 +1738,25 @@
                   <td><code>east bay wrestling academy</code> • <code>usa wrestling rtc california</code></td>
                   <td><code>/locations/castro-valley-ca/</code></td>
                 </tr>
+                <tr>
+                  <td><strong>East Bay Tournament Hub</strong> (41 Events • Sept 2026–Aug 2027)</td>
+                  <td>Regional</td>
+                  <td><code>scway tournament schedule 2026 2027</code> • <code>james logan hs wrestling</code></td>
+                  <td><code>/events/</code> (SSR + <code>SportsEvent</code> Schema)</td>
+                </tr>
               </tbody>
             </table>
           </div>
 
-          <div class="callout callout-insight" style="margin-top: 24px;">
+          <div class="callout callout-warning" style="margin-top: 20px;">
+            <div class="callout-icon">📅</div>
+            <div class="callout-content">
+              <strong>Live <code>/events</code> Audit: 41 Tournaments Locked in Client-Side JS</strong>
+              UWC's live 2026–2027 competition schedule (41 SCWAY, SCVWA, NCS, CIF State, and CAUSAW tournaments kicking off with <em>North Coast Grapplers</em> at James Logan HS in Union City, plus USA Wrestling &amp; SCWAY membership requirements) currently renders an empty <code>&lt;div id="__next"&gt;&lt;/div&gt;</code> shell to search crawlers. Prerendering <code>/events/</code> with <code>SportsEvent</code> JSON-LD schema captures East Bay tournament searches and powers automated SMS/email weigh-in &amp; Trackwrestling registration reminders.
+            </div>
+          </div>
+
+          <div class="callout callout-insight" style="margin-top: 16px;">
             <div class="callout-icon">🗓️</div>
             <div class="callout-content">
               <strong>Backlogged for New Year Follow-Up (Q1 2027): Former Pep Boys Facility (30085 Industrial Pkwy SW)</strong>
@@ -1802,6 +1816,40 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin: 24px 0 12px;">Post-Capture Lifecycle &amp; Organic Attribution Engine</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+            To maximize Organic SEO conversion without losing attribution across third-party checkouts, every lead captured in the on-page Trial Pass modal enters a stitched SMS &amp; Email pipeline tied back to WrestlingIQ Team 513:
+          </p>
+
+          <div class="doc-table-wrap" style="margin-bottom: 24px;">
+            <table class="doc-table">
+              <thead>
+                <tr>
+                  <th>System Layer</th>
+                  <th>Automation &amp; Cadence</th>
+                  <th>Conversion &amp; Attribution Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>SMS Lifecycle</strong> (<code>(510) 303-4869</code>)</td>
+                  <td>Instant Trial Pass text (Suite C parking/gear), -24h mat reminder, +2h post-practice check-in, Day 2/3/5 Team 513 checkout, Day 21 GBP review ask</td>
+                  <td>Eliminates first-day parent anxiety, recovers abandoned WrestlingIQ checkouts (+15m/+24h), and automates 5-star Google review velocity.</td>
+                </tr>
+                <tr>
+                  <td><strong>Email Nurture</strong> (<code>@unitedwrestlingclub.com</code>)</td>
+                  <td>5-email Trial Welcome (10 days), 3-email Member Onboarding (USAW + SCWAY cards &amp; <code>/events</code> tournament prep), 3-email Seasonal/PIF sequence</td>
+                  <td>Builds parent trust around Karim's 1980 Olympic pedigree, Naweed's SFSU Kinesiology background, EPA hospital-grade mat hygiene, and $139.99/mo no-lock-in tuition.</td>
+                </tr>
+                <tr>
+                  <td><strong>Organic Attribution Stitch</strong> (<code>uwc-attribution.js</code>)</td>
+                  <td>First-Touch + Position-Based U-Shaped (40% Organic Discovery / 20% SMS-Email Nurture / 40% Conversion Trigger) + mandatory self-reported field</td>
+                  <td>Locks initial Organic SEO landing page in <code>uwc_lead_id</code> across Formspree (<code>xyyavaaj</code>) and WrestlingIQ Team 513 so nurture emails/texts convert leads without stealing Organic SEO credit for the $25/mo rev-share above 45 members.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           <h3 style="font-size: 1.05rem; color: #ffffff; margin: 24px 0 12px;">Three Live Interactive Design Directions</h3>
