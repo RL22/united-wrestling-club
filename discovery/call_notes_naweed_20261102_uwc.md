@@ -182,14 +182,16 @@ Addressing Naweed's question (*"these are like organic backlinks or something li
 ├─────┬─────────────────────────────────────────────────┬───────────┬────────┤
 │ No. │ Action Item                                     │ Owner     │ Due    │
 ├─────┼─────────────────────────────────────────────────┼───────────┼────────┤
-│ 1.  │ Elevate GA4 access to Editor for Rodney        │ Naweed    │ Day 1  │
+│ 1.  │ Elevate GA4 access to Editor for Rodney         │ Naweed    │ Day 1  │
 │ 2.  │ Send Google Search Console invite for UWC       │ Naweed    │ Day 1  │
-│ 3.  │ Provide AWS / Route 53 DNS administrator contact │ Naweed    │ Day 2  │
-│ 4.  │ Confirm signing authority (Naweed vs. Karim)    │ Naweed    │ Day 2  │
-│ 5.  │ Deploy live GA4 tag & test lead tracking        │ Rodney    │ Day 3  │
-│ 6.  │ Finalize modular multi-location site rebuild    │ Rodney    │ Week 2 │
-│ 7.  │ Launch Hayward & Union City local SEO cluster   │ Rodney    │ Week 3 │
-│ 8.  │ Follow up on Pep Boys owner contact (Backlog)   │ Rodney    │ Jan '27│
+│ 3.  │ Grant SMS & Email marketing + Formspree access  │ Naweed    │ Day 2  │
+│ 4.  │ Grant WrestlingIQ Team 513 Admin access         │ Naweed    │ Day 2  │
+│ 5.  │ Provide AWS / Route 53 DNS administrator contact │ Naweed    │ Day 2  │
+│ 6.  │ Confirm signing authority (Naweed vs. Karim)    │ Naweed    │ Day 2  │
+│ 7.  │ Deploy live GA4 tag & test lead tracking        │ Rodney    │ Day 3  │
+│ 8.  │ Finalize modular multi-location site rebuild    │ Rodney    │ Week 2 │
+│ 9.  │ Launch Hayward & Union City local SEO cluster   │ Rodney    │ Week 3 │
+│ 10. │ Follow up on Pep Boys owner contact (Backlog)   │ Rodney    │ Jan '27│
 └─────┴─────────────────────────────────────────────────┴───────────┴────────┘
 ```
 
@@ -201,7 +203,7 @@ Addressing Naweed's question (*"these are like organic backlinks or something li
 
 ***
 
-**Subject:** United Wrestling Club — Local SEO roadmap, access items & facility planning
+**Subject:** United Wrestling Club — Local SEO roadmap & technical access items
 
 Hi Naweed,
 
@@ -210,13 +212,14 @@ Great connecting yesterday. I’m splitting out UWC from TravaLab so we have a d
 Here is what we locked in for UWC:
 1. **100% Organic & Local:** Zero paid ads. UWC already has solid organic authority; our play is capturing families searching for wrestling gyms, youth sports, and adult martial arts across Hayward, Union City, Fremont, and the surrounding East Bay zip codes.
 2. **Lead Capture over Surface Polish:** The refresh will modernize the site, but its primary job is converting visitors into paid $15 3-Day Mat Passes and capturing parent contacts instead of dumping traffic off-site.
-3. **Pep Boys Facility Strategy:** Securing that building next door (30085 Industrial Pkwy SW) is huge, especially with the city backing the cleanup. Because that building sits across the Union City line while the current gym is Hayward (94544), we need to handle the Google Business Profile carefully so we don't risk your 42 five-star reviews or disrupt your rankings. I’ve structured the website build so it can seamlessly support both addresses if you keep dual spaces, or migrate cleanly if you relocate.
+3. **Pep Boys Facility (Parked for New Year):** Since you and the city haven't been able to reach the owner at 30085 Industrial Pkwy SW yet, I've parked the Dual-GBP relocation plan in our Q1 2027 backlog to revisit after New Year's.
 
-To get started on the technical setup, I need 3 quick administrative items:
+To get started on the technical setup, I need 4 quick administrative items:
 
 1. **GA4 Access Upgrade:** Thanks for the invite! Right now it’s set to **Viewer**. Please bump `lewis.rodneyl@gmail.com` to **Editor** (`Google Analytics > Admin > Property access management > Edit`). The live site currently isn't recording visitors because the tag isn't active on the web build, which I'll fix once upgraded.
 2. **Google Search Console:** Please send an invite to `lewis.rodneyl@gmail.com` with **Full** permissions inside Search Console for `unitedwrestlingclub.com` so I can see the exact terms parents are searching.
-3. **Agreement Signing:** Who should I put as the primary signatory on the $1,000/mo UWC agreement—you or Karim? Also, let me know who manages your AWS Route 53 DNS so we can point the new build when ready.
+3. **SMS & Email Marketing + WrestlingIQ / Formspree Access:** Please grant `lewis.rodneyl@gmail.com` access to your **SMS and email marketing platforms** (plus **WrestlingIQ Team 513 Admin** and your **Formspree `xyyavaaj`** inbox) so I can wire up instant Trial Pass text/email confirmations, automated 5-star review requests, and seasonal camp/PIF campaigns.
+4. **Agreement Signing & DNS:** Who should I put as the primary signatory on the $1,000/mo UWC agreement—you or Karim? Also, let me know who manages your AWS Route 53 DNS so we can point the new build and align SPF/DKIM records when ready.
 
 Let me know on the signatory and I'll send the agreement over right away.
 
