@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>United Wrestling Club | Olympic Lineage & Elite Wrestling in Hayward, CA</title>
-  <meta name="description" content="Hayward's premier Olympic wrestling, youth academy, and adult combat sports club. Founded by 1980 Moscow Olympian Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology). Claim your $15 3-day pass today.">
+  <title>United Wrestling Club | Youth & Adult Wrestling in Hayward, CA</title>
+  <meta name="description" content="Youth and adult wrestling in Hayward, CA. Founded by 1980 Moscow Olympic qualifier Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology). Try three practices for $15.">
   
   <!-- Favicon / Fonts -->
   <link rel="icon" type="image/png" href="../live_site_content/assets/logo.png">
@@ -20,7 +20,7 @@
     "name": "United Wrestling Club",
     "alternateName": "UWC Hayward",
     "url": "https://www.unitedwrestlingclub.com/",
-    "description": "Hayward's premier Olympic wrestling academy, youth scholastic training, and adult combat grappling. Founded by 1980 Moscow Olympian Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology).",
+    "description": "Youth and adult wrestling in Hayward, CA. Founded by 1980 Moscow Olympic qualifier Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology).",
     "logo": "https://www.unitedwrestlingclub.com/live_site_content/assets/uwc_lockup_horizontal.svg",
     "image": "https://www.unitedwrestlingclub.com/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg",
     "telephone": "(510) 303-4869",
@@ -53,20 +53,20 @@
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "16:30",
-        "closes": "21:00"
+        "opens": "17:00",
+        "closes": "22:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Saturday"],
-        "opens": "09:00",
-        "closes": "13:00"
+        "opens": "10:00",
+        "closes": "12:00"
       }
     ],
     "founder": {
       "@type": "Person",
       "name": "Karim Zemaryalai",
-      "jobTitle": "1980 Moscow Olympian & Founder"
+      "jobTitle": "1980 Moscow Olympic qualifier & Founder"
     },
     "coach": {
       "@type": "Person",
@@ -3061,6 +3061,152 @@
       box-shadow: 0 4px 12px rgba(144, 37, 36, 0.4);
     }
 
+    /* Schedule tabs (section tab nav) & first-practice steps */
+    .schedule-section,
+    .first-practice-section {
+      padding: var(--section-pad) 0;
+      background: var(--color-canvas);
+    }
+
+    .schedule-header,
+    .first-practice-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .schedule-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .schedule-tab {
+      font-family: var(--font-brand);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-base);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .schedule-tab:hover {
+      color: var(--color-text-bright);
+      border-color: var(--color-border-accent);
+    }
+
+    .schedule-tab[aria-selected="true"] {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-text-bright);
+    }
+
+    .schedule-tab:focus-visible {
+      outline: 2px solid #ff6b6b;
+      outline-offset: 3px;
+    }
+
+    .schedule-list {
+      list-style: none;
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .schedule-list li {
+      display: grid;
+      grid-template-columns: 150px 190px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--color-border-subtle);
+    }
+
+    .schedule-list li:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-days {
+      font-weight: 700;
+      color: var(--color-text-bright);
+    }
+
+    .schedule-time {
+      font-weight: 600;
+      color: #ff6b6b;
+    }
+
+    .schedule-class {
+      color: var(--color-text-muted);
+    }
+
+    .schedule-note {
+      text-align: center;
+      color: var(--color-text-dim);
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+
+    .first-practice-steps {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .first-practice-step {
+      background: var(--color-surface-base);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+    }
+
+    .step-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ff6b6b;
+      margin-bottom: 8px;
+    }
+
+    .step-title {
+      font-size: 1.1rem;
+      color: var(--color-text-bright);
+      margin-bottom: 8px;
+    }
+
+    .step-desc {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      .first-practice-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .schedule-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 16px 18px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -3082,11 +3228,11 @@
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
-          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 4:30 PM</span></span>
+          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 5–10 PM</span></span>
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
-          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10:00 AM</span></span>
+          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10 AM–12 PM</span></span>
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
@@ -3115,11 +3261,11 @@
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
-          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 4:30 PM</span></span>
+          <span>MAT HOURS: <span class="marquee-highlight">MON–FRI 5–10 PM</span></span>
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
-          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10:00 AM</span></span>
+          <span>SATURDAY OPEN MAT: <span class="marquee-highlight">10 AM–12 PM</span></span>
         </div>
         <span class="marquee-divider" aria-hidden="true">•</span>
         <div class="marquee-item">
@@ -3152,6 +3298,7 @@
       <nav aria-label="Main Navigation" class="desktop-nav">
         <ul class="nav-links">
           <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#schedule" class="nav-link">Schedule</a></li>
           <li><a href="#creed" class="nav-link">Creed</a></li>
           <li><a href="#coaches" class="nav-link">Coaches</a></li>
           <li><a href="#testimonials" class="nav-link">Reviews</a></li>
@@ -3168,8 +3315,8 @@
           <span class="phone-number">(510)&nbsp;303-4869</span>
         </a>
         <button class="btn btn-nav-cta open-trial-modal">
-          <span class="btn-text-full">Claim $15 3-Day Pass</span>
-          <span class="btn-text-mobile">Claim $15 Pass</span>
+          <span class="btn-text-full">Try Three Practices for $15</span>
+          <span class="btn-text-mobile">Try for $15</span>
         </button>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
           <span class="hamburger-bar"></span>
@@ -3208,7 +3355,7 @@
 
     <div class="mobile-nav-footer">
       <button class="btn btn-primary mobile-nav-cta open-trial-modal">
-        Claim $15 3-Day Pass
+        Try Three Practices for $15
       </button>
       <div class="mobile-nav-contact">
         <a href="tel:5103034869" class="mobile-nav-contact-link" aria-label="Call (510) 303-4869">
@@ -3239,26 +3386,25 @@
     <div class="container hero-container">
       <div class="hero-content">
         <div class="hero-badge-strip">
-          <span class="hero-badge-tag">FOUNDED BY 1980 OLYMPIAN</span>
+          <span class="hero-badge-tag">FOUNDED BY A 1980 OLYMPIC QUALIFIER</span>
           <span class="hero-badge-divider">•</span>
           <span class="hero-badge-location">HAYWARD, CA</span>
         </div>
 
         <div class="hero-body-block">
           <h1 class="hero-title">
-            EXCELLENCE. <br>
-            DISCIPLINE. <br>
-            <span class="crimson">CHAMPIONS.</span>
+            Wrestling in Hayward. <br>
+            <span class="crimson">Start with three practices.</span>
           </h1>
 
           <p class="hero-subtitle">
-            <span class="subtitle-full">Northern California's premier Olympic and Folkstyle wrestling room. Founded by <strong>1980 Moscow Olympian Karim Zemaryalai</strong> and directed by collegiate kinesiologists. We forge mental discipline, championship takedown technique, and podium contenders in <strong>Hayward,&nbsp;California</strong>.</span>
-            <span class="subtitle-mobile">Northern California's premier Olympic wrestling room in Hayward. Founded by <strong>1980 Olympian Karim Zemaryalai</strong>.</span>
+            <span class="subtitle-full">Youth, scholastic and adult wrestling in a USA Wrestling Regional Training Center. Founded by <strong>1980 Moscow Olympic qualifier Karim Zemaryalai</strong> and coached by Head Coach Naweed Zemaryalai, a collegiate kinesiologist.</span>
+            <span class="subtitle-mobile">Youth and adult wrestling in Hayward. Founded by <strong>1980 Olympic qualifier Karim Zemaryalai</strong>.</span>
           </p>
 
           <div class="hero-cta-group">
             <button class="btn btn-primary btn-accent-glow open-trial-modal">
-              Claim Your $15 3-Day Pass
+              Try Three Practices for $15
             </button>
             
             <div class="trial-callout-pill desktop-only">
@@ -3291,7 +3437,7 @@
         <div class="stat-number">5.0<span class="stat-symbol">★</span></div>
         <div class="stat-info">
           <strong class="stat-title">5.0 ★ Community Trust</strong>
-          <span class="stat-desc">42+ Verified Google Parent Reviews</span>
+          <span class="stat-desc">42 Google Reviews from parents and athletes</span>
         </div>
       </div>
       <div class="authority-stat-card">
@@ -3354,10 +3500,10 @@
           <span class="section-eyebrow">CHAMPIONSHIP CURRICULUM</span>
           <h2 class="section-title">Programs For Every&nbsp;Stage</h2>
           <p class="section-lead">
-            From first-time 5-year-olds building spatial discipline to CIF state medalists and adult grappling competitors mastering high-impact takedowns.
+            Youth, scholastic and adult classes in Hayward. Pick the program that fits, then try three practices for $15.
           </p>
         </div>
-        <button class="btn btn-outline open-trial-modal">View Full Class Schedule</button>
+        <a href="#schedule" class="btn btn-outline">View Full Class Schedule</a>
       </div>
 
       <div class="programs-grid">
@@ -3369,12 +3515,12 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">Youth Wrestling&nbsp;Academy</h3>
-            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon / Wed / Fri • 5:00 PM – 6:15 PM</div>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon &amp; Wed • 6:30 – 7:30 PM</div>
             <p class="card-desc">
               Foundational Folkstyle and Freestyle fundamentals designed to build athletic confidence, spatial awareness, anti-bullying resilience, and respectful sportsmanship.
             </p>
             <div class="card-footer">
-              <a href="#trial" class="card-link open-trial-modal">Book $15 Youth Trial &rarr;</a>
+              <a href="#trial" class="card-link open-trial-modal">Try Youth for $15 &rarr;</a>
             </div>
           </div>
         </div>
@@ -3387,12 +3533,12 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">Varsity & Scholastic&nbsp;Prep</h3>
-            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon – Fri • 6:15 PM – 7:45 PM</div>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon – Thu • 7:30 – 9:00 PM</div>
             <p class="card-desc">
               High-intensity competition training for East Bay high schoolers pursuing CIF state qualification and collegiate recruitment. Advanced hand-fighting, chained takedowns, and live simulation.
             </p>
             <div class="card-footer">
-              <a href="#trial" class="card-link open-trial-modal">Book $15 Varsity Pass &rarr;</a>
+              <a href="#trial" class="card-link open-trial-modal">Try Varsity for $15 &rarr;</a>
             </div>
           </div>
         </div>
@@ -3405,12 +3551,12 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">Adult Wrestling & Wrestle-Jitsu</h3>
-            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Tue / Thu • 7:30 PM – 9:00 PM</div>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Mon – Thu • 7:30 – 9:00 PM</div>
             <p class="card-desc">
               Collegiate wrestling tailored for adults, BJJ practitioners, and combat athletes. Master takedown defense, cage control, and underhooks in an ego-free, high-camaraderie room.
             </p>
             <div class="card-footer">
-              <a href="#trial" class="card-link open-trial-modal">Book $15 Adult Trial &rarr;</a>
+              <a href="#trial" class="card-link open-trial-modal">Try Adult for $15 &rarr;</a>
             </div>
           </div>
         </div>
@@ -3423,7 +3569,7 @@
           </div>
           <div class="card-body">
             <h3 class="card-title">Saturday Open&nbsp;Mat</h3>
-            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Saturday • 10:00 AM – 12:30 PM</div>
+            <div class="card-meta"><svg width="12" height="12" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>Saturday • 10:00 AM – 12:00 PM</div>
             <p class="card-desc">
               Bay Area combat open mat. Live situational sparring, positional rounds, and technique exchanges under coach supervision. $15 mat fee for guests, free for academy members.
             </p>
@@ -3433,6 +3579,60 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 5b. Weekly Schedule with Section Tab Nav -->
+  <section class="schedule-section" id="schedule" aria-labelledby="schedule-heading">
+    <div class="container">
+      <div class="schedule-header">
+        <span class="section-eyebrow">PRACTICE SCHEDULE</span>
+        <h2 class="section-title" id="schedule-heading">Find Your Practice Time</h2>
+        <p class="section-lead">Pick a program to see its weekly times at 30139 Industrial Pkwy SW, Hayward.</p>
+      </div>
+
+      <div class="schedule-tabs" role="tablist" aria-label="Programs">
+        <button class="schedule-tab" role="tab" id="tab-youth" aria-controls="panel-youth" aria-selected="true" tabindex="0" type="button">Youth 5–13</button>
+        <button class="schedule-tab" role="tab" id="tab-varsity" aria-controls="panel-varsity" aria-selected="false" tabindex="-1" type="button">Varsity 14–18</button>
+        <button class="schedule-tab" role="tab" id="tab-adult" aria-controls="panel-adult" aria-selected="false" tabindex="-1" type="button">Adult 18+</button>
+        <button class="schedule-tab" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="false" tabindex="-1" type="button">Saturday Open Mat</button>
+      </div>
+
+      <div class="schedule-panel" role="tabpanel" id="panel-youth" aria-labelledby="tab-youth">
+        <ul class="schedule-list">
+          <li><span class="schedule-days">Mon &amp; Wed</span><span class="schedule-time">6:30 – 7:30 PM</span><span class="schedule-class">Kids, pre-K to 5th grade</span></li>
+          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">5:00 – 6:30 PM</span><span class="schedule-class">Team &amp; competition, K–12</span></li>
+          <li><span class="schedule-days">Fri</span><span class="schedule-time">5:00 – 6:30 PM</span><span class="schedule-class">Kids competition</span></li>
+        </ul>
+      </div>
+
+      <div class="schedule-panel" role="tabpanel" id="panel-varsity" aria-labelledby="tab-varsity" hidden>
+        <ul class="schedule-list">
+          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">5:00 – 6:30 PM</span><span class="schedule-class">Team &amp; competition, K–12</span></li>
+          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">7:30 – 9:00 PM</span><span class="schedule-class">Adult &amp; high school</span></li>
+          <li><span class="schedule-days">Tue &amp; Thu</span><span class="schedule-time">8:00 – 9:30 AM</span><span class="schedule-class">Adult, college &amp; high school</span></li>
+        </ul>
+      </div>
+
+      <div class="schedule-panel" role="tabpanel" id="panel-adult" aria-labelledby="tab-adult" hidden>
+        <ul class="schedule-list">
+          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">7:30 – 9:00 PM</span><span class="schedule-class">Adult &amp; high school</span></li>
+          <li><span class="schedule-days">Fri</span><span class="schedule-time">8:00 – 9:30 PM</span><span class="schedule-class">Adult wrestling</span></li>
+          <li><span class="schedule-days">Tue &amp; Thu</span><span class="schedule-time">8:00 – 9:30 AM</span><span class="schedule-class">Adult, college &amp; high school</span></li>
+          <li><span class="schedule-days">Mon, Wed &amp; Fri</span><span class="schedule-time">6:30 – 8:00 AM</span><span class="schedule-class">Gi jiu-jitsu</span></li>
+          <li><span class="schedule-days">Tue &amp; Thu</span><span class="schedule-time">6:30 – 7:30 PM</span><span class="schedule-class">Gi jiu-jitsu</span></li>
+          <li><span class="schedule-days">Fri</span><span class="schedule-time">6:30 – 8:00 PM</span><span class="schedule-class">Boxing &amp; no-gi jiu-jitsu</span></li>
+        </ul>
+      </div>
+
+      <div class="schedule-panel" role="tabpanel" id="panel-open" aria-labelledby="tab-open" hidden>
+        <ul class="schedule-list">
+          <li><span class="schedule-days">Saturday</span><span class="schedule-time">8:00 – 10:00 AM</span><span class="schedule-class">Gi jiu-jitsu</span></li>
+          <li><span class="schedule-days">Saturday</span><span class="schedule-time">10:00 AM – 12:00 PM</span><span class="schedule-class">Open mat, all affiliations welcome</span></li>
+        </ul>
+      </div>
+
+      <p class="schedule-note">Times can shift around holidays and tournaments. Text (510) 303-4869 to confirm your first session.</p>
     </div>
   </section>
 
@@ -3531,7 +3731,7 @@
                   <span class="coach-role-tag"><svg width="11" height="11" viewBox="0 0 512 512" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><path d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"/></svg>Founder & Master Coach</span>
                 </div>
                 <div class="coach-info-bio">
-                  1980 Moscow Olympics qualifier and bronze medalist at the world-renowned Ali Aliyev Tournament in Makhachkala, Dagestan. Karim brought authentic Dagestani hand-fighting, ankle picks, and relentless mat pressure directly to Northern California.
+                  1980 Moscow Olympics qualifier and medalist at the world-renowned Ali Aliyev Tournament in Makhachkala, Dagestan. Karim brought authentic Dagestani hand-fighting, ankle picks, and relentless mat pressure directly to Northern California.
                 </div>
               </div>
             </div>
@@ -3741,7 +3941,7 @@
     <div class="container">
       <div style="text-align: center; max-width: 680px; margin: 0 auto;">
         <span class="section-eyebrow">SAFETY & INTEGRITY</span>
-        <h2 class="section-title">The Cleanest, Safest Mat Room in the East&nbsp;Bay</h2>
+        <h2 class="section-title">A Clean, Safe Mat Room in the East&nbsp;Bay</h2>
         <p class="section-lead" style="margin: 0 auto;">
           We believe high-level combat athletics require the strictest safety standards, cleanest facilities, and highest coach-to-athlete attention.
         </p>
@@ -3752,7 +3952,7 @@
           <div class="safety-num">01</div>
           <h3 class="safety-title">Hospital-Grade Disinfection</h3>
           <p class="safety-desc">
-            Our Dollamur competition mats undergo dual-daily industrial sanitization with medical-grade antimicrobials to eliminate ringworm, staph, and mat grime.
+            Our Dollamur mats are sanitized twice a day with a hospital-grade antimicrobial wash to keep the room clean.
           </p>
         </div>
 
@@ -3790,43 +3990,39 @@
         <span class="section-eyebrow">TRANSPARENT TUITION</span>
         <h2 class="section-title">No Contracts. No Hidden&nbsp;Fees.</h2>
         <p class="section-lead" style="margin: 0 auto;">
-          We don't lock families into 12-month predatory gym contracts. Our results on the mat keep athletes coming back month after month.
+          Month-to-month, no contracts, no initiation fees. Try three practices first, then decide.
         </p>
       </div>
 
       <div class="pricing-grid">
-        <!-- Trial Card -->
+        <!-- 3-Day Mat Pass -->
         <div class="pricing-card">
           <h3 class="price-name">3-Day Mat Pass</h3>
-          <p class="price-desc">Experience our room, meet the coaches, and try 3 full practices before committing.</p>
+          <p class="price-desc">Three practices to see if the room fits. New members only.</p>
           <div class="price-figure">
             <span class="price-val">$15</span>
-            <span class="price-period">/ 3&nbsp;Sessions</span>
+            <span class="price-period">/ 3 practices</span>
           </div>
           <ul class="price-features">
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 3 consecutive practices in any age-appropriate class</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 1-on-1 technique assessment with Coach Naweed</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Loaner headgear & gear fitting assistance</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Valid for Youth, Varsity, or Adult programs</li>
+            <li class="price-feature">Any age-appropriate class</li>
+            <li class="price-feature">Gear fitting and 1-on-1 check-in with Coach Naweed</li>
           </ul>
-          <button class="btn btn-outline open-trial-modal">Claim $15 3-Day Pass</button>
+          <button class="btn btn-outline open-trial-modal">Try Three Practices for $15</button>
         </div>
 
         <!-- Monthly Unlimited (Featured) -->
         <div class="pricing-card featured">
-          <span class="featured-tag">MOST POPULAR ACADEMY PASS</span>
+          <span class="featured-tag">MOST POPULAR</span>
           <h3 class="price-name">Monthly Unlimited</h3>
-          <p class="price-desc">Full access to all wrestling practices, technique clinics, and Saturday open mats.</p>
+          <p class="price-desc">All weekly practices and Saturday open mat.</p>
           <div class="price-figure">
             <span class="price-val">$139.99</span>
             <span class="price-period">/&nbsp;Month</span>
           </div>
           <ul class="price-features">
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Unlimited weekly training sessions</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Free admission to all Saturday Open Mats ($60/mo value)</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> <strong>Zero initiation fees & zero contracts</strong></li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Tournament coaching at SCYWAY & CIF events</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 15% Sibling / Family Member discount</li>
+            <li class="price-feature">Month-to-month, no contracts</li>
+            <li class="price-feature">No initiation fees</li>
+            <li class="price-feature">Saturday open mat included</li>
           </ul>
           <button class="btn btn-primary btn-accent-glow open-trial-modal">Start Monthly Membership</button>
         </div>
@@ -3834,19 +4030,46 @@
         <!-- Single Mat Drop-In -->
         <div class="pricing-card">
           <h3 class="price-name">Single Mat Drop-In</h3>
-          <p class="price-desc">For visiting wrestlers, collegiate athletes home on break, or Saturday open mat visitors.</p>
+          <p class="price-desc">For visiting wrestlers and Saturday open mat guests.</p>
           <div class="price-figure">
             <span class="price-val">$15</span>
-            <span class="price-period">/&nbsp;Class</span>
+            <span class="price-period">/&nbsp;Visit</span>
           </div>
           <ul class="price-features">
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> 1 Full practice or 2.5-hour Saturday Open Mat</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> Access to Dollamur mat room & locker areas</li>
-            <li class="price-feature"><svg width="14" height="14" viewBox="0 0 512 512" fill="#22c55e" style="flex-shrink:0; margin-top:3px;"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></svg> USA Wrestling sanctioning coverage</li>
+            <li class="price-feature">One practice or Saturday open mat</li>
+            <li class="price-feature">Pay at the door</li>
           </ul>
           <button class="btn btn-outline open-trial-modal">Pay Drop-In at Door</button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 9b. First Practice, Made Easy (parent angle) -->
+  <section class="first-practice-section">
+    <div class="container">
+      <div class="first-practice-header">
+        <span class="section-eyebrow">FIRST PRACTICE</span>
+        <h2 class="section-title">First practice, made easy</h2>
+        <p class="section-lead">Belonging comes first. Proficiency follows with practice.</p>
+      </div>
+      <ol class="first-practice-steps">
+        <li class="first-practice-step">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Choose a program</h3>
+          <p class="step-desc">Pick the age group that fits and start with your $15 three-practice pass.</p>
+        </li>
+        <li class="first-practice-step">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Text us to confirm</h3>
+          <p class="step-desc">Text (510) 303-4869 to confirm your first session and any gear questions.</p>
+        </li>
+        <li class="first-practice-step">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Arrive 15 minutes early</h3>
+          <p class="step-desc">Your coach meets you at the mat for check-in and gear fitting.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -3909,10 +4132,10 @@
         <span class="section-eyebrow" style="color: #ff6b6b;">STEP ONTO THE MAT THIS WEEK</span>
         <h2 class="cta-banner-title">Experience Olympic Lineage in&nbsp;Hayward</h2>
         <p class="cta-banner-sub">
-          Claim your 3-day mat pass for just $15. Meet Head Coach Naweed, experience our mat culture, and see why East Bay champions train at UWC.
+          Try three practices for just $15. Meet Head Coach Naweed, experience our mat culture, and see why East Bay champions train at UWC.
         </p>
         <button class="btn btn-primary btn-accent-glow open-trial-modal cta-banner-btn">
-          Claim Your $15 3-Day Mat Pass
+          Try Three Practices for $15
         </button>
       </div>
     </div>
@@ -3983,8 +4206,9 @@
               <a href="mailto:unitedwrestlingclub@gmail.com">unitedwrestlingclub@gmail.com</a>
             </div>
             <div style="margin-top: 6px; font-size: 0.8rem;">
-              Mon–Fri: 4:30 PM – 9:00 PM<br>
-              Saturday: 9:00 AM – 1:00 PM
+              Mon–Fri: 5:00 PM – 10:00 PM<br>
+              Saturday: 10:00 AM – 12:00 PM<br>
+              Sunday: Closed
             </div>
           </div>
         </div>
@@ -4285,6 +4509,34 @@
         }
       }, { passive: true });
     }
+  </script>
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('.schedule-tab');
+      var panels = document.querySelectorAll('.schedule-panel');
+
+      function select(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+        });
+        panels.forEach(function (p) {
+          p.hidden = p.id !== tab.getAttribute('aria-controls');
+        });
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { select(tab); });
+        tab.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          var step = e.key === 'ArrowRight' ? 1 : tabs.length - 1;
+          var next = tabs[(i + step) % tabs.length];
+          next.focus();
+          select(next);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
