@@ -106,7 +106,7 @@ clients/prospects/united-wrestling-club/
 | **Project To-Dos & Backlog** | Deferred Sprintz pricing decision (Item #5) and pre/post-close execution checklist | [`todos.md`](todos.md) |
 | **Website Rebuild & UX Spec** | Master 32-route sitemap, 6-route 301 redirect map, Core Web Vitals fixes & 1-Click Trial Modal | [`website_rebuild_spec.md`](website_rebuild_spec.md) |
 | **Native Trial Modal & Data Flow Spec** | Complete UX diagrams, 7-touchpoint matrix, `/api/trial-lead` Zod route & WrestlingIQ SMS bridge | [`trial_modal_dataflow_ux_spec.md`](trial_modal_dataflow_ux_spec.md) |
-| **Social Media & Facebook Audit** | Meta profile teardown, NAP phone discrepancy (`510-880-3602`), 10 archived assets & Olympic reels | [`social_media_audit.md`](social_media_audit.md) |
+| **Social Media & Facebook Audit** | Meta profile teardown, NAP phone discrepancy (`[retired number]`), 10 archived assets & Olympic reels | [`social_media_audit.md`](social_media_audit.md) |
 | **Keyword Rerouting Map** | 22-cluster matrix mapping all 368 ranked keywords & high-volume search clusters to dedicated URLs | [`local_seo_keyword_reroute_map.md`](local_seo_keyword_reroute_map.md) |
 | **Live Site Content Archive** | Verbatim copy from all 27 live Next.js chunks + `schedule.json`, `pricing.json` & high-res crest logo | [`live_site_content/README.md`](live_site_content/README.md) |
 | **Strategy: What, Why & How** | Complete strategic playbook citing OpenSEO crawl data, GBP audits, and market vacuum analysis | [`local_seo/strategy_what_why_how.md`](local_seo/strategy_what_why_how.md) |

@@ -11,7 +11,7 @@
 
 | Metric / Dimension | Facebook Page Reality | Website / GBP Reality | Strategy / Rebuild Impact |
 | :--- | :--- | :--- | :--- |
-| **Phone Number (NAP)** | **`(510) 880-3602`** | **`(510) 303-4869`** | **CRITICAL NAP MISMATCH:** Inconsistent phone numbers between Meta and Google dilutes Map Pack ranking trust. Must unify to primary line. |
+| **Phone Number (NAP)** | **`[retired number]`** | **`(510) 303-4869`** | **CRITICAL NAP MISMATCH:** Inconsistent phone numbers between Meta and Google dilutes Map Pack ranking trust. Must unify to primary line. |
 | **Followers / Reach** | 104 followers • 2 following | N/A | Early-stage social presence with high organic engagement on technical wrestling reels. |
 | **Category** | Sports team | Martial Arts School / Wrestling Club | Align schema across platforms to `SportsClub` / `ExerciseGym`. |
 | **Address** | 30139 Industrial PKWY unit C, Hayward, CA 94544 | 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544 | Matches physical location; standardize unit formatting (`Ste C`). |
@@ -52,7 +52,7 @@ All 10 media assets from the Facebook page have been downloaded and permanently 
 
 ## 4. Rebuild Action Items
 
-1. **Unify NAP Phone Number:** Ask Naweed whether `(510) 303-4869` or `(510) 880-3602` should be the master number across Google Business Profile, Facebook, Yelp, and the new website header/footer.
+1. **Unify NAP Phone Number:** Ask Naweed whether `(510) 303-4869` or `[retired number]` should be the master number across Google Business Profile, Facebook, Yelp, and the new website header/footer.
 2. **Wire Up Social Linkage in Footer:** Ensure the new Next.js site links directly to:
    * Facebook: `https://www.facebook.com/p/United-Wrestling-Club-61574715497725/`
    * Instagram: `https://www.instagram.com/uwc_wrestling`

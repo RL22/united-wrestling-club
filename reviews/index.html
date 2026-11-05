@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/uwc.css">
+<link rel="stylesheet" href="../assets/css/uwc.css?v=2026-11-05f">
 
 <!-- Rich Schema.org JSON-LD -->
 <script type="application/ld+json">
@@ -476,7 +476,7 @@
 
           
 
-<form id="review-form" novalidate>
+<form id="review-form" novalidate data-uwc-form="review">
             
             
             <div class="form-group">
@@ -571,7 +571,7 @@
                   <input type="checkbox" name="platform-website" id="check-website" checked>
                   <div class="platform-info">
                     <strong>United Wrestling Club Website</strong>
-                    <span>Feature your testimonial on our homepage &amp; reviews hub</span>
+                    <span>We review every submission before anything goes live on our site</span>
                   </div>
                 </label>
 
@@ -595,7 +595,7 @@
     <div class="container">
       <div class="cta-banner-content">
         <span class="section-eyebrow text-accent">STEP ONTO THE MAT THIS WEEK</span>
-        <h2 class="cta-banner-title">Experience Olympic Lineage in&nbsp;Hayward</h2>
+        <h2 class="cta-banner-title">Step onto the mat in&nbsp;Hayward</h2>
         <p class="cta-banner-sub">
           Try three practices for just $15. Meet Head Coach Naweed, experience our mat culture, and see why East Bay champions train at UWC.
         </p>
@@ -635,6 +635,21 @@
         </div>
 
         <div>
+          <div class="footer-col-title">Team #513 Mat Report</div>
+          <p class="footer-note">Monthly news on events, medalists, and clinics.</p>
+          <form class="newsletter-form" data-uwc-form="newsletter" novalidate>
+            <label class="visually-hidden" for="v01-news-email">Email address</label>
+            <input type="email" id="v01-news-email" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+            <label class="tcpa-checkbox-label" for="v01-news-consent">
+              <input type="checkbox" id="v01-news-consent" name="email_consent" value="yes">
+              <span>Email me the Team #513 Mat Report. Unsubscribe anytime.</span>
+            </label>
+            <button type="submit" class="btn btn-outline btn-block">Subscribe</button>
+            <p class="form-status" role="status" hidden></p>
+          </form>
+        </div>
+
+        <div>
           <div class="footer-col-title">Programs</div>
           <ul class="footer-links">
             <li><a href="../#programs">Youth Wrestling (Ages 5–13)</a></li>
@@ -648,9 +663,9 @@
         <div>
           <div class="footer-col-title">Academy</div>
           <ul class="footer-links">
-            <li><a href="../#lineage">Olympic Heritage</a></li>
+            <li><a href="../#lineage">Our heritage</a></li>
             <li><a href="../#lineage">Coach Naweed Zemaryalai</a></li>
-            <li><a href="../#lineage">Karim Zemaryalai (1980)</a></li>
+            <li><a href="../#lineage">Karim Zemaryalai</a></li>
             <li><a href="../#safety">Mat Room & Safety</a></li>
             <li><a href="../#pricing">Tuition & Pricing</a></li>
             <li><a href="../#coaches">Coaches</a></li>
@@ -701,7 +716,7 @@
         </div>
         <p class="modal-sub">Enter your details below to claim your 3 consecutive training sessions. Coach Naweed will reach out to confirm your gear and class time.</p>
 
-        <form id="trialForm" action="https://formspree.io/f/xyyavaaj" method="POST" data-uwc-trial-form>
+        <form id="trialForm" action="https://formspree.io/f/mkjjyyep" method="POST" data-uwc-form="trial_pass" data-uwc-trial-form>
           <div class="form-group">
             <label class="form-label" for="v01-athlete">Athlete Full Name</label>
             <input type="text" id="v01-athlete" name="athlete_name" class="form-input" placeholder="e.g. Jordan Smith" required>
@@ -751,6 +766,13 @@
             </div>
           </div>
 
+          <div class="tcpa-consent-box">
+            <label class="tcpa-checkbox-label" for="v01-media-release">
+              <input type="checkbox" id="v01-media-release" name="media_release" value="yes" checked>
+              <span><strong>Media &amp; content notice.</strong> UWC films and photographs classes, open mats, and events for coaching and promotion on our website and social channels. Included by default. Uncheck to opt out.</span>
+            </label>
+          </div>
+
           <!-- Hidden First-Party Attribution & TCPA Consent Audit Fields (Auto-populated by uwc-attribution.js) -->
           <input type="hidden" name="uwc_lead_id" value="">
           <input type="hidden" name="ga_client_id" value="">
@@ -775,9 +797,10 @@
           <button type="submit" class="btn btn-primary btn-accent-glow btn-block btn-trial-submit">
             Confirm $15 3-Day Pass
           </button>
-          
+          <p class="form-status" id="v01-trial-status" role="status" hidden></p>
+
           <div class="modal-fineprint">
-            Secure intake routed directly to WrestlingIQ (Team #513). Reply STOP anytime to opt out of SMS.
+            Your request goes to the UWC front desk. The waiver is completed on WrestlingIQ (Team #513). Reply STOP anytime to opt out of texts.
           </div>
         </form>
       </div>
@@ -818,13 +841,14 @@
         <div class="clipboard-text" id="modal-text-preview"></div>
       </div>
 
+      <p class="form-status" id="modal-sent-status" role="status" hidden></p>
       <div class="modal-actions-list" id="modal-platform-actions"></div>
 
       <button type="button" class="btn btn-primary btn-block" id="modal-close-btn">Done / Close Window</button>
     </div>
   </div>
 
-  <script src="../assets/js/uwc-attribution.js"></script>
+  <script src="../assets/js/uwc-attribution.js?v=2026-11-05f"></script>
 
   <!-- JavaScript for Interactive FAQ, Modal, and Mobile Nav Drawer -->
   <script>
@@ -895,25 +919,70 @@
     }
 
     if (form) {
+      const trialStatus = document.getElementById('v01-trial-status');
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const payload = window.UWCAttribution ? window.UWCAttribution.submitLead(form) : {};
         const smsOptInBox = document.getElementById('v01-sms-opt-in');
         const smsStatusRow = document.getElementById('v01-sms-status-row');
         const wiqBtn = document.getElementById('v01-wiq-btn');
-        if (smsStatusRow) {
-          const isOptedIn = smsOptInBox && smsOptInBox.checked;
-          smsStatusRow.innerHTML = isOptedIn
-            ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
-            : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
-        }
-        if (wiqBtn && window.UWCAttribution) {
-          wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
-        }
-        if (formContainer) formContainer.style.display = 'none';
-        if (successState) successState.style.display = 'block';
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const isOptedIn = Boolean(smsOptInBox && smsOptInBox.checked);
+        if (trialStatus) trialStatus.hidden = true;
+        if (submitBtn) submitBtn.disabled = true;
+
+        const pending = window.UWCAttribution
+          ? window.UWCAttribution.submitLead(form)
+          : Promise.reject(new Error('not_connected'));
+
+        pending.then(() => {
+          if (smsStatusRow) {
+            smsStatusRow.innerHTML = isOptedIn
+              ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
+              : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
+          }
+          if (wiqBtn && window.UWCAttribution) {
+            wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
+          }
+          if (formContainer) formContainer.style.display = 'none';
+          if (successState) successState.style.display = 'block';
+        }).catch(() => {
+          if (trialStatus) {
+            trialStatus.textContent = 'We could not send your request. Call (510) 303-4869 and we will reserve your pass.';
+            trialStatus.hidden = false;
+          }
+        }).finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
       });
     }
+
+    // Newsletter (footer): explicit consent, unchecked by default.
+    document.querySelectorAll('form[data-uwc-form="newsletter"]').forEach((nf) => {
+      const status = nf.querySelector('.form-status');
+      const say = (msg) => {
+        if (!status) return;
+        status.textContent = msg;
+        status.hidden = false;
+      };
+      nf.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const consent = nf.querySelector('input[name="email_consent"]');
+        if (consent && !consent.checked) {
+          say('Tick the box to get the Mat Report.');
+          return;
+        }
+        const btn = nf.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+        window.UWCAttribution.submitLead(nf).then(() => {
+          nf.reset();
+          say("You're on the list. The first Mat Report is on its way.");
+        }).catch(() => {
+          say('We could not sign you up right now. Call (510) 303-4869 and we will add you.');
+        }).finally(() => {
+          if (btn) btn.disabled = false;
+        });
+      });
+    });
 
     // Mobile Menu Toggle & Drawer Handling
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -1090,6 +1159,7 @@
     const modalText = document.getElementById('modal-text-preview');
     const modalActions = document.getElementById('modal-platform-actions');
     const closeBtn = document.getElementById('modal-close-btn');
+    const sentStatus = document.getElementById('modal-sent-status');
 
     function linkButton(href, label) {
       const a = document.createElement('a');
@@ -1141,6 +1211,15 @@
         document.body.removeChild(textArea);
       }
 
+      // Send to the club for review (photos are not sent yet)
+      let sent = false;
+      try {
+        await window.UWCAttribution.submitLead(form, null, { omitFiles: true });
+        sent = true;
+      } catch (sendErr) {
+        sent = false;
+      }
+
       // Keep a copy in this browser only
       const submission = {
         name, perspective, rating, reviewText, postWebsite,
@@ -1154,12 +1233,16 @@
         console.warn('localStorage not accessible', storageErr);
       }
 
-      if (postWebsite) {
+      if (postWebsite && sent) {
         prependSubmission(submission);
       }
 
       // Dialog with the copied text and one launch button per selected platform
       modalText.textContent = '"' + reviewText + '"';
+      sentStatus.textContent = sent
+        ? 'Your review was sent to the club for review.'
+        : 'We could not send this to the club right now. Your text is copied, so you can still post it on the platform below.';
+      sentStatus.hidden = false;
       modalActions.replaceChildren();
       if (document.getElementById('check-google').checked) {
         modalActions.appendChild(linkButton('https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo', '1. Open Google Maps & paste (Ctrl+V / Cmd+V) →'));
@@ -1221,7 +1304,7 @@
       starSpan.textContent = '★'.repeat(parseInt(item.rating, 10));
       const source = document.createElement('span');
       source.className = 'testimonial-source';
-      source.textContent = 'Submitted just now';
+      source.textContent = 'Sent for review';
       meta.append(strong, starSpan, source);
 
       const text = document.createElement('p');

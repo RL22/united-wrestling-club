@@ -1,7 +1,7 @@
 # United Wrestling Club (`unitedwrestlingclub.com`) — Master Website Rebuild & UX/Performance Specification
 
 > **Client:** United Wrestling Club (Naweed & Karim Zemaryalai)  
-> **Address:** `30139 Industrial Pkwy SW Ste C, Hayward, CA 94544` | **Phone:** `(510) 303-4869` *(Audit Note: Meta listing uses `(510) 880-3602` — see Section 1 & Social Audit)*  
+> **Address:** `30139 Industrial Pkwy SW Ste C, Hayward, CA 94544` | **Phone:** `(510) 303-4869` *(Audit Note: Meta listing uses `[retired number]` — see Section 1 & Social Audit)*  
 > **Strategic Goal:** Capture the **#1 Local (Hayward/Tri-City), County (Alameda), Regional (SF Bay Area), and State (California)** organic & AI search spots while increasing visitor-to-trial conversion from ~1.5% to 6–10%.  
 > **Source Archive:** [`discovery/live_site_content/`](live_site_content/README.md) & [`design-extract-output/united-wrestling-club/`](../../../../design-extract-output/united-wrestling-club/unitedwrestlingclub-com-DESIGN.md)  
 > **Updated:** October 30, 2026  
@@ -24,7 +24,7 @@ Based on our live JS chunk extraction ([`live_site_content/`](live_site_content/
    * Homepage hero pitches a **`$15.00 for a 3 Day Trial`** (`WrestlingIQ paid_session_id=6327`), `/pricing` pitches a **`$15.00 DROP IN`** (`paid_session_id=2664`), and `/faqs` Question #5 says **"Do you offer free trial sessions? Yes we offer trial sessions..."**
    * Every button dumps cold mobile visitors onto off-domain `wrestlingiq.com/users/sign_up` forms before capturing their name or phone number.
 6. **NAP Phone Number Discrepancy & Unleveraged Social Video Proof ([`social_media_audit.md`](social_media_audit.md)):**
-   * Live site and Google Business Profile display `(510) 303-4869`, whereas the official Meta/Facebook profile lists `(510) 880-3602`. Inconsistent NAP between Google and Meta dilutes Map Pack ranking signals; the rebuild must standardize on the primary business line across header, footer, and schema.
+   * Live site and Google Business Profile display `(510) 303-4869`, whereas the official Meta/Facebook profile lists `[retired number]`. Inconsistent NAP between Google and Meta dilutes Map Pack ranking signals; the rebuild must standardize on the primary business line across header, footer, and schema.
    * World-class video social proof from Facebook/Instagram reels — including clinic sessions with **2024 Paris Olympic Champion Magomed Ramazanov** & **Ermak Kardanov**, Founder **Karim Zemaryalai's** *"Train with an Olympian"* mat sessions, and high-engagement *"Knee Tap"* technical breakdown clips — is completely absent from the live website.
 
 ---
@@ -221,4 +221,4 @@ Instead of sending cold traffic straight to `wrestlingiq.com`, clicking **"Start
   2. **Founder Karim Zemaryalai "This is What It Looks Like to Train with an Olympian":** High-intensity mat drill footage positioned above the fold on the homepage to break the intimidation barrier for adult beginners and validate world-class pedigree for competitive high schoolers.
   3. **Technical Precision ("The Knee Tap — Mastered at Every Level"):** 30-second mechanical tutorial reel demonstrating UWC's instructional depth vs. recreational belt factories.
 * **Zero-LCP Performance Architecture:** Rather than loading render-blocking external social iframes, display pre-rendered WebP thumbnails ([`discovery/live_site_content/assets/facebook/fb_photo_01.jpg`](live_site_content/assets/facebook/fb_photo_01.jpg)–[`fb_photo_09.jpg`](live_site_content/assets/facebook/fb_photo_09.jpg)) that trigger a lightweight, lazy-loaded HTML5 modal video player on user click, preserving 95+ mobile Lighthouse scores.
-* **Telephony NAP Reconciliation Protocol:** Explicitly hardcode the verified primary phone number `(510) 303-4869` with `tel:+15103034869` click-to-call links across the desktop top bar, mobile floating CTA, and `LocalBusiness` schema, actively superseding Facebook's unverified `(510) 880-3602` line until owner confirmation.
+* **Telephony NAP Reconciliation Protocol:** Explicitly hardcode the verified primary phone number `(510) 303-4869` with `tel:+15103034869` click-to-call links across the desktop top bar, mobile floating CTA, and `LocalBusiness` schema, actively superseding Facebook's unverified `[retired number]` line until owner confirmation.

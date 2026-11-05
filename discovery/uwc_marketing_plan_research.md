@@ -89,7 +89,7 @@
 ## In-flight and stuck
 - **GA4 Measurement Blackout (`562010875`):** Rodney has Viewer access, but the live S3 site has zero GA4 tag installed (recording 0 visitors). *Blocker:* Naweed upgrading `lewis.rodneyl@gmail.com` to Editor + production deployment.
 - **GSC, Formspree (`xyyavaaj`), WrestlingIQ Admin & ESP/SMS Access:** *Blocker:* Pending Naweed's admin invites (requested in Nov 2 follow-up).
-- **Phone Number & NAP Mismatch:** Website/GBP lists `(510) 303-4869` while Facebook lists `(510) 880-3602`, and GBP name shows plural "United Wrestling Clubs". *Blocker:* Naweed confirming primary voice/SMS number.
+- **Phone Number & NAP Mismatch:** Website/GBP lists `(510) 303-4869` while Facebook lists `[retired number]`, and GBP name shows plural "United Wrestling Clubs". *Blocker:* Naweed confirming primary voice/SMS number.
 - **Trial & Schedule Copy Conflicts:** Live homepage says `$15 3-Day Trial`, pricing says `$15 Drop-In`, FAQ says `Free Trial`, and 4-Day Kids (`#4981`) conflicts with published M/W/F schedule. *Blocker:* Final fact-register sign-off from Naweed.
 - **Pep Boys Expansion (`30085 Industrial Pkwy SW`, Union City):** *Blocker:* Naweed and the city have not yet been able to reach the property owner. **Parked in Q1 2027 New Year Backlog** with Dual-GBP annex safeguard pre-staged.
 

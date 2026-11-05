@@ -80,7 +80,7 @@ Prioritize useful, distinct program and service-area pages for Hayward, Union Ci
 | Bay Area regional pack | #2 in sampled comparison | Not a permanent or universal regional ranking. |
 | Oakland / north county | Unranked in sampled results | Opportunity for relevant coverage and local authority. |
 
-The website and GBP listed **(510) 303-4869** while Facebook listed **(510) 880-3602**. Confirm the primary call/SMS number and standardize name, address, phone, HTTPS destination and hours across profiles. Discovery reports GBP name variation (“United Wrestling Clubs”). [Source: Alameda footprint](alameda_county_local_footprint.md).
+The website and GBP listed **(510) 303-4869** while Facebook listed **[retired number]**. Confirm the primary call/SMS number and standardize name, address, phone, HTTPS destination and hours across profiles. Discovery reports GBP name variation (“United Wrestling Clubs”). [Source: Alameda footprint](alameda_county_local_footprint.md).
 
 ### 2.5 AI citation and GEO visibility
 
@@ -258,7 +258,7 @@ These four records are marked **Approved** in the discovery repository and bind 
 
 | Decision | Question / evidence to request |
 |---|---|
-| Primary contact | Is **(510) 303-4869** or **(510) 880-3602** the primary public call and SMS number? Who monitors it and when? |
+| Primary contact | Is **(510) 303-4869** or **[retired number]** the primary public call and SMS number? Who monitors it and when? |
 | Coaches and founder | Confirm each secondary coach's current role, exact credential, biography and image permission; identify the BJJ and Sambo instructors. Confirm Karim's Olympic qualifier/participation wording and Ali Aliyev medal. |
 | Schedule and capacity | Where and when do four-day Kids and Combat Sambo train? What is safe capacity by class, actual coach ratio, sanitation protocol and current RTC status? |
 | Offer and seasonality | Confirm $15 trial vs free assessment, session terms, eight active plans, household discount, cancellation rules, six-/twelve-month PIF eligibility, dates, gear cost, refund and freeze terms. Export 24 months of members, churn, pauses and plan mix. |

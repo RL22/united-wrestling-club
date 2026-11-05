@@ -131,8 +131,8 @@
 2. **Homepage `$15 for a 3-Day Trial` (`Session #6327`) vs. `/pricing` `$15 Drop-In` (`Session #2664`) vs. `/faqs` "Free Trial":**
    * Right now the homepage promotes a **`$15.00 for a 3 Day Trial`** (`WrestlingIQ Session #6327`), `/pricing` promotes a **`$15.00 per day DROP IN`** (`Session #2664`), and `/faqs` Question #5 states **"Yes we offer free trial sessions."**
    * For the redesigned funnel, do you want to lead with the **"Free 2-Class Assessment Pass"** for East Bay residents (or keep the **`$15` 3-Day Trial** as an instant upgrade option) so the homepage, `/pricing`, and `/faqs` all tell the exact same story?
-3. **Phone Number NAP Discrepancy — `(510) 303-4869` vs `(510) 880-3602`:**
-   * Your official Facebook page lists **`(510) 880-3602`**, while your website and Google Business Profile list **`(510) 303-4869`**.
+3. **Phone Number NAP Discrepancy — `(510) 303-4869` vs `[retired number]`:**
+   * Your official Facebook page lists **`[retired number]`**, while your website and Google Business Profile list **`(510) 303-4869`**.
    * Which number is the primary line for inbound parent/athlete calls and SMS inquiries so we can synchronize all directory citations, schema markup, and click-to-call buttons?
 4. **Elite Olympic Champion Proof (Magomed Ramazanov & Ermak Kardanov Clinic):**
    * On your Facebook, you featured footage from the Fresno clinic with **2024 Olympic Gold Medalist Magomed Ramazanov** (86kg Freestyle Champion) and **Ermak Kardanov**.
@@ -153,3 +153,22 @@
 9. **Codebase, Hosting & Directory Access (For the Rebuild):**
    * Who currently manages the **GitHub repository**, the **AWS S3 / CloudFront** hosting account, and the **domain DNS registrar** for `unitedwrestlingclub.com`?
    * Can you add us as a Manager on your **Google Business Profile** (`United Wrestling Clubs` → `United Wrestling Club`), share admin access to **`usawmembership.com`** (so we can flip the public club locator toggle on `themat.com`), and verify the new **Yelp Business Page** when the verification call/text comes in?
+
+## 8. Lead Handling & Response Ownership (added 2026-11-05, from RevOps vetting)
+
+*Goal: Set the response time and cover for every new trial lead. Source: `discovery/revops_lead_vetting.md`.*
+
+1. **Inbox hours:** You are the named owner of new trial leads. What hours do you check the lead inbox (Formspree notifications and email), and on which days?
+2. **Class-time cover:** You teach on the mat during class. Who covers new leads while you are on the mat: the front desk, a coach, or nobody? Name a person and a phone number for that time.
+3. **Response time:** Is a first reply within 1 business hour during open hours acceptable? If not, what is your target?
+4. **Notification device:** Should lead alerts go to your phone (push or text), email, or both? Do you want the front desk on the same alerts?
+5. **Automated assistant (replaces the text question):** You will not text leads. Are you comfortable with an automated assistant answering texts to (510) 303-4869 from an approved knowledge base, with a handoff to staff for anything it cannot answer? See `discovery/lead_response_system.md`.
+6. **Knowledge base approval:** Please review `discovery/knowledge_base/uwc_kb_v1.md`. Confirm or correct: KB-03 (Saturday end time), KB-05 (ages by program), KB-11 (what to wear), KB-12 (arrive 15 minutes early), KB-14 (mat size), KB-15 (1:6 ratio), KB-18 (sibling discount), and KB-19 and KB-20 (dates).
+7. **Staff responder:** Who on your team will work the lead queue during open hours, and who covers when you are on the mat?
+
+## 9. Actions for Naweed (added 2026-11-05)
+
+1. **Facebook phone number:** The club's one phone number is (510) 303-4869. The Facebook page still lists a retired second number. Please update the Facebook page phone to (510) 303-4869, or remove the phone field. Tell us once it's done so we can check it.
+2. **Google Business Profile photos:** Three photos were pulled from the GBP listing into `assets/img/gbp/`. Does the club own these photos (not customer uploads)? The group photo includes a young boy, and the gym-floor photo shows teens. Do you have media releases for them, or should we use the two-adult pad drill photo instead?
+3. **Karim: 1980 wording (for Karim):** The US boycotted the 1980 Moscow Games. Karim, please confirm the exact wording for your 1980 history: what you qualified for, whether you competed, and the Ali Aliyev result (silver or bronze). Until then, the site will not say "Moscow Olympian" or "Olympic qualifier".
+

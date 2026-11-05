@@ -1,6 +1,6 @@
 /**
  * UWC First-Party Attribution, Cross-Domain Stitcher & TCPA Opt-Out Audit Engine v1.0
- * Property: unitedwrestlingclub.com | GA4: 562010875 | Formspree: xyyavaaj | WrestlingIQ: Team 513
+ * Property: unitedwrestlingclub.com | GA4: 562010875 | Formspree: one form ID per form (FORM_ENDPOINTS) | WrestlingIQ: Team 513
  */
 (function () {
   "use strict";
@@ -8,7 +8,14 @@
   const STORAGE_KEY = "uwc_attr_v1";
   const COOKIE_NAME = "_uwc_lid";
   const DISCLOSURE_VERSION = "v1.0-2026-11";
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xyyavaaj";
+  // Formspree endpoints, one per form, from the new Formspree project.
+  // Empty string = not connected: the form shows a message and does not send.
+  const FORM_ENDPOINTS = {
+    trial_pass: "https://formspree.io/f/mkjjyyep",
+    contact: "https://formspree.io/f/mgaaddql",
+    newsletter: "https://formspree.io/f/meaanndk",
+    review: "https://formspree.io/f/mqppnnja"
+  };
   const MAX_TOUCHES = 15;
 
   // Domains excluded from ever counting as an external acquisition referrer
@@ -262,7 +269,7 @@
     if (!state) return;
 
     const forms = document.querySelectorAll(
-      'form[action*="formspree.io/f/xyyavaaj"], form[data-uwc-trial-form], #trialForm, #lead-form, #booking-form'
+      'form[data-uwc-form], form[data-uwc-trial-form], form[action*="formspree.io/"]'
     );
 
     const nowIso = new Date().toISOString();
@@ -290,7 +297,9 @@
         consent_timestamp_utc: nowIso,
         consent_source_url: window.location.href,
         consent_disclosure_version: DISCLOSURE_VERSION,
-        sms_opt_in_status: isOptedIn ? "opted_in" : "opted_out_or_unchecked"
+        sms_opt_in_status: isOptedIn ? "opted_in" : "opted_out_or_unchecked",
+        form_name: formNameFor(form),
+        route: window.location.pathname
       };
 
       Object.entries(hiddenMap).forEach(([name, value]) => {
@@ -382,8 +391,15 @@
     }
   }
 
-  // 5. NON-BLOCKING FORMSPREE (xyyavaaj) DISPATCH HELPER
-  function dispatchFormspreePayload(form, extraFields) {
+  // 5. FORMSPREE DISPATCH HELPER (one endpoint per form, reports real success or failure)
+  function formNameFor(form) {
+    if (form.dataset && form.dataset.uwcForm) return form.dataset.uwcForm;
+    if (form.hasAttribute("data-uwc-trial-form")) return "trial_pass";
+    return "";
+  }
+
+  // Resolves to the parsed payload on success. Rejects with an Error on failure, including "not_connected".
+  function dispatchFormspreePayload(form, extraFields, options) {
     populateTrialModalFields();
     const formData = new FormData(form);
     if (extraFields && typeof extraFields === "object") {
@@ -391,32 +407,40 @@
         if (v !== undefined && v !== null) formData.set(k, String(v));
       });
     }
-
-    const payloadObj = {};
-    formData.forEach((val, key) => {
-      payloadObj[key] = val;
-    });
-    window.UWCAttribution.lastSubmittedPayload = payloadObj;
-
-    try {
-      fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
-        keepalive: true
-      }).catch(() => {});
-    } catch (_) {}
-
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "generate_lead", {
-        uwc_lead_id: payloadObj.uwc_lead_id || "",
-        initial_channel: payloadObj.initial_channel || "",
-        self_reported_source: payloadObj.self_reported_source || "",
-        sms_opt_in_status: payloadObj.sms_opt_in_status || ""
+    if (options && options.omitFiles) {
+      Array.from(new Set(Array.from(formData.keys()))).forEach((key) => {
+        if (formData.get(key) instanceof File) formData.delete(key);
       });
     }
 
-    return payloadObj;
+    const payloadObj = {};
+    formData.forEach((val, key) => {
+      if (!(val instanceof File)) payloadObj[key] = val;
+    });
+    window.UWCAttribution.lastSubmittedPayload = payloadObj;
+
+    const endpoint = FORM_ENDPOINTS[formNameFor(form)] || "";
+    if (!endpoint) {
+      return Promise.reject(new Error("not_connected"));
+    }
+
+    return fetch(endpoint, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: formData
+    }).then((res) => {
+      if (!res.ok) throw new Error("http_" + res.status);
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          form_name: payloadObj.form_name || "",
+          uwc_lead_id: payloadObj.uwc_lead_id || "",
+          initial_channel: payloadObj.initial_channel || "",
+          self_reported_source: payloadObj.self_reported_source || "",
+          sms_opt_in_status: payloadObj.sms_opt_in_status || ""
+        });
+      }
+      return payloadObj;
+    });
   }
 
   const currentState = syncAttributionState();
