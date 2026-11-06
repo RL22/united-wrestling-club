@@ -1,0 +1,111 @@
+[
+  {
+    "conflict": "OC-01",
+    "decision": "Pricing is per program, as shown on the live /pricing page. $139.99 is one tier, not the price. The KB should list each tier.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-02",
+    "decision": "Saturday: 8:00 to 10:00 AM Gi Jiu Jitsu, then 10:00 AM to 12:00 PM open mat. The KB omits the Gi row and should add it.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-03",
+    "decision": "Use the hours as they stand in the KB: Monday to Friday 6:00 AM to 10:00 PM.",
+    "basis": "owner direction, 2026-11-06",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-04",
+    "decision": "Keep as is. Texts to the club line go to the automated responder (naweed-bot), not to Coach Naweed. The live 'Call or Text' button stays.",
+    "basis": "owner direction, 2026-11-06",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-06",
+    "decision": "Use the ADR: 7 days' advance notice to cancel.",
+    "basis": "owner direction, 2026-11-06",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-07",
+    "decision": "Many countries boycotted the 1980 Moscow Games. Keep the 'boycotted' wording from KB-16. The live copy's 'qualified for the 1980 Moscow Olympics' needs review before it is kept.",
+    "basis": "owner direction, 2026-11-06; qualifier wording left open by the owner",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-08",
+    "decision": "Bronze. The live About page says silver and must be corrected.",
+    "basis": "owner direction, 2026-11-06",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-09",
+    "decision": "Rashad Rahimi: 1980 Olympic Qualifier and Asian Games silver, as on the live About page. The statewide report's '1980 Olympian' is wrong.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-11",
+    "decision": "3,800 sq ft of mats.",
+    "basis": "owner direction, 2026-11-06",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "OC-14",
+    "decision": "Age bands are not published. The live site uses grades: Pre-K to 5th for kids, K to 12th for competition youth, and middle and high school. The KB age numbers should not be published.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-01",
+    "decision": "(510) 303-4869 is the club phone, as on the live contact page and footer.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-02",
+    "decision": "The two 513s serve different purposes. RTC #513 is the USA Wrestling sanction. team_id=513 is the WrestlingIQ team ID. The #100234 figure is not used.",
+    "basis": "owner direction, 2026-11-06 (reading of 'they serve diff purposes')",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-05",
+    "decision": "The live trial offer is a $15 3-day trial. Free 2-class and free 1-day passes are not offered.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-07",
+    "decision": "Keep #902524 (DESIGN.md) as the brand crimson.",
+    "basis": "owner direction, 2026-11-06",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-08",
+    "decision": "unitedwrestlingclub@gmail.com is the public contact email, as on the live contact page and footer.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-09",
+    "decision": "The contact form posts to xyyavaaj, as on the live contact page. mkjjyyep is not live.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "RC-13",
+    "decision": "The Saturday open mat ends at 12:00 PM, as on the live schedule.",
+    "basis": "live_site_content is the source of truth (owner direction)",
+    "decided_on": "2026-11-06"
+  },
+  {
+    "conflict": "LS-01",
+    "decision": "The live schedule is the source of truth for kids classes: KIDS (pre-K to 5th) runs Monday and Wednesday, 6:30 to 7:30 PM. Tuesday and Thursday at 6:30 PM are Gi Jiu Jitsu. The live pricing page sells a 4-Day Kids plan Monday to Thursday, which the schedule does not support. The pricing copy must be fixed to match the schedule.",
+    "basis": "owner direction: use the live site schedule as SOT",
+    "decided_on": "2026-11-06",
+    "note": "New live-site conflict. No ledger claims yet, so it has no claim_ids."
+  }
+]
