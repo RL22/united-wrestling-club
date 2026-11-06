@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["discovery/brand/moodboards/stills/still_06_dummy_takedown_drill.jpg", "discovery/brand/moodboards/stills/still_05_coach_naweed_profile.jpg", "discovery/brand/moodboards/stills/still_18_full_team_45plus_portrait.jpg", "discovery/brand/moodboards/stills/still_07_youth_single_elevation.jpg"]
 ---
 
 # Direction C: "The Olympic Field Archive" (Leica x Surfer's Journal x Eleiko)

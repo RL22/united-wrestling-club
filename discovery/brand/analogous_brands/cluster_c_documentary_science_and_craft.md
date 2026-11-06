@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: []
 ---
 
 # United Wrestling Club: Analogous Brand Influences — Cluster C

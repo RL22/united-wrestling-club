@@ -1,12 +1,25 @@
 ---
+type: audit
 status: current
 group: client
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-04
+last_reviewed: 2026-11-04
+sources: ["https://www.unitedwrestlingclub.com/contact", "https://formspree.io/f/xyyavaaj", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513"]
 ---
 
 # UWC Live Sales Funnel Audit & Mystery-Shopper Test Log
 
 > **Objective:** Enter United Wrestling Club's current live sales funnel across all 3 active entry points to document exact email/SMS touchpoints, sender addresses, response latency, and automation gaps.  
 > **Test Date:** November 4, 2026  
+
+## TL;DR
+
+- The test date is November 4, 2026; the audit enters the live funnel through three doors to log email and SMS touchpoints, sender addresses, response latency, and automation gaps
+- Door 1 is the /contact form posting to Formspree xyyavaaj; the live form has no phone field and no automated Suite C arrival guide
+- Door 2 is the WrestlingIQ $15 3-Day Trial checkout (paid_session_id 6327, team 513); the audit hypothesizes that zero abandoned-checkout SMS or email follow-ups fire today
+- Door 3 tests inbound SMS and missed calls to (510) 303-4869 during mat hours (4:30–8:00 PM PT) for an automated text-back
+- The scorecard is still pending, so no auto-email, auto-SMS, or response-latency results are recorded yet
 
 ---
 

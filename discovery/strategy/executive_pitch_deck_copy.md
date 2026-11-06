@@ -1,6 +1,11 @@
 ---
-status: reference
+type: spec
+status: current
 group: strategy
+owner: "Head Coach Naweed Zemaryalai & UWC Leadership"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: []
 ---
 
 # Executive Pitch Deck: United Wrestling Club Digital Evolution
@@ -9,6 +14,13 @@ group: strategy
 **Facility:** 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544  
 
 ---
+
+## TL;DR
+- The legacy site is a bottleneck: buried Olympic credentials, WrestlingIQ redirects, hidden pricing, and cluttered mobile layout.
+- The proposed fix is a native $15 3-Day Mat Pass modal that keeps prospects on the site and syncs with WrestlingIQ Team #513.
+- Pricing is transparent at $139.99 per month with no initiation fees, no contracts, and a 15% family discount.
+- Credibility anchors (1980 Moscow Olympic qualification, Ali Aliyev medal, RTC #513 sanctioning) are placed above the fold.
+- Three concepts go to leadership: v01 'The Clean Baseline', v04 'The Olympic Sanctuary' (recommended flagship), and v03 'The Conversion Engine'.
 
 ## 1. Executive Summary: The Digital Opportunity
 

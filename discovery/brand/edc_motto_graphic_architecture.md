@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-01
+last_reviewed: 2026-11-01
+sources: ["video_assets/edc_motto_option_a_triblock.svg", "video_assets/edc_motto_option_b_brutalist_contour.svg", "video_assets/edc_motto_option_c_tactical_octagon.svg"]
 ---
 
 # Architectural Specification: UWC Triple Pillar Motto & EDC Monogram System

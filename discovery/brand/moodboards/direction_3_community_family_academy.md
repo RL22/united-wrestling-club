@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/brand/moodboards/direction_3_community_family_academy.html"]
 ---
 
 # Brand Direction 3: Community Family Academy & Civic Empowerment

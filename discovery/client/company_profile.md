@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: client
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-29
+last_reviewed: 2026-10-29
+sources: ["https://www.unitedwrestlingclub.com/", "https://formspree.io/f/xyyavaaj"]
 ---
 
 # Company Profile: United Wrestling Club
@@ -10,6 +15,14 @@ group: client
 > **Industry / Vertical:** Combat Sports & Athletics / Wrestling, Brazilian Jiu-Jitsu, Sambo & Boxing Academy  
 > **Motion:** Local SMB / High-Ticket Youth & Adult Athletic Academy  
 > **Date Profiled:** October 29, 2026  
+
+## TL;DR
+
+- UWC is a combat sports academy at 30139 Industrial Pkwy SW in Hayward, CA, founded by Karim Zemaryalai and led by Head Coach Naweed Zemaryalai
+- Karim Zemaryalai is a bronze medalist at the Ali Aliyev Tournament in Dagestan (see OC-08)
+- Rashad Rahimi is a 1980 Olympic Qualifier and Asian Games Silver Medalist (see OC-09)
+- Youth programs are Kids Wrestling for ages 4–11 and Middle and High School Wrestling for ages 12–18 (see OC-14)
+- Primary email is unitedwrestlingclub@gmail.com (see RC-08)
 
 ---
 

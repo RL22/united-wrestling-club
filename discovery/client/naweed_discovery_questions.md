@@ -1,6 +1,11 @@
 ---
+type: dossier
 status: current
 group: client
+owner: "Sprintz Growth OS"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["discovery/strategy/womens_self_defense_financial_model.md", "https://www.therudis.com", "https://shop.unitedwrestlingclub.com/", "discovery/strategy/revops_lead_vetting.md", "discovery/strategy/lead_response_system.md", "discovery/knowledge_base/uwc_kb_v1.md"]
 ---
 
 # Client Discovery Questions for Coach Naweed & Karim Zemaryalai
@@ -10,6 +15,14 @@ group: client
 > **Purpose:** Structured question bank to capture internal roster numbers, local proof points, lead reactivation counts, and seasonal/sibling/gear rules (Items #1–#4 from Offer Research).  
 > **Prepared By:** Sprintz Growth OS  
 > **Date:** October 30, 2026  
+
+## TL;DR
+
+- Sprintz Growth OS's question bank for Naweed and Karim Zemaryalai, dated October 30, 2026, collects roster counts, proof points, lead counts, and offer rules
+- Section 4 asks whether to replace the cold $15 drop-in for local first-timers with a Free 2-Class Assessment Pass, keeping the $15 fee for out-of-town guests and Saturday Open Mat
+- The women's self-defense seminar is priced at $35–$50 per ticket or a free community intro, and a rollover would credit the $49 or $199 fee toward $139.99/mo memberships (see RC-11)
+- Section 7 says the live /about page calls Karim's Ali Aliyev result a Silver Medal and asks whether to standardize all pages on Silver (see OC-08)
+- Section 7 flags that the homepage $15 3-Day Trial, the /pricing $15 drop-in, and the /faqs free trial answer disagree, and asks which offer to lead with
 
 ---
 

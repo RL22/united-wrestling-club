@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://www.themat.com", "https://www.usawmembership.com", "https://ca-usaw.org", "https://www.nwcaonline.com", "https://nwhof.org", "https://nwhof-ca.com", "https://beatthestreets.org", "https://btsba.org", "https://btsbayarea.org", "https://wrestlersinbusiness.org", "https://www.wrestlingmindset.com", "https://www.wrestlingmindset.com/contact", "https://www.unitedwrestlingclub.com", "https://schema.org"]
 ---
 
 # Category 3: Governing Bodies, Hall of Fame & Non-Profit Advocacy Foundations

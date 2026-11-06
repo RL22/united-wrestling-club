@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://www.unitedwrestlingclub.com/", "https://westcoastprowrestling.com/", "http://eastbayprowrestling.com/", "https://prowrestling-revolution.com/", "https://oasisprowrestling.com/", "https://westcoastprowrestling.com/academy/", "https://prowrestling-revolution.com/academy/", "https://www.facebook.com/CaliforniaWrestlingAssociation/", "https://www.facebook.com/californiawrestlingleague/", "https://schema.org", "https://www.unitedwrestlingclub.com/#organization", "https://www.unitedwrestlingclub.com", "https://www.unitedwrestlingclub.com/images/uwc-logo.png", "https://www.unitedwrestlingclub.com/images/uwc-mat-facility.jpg", "https://maps.google.com/?cid=YOUR_EXACT_GBP_CID", "https://www.wikidata.org/wiki/Q327223", "https://www.wikidata.org/wiki/Q216348", "https://www.wikidata.org/wiki/Q389654", "https://www.wikidata.org/wiki/Q13410719", "https://www.wikidata.org/wiki/Q3547348", "https://en.wikipedia.org/wiki/Amateur_wrestling", "https://en.wikipedia.org/wiki/Collegiate_wrestling", "https://en.wikipedia.org/wiki/Freestyle_wrestling", "https://en.wikipedia.org/wiki/Greco-Roman_wrestling", "https://www.instagram.com/unitedwrestlingclub/", "https://www.facebook.com/unitedwrestlingclub/", "https://www.wikidata.org/wiki/Q11487", "https://www.wikidata.org/wiki/Q217277", "https://g.page/r/YOUR_EXACT_REVIEW_LINK/review", "https://unitedwrestlingclub.com/llms.txt"]
 ---
 
 # Group E Competitor Intelligence & Semantic Disambiguation Dossier

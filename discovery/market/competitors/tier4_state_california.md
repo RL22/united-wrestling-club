@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://www.unitedwrestlingclub.com/", "https://www.lawrestlingclub.com/", "https://www.reignwrestling.com/", "https://www.train2reign.com/", "https://silverbackwrestling.com/", "https://www.ocrtc.com/", "https://www.legacywrestlingcenter.com/", "https://www.951wrestlingclub.com/", "https://www.thresholdwrestling.com/", "https://buchananwrestling.com/", "https://theclubwrestling.com/", "https://sdwrestling.org/"]
 ---
 
 # Tier 4 Competitor Research & Statewide Comparison Dossier

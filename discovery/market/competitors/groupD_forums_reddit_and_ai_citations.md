@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://www.unitedwrestlingclub.com/", "https://www.reddit.com/r/bayarea/", "https://www.reddit.com/r/bayarea/comments/1ct3x7o/wrestling_gyms_in_the_north_bay_area/", "https://www.reddit.com/r/AskSF/", "https://www.thecaliforniawrestler.com/forum/youth-wrestling/youth-tournaments/6868-aftershock-wrestling-club", "https://www.berkeleyparentsnetwork.org/recommend/classes/wrestling", "https://www.facebook.com/groups/thecaliforniawrestler/posts/10160953369101245/", "https://united-wrestling-club.vercel.app/classes/adult-wrestling", "https://united-wrestling-club.vercel.app/schedule", "https://united-wrestling-club.vercel.app/register", "https://united-wrestling-club.vercel.app/classes/kid-wrestling", "https://united-wrestling-club.vercel.app/classes/youth-wrestling", "https://united-wrestling-club.vercel.app/pricing", "https://united-wrestling-club.vercel.app/classes/nogi-jiu-jitsu", "https://united-wrestling-club.vercel.app/classes/gi-jiu-jitsu", "https://united-wrestling-club.vercel.app/classes/sambo", "https://united-wrestling-club.vercel.app/events", "https://united-wrestling-club.vercel.app/donate", "https://united-wrestling-club.vercel.app/about", "https://www.unitedwrestlingclub.com/guides/adult-wrestling-bay-area", "https://www.unitedwrestlingclub.com/guides/youth-wrestling-vs-martial-arts", "https://www.unitedwrestlingclub.com/guides/wrestling-for-bjj-takedowns", "https://www.unitedwrestlingclub.com/guides/high-school-off-season-wrestling", "https://www.unitedwrestlingclub.com/guides/dsal-hayward-wrestling-pathway", "https://schema.org", "https://www.unitedwrestlingclub.com/#organization", "https://www.unitedwrestlingclub.com", "https://www.unitedwrestlingclub.com/assets/uwc_crest_logo_highres.png", "https://www.unitedwrestlingclub.com/assets/uwc_facility_mats.jpg", "https://www.wikidata.org/wiki/Q327223", "https://www.unitedwrestlingclub.com/guides/adult-wrestling-bay-area#article", "https://www.wikidata.org/wiki/Q16552", "https://www.unitedwrestlingclub.com/guides/adult-wrestling-bay-area#faq"]
 ---
 
 # Group D Competitor & Channel Intelligence Dossier

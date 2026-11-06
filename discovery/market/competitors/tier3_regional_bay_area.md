@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: []
 ---
 
 # Tier 3 Regional Competitor Dossier: Greater SF Bay Area

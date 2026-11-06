@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["https://www.unitedwrestlingclub.com/", "https://www.flowrestling.org/", "https://www.flosports.tv/", "https://intermatwrestle.com/", "https://www.trackwrestling.com/", "https://theopenmat.com/", "https://www.win-magazine.com/", "https://www.mattalkonline.com/", "http://amateurwrestlingnews.com/"]
 ---
 
 # Category 2: Media, Streaming & Documentary Networks (Tier 1 Link Equity)

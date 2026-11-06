@@ -1,6 +1,12 @@
 ---
-status: partly-superseded
+type: spec
+status: current
 group: strategy
+owner: "Rodney Lewis — Sprintz Growth & Technical Systems Architecture (fCMO)"
+date: 2026-11-03
+last_reviewed: 2026-11-03
+sources: ["https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo", "https://rl22.github.io/united-wrestling-club/portal/#uwc", "https://rl22.github.io/united-wrestling-club/v04/", "discovery/decisions/ADR-20261106-astro-design-system.md", "discovery/strategy/master_discovery_findings.md", "portal/index.html", "v04/index.html", "assets/js/uwc-attribution.js", "discovery/strategy/uwc_email_marketing_playbook.md", "discovery/decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md", "reviews/index.html", "discovery/strategy/uwc_attribution_model.md", "discovery/client/2026-11-02_naweed_discovery-call.md", "discovery/strategy/uwc_marketing_plan_research.md", "discovery/strategy/uwc_sms_marketing_playbook.md", "discovery/decisions/ADR-20261102-facility-and-coaching-invariants.md", "discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md", "discovery/decisions/ADR-20261102-branded-reviews-and-submission-engine.md", "v01/index.html", "v03/index.html"]
+caveat: "partly superseded, see banner"
 ---
 
 # United Wrestling Club (UWC) — 12-Month Growth Marketing Plan (v1)
@@ -14,6 +20,13 @@ group: strategy
 **Status:** Draft v1 — Grounded in Master Discovery Findings (`discovery/strategy/master_discovery_findings.md`) & Nov 2 Founder Mandate  
 
 ---
+
+## TL;DR
+- The goal is to grow from about 45 to 75 active recurring athletes in 90 days and 120 in 12 months, using $0 in paid advertising.
+- The three bets are local search crawlability, first-party lead capture with SMS and email activation, and seasonal paid-in-full loyalty with review velocity.
+- UWC is positioned as USA Wrestling Regional Training Center (RTC) #513 with an Olympic-lineage coaching bench (see RC-02).
+- Naweed owns two-way SMS replies on (510) 303-4869 and final sign-off on offers and policies (see OC-04).
+- Sprintz is paid a $1,000 per month base plus $25 per month per incremental active athlete above the 45-member baseline.
 
 ## 1. Executive summary
 
@@ -719,7 +732,7 @@ Sections 4–8 prescribe what UWC is executing now. This section cross-reference
 
 **Core Strategic & Discovery Documents:**
 - `discovery/strategy/master_discovery_findings.md` — Master Discovery Findings & Strategic Transformation Report
-- `discovery/client/call_notes_naweed_20261102_uwc.md` — Nov 2, 2026 Founder Call Transcript Excerpts & Operational Brief
+- `discovery/client/2026-11-02_naweed_discovery-call.md` — Nov 2, 2026 Founder Call Transcript Excerpts & Operational Brief
 - `discovery/strategy/uwc_marketing_plan_research.md` — Phase 1 fCMO Research Record & 17-Section Rubric Breakdown
 
 **Post-Capture Lifecycle & Attribution Playbooks:**

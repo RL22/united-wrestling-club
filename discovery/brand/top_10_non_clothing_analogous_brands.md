@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: []
 ---
 
 # Top 10 Non-Clothing Analogous Brands for United Wrestling Club (UWC)

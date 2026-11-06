@@ -1,6 +1,11 @@
 ---
+type: spec
 status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-05
+last_reviewed: 2026-11-05
+sources: ["discovery/decisions/ADR-20261105-lead-response-ownership.md", "discovery/knowledge_base/uwc_kb_v1.md", "discovery/strategy/revops_lead_vetting.md", "discovery/site/trial_modal_dataflow_ux_spec.md", "discovery/strategy/uwc_sms_marketing_playbook.md", "discovery/strategy/uwc_attribution_model.md", "discovery/client/naweed_discovery_questions.md"]
 ---
 
 # Lead response system: channels, automation, knowledge base, and handoff
@@ -10,6 +15,13 @@ group: strategy
 - **Decision record:** `discovery/decisions/ADR-20261105-lead-response-ownership.md`
 - **Knowledge base:** `discovery/knowledge_base/uwc_kb_v1.md`
 - **Inputs:** `discovery/strategy/revops_lead_vetting.md`, `discovery/site/trial_modal_dataflow_ux_spec.md`, `discovery/strategy/uwc_sms_marketing_playbook.md`, `discovery/strategy/uwc_attribution_model.md`, `discovery/client/naweed_discovery_questions.md` section 8.
+
+## TL;DR
+- Today only the trial form is in the system, and it lands in an inbox; every channel should write to one lead record.
+- Naweed will not answer leads by text; an automated responder acknowledges each lead within a minute and answers FAQs only from Verified knowledge-base entries.
+- Anything the knowledge base cannot answer, and any escalation category, is handed off to a staff responder with the full thread.
+- The system never guesses a price, time, or policy, and must pass 40 scripted questions before launch.
+- The status is Proposed; the staff responder role is not yet filled and decisions are still open.
 
 ## 1. The problem in one paragraph
 

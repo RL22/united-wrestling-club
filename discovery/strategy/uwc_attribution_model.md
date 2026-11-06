@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: strategy
+owner: "Sprintz Growth OS (Rodney Lewis)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://formspree.io/f/xyyavaaj", "https://unitedwrestlingclub.com/schedule?lid={{uwc_lead_id}}&utm_source=uwc_lifecycle&utm_medium=sms&utm_campaign=trial_day1_schedule", "https://www.wrestlingiq.com/unitedwrestlingclub/register?ref_id={{uwc_lead_id}}&utm_source=uwc_lifecycle&utm_medium=sms&utm_campaign=trial_day6_close&utm_content={{uwc_lead_id}}"]
 ---
 
 # United Wrestling Club (UWC): Organic SEO + SMS/Email Attribution Model & First-Party Stitching Architecture
@@ -12,6 +17,13 @@ group: strategy
 > **Commercial Baseline & Rev-Share:** $1,000/mo Base Retainer + **$25.00/mo per incremental active recurring athlete above the 45-member baseline** ($139.99/mo tuition)  
 
 ---
+
+## TL;DR
+- GA4 has no live tags on the site and checkout sits on wrestlingiq.com, so last-touch reporting would credit SMS or direct traffic for every enrollment.
+- The attribution standard has three layers: first-touch for acquisition, U-shaped 40/20/40 for the full funnel, and self-reported attribution with roster match as a cross-check.
+- Referrer domains such as the club site, WrestlingIQ, Formspree, Stripe, and Google sign-in are hard-excluded as self-referrals.
+- Leads are stitched across domains with a first-party identity, and uwc_lead_id is carried in SMS and email links.
+- Sprintz rev-share is reconciled monthly against the WrestlingIQ Team 513 roster at $25 per month per incremental athlete above 45.
 
 ## 1. Executive Summary & The Commercial Problem
 

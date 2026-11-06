@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["https://www.themat.com", "https://www.themat.com/membership/athletes/find-a-club", "https://www.usawmembership.com", "https://www.usawmembership.com/state_clubs/CA", "https://www.unitedwrestlingclub.com/", "http://www.ca-usaw.org/", "https://www.scwaywrestling.org/", "https://biz.yelp.com", "https://biz.yelp.com/signup", "https://www.unitedwrestlingclub.com", "https://www.calgrappler.com", "https://www.berkeleyparentsnetwork.org/recommend/classes/wrestling", "https://www.berkeleyparentsnetwork.org/subscribe", "https://www.thecaliforniawrestler.com"]
 ---
 
 # Group A Competitor Research Dossier: Directory, Aggregator & Governing Body Gatekeepers

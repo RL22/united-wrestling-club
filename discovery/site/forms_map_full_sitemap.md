@@ -1,6 +1,11 @@
 ---
+type: spec
 status: current
 group: site
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/site/website_rebuild_spec.md", "discovery/site/sitemap_status.md", "site/src/data/routes.ts", "assets/js/uwc-attribution.js"]
 ---
 
 # Forms map: full sitemap
@@ -8,6 +13,14 @@ group: site
 Scope: the 32-route sitemap in [website_rebuild_spec.md](website_rebuild_spec.md) (section 5), plus `/reviews`, which the rebuilt site uses but the spec does not list. Route-by-route status is in [sitemap_status.md](sitemap_status.md) (as of 2026-11-06). The source of truth is `site/src/data/routes.ts`.
 
 Status key: **Have** = built on the current homepage or reviews page. **Build** = needed, not built. **Decide** = needs an owner decision first.
+
+## TL;DR
+
+- The map covers the 32-route sitemap from the rebuild spec plus /reviews, with nine distinct forms; F1 trial pass intake is a shared component on about 20 routes
+- Endpoints are set in FORM_ENDPOINTS: trial_pass still points at the legacy xyyavaaj form (see RC-09), while contact, newsletter, and review are empty and report not connected
+- The media and content release (F9) is default checked on general class and event forms and default unchecked on the self-defense waitlist (F4)
+- Blockers: Formspree access to the xyyavaaj inbox is pending, Naweed must add the same media wording to the WrestlingIQ waiver, and F3 needs the Holiday Mixer date, time, and capacity
+- Open decisions: build or hide /donate, route F8 affiliate, decide how to handle the F7 reviews checkbox, add /reviews as route 33, and keep /register as a full page
 
 ---
 

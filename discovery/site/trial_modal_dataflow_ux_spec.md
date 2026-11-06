@@ -1,6 +1,11 @@
 ---
-status: reference
+type: spec
+status: current
 group: site
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513", "https://wrestlingiq.com/uwc/w?lead={lead_id}&team=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&team_id=513&prefill_phone=${encodeURIComponent(phone"]
 ---
 
 # Native 1-Click Trial Modal & WrestlingIQ Middleware Bridge
@@ -12,6 +17,14 @@ group: site
 > **Interactive Simulator Artifact:** [`trial_modal_dataflow_ux.html`](../../../../../../.gemini/antigravity/brain/58c04644-f80e-49d0-b5bc-21ecd0237549/trial_modal_dataflow_ux.html)  
 > **Document Code:** `UWC-UX-TRIAL-MODAL-SPEC`  
 > **Date:** October 31, 2026  
+
+## TL;DR
+
+- Every Register Now, Start Trial, or Pricing button currently hard-navigates to unbranded wrestlingiq.com, and abandoning that form captures zero prospect data
+- The rebuild adds a native dialog modal that captures phone and athlete age bracket in under 15 seconds without a credit card, and sends an SMS confirmation through a Next.js edge API route
+- The modal headline is "Claim Free 2-Class Assessment Pass" (see RC-05)
+- The lead pre-fills the WrestlingIQ Team 513 waiver so parents do not retype their details
+- Projected visitor-to-trial conversion rises from about 1.5% to 8.5%–10.5%, and trial show-up rises from a 40% industry baseline to 82%+
 
 ---
 

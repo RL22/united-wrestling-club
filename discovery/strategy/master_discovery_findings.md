@@ -1,11 +1,17 @@
 ---
-status: partly-superseded
+type: dossier
+status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/scratch/audits_baselines_synthesis.md", "discovery/strategy/executive_pitch_deck_copy.md", "discovery/scratch/brand_architecture_synthesis.md", "discovery/archive/snapshots/local_seo_audit.md", "discovery/market/local_seo/top_10_programmatic_lps.md", "discovery/market/alameda_county_local_footprint.md", "discovery/archive/snapshots/ai_readiness_audit.md", "discovery/strategy/commercial_and_financial_model_synthesis.md", "discovery/decisions/ADR-20261102-facility-and-coaching-invariants.md", "discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md", "discovery/brand/edc_motto_graphic_architecture.md", "discovery/decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md", "discovery/strategy/womens_self_defense_financial_model.md", "https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo", "discovery/decisions/ADR-20261102-branded-reviews-and-submission-engine.md", "discovery/client/naweed_discovery_questions.md", "discovery/decisions/ADR-20261106-astro-design-system.md"]
+caveat: "partly superseded, see banner"
 ---
 
 # United Wrestling Club: Master Discovery Findings & Strategic Transformation Report
 
-> **Status: Partly superseded.** Written before the Astro build. Where it names the v04 flagship or sitemap counts, `sitemap_status.md` and `decisions/ADR-20261106-astro-design-system.md` are current. The sourced findings still apply.
+> **Status: Partly superseded (updated 2026-11-06).** The production site is the Astro build (`decisions/ADR-20261106-astro-design-system.md`). The v01, v03, and v04 concepts are archived under `../archive/legacy-site/`. Owner decisions from 2026-11-06 are recorded in `ledger/decisions.json`; where they differ from the text below, the decision wins. The sourced findings still apply.
 
 **Prospect / Client:** Head Coach Naweed Zemaryalai & Founder Karim Zemaryalai  
 **Facility:** 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544 | USA Wrestling RTC #513  
@@ -14,15 +20,22 @@ group: strategy
 
 ---
 
-> **Decision brief.** Present Concept 02 (`v04/`) as the recommended direction; validate the operating facts and offers with the club; then launch a measured, accessible acquisition system with reliable lead capture and a clear path into WrestlingIQ.
+> **Decision brief.** The production site is the Astro build (ADR-20261106). Concept 02 (`v04/`) was the candidate direction and is now archived. Validate the operating facts and offers with the club; then run a measured, accessible acquisition system with reliable lead capture and a clear path into WrestlingIQ.
 >
 > **Evidence standard.** This report synthesizes discovery records captured in November 2026. Audit observations are point-in-time snapshots; rankings, review counts and prices can change. Funnel, churn, membership and revenue figures are planning estimates unless supported by club exports. Targets are scenarios, not forecasts or guarantees. ADRs record internal project decisions; they do not substitute for client confirmation of factual claims or commercial terms.
+
+## TL;DR
+- The production site is the Astro build (ADR-20261106). Concept 02 (v04) is archived. Operating facts and offers still need club validation.
+- The initial server HTML has 0 readable words, and cold checkout routes to WrestlingIQ with an estimated 40% to 60% abandonment (a planning assumption).
+- The discovery snapshot shows about 2,086 estimated organic visits per month and 368 ranked keywords; these are modeled estimates, not verified analytics.
+- Facility and commercial figures (3,800 sq ft of mats, a 1:6 ratio, ~45 athletes, $6,299 MRR) are working baselines to confirm before public promises. The mat footprint is decided at 3,800 sq ft; the ratio is still open.
+- Growth levers are seasonal paid-in-full loyalty promotions, women's self-defense and corporate clinics, a quarterly community day, and a branded reviews hub.
 
 ## Section 1: Executive Summary & Engagement Context
 
 United Wrestling Club (UWC) has the ingredients of a distinctive Northern California combat-sports academy: an Olympic qualification lineage, a strong local reputation, a family-centered coaching environment and a physical training facility in Hayward. The mandate is to turn an underperforming digital presence into a highly effective regional acquisition and retention engine, with measurable improvements in discovery, inquiry capture, trial attendance and membership stability.
 
-The core paradox is that the existing site presents very little readable content in its initial server response and directs cold prospects to an external registration flow before the club can reliably follow up. Discovery records attribute a 5.0-star Google rating to 42 reviews and identify founder Karim Zemaryalai as a 1980 Moscow Olympic qualifier. His precise Olympic participation and tournament medal details should be confirmed before public claims are standardized. An empty initial HTML shell does **not** prove the site is wholly unindexed: discovery also reports organic rankings and traffic.
+The core paradox is that the existing site presents very little readable content in its initial server response and directs cold prospects to an external registration flow before the club can reliably follow up. Discovery records attribute a 5.0-star Google rating to 42 reviews and identify founder Karim Zemaryalai as a 1980 Moscow Olympic qualifier. The 1980 Moscow Games were boycotted by many countries, so the qualification wording still needs review before it is standardized. The Ali Aliyev medal is bronze (owner decision, 2026-11-06). An empty initial HTML shell does **not** prove the site is wholly unindexed: discovery also reports organic rankings and traffic.
 
 Four transformation pillars govern the proposed engagement:
 
@@ -45,7 +58,7 @@ The recommended narrative is **Problem → Agitation → Solution**: the digital
 | Hero video | 17,722,787 bytes (~17.72 MB decimal) | Optimize delivery, poster, loading priority and motion preferences. |
 | CSS | ~180 KB; 1,639 duplicate declarations reported | Audit bundle and remove redundant runtime styling. |
 | Initial response | 0 readable words in the sampled server HTML | Pre-render essential page content; JavaScript-capable search engines may still render and index the site. |
-| Discovery files | `robots.txt`, `sitemap.xml`, `llms.txt` and `llms-full.txt` returned 404 in the audit | Publish valid directives and sitemap; `llms.txt` is optional and does not guarantee AI discovery. A missing robots file does not itself block crawling. |
+| Discovery files | `robots.txt`, `sitemap.xml`, `llms.txt` and `llms-full.txt` returned 404 on the old site (the Astro build serves them since 2026-11-05) | Publish valid directives and sitemap; `llms.txt` is optional and does not guarantee AI discovery. A missing robots file does not itself block crawling. |
 
 ### 2.2 Funnel and conversion
 
@@ -57,7 +70,7 @@ The recommended narrative is **Problem → Agitation → Solution**: the digital
 | Cold checkout abandonment | 40%–60% | Planning assumption; no observed step-by-step checkout cohort supplied. |
 | Current flow | External WrestlingIQ sign-up and Formspree endpoints | Test endpoints, ownership, notifications and follow-up before migration. |
 
-Trial messaging conflicts: the homepage advertises a $15 three-day trial, pricing a $15 drop-in, and the FAQ free trials. Resolve the actual offer and eligibility before changing all entry points. The source's ~16 monthly trial claims and ~0.8% visitor-to-lead estimate do not reconcile directly with ~1.5% visitor-to-trial without different denominators or periods; treat these as separate unvalidated estimates.
+Trial offer: the live site advertises a $15 three-day trial on the homepage and a $15 drop-in on pricing; the FAQ mentions free trial sessions in general terms. The free two-class and free one-day passes are not live. Confirm eligibility before changing all entry points. The source's ~16 monthly trial claims and ~0.8% visitor-to-lead estimate do not reconcile directly with ~1.5% visitor-to-trial without different denominators or periods; treat these as separate unvalidated estimates.
 
 ### 2.3 Organic SEO and search footprint
 
@@ -87,7 +100,7 @@ Prioritize useful, distinct program and service-area pages for Hayward, Union Ci
 | Bay Area regional pack | #2 in sampled comparison | Not a permanent or universal regional ranking. |
 | Oakland / north county | Unranked in sampled results | Opportunity for relevant coverage and local authority. |
 
-The website and GBP listed **(510) 303-4869** while Facebook listed **[retired number]**. Confirm the primary call/SMS number and standardize name, address, phone, HTTPS destination and hours across profiles. Discovery reports GBP name variation (“United Wrestling Clubs”). [Source: Alameda footprint](../market/alameda_county_local_footprint.md).
+The live site and GBP use **(510) 303-4869** as the club phone (owner decision, 2026-11-06). Facebook still lists **[retired number]**; retire it there and standardize name, address, phone, HTTPS destination and hours across profiles. Discovery reports GBP name variation (“United Wrestling Clubs”). [Source: Alameda footprint](../market/alameda_county_local_footprint.md).
 
 ### 2.5 AI citation and GEO visibility
 
@@ -100,7 +113,7 @@ The discovery audit assigns **18/100** for AI readiness and reports **zero citat
 | Active recurring athletes | ~45 | Requires WrestlingIQ active-member export and plan mix. |
 | MRR / annualized membership run rate | ~$6,299 / ~$75,588 | $6,299 × 12; implied blended revenue ~$139.98 per member, subject to discounts and mix. |
 | Monthly churn | ~7.5% | Estimate; establish starting members, cancellations, freezes and billing period. |
-| Core monthly price | $139.99 | One core price; not every plan costs this amount. |
+| Core monthly price | $139.99 | Adult, middle/high school, and 4-day kids rate. Not one price: the live site lists $89.99 to $150 per program (owner decision, 2026-11-06). |
 | Indicative lifetime and gross revenue LTV | 13.33 months / ~$1,867 | Simple reciprocal churn model: 1 / 0.075 × $139.99; excludes variable costs, acquisition costs, discounting and changing churn. Source also uses an eight-month tenure assumption; both cannot be the same model. |
 
 | WrestlingIQ plan / session | Discovery price | Schedule or issue to validate |
@@ -108,17 +121,17 @@ The discovery audit assigns **18/100** for AI readiness and reports **zero citat
 | 3-Day Trial #6327 | $15 | Trial terms and consecutive-practice requirement. |
 | Drop-In #2664 | $15 / day | Single visit and Saturday eligibility. |
 | Kids 2-Day #1087 | $89.99 / month | Monday / Wednesday. |
-| Kids 4-Day #4981 | $139.99 / month | Monday–Thursday offer conflicts with published schedule. |
+| Kids 4-Day #4981 | $139.99 / month | Monday–Thursday is not on the live schedule, which governs (owner decision, 2026-11-06). Fix the pricing copy or the schedule. |
 | Middle / High School #2286 | $139.99 / month | Monday–Saturday access. |
 | Competition Youth #3574 | $150 / month | Pre-K–12, Monday–Saturday; travel coaching terms. |
 | Adult / College / High School #1084 | $139.99 / month | Monday–Saturday access and program scope. |
 | BJJ 3-Day #9536 | $100 / month | Days, instructor and curriculum. |
 
-The records propose a 15% additional-household discount, no initiation or cancellation penalty, seven days' notice and potentially a free two-class assessment. Although the commercial ADR records an approved direction, the discovery questions still request coach confirmation. Treat these terms as **pending club sign-off** until verified in billing and policy. [Source: commercial synthesis](commercial_and_financial_model_synthesis.md).
+The records propose a 15% additional-household discount, no initiation or cancellation penalty, and seven days' notice. The seven-day notice is decided (owner, 2026-11-06). The household discount is not on the public price list and stays on hold. The free two-class assessment is not offered; the live trial is the $15 three-day pass. Treat the discount and the remaining terms as **pending club sign-off** until verified in billing and policy. [Source: commercial synthesis](commercial_and_financial_model_synthesis.md).
 
 ### 2.7 Physical and operational invariants
 
-The facility ADR specifies **3,000 sq ft of Dollamur competition mats**, a **1:6 coach-to-athlete ratio**, **twice-daily hospital-grade sanitization**, and **USA Wrestling RTC #513**. It rejects the earlier 5,000 sq ft claim. These are project content standards; confirm mat measurement, whether the ratio applies to every session, cleaning product and protocol, and current sanctioning with the club before making unconditional public promises. Confirm safe class capacity separately. [Source: facility ADR](../decisions/ADR-20261102-facility-and-coaching-invariants.md).
+The facility ADR specifies **3,800 sq ft of Dollamur competition mats** (owner decision, 2026-11-06, replacing the ADR's 3,000 sq ft), a **1:6 coach-to-athlete ratio** (still open), **twice-daily hospital-grade sanitization**, and **USA Wrestling RTC #513**. It rejects the earlier 5,000 sq ft claim. These are project content standards; confirm mat measurement, whether the ratio applies to every session, cleaning product and protocol, and current sanctioning with the club before making unconditional public promises. Confirm safe class capacity separately. [Source: facility ADR](../decisions/ADR-20261102-facility-and-coaching-invariants.md).
 
 ## Section 3: Root-Cause Problem Deconstruction & Impact
 
@@ -127,12 +140,14 @@ The facility ADR specifies **3,000 sq ft of Dollamur competition mats**, a **1:6
 | **1. Technical architecture and visibility** | The sampled initial HTML is a spinner/shell with no readable words; discovery files returned 404. | Users and crawlers relying on initial HTML encounter weak content; rendering and discovery depend on later execution. Existing organic rankings show this is not total invisibility. | Serve semantic content on initial response, valid sitemap and robots directives, canonical URLs and entity data. Verify live HTTP responses, indexing and Search Console coverage. |
 | **2. Mobile experience** | Reported >6.5-second mobile LCP, 17.72 MB video and a difficult seven-column schedule with duplicated slots. | Slow first impressions and hard-to-read class information add friction; the size alone does not prove exactly which resource caused LCP. | Use a compressed responsive video, visible poster, reduced-motion fallback and mobile day cards; validate real LCP, layout and actual schedule with coaches. |
 | **3. WrestlingIQ handoff** | Cold visitors are redirected to third-party registration before a reliable first-party contact is captured. | Follow-up opportunities are lost; 40%–60% abandonment is a hypothesis until funnel events are measured. | Capture consented contact details with clear offer and confirmation; persist the lead, then offer the WrestlingIQ handoff. Measure modal start, successful save, outbound click, waiver and paid enrollment. |
-| **4. Lineage and brand** | Credentials and social video proof are difficult to find in static copy or external feeds. | Families cannot quickly evaluate coaching credibility or the atmosphere; the online identity does not fully communicate the club's strengths. | Tell the founder and coaching story with verified credentials, documentary imagery, permissions and accessible captions. Confirm whether Karim qualified for or competed at Moscow, and verify Ali Aliyev medal. |
+| **4. Lineage and brand** | Credentials and social video proof are difficult to find in static copy or external feeds. | Families cannot quickly evaluate coaching credibility or the atmosphere; the online identity does not fully communicate the club's strengths. | Tell the founder and coaching story with verified credentials, documentary imagery, permissions and accessible captions. Confirm the 1980 Moscow qualification wording, given that the Games were boycotted. The Ali Aliyev medal is bronze (owner decision, 2026-11-06). |
 | **5. Seasonality** | The model assumes 7.5% monthly churn and vulnerability around November and May transitions. | Cash flow and staffing can become volatile; the cited 20%–30% seasonal swings need historical billing evidence. | Analyze 24 months of cohorts, offer optional PIF before the relevant season, track renewals and recognize prepaid income over service periods. |
 
 ## Section 4: Proposed Redesign Architecture & Concept Parity
 
 ### 4.1 Three presentation concepts
+
+> **Archived 2026-11-06.** These concept folders are in `../archive/legacy-site/`. The production site is the Astro build (ADR-20261106). The matrix is kept as design history, not as the acceptance baseline.
 
 | Concept | Directory | Visual direction | Decision |
 |---|---|---|---|
@@ -147,7 +162,7 @@ ADR 002 removes `v02/` from the presentation because of routing and design incon
 | 1 | Sanction bar: accurate USA Wrestling RTC #513 | Required | Required | Required |
 | 2 | Responsive header: navigation, confirmed phone, pass CTA | Required | Required | Required |
 | 3 | Hero: accessible video/poster, primary action and meaningful text | Required | Required | Required |
-| 4 | Authority banner: review snapshot, coaching ratio, cleaning and 3,000 sq ft | Required | Required | Required |
+| 4 | Authority banner: review snapshot, coaching ratio, cleaning and 3,800 sq ft | Required | Required | Required |
 | 5 | Program matrix: youth, varsity, adult and open mat | Required | Required | Required |
 | 6 | EDC creed: Excellence / Discipline / Champions | Required | Required | Required |
 | 7 | Coaching dossier: two principal and four secondary coaches | Required | Required | Required |
@@ -166,7 +181,7 @@ Test each row in all three concepts on desktop and mobile, including keyboard in
 - **Accessibility:** target WCAG AAA contrast where feasible; measure each foreground/background and state, including text on video. AAA contrast alone does not establish full WCAG conformance. Provide keyboard access, visible focus, labels, captions and reduced-motion support.
 - **Structured data:** use a valid JSON-LD `@graph` for the business and verified people/offers, with consistent IDs and canonical NAP. Mark up only visible, accurate content; review rich-result eligibility and platform policies before publishing aggregate ratings. Schema does not guarantee a rich result.
 - **Interactions:** use native `<details name="uwc-faq">` for single-open FAQ behavior with an appropriate compatibility fallback, and a native `<dialog>` or equivalent accessible modal with focus management, escape/close and a no-JavaScript route.
-- **Lead workflow:** a one-click CTA **opens** the form; completing it still requires input and a successful save. Capture the minimum necessary fields, disclose the offer and handoff, validate, show confirmation and recover from network or clipboard failure. Verify backend delivery, consent, retention, notifications and WrestlingIQ integration; do not assume prefill or automated SMS exists.
+- **Lead workflow:** a one-click CTA **opens** the form; completing it still requires input and a successful save. Capture the minimum necessary fields, disclose the offer and handoff, validate, show confirmation and recover from network or clipboard failure. Verify backend delivery, consent, retention, notifications and WrestlingIQ integration. Texts to the club line go to the automated responder (naweed-bot), per the 2026-11-06 owner decision. Check that responder's knowledge base and handoff rules rather than assuming them.
 
 ### 4.3 Coaching and brand system
 
@@ -174,10 +189,10 @@ The facility ADR identifies a six-person coaching bench. Confirm current roles, 
 
 | Coach | Discovery-record role and credential |
 |---|---|
-| Karim Zemaryalai | Founder; 1980 Moscow Olympic qualifier and Ali Aliyev tournament medalist. |
+| Karim Zemaryalai | Founder; Ali Aliyev tournament bronze medalist (owner decision). The 1980 Moscow qualification wording is open: the Games were boycotted by many countries. |
 | Naweed Zemaryalai | Head coach; SFSU kinesiology degree, Chabot coaching and Farid Basharat corner experience. |
 | Rashad Rahimi | Co-founder / coach; Olympic qualifier and Asian Games silver medalist. |
-| Sandeep Singh Gosal | Youth competition coach; three-time California Greco-Roman state champion. |
+| Sandeep Singh Gosal | Youth competition coach. Owner-supplied bio, not yet sourced: James Logan High School wrestler and 2001 California state place winner; Fresno State, B.S. Business Administration (2007); works in the semiconductor industry and volunteers as an assistant at Kennedy High School. This replaces the ADR's three-time champion claim, which has no source. |
 | Steve Siroy | Senior advisory coach; Chabot coaching and wrestling hall-of-fame recognition; confirm exact institution/title. |
 | Farid Siddiq | Striking and boxing director; collegiate athlete and combat footwork coach. |
 
@@ -212,7 +227,7 @@ Pilot a Saturday open mat with youth and adult introductions, local BJJ cross-tr
 
 ### Lever 4 — Branded reviews hub and assisted submissions
 
-Create a crawlable `/reviews/` page with clearly attributed, permissioned, dated reviews, platform links and category filters. The legacy `/submit-review/` route currently has a client-side redirect in the ADR; prefer a permanent server-side redirect when hosting permits and test both routes. Provide a user-initiated **copy and open Google** action to the [Google review form](https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo), with manual-copy and popup-blocker fallback. The reviewer controls the wording, rating and final submission; this does not automatically submit a five-star review. Invite honest feedback without rating-based gating or incentives contingent on positive reviews, and verify current platform policies before deployment. Do not publish an unsupported “100% recommendation” claim or stale review counts. [Source: reviews ADR](../decisions/ADR-20261102-branded-reviews-and-submission-engine.md).
+Create a crawlable `/reviews/` page with clearly attributed, permissioned, dated reviews, platform links and category filters. The legacy `/submit-review/` route was removed on 2026-11-06 and no redirect is configured yet. The marketing plan asks for a permanent 301 to `/reviews/`; add it when hosting allows, and test both routes. Provide a user-initiated **copy and open Google** action to the [Google review form](https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo), with manual-copy and popup-blocker fallback. The reviewer controls the wording, rating and final submission; this does not automatically submit a five-star review. Invite honest feedback without rating-based gating or incentives contingent on positive reviews, and verify current platform policies before deployment. Do not publish an unsupported “100% recommendation” claim or stale review counts. [Source: reviews ADR](../decisions/ADR-20261102-branded-reviews-and-submission-engine.md).
 
 ## Section 6: Financial KPI Growth Model & Revenue Projections
 
@@ -246,10 +261,10 @@ These four records are marked **Approved** in the discovery repository and bind 
 
 | ADR | Decision and rationale | Execution guardrails |
 |---|---|---|
-| **001 — [Facility and coaching invariants](../decisions/ADR-20261102-facility-and-coaching-invariants.md)** | Standardize 3,000 sq ft, 1:6, 2× daily sanitation, address, RTC #513 and six-person bench; retire 5,000 sq ft and avoid repetitive lineage claims. | Confirm universal applicability, current credentials, sanctioning and permissions; propagate corrected facts to copy, metadata and schema. |
-| **002 — [Concept consolidation and v04 flagship](../decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md)** | Retain v01, v04 and v03; recommend v04 as Concept 02; remove v02 from the presentation; enforce 12-component parity. | Client selects final concept; verify actual content and function against Section 4 before release. |
+| **001 — [Facility and coaching invariants](../decisions/ADR-20261102-facility-and-coaching-invariants.md)** | Standardize 3,800 sq ft (owner decision; the ADR text says 3,000), 1:6, 2× daily sanitation, address, RTC #513 and six-person bench; retire 5,000 sq ft and avoid repetitive lineage claims. | Confirm universal applicability, current credentials, sanctioning and permissions; propagate corrected facts to copy, metadata and schema. |
+| **002 — [Concept consolidation and v04 flagship](../decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md)** | Historical: retained v01, v03 and v04 and recommended v04 as Concept 02. The concept folders are archived and the Astro build is the production site (ADR-20261106). | Superseded. Section 4 is kept as design history. |
 | **003 — [Branded reviews and submission engine](../decisions/ADR-20261102-branded-reviews-and-submission-engine.md)** | Establish `/reviews/`, redirect legacy route and assist users in drafting and opening review platforms. | User submits independently; maintain honest review invitations, current counts, accessible fallback, permissions and valid markup. |
-| **004 — [Commercial pricing and PIF promotions](../decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md)** | Favor transparent monthly membership, a $15 trial and drop-in, optional family discount and targeted six-/twelve-month prepaid loyalty promotions ahead of seasonal dips. | Confirm live prices, cancellation and discount terms, eligibility, unit costs, cash recognition and refund/freeze policy with UWC before public release. |
+| **004 — [Commercial pricing and PIF promotions](../decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md)** | Favor transparent monthly membership, a $15 trial and drop-in, optional family discount and targeted six-/twelve-month prepaid loyalty promotions ahead of seasonal dips. | Cancellation notice is seven days (owner decision, 2026-11-06). Confirm the household discount, eligibility, unit costs, cash recognition and refund/freeze policy with UWC before public release. Live prices are per program (section 2.6). |
 
 ## Section 8: Discovery Call Presentation Checklist & Next Steps for Naweed & Karim
 
@@ -257,7 +272,7 @@ These four records are marked **Approved** in the discovery repository and bind 
 
 1. **Context and goals (5 minutes):** confirm priorities, business constraints, success measures and the club's definition of a qualified trial.
 2. **Baseline and problem (10 minutes):** show the mobile experience, initial HTML, schedule inconsistencies, phone mismatch and existing external handoff. Label estimates and discuss historical membership evidence.
-3. **Live concept walkthrough (15 minutes):** demonstrate Concept 02 on desktop and mobile; compare v01 and v03 briefly; review coaching, EDC, programs, pricing and accessible schedule. Open and complete a test lead only in an agreed test environment; verify confirmation and handoff. Demonstrate `/reviews/`, clipboard fallback and user-controlled Google submission.
+3. **Live concept walkthrough (15 minutes):** walk through the live Astro site on desktop and mobile; review coaching, EDC, programs, pricing and accessible schedule. Open and complete a test lead only in an agreed test environment; verify confirmation and handoff. Demonstrate `/reviews/`, clipboard fallback and user-controlled Google submission.
 4. **Commercial choices (10 minutes):** review the trial offer, seasonal PIF and women's program economics, capacity and staffing; select measurable pilot assumptions.
 5. **Decisions and access (10 minutes):** assign owners, approve factual corrections and creative direction, agree on access, timeline and the first measurement checkpoint.
 
@@ -265,10 +280,10 @@ These four records are marked **Approved** in the discovery repository and bind 
 
 | Decision | Question / evidence to request |
 |---|---|
-| Primary contact | Is **(510) 303-4869** or **[retired number]** the primary public call and SMS number? Who monitors it and when? |
-| Coaches and founder | Confirm each secondary coach's current role, exact credential, biography and image permission; identify the BJJ and Sambo instructors. Confirm Karim's Olympic qualifier/participation wording and Ali Aliyev medal. |
-| Schedule and capacity | Where and when do four-day Kids and Combat Sambo train? What is safe capacity by class, actual coach ratio, sanitation protocol and current RTC status? |
-| Offer and seasonality | Confirm $15 trial vs free assessment, session terms, eight active plans, household discount, cancellation rules, six-/twelve-month PIF eligibility, dates, gear cost, refund and freeze terms. Export 24 months of members, churn, pauses and plan mix. |
+| Primary contact | Resolved: **(510) 303-4869** is the club phone (owner decision, 2026-11-06). Retire **[retired number]** on Facebook. Who monitors texts and calls, and when? |
+| Coaches and founder | Confirm each secondary coach's current role, exact credential, biography and image permission; identify the BJJ and Sambo instructors. The Ali Aliyev medal is decided (bronze). Confirm the Moscow qualification wording, given that the Games were boycotted. |
+| Schedule and capacity | The live schedule governs: kids train Monday and Wednesday only. Confirm whether the Monday to Thursday 4-day kids plan is offered, and where Combat Sambo trains. What is safe capacity by class, actual coach ratio, sanitation protocol and current RTC status? |
+| Offer and seasonality | The trial is the $15 three-day pass (live). Confirm session terms, the live plan list, the household discount (on hold), cancellation rules (seven days, decided), six-/twelve-month PIF eligibility, dates, gear cost, refund and freeze terms. Export 24 months of members, churn, pauses and plan mix. |
 | Women's program | Who is available and qualified, what launch date and mat slot work, what insurance applies, and what split, tuition credit and margin floor are acceptable? |
 | Proof and access | Confirm review reuse, photo/video permissions, review count, address and GBP name. Identify owners of the domain, hosting, GBP, analytics, WrestlingIQ and form inbox; provide appropriate access. |
 
@@ -279,8 +294,8 @@ Additional discovery topics include feeder schools, documented athlete achieveme
 | Phase | Work | Completion evidence / owner |
 |---|---|---|
 | **1. Confirm and instrument** | Client selects concept and offer; confirm contact, credentials, hours, schedule and capacity; secure access; establish analytics events and baseline cohorts. | Naweed/Karim approve fact and offer register; Sprintz documents funnel definitions and access. |
-| **2. Build and verify** | Finalize v04 if selected; implement reliable lead persistence, notification and WrestlingIQ handoff; optimize media, accessibility and review flow. | Sprintz tests desktop/mobile, keyboard, form failures, consent, clipboard fallback, parity and actual receipt of test leads. |
-| **3. Launch foundation** | Deploy approved site; configure and test `robots.txt`, `sitemap.xml`, canonical URLs and optional `llms.txt`; submit sitemap, validate schema and redirects. | Hosting owner authorizes release; Sprintz verifies live HTTP responses, rendering, indexability and analytics. |
+| **2. Build and verify** | The Astro build is the production site. Verify reliable lead persistence, notification and WrestlingIQ handoff; optimize media, accessibility and review flow. | Sprintz tests desktop/mobile, keyboard, form failures, consent, clipboard fallback, parity and actual receipt of test leads. |
+| **3. Launch foundation** | The Astro site is live on Vercel (2026-11-05). `robots.txt`, `sitemap.xml`, `llms.txt` and `llms-full.txt` are built. Remaining: canonical URLs, schema, the `/submit-review/` 301, and sitemap submission. | Hosting owner authorizes release; Sprintz verifies live HTTP responses, rendering, indexability and analytics. |
 | **4. Grow and learn** | Correct GBP and priority citations, publish useful local/program content, pilot follow-up and a community event, prepare seasonal offer and women's cohort if approved. | Named club owner monitors leads and calls; review trial, show-up, enrollment, retention and contribution economics at 30/60/90 days. |
 
-**Immediate next action:** use the discovery call to settle the primary phone number, trial terms and flagship selection; these decisions unblock accurate copy, lead routing and deployment.
+**Immediate next action:** the phone number and trial terms are settled. Remaining: the Moscow qualification wording, the 4-day kids plan, the cancellation copy, and the household discount. These decisions unblock accurate copy and the Astro site fixes.

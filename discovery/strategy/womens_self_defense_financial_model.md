@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/market/local_seo/top_10_programmatic_lps.md", "discovery/market/competitors/groupD_forums_reddit_and_ai_citations.md"]
 ---
 
 # Financial Architecture & Revenue Model: Women's Self-Defense Program
@@ -13,6 +18,13 @@ group: strategy
 > - **Primary SEO / Acquisition Asset:** [`/classes/womens-self-defense`](../market/local_seo/top_10_programmatic_lps.md#L167) & [`/guides/youth-wrestling-vs-martial-arts`](../market/competitors/groupD_forums_reddit_and_ai_citations.md#L442)
 
 ---
+
+## TL;DR
+- The guiding principle is zero risk, aligned incentives, and lifetime value: UWC supplies the facility, software, SEO, and broadcasts, while instructors supply curriculum and live coaching.
+- The front end is a $49 Saturday workshop (20 cap) and a $199 six-week cohort (16 cap).
+- Corporate, healthcare, and community safety bookings run $1,000 to $1,500 each.
+- Tier 4 rolls 100% of cohort tuition into $139.99 per month memberships; five conversions equal $8,399 per year in new recurring revenue.
+- Compensation is a performance split on front-end sales, plus recurring bounty or rollover incentives on back-end memberships.
 
 ## 1. The Core Problem & Guiding Principle
 

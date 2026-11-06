@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: []
 ---
 
 # Cluster A: Heavy Equipment, Strength & Field Gear — Brand & Visual Design Archetypes for UWC 2027

@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://attackstylewrestling.com/"]
 ---
 
 # Attack Style Wrestling & Competitor Offers Audit: Strategic Synthesis

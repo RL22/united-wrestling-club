@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["discovery/brand/moodboards/stills/still_20_champions_family_outro.jpg", "discovery/brand/moodboards/stills/still_06_dummy_takedown_drill.jpg", "discovery/brand/moodboards/stills/still_16_naweed_adult_collar_tie.jpg", "discovery/brand/moodboards/stills/still_05_coach_naweed_profile.jpg", "discovery/brand/moodboards/stills/still_01_olympic_flag.jpg"]
 ---
 
 # Direction AC (Flagship): "The Olympic Wolfpack"

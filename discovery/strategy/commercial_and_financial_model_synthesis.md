@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: strategy
+owner: "Commercial & Financial Model Analyst (Sprintz Growth OS)"
+date: 2026-11-02
+last_reviewed: 2026-11-02
+sources: []
 ---
 
 # United Wrestling Club (UWC): Commercial & Financial Model Synthesis
@@ -11,6 +16,13 @@ group: strategy
 > **Scope:** Discovery Synthesis across Commercial Baseline, Funnel Bottlenecks, Pricing Modernization, Growth Levers & 12-Month Financial Projections  
 
 ---
+
+## TL;DR
+- The baseline is about 45 active recurring athletes, ~$6,299 MRR (~$75,588 ARR), and ~7.5% monthly unmanaged churn.
+- Core public price is $139.99 per month, month to month, with no initiation, belt exam, or cancellation fees and a 15% sibling discount.
+- The entry offer is a $15 3-Day Mat Pass captured in a native modal, with a free 2-class assessment pass for local East Bay residents.
+- Growth levers are seasonal paid-in-full promotions, a women's self-defense program with corporate clinics, and a community open mat day.
+- Trial-to-mat show-up is about 45% today, with targets of 75% at 90 days and 82% at 12 months (see RC-10).
 
 ## 1. Commercial Baseline & Current Operating Reality
 

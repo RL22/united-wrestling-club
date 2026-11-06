@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/brand/moodboards/direction_1_olympic_heritage.html"]
 ---
 
 # Brand Direction 1: The Olympic Heritage & Dagestan Gold

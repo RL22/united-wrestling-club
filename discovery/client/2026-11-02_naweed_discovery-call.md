@@ -1,6 +1,11 @@
 ---
+type: call
 status: current
 group: client
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-02
+last_reviewed: 2026-11-02
+sources: []
 ---
 
 # United Wrestling Club (UWC): Discovery & Strategy Call Notes
@@ -9,6 +14,14 @@ group: client
 > **Participants:** Naweed Zemaryalai (Head Coach & Co-Founder, UWC; CEO, TravaLab), Rodney Lewis (Sprintz Growth OS)  
 > **Source Material:** Audio Transcript (`call_naweed_11022026.txt`) & Joint Call Notes (`call-notes-2026-11-02.md`)  
 > **Document Purpose:** Standalone UWC operational, technical, local search, commercial, and facility expansion brief.
+
+## TL;DR
+
+- On the November 2, 2026 call, Naweed set three UWC mandates: 100% organic SEO, zero paid ads, and lead generation and rankings ahead of a visual facelift
+- The former Pep Boys site at 30085 Industrial Pkwy SW (Union City) is parked for Q1 2027 because the owner has not been reached, and the dual-GBP plan stays staged until then
+- Crawlers index 0 readable words from the current live site, so the plan is an SSG rebuild plus local landing pages for six sub-markets: Hayward, Union City, Fremont, San Leandro and Castro Valley, Newark, and Tri-Valley
+- The retainer is $1,000 per month, and the signatory (Naweed or Karim) is still to be confirmed
+- GA4 is set to Viewer with no incoming data, and Search Console access has not been granted; both are action items for Naweed
 
 ---
 

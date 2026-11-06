@@ -1,6 +1,11 @@
 ---
-status: reference
+type: spec
+status: current
 group: site
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["discovery/site/sitemap_status.md", "discovery/archive/snapshots/live_site_content/README.md", "discovery/archive/snapshots/local_seo_audit.md", "discovery/archive/snapshots/live_site_content/stubs_classes_donate_register.md", "discovery/archive/snapshots/live_site_content/schedule.md", "discovery/strategy/social_media_audit.md", "discovery/archive/snapshots/live_site_content/assets/uwc_crest_logo_highres.png", "discovery/archive/snapshots/live_site_content/classes/legacy_unlinked_classes.md", "discovery/market/local_seo_keyword_reroute_map.md", "discovery/archive/snapshots/live_site_content/assets/facebook/fb_photo_01.jpg", "discovery/archive/snapshots/live_site_content/assets/facebook/fb_photo_09.jpg", "site/src/data/routes.ts", "live_site_content/assets/uwc_crest_logo_highres.png", "live_site_content/classes/legacy_unlinked_classes.md"]
 ---
 
 # United Wrestling Club (`unitedwrestlingclub.com`) — Master Website Rebuild & UX/Performance Specification
@@ -11,6 +16,14 @@ group: site
 > **Status:** Plan document, written 2026-11-05. Route-by-route build status is in [`sitemap_status.md`](sitemap_status.md) (as of 2026-11-06). The route list is `site/src/data/routes.ts`: 33 page routes, 21 built, 12 omitted. Section 4 is the original 32-route plan. Section 1 describes the pre-rebuild site. Where either conflicts with `sitemap_status.md`, `sitemap_status.md` is current.  
 > **Source Archive:** [`live_site_content/`](../archive/snapshots/live_site_content/README.md) & [`design-extract-output/united-wrestling-club/`](../../../../../design-extract-output/united-wrestling-club/unitedwrestlingclub-com-DESIGN.md)  
 > **Updated:** October 30, 2026  
+
+## TL;DR
+
+- Goal: capture the #1 local, county, regional, and state organic and AI search spots while raising visitor-to-trial conversion from about 1.5% to 6–10%
+- The live Next.js site wraps the app in a client-side spinner, so crawlers receive 0 words of HTML, and a 17.72 MB hero video loads on first paint
+- The target stack is Next.js App Router (SSG) or Astro with Tailwind CSS v4, a 2.2 MB WebM and MP4 hero video, and a unified @graph JSON-LD
+- The plan is a 32-route sitemap (17 existing, 15 new) plus four machine files; where this spec conflicts with sitemap_status.md, the status page is current
+- Phone (510) 303-4869 is hardcoded in tel: click-to-call links across the header, mobile CTA, and LocalBusiness schema, superseding the Facebook number until the owner confirms
 
 ---
 

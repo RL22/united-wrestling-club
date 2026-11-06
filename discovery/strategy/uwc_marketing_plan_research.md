@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-03
+last_reviewed: 2026-11-03
+sources: ["assets/js/uwc-attribution.js", "portal/index.html", "discovery/strategy/master_discovery_findings.md", "discovery/client/2026-11-02_naweed_discovery-call.md", "discovery/strategy/uwc_sms_marketing_playbook.md", "discovery/strategy/uwc_email_marketing_playbook.md", "discovery/strategy/uwc_attribution_model.md", "discovery/decisions/ADR-20261102-facility-and-coaching-invariants.md", "discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md", "discovery/decisions/ADR-20261102-branded-reviews-and-submission-engine.md", "discovery/decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md"]
 ---
 
 # United Wrestling Club (UWC) — Marketing Plan Research Record
@@ -12,6 +17,13 @@ group: strategy
 **Facility:** 30139 Industrial Pkwy SW, Suite C, Hayward, CA 94544  
 
 ---
+
+## TL;DR
+- The snapshot is about 45 active recurring athletes, ~$6,299 MRR (~$75,588 ARR), and ~7.5% monthly churn.
+- The funnel shows about 2,086 modeled organic visits, 368 ranked keywords, and an estimated 40% to 60% cold-checkout abandonment.
+- The biggest leaks are a 0-word JavaScript shell with no sub-market pages at the top of the funnel, and cold off-site checkout with conflicting trial copy in the middle.
+- The current-state rubric scores 28 of 85 (32.9%), with homepage, conversion pages, onboarding, email lifecycle, and CRO each at 1 of 5.
+- Paid acquisition is $0 by founder mandate, which the scoring treats as a structural choice rather than a defect.
 
 ## Company snapshot
 - **One-sentence description:** An Olympic-pedigree youth, scholastic, and adult wrestling and combat-sports academy in Hayward, CA (USA Wrestling RTC #513) serving the East Bay (Hayward, Union City, Fremont, Newark, Castro Valley, San Leandro).
@@ -128,7 +140,7 @@ group: strategy
 
 ## Materials read
 - `discovery/strategy/master_discovery_findings.md` (read 2026-11-03)
-- `discovery/client/call_notes_naweed_20261102_uwc.md` (read 2026-11-03)
+- `discovery/client/2026-11-02_naweed_discovery-call.md` (read 2026-11-03)
 - `discovery/strategy/uwc_sms_marketing_playbook.md` (read 2026-11-03)
 - `discovery/strategy/uwc_email_marketing_playbook.md` (read 2026-11-03)
 - `discovery/strategy/uwc_attribution_model.md` (read 2026-11-03)

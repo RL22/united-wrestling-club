@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: []
 ---
 
 # Alameda County Local Search Footprint & Competitive Landscape: United Wrestling Club

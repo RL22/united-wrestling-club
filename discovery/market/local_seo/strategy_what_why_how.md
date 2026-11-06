@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["https://www.unitedwrestlingclub.com/", "http://unitedwrestlingclub.com/", "https://www.unitedwrestlingclub.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp", "https://schema.org", "https://www.unitedwrestlingclub.com/logo.png", "https://www.unitedwrestlingclub.com"]
 ---
 
 # Local SEO Growth Strategy: United Wrestling Club (Alameda County)

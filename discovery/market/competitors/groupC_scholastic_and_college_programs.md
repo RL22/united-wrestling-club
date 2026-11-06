@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["https://www.unitedwrestlingclub.com/", "https://www.unitedwrestlingclub.com/college-and-adult-wrestling-bay-area", "https://www.unitedwrestlingclub.com/mval-wacc-offseason-wrestling"]
 ---
 
 # Group C Competitor & Feeder Dossier: High School Scholastic Programs, College Rooms & RTC Ecosystems

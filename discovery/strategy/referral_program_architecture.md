@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: strategy
+owner: "Customer Research & Referral Architect (Sprintz Growth OS)"
+date: 2026-11-02
+last_reviewed: 2026-11-02
+sources: ["reviews/index.html", "https://unitedwrestlingclub.com/partner/?ref=[AthleteName"]
 ---
 
 # United Wrestling Club (UWC): Mat Partner Referral Program Architecture
@@ -13,6 +18,13 @@ group: strategy
 > **Target System:** WrestlingIQ (`Team 513`), `/reviews/` Hub, Native Trial Engine, and Front-Desk Operations  
 
 ---
+
+## TL;DR
+- A referral program makes sense only if framed as an athletic imperative (the Mat Partner Program), not a cash affiliate scheme.
+- Rewards are non-cash (tuition credit or gear), because cash bounties read as transactional to suburban parents.
+- Guardrails include a first-billing-cycle lock, household and sibling exclusion, single-use attribution with a 60-day lookback, and an active-membership requirement.
+- Five trigger moments prompt asks: a podium milestone, a 5-star review, day 3 of the mat pass, a bring-a-partner mixer, and a day-45 check-in.
+- The program runs on WrestlingIQ Team 513, the /reviews hub, and the native trial engine.
 
 ## 1. Executive Summary & Feasibility Determination
 
@@ -178,7 +190,7 @@ Referral requests fail when asked at random times. The Mat Partner Program activ
   > *"Coach Naweed here! Incredible podium finish for [Athlete Name] this weekend! 🥇 To keep the momentum rolling, we've loaded a Mat Partner Pass into your account. Gift 3 Days of Free Training + \$25 off to [Athlete Name]’s favorite drilling partner: [Link]. Let’s build the room!"*
 
 ### Trigger 2: Post-5-Star Review Submission on `/reviews/` Hub
-* **Context:** Parent completes the feedback flow on [`reviews/index.html`](../../reviews/index.html) and clicks *"Copy Review & Open Google Maps"*.
+* **Context:** Parent completes the feedback flow on [`reviews/index.html`](../archive/legacy-site/reviews/index.html) and clicks *"Copy Review & Open Google Maps"*.
 * **Channel:** On-screen confirmation modal + instant follow-up SMS.
 * **On-Screen Modal Copy:**
   > **"You’re Building Our Family."**  

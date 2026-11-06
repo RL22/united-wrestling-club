@@ -1,6 +1,11 @@
 ---
+type: audit
 status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-05
+last_reviewed: 2026-11-05
+sources: ["discovery/strategy/master_discovery_findings.md", "v01/index.html", "register/index.html", "discovery/strategy/uwc_sms_marketing_playbook.md", "assets/js/uwc-attribution.js", "discovery/strategy/uwc_attribution_model.md", "discovery/site/trial_modal_dataflow_ux_spec.md"]
 ---
 
 # RevOps vetting: UWC lead pipeline (as designed and as built)
@@ -9,6 +14,13 @@ group: strategy
 - **Scope:** Trial Pass form to member, across the homepage modal, `/register`, `/contact`, footer newsletter, and the review form, plus the systems behind them (Formspree new account, WrestlingIQ Team 513, SMS/email platform, GA4).
 - **Method:** RevOps framework (single source of truth, define before automate, measure every handoff, revenue team alignment). Checked against the built code and the discovery docs.
 - **Context used:** No product-marketing context file exists in the project. Inputs come from `discovery/strategy/master_discovery_findings.md` and the call notes. Missing inputs are listed in Section 7.
+
+## TL;DR
+- Capture works, but nothing turns a lead into a conversation, tracks it to a member, or measures it.
+- Critical finding C1: the trial consent copy and the 'Opted In' status promise texts that cannot be sent, since no SMS sender is connected and A2P 10DLC is not registered.
+- Critical finding C2: leads land in the Formspree inbox with no confirmed alert or notification recipients, and the single owner teaches during class.
+- The proposed stage model is Lead, Contacted, Trial booked, Trial attended, Member, and Lost, with first contact within 1 business hour during open hours.
+- Lead scoring is skipped for now because every trial form is treated as qualified; it is revisited when volume passes about 100 a month.
 
 ## 1. Verdict
 

@@ -1,6 +1,11 @@
 ---
+type: audit
 status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://www.facebook.com/p/United-Wrestling-Club-61574715497725/", "https://www.instagram.com/uwc_wrestling", "discovery/archive/snapshots/live_site_content/assets/facebook", "discovery/archive/snapshots/live_site_content/about.md", "discovery/archive/snapshots/live_site_content/classes/adult-wrestling.md", "discovery/archive/snapshots/live_site_content/assets/facebook/avatar_uwc.jpg", "discovery/archive/snapshots/live_site_content/assets/facebook/fb_photo_01.jpg", "discovery/archive/snapshots/live_site_content/assets/facebook/fb_photo_09.jpg", "https://www.tiktok.com/@uwc_wrestling", "https://www.youtube.com/@UnitedWrestlingClub"]
 ---
 
 # United Wrestling Club: Social Media Audit & Facebook Intel
@@ -11,6 +16,13 @@ group: strategy
 > **Asset Vault:** [`discovery/archive/snapshots/live_site_content/assets/facebook/`](../archive/snapshots/live_site_content/assets/facebook)
 
 ---
+
+## TL;DR
+- Critical NAP mismatch: Facebook lists a retired phone number while the website and Google Business Profile list (510) 303-4869; the master number needs Naweed's decision.
+- The club email is consistent across web and socials: unitedwrestlingclub@gmail.com.
+- Facebook shows 2024 Olympic clinic footage and a knee-tap tutorial, while the website has only a text-only silver medal mention.
+- The Facebook page has 104 followers and 2 following, an early-stage presence with high organic engagement on technical reels.
+- Rebuild actions are to link the footer to Facebook, Instagram, TikTok, and YouTube, and add a lazy-loaded video wall to the homepage.
 
 ## 1. Executive Summary & Critical Findings
 

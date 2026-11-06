@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["discovery/brand/moodboards/stills/still_03_varsity_stance_focus.jpg", "discovery/brand/moodboards/stills/still_14_airborne_lateral_drop.jpg", "discovery/brand/moodboards/stills/still_01_olympic_flag.jpg"]
 ---
 
 # Direction B: "The Industrial Iron Foundry" (Rogue x Milwaukee x Concept2)

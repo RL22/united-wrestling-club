@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["https://unitedwrestlingclub.com/classes/adult-wrestling", "https://schema.org", "https://unitedwrestlingclub.com/#organization", "https://unitedwrestlingclub.com", "https://unitedwrestlingclub.com/images/uwc-crest.svg", "https://unitedwrestlingclub.com/stills/still_16_naweed_adult_collar_tie.jpg", "https://unitedwrestlingclub.com/classes/adult-wrestling#course", "https://schema.org/InStock", "https://schema.org/Tuesday", "https://schema.org/Thursday", "https://schema.org/Saturday", "https://unitedwrestlingclub.com/classes/adult-wrestling#breadcrumbs", "https://unitedwrestlingclub.com/classes", "https://unitedwrestlingclub.com/classes/adult-wrestling#faq"]
 ---
 
 # United Wrestling Club — Brand System Iteration AC-2

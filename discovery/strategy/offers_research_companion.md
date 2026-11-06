@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: strategy
+owner: "Sprintz Growth OS (`offers` Research Companion)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["discovery/strategy/offers_audit_and_design.md", "discovery/archive/snapshots/todos_2026-10-30.md"]
 ---
 
 # Offer Research, Market Benchmarking & Data Intake Companion: United Wrestling Club
@@ -13,6 +18,12 @@ group: strategy
 > **Date:** October 30, 2026 (Updated for 32-Route Rebuild Architecture)    
 
 ---
+
+## TL;DR
+- This companion lists the club data needed to replace benchmark estimates in offers_audit_and_design.md with verified facts.
+- The data intake asks for roster and mat capacity, named athlete proof, past drop-in and inquiry volume, and sibling and annual pricing rules.
+- It benchmarks seven East Bay and NorCal competitors on trial offers, term rules, sibling discounts, and gear.
+- Three buyer avatars (East Bay parents, high school wrestlers, and adult grapplers) are each mapped to objections and matching bonuses.
 
 ## 1. Purpose of This Companion File
 

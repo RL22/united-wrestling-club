@@ -1,6 +1,11 @@
 ---
-status: reference
+type: spec
+status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: []
 ---
 
 # RUDIS Stories Editorial Submission & Co-Marketing Pitch
@@ -12,6 +17,12 @@ group: strategy
 > **Date:** October 31, 2026  
 
 ---
+
+## TL;DR
+- The target is RUDIS Stories, which runs three editorial franchises: 'How to Win', 'Honoring a Legacy', and 'Team [State] x RUDIS'.
+- Three editorial angles are proposed for UWC; the Heritage franchise is rated the highest likelihood of acceptance.
+- The heritage angle is built on Karim Zemaryalai's career, from the Ali Aliyev tournament in Dagestan to the Hayward room.
+- The package includes a ready-to-send editorial pitch email and a 60-second pitch script for Coach Naweed.
 
 ## 1. Visual & Editorial Deconstruction (From Live RUDIS Stories Platform)
 

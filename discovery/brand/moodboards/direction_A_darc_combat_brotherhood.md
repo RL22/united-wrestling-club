@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["discovery/brand/moodboards/stills/still_20_champions_family_outro.jpg", "discovery/brand/moodboards/stills/still_16_naweed_adult_collar_tie.jpg", "discovery/brand/moodboards/stills/still_10_stance_mural_lines.jpg"]
 ---
 
 # Direction A: "The Mat Wolfpack" (DARC Sport x Combat Brotherhood)

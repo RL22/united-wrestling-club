@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: brand
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/brand/moodboards/direction_2_modern_combat_athletic.html", "discovery/archive/snapshots/live_site_content/assets/uwc_crest_logo_highres.png", "discovery/archive/snapshots/live_site_content/assets/founder.jpg", "discovery/archive/snapshots/live_site_content/assets/head-coach.jpg", "discovery/archive/snapshots/live_site_content/assets/co-founder.jpg", "discovery/archive/snapshots/live_site_content/assets/uwc_place.webp", "discovery/archive/snapshots/live_site_content/assets/facebook/fb_photo_01.jpg"]
 ---
 
 # United Wrestling Club (UWC) — Brand Direction 2: "Modern Combat Athleticism & East Bay Grit"

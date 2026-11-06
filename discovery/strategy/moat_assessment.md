@@ -1,6 +1,11 @@
 ---
+type: dossier
 status: current
 group: strategy
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-05
+last_reviewed: 2026-11-05
+sources: ["discovery/strategy/uwc_marketing_plan.md", "discovery/archive/superseded/argon_creative_context.md", "discovery/strategy/executive_pitch_deck_copy.md"]
 ---
 
 # Moat assessment: is lineage UWC's moat?
@@ -8,6 +13,12 @@ group: strategy
 - **Date:** 2026-11-05
 - **Question:** Is the 1980 Olympic lineage a moat? What are UWC's top three?
 - **Standard:** A moat must be (1) hard for a competitor to copy, (2) valued by the buyer's purchase decision, and (3) provable on the site today.
+
+## TL;DR
+- Lineage (the 1980 Olympic qualifier story) is a differentiator, not UWC's moat.
+- Lineage fails the buyer-value and provability tests, and Karim boycotted the 1980 Moscow Games, so 'Moscow Olympian' wording is inaccurate.
+- The recommended top three moats are a dedicated year-round wrestling room, named coaches with capped ratios, and transparent no-contract pricing with a low-risk trial.
+- Documents that call lineage the moat (PRODUCT.md principle 1, the pitch deck, and the marketing plan's reviews wording) need rewording before client use.
 
 ## Verdict
 

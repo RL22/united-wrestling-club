@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Competitive Intelligence & Search Strategy"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["https://united-wrestling-club.vercel.app/contact"]
 ---
 
 # Alameda County Competitor Dossier & Strategic Analysis: Tier 2 (Countywide)

@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["https://www.rudis.com", "https://therudis.com", "https://www.rudis.com/pages/custom-gear", "https://www.scraplife.com", "https://www.cliffkeen.com", "https://cliffkeenwrestlingclub.com", "https://www.cliffkeen.com/pages/contact", "https://www.defensesoap.com", "https://www.dollamur.com", "https://www.resilite.com", "https://www.dollamur.com/pages/contact-us", "https://www.resilite.com/pages/request-a-quote", "https://www.asics.com", "https://www.athleteps.com", "https://matmanusa.com", "https://www.suplay.com", "https://www.unitedwrestlingclub.com"]
 ---
 
 # Category 1 Link Equity Dossier: Wrestling Apparel, Gear, Mats & Hygiene Brands

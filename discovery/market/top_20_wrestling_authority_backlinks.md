@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-31
+last_reviewed: 2026-10-31
+sources: ["https://www.unitedwrestlingclub.com/", "https://www.asics.com/us/en-us/wrestling", "https://www.flowrestling.org/", "https://www.flosports.tv/", "https://www.trackwrestling.com/", "https://www.themat.com", "https://www.usawmembership.com", "https://www.rudis.com", "https://therudis.com", "https://www.dollamur.com/", "https://intermatwrestle.com/", "https://www.nwcaonline.com/", "https://www.cliffkeen.com/", "https://defensesoap.com/", "https://nwhof.org/", "https://nwhof-ca.com/", "https://www.resilite.com/", "https://www.win-magazine.com/", "https://www.athleteps.com/", "https://scraplife.com/", "https://theopenmat.com/", "https://beatthestreets.org/", "https://btsba.org/", "https://www.mattalkonline.com/", "https://www.suplay.com/", "https://www.wrestlersinbusiness.org/", "https://www.unitedwrestlingclub.com/classes/youth-wrestling", "https://www.unitedwrestlingclub.com/about", "https://www.unitedwrestlingclub.com/coaches/naweed-zemaryalai", "https://www.unitedwrestlingclub.com/compare/bay-area-wrestling-clubs", "https://www.unitedwrestlingclub.com/classes/adult-wrestling", "https://www.unitedwrestlingclub.com/classes/bjj-wrestle-jitsu"]
 ---
 
 # Top 20 Wrestling Brands with Tier 1 Link Equity & Editorial Authority

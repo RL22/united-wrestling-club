@@ -1,6 +1,11 @@
 ---
-status: reference
+type: dossier
+status: current
 group: market
+owner: "Non-Profit, PAL & Community Wrestling Programs Strategic Analyst (Sprintz Growth OS)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["https://btsbayarea.org/", "https://acdsal.org/", "https://www.sfpal.org/", "https://www.sfpal.org/programs/wrestling-camp/", "http://sfelite.org/", "http://www.paragonwrestlingclub.com/", "https://petalumawc.com/", "https://lamowrestling.com/", "https://www.sfpal.org/programs/wrestling-camp", "https://www.unitedwrestlingclub.com/", "https://schema.org", "https://www.unitedwrestlingclub.com", "https://www.unitedwrestlingclub.com/images/logo.png", "https://www.unitedwrestlingclub.com/images/facility.jpg", "https://www.themat.com"]
 ---
 
 # Group B: Non-Profit, Police Activities League (PAL) & Community Wrestling Programs Dossier
