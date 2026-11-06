@@ -1,0 +1,21 @@
+---
+// D22: Rashad Rahimi section, copied from discovery/archive/legacy-site/live_site_content/about.md section 3 (body copy and the three credential badges).
+import SectionHeader from '../../ui/SectionHeader.astro';
+import InfoCard from '../../ui/InfoCard.astro';
+import { media } from '../../../data/media';
+const badges = [
+  { title: '1980 Olympic Qualifier', desc: 'Earned the right to compete at sport\'s pinnacle' },
+  { title: 'Silver Medal', desc: 'Silver medal from asia games - One of wrestling\'s most prestigious international competitions' },
+  { title: 'Silver Medal', desc: 'International Games - Proving consistency at the elite level' },
+];
+---
+<section class="section-block" id="co-founder" aria-labelledby="co-founder-heading">
+  <div class="container">
+    <SectionHeader id="co-founder-heading" title="Co-Founder" />
+    <img src={media.coFounder.src} alt={media.coFounder.alt} loading="lazy" width="800" height="600" style="max-width:100%;height:auto;border-radius:12px;margin-bottom:24px">
+    <p class="section-lead">Rashad Rahimi brings world-class wrestling pedigree and decades of coaching expertise to our program. Rashad competed at the highest level of international wrestling, representing his country on the world stage during one of the most competitive eras in the sport's history. Beyond his competitive success, Rashad has dedicated his life to developing the next generation of wrestlers and grapplers. His coaching philosophy combines old-school toughness with technical precision, creating athletes who are both mentally resilient and technically sound. He understands what it takes to compete at the highest levels because he's been there himself.</p>
+    <div class="programs-grid">
+      {badges.map((b) => <InfoCard title={b.title}>{b.desc}</InfoCard>)}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import ProgramPage from '../../components/templates/ProgramPage.astro';
+import PriceFacts from '../../components/pages/classes-adult/PriceFacts.astro';
+import Topics from '../../components/pages/classes-adult/Topics.astro';
+import { facts } from '../../data/facts';
+const boxingCoach = facts.coaches.find((c) => c.role === 'Boxing');
+const topics = [
+  { head: 'Jumping rope', body: 'Every class starts with a rope warm-up that builds cardio, footwork, coordination, and timing.' },
+  { head: 'Stance and movement', body: 'Coaches teach a proper stance and footwork so you can position yourself and move with balance.' },
+  { head: 'Offensive techniques', body: 'Jabs, crosses, hooks, uppercuts, and combinations, with attention to timing and distance.' },
+  { head: 'Defensive techniques', body: 'Slips, blocks, parries, and rolls, so you can evade and counter.' },
+  { head: 'Coach-guided breakdowns', body: 'Coaches demonstrate key techniques and give corrections to sharpen your form.' },
+  { head: 'Partner drilling', body: 'Structured one-on-one drills build timing, coordination, and sparring readiness under coach guidance.' },
+];
+---
+<ProgramPage
+  title="Boxing Fundamentals in Hayward, CA | United Wrestling Club"
+  description="Boxing fundamentals in Hayward, CA for first-timers through intermediate boxers: footwork, punches, defense, and partner drills. 3-Day Mat Pass is $15."
+  path="/classes/boxing-fundamentals/"
+  eyebrow="Adult class"
+  heading="Boxing Fundamentals"
+  lead="Learn the essentials of boxing, from your first day to sharpening your skills."
+  schedule={{ program: 'adult', tag: 'boxing' }}
+  trialProgram="adult"
+>
+  <p>Our boxing fundamentals class is for people of all skill levels, from anyone starting their first day of boxing to intermediate boxers who want to sharpen their tools. The structure is steady and the pace is lively, covering a wide range of topics.</p>
+  <h2>What you will work on</h2>
+  <Topics items={topics} />
+  {boxingCoach && <p><strong>Coach:</strong> {boxingCoach.name}, {boxingCoach.role.toLowerCase()}.</p>}
+  <h2>Prices</h2>
+  <PriceFacts />
+  <h2>Class times</h2>
+</ProgramPage>

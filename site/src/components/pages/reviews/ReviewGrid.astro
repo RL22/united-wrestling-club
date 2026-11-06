@@ -1,0 +1,38 @@
+---
+// Curated reviews. Bodies come from data/reviews.ts (verbatim). Category per author is page structure from the root page.
+import { reviews } from '../../../data/reviews';
+const category: Record<string, 'youth' | 'adult' | 'visiting'> = {
+  'Aijaz Patel': 'youth', 'David Johnson': 'adult', 'Ingoo Kwak': 'visiting', 'Robert Escórcio': 'adult',
+  'Sarah Lindqvist': 'youth', 'Alex Ramos': 'adult', 'Marcus Chen': 'youth', 'Elena Rostova': 'visiting',
+};
+const source = (platform: string) => (platform === 'Facebook' ? 'Facebook Recommendation' : `${platform} Review`);
+const count = (c: string) => reviews.filter((r) => category[r.author] === c).length;
+---
+<section class="section-block" id="curated-reviews" aria-labelledby="curated-heading">
+  <div class="container">
+    <div class="reviews-toolbar">
+      <div>
+        <span class="section-eyebrow">Real testimonials from real grapplers</span>
+        <h2 class="section-title" id="curated-heading">Voices from the Mat</h2>
+      </div>
+      <div class="tab-list" role="tablist" aria-label="Review categories">
+        <button type="button" class="tab" data-filter="all" role="tab" aria-selected="true">All Reviews <span class="tab-count" id="count-all">{reviews.length}</span></button>
+        <button type="button" class="tab" data-filter="youth" role="tab" aria-selected="false">Youth Parents <span class="tab-count" id="count-youth">{count('youth')}</span></button>
+        <button type="button" class="tab" data-filter="adult" role="tab" aria-selected="false">Adult &amp; MMA <span class="tab-count" id="count-adult">{count('adult')}</span></button>
+        <button type="button" class="tab" data-filter="visiting" role="tab" aria-selected="false">Visiting Athletes <span class="tab-count" id="count-visiting">{count('visiting')}</span></button>
+      </div>
+    </div>
+    <div class="testimonial-grid" id="reviews-container">
+      {reviews.map((r) => (
+        <article class="testimonial-card" data-category={category[r.author]}>
+          <div class="testimonial-meta">
+            <strong>{r.author}</strong>
+            <span class="testimonial-stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}</span>
+            <span class="testimonial-source">{source(r.platform)}</span>
+          </div>
+          <p class="testimonial-text">“{r.body}”</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

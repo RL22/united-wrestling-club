@@ -1,0 +1,1151 @@
+{
+  "schema_version": 1,
+  "generated": "2026-11-06",
+  "topics": {
+    "brand-design": {
+      "claims": 74,
+      "verification": {
+        "conflicting": 3,
+        "unverified": 66,
+        "superseded": 5
+      },
+      "top_sources": [
+        {
+          "source": "../DESIGN.md",
+          "claims": 11
+        },
+        {
+          "source": "brand/edc_motto_graphic_architecture.md",
+          "claims": 8
+        },
+        {
+          "source": "brand/moodboards/direction_B_industrial_iron_foundry.md",
+          "claims": 5
+        },
+        {
+          "source": "brand/brand_ethos_and_analogous_influences.md",
+          "claims": 4
+        },
+        {
+          "source": "brand/moodboards/direction_3_community_family_academy.md",
+          "claims": 4
+        },
+        {
+          "source": "brand/moodboards/direction_C_olympic_field_archive.md",
+          "claims": 4
+        },
+        {
+          "source": "brand/moodboards/iteration_AC_1_crucible_guild.md",
+          "claims": 4
+        },
+        {
+          "source": "site/website_rebuild_spec.md",
+          "claims": 4
+        }
+      ],
+      "open_conflicts": [
+        "RC-03",
+        "RC-07"
+      ]
+    },
+    "coaches-lineage": {
+      "claims": 281,
+      "verification": {
+        "unverified": 236,
+        "superseded": 35,
+        "conflicting": 10
+      },
+      "top_sources": [
+        {
+          "source": "client/company_profile.md",
+          "claims": 16
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 13
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 11
+        },
+        {
+          "source": "market/competitors/tier4_state_california.md",
+          "claims": 10
+        },
+        {
+          "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+          "claims": 9
+        },
+        {
+          "source": "market/competitors/groupC_scholastic_and_college_programs.md",
+          "claims": 9
+        },
+        {
+          "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+          "claims": 8
+        },
+        {
+          "source": "archive/snapshots/live_site_content/about.md",
+          "claims": 7
+        }
+      ],
+      "open_conflicts": [
+        "OC-07",
+        "OC-08",
+        "OC-09",
+        "RC-06"
+      ]
+    },
+    "competitors": {
+      "claims": 195,
+      "verification": {
+        "unverified": 195
+      },
+      "top_sources": [
+        {
+          "source": "market/competitors/groupB_nonprofits_and_pal_programs.md",
+          "claims": 29
+        },
+        {
+          "source": "market/competitors/tier3_regional_bay_area.md",
+          "claims": 29
+        },
+        {
+          "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+          "claims": 27
+        },
+        {
+          "source": "strategy/offers_research_companion.md",
+          "claims": 21
+        },
+        {
+          "source": "market/attack_style_wrestling_and_competitor_offers.md",
+          "claims": 20
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 10
+        },
+        {
+          "source": "market/competitors/tier1_local_hayward_tricity.md",
+          "claims": 9
+        },
+        {
+          "source": "market/competitors/groupC_scholastic_and_college_programs.md",
+          "claims": 7
+        }
+      ],
+      "open_conflicts": []
+    },
+    "events": {
+      "claims": 42,
+      "verification": {
+        "unverified": 32,
+        "superseded": 10
+      },
+      "top_sources": [
+        {
+          "source": "archive/snapshots/live_site_content/events.md",
+          "claims": 9
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 5
+        },
+        {
+          "source": "archive/snapshots/todos_2026-10-30.md",
+          "claims": 3
+        },
+        {
+          "source": "market/link_equity/category2_media_and_streaming.md",
+          "claims": 3
+        },
+        {
+          "source": "market/top_20_wrestling_authority_backlinks.md",
+          "claims": 3
+        },
+        {
+          "source": "client/naweed_discovery_questions.md",
+          "claims": 2
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 2
+        },
+        {
+          "source": "site/forms_map_full_sitemap.md",
+          "claims": 2
+        }
+      ],
+      "open_conflicts": []
+    },
+    "facility": {
+      "claims": 65,
+      "verification": {
+        "unverified": 50,
+        "superseded": 12,
+        "conflicting": 3
+      },
+      "top_sources": [
+        {
+          "source": "archive/superseded/homepage_creative_freedom_spec.md",
+          "claims": 4
+        },
+        {
+          "source": "brand/analogous_brands/cluster_c_documentary_science_and_craft.md",
+          "claims": 4
+        },
+        {
+          "source": "brand/top_10_non_clothing_analogous_brands.md",
+          "claims": 4
+        },
+        {
+          "source": "strategy/uwc_email_marketing_playbook.md",
+          "claims": 4
+        },
+        {
+          "source": "../todos.md",
+          "claims": 3
+        },
+        {
+          "source": "archive/superseded/argon_redesign_context.md",
+          "claims": 3
+        },
+        {
+          "source": "archive/superseded/v03_visual_fixes_spec.md",
+          "claims": 3
+        },
+        {
+          "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+          "claims": 3
+        }
+      ],
+      "open_conflicts": [
+        "OC-11",
+        "OC-12"
+      ]
+    },
+    "financials": {
+      "claims": 121,
+      "verification": {
+        "superseded": 1,
+        "unverified": 119,
+        "conflicting": 1
+      },
+      "top_sources": [
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 21
+        },
+        {
+          "source": "strategy/commercial_and_financial_model_synthesis.md",
+          "claims": 15
+        },
+        {
+          "source": "strategy/uwc_marketing_plan_research.md",
+          "claims": 12
+        },
+        {
+          "source": "strategy/womens_self_defense_financial_model.md",
+          "claims": 11
+        },
+        {
+          "source": "strategy/master_discovery_findings.md",
+          "claims": 9
+        },
+        {
+          "source": "strategy/offers_audit_and_design.md",
+          "claims": 9
+        },
+        {
+          "source": "strategy/referral_program_architecture.md",
+          "claims": 9
+        },
+        {
+          "source": "strategy/offers_research_companion.md",
+          "claims": 7
+        }
+      ],
+      "open_conflicts": [
+        "RC-11"
+      ]
+    },
+    "hours": {
+      "claims": 32,
+      "verification": {
+        "unverified": 21,
+        "conflicting": 9,
+        "superseded": 2
+      },
+      "top_sources": [
+        {
+          "source": "knowledge_base/uwc_kb_v1.md",
+          "claims": 5
+        },
+        {
+          "source": "../todos.md",
+          "claims": 4
+        },
+        {
+          "source": "decisions/ADR-20261105-hours-and-conversion-path.md",
+          "claims": 4
+        },
+        {
+          "source": "market/competitors/groupB_nonprofits_and_pal_programs.md",
+          "claims": 3
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 3
+        },
+        {
+          "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+          "claims": 2
+        },
+        {
+          "source": "market/local_seo/strategy_what_why_how.md",
+          "claims": 2
+        },
+        {
+          "source": "plans/astro-design-system-and-buildout.md",
+          "claims": 2
+        }
+      ],
+      "open_conflicts": [
+        "OC-02",
+        "OC-03",
+        "RC-13"
+      ]
+    },
+    "lead-handling": {
+      "claims": 77,
+      "verification": {
+        "unverified": 73,
+        "superseded": 2,
+        "conflicting": 2
+      },
+      "top_sources": [
+        {
+          "source": "strategy/revops_lead_vetting.md",
+          "claims": 19
+        },
+        {
+          "source": "strategy/lead_response_system.md",
+          "claims": 12
+        },
+        {
+          "source": "decisions/ADR-20261105-lead-response-ownership.md",
+          "claims": 7
+        },
+        {
+          "source": "site/trial_modal_dataflow_ux_spec.md",
+          "claims": 5
+        },
+        {
+          "source": "../todos.md",
+          "claims": 4
+        },
+        {
+          "source": "decisions/INDEX.md",
+          "claims": 3
+        },
+        {
+          "source": "knowledge_base/uwc_kb_v1.md",
+          "claims": 3
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 3
+        }
+      ],
+      "open_conflicts": [
+        "OC-04"
+      ]
+    },
+    "links-partners": {
+      "claims": 118,
+      "verification": {
+        "unverified": 114,
+        "superseded": 3,
+        "conflicting": 1
+      },
+      "top_sources": [
+        {
+          "source": "market/link_equity/category3_governing_bodies_and_foundations.md",
+          "claims": 15
+        },
+        {
+          "source": "market/link_equity/category2_media_and_streaming.md",
+          "claims": 14
+        },
+        {
+          "source": "market/competitors/groupA_directories_and_governing_bodies.md",
+          "claims": 13
+        },
+        {
+          "source": "market/top_20_wrestling_authority_backlinks.md",
+          "claims": 10
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 9
+        },
+        {
+          "source": "market/link_equity/category1_gear_and_apparel.md",
+          "claims": 8
+        },
+        {
+          "source": "market/competitors/groupC_scholastic_and_college_programs.md",
+          "claims": 7
+        },
+        {
+          "source": "brand/moodboards/direction_3_community_family_academy.md",
+          "claims": 4
+        }
+      ],
+      "open_conflicts": [
+        "RC-02"
+      ]
+    },
+    "location-contact": {
+      "claims": 172,
+      "verification": {
+        "unverified": 144,
+        "conflicting": 5,
+        "superseded": 23
+      },
+      "top_sources": [
+        {
+          "source": "market/competitors/tier4_state_california.md",
+          "claims": 10
+        },
+        {
+          "source": "market/local_seo/top_10_programmatic_lps.md",
+          "claims": 10
+        },
+        {
+          "source": "market/competitors/tier1_local_hayward_tricity.md",
+          "claims": 7
+        },
+        {
+          "source": "client/2026-11-02_naweed_discovery-call.md",
+          "claims": 6
+        },
+        {
+          "source": "market/competitors/groupC_scholastic_and_college_programs.md",
+          "claims": 6
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 6
+        },
+        {
+          "source": "market/local_seo/strategy_what_why_how.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 6
+        }
+      ],
+      "open_conflicts": [
+        "RC-01",
+        "RC-08"
+      ]
+    },
+    "marketing-plan": {
+      "claims": 84,
+      "verification": {
+        "unverified": 79,
+        "superseded": 3,
+        "conflicting": 2
+      },
+      "top_sources": [
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 19
+        },
+        {
+          "source": "strategy/uwc_email_marketing_playbook.md",
+          "claims": 11
+        },
+        {
+          "source": "strategy/uwc_sms_marketing_playbook.md",
+          "claims": 8
+        },
+        {
+          "source": "site/trial_modal_dataflow_ux_spec.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/commercial_and_financial_model_synthesis.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/master_discovery_findings.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_marketing_plan_research.md",
+          "claims": 6
+        },
+        {
+          "source": "../PRODUCT.md",
+          "claims": 4
+        }
+      ],
+      "open_conflicts": [
+        "RC-10"
+      ]
+    },
+    "media-consent": {
+      "claims": 24,
+      "verification": {
+        "unverified": 24
+      },
+      "top_sources": [
+        {
+          "source": "../todos.md",
+          "claims": 6
+        },
+        {
+          "source": "client/naweed_discovery_questions.md",
+          "claims": 2
+        },
+        {
+          "source": "decisions/ADR-20261105-forms-per-form-endpoints.md",
+          "claims": 2
+        },
+        {
+          "source": "decisions/ADR-20261105-public-preview-github-pages.md",
+          "claims": 2
+        },
+        {
+          "source": "plans/astro-design-system-and-buildout.md",
+          "claims": 2
+        },
+        {
+          "source": "site/forms_map_full_sitemap.md",
+          "claims": 2
+        },
+        {
+          "source": "archive/snapshots/todos_2026-10-30.md",
+          "claims": 1
+        },
+        {
+          "source": "brand/moodboards/direction_3_community_family_academy.md",
+          "claims": 1
+        }
+      ],
+      "open_conflicts": []
+    },
+    "offers": {
+      "claims": 117,
+      "verification": {
+        "unverified": 103,
+        "superseded": 11,
+        "conflicting": 3
+      },
+      "top_sources": [
+        {
+          "source": "strategy/offers_audit_and_design.md",
+          "claims": 11
+        },
+        {
+          "source": "strategy/commercial_and_financial_model_synthesis.md",
+          "claims": 8
+        },
+        {
+          "source": "strategy/referral_program_architecture.md",
+          "claims": 7
+        },
+        {
+          "source": "archive/snapshots/todos_2026-10-30.md",
+          "claims": 6
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 6
+        },
+        {
+          "source": "client/naweed_discovery_questions.md",
+          "claims": 5
+        },
+        {
+          "source": "market/competitors/tier2_county_alameda.md",
+          "claims": 5
+        }
+      ],
+      "open_conflicts": [
+        "RC-05",
+        "RC-11"
+      ]
+    },
+    "operations": {
+      "claims": 87,
+      "verification": {
+        "unverified": 80,
+        "superseded": 7
+      },
+      "top_sources": [
+        {
+          "source": "decisions/ADR-20261103-hosting-on-vercel.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_email_marketing_playbook.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/lead_response_system.md",
+          "claims": 5
+        },
+        {
+          "source": "strategy/uwc_attribution_model.md",
+          "claims": 5
+        },
+        {
+          "source": "../todos.md",
+          "claims": 4
+        },
+        {
+          "source": "archive/snapshots/ai_readiness_audit.md",
+          "claims": 4
+        },
+        {
+          "source": "client/2026-11-02_naweed_discovery-call.md",
+          "claims": 4
+        },
+        {
+          "source": "decisions/INDEX.md",
+          "claims": 4
+        }
+      ],
+      "open_conflicts": []
+    },
+    "other": {
+      "claims": 40,
+      "verification": {
+        "unverified": 36,
+        "superseded": 3,
+        "conflicting": 1
+      },
+      "top_sources": [
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 5
+        },
+        {
+          "source": "decisions/ADR-20261103-hosting-on-vercel.md",
+          "claims": 4
+        },
+        {
+          "source": "../PRODUCT.md",
+          "claims": 2
+        },
+        {
+          "source": "archive/snapshots/current_design.md",
+          "claims": 2
+        },
+        {
+          "source": "brand/moodboards/iteration_AC_2_bedrock_standard.md",
+          "claims": 2
+        },
+        {
+          "source": "decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md",
+          "claims": 2
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 2
+        },
+        {
+          "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+          "claims": 2
+        }
+      ],
+      "open_conflicts": [
+        "RC-02"
+      ]
+    },
+    "policies-rules": {
+      "claims": 113,
+      "verification": {
+        "unverified": 93,
+        "superseded": 17,
+        "conflicting": 3
+      },
+      "top_sources": [
+        {
+          "source": "strategy/lead_response_system.md",
+          "claims": 11
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 8
+        },
+        {
+          "source": "knowledge_base/uwc_kb_v1.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/referral_program_architecture.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_sms_marketing_playbook.md",
+          "claims": 6
+        },
+        {
+          "source": "archive/snapshots/live_site_content/events.md",
+          "claims": 4
+        },
+        {
+          "source": "archive/snapshots/live_site_content/rules.md",
+          "claims": 4
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 4
+        }
+      ],
+      "open_conflicts": [
+        "OC-06",
+        "OC-12"
+      ]
+    },
+    "pricing": {
+      "claims": 210,
+      "verification": {
+        "unverified": 174,
+        "conflicting": 7,
+        "superseded": 29
+      },
+      "top_sources": [
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 16
+        },
+        {
+          "source": "strategy/offers_audit_and_design.md",
+          "claims": 13
+        },
+        {
+          "source": "market/competitors/tier2_county_alameda.md",
+          "claims": 12
+        },
+        {
+          "source": "market/competitors/tier4_state_california.md",
+          "claims": 11
+        },
+        {
+          "source": "strategy/commercial_and_financial_model_synthesis.md",
+          "claims": 11
+        },
+        {
+          "source": "strategy/uwc_marketing_plan_research.md",
+          "claims": 11
+        },
+        {
+          "source": "archive/snapshots/live_site_content/pricing.md",
+          "claims": 8
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 8
+        }
+      ],
+      "open_conflicts": [
+        "OC-01",
+        "RC-04",
+        "RC-05"
+      ]
+    },
+    "programs-classes": {
+      "claims": 106,
+      "verification": {
+        "unverified": 61,
+        "superseded": 40,
+        "conflicting": 5
+      },
+      "top_sources": [
+        {
+          "source": "client/company_profile.md",
+          "claims": 10
+        },
+        {
+          "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+          "claims": 7
+        },
+        {
+          "source": "archive/snapshots/live_site_content/faqs.md",
+          "claims": 6
+        },
+        {
+          "source": "brand/moodboards/iteration_AC_2_bedrock_standard.md",
+          "claims": 5
+        },
+        {
+          "source": "knowledge_base/uwc_kb_v1.md",
+          "claims": 5
+        },
+        {
+          "source": "archive/snapshots/live_site_content/classes/legacy_unlinked_classes.md",
+          "claims": 4
+        },
+        {
+          "source": "archive/superseded/minimal_context_brief.md",
+          "claims": 4
+        },
+        {
+          "source": "archive/superseded/sol_refinement_prompt.md",
+          "claims": 4
+        }
+      ],
+      "open_conflicts": [
+        "OC-14"
+      ]
+    },
+    "research-meta": {
+      "claims": 50,
+      "verification": {
+        "unverified": 49,
+        "superseded": 1
+      },
+      "top_sources": [
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 3
+        },
+        {
+          "source": "strategy/uwc_marketing_plan_research.md",
+          "claims": 3
+        },
+        {
+          "source": "client/company_profile.md",
+          "claims": 2
+        },
+        {
+          "source": "knowledge_base/uwc_kb_v1.md",
+          "claims": 2
+        },
+        {
+          "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+          "claims": 2
+        },
+        {
+          "source": "market/local_seo/strategy_what_why_how.md",
+          "claims": 2
+        },
+        {
+          "source": "market/local_seo_keyword_reroute_map.md",
+          "claims": 2
+        },
+        {
+          "source": "site/website_rebuild_spec.md",
+          "claims": 2
+        }
+      ],
+      "open_conflicts": []
+    },
+    "reviews": {
+      "claims": 74,
+      "verification": {
+        "unverified": 69,
+        "superseded": 5
+      },
+      "top_sources": [
+        {
+          "source": "../todos.md",
+          "claims": 5
+        },
+        {
+          "source": "market/competitors/tier2_county_alameda.md",
+          "claims": 5
+        },
+        {
+          "source": "brand/moodboards/iteration_AC_1_crucible_guild.md",
+          "claims": 4
+        },
+        {
+          "source": "decisions/ADR-20261102-branded-reviews-and-submission-engine.md",
+          "claims": 4
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 4
+        },
+        {
+          "source": "market/competitors/tier1_local_hayward_tricity.md",
+          "claims": 4
+        },
+        {
+          "source": "plans/astro-design-system-and-buildout.md",
+          "claims": 4
+        },
+        {
+          "source": "../DESIGN.md",
+          "claims": 3
+        }
+      ],
+      "open_conflicts": []
+    },
+    "schedule": {
+      "claims": 62,
+      "verification": {
+        "superseded": 12,
+        "unverified": 50
+      },
+      "top_sources": [
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 10
+        },
+        {
+          "source": "archive/snapshots/live_site_content/schedule.md",
+          "claims": 7
+        },
+        {
+          "source": "market/competitors/tier4_state_california.md",
+          "claims": 4
+        },
+        {
+          "source": "brand/moodboards/iteration_AC_1_crucible_guild.md",
+          "claims": 3
+        },
+        {
+          "source": "brand/moodboards/iteration_AC_2_bedrock_standard.md",
+          "claims": 3
+        },
+        {
+          "source": "site/website_rebuild_spec.md",
+          "claims": 3
+        },
+        {
+          "source": "strategy/womens_self_defense_financial_model.md",
+          "claims": 3
+        },
+        {
+          "source": "archive/superseded/argon_redesign_context.md",
+          "claims": 2
+        }
+      ],
+      "open_conflicts": []
+    },
+    "seo-keywords": {
+      "claims": 152,
+      "verification": {
+        "unverified": 141,
+        "superseded": 11
+      },
+      "top_sources": [
+        {
+          "source": "market/local_seo_keyword_reroute_map.md",
+          "claims": 18
+        },
+        {
+          "source": "market/local_seo/top_10_programmatic_lps.md",
+          "claims": 15
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 14
+        },
+        {
+          "source": "market/local_seo/strategy_what_why_how.md",
+          "claims": 11
+        },
+        {
+          "source": "archive/snapshots/local_seo_audit.md",
+          "claims": 9
+        },
+        {
+          "source": "client/2026-11-02_naweed_discovery-call.md",
+          "claims": 8
+        },
+        {
+          "source": "site/website_rebuild_spec.md",
+          "claims": 8
+        },
+        {
+          "source": "strategy/master_discovery_findings.md",
+          "claims": 8
+        }
+      ],
+      "open_conflicts": []
+    },
+    "site-copy": {
+      "claims": 46,
+      "verification": {
+        "unverified": 32,
+        "superseded": 13,
+        "conflicting": 1
+      },
+      "top_sources": [
+        {
+          "source": "../DESIGN.md",
+          "claims": 3
+        },
+        {
+          "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+          "claims": 3
+        },
+        {
+          "source": "strategy/offers_audit_and_design.md",
+          "claims": 3
+        },
+        {
+          "source": "strategy/revops_lead_vetting.md",
+          "claims": 3
+        },
+        {
+          "source": "archive/snapshots/live_site_content/_global_nav_and_footer.md",
+          "claims": 2
+        },
+        {
+          "source": "archive/snapshots/live_site_content/classes/open-mat.md",
+          "claims": 2
+        },
+        {
+          "source": "archive/snapshots/live_site_content/classes/youth-wrestling.md",
+          "claims": 2
+        },
+        {
+          "source": "archive/snapshots/live_site_content/index.md",
+          "claims": 2
+        }
+      ],
+      "open_conflicts": [
+        "RC-03"
+      ]
+    },
+    "site-forms": {
+      "claims": 78,
+      "verification": {
+        "unverified": 66,
+        "conflicting": 2,
+        "superseded": 10
+      },
+      "top_sources": [
+        {
+          "source": "site/forms_map_full_sitemap.md",
+          "claims": 10
+        },
+        {
+          "source": "client/uwc_live_funnel_test_log.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 6
+        },
+        {
+          "source": "../DESIGN.md",
+          "claims": 5
+        },
+        {
+          "source": "decisions/ADR-20261105-forms-per-form-endpoints.md",
+          "claims": 4
+        },
+        {
+          "source": "strategy/lead_response_system.md",
+          "claims": 4
+        },
+        {
+          "source": "../todos.md",
+          "claims": 3
+        },
+        {
+          "source": "strategy/revops_lead_vetting.md",
+          "claims": 3
+        }
+      ],
+      "open_conflicts": [
+        "RC-09"
+      ]
+    },
+    "site-routes": {
+      "claims": 178,
+      "verification": {
+        "unverified": 141,
+        "conflicting": 2,
+        "superseded": 35
+      },
+      "top_sources": [
+        {
+          "source": "site/sitemap_status.md",
+          "claims": 15
+        },
+        {
+          "source": "site/website_rebuild_spec.md",
+          "claims": 13
+        },
+        {
+          "source": "archive/snapshots/site_audit.md",
+          "claims": 10
+        },
+        {
+          "source": "plans/astro-design-system-and-buildout.md",
+          "claims": 8
+        },
+        {
+          "source": "site/forms_map_full_sitemap.md",
+          "claims": 8
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 8
+        },
+        {
+          "source": "strategy/uwc_marketing_plan_research.md",
+          "claims": 8
+        },
+        {
+          "source": "strategy/master_discovery_findings.md",
+          "claims": 6
+        }
+      ],
+      "open_conflicts": [
+        "RC-12"
+      ]
+    },
+    "social-media": {
+      "claims": 22,
+      "verification": {
+        "superseded": 8,
+        "unverified": 14
+      },
+      "top_sources": [
+        {
+          "source": "strategy/social_media_audit.md",
+          "claims": 10
+        },
+        {
+          "source": "archive/snapshots/live_site_content/_global_nav_and_footer.md",
+          "claims": 4
+        },
+        {
+          "source": "archive/snapshots/live_site_content/contact.md",
+          "claims": 4
+        },
+        {
+          "source": "site/website_rebuild_spec.md",
+          "claims": 2
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
+          "claims": 1
+        },
+        {
+          "source": "strategy/uwc_marketing_plan_research.md",
+          "claims": 1
+        }
+      ],
+      "open_conflicts": []
+    }
+  }
+}

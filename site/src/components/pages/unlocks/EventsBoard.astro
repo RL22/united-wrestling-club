@@ -1,0 +1,68 @@
+---
+// Events board, copied from discovery/archive/legacy-site/live_site_content/events.md (D6 pending owner unlock). No forms.
+import { events } from './events-data';
+---
+<section class="section-block" aria-labelledby="kickoff-heading">
+  <div class="container uwc-ev">
+    <p class="uwc-ev__banner">Competition Season: September 2026 – August 2027</p>
+    <div class="program-card uwc-ev__kick">
+      <div class="card-body">
+        <span class="card-badge">Season kickoff · October 3, 2026</span>
+        <h2 class="card-title" id="kickoff-heading">North Coast Grapplers</h2>
+        <div class="card-meta">James Logan High School · Union City, CA</div>
+        <div class="card-footer"><a class="btn btn-primary" href="https://trackwrestling.com/registration/TW_Register.jsp?tournamentGroupId=289571132" rel="noopener">Register for the kickoff</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-block section-block--raised" aria-labelledby="req-heading">
+  <div class="container uwc-ev">
+    <h2 class="uwc-ev__h" id="req-heading">Membership and tournament attire</h2>
+    <div class="uwc-ev__cards">
+      <div class="program-card"><div class="card-body">
+        <h3 class="card-title">USA Wrestling membership</h3>
+        <p class="card-desc">Required for USA Wrestling and CAUSAW events, including SCVWA, MDWA, BAWA, SJWA, and CAUSAW state championships.</p>
+        <div class="card-footer"><a class="card-link" href="https://www.usawmembership.com/" rel="noopener">Get USA Wrestling membership</a></div>
+      </div></div>
+      <div class="program-card"><div class="card-body">
+        <h3 class="card-title">SCWAY membership</h3>
+        <p class="card-desc">Required separately for SCWAY events. A USA Wrestling card does not cover SCWAY events.</p>
+        <div class="card-footer"><a class="card-link" href="https://www.scwaywrestling.org/sign-up" rel="noopener">Get SCWAY membership</a></div>
+      </div></div>
+      <div class="program-card"><div class="card-body">
+        <h3 class="card-title">Practice attire</h3>
+        <p class="card-desc">Practice: casual workout clothes are fine.</p>
+        <p class="card-desc">Tournaments: wear a UWC warm-up shirt, warm-up shorts, and singlet.</p>
+        <p class="card-desc">Optional: sweatshirts and sweatpants are available at the front desk.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+<section class="section-block" aria-labelledby="all-heading">
+  <div class="container uwc-ev">
+    <h2 class="uwc-ev__h" id="all-heading">2026–2027 tournament schedule</h2>
+    <ol class="uwc-ev__list" data-event-count={events.length}>
+      {events.map((e) => (
+        <li value={e.n}>
+          <span class="uwc-ev__date">{e.date}</span>
+          <span class="uwc-ev__name">{e.name}</span>
+          <span class="uwc-ev__status">{e.status}</span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+<style>
+  .uwc-ev { max-width: 900px; }
+  .uwc-ev__banner { font-weight: 700; text-align: center; margin: 0 0 1.5rem; }
+  .uwc-ev__h { margin: 0 0 1.25rem; }
+  .uwc-ev__cards { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .uwc-ev__cards { grid-template-columns: repeat(3, 1fr); } }
+  .uwc-ev__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+  .uwc-ev__list li { display: grid; gap: 0.25rem; padding: 0.9rem 0; border-top: 1px solid var(--color-border-default, #333); }
+  .uwc-ev__date { font-weight: 700; }
+  .uwc-ev__status { font-size: 0.875rem; opacity: 0.85; }
+  @media (min-width: 900px) {
+    .uwc-ev__list li { grid-template-columns: 11rem 1fr 15rem; gap: 1rem; align-items: baseline; }
+  }
+</style>

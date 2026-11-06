@@ -1,0 +1,15 @@
+---
+import InteriorLayout from '../../layouts/InteriorLayout.astro';
+import PageHero from '../../components/ui/PageHero.astro';
+import HaywardBody from '../../components/pages/locations/HaywardBody.astro';
+---
+<InteriorLayout
+  title="United Wrestling Club in Hayward, CA"
+  description="Wrestling and jiu-jitsu classes in Hayward, CA. Address, hours, class times, and a 3-Day Mat Pass for new members."
+  path="/locations/hayward-ca/"
+  current="locations"
+  cta={false}
+>
+  <PageHero eyebrow="Location" title="United Wrestling Club in" titleBrand="Hayward, CA" lead="Find the address, hours, and class times, then book a 3-Day Mat Pass." compact />
+  <HaywardBody />
+</InteriorLayout>

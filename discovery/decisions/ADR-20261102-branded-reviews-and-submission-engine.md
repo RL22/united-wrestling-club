@@ -9,7 +9,7 @@ United Wrestling Club has an exceptional reputation in Alameda County (5.0 ★ o
 
 ## Approved Solution
 1. **Dedicated Branded Hub (`/reviews/`):**
-   - Built a standalone, SEO-optimized reviews landing page at [`reviews/index.html`](file:///Users/rodneylewis/Sprintz/clients/prospects/united-wrestling-club/reviews/index.html).
+   - Built a standalone, SEO-optimized reviews landing page at [`reviews/index.html`](../archive/legacy-site/reviews/index.html).
    - Injected `AggregateRating` schema (5.0 rating, 35+ ratings, SportsClub entity) for Google rich snippet search enhancement.
    - Built an Aggregate Trust Scorecard highlighting 5.0 ★ score, 100% parent recommendation rate, and platform distribution (Google, Yelp, Facebook).
    - Added category filter tabs: *All Reviews*, *Youth Parents*, *Adult & MMA*, and *Visiting Athletes*.
@@ -21,7 +21,7 @@ United Wrestling Club has an exceptional reputation in Alameda County (5.0 ★ o
      - Yelp: `https://biz.yelp.com` / UWC listing
      - Facebook: `https://www.facebook.com/unitedwrestlingclub`
 3. **Legacy Route Redirection:**
-   - Added a 0-second client-side `<meta http-equiv="refresh">` and JavaScript redirection at [`submit-review/index.html`](file:///Users/rodneylewis/Sprintz/clients/prospects/united-wrestling-club/submit-review/index.html) pointing to `../reviews/`.
+   - Added a 0-second client-side `<meta http-equiv="refresh">` and JavaScript redirection at [`submit-review/index.html`](../archive/legacy-site/submit-review/index.html) pointing to `../reviews/`.
 
 ## Alternatives Rejected
 1. **Third-Party SaaS Review Gateways (e.g. Birdeye, Podium, Broadly):** Rejected due to high ongoing monthly SaaS costs (\$250–\$400/mo) and unnecessary complexity for a single-location gym.

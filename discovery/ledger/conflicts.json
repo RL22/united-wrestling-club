@@ -1,0 +1,434 @@
+[
+  {
+    "id": "OC-01",
+    "topic": "pricing",
+    "description": "Monthly membership price is $139.99 per month in the ADR and KB-08 but the site FAQ and pricing page show plans from $89.99 to $150; the owner must decide the single published price and how tiers are described.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md",
+        "evidence": "**\\$139.99/month** month-to-month with zero initiation fees"
+      },
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "$139.99 per month. Month to month. No contract. No cancellation fee."
+      },
+      {
+        "source": "../todos.md",
+        "evidence": "says plans range from $89.99 to $150.00"
+      },
+      {
+        "source": "plans/phase1-log.md",
+        "evidence": "No. Memberships are month to month, with no contract and no cancellation fee. Monthly plans range from $89.99 to $150.00, depending on the program."
+      }
+    ]
+  },
+  {
+    "id": "OC-02",
+    "topic": "hours",
+    "description": "Saturday hours: KB-03 and the ADR say 10:00 AM to 12:00 PM open mat, while the schedule and JSON-LD show 8:00 to 10:00 AM gi or 9:00 to 13:00; the owner must decide the Saturday hours and whether the gi row shows.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "Saturday 10:00 AM to 12:00 PM (open mat)."
+      },
+      {
+        "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+        "evidence": "\"opens\": \"09:00\","
+      },
+      {
+        "source": "plans/astro-design-system-and-buildout.md",
+        "evidence": "the schedule lists Saturday 8:00 to 10:00 AM gi, outside KB-03's Saturday 10:00 AM to 12:00 PM"
+      }
+    ]
+  },
+  {
+    "id": "OC-03",
+    "topic": "hours",
+    "description": "Weekday hours: KB-03 and the ADR say Monday to Friday 6:00 AM to 10:00 PM, while other schema and JSON-LD copy shows 16:00 to 21:00, 16:30 to 21:00 or 17:00 to 22:00; the owner must decide the published weekday hours.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "Monday to Friday 6:00 AM to 10:00 PM."
+      },
+      {
+        "source": "market/local_seo/strategy_what_why_how.md",
+        "evidence": "\"opens\": \"17:00\""
+      },
+      {
+        "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+        "evidence": "\"dayOfWeek\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\"],"
+      },
+      {
+        "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+        "evidence": "\"opens\": \"16:30\", \"closes\": \"21:00\""
+      }
+    ]
+  },
+  {
+    "id": "OC-04",
+    "topic": "lead-handling",
+    "description": "Who answers texts to the club line: the marketing plan says Coach Naweed has two-way SMS replies, while the ADR and KB say he does not text leads and an automated responder with staff handoff answers; the owner must decide the text-response owner.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261105-lead-response-ownership.md",
+        "evidence": "**Naweed does not text leads.**"
+      },
+      {
+        "source": "strategy/uwc_marketing_plan.md",
+        "evidence": "2-way SMS replies on `(510) 303-4869`"
+      }
+    ]
+  },
+  {
+    "id": "OC-06",
+    "topic": "policies-rules",
+    "description": "Cancellation notice: the ADR sets 7 days advance notice to cancel, while the attack-style audit records UWC billing as cancel anytime; the owner must decide the notice term, if any, to publish.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md",
+        "evidence": "zero cancellation penalties (7 days advance notice)"
+      },
+      {
+        "source": "market/attack_style_wrestling_and_competitor_offers.md",
+        "evidence": "Honest Month-to-Month auto-renewal; cancel anytime"
+      }
+    ]
+  },
+  {
+    "id": "OC-07",
+    "topic": "coaches-lineage",
+    "description": "Karim Zemaryalai's 1980 Moscow Games status is described as a 1980 Moscow Olympic qualifier in the ADR and company profile, while the client correction and KB-16 say he boycotted the Games; the owner must confirm the exact wording.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+        "evidence": "**Founder Karim Zemaryalai:** 1980 Moscow Olympic qualifier and Ali Aliyev International Tournament medalist in Dagestan."
+      },
+      {
+        "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+        "evidence": "Karim Zemaryalai boycotted the 1980 Moscow Games (client)."
+      },
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "He boycotted the 1980 Moscow Games (client, Nov 5, 2026)."
+      }
+    ]
+  },
+  {
+    "id": "OC-08",
+    "topic": "coaches-lineage",
+    "description": "Karim Zemaryalai's Ali Aliyev Tournament placing is silver on the live about page quote but bronze in the client company profile and other copy; the owner must confirm the medal.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "client/naweed_discovery_questions.md",
+        "evidence": "The `/about` page text says Karim won a **Silver Medal** at the Ali Aliyev Tournament in Dagestan."
+      },
+      {
+        "source": "client/company_profile.md",
+        "evidence": "a 1980 Moscow Olympics qualifier and bronze medalist at the prestigious Ali Aliyev Tournament in Dagestan"
+      },
+      {
+        "source": "client/company_profile.md",
+        "evidence": "**Karim Zemaryalai (Founder):** 1980 Moscow Olympics qualifier; bronze medalist at the world-renowned Ali Aliyev Tournament in Makhachkala, Dagestan."
+      }
+    ]
+  },
+  {
+    "id": "OC-09",
+    "topic": "coaches-lineage",
+    "description": "Rashad Rahimi's credential is Asian Games Silver Medalist with a 1980 Olympic Qualifier label in the client profile, while the statewide report describes him as a 1980 Olympian; the owner must confirm the credential wording.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "client/company_profile.md",
+        "evidence": "1980 Olympic Qualifier; Asian Games Silver Medalist."
+      },
+      {
+        "source": "market/competitors/tier4_state_california.md",
+        "evidence": "coached by 1980 Olympian Rashad Rahimi and Coach Naweed."
+      }
+    ]
+  },
+  {
+    "id": "OC-11",
+    "topic": "facility",
+    "description": "Mat footprint: the facility ADR and KB-14 status say 3,000 sq ft of mats, while the Direction 2 moodboard shows 3,800 sq ft; the owner must confirm the footprint before it is quoted.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+        "evidence": "**Mat Footprint:** Exactly **3,000 sq ft** of seamless Dollamur competition mats."
+      },
+      {
+        "source": "brand/moodboards/direction_2_modern_combat_athletic.md",
+        "evidence": "3,800 SQ FT"
+      }
+    ]
+  },
+  {
+    "id": "OC-12",
+    "topic": "facility",
+    "description": "Coach-to-athlete ratio: the facility ADR and KB-15 state 1:6, while a mission spec sheet in the analogous-brand research states 1:8; the owner must confirm the ratio and whether it can be quoted.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+        "evidence": "Dedicated **1:6 ratio** ensuring close individual correction"
+      },
+      {
+        "source": "brand/analogous_brands/cluster_b_tools_tactical_and_machines.md",
+        "evidence": "TOLERANCE RATING: 1:8 Coach-to-Athlete Ratio"
+      }
+    ]
+  },
+  {
+    "id": "OC-14",
+    "topic": "programs-classes",
+    "description": "Youth age bands: KB-05 and the ADR give Youth Academy ages 5 to 13 and Varsity ages 14 to 18, while the company profile and AC-1 copy use 4 to 11, 12 to 18 and 5 to 14; the owner must decide the age bands for each program.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "Youth Wrestling Academy: ages 5 to 13."
+      },
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "Varsity and Scholastic Prep: ages 14 to 18."
+      },
+      {
+        "source": "client/company_profile.md",
+        "evidence": "**Kids Wrestling (Pre-K to 5th Grade / Ages 4–11):**"
+      },
+      {
+        "source": "client/company_profile.md",
+        "evidence": "**Middle & High School Wrestling (Grades 6–12 / Ages 12–18):**"
+      },
+      {
+        "source": "brand/moodboards/iteration_AC_1_crucible_guild.md",
+        "evidence": "GUILD SILO // YOUTH APPRENTICESHIP (AGES 5–14) // HAYWARD, CA"
+      }
+    ]
+  },
+  {
+    "id": "RC-01",
+    "topic": "location-contact",
+    "description": "The club phone number is (510) 303-4869 in the decided single-number note and most copy, but the email playbook gives (510) 589-5591 and the adult page JSON-LD gives +1-510-736-2342; the owner must confirm the one public number.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "../todos.md",
+        "evidence": "**P0 phone: one number, (510) 303-4869** (decided 2026-11-05)"
+      },
+      {
+        "source": "strategy/uwc_email_marketing_playbook.md",
+        "evidence": "(510) 589-5591"
+      },
+      {
+        "source": "brand/moodboards/iteration_AC_2_bedrock_standard.md",
+        "evidence": "\"telephone\": \"+1-510-736-2342\","
+      }
+    ]
+  },
+  {
+    "id": "RC-02",
+    "topic": "links-partners",
+    "description": "USA Wrestling sanction number is RTC #513 in the marketing plan and deck copy, while the AC-2 moodboard cites USAW RTC sanction #100234; the owner must confirm the sanction number.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "strategy/uwc_marketing_plan.md",
+        "evidence": "USA Wrestling Regional Training Center (RTC) #513"
+      },
+      {
+        "source": "brand/moodboards/iteration_AC_2_bedrock_standard.md",
+        "evidence": "[ USAW RTC SANCTION #100234 // REGION 8 ]"
+      }
+    ]
+  },
+  {
+    "id": "RC-03",
+    "topic": "brand-design",
+    "description": "Founding year appears as Est. 1980 in the brand ethos hero badges, while the Direction 2 wireframe header says EST. 2021; the owner must decide the founding year shown on the site.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "brand/brand_ethos_and_analogous_influences.md",
+        "evidence": "Hero badges indicating *\"Est. 1980 Lineage\"*, *\"Sanctioned USAW Club #513\"*, and *\"Olympic Pedigree\"*."
+      },
+      {
+        "source": "brand/moodboards/direction_2_modern_combat_athletic.md",
+        "evidence": "HAYWARD, CA // EST. 2021"
+      }
+    ]
+  },
+  {
+    "id": "RC-04",
+    "topic": "pricing",
+    "description": "The sibling discount is stated as a 15% policy in the ADR, while KB-18 says a sibling discount is not on the public price list and must not be quoted; the owner must decide whether the 15% discount is offered and published.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md",
+        "evidence": "**Family Discount:** 15% discount for second sibling or family member."
+      },
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "Not on the public price list."
+      }
+    ]
+  },
+  {
+    "id": "RC-05",
+    "topic": "offers",
+    "description": "The trial offer is the $15 3-Day Mat Pass in the ADR and client call, while the trial modal spec and the programmatic LP use a free 2-class or free 1-day assessment pass; the owner must choose the trial offer shown on each page.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md",
+        "evidence": "**\\$15 3-Day Mat Pass**"
+      },
+      {
+        "source": "site/trial_modal_dataflow_ux_spec.md",
+        "evidence": "Claim Free 2-Class Assessment Pass"
+      },
+      {
+        "source": "market/local_seo/top_10_programmatic_lps.md",
+        "evidence": "`Claim Free 1-Day Trial Pass`"
+      }
+    ]
+  },
+  {
+    "id": "RC-06",
+    "topic": "coaches-lineage",
+    "description": "Steve Siroy's Chabot head-coach tenure is 40 years in the facility ADR, while the archived v03 editorial spec says 37+ years; the owner must confirm the years before the bio is published.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "decisions/ADR-20261102-facility-and-coaching-invariants.md",
+        "evidence": "Steve Siroy: 40-year Head Coach at Chabot College, California Wrestling Hall of Fame inductee."
+      },
+      {
+        "source": "archive/superseded/v03_editorial_and_functional_spec.md",
+        "evidence": "Coach Steve Siroy served 37+ years as head wrestling coach at Chabot College"
+      }
+    ]
+  },
+  {
+    "id": "RC-07",
+    "topic": "brand-design",
+    "description": "The brand crimson is #902524 in DESIGN.md and the brand reference, while the AC-1 moodboard token uses #BA1C1C; the owner must choose the brand red.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "../DESIGN.md",
+        "evidence": "`--color-brand` | `#902524`"
+      },
+      {
+        "source": "brand/moodboards/iteration_AC_1_crucible_guild.md",
+        "evidence": "--uwc-bloodline-red: #BA1C1C;"
+      }
+    ]
+  },
+  {
+    "id": "RC-08",
+    "topic": "location-contact",
+    "description": "The public club email is unitedwrestlingclub@gmail.com in the company profile and outreach templates, while the schema copy lists info@unitedwrestlingclub.com; the owner must choose the contact email.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "client/company_profile.md",
+        "evidence": "unitedwrestlingclub@gmail.com"
+      },
+      {
+        "source": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+        "evidence": "\"email\": \"info@unitedwrestlingclub.com\","
+      }
+    ]
+  },
+  {
+    "id": "RC-09",
+    "topic": "site-forms",
+    "description": "The trial form endpoint is mkjjyyep in the todos list, while the forms map says the trial_pass form still posts to the legacy xyyavaaj form; the owner must confirm which endpoint is live.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "../todos.md",
+        "evidence": "Endpoints wired: trial and `/register` (`mkjjyyep`), contact (`mgaaddql`), newsletter (`meaanndk`), reviews (`mqppnnja`)"
+      },
+      {
+        "source": "site/forms_map_full_sitemap.md",
+        "evidence": "`trial_pass` still points at the legacy `xyyavaaj` form."
+      }
+    ]
+  },
+  {
+    "id": "RC-10",
+    "topic": "marketing-plan",
+    "description": "Current trial show-up rate is about 45% in the synthesis but about 55% in the SMS playbook; the owner must confirm the baseline before it is used in plans or copy.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "strategy/commercial_and_financial_model_synthesis.md",
+        "evidence": "~45% | 75% | 82%"
+      },
+      {
+        "source": "strategy/uwc_sms_marketing_playbook.md",
+        "evidence": "~55% (Est.)"
+      }
+    ]
+  },
+  {
+    "id": "RC-11",
+    "topic": "offers",
+    "description": "The women's self-defense seminar is priced at $35 to $50 per ticket in the client discovery notes, while the same notes apply a $49 seminar fee as a credit; the owner must confirm the seminar price.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "client/naweed_discovery_questions.md",
+        "evidence": "(`$35–$50` per ticket or Free Community Intro)"
+      },
+      {
+        "source": "client/naweed_discovery_questions.md",
+        "evidence": "apply their `$49` or `$199` fee as a credit toward ongoing `$139.99/mo` memberships"
+      }
+    ]
+  },
+  {
+    "id": "RC-12",
+    "topic": "site-routes",
+    "description": "The Astro site is reported as 22 built pages in the todos list and build gate, while the sitemap status page says 21 pages are built; the owner must confirm the page count before reporting it.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "../todos.md",
+        "evidence": "The Astro site in `site/` (22 built pages) is live on Vercel production"
+      },
+      {
+        "source": "site/sitemap_status.md",
+        "evidence": "## Built (21 pages)"
+      }
+    ]
+  },
+  {
+    "id": "RC-13",
+    "topic": "hours",
+    "description": "The Saturday open mat end time is 12:00 PM on the site and in KB-03, while the README once said 12:30 PM and the decision is still open; the owner must confirm the end time.",
+    "status": "open, owner decision",
+    "claims": [
+      {
+        "source": "../todos.md",
+        "evidence": "Saturday open mat end time (site says 12:00 PM; `README.md` earlier said 12:30 PM)"
+      },
+      {
+        "source": "knowledge_base/uwc_kb_v1.md",
+        "evidence": "Naweed: confirm the Saturday end time (site says 12:00 PM; `README.md` once said 12:30 PM)"
+      }
+    ]
+  }
+]

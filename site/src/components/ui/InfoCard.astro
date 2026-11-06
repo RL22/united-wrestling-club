@@ -1,0 +1,20 @@
+---
+// Card using the shared .card-* slots (cards.css). Pass `href` for a footer link.
+interface Props { title: string; badge?: string; meta?: string; href?: string; linkLabel?: string; image?: { src: string; alt: string } }
+const { title, badge, meta, href, linkLabel, image } = Astro.props;
+---
+<div class="program-card info-card">
+  {image && (
+    <div class="card-media">
+      {badge && <span class="card-badge">{badge}</span>}
+      <img class="card-img" src={image.src} alt={image.alt} loading="lazy">
+    </div>
+  )}
+  <div class="card-body">
+    {!image && badge && <span class="card-badge">{badge}</span>}
+    <h3 class="card-title">{title}</h3>
+    {meta && <div class="card-meta">{meta}</div>}
+    <p class="card-desc"><slot /></p>
+    {href && <div class="card-footer"><a href={href} class="card-link">{linkLabel ?? 'Learn more'}</a></div>}
+  </div>
+</div>

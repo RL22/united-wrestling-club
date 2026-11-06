@@ -16,3 +16,14 @@
 .DS_Store
 **/.DS_Store
 Thumbs.db
+
+# Astro site build output and dependencies
+/site/node_modules/
+/site/dist/
+/site/.astro/
+
+# Site scratch output
+site/output/
+
+# Regression baselines and screenshots (large; regenerate with scripts/fingerprint.mjs)
+/site/tests/baselines/*/

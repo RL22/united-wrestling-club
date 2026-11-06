@@ -9,7 +9,7 @@
 ---
 
 ## 1. Product Purpose & Value Proposition
-United Wrestling Club is Northern California's premier Olympic and Folkstyle wrestling academy. Founded by 1980 Moscow Olympian and Dagestani tournament medalist Karim Zemaryalai and led by Head Coach Naweed Zemaryalai (SFSU Kinesiology, Chabot College Coach), UWC trains youth competitors (ages 5–18) and adults in collegiate wrestling, Wrestle-Jitsu, Combat Sambo, and athletic conditioning.
+United Wrestling Club is Northern California's premier Olympic and Folkstyle wrestling academy. Founded by Dagestani tournament medalist Karim Zemaryalai (1980 Olympic wording pending confirmation) and led by Head Coach Naweed Zemaryalai (SFSU Kinesiology, Chabot College Coach), UWC trains youth competitors (ages 5–18) and adults in collegiate wrestling, Wrestle-Jitsu, Combat Sambo, and athletic conditioning.
 
 ## 2. Target Audience & Users
 1. **Parents of Youth Athletes (Ages 5–13):** Seeking character development, physical discipline, resilience, anti-bullying confidence, and high coach-to-student attention in a safe, clean environment.
@@ -27,7 +27,7 @@ United Wrestling Club is Northern California's premier Olympic and Folkstyle wre
   - Hidden pricing traps, 12-month lock-in contracts, and multi-step registration friction.
 
 ## 4. Strategic Principles for Homepage Redesign
-1. **Lineage as the Moat:** Lead with Karim Zemaryalai's 1980 Olympic qualification and Naweed Zemaryalai's kinesiology pedigree immediately above the fold.
+1. **Proof over pedigree:** Lead with what a parent can check: a dedicated wrestling room in the East Bay with year-round scholastic and adult classes, named coaches with verified credentials and a capped ratio, and a transparent no-contract price with a $15 trial. Lineage is a supporting proof point, shown only in wording the founder has confirmed. It does not lead the page. Source: `discovery/strategy/moat_assessment.md` (Nov 5, 2026).
 2. **Local Physical Grounding:** Prominently display the physical Hayward facility address, USA Wrestling RTC sanctioning (#513), and 42+ 5-star local parent reviews.
 3. **High-Converting 1-Click Trial Capture:** Replace external WrestlingIQ redirects with a frictionless native 1-click modal for the \$15 3-Day Mat Pass or Free Intro Session.
 4. **Structured Program Silos:** Explicitly route users into Youth Academy (5–13), Varsity Prep (14–18), Adult Wrestle-Jitsu (18+), and Saturday Open Mat.

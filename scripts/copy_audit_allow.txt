@@ -1,0 +1,64 @@
+# copy_audit allowlist. Owner: ds-lead. Format: file|line|sha256|pattern|decision
+# sha256 = SHA-256 of the raw UTF-8 inner content of the <p> containing the line (whole-file, DOTALL; plan section 1.8).
+# dist_sha256 entries are added at DS-0 from dist/index.html.
+site/src/components/home/Testimonials.astro|21|a36ba4526ad4cd5c6ee6bebbe6ae154323920dc4fe6922ba37fe195fb83be8d9|em dash|D19
+site/src/components/home/Testimonials.astro|32|02358decfb5198d8e3348f59df6185bb8ccacd2e5e3d69095ee7d0f38f8c9cd6|em dash|D19
+site/src/components/home/Coaches.astro|18|ef717b23065863d3663d4193002191bc1c2ae2231423bb867c04a6580942e695|dagestan|D20
+site/src/components/shell/SiteFooter.astro|19|2fe193cbc498254cf580e8e32458e9a3427ea502989ef26eb13967a89e9b0d61|olympi, state champion|D10
+# dist_sha256 (hash of the same <p> inner content in dist/index.html at DS-0; raw bytes; text equals source with whitespace collapsed)
+dist_sha256|site/src/components/home/Testimonials.astro|21|a36ba4526ad4cd5c6ee6bebbe6ae154323920dc4fe6922ba37fe195fb83be8d9
+dist_sha256|site/src/components/home/Testimonials.astro|32|02358decfb5198d8e3348f59df6185bb8ccacd2e5e3d69095ee7d0f38f8c9cd6
+dist_sha256|site/src/components/home/Coaches.astro|18|4762b83dc6c741b99cf252d8daa107389418aa15a1db460e22075cfeaa05d076
+dist_sha256|site/src/components/shell/SiteFooter.astro|12|06cf0bfe5abd20c8335c09cb7a0d5c6e8ac2d92b93afb7f16d6424b33fdc31dd
+# Plan 6.4 initial entries added in DS-9 (Safety claims D9, Schedule note D1). Source hash and dist hash are equal.
+site/src/components/home/Safety.astro|17|689de600d729abe9c0f9703ab542edb12658ab49838f9b16992eb12f2ef38cb0|3,000 sq|D9
+site/src/components/home/Safety.astro|19|8eba1628a91d712c85f510b4d707dd917fff6703414ae087fbc50b331717d0e8|cross-linked|D9
+site/src/components/home/Safety.astro|27|e0a2b983e7510071f1d8bf1f1ac1b77e5e4d6633ac096767157160c38c07d3f8|wi-fi|D9
+site/src/components/home/Schedule.astro|53|077cc1565ef9c456553f92a7bb7bd576dd077514c082f66b5118f3a308268ca2|Sat/Mon-Fri prose|D1
+dist_sha256|site/src/components/home/Safety.astro|17|689de600d729abe9c0f9703ab542edb12658ab49838f9b16992eb12f2ef38cb0
+dist_sha256|site/src/components/home/Safety.astro|19|8eba1628a91d712c85f510b4d707dd917fff6703414ae087fbc50b331717d0e8
+dist_sha256|site/src/components/home/Safety.astro|27|e0a2b983e7510071f1d8bf1f1ac1b77e5e4d6633ac096767157160c38c07d3f8
+dist_sha256|site/src/components/home/Schedule.astro|53|077cc1565ef9c456553f92a7bb7bd576dd077514c082f66b5118f3a308268ca2
+dist_sha256|site/src/components/home/Safety.astro|19|c9c63a18f3db3ecd345363bd79b03102762a13de6c615ba6a98bbb22ccf6bb7a
+dist_sha256|site/src/components/home/Safety.astro|27|55107de5106026982af51d5dc01f560e947c89923adc2b3173effa1c79dc6aeb
+# D22 (owner, 2026-11-06): the Rashad credentials from d78a5da are restored; D21 is superseded for these lines.
+site/src/components/home/Coaches.astro|60|dbba5ead403000fbb80d50a3692efff75068f5aa3a379f8c6d6fd2265de26d44|medalist|D22
+site/src/components/home/Coaches.astro|66|fcf9d6159caf9016f145846fe79e3fef8b0327c6b7d85febd98b32286caa94f5|medalist|D22
+dist_sha256|site/src/components/home/Coaches.astro|57|c5e4c372f2373e28ddcd44b084cb600bcbb4415c83f4e52562510fc184d029c5
+# Phase 3 interior pages. Each entry is tied to a decision; no wildcards.
+site/src/components/pages/unlocks/EventsBoard.astro|24|0855b35b807aa6fa5777b64d48662acf7288b01cda78bff27c211a255e5532ca|state champion|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|49|f31f436ac40efc77b8f77c3b8dd797e9c32666972115bb1f87240717c2e9902f|—|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|97|51874bfcc2bce4e718420abc50158b0600502d8ebbde40ea056dc23b8681682d|—|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|181|89f2a9f3d5401f93edc50388672e3d240edeef9351b07d63aa46852b89219628|—|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|187|407276294d1c0985d9e5888806a730a86e52543744ca1d7dcf34adf1e909f29a|—|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|229|f2e3255bbdadade25b7107e94261ccaa19b1a70e4199d76c31a64ac51abce0f0|—|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|247|f8b270c9951dfe4fa5c4b39c3a593bad95c5d556121f651156348115bc9ead9c|—|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|194|73fadf0af064f818d142a2d1f107df41f5e424561e835581d399e66578485b7c|state champion|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|200|73fadf0af064f818d142a2d1f107df41f5e424561e835581d399e66578485b7c|state champion|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|212|73fadf0af064f818d142a2d1f107df41f5e424561e835581d399e66578485b7c|state champion|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|218|73fadf0af064f818d142a2d1f107df41f5e424561e835581d399e66578485b7c|state champion|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|230|73fadf0af064f818d142a2d1f107df41f5e424561e835581d399e66578485b7c|state champion|D6 events verbatim
+site/src/components/pages/unlocks/events-data.ts|241|5a3ea66b27420ae116837587419d7e134ecb1b9782f1e9806c503cbff4d50f5f|qualifier|D6 events verbatim
+site/src/components/pages/about/CoFounder.astro|7|caf882e8bed1ad3f828035637ce1958f5f42aae10ef0392f1e2f3bbc88d53075|1980|D22
+site/src/components/pages/reviews/PlatformCards.astro|24|35b865c18fa72d6f82d9f4cc1532724e821484c1c69ea74b7bde0a57f38a3f9c|100% rec|D13
+site/src/components/pages/reviews/ReviewsHero.astro|17|79b0e48cdc9157337fd9331edcc4b42ca60ed7609edc3b4c7a4d0dd1879c94bf|42+|D13
+dist_sha256|site/src/components/pages/about/CoFounder.astro|2|82bcf77e402ad0c31d6b15eec372d15d82712283de7131831fac2dbb67d99713
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|bb6e9ef177f537e41ee6b42210bc33a98cd772549a808cde25e8ecf37974c6f0
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|577a93703abe0e8dd48b996a00e467d85eca209d0f89b248e13ff6d928e3fbae
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|6212b2028649005cbed5d09f8cb1c1c66ded8e27c8df68ab1cfefd4a404dbc9a
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|518a9c4bbf84f13775aa332d9b80c6871b72f6bbbc07b0c97a1670e77d94e1c4
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|0760cbce6c760b4c6404724a7e09a0b0aa7f41675936056a95f175c05dd0ecf1
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|e8d3748be43a99af7ffc78494953c9b9caec8ea47fbe5bb17d0ab30157bcef07
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|0855b35b807aa6fa5777b64d48662acf7288b01cda78bff27c211a255e5532ca
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|cb784c49d13134d925dce31c45589c4bfbbb0e93a068130487e821428bcfcbb0
+dist_sha256|site/src/components/pages/unlocks/EventsBoard.astro|3|3a4afbb22264a3f194526ac9e8015d770586d5bfe8481ac997812a17d35a52c7
+dist_sha256|site/src/components/pages/reviews/ReviewsHero.astro|2|79b0e48cdc9157337fd9331edcc4b42ca60ed7609edc3b4c7a4d0dd1879c94bf
+dist_sha256|site/src/components/pages/reviews/ReviewsHero.astro|2|35b865c18fa72d6f82d9f4cc1532724e821484c1c69ea74b7bde0a57f38a3f9c
+# D24 (owner): Karim bio restored as in d78a5da. D26 (owner): review stats confirmed from the Google Business Profile (D13 resolved).
+site/src/components/home/Coaches.astro|29|767fb7e617851554a127025a2e7896e46d38989dc169bb34d396132c80a7304b|medalist, aliyev, makhachkala, dagestan|D24
+site/src/pages/reviews.astro|10|a3ee8b423b2fcc5b0a21b0f2283c50929ea02d7fdc247765bcd0ed76022eeb6d|42+|D26
+dist_sha256|site/src/components/home/Coaches.astro|29|bb9b3df190ff0afffed6eda32bab375b0caad9796f6f2deb7fca73d377abeabc
+dist_sha256|site/src/pages/reviews.astro|10|6e1dcd6f1e092c9dfde461bb68cf8e5051f7b9c756bdd98590acb0cfa8ab6dbe
+# 2026-11-06 owner decision: Karim's Aliyev medal is bronze (copy updated in Coaches.astro; source element now line 29).
+dist_sha256|site/src/components/home/Coaches.astro|29|d96580c784022a55dc4930abfebe0b4fe2b94a983d81ad5357947ecf773423c2
+site/src/components/home/Coaches.astro|28|ae34d58683a826dd485caf4982d21a9a747f669413291e39c44e9a667e2f2ec5|dagestan|owner decision 2026-11-06: Aliyev medal is bronze

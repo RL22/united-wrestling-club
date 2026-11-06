@@ -1,0 +1,11 @@
+---
+// F1 media release notice, checked by default (D16, KB-23). Exact wording from the trial modal.
+interface Props { idPrefix?: string }
+const { idPrefix = 'v01' } = Astro.props;
+---
+<div class="tcpa-consent-box">
+  <label class="tcpa-checkbox-label" for={`${idPrefix}-media-release`}>
+    <input type="checkbox" id={`${idPrefix}-media-release`} name="media_release" value="yes" checked>
+    <span><strong>Media &amp; content notice.</strong> UWC films and photographs classes, open mats, and events for coaching and promotion on our website and social channels. Included by default. Uncheck to opt out.</span>
+  </label>
+</div>

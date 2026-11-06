@@ -31,4 +31,7 @@ Earlier drafts and prototype copy mistakenly referenced "5,000 SQ FT" for the ma
 - `v04/index.html`
 - `v03/index.html`
 - `PRODUCT.md`
-- `discovery/alameda_county_local_footprint.md`
+- `discovery/market/alameda_county_local_footprint.md`
+
+## Correction (2026-11-05)
+Karim Zemaryalai boycotted the 1980 Moscow Games (client). Public copy that says "1980 Moscow Olympian" or "Moscow Olympic qualifier" is under review. Use only wording Karim confirms. Rashad's "1980 Olympic qualifier" and "competed alongside Karim" need the same check.

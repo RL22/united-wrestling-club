@@ -1,0 +1,31 @@
+---
+import ClassPage from '../../components/pages/classes-wrestling/ClassPage.astro';
+import { facts } from '../../data/facts';
+---
+<ClassPage
+  title="Competition Youth Wrestling in Hayward, CA | United Wrestling Club"
+  description="Competition youth wrestling at United Wrestling Club in Hayward, CA. Advanced technique, conditioning, and match preparation. Try three practices for $15."
+  path="/classes/youth-wrestling/"
+  eyebrow="Competition Youth (Pre K - 12th)"
+  heading="Competition Youth Wrestling"
+  lead="A dynamic, intensive program for high school and middle school students aged 12 to 18. Beginners learn the basics and experienced wrestlers sharpen their skills for competition."
+  facts={[
+    { label: 'Class', value: 'Competition Youth (Pre K - 12th)' },
+    { label: facts.programs.varsity.name, value: facts.programs.varsity.ages },
+  ]}
+  sections={[
+    { title: 'Advanced Techniques', body: 'Coaches lead a curriculum covering takedowns, escapes, reversals, pinning combinations, and defensive strategies. Rigorous drilling and live wrestling build the confidence to execute in real matches.' },
+    { title: 'Competition Preparation', body: 'High-paced practices simulate match conditions and emphasize speed, agility, and endurance, so students are ready to perform on the mat.' },
+    { title: 'Strength and Conditioning', body: 'Structured strength training, agility drills, and cardio build the strength, speed, and endurance wrestling demands.' },
+    { title: 'Mental Toughness', body: 'Coaches guide students in building resilience and focus, handling pressure, and keeping composure during competition.' },
+    { title: 'Strategy and Tactics', body: 'Students learn match strategy, positioning, and tactics for scoring points and controlling the pace of a match, and how to adapt to different opponents.' },
+    { title: 'Goal Setting and Progress Tracking', body: 'We set individual goals with each student and track progress through the season, with feedback and support along the way.' },
+  ]}
+  prices={[
+    { label: 'Competition Youth (Pre K - 12th)', value: '$150.00 per month' },
+    { label: 'Middle School / High School', value: '$139.99 per month' },
+  ]}
+  coachNames={['Naweed Zemaryalai', 'Sandeep Singh Gosal']}
+  schedule={{ tag: 'competition' }}
+  trialProgram="varsity"
+/>

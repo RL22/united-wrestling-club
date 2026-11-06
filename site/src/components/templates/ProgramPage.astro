@@ -1,0 +1,34 @@
+---
+// Layout for every /classes/* page: hero, short description, facts, class times, one trial call to action.
+import InteriorLayout from '../../layouts/InteriorLayout.astro';
+import PageHero from '../ui/PageHero.astro';
+import Button from '../ui/Button.astro';
+import ScheduleList from '../ui/ScheduleList.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  eyebrow?: string;
+  heading: string;
+  headingBrand?: string;
+  lead?: string;
+  /** Schedule filter: homepage tab id and/or class tag from data/schedule.ts. */
+  schedule?: { program?: string; tag?: string };
+  trialProgram?: 'youth' | 'varsity' | 'adult' | 'openmat';
+  ctaLabel?: string;
+}
+const { title, description, path, eyebrow, heading, headingBrand, lead, schedule, trialProgram, ctaLabel = 'Try three practices for $15' } = Astro.props;
+const hasAfter = Astro.slots.has('after-schedule'); // a page that fills the slot (for example a form) replaces the default CTA button
+---
+<InteriorLayout title={title} description={description} path={path} current="classes">
+  <PageHero eyebrow={eyebrow} title={heading} titleBrand={headingBrand} lead={lead} compact />
+  <section class="section-block">
+    <div class="container">
+      <slot />
+      {schedule && <ScheduleList program={schedule.program} tag={schedule.tag} />}
+      <slot name="after-schedule" />
+      {!hasAfter && <p><Button trial program={trialProgram}>{ctaLabel}</Button></p>}
+    </div>
+  </section>
+</InteriorLayout>

@@ -1,0 +1,23 @@
+---
+// Club rules, verbatim from discovery/archive/legacy-site/live_site_content/rules.md (D7 pending owner unlock).
+const rules = [
+  ['Respect', 'All members are expected to treat each other coaches and staff with respect at all times. This includes using appropriate language avoiding disruptive behavior and showing courtesy towards fellow members.'],
+  ['Safety First', 'Safety is our top priority. Participants must adhere to all safety guidelines and instructions provided by coaches and staff. This includes wearing appropriate protective gear during training sessions and following proper technique to minimize the risk of injury.'],
+  ['Commitment to Training', 'Members are encouraged to attend training sessions regularly and commit to their personal development as athletes. Consistent attendance and effort are essential for progress and improvement in wrestling skills.'],
+  ['Cleanliness and Hygiene', 'All members are responsible for maintaining cleanliness and hygiene within the club premises. This includes keeping training areas tidy, properly storing personal belongings and adhering to personal hygiene practices such as showering before and after training.'],
+  ['Equipment Care', 'Participants must respect club equipment and facilities by using them appropriately and avoiding any intentional damage. Any issues with equipment should be reported to club staff promptly.'],
+  ['Sportsmanship', 'Good sportsmanship is expected from all members both on and off the mat. This includes displaying honesty, integrity and fair play during training sessions, competitions and interactions with teammates and opponents.'],
+  ['Discipline and Focus', 'Wrestling requires discipline and focus. Members are encouraged to maintain concentration during training sessions, follow instructions from coaches and stay engaged in learning and improving their skills.'],
+  ['Confidentiality', 'Members should respect the privacy and confidentiality of fellow teammates and coaches. Personal information shared within the club should be kept confidential and not disclosed to outsiders without consent.'],
+  ['Positive Attitude', 'A positive attitude contributes to a supportive and encouraging training environment. Members are encouraged to approach training sessions with enthusiasm, positivity and a willingness to learn from both successes and challenges.'],
+  ['Club Policies', 'All members are expected to familiarize themselves with and adhere to club policies including membership dues scheduling and any additional rules or guidelines specific to United Wrestling Club.'],
+];
+---
+<ol class="uwc-rules">
+  {rules.map(([name, text]) => <li><strong>{name}:</strong> {text}</li>)}
+</ol>
+<style>
+  .uwc-rules { max-width: 760px; margin: 0 auto; padding-left: 1.5rem; display: grid; gap: 1rem; line-height: 1.6; }
+  .uwc-rules li::marker { color: var(--color-brand, currentColor); font-weight: 700; }
+  .uwc-rules strong { color: var(--color-text-primary, inherit); }
+</style>

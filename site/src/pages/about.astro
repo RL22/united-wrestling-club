@@ -1,0 +1,24 @@
+---
+import InteriorLayout from '../layouts/InteriorLayout.astro';
+import PageHero from '../components/ui/PageHero.astro';
+import Button from '../components/ui/Button.astro';
+import Creed from '../components/pages/about/Creed.astro';
+import CoFounder from '../components/pages/about/CoFounder.astro';
+---
+<InteriorLayout
+  title="About United Wrestling Club | Hayward, CA"
+  description="The standards and coaching behind United Wrestling Club in Hayward, CA. USA Wrestling Regional Training Center #513."
+  path="/about/"
+  cta={false}
+>
+  <PageHero id="about-heading" compact eyebrow="About the club" title="Our standards." titleBrand="Built in Hayward." lead="The standards behind every practice at United Wrestling Club, and the people who hold them." />
+  <Creed />
+  <CoFounder />
+  <section class="section-block" aria-labelledby="about-next">
+    <div class="container">
+      <h2 class="section-title" id="about-next">See the classes</h2>
+      <p class="section-lead">Youth, varsity, adult, and Saturday open mat, with times on the homepage.</p>
+      <p><Button variant="outline" href="/#programs">Classes and times &rarr;</Button></p>
+    </div>
+  </section>
+</InteriorLayout>

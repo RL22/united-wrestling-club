@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Canonical path, for example "/" or "/classes/". */
+  path?: string;
+  /** One JSON-LD object, or an array of them. */
+  jsonLd?: object | object[];
+  noindex?: boolean;
+}
+
+const {
+  title = 'United Wrestling Club | Youth & Adult Wrestling in Hayward, CA',
+  description = 'Youth and adult wrestling in Hayward, CA. Founded by Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology). Try three practices for $15.',
+  path,
+  jsonLd,
+  noindex = false,
+} = Astro.props;
+
+const canonical = path ? new URL(path, Astro.site ?? 'https://www.unitedwrestlingclub.com').href : undefined;
+const ldList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  {noindex && <meta name="robots" content="noindex, follow">}
+  {canonical && <link rel="canonical" href={canonical}>}
+
+  <!-- Favicon / Fonts -->
+  <link rel="icon" type="image/png" href="/live_site_content/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data -->
+  {ldList.map((ld) => <script is:inline type="application/ld+json" set:html={JSON.stringify(ld)} />)}
+</head>
+<body>
+  <slot />
+</body>
+</html>
