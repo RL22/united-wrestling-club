@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/archive/snapshots/live_site_content/assets/schedule_grid_reference.png", "discovery/archive/snapshots/live_site_content/schedule.json"]
 ---
 
 # Live Site Content: Class Schedule (`/schedule`)

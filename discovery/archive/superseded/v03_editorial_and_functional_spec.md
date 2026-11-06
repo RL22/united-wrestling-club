@@ -1,6 +1,12 @@
 ---
+type: spec
 status: superseded
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-01
+last_reviewed: 2026-11-01
+sources: ["https://schema.org", "https://unitedwrestlingclub.com/#club", "https://unitedwrestlingclub.com", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513", "https://www.wrestlingiq.com/uwc/register", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&show_registration=true&team_id=513", "https://unitedwrestlingclub.com/#faq", "v03/index.html", "discovery/decisions/ADR-20261106-astro-design-system.md", "live_site_content/assets/co-founder.jpg", "video_assets/stills_selected/still_41_naweed_youth_wrestling_academy_squad.jpg", "video_assets/stills_selected/still_38_coach_steve_siroy_chabot_pedigree.jpg", "video_assets/stills_selected/still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.jpg"]
+replaced_by: "decisions/ADR-20261106-astro-design-system.md"
 ---
 
 # United Wrestling Club (v03) — Editorial & Functional Specification

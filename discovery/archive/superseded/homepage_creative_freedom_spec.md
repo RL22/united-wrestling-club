@@ -1,6 +1,12 @@
 ---
+type: spec
 status: superseded
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/decisions/ADR-20261106-astro-design-system.md", "discovery/archive/superseded/homepage_creative_freedom.html", "discovery/brand/moodboards/screenshots/homepage_creative_freedom.png", "discovery/brand/moodboards/screenshots/homepage_creative_freedom_full.png", "discovery/brand/moodboards/screenshots/homepage_creative_freedom_mobile_390.png", "discovery/brand/moodboards/screenshots/homepage_creative_freedom_mobile_375.png"]
+replaced_by: "decisions/ADR-20261106-astro-design-system.md"
 ---
 
 # United Wrestling Club: Creative Freedom Redesign ("The Olympic Mat Sanctuary")

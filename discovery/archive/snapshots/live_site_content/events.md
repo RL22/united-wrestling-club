@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://trackwrestling.com/registration/TW_Register.jsp?tournamentGroupId=289571132", "https://www.usawmembership.com/", "https://www.scwaywrestling.org/sign-up"]
 ---
 
 # Live Site Content: Events & Competition Schedule (`/events`)

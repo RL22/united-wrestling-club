@@ -1,6 +1,12 @@
 ---
+type: spec
 status: superseded
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/decisions/ADR-20261106-astro-design-system.md", "v04/index.html", "discovery/archive/superseded/minimal_context_brief.md", "video_assets/stills_selected/still_06_dummy_takedown_drill.jpg", "live_site_content/assets/logo.png", "unsplash-grunge-001.jpg", "video_assets/stills_selected/still_07_youth_single_elevation.jpg", "video_assets/stills_selected/still_03_varsity_stance_focus.jpg", "video_assets/stills_selected/still_16_naweed_adult_collar_tie.jpg", "video_assets/stills_selected/still_01_olympic_flag.jpg", "video_assets/stills_selected/still_05_coach_naweed_profile.jpg", "video_assets/stills_selected/still_20_champions_family_outro.jpg", "discovery/archive/snapshots/live_site_icons.json"]
+replaced_by: "decisions/ADR-20261106-astro-design-system.md"
 ---
 
 # Opus (Claude Opus 5.5) Homepage Redesign Prompt

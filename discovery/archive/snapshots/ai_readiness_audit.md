@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Sprintz Local Growth Pipeline"
+date: 2026-10-29
+last_reviewed: 2026-10-29
+sources: ["discovery/decisions/ADR-20261106-astro-design-system.md"]
 ---
 
 # AI Readiness & Growth Audit: United Wrestling Club

@@ -1,6 +1,12 @@
 ---
+type: spec
 status: superseded
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513", "https://www.wrestlingiq.com/uwc/register", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&amp;show_registration=true&amp;team_id=513", "discovery/decisions/ADR-20261106-astro-design-system.md", "v03/index.html"]
+replaced_by: "decisions/ADR-20261106-astro-design-system.md"
 ---
 
 # United Wrestling Club Concept 03 (v03) Visual & Layout Enhancements Specification

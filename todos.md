@@ -1,5 +1,8 @@
 # United Wrestling Club: Engineering & Growth Backlog (`todos.md`)
 
+> **Note (2026-11-06):** the legacy root pages, concept folders, and the old Next.js snapshot now live in `discovery/archive/legacy-site/`. Paths in closed items below point to where they were.
+
+
 > **Last updated:** 2026-11-05
 > **Status:** The Astro site in `site/` (22 built pages) is live on Vercel production (https://united-wrestling-club.vercel.app, deployed 2026-11-05 from `site/dist/`). Four Formspree endpoints are wired. GitHub Pages is off (public repo made private 2026-11-05). Custom domain cutover is still pending.
 > **Target milestone:** Pre-launch QA, then publish and launch.
@@ -26,7 +29,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [x] README rewritten for the Astro site: routes, run, publish, and verification steps (2026-11-05)
 - [x] Astro build gates: `scripts/check_dist.py --final` (22 pages, 765 references, 0 problems) and `scripts/copy_audit.sh site/dist` (0 violations), 2026-11-05
 - [x] Astro site deployed to Vercel production from `site/dist/` (2026-11-05; ADR-20261106 addendum). Routes `/`, `/reviews/`, `/register/`, `/contact/`, `/about/`, `/classes/`, `/pricing/`, `robots.txt`, and `sitemap.xml` return 200. `/assets/img/gbp/` returns 404.
-- [x] Legacy root pages still pass `scripts/check_site.py` (not deployed)
+- [x] Legacy root pages still pass `scripts/check_site.py` (retired; the legacy checker now lives in `discovery/archive/legacy-site/scripts/`)
 - [x] Depth section (parallax cutouts over "CHAMPIONS") removed from the homepage, with its CSS and scroll script (2026-11-05, owner decision). The three `video_assets/cutouts/naweed-*.webp` files are now unused.
 
 ---
@@ -184,7 +187,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Acceptance Criteria:** Sitemap built and live (`/sitemap.xml` returns 200; it lists built routes only). Still to do: submit to Google and Bing, and expand as routes are built. The sitemap uses the `www.unitedwrestlingclub.com` host, so submit only after the domain cutover.
 - [x] **Shared shell in one place** (Astro)
   - **Resolution:** Top bar, nav, footer, trial modal, and page scripts are shared Astro components (`site/src/components/shell/`, `site/src/layouts/InteriorLayout.astro`). Remaining: the legacy root pages still copy the shell by hand. Archive them to close the item fully (see the next item).
-- [ ] **Archive the legacy root pages**
+- [x] **Archive the legacy root pages** (moved to `discovery/archive/legacy-site/`)
   - **Target:** `v01/`, `reviews/`, `register/`, `contact/`, `about/`, `submit-review/`, `assets/css/uwc.css`, `assets/js/uwc-attribution.js`, root `assets/`, `live_site_content/`, `video_assets/`, `unsplash-grunge-001.jpg`
   - **Acceptance Criteria:** Owner signs off the Astro site as final. Each legacy folder moves to `discovery/archive/` (not published), `scripts/check_site.py` is retired with it, and the README legacy section is removed. Confirm the Astro build still passes `check_dist.py --final` afterwards.
 - [ ] **Design debt in the stylesheet**
@@ -214,7 +217,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** `discovery/decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md`
   - **Acceptance Criteria:** SMS and email copy for existing 3+ month members, approved, before the holiday window.
 - [ ] **Former Pep Boys facility (30085 Industrial Pkwy SW)**
-  - **Target:** `discovery/client/call_notes_naweed_20261102_uwc.md`, `portal/index.html`
+  - **Target:** `discovery/client/2026-11-02_naweed_discovery-call.md`, `portal/index.html`
   - **Status:** Unconfirmed. Naweed and the city have not reached the property owner.
   - **Acceptance Criteria:** Follow up with Naweed in January 2027. Do not change the Hayward GBP (`30139 Industrial Pkwy SW`) until the lease or acquisition is confirmed.
 - [ ] **Evaluate the WrestlingIQ CLI (`wiq-cli`) for ops reporting**

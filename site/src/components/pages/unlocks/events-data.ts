@@ -1,4 +1,4 @@
-// Events copied exactly from live_site_content/events.md section 3. Do not edit text; status labels are as sourced.
+// Events copied exactly from discovery/archive/legacy-site/live_site_content/events.md section 3. Do not edit text; status labels are as sourced.
 export type UwcEvent = { n: number; date: string; name: string; status: string };
 export const events: UwcEvent[] = [
   {

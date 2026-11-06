@@ -1,4 +1,4 @@
-// The 10 FAQ items, verbatim from live_site_content/faqs.md (owner confirmed). Whitespace only is collapsed.
+// The 10 FAQ items, verbatim from discovery/archive/legacy-site/live_site_content/faqs.md (owner confirmed). Whitespace only is collapsed.
 import type { Faq } from '../../../data/faqs';
 
 export const faqItems: Faq[] = [

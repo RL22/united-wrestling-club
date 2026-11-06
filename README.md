@@ -14,7 +14,7 @@
 
 United Wrestling Club is Northern California's Olympic and Folkstyle wrestling academy. It was founded by Karim Zemaryalai, a Dagestani tournament medalist. The 1980 Olympic wording is pending Karim's confirmation (the US boycotted the 1980 Moscow Games). Head Coach Naweed Zemaryalai runs the program.
 
-This repository is the **internal working repo**. It holds the Astro site in `site/`, the legacy static pages from before the rebuild, discovery research, call notes, marketing plans, the portal, and ADRs. Only the built site is published. See Section 6.
+This repository is the **internal working repo**. It holds the Astro site in `site/`, the archived pre-rebuild pages (`discovery/archive/legacy-site/`), discovery research, call notes, marketing plans, and ADRs. Only the built site is published. See Section 6.
 
 ---
 
@@ -42,9 +42,8 @@ Shared pieces:
 - **Forms:** one Formspree endpoint per form (trial, contact, newsletter, review). Endpoints live in `site/public/assets/js/uwc-attribution.js` and in the trial form's `action` (ADR-20261105-forms-per-form-endpoints).
 - **Routes not built:** `site/src/data/routes.ts` lists each omitted route with the owner decision it waits on. The 32-route sitemap is in `discovery/site/website_rebuild_spec.md` and `discovery/site/forms_map_full_sitemap.md`.
 
-**Legacy root pages (not deployed):** `v01/`, `reviews/`, `register/`, `contact/`, `about/`, `submit-review/`, and the root `assets/css/uwc.css`. They are the pre-rebuild static site. Keep them only as reference until the Astro site is final, then archive them under `discovery/`.
+**Legacy pages (archived):** the pre-rebuild static pages, concept folders (v01 to v04), the old Next.js snapshot, and the legacy checker moved to `discovery/archive/legacy-site/`. None are deployed. Vercel serves only the Astro build in `site/dist/`.
 
-Concept folders kept for reference, not part of the site: `v02/`, `v03/`, `v04/`. The root `index.html` is the internal executive pitch deck. It is not the public homepage.
 
 ---
 
@@ -63,7 +62,7 @@ Concept folders kept for reference, not part of the site: `v02/`, `v03/`, `v04/`
 
 ## 4. Decision Records
 
-Index: [`discovery/decisions/INDEX.md`](discovery/decisions/INDEX.md) (also reachable as `docs/adr/`).
+Index: [`discovery/decisions/INDEX.md`](discovery/decisions/INDEX.md) (the `docs/adr/` symlink was removed on 2026-11-06).
 
 - [ADR-20261102-concept-consolidation](discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md): concepts consolidated, V04 as flagship.
 - [ADR-20261102-facility-coaching-invariants](discovery/decisions/ADR-20261102-facility-and-coaching-invariants.md): facility and coaching facts.
@@ -101,23 +100,15 @@ Design spec: [`DESIGN.md`](DESIGN.md) (section 13 covers the Astro system). Prod
 ├── scripts/
 │   ├── check_dist.py             # Gate: built site links, CSS url(), route status
 │   ├── copy_audit.py / .sh       # Gate: copy rules (allowlist: copy_audit_allow.txt)
-│   └── check_site.py             # Legacy check for the root static pages
-├── discovery/                    # Client research, audits, call notes (internal only)
+├── discovery/                    # Client research, ledger, decisions (internal only)
 │   ├── decisions/                # ADRs and INDEX.md
-│   ├── forms_map_full_sitemap.md
-│   └── website_rebuild_spec.md
-├── assets/ live_site_content/ video_assets/ unsplash-grunge-001.jpg
-│                                 # Legacy root media for the old static pages
-├── v01/ reviews/ register/ contact/ about/ submit-review/
-│                                 # Legacy root static pages (not deployed)
-├── marketing-plan/               # Marketing plan and playbooks (internal only)
-├── portal/                       # Executive portal (internal only)
-├── v02/ v03/ v04/                # Concept folders (reference only)
-├── index.html                    # Internal executive pitch deck (not published)
+│   ├── ledger/                   # Claim ledger, topic router, owner decisions
+│   └── archive/legacy-site/      # Archived pre-rebuild pages, concept folders, old snapshot
+├── video_assets/                 # Source masters for media (not the shipped set; site/public has that)
 ├── DESIGN.md                     # Design spec
 ├── PRODUCT.md                    # Product context
 ├── todos.md                      # Ranked backlog
-└── docs/adr                      # Symlink to discovery/decisions
+└── (archived internal folders: discovery/archive/legacy-site/marketing-plan, portal)
 ```
 
 ---
@@ -167,7 +158,7 @@ done
 
 Do not add `assets/img/gbp/` to the output. Those photos are not cleared for publication. Program card photos of minors (`video_assets/cards/program-youth.jpg`, `program-varsity.jpg`) are live in production; see `todos.md`.
 
-Nothing in `discovery/`, `marketing-plan/`, `portal/`, or the concept folders is published.
+Nothing in `discovery/` or `discovery/archive/legacy-site/` is published.
 
 ---
 
@@ -183,8 +174,6 @@ python3 scripts/check_dist.py --final
 # Copy rules on the built site (0 violations expected)
 bash scripts/copy_audit.sh site/dist
 
-# Legacy root pages (not deployed; kept until archived)
-python3 scripts/check_site.py
 
 # Git state: only intentional changes
 git status --porcelain

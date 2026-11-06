@@ -1,10 +1,10 @@
 # DESIGN.md: United Wrestling Club
 
-Design system for the UWC homepage (`v01/index.html`) and the pages it links to.
+Design system for the UWC homepage (archived pre-rebuild page `discovery/archive/legacy-site/v01/index.html`) and the pages it linked to.
 Register: **brand** (see [PRODUCT.md](PRODUCT.md)).
 
 **Source of truth (static pages):** `assets/css/uwc.css`. **Source of truth (Astro site):** `site/src/styles/`; see section 13.
-The homepage (`v01/index.html`), the reviews page (`reviews/index.html`), and the submit redirect (`submit-review/index.html`) all link this one file.
+The archived pages (`discovery/archive/legacy-site/v01/index.html`, `discovery/archive/legacy-site/reviews/index.html`, `discovery/archive/legacy-site/submit-review/index.html`) all linked this one file. The live site uses `site/src/styles/`.
 Pages do not carry their own `<style>` blocks, and new components go in this file. This file documents it; if the two disagree, the code wins and this file gets fixed.
 
 Status: the homepage and the reviews page use this system. Component class renames and the spacing and breakpoint consolidation are deferred. See section 11.

@@ -1,6 +1,12 @@
 ---
+type: spec
 status: superseded
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/decisions/ADR-20261106-astro-design-system.md", "v03/index.html", "discovery/brand/moodboards/iteration_AC_1_crucible_guild.md", "video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg", "video_assets/stills_selected/still_41_naweed_youth_wrestling_academy_squad.jpg", "video_assets/stills_selected/still_37_naweed_college_airborne_high_single.jpg", "video_assets/stills_selected/still_47_uwc_adult_mat_rounds_wide_banner.jpg", "video_assets/stills_selected/still_46_uwc_live_mat_rounds_gym_community_panorama.jpg", "video_assets/stills_selected/still_35_naweed_father_1980_moscow_olympic_delegation.jpg", "video_assets/stills_selected/still_31_naweed_headshot_united_wall.jpg", "video_assets/stills_selected/still_52_uwc_hoodie_back_print_motto.jpg", "live_site_content/assets/logo.png"]
+replaced_by: "decisions/ADR-20261106-astro-design-system.md"
 ---
 
 # Sol (GPT-6.1-Sol) Homepage Refinement Prompt: Iteration V03

@@ -49,9 +49,9 @@
       ]
     },
     "coaches-lineage": {
-      "claims": 284,
+      "claims": 281,
       "verification": {
-        "unverified": 239,
+        "unverified": 236,
         "superseded": 35,
         "conflicting": 10
       },
@@ -81,12 +81,12 @@
           "claims": 9
         },
         {
-          "source": "strategy/master_discovery_findings.md",
-          "claims": 9
-        },
-        {
           "source": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
           "claims": 8
+        },
+        {
+          "source": "archive/snapshots/live_site_content/about.md",
+          "claims": 7
         }
       ],
       "open_conflicts": [
@@ -180,9 +180,9 @@
       "open_conflicts": []
     },
     "facility": {
-      "claims": 66,
+      "claims": 65,
       "verification": {
-        "unverified": 51,
+        "unverified": 50,
         "superseded": 12,
         "conflicting": 3
       },
@@ -318,9 +318,9 @@
       ]
     },
     "lead-handling": {
-      "claims": 78,
+      "claims": 77,
       "verification": {
-        "unverified": 74,
+        "unverified": 73,
         "superseded": 2,
         "conflicting": 2
       },
@@ -540,9 +540,9 @@
       "open_conflicts": []
     },
     "offers": {
-      "claims": 118,
+      "claims": 117,
       "verification": {
-        "unverified": 104,
+        "unverified": 103,
         "superseded": 11,
         "conflicting": 3
       },
@@ -568,15 +568,15 @@
           "claims": 6
         },
         {
-          "source": "strategy/master_discovery_findings.md",
-          "claims": 6
-        },
-        {
           "source": "strategy/uwc_marketing_plan.md",
           "claims": 6
         },
         {
           "source": "client/naweed_discovery_questions.md",
+          "claims": 5
+        },
+        {
+          "source": "market/competitors/tier2_county_alameda.md",
           "claims": 5
         }
       ],
@@ -719,9 +719,9 @@
       ]
     },
     "pricing": {
-      "claims": 211,
+      "claims": 210,
       "verification": {
-        "unverified": 175,
+        "unverified": 174,
         "conflicting": 7,
         "superseded": 29
       },
@@ -811,9 +811,9 @@
       ]
     },
     "research-meta": {
-      "claims": 51,
+      "claims": 50,
       "verification": {
-        "unverified": 50,
+        "unverified": 49,
         "superseded": 1
       },
       "top_sources": [
@@ -853,9 +853,9 @@
       "open_conflicts": []
     },
     "reviews": {
-      "claims": 75,
+      "claims": 74,
       "verification": {
-        "unverified": 70,
+        "unverified": 69,
         "superseded": 5
       },
       "top_sources": [
@@ -895,10 +895,10 @@
       "open_conflicts": []
     },
     "schedule": {
-      "claims": 63,
+      "claims": 62,
       "verification": {
         "superseded": 12,
-        "unverified": 51
+        "unverified": 50
       },
       "top_sources": [
         {
@@ -1069,9 +1069,9 @@
       ]
     },
     "site-routes": {
-      "claims": 183,
+      "claims": 178,
       "verification": {
-        "unverified": 146,
+        "unverified": 141,
         "conflicting": 2,
         "superseded": 35
       },
@@ -1089,10 +1089,6 @@
           "claims": 10
         },
         {
-          "source": "strategy/master_discovery_findings.md",
-          "claims": 9
-        },
-        {
           "source": "plans/astro-design-system-and-buildout.md",
           "claims": 8
         },
@@ -1107,6 +1103,10 @@
         {
           "source": "strategy/uwc_marketing_plan_research.md",
           "claims": 8
+        },
+        {
+          "source": "strategy/master_discovery_findings.md",
+          "claims": 6
         }
       ],
       "open_conflicts": [

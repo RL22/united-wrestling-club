@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/archive/snapshots/live_site_content/assets", "discovery/archive/snapshots/live_site_content/assets/uwc_crest_logo_highres.png", "discovery/archive/snapshots/live_site_content/assets/logo.png", "discovery/archive/snapshots/live_site_content/assets/founder.jpg", "discovery/archive/snapshots/live_site_content/assets/co-founder.jpg", "discovery/archive/snapshots/live_site_content/assets/head-coach.jpg", "discovery/archive/snapshots/live_site_content/assets/uwc_place.webp", "UWC.mp4", "discovery/archive/snapshots/live_site_content/assets/facebook", "https://www.unitedwrestlingclub.com/", "discovery/decisions/ADR-20261106-astro-design-system.md"]
 ---
 
 # United Wrestling Club: Current Design System & Visual Identity Specification
@@ -132,7 +137,7 @@ All visual assets have been extracted, cataloged, and stored in [`discovery/arch
    * **Head Coach Naweed Zemaryalai:** [`head-coach.jpg`](live_site_content/assets/head-coach.jpg) (Collegiate coaching stance).
 4. **Facility Media:**
    * **Mat Arena Photo:** [`uwc_place.webp`](live_site_content/assets/uwc_place.webp) (Wide interior view of 30139 Industrial Pkwy SW Unit C).
-   * **Hero Background Video:** [`/UWC.mp4`](../../../UWC.mp4) (17.72 MB raw uncompressed video loop; scheduled for 2.2 MB WebM/MP4 compression).
+   * **Hero Background Video:** [`/UWC.mp4`](../legacy-site/UWC.mp4) (17.72 MB raw uncompressed video loop; scheduled for 2.2 MB WebM/MP4 compression).
 5. **Community & Technique Media Vault ([`assets/facebook/`](live_site_content/assets/facebook)):**
    * 10 high-res photos and video stills including clinic action with 2024 Olympic Champion Magomed Ramazanov and Karim Zemaryalai.
 

@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/archive/snapshots/live_site_content/pricing.json", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2664&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=1087&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=4981&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=2286&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=3574&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=1084&show_registration=true&team_id=513", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=9536&show_registration=true&team_id=513", "https://www.wrestlingiq.com/uwc/register"]
 ---
 
 # Live Site Content: Pricing (`/pricing`)

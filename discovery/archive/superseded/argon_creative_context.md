@@ -1,6 +1,12 @@
 ---
+type: spec
 status: superseded
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/decisions/ADR-20261106-astro-design-system.md", "video_assets/stills_selected/still_06_dummy_takedown_drill.jpg", "live_site_content/assets/logo.png", "video_assets/stills_selected/still_05_coach_naweed_profile.jpg", "video_assets/stills_selected/still_07_youth_single_elevation.jpg", "video_assets/stills_selected/still_03_varsity_stance_focus.jpg", "video_assets/stills_selected/still_16_naweed_adult_collar_tie.jpg", "video_assets/stills_selected/still_01_olympic_flag.jpg", "video_assets/stills_selected/still_14_airborne_lateral_drop.jpg", "video_assets/stills_selected/still_10_stance_mural_lines.jpg", "video_assets/stills_selected/still_20_champions_family_outro.jpg", "discovery/archive/snapshots/live_site_icons.json"]
+replaced_by: "decisions/ADR-20261106-astro-design-system.md"
 ---
 
 # United Wrestling Club: Creative Freedom Redesign Brief

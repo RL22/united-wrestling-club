@@ -16,12 +16,8 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Reuse the Tags parser from check_site.py without running its page loop.
-_src = open(os.path.join(ROOT, "scripts", "check_site.py"), encoding="utf-8").read().split("def check_local")[0]
-_ns = {"__file__": os.path.join(ROOT, "scripts", "check_site.py")}
-exec(compile(_src, "check_site.py", "exec"), _ns)
-Tags = _ns["Tags"]
-SKIP = _ns["SKIP_PREFIXES"]
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from html_tags import Tags, SKIP_PREFIXES as SKIP  # noqa: E402
 
 
 class DistTags(Tags):

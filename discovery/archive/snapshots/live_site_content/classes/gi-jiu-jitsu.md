@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: []
 ---
 
 # Live Site Content: Gi Jiu Jitsu (`/classes/gi-jiu-jitsu`)

@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-30
+last_reviewed: 2026-10-30
+sources: ["https://www.unitedwrestlingclub.com/_next/static/chunks/710-a17341216a21773c.js", "https://www.unitedwrestlingclub.com/logo.png", "https://www.unitedwrestlingclub.com", "https://www.wrestlingiq.com/users/sign_up?paid_session_id=9536&show_registration=true&team_id=513", "https://shop.unitedwrestlingclub.com/", "https://instagram.com/uwc_wrestling?igshid=YmMyMTA2M2Y=", "https://instagram.com/uwc_wrestling", "https://www.youtube.com/@UnitedWrestlingClub", "https://www.facebook.com/p/United-Wrestling-Club-61574715497725/", "https://www.tiktok.com/@uwc_wrestling?is_from_webapp=1&sender_device=pc"]
 ---
 
 # Live Site Global Navigation, Footer & Shared Config (`shared_710.js`)

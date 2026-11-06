@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["https://formspree.io/f/xyyavaaj", "https://instagram.com/uwc_wrestling?igshid=YmMyMTA2M2Y=", "https://www.facebook.com/p/United-Wrestling-Club-61574715497725/", "https://www.tiktok.com/@uwc_wrestling?is_from_webapp=1&sender_device=pc", "https://www.youtube.com/@UnitedWrestlingClub"]
 ---
 
 # Live Site Content: Contact (`/contact`)

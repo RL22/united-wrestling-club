@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: audit
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-10-29
+last_reviewed: 2026-10-29
+sources: ["https://www.unitedwrestlingclub.com/", "http://unitedwrestlingclub.com/", "discovery/decisions/ADR-20261106-astro-design-system.md"]
 ---
 
 # Local Organic SEO & OpenSEO Audit: United Wrestling Club

@@ -1,6 +1,11 @@
 ---
-status: snapshot
+type: inventory
+status: archived
 group: archive
+owner: "Rodney Lewis (Sprintz)"
+date: 2026-11-06
+last_reviewed: 2026-11-06
+sources: ["discovery/archive/snapshots/live_site_content/_global_nav_and_footer.md", "discovery/archive/snapshots/live_site_content/index.md", "discovery/archive/snapshots/live_site_content/about.md", "discovery/archive/snapshots/live_site_content/schedule.md", "discovery/archive/snapshots/live_site_content/schedule.json", "discovery/archive/snapshots/live_site_content/pricing.md", "discovery/archive/snapshots/live_site_content/pricing.json", "discovery/archive/snapshots/live_site_content/events.md", "discovery/archive/snapshots/live_site_content/faqs.md", "discovery/archive/snapshots/live_site_content/rules.md", "discovery/archive/snapshots/live_site_content/contact.md", "discovery/archive/snapshots/live_site_content/stubs_classes_donate_register.md", "discovery/archive/snapshots/live_site_content/classes", "discovery/archive/snapshots/live_site_content/assets/uwc_crest_logo_highres.png", "discovery/archive/snapshots/live_site_content/assets/logo.png", "discovery/archive/snapshots/live_site_content/assets/schedule_grid_reference.png", "discovery/archive/snapshots/live_site_content/assets/founder.jpg", "discovery/archive/snapshots/live_site_content/assets/co-founder.jpg", "discovery/archive/snapshots/live_site_content/assets/head-coach.jpg", "discovery/archive/snapshots/live_site_content/assets/uwc_place.webp", "https://www.unitedwrestlingclub.com/_next/static/chunks/pages/*.js", "https://formspree.io/f/xyyavaaj", "discovery/decisions/ADR-20261106-astro-design-system.md"]
 ---
 
 # Live Site Content & Asset Archive (`unitedwrestlingclub.com`)

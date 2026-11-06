@@ -1,4 +1,4 @@
-// Review bodies, verbatim from the reviews/index.html JSON-LD (ADR-20261104-review-content-verbatim). Name and platform only.
+// Review bodies, verbatim from the discovery/archive/legacy-site/reviews/index.html JSON-LD (ADR-20261104-review-content-verbatim). Name and platform only.
 // Do not edit a body here; copy it again from the review itself. These strings contain characters that other copy rules forbid (for example em dashes).
 export type Review = { author: string; platform: string; rating: number; body: string };
 
