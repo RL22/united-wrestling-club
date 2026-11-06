@@ -12,14 +12,13 @@ sources: ["discovery/site/website_rebuild_spec.md", "site/src/data/routes.ts"]
 
 - **As of:** 2026-11-06
 - **Source of truth:** `site/src/data/routes.ts` (every route, its status, and the owner decision that unlocks each omitted one). This page is a readable copy. If the two disagree, `routes.ts` wins.
-- **Scope:** the 32-route sitemap in [`website_rebuild_spec.md`](website_rebuild_spec.md) section 5, plus `/reviews/` (added during the rebuild), `/about/`, and the four machine files. `routes.ts` lists 33 page routes after the `/submit-review/` redirect was removed on 2026-11-06.
+- **Scope:** the 32-route sitemap in [`website_rebuild_spec.md`](website_rebuild_spec.md) section 5, plus `/reviews/` (added during the rebuild), `/about/`, and the four machine files. `routes.ts` lists 33 page routes.
 
 ## TL;DR
 
 - As of 2026-11-06, site/src/data/routes.ts is the source of truth for every route; this page is a readable copy that routes.ts overrides on conflict
 - 21 pages are built, including the homepage, /about/, /reviews/, /register/, and /contact/ (see RC-12)
 - 12 routes are omitted, nothing links to them, and each waits on an owner decision (D4, D6, D11, D12)
-- /submit-review/ was removed on 2026-11-06; the old URL returns 404 on production, and no 301 redirect is configured yet
 - Four homepage review items from 2026-11-05 stay open: the lineage section, the safety section (possible move to /rules/), the decorative depth section, and the four-column footer
 
 ## Built (21 pages)
@@ -50,7 +49,6 @@ sources: ["discovery/site/website_rebuild_spec.md", "site/src/data/routes.ts"]
 
 Machine files, built: `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/llms-full.txt` (group G6).
 
-Removed 2026-11-06: `/submit-review/`, the redirect to `/reviews/#submit-review`. The old URL now returns 404 on production. The marketing plan says it should 301. No redirect is configured yet.
 
 ## Omitted (12 routes)
 

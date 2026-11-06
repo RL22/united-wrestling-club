@@ -110,7 +110,7 @@ Used site-wide in the footer, on `/guides`, and inline on `/guides/*`. **Build.*
 | Email consent | Yes, **unchecked by default** | Explicit consent. Use double opt-in before the first send. |
 
 ### F7. Review submission (`form_name=review`)
-Used on `/reviews`. The `submit-review` redirect was removed on 2026-11-06. **Have** (rebuilt), but not connected to any endpoint. The checkbox "Feature on homepage" promises something the site cannot do yet. **Decide.** See the reviews rebuild notes.
+Used on `/reviews`. **Have** (rebuilt), but not connected to any endpoint. The checkbox "Feature on homepage" promises something the site cannot do yet. **Decide.** See the reviews rebuild notes.
 
 ### F8. Affiliate or coach partner application (`form_name=affiliate`)
 No route in the spec. Plan Q2: $50 per enrollment for local BJJ coaches and trainers. **Decide**: build it as a `/partners` route, or handle it through F2 with the "Affiliate" reason.

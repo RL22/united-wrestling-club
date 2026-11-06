@@ -188,7 +188,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [x] **Shared shell in one place** (Astro)
   - **Resolution:** Top bar, nav, footer, trial modal, and page scripts are shared Astro components (`site/src/components/shell/`, `site/src/layouts/InteriorLayout.astro`). Remaining: the legacy root pages still copy the shell by hand. Archive them to close the item fully (see the next item).
 - [x] **Archive the legacy root pages** (moved to `discovery/archive/legacy-site/`)
-  - **Target:** `v01/`, `reviews/`, `register/`, `contact/`, `about/`, `submit-review/`, `assets/css/uwc.css`, `assets/js/uwc-attribution.js`, root `assets/`, `live_site_content/`, `video_assets/`, `unsplash-grunge-001.jpg`
+  - **Target:** `v01/`, `reviews/`, `register/`, `contact/`, `about/`, `assets/css/uwc.css`, `assets/js/uwc-attribution.js`, root `assets/`, `live_site_content/`, `video_assets/`, `unsplash-grunge-001.jpg`
   - **Acceptance Criteria:** Owner signs off the Astro site as final. Each legacy folder moves to `discovery/archive/` (not published), `scripts/check_site.py` is retired with it, and the README legacy section is removed. Confirm the Astro build still passes `check_dist.py --final` afterwards.
 - [ ] **Design debt in the stylesheet**
   - **Target:** the legacy `assets/css/uwc.css` and `DESIGN.md` section 11. The Astro styles (`site/src/styles/`) follow ADR-20261106 and are checked by `site/scripts/css-homes.mjs`.

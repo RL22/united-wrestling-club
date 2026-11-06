@@ -4,7 +4,7 @@ Design system for the UWC homepage (archived pre-rebuild page `discovery/archive
 Register: **brand** (see [PRODUCT.md](PRODUCT.md)).
 
 **Source of truth (static pages):** `assets/css/uwc.css`. **Source of truth (Astro site):** `site/src/styles/`; see section 13.
-The archived pages (`discovery/archive/legacy-site/v01/index.html`, `discovery/archive/legacy-site/reviews/index.html`, `discovery/archive/legacy-site/submit-review/index.html`) all linked this one file. The live site uses `site/src/styles/`.
+The archived pages (`discovery/archive/legacy-site/v01/index.html`, `discovery/archive/legacy-site/reviews/index.html`) linked this one file. The live site uses `site/src/styles/`.
 Pages do not carry their own `<style>` blocks, and new components go in this file. This file documents it; if the two disagree, the code wins and this file gets fixed.
 
 Status: the homepage and the reviews page use this system. Component class renames and the spacing and breakpoint consolidation are deferred. See section 11.
@@ -201,7 +201,6 @@ The current class names are the standard. Renames are deferred (section 11), so 
 | Photo dropzone | `.dropzone`, `.preview-grid`, `.preview-item` | Dashed border; brand tint on drag-over. |
 | Platform checkbox | `.platform-grid`, `.platform-checkbox` | Border brand-tinted when checked. |
 | Copy dialog | `.modal-overlay` + `.modal-card`, `.modal-check`, `.clipboard-box`, `.clipboard-text` | Same overlay as the trial modal. |
-| Redirect card | `.redirect-card` | Used by the old `submit-review` URL. |
 
 ### Components that look alike and must stay separate
 
@@ -251,7 +250,7 @@ The current class names are the standard. Renames are deferred (section 11), so 
 **Open (needs a decision)**
 1. **Conversion path.** Every conversion trigger (11 total) opens the trial intake form first. PRODUCT.md calls for a one-click modal, so it is kept. Add an in-page explanation above the modal if you want one.
 2. **Coach grid.** Three staff cards sit in a four-column grid above 1024px, which leaves an empty cell. Pick three columns or add a fourth coach.
-3. ~~Reviews and submit-review pages.~~ Done. See "Reviews page rebuild" below.
+3. ~~Reviews page.~~ Done. See "Reviews page rebuild" below.
 4. **Hero video.** It autoplays and loops with no pause control. Add a pause button and respect reduced motion.
 5. **"Pay Drop-In at Door"** opens the 3-day pass intake form. Decide whether it should open a drop-in form.
 6. **Program card links** use `href="#trial"`, which has no target. The JS intercepts them, so they work. Replace with a real anchor if the JS fails.
@@ -272,7 +271,7 @@ The current class names are the standard. Renames are deferred (section 11), so 
 
 ### Reviews page rebuild (Nov 5, 2026)
 
-Removed from the reviews page: Barlow Condensed, Inter, JetBrains Mono, the `--ink`, `--paper`, `--primary`, `--muted`, `--display`, `--body`, `--mono`, `--white`, and `--gold` variables, the page's `<style>` block, and all inline styles. The redirect at `submit-review/` lost its `--ink`/`--paper` palette and system fonts too.
+Removed from the reviews page: Barlow Condensed, Inter, JetBrains Mono, the `--ink`, `--paper`, `--primary`, `--muted`, `--display`, `--body`, `--mono`, `--white`, and `--gold` variables, the page's `<style>` block, and all inline styles.
 
 Rebuilt on the homepage shell (top bar, nav, drawer, CTA banner, footer, trial modal) and the shared components above.
 

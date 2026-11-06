@@ -1069,20 +1069,20 @@
       ]
     },
     "site-routes": {
-      "claims": 178,
+      "claims": 171,
       "verification": {
-        "unverified": 141,
+        "unverified": 134,
         "conflicting": 2,
         "superseded": 35
       },
       "top_sources": [
         {
-          "source": "site/sitemap_status.md",
-          "claims": 15
-        },
-        {
           "source": "site/website_rebuild_spec.md",
           "claims": 13
+        },
+        {
+          "source": "site/sitemap_status.md",
+          "claims": 12
         },
         {
           "source": "archive/snapshots/site_audit.md",
@@ -1094,18 +1094,18 @@
         },
         {
           "source": "site/forms_map_full_sitemap.md",
-          "claims": 8
-        },
-        {
-          "source": "strategy/uwc_marketing_plan.md",
-          "claims": 8
+          "claims": 7
         },
         {
           "source": "strategy/uwc_marketing_plan_research.md",
-          "claims": 8
+          "claims": 7
         },
         {
           "source": "strategy/master_discovery_findings.md",
+          "claims": 6
+        },
+        {
+          "source": "strategy/uwc_marketing_plan.md",
           "claims": 6
         }
       ],
