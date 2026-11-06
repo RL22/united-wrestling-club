@@ -7,7 +7,7 @@
 
 ## 0. Scope and reading
 
-"The remaining 32 pages" means every route in `discovery/site/website_rebuild_spec.md` section 5, plus `/reviews/` (route 33 in `discovery/site/forms_map_full_sitemap.md`). The Astro site must cover the sitemap without depending on the root static pages, so `/`, `/reviews/`, `/register/`, `/contact/`, `/about/` are ported into `site/`. `/submit-review/` stays a redirect page. Machine files (`robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`) are one extra group.
+"The remaining 32 pages" means every route in `discovery/site/website_rebuild_spec.md` section 5, plus `/reviews/` (route 33 in `discovery/site/forms_map_full_sitemap.md`). The Astro site must cover the sitemap without depending on the root static pages, so `/`, `/reviews/`, `/register/`, `/contact/`, `/about/` are ported into `site/`. Machine files (`robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`) are one extra group.
 
 **D0, owner must confirm.** The user asked for all 32 routes. 15 cannot be written honestly from Verified KB facts, or need a form endpoint that does not exist (section 3, OMIT). The default is to **omit** them. They stay in `src/data/routes.ts` as `omitted` with a reason and an unlock decision. The owner confirms D0 before Phase 2, or names routes to build with the facts to support them.
 
@@ -244,7 +244,6 @@ Copy source: **H** homepage component text, **S** static page, **KB** `data/fact
 | 27 | `/guides/` | `guides/index.astro` | OMIT | none | | | D12 | |
 | 28-32 | `/guides/{adult-wrestling-bay-area,youth-wrestling-vs-martial-arts,wrestling-for-bjj-takedowns,high-school-off-season-wrestling,dsal-hayward-wrestling-pathway}/` | `guides/<slug>.astro` | OMIT | none | | | D12; need sources outside the KB | |
 | 33 | `/reviews/` | `reviews.astro` | port | 17 Google (5.10) | F7 | ReviewForm, cards | Unverified stats stripped (5.10, D13) | S, minus stripped strings; bodies from `data/reviews.ts` |
-| R | `/submit-review/` | `submit-review.astro` | redirect | | | Layout | D14 | S |
 
 Totals: **18 built** (1 to 8, 10, 11, 13, 14, 16 to 18, 21, 22, 33), **1 redirect**, **15 omitted**. Omitted routes 404 and nothing links to them.
 
@@ -265,7 +264,7 @@ Each group works in its own git worktree off the Phase 1 merge commit and merges
 Only `ds-lead` writes `site/src/{styles,layouts,data}/**`, `site/src/components/{shell,home,ui,forms,templates}/**`, `site/public/**`, `site/astro.config.mjs`, `site/package.json`, `site/scripts/**`, `scripts/**`, `site/tests/baselines/**` (except G1's port allow files), `.gitignore`, `DESIGN.md`, `discovery/decisions/**`.
 
 `data/routes.ts` statuses:
-- **DS-7** creates it: `/` is `built` (owned by no group); `/submit-review/` is `redirect`; the 15 OMIT routes are `omitted`; the other 17 routes are `planned`, each with its owning group. `planned` is allowed only on a route that a group owns.
+- **DS-7** creates it: `/` is `built` (owned by no group); the 15 OMIT routes are `omitted`; the other 17 routes are `planned`, each with its owning group. `planned` is allowed only on a route that a group owns.
 - **Each group's merge commit** changes only its own routes from `planned` to `built`. That is the only shared-file write a group makes; `ds-lead` reviews the diff and rejects anything else.
 - **Phase 3** requires no `planned` route left.
 
@@ -279,7 +278,7 @@ Naming: group N uses preview port `4340 + N`, static port `8140 + N`, scratch `s
 
 | Group | Routes | Exclusive paths | Components | KB allowed | Model |
 |---|---|---|---|---|---|
-| **G1 Ports** | `/about/`, `/reviews/`, `/register/`, `/contact/`, `/submit-review/` | `site/src/pages/{about,reviews,register,contact,submit-review}.astro`, `site/src/components/pages/{about,reviews,register,contact}/**`, `site/tests/baselines/static/*-allow.json` | InteriorLayout, PageHero, SectionHeader, TrialForm, ContactForm, ReviewForm, Consent*, cards | 01, 02, 03, 05, 06, 07, 10, 13, 16 names, 23; 17 Google on `/reviews/` only | Sonnet |
+| **G1 Ports** | `/about/`, `/reviews/`, `/register/`, `/contact/` | `site/src/pages/{about,reviews,register,contact}.astro`, `site/src/components/pages/{about,reviews,register,contact}/**`, `site/tests/baselines/static/*-allow.json` | InteriorLayout, PageHero, SectionHeader, TrialForm, ContactForm, ReviewForm, Consent*, cards | 01, 02, 03, 05, 06, 07, 10, 13, 16 names, 23; 17 Google on `/reviews/` only | Sonnet |
 | **G2 Classes: hub and wrestling** | `/classes/`, `/classes/kid-wrestling/`, `/classes/youth-wrestling/`, `/classes/adult-wrestling/` | `site/src/pages/classes/{index,kid-wrestling,youth-wrestling,adult-wrestling}.astro`, `site/src/components/pages/classes-wrestling/**` | ProgramPage, ScheduleList, InfoCard, TrialForm, Button | 04, 05, 06, 08, 09, 16 names | Sonnet |
 | **G3 Classes: grappling, boxing, open mat** | `/classes/nogi-jiu-jitsu/`, `/classes/gi-jiu-jitsu/`, `/classes/boxing-fundamentals/`, `/classes/open-mat/` | `site/src/pages/classes/{nogi-jiu-jitsu,gi-jiu-jitsu,boxing-fundamentals,open-mat}.astro`, `site/src/components/pages/classes-adult/**` | ProgramPage, ScheduleList, TrialForm, FactList | 03, 04, 05, 06, 08, 09, 16 (Farid Siddiq) | Sonnet |
 | **G4 Info** | `/schedule/`, `/pricing/`, `/faqs/` | `site/src/pages/{schedule,pricing,faqs}.astro`, `site/src/components/pages/info/**` | ScheduleList, `home/Pricing.astro`, `home/Faq.astro` markup, FactList, TrialForm F1b | 01, 02, 03, 04, 06, 07, 08, 09, 10, 23 | Sonnet |
@@ -406,7 +405,6 @@ Plus: `dist/sitemap.xml` lists exactly the `built` routes; `robots.txt` points t
 | D11 | Verified local facts for city pages | Four city routes | Omit; Hayward only |
 | D12 | Sourced brief and author for guides | Six guide routes | Omit |
 | D13 | `/reviews/`: stripping the 5.10 strings; keeping "5.0 across 42 reviews on Google" (client-confirmed) | None (port proceeds with the strip) | Strip as listed; keep the Google figure |
-| D14 | Keep `/submit-review/` as a redirect | That route | Keep |
 | D15 | Vercel serves `site/dist`; root pages retired | Retirement | After Phase 3 and owner review of a preview |
 | D16 | Media release default | None | Keep checked |
 | D17 | F8 affiliate: route or F2 reason | None | F2 reason |

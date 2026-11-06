@@ -1069,9 +1069,9 @@
       ]
     },
     "site-routes": {
-      "claims": 171,
+      "claims": 166,
       "verification": {
-        "unverified": 134,
+        "unverified": 129,
         "conflicting": 2,
         "superseded": 35
       },
@@ -1089,16 +1089,16 @@
           "claims": 10
         },
         {
-          "source": "plans/astro-design-system-and-buildout.md",
-          "claims": 8
-        },
-        {
           "source": "site/forms_map_full_sitemap.md",
           "claims": 7
         },
         {
           "source": "strategy/uwc_marketing_plan_research.md",
           "claims": 7
+        },
+        {
+          "source": "plans/astro-design-system-and-buildout.md",
+          "claims": 6
         },
         {
           "source": "strategy/master_discovery_findings.md",

@@ -30,4 +30,3 @@ Item 1 amended by ADR-20261106-astro-design-system: Astro section components may
 - `reviews/index.html`
 - `register/index.html`
 - `contact/index.html`
-- `submit-review/index.html`

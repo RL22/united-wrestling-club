@@ -29,7 +29,6 @@ United Wrestling Club has an exceptional reputation in Alameda County (5.0 ★ o
 
 ## Impacted Files
 - `reviews/index.html`
-- `submit-review/index.html`
 - `index.html`
 - `v01/index.html`
 - `v03/index.html`
