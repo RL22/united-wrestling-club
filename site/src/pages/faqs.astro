@@ -1,0 +1,25 @@
+---
+import InteriorLayout from '../layouts/InteriorLayout.astro';
+import PageHero from '../components/ui/PageHero.astro';
+import FaqList from '../components/pages/info/FaqList.astro';
+import { faqItems } from '../components/pages/info/faqItems';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+<InteriorLayout
+  title="FAQs | United Wrestling Club Hayward"
+  description="Answers about ages, experience, gear, membership fees, trial sessions, and competition at United Wrestling Club in Hayward, CA."
+  path="/faqs/"
+  jsonLd={jsonLd}
+>
+  <PageHero eyebrow="COMMON QUESTIONS" title="Frequently Asked" titleBrand="Questions" lead="Find answers to common questions about our wrestling club, programs, and membership. If you don't see your question here, feel free to contact us directly." compact />
+  <section class="section-block">
+    <div class="container">
+      <FaqList items={faqItems} />
+    </div>
+  </section>
+</InteriorLayout>

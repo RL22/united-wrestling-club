@@ -1,0 +1,14 @@
+---
+// Accordion markup that shell/PageScripts and styles/disclosure.css already drive (.faq-item, .faq-question, .faq-answer).
+import type { Faq } from '../../../data/faqs';
+interface Props { items: Faq[] }
+const { items } = Astro.props;
+---
+<div class="faq-container">
+  {items.map((f, i) => (
+    <div class:list={['faq-item', { active: i === 0 }]}>
+      <div class="faq-question"><span>{f.q}</span><span class="faq-toggle">+</span></div>
+      <div class="faq-answer">{f.a}</div>
+    </div>
+  ))}
+</div>

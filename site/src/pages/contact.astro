@@ -1,0 +1,31 @@
+---
+import InteriorLayout from '../layouts/InteriorLayout.astro';
+import PageHero from '../components/ui/PageHero.astro';
+import ContactForm from '../components/forms/ContactForm.astro';
+import ContactDetails from '../components/pages/contact/ContactDetails.astro';
+import ContactScript from '../components/pages/contact/ContactScript.astro';
+---
+<InteriorLayout
+  title="Contact United Wrestling Club | Hayward, CA"
+  description="Contact United Wrestling Club in Hayward, CA. Call (510) 303-4869 or send a message about classes, tuition, clinics, or sponsorship."
+  path="/contact/"
+  cta={false}
+>
+  <PageHero id="contact-heading" compact eyebrow="Contact" title="Talk to the" titleBrand="coaches" lead="Questions about classes, tuition, the schedule, a clinic, or a sponsorship? Send a message or call the front desk." />
+  <section class="section-block" aria-labelledby="contact-form-heading">
+    <div class="container">
+      <div class="register-grid">
+        <ContactDetails />
+        <div class="form-card">
+          <h2 class="section-title" id="contact-form-heading">Send a message</h2>
+          <ContactForm />
+          <div class="form-success" hidden>
+            <h2 class="section-title">Message sent</h2>
+            <p class="section-lead">Thanks. We reply by email or phone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <ContactScript />
+</InteriorLayout>

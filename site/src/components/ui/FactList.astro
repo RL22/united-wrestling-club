@@ -1,0 +1,24 @@
+---
+// The only way a page shows hours (plan 5.6). Values come from data/facts.ts.
+import { facts } from '../../data/facts';
+interface Props { show?: 'hours' | 'address' | 'phone' | 'all'; footnote?: boolean }
+const { show = 'hours', footnote = true } = Astro.props;
+const a = facts.address;
+---
+{(show === 'hours' || show === 'all') && (
+  <div class="fact-list fact-list--hours">
+    {facts.hours.rows.map((r) => (
+      <div><strong>{r.days}:</strong> {r.time}{'note' in r && r.note ? ` (${r.note})` : ''}</div>
+    ))}
+    {footnote && <p class="fact-list-note">{facts.hours.footnote}</p>}
+  </div>
+)}
+{(show === 'address' || show === 'all') && (
+  <div class="fact-list fact-list--address">
+    <div>{a.line1}</div>
+    <div>{a.city}, {a.region} {a.postal}</div>
+  </div>
+)}
+{(show === 'phone' || show === 'all') && (
+  <div class="fact-list fact-list--phone"><a href={facts.phone.tel}>{facts.phone.display}</a></div>
+)}

@@ -1,10 +1,12 @@
 # United Wrestling Club: Engineering & Growth Backlog (`todos.md`)
 
 > **Last updated:** 2026-11-05
-> **Status:** Homepage, reviews, register, and contact pages built on one design system. Forms wired to the new Formspree account (four endpoints). Production is live on Vercel early (https://united-wrestling-club.vercel.app, 2026-11-05). GitHub Pages staging is off (public repo made private 2026-11-05). Custom domain cutover is still pending.
+> **Status:** The Astro site in `site/` (22 built pages) is live on Vercel production (https://united-wrestling-club.vercel.app, deployed 2026-11-05 from `site/dist/`). Four Formspree endpoints are wired. GitHub Pages is off (public repo made private 2026-11-05). Custom domain cutover is still pending.
 > **Target milestone:** Pre-launch QA, then publish and launch.
 
 Format: each item has a checkbox, the target file or system, and acceptance criteria. Decisions are recorded in `discovery/decisions/`.
+
+**Legacy targets:** items that name `v01/`, `reviews/`, `register/`, `contact/`, `about/`, or `assets/css/uwc.css` point at the pre-rebuild root pages, which are not deployed. The live site is `site/` (Astro). Where an item below has been checked against the Astro build, its current file is given in the target. Re-point any other target to `site/src/` before working on it.
 
 ---
 
@@ -21,8 +23,10 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [x] Six ADRs written and indexed
 - [x] No CRM this year (ADR-20261105-no-crm-this-year); B2B pipelines deferred
 - [x] Hosting: Vercel production deployed early on 2026-11-05 by owner decision; GitHub Pages staging retired (ADR-20261105-public-preview-github-pages addendum)
-- [x] README rewritten around current routes, run, and publish steps
-- [x] Static site check: `scripts/check_site.py` (passes on all five site pages)
+- [x] README rewritten for the Astro site: routes, run, publish, and verification steps (2026-11-05)
+- [x] Astro build gates: `scripts/check_dist.py --final` (22 pages, 765 references, 0 problems) and `scripts/copy_audit.sh site/dist` (0 violations), 2026-11-05
+- [x] Astro site deployed to Vercel production from `site/dist/` (2026-11-05; ADR-20261106 addendum). Routes `/`, `/reviews/`, `/register/`, `/contact/`, `/about/`, `/classes/`, `/pricing/`, `robots.txt`, and `sitemap.xml` return 200. `/assets/img/gbp/` returns 404.
+- [x] Legacy root pages still pass `scripts/check_site.py` (not deployed)
 - [x] Depth section (parallax cutouts over "CHAMPIONS") removed from the homepage, with its CSS and scroll script (2026-11-05, owner decision). The three `video_assets/cutouts/naweed-*.webp` files are now unused.
 
 ---
@@ -30,7 +34,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 ## P1: Critical Path and Launch Blockers
 
 - [ ] **Submit each form once on the live site and confirm the entry arrives**
-  - **Target:** Formspree forms in the new account; `FORM_ENDPOINTS` in `assets/js/uwc-attribution.js`
+  - **Target:** Formspree forms in the new account. Astro wiring: trial form `site/src/components/forms/TrialForm.astro` (`mkjjyyep`); contact, newsletter, and review forms use `data-uwc-form` with `FORM_ENDPOINTS` in `site/public/assets/js/uwc-attribution.js`
   - **Acceptance Criteria:** One real submission per form (trial, contact, newsletter, reviews) appears in its Formspree dashboard with `form_name` set. Confirm Formspree's first-submission email. Set the notification recipient for each form.
 - [ ] **P0 lead response: copy changes**
   - **Target:** `v01/index.html` (schedule line "Text (510) 303-4869 to confirm your first session"; trial form consent copy; "SMS Status: Opted In" line); `register/index.html`
@@ -48,14 +52,22 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** `discovery/lead_response_system.md` section 5C; `discovery/knowledge_base/uwc_kb_v1.md`
   - **Acceptance Criteria:** 40 scripted questions pass (30 FAQ, 10 escalation). Every automated reply cites a Verified KB ID. Handoff tested end to end.
 - [ ] **P0 accuracy: remove invented testimonial details from the homepage**
-  - **Target:** `v01/index.html` testimonials (about lines 555 to 595: "Local Guide (17 reviews)", "East Bay, CA")
-  - **Acceptance Criteria:** Homepage testimonials match the reviews page rule (ADR-20261104): verbatim text, name, and platform only. Correction: ADR-20261104 says this was done. It was not done on the homepage.
+  - **Target:** `site/src/components/home/Testimonials.astro` lines 18 ("Youth Parent · Local Guide (17 reviews)"), 29 ("Local Guide (33 reviews)"), 38 ("Visiting Youth Parent · Out-of-State"), 47 ("Local Guide (30 reviews)"), and the location and date spans. Also `site/src/components/pages/reviews/ReviewGrid.astro` (filter labels) to check.
+  - **Acceptance Criteria:** Homepage testimonials match the reviews page rule (ADR-20261104): verbatim text, reviewer name, and platform only. No invented role, reviewer count, or location lines.
+  - **Status (2026-11-05): OPEN, live in production.** The Astro homepage still shows the invented role and "Local Guide (N reviews)" lines. ADR-20261104 is recorded as done; it is not done on the homepage.
 - [ ] **P0 accuracy: reconcile Saturday hours**
-  - **Target:** schedule Saturday 8:00 to 10:00 AM gi class in `v01/index.html` (about line 363) vs footer, structured data, and `discovery/knowledge_base/uwc_kb_v1.md` KB-03
-  - **Acceptance Criteria:** Naweed confirms every Saturday class. Footer, JSON-LD, schedule, and KB-03 agree.
+  - **Target:** `site/src/data/schedule.ts` row marked pending (D1, Saturday 8:00 to 10:00 AM gi), with `site/src/components/home/Schedule.astro`, `site/src/components/shell/SiteFooter.astro` (12:00 PM), `site/src/data/jsonld-home.ts`, and `discovery/knowledge_base/uwc_kb_v1.md` KB-03
+  - **Acceptance Criteria:** Naweed confirms every Saturday class. Footer, JSON-LD, schedule, and KB-03 agree. The pending row is either shown or deleted.
+- [ ] **P0 accuracy: one membership price on the site**
+  - **Target:** `$139.99` in `site/src/components/home/Hero.astro`, `Pricing.astro`, `site/src/data/nav.ts`, `site/src/data/jsonld-home.ts` (Offer), `site/src/data/facts.ts`, `site/src/pages/pricing.astro`, and the class pages (`kid-wrestling`, `youth-wrestling`, `adult-wrestling`). The FAQ (`site/src/data/faqs.ts`) says plans range from $89.99 to $150.00.
+  - **Acceptance Criteria:** Owner decides the price the homepage leads with and whether to show the range. Hero, pricing section, nav, Offer JSON-LD, FAQ, and `llms-full.txt` then agree. KB-08 is the verified source for $139.99 per month.
+  - **Status (2026-11-05): OPEN, live in production.** Decision needed from the owner.
 - [ ] **P0 trial form: intent-specific presets**
   - **Target:** `openModal()` and trigger buttons in `v01/index.html` (about lines 1025 to 1041)
   - **Acceptance Criteria:** Each trigger sets the program select. Membership triggers say "membership", not "3-day pass". Form resets only after confirmed success. Backdrop close does not delete a dirty form.
+- [ ] **P1 consent: tailored copy on every form**
+  - **Target:** `site/src/components/forms/ConsentSms.astro` (verbatim TCPA text, used by the trial form), `ConsentMedia.astro`, `NewsletterForm.astro`, `ContactForm.astro`, `ReviewForm.astro`; `site/src/data/facts.ts` (consent facts)
+  - **Acceptance Criteria:** Owner supplies per-form copy. Each form (trial, contact, newsletter, review, register) shows consent text tailored to its purpose. The same consent block exists on every form. Copy is not wired until the owner supplies it.
 - [ ] **P1 privacy: media release default** (needs a decision, see the critique)
   - **Target:** media release checkbox in the trial form and `/register`
   - **Acceptance Criteria:** A decision on default-on vs default-off is recorded in an ADR. This reverses ADR-20261105-forms-per-form-endpoints if default-off is chosen.
@@ -63,21 +75,22 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** `.nav-phone` hidden at 768px and below in `assets/css/uwc.css`; top bar in `v01/index.html`
   - **Acceptance Criteria:** A 44px tel link is visible on a 375px screen without opening the drawer.
 - [ ] **P1 reviews: label and stat claims**
-  - **Target:** "Post Review & Copy to Clipboard" and "100% Unanimous", "42+", and "100% Rec" in `reviews/index.html` and `v01/index.html`
-  - **Acceptance Criteria:** Button label matches what happens. Stats trace to a source or are removed.
+  - **Target:** "Post Review & Copy to Clipboard" in `site/src/components/forms/ReviewForm.astro` (line 109). Stats: `site/src/components/pages/reviews/ReviewsHero.astro` and `PlatformCards.astro`.
+  - **Acceptance Criteria:** Button label matches what happens (the dialog says "Review Copied to Clipboard!"). "100% Unanimous Rating" stays removed (owner, 2026-11-05). "42+" and Facebook "100% Rec" are confirmed from the GBP profile (owner, 2026-11-05).
+  - **Status:** Stats resolved. Button label still to check.
 - [ ] **P0 before publishing: GBP photos (ownership and minors)**
   - **Target:** `assets/img/gbp/gbp-team-group-wall.webp` (includes a young boy at left), `gbp-gym-floor-training.webp` (teens training), `gbp-pad-drill-adults.webp` (two adults; no minors)
   - **Acceptance Criteria:** Club confirms it owns the rights to each photo (GBP photos can come from customers). Media release confirmed for the child and the teens, or the photo is cropped or replaced. Until then, these images stay out of published pages.
   - **Status (2026-11-05):** The three GBP photos were removed from the Vercel production deploy after they were found reachable at `/assets/img/gbp/`. Not on any page. Keep them out of the deploy until cleared.
 - [ ] **P0 before publishing: minors in program card photos**
-  - **Target:** `video_assets/cards/program-youth.jpg` (three boys, identifiable) and `program-varsity.jpg` (athlete with name on singlet); `program-openmat.jpg` (teen in background)
+  - **Target:** `site/public/video_assets/cards/program-youth.jpg` (three boys, identifiable) and `program-varsity.jpg` (athlete with name on singlet), shown by `site/src/components/home/Programs.astro`; `program-openmat.jpg` (teen in background)
   - **Acceptance Criteria:** Written media release confirmed for each identifiable minor shown, or the image is replaced with adults or coaches. Until then, the cards stay on staging only.
-  - **Status (2026-11-05): OPEN, live in production.** `program-youth.jpg` and `program-varsity.jpg` are on the Vercel production site at https://united-wrestling-club.vercel.app, which the owner chose to deploy before this release check was done. Decide: remove them from production (replace or crop), or confirm the releases.
+  - **Status (2026-11-05): OPEN, live in production.** `program-youth.jpg` and `program-varsity.jpg` are on the Vercel production site at https://united-wrestling-club.vercel.app, including the Astro build deployed the same day. The owner chose to deploy before this release check was done. Decide: remove them from production (replace or crop), or confirm the releases.
 - [x] **P0 Olympic claims: pulled from public copy (2026-11-05)**
   - Pulled: meta and JSON-LD, hero, lineage section and 1980 badge, Karim and Rashad bios, footers, the CTA headline, and the about page. Internal docs README and PRODUCT.md corrected.
   - Still open: re-add Karim's exact wording once he confirms it. PRODUCT.md principle 1 reworded to "Proof over pedigree" (2026-11-05).
 - [ ] **P0 Olympic claims: confirm wording with Karim (client, Nov 5)**
-  - **Target:** `v01/index.html` lines 7, 23, 69 (meta, JSON-LD), 212 (hero), 391 to 404 (lineage section and "1980" badge), 424 and 461 (Karim and Rashad bios), 777 and 780 (footer); `about/index.html`; `reviews/index.html` and `about/index.html` footer; `PRODUCT.md` principle 1; `discovery/knowledge_base/uwc_kb_v1.md` KB-16
+  - **Target:** Astro: `site/src/components/shell/SiteFooter.astro` and `site/src/components/pages/about/CoFounder.astro` (Olympi wording), `site/src/components/home/Coaches.astro` (Ali Aliyev, Rashad), `site/src/components/pages/about/Creed.astro` (one lineage phrase dropped, owner undecided). Also `PRODUCT.md` principle 1; `discovery/knowledge_base/uwc_kb_v1.md` KB-16. Legacy: `v01/index.html` lines 7, 23, 69, 212, 391 to 404, 424, 461, 777, 780; `about/index.html`; `reviews/index.html`.
   - **Acceptance Criteria:** Karim confirms the exact wording (what he qualified for, if anything, and the Ali Aliyev result). Every public line uses that wording. "Moscow Olympian" and "Olympic qualifier" are removed until confirmed. Rashad's "competed alongside Karim" is confirmed or removed. Schema jobTitle corrected.
 - [x] **P0 phone: one number, (510) 303-4869** (decided 2026-11-05)
   - **Target:** every site page, schema, and footer use `(510) 303-4869`. The retired second number is removed from all project records.
@@ -106,7 +119,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** WrestlingIQ Team 513 waiver (owner: Naweed)
   - **Acceptance Criteria:** The media and content notice from `v01/index.html` (trial form) appears in the waiver, with an opt-out. Screenshot saved to `discovery/`.
 - [ ] **Naweed fact check on site copy**
-  - **Target:** `v01/index.html`, `reviews/index.html`, `README.md` section 3
+  - **Target:** Astro: `site/src/components/home/Safety.astro` (Wi-Fi, 2-inch foam, cross-linked), `Programs.astro` and `Safety.astro` (Dollamur), `Coaches.astro` (biomechanics line), `Testimonials.astro` ("VERIFIED" wording is in its section). The 1:6 ratio does not appear in the Astro build. `README.md` section 3.
   - **Acceptance Criteria:** Each item below is confirmed, corrected, or removed:
     - Dollamur as the mat brand name
     - 1:6 coaching ratio
@@ -117,15 +130,15 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
     - Ali Aliyev tournament result (silver or bronze)
     - Karim's 1980 credentials wording
     - Saturday open mat end time (site says 12:00 PM; `README.md` earlier said 12:30 PM)
-- [ ] **Verify review figures**
-  - **Target:** trust block in `v01/index.html`; platform cards in `reviews/index.html`
-  - **Acceptance Criteria:** "42+ verified reviews across platforms", "100% Unanimous Rating", and the Facebook "100% Rec" each trace to platform data, or are removed. Google's "5.0 across 42 reviews" stays (client-confirmed).
+- [x] **Verify review figures** (owner confirmed 2026-11-05)
+  - **Target:** `site/src/components/pages/reviews/ReviewsHero.astro` ("42+ Verified Reviews Across Platforms"); `PlatformCards.astro` (Facebook "100% Rec")
+  - **Resolution:** Owner confirmed "42+" and "100% Rec" as fact from the GBP profile, and both are restored. "100% Unanimous Rating" stays removed. Google's "5.0 across 42 reviews" stays (client-confirmed).
 - [ ] **GA4 web stream and lead events**
   - **Target:** GA4 property `562010875` (needs Editor); `<head>` of the public homepage
   - **Acceptance Criteria:** Web stream live with its `G-` ID on the public site. `generate_lead` fires on successful trial, contact, newsletter, and reviews submissions (`form_name` as a parameter). No child details in event parameters.
 - [ ] **Search-visible first HTML**
-  - **Target:** `v01/index.html`, `reviews/index.html`, `register/index.html`, `contact/index.html`
-  - **Acceptance Criteria:** Real `<title>`, meta description, and H1 in the unrendered HTML of each page. `robots.txt` and `sitemap.xml` return 200 on the public site.
+  - **Target:** Astro pages in `site/dist/` (static HTML from `site/src/pages/`), for `/`, `/reviews/`, `/register/`, `/contact/`
+  - **Acceptance Criteria:** Real `<title>`, meta description, and H1 in the unrendered HTML of each page. `robots.txt` and `sitemap.xml` return 200 on the public site (verified 2026-11-05). Verify the Astro pages' `<title>` and H1 with `curl`.
 
 ---
 
@@ -167,14 +180,16 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 ## P3: Non-Functional, SEO, and Design Debt
 
 - [ ] **XML sitemap and IndexNow for real routes**
-  - **Target:** `sitemap.xml`, `robots.txt` in the public repo
-  - **Acceptance Criteria:** Lists `/`, `/reviews/`, `/register/`, `/contact/`. Submitted to Google and Bing. Expanded as routes are built.
-- [ ] **Shared shell in one place**
-  - **Target:** top bar, nav, drawer, footer, trial modal, and homepage script across `v01`, `reviews`, `register`, `contact`
-  - **Acceptance Criteria:** One source for the shell. Editing it once updates all four pages. Today it is copied by hand.
+  - **Target:** `site/src/pages/sitemap.xml.ts` and `robots.txt.ts` (built from `site/src/data/routes.ts`)
+  - **Acceptance Criteria:** Sitemap built and live (`/sitemap.xml` returns 200; it lists built routes only). Still to do: submit to Google and Bing, and expand as routes are built. The sitemap uses the `www.unitedwrestlingclub.com` host, so submit only after the domain cutover.
+- [x] **Shared shell in one place** (Astro)
+  - **Resolution:** Top bar, nav, footer, trial modal, and page scripts are shared Astro components (`site/src/components/shell/`, `site/src/layouts/InteriorLayout.astro`). Remaining: the legacy root pages still copy the shell by hand. Archive them to close the item fully (see the next item).
+- [ ] **Archive the legacy root pages**
+  - **Target:** `v01/`, `reviews/`, `register/`, `contact/`, `about/`, `submit-review/`, `assets/css/uwc.css`, `assets/js/uwc-attribution.js`, root `assets/`, `live_site_content/`, `video_assets/`, `unsplash-grunge-001.jpg`
+  - **Acceptance Criteria:** Owner signs off the Astro site as final. Each legacy folder moves to `discovery/archive/` (not published), `scripts/check_site.py` is retired with it, and the README legacy section is removed. Confirm the Astro build still passes `check_dist.py --final` afterwards.
 - [ ] **Design debt in the stylesheet**
-  - **Target:** `assets/css/uwc.css`, `DESIGN.md` section 11
-  - **Acceptance Criteria:** About 40 `!important` declarations reduced. The four `transition: all` declarations list their properties. Breakpoints cut from 13 to 5. Spacing moved to a 4pt scale. Section padding in five sections moved to `--space-section`. Checked with the computed-style comparison used in this milestone.
+  - **Target:** the legacy `assets/css/uwc.css` and `DESIGN.md` section 11. The Astro styles (`site/src/styles/`) follow ADR-20261106 and are checked by `site/scripts/css-homes.mjs`.
+  - **Acceptance Criteria:** About 40 `!important` declarations reduced. The four `transition: all` declarations list their properties. Breakpoints cut from 13 to 5. Spacing moved to a 4pt scale. Section padding in five sections moved to `--space-section`. Checked with the computed-style comparison used in this milestone. If this is closed on the Astro styles, re-measure with `site/scripts/fingerprint.mjs`.
 - [ ] **Local SEO landing pages**
   - **Target:** `discovery/local_seo/`
   - **Acceptance Criteria:** Five city pages (Fremont, Union City, Castro Valley, Newark, San Leandro) built and listed in the sitemap.
@@ -187,8 +202,8 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 ## P4: Strategy, Campaigns, and Later Routes
 
 - [ ] **Build the remaining sitemap routes**
-  - **Target:** `discovery/website_rebuild_spec.md` section 5 (32 routes; 5 built as part of the homepage, reviews, register, and contact)
-  - **Acceptance Criteria:** Each route has content, its forms per `discovery/forms_map_full_sitemap.md`, and a sitemap entry.
+  - **Target:** `discovery/website_rebuild_spec.md` section 5 (32-route sitemap). Status: 22 pages built (see `site/src/data/routes.ts`). Omitted routes wait on owner decisions named in `routes.ts`: donate, women's self-defense, the city pages, and the guides hub and guides.
+  - **Acceptance Criteria:** Each route has content, its forms per `discovery/forms_map_full_sitemap.md`, and a sitemap entry. Each omitted route moves to `built` or is removed from the plan.
 - [ ] **Women's Self-Defense seminar series**
   - **Target:** `discovery/womens_self_defense_financial_model.md`, `/classes/womens-self-defense` (F4)
   - **Acceptance Criteria:** Curriculum and dates confirmed with Louisa and Neha's sister. Waitlist form live.

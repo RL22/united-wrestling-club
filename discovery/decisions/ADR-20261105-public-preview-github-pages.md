@@ -28,7 +28,7 @@ The client is reviewing the site before launch. The client needs a stable URL to
 
 The owner chose to deploy production before launch. This overrides the timing rule in Approved Solution item 2. Current state:
 
-1. **Production:** Vercel project `united-wrestling-club` on the Sprintz team. Live at https://united-wrestling-club.vercel.app. It serves a clean copy of the site files only: the pages, `assets/`, and the media those pages reference. Nothing from `discovery/`, `marketing-plan/`, `portal/`, or the concept folders is deployed.
+1. **Production:** Vercel project `united-wrestling-club` on the Sprintz team. Live at https://united-wrestling-club.vercel.app. It serves a clean copy of the site files only: the pages, `assets/`, and the media those pages reference. Nothing from `discovery/`, `marketing-plan/`, `portal/`, or the concept folders is deployed. (Superseded in part by ADR-20261106 addendum: production now serves the Astro build in `site/dist/`, not the root static pages.)
 2. **Custom domain not moved.** `unitedwrestlingclub.com` still runs on the existing AWS host. The ADR-20261103 cutover (Route 53 apex and `www`, keeping the SES, DMARC, and `shop` records) is still pending.
 3. **GitHub Pages is off.** The public repo `RL22/united-wrestling-club` was made private on 2026-11-05, so https://rl22.github.io/united-wrestling-club/ returns 404. Item 4 is resolved for now: GitHub Pages is switched off, not kept as read-only staging. Restoring it means making the repo public again or upgrading the plan.
 4. **No merge.** The public repo has no `main` or `gh-pages` branch. Its only branch is `gPages`, which was left unchanged.

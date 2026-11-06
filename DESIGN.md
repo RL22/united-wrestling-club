@@ -3,7 +3,7 @@
 Design system for the UWC homepage (`v01/index.html`) and the pages it links to.
 Register: **brand** (see [PRODUCT.md](PRODUCT.md)).
 
-**Source of truth:** `assets/css/uwc.css`. Tokens are in its `:root` block, components are below them.
+**Source of truth (static pages):** `assets/css/uwc.css`. **Source of truth (Astro site):** `site/src/styles/`; see section 13.
 The homepage (`v01/index.html`), the reviews page (`reviews/index.html`), and the submit redirect (`submit-review/index.html`) all link this one file.
 Pages do not carry their own `<style>` blocks, and new components go in this file. This file documents it; if the two disagree, the code wins and this file gets fixed.
 
@@ -296,3 +296,55 @@ Behavior changes:
 - Transform script that applied the token and banned-pattern changes: `design_system_transform.py` in the same scratchpad.
 - Previous auto-extracted DESIGN.md (from the old live site): replaced. Kept in the scratchpad as `DESIGN_old_autoextract.md`.
 - PRODUCT.md: brand, audience, and anti-references. The register and product principles in this file come from it.
+
+---
+
+## 13. Astro design system (site/)
+
+### File map
+
+| Path | Holds |
+|---|---|
+| `site/src/styles/tokens.css` | `:root` tokens (primitives `--ref-*`, then semantic tokens) |
+| `site/src/styles/base.css` | resets, typography, focus, shared layout helpers |
+| `site/src/styles/buttons.css` | `.btn*` and text buttons |
+| `site/src/styles/shell.css` | topbar, nav, drawer, footer |
+| `site/src/styles/sections.css` | shared section scaffolding and section-level rules |
+| `site/src/styles/cards.css` | card families |
+| `site/src/styles/forms.css` | form controls, consent blocks, newsletter |
+| `site/src/styles/overlays.css` | trial modal and overlays |
+| `site/src/styles/disclosure.css` | accordions, schedule list, other disclosure patterns |
+| `site/src/styles/global.css` | only `@import`s, in the order above (buttons before shell) |
+| `site/src/components/shell/` | SiteHeader, SiteFooter, TrialModal, PageScripts |
+| `site/src/components/home/` | the nine homepage sections |
+| `site/src/components/ui/` | Button, SectionHeader, PageHero, InfoCard, FactList, ScheduleList, CtaBanner |
+| `site/src/components/forms/` | TrialForm, ConsentSms, ConsentMedia, NewsletterForm, ContactForm, ReviewForm |
+| `site/src/components/templates/` | ProgramPage |
+| `site/src/layouts/` | Layout (home), InteriorLayout |
+| `site/src/data/` | facts, schedule, programs, faqs, media, nav, reviews, routes, jsonld-home |
+
+### Rules
+
+1. **One selector, one file.** A selector, its base rule, and all of its `@media` overrides live in exactly one file, with each override after its base rule and with the same declarations as the reference. `node scripts/css-homes.mjs` (from `site/`) enforces this against commit `d78a5da`.
+2. **Override rule.** Scoped component styles have specificity (0,2,0) and beat global rules (0,1,0). A section rule and its overrides therefore move together, never one without the other.
+3. **Scoped-style rule.** A section component may hold a `<style>` block only for rules used by that section alone (today Hero, Programs, Coaches, Testimonials, Safety, Pricing, CtaBanner, Schedule). Anything shared goes in a global file. Faq, SiteHeader, SiteFooter, and TrialModal have no `<style>`.
+4. **Tokens before literals.** A literal used in two or more files becomes a token. Two aliases were added in DS-6.
+
+### Token table (semantic)
+
+| Group | Tokens |
+|---|---|
+| Brand | `--color-brand`, `--color-brand-hover`, `--color-brand-text`, `--color-brand-glow`, `--color-border-brand` |
+| Accent and status | `--color-accent`, `--color-star`, `--color-success`, `--color-warning` |
+| Surfaces | `--color-canvas`, `--color-surface-0`, `--color-surface-1`, `--color-surface-2` |
+| Borders and text | `--color-border-subtle`, `--color-border-default`, `--color-text-strong`, `--color-text-default`, `--color-text-muted` |
+| Shape and layout | `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-pill`, `--container-max`, `--space-section`, `--space-section-tight` (`52px 0`) |
+| Type | `--font-sans`, `--font-accent` |
+
+### Fingerprint how-to (run from `site/`)
+
+1. Run `PORT=4340 bash scripts/check-home.sh B2` (builds, serves, captures 8 widths with default, reduced-motion, focus, and hover passes, text, and screenshots into `output/ds/`).
+2. It diffs against `tests/baselines/B2` with `fingerprint-diff.mjs` (exact allow entries; unused entries are an error), `pixel-diff.mjs` (threshold 0), and a text diff. Exit 0 means no difference.
+3. Every unexplained difference is a stop. Do not widen an allow file.
+4. Other checks: `python3 ../scripts/check_dist.py`, `node scripts/smoke.mjs --base http://localhost:4340`, `bash ../scripts/copy_audit.sh src dist`, `node scripts/css-homes.mjs`.
+5. Baselines in `tests/baselines/` are history: B0 (d78a5da), B1 (bio removed, D18), B2 (medal claims removed, D21). New intentional content changes get a new baseline, never an overwrite.

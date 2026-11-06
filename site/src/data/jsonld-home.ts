@@ -1,0 +1,92 @@
+// Homepage SportsClub JSON-LD, moved verbatim from the old layout. Passed to Layout as `jsonLd`.
+export const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SportsClub",
+  "name": "United Wrestling Club",
+  "alternateName": "UWC Hayward",
+  "url": "https://www.unitedwrestlingclub.com/",
+  "description": "Youth and adult wrestling in Hayward, CA. Founded by Karim Zemaryalai and coached by Naweed Zemaryalai (SFSU Kinesiology).",
+  "logo": "https://www.unitedwrestlingclub.com/live_site_content/assets/uwc_lockup_horizontal.svg",
+  "image": "https://www.unitedwrestlingclub.com/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg",
+  "telephone": "(510) 303-4869",
+  "email": "unitedwrestlingclub@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30139 Industrial Pkwy SW Ste C",
+    "addressLocality": "Hayward",
+    "addressRegion": "CA",
+    "postalCode": "94544",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.6033,
+    "longitude": -122.0538
+  },
+  "areaServed": [
+    "Hayward",
+    "Union City",
+    "Fremont",
+    "Newark",
+    "Castro Valley",
+    "San Leandro"
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "06:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "12:00"
+    }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Karim Zemaryalai",
+    "jobTitle": "Founder"
+  },
+  "coach": {
+    "@type": "Person",
+    "name": "Naweed Zemaryalai",
+    "jobTitle": "Head Wrestling Coach & Kinesiologist"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "3-Day Mat Pass",
+      "price": "15.00",
+      "priceCurrency": "USD",
+      "description": "3 consecutive wrestling practices, gear fitting, and coach assessment."
+    },
+    {
+      "@type": "Offer",
+      "name": "Monthly Unlimited Academy Membership",
+      "price": "139.99",
+      "priceCurrency": "USD",
+      "description": "Unlimited weekly practices, Saturday open mat access, zero initiation fees, zero contracts."
+    },
+    {
+      "@type": "Offer",
+      "name": "Single Mat Drop-In",
+      "price": "15.00",
+      "priceCurrency": "USD",
+      "description": "Single practice or Saturday open mat session."
+    }
+  ]
+} as const;

@@ -1,0 +1,13 @@
+---
+// Class times from data/schedule.ts (verbatim from the homepage schedule). Pending rows stay hidden unless showPending is true.
+// No prose note: nothing replaces or explains a hidden row.
+import { scheduleRows } from '../../data/schedule';
+interface Props { program?: string; tag?: string; showPending?: boolean }
+const { program, tag, showPending = false } = Astro.props;
+const rows = scheduleRows.filter((r) => (showPending || !r.pending) && (!program || r.programs.includes(program)) && (!tag || r.tags.includes(tag)));
+---
+<ul class="schedule-list">
+  {rows.map((r) => (
+    <li><span class="schedule-days">{r.days}</span><span class="schedule-time">{r.time}</span><span class="schedule-class">{r.label}</span></li>
+  ))}
+</ul>

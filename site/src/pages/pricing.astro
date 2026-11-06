@@ -1,0 +1,48 @@
+---
+import InteriorLayout from '../layouts/InteriorLayout.astro';
+import PageHero from '../components/ui/PageHero.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import PricingPlans from '../components/pages/info/PricingPlans.astro';
+import TrialForm from '../components/forms/TrialForm.astro';
+import { facts } from '../data/facts';
+
+// Plans and checkout URLs: live_site_content/pricing.json, as sourced.
+const U = (id: number) => `https://www.wrestlingiq.com/users/sign_up?paid_session_id=${id}&show_registration=true&team_id=513`;
+const plans = [
+  { name: 'DROP IN', price: '15.00', period: 'per day', schedule: 'Flexible attendance', featured: false, url: U(2664) },
+  { name: 'Kids (Pre k - 5th) 2 Day', price: '89.99', period: '/mo', schedule: 'Monday & Wednesday Only', featured: false, url: U(1087) },
+  { name: '4 Day Kids', price: '139.99', period: '/mo', schedule: 'Monday - Thursday', featured: false, url: U(4981) },
+  { name: 'Middle School / High School', price: '139.99', period: '/mo', schedule: 'Monday - Saturday', featured: false, url: U(2286) },
+  { name: 'Competition Youth (Pre K - 12th)', price: '150.00', period: '/mo', schedule: 'Monday - Saturday', featured: true, url: U(3574) },
+  { name: 'ADULT / COLLEGE / HIGHSCHOOL', price: '139.99', period: '/mo', schedule: 'Monday - Saturday', featured: false, url: U(1084) },
+  { name: 'BJJ / 3 days', price: '100', period: '/mo', schedule: '', featured: false, url: U(9536) },
+];
+---
+<InteriorLayout
+  title="Membership Options and Pricing | United Wrestling Club Hayward"
+  description="Membership options, drop-in rates, and the $15 3-day trial at United Wrestling Club in Hayward, CA."
+  path="/pricing/"
+  cta={false}
+>
+  <PageHero eyebrow="PRICING" title="Membership" titleBrand="Options" lead="Invest in your wrestling journey with our flexible membership plans designed to fit your needs." compact />
+  <section class="section-block" aria-labelledby="plans-heading">
+    <div class="container">
+      <SectionHeader title="Plans" lead={`${facts.trialPass.name}: ${facts.trialPass.price} for three practices. ${facts.trialPass.blurb}`} id="plans-heading" />
+      <PricingPlans plans={plans} />
+      <p class="plans-note">{facts.booking.payment.note}</p>
+    </div>
+  </section>
+  <section class="section-block section-block--raised" aria-labelledby="member-heading">
+    <div class="container">
+      <SectionHeader title="Ask about membership" lead={facts.booking.howTo} id="member-heading" />
+      <div class="member-form">
+        <TrialForm idPrefix="prc" formId="pricingMemberForm" variant="page" sourceTag="pricing-membership" submitLabel="Confirm $15 3-Day Pass" />
+      </div>
+    </div>
+  </section>
+</InteriorLayout>
+
+<style>
+  .plans-note { text-align: center; margin-top: 28px; color: var(--color-text-muted); }
+  .member-form { max-width: 560px; margin: 0 auto; }
+</style>

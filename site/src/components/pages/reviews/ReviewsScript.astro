@@ -1,0 +1,271 @@
+<script is:inline>
+  (function () {
+    'use strict';
+
+    // Star rating
+    const stars = document.querySelectorAll('.star-btn');
+    const starInput = document.getElementById('rating-input');
+    const starLabel = document.getElementById('star-label');
+    const starContainer = document.getElementById('star-selector');
+    const ratingsMap = {
+      1: '1.0 / 5.0 (Needs Improvement)',
+      2: '2.0 / 5.0 (Fair)',
+      3: '3.0 / 5.0 (Good)',
+      4: '4.0 / 5.0 (Very Good)',
+      5: '5.0 / 5.0 (Exceptional)'
+    };
+
+    function paintStars(val) {
+      stars.forEach((s, idx) => s.classList.toggle('active', idx < val));
+    }
+
+    stars.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.dataset.value, 10);
+        starInput.value = val;
+        starLabel.textContent = ratingsMap[val];
+        paintStars(val);
+      });
+      btn.addEventListener('mouseenter', () => {
+        const hoverVal = parseInt(btn.dataset.value, 10);
+        stars.forEach((s, idx) => s.classList.toggle('hover', idx < hoverVal));
+      });
+    });
+
+    starContainer.addEventListener('mouseleave', () => {
+      stars.forEach(s => s.classList.remove('hover'));
+      paintStars(parseInt(starInput.value, 10));
+    });
+
+    // Category filter
+    const filterTabs = document.querySelectorAll('.tab');
+    const reviewCards = document.querySelectorAll('#reviews-container .testimonial-card');
+    let activeFilter = 'all';
+
+    function applyFilter() {
+      reviewCards.forEach(card => {
+        card.hidden = !(activeFilter === 'all' || card.dataset.category === activeFilter);
+      });
+    }
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+        activeFilter = tab.dataset.filter;
+        applyFilter();
+      });
+    });
+
+    // Photo dropzone and preview
+    const dropzone = document.getElementById('dropzone');
+    const photoInput = document.getElementById('photo-input');
+    const previewGrid = document.getElementById('preview-grid');
+
+    ['dragenter', 'dragover'].forEach(name => dropzone.addEventListener(name, e => {
+      e.preventDefault();
+      dropzone.classList.add('dragover');
+    }));
+    ['dragleave', 'drop'].forEach(name => dropzone.addEventListener(name, e => {
+      e.preventDefault();
+      dropzone.classList.remove('dragover');
+    }));
+    dropzone.addEventListener('drop', e => handleFiles(Array.from(e.dataTransfer.files)));
+    photoInput.addEventListener('change', e => handleFiles(Array.from(e.target.files)));
+    dropzone.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        photoInput.click();
+      }
+    });
+
+    function handleFiles(files) {
+      files.forEach(file => {
+        if (!file.type.startsWith('image/')) return;
+        const reader = new FileReader();
+        reader.onload = event => {
+          const item = document.createElement('div');
+          item.className = 'preview-item';
+          const img = document.createElement('img');
+          img.src = event.target.result;
+          img.alt = 'Review attachment preview';
+          const remove = document.createElement('button');
+          remove.type = 'button';
+          remove.className = 'preview-remove';
+          remove.setAttribute('aria-label', 'Remove photo');
+          remove.textContent = '✕';
+          remove.addEventListener('click', () => item.remove());
+          item.append(img, remove);
+          previewGrid.appendChild(item);
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // Submission: copy to clipboard, then open each selected platform
+    const form = document.getElementById('review-form');
+    const modal = document.getElementById('dispatch-modal');
+    const modalText = document.getElementById('modal-text-preview');
+    const modalActions = document.getElementById('modal-platform-actions');
+    const closeBtn = document.getElementById('modal-close-btn');
+    const sentStatus = document.getElementById('modal-sent-status');
+
+    function linkButton(href, label) {
+      const a = document.createElement('a');
+      a.href = href;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.className = 'btn btn-outline btn-block';
+      a.textContent = label;
+      return a;
+    }
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const nameField = document.getElementById('author-name');
+      const bodyField = document.getElementById('review-body');
+      const name = nameField.value.trim();
+      const perspective = document.getElementById('athlete-perspective').value;
+      const reviewText = bodyField.value.trim();
+      const rating = starInput.value;
+      const postWebsite = document.getElementById('check-website').checked;
+
+      if (!name) {
+        alert('Please enter your name or mat handle.');
+        nameField.focus();
+        return;
+      }
+      if (!reviewText) {
+        alert('Please write a short description of your experience at UWC.');
+        bodyField.focus();
+        return;
+      }
+
+      // Copy the review text
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(reviewText);
+        } else {
+          throw new Error('Clipboard API not available');
+        }
+      } catch (err) {
+        const textArea = document.createElement('textarea');
+        textArea.value = reviewText;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        try { document.execCommand('copy'); } catch (ex) { /* manual copy fallback in dialog */ }
+        document.body.removeChild(textArea);
+      }
+
+      // Send to the club for review (photos are not sent yet)
+      let sent = false;
+      try {
+        await window.UWCAttribution.submitLead(form, null, { omitFiles: true });
+        sent = true;
+      } catch (sendErr) {
+        sent = false;
+      }
+
+      // Keep a copy in this browser only
+      const submission = {
+        name, perspective, rating, reviewText, postWebsite,
+        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+      };
+      try {
+        const stored = JSON.parse(localStorage.getItem('uwc_reviews') || '[]');
+        stored.unshift(submission);
+        localStorage.setItem('uwc_reviews', JSON.stringify(stored));
+      } catch (storageErr) {
+        console.warn('localStorage not accessible', storageErr);
+      }
+
+      if (postWebsite && sent) {
+        prependSubmission(submission);
+      }
+
+      // Dialog with the copied text and one launch button per selected platform
+      modalText.textContent = '"' + reviewText + '"';
+      sentStatus.textContent = sent
+        ? 'Your review was sent to the club for review.'
+        : 'We could not send this to the club right now. Your text is copied, so you can still post it on the platform below.';
+      sentStatus.hidden = false;
+      modalActions.replaceChildren();
+      if (document.getElementById('check-google').checked) {
+        modalActions.appendChild(linkButton('https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo', '1. Open Google Maps & paste (Ctrl+V / Cmd+V) →'));
+      }
+      if (document.getElementById('check-yelp').checked) {
+        modalActions.appendChild(linkButton('https://www.yelp.com/writeareview/biz/united-wrestling-club-hayward', '2. Open Yelp & paste review →'));
+      }
+      if (document.getElementById('check-facebook').checked) {
+        modalActions.appendChild(linkButton('https://www.facebook.com/unitedwrestlingclub/reviews', '3. Open Facebook & paste review →'));
+      }
+
+      const recopyBtn = document.createElement('button');
+      recopyBtn.type = 'button';
+      recopyBtn.className = 'btn btn-outline btn-block';
+      recopyBtn.textContent = 'Copy text again';
+      recopyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(reviewText);
+          recopyBtn.textContent = '✓ Copied to clipboard';
+          setTimeout(() => { recopyBtn.textContent = 'Copy text again'; }, 2000);
+        } catch (copyErr) {
+          recopyBtn.textContent = 'Select the text above to copy';
+        }
+      });
+      modalActions.appendChild(recopyBtn);
+
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    });
+
+    function closeDispatch() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', closeDispatch);
+    modal.addEventListener('click', e => { if (e.target === modal) closeDispatch(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeDispatch();
+    });
+
+    // Show a submission in this browser's feed. Built with textContent, never innerHTML.
+    function prependSubmission(item) {
+      const container = document.getElementById('reviews-container');
+      const card = document.createElement('article');
+      card.className = 'testimonial-card';
+      let cat = 'youth';
+      if (item.perspective.includes('Adult')) cat = 'adult';
+      if (item.perspective.includes('Visiting')) cat = 'visiting';
+      card.dataset.category = cat;
+
+      const meta = document.createElement('div');
+      meta.className = 'testimonial-meta';
+      const strong = document.createElement('strong');
+      strong.textContent = item.name;
+      const starSpan = document.createElement('span');
+      starSpan.className = 'testimonial-stars';
+      starSpan.setAttribute('aria-label', item.rating + ' out of 5 stars');
+      starSpan.textContent = '★'.repeat(parseInt(item.rating, 10));
+      const source = document.createElement('span');
+      source.className = 'testimonial-source';
+      source.textContent = 'Sent for review';
+      meta.append(strong, starSpan, source);
+
+      const text = document.createElement('p');
+      text.className = 'testimonial-text';
+      text.textContent = '“' + item.reviewText + '”';
+
+      card.append(meta, text);
+      container.prepend(card);
+      applyFilter();
+    }
+
+    applyFilter();
+  })();
+  
+</script>

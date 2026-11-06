@@ -15,6 +15,9 @@ The homepage, reviews page, and submit redirect each carried their own styles. T
 5. **Banned patterns:** side-stripe borders over 1px, gradient text, glass (`backdrop-filter`), pure `#000` or `#fff`, em dashes in our own copy. Verbatim review quotes are exempt.
 6. **`DESIGN.md` is the spec** and describes the stylesheet.
 
+## Amended
+Item 1 amended by ADR-20261106-astro-design-system: Astro section components may hold scoped styles for section-only rules.
+
 ## Alternatives Rejected
 1. **Per-page styles:** rejected. Caused the reviews page to drift to a second type system.
 2. **Auto-extracted DESIGN.md from the live site:** rejected. Described the old site and got the colors wrong.

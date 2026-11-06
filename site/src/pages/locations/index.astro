@@ -1,0 +1,21 @@
+---
+import InteriorLayout from '../../layouts/InteriorLayout.astro';
+import PageHero from '../../components/ui/PageHero.astro';
+import InfoCard from '../../components/ui/InfoCard.astro';
+import FactList from '../../components/ui/FactList.astro';
+---
+<InteriorLayout
+  title="Locations | United Wrestling Club"
+  description="United Wrestling Club locations. Visit us in Hayward, CA."
+  path="/locations/"
+  current="locations"
+>
+  <PageHero eyebrow="Locations" title="Where to find" titleBrand="United Wrestling Club" lead="Visit us on the mat in Hayward." compact />
+  <section class="section-block">
+    <div class="container">
+      <InfoCard title="Hayward, CA" href="/locations/hayward-ca/" linkLabel="See the Hayward location">
+        <FactList show="address" />
+      </InfoCard>
+    </div>
+  </section>
+</InteriorLayout>

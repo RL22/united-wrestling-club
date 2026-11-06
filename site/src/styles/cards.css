@@ -1,0 +1,324 @@
+/* Card slots used on more than one page. A selector lives in exactly one file, with every @media override after its base rule. */
+
+.card-desc, .review-quote {
+  text-wrap: pretty;
+}
+
+.card-badge {
+  white-space: nowrap !important;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.testimonial-meta strong {
+  color: var(--color-text-strong);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.testimonial-stars {
+  color: var(--color-star);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+.card-media {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1c22;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.4s ease;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(9, 10, 13, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-text-strong);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.card-body {
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.22rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-text-strong);
+  margin-bottom: 8px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--color-brand-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.card-footer {
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-link {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-strong);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.card-link:hover {
+  color: var(--color-brand-text);
+}
+
+@media (max-width: 768px) {
+  .card-badge {
+    font-size: 0.62rem;
+    padding: 3px 7px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+}
+
+/* Trust score */
+
+.trust-score {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+  margin: 40px 0 32px;
+}
+
+.trust-score-figure {
+  font-family: var(--font-accent);
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-text-strong);
+}
+
+.trust-score-max {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.trust-stars {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.trust-score-label,
+.trust-score-sub {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.trust-score-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-strong);
+}
+
+.trust-score-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Platform cards (link out to each review site) */
+
+.platform-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.platform-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  color: var(--color-text-default);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.platform-card:hover {
+  border-color: var(--color-border-brand);
+  transform: translateY(-3px);
+}
+
+.platform-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.platform-card-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text-strong);
+}
+
+.platform-card-name svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.platform-card-rating {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.platform-card-badge {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.platform-card-cta {
+  margin-top: auto;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-strong);
+}
+
+.platform-card:hover .platform-card-cta {
+  color: var(--color-brand-text);
+}
+
+/* Testimonial cards (grid) */
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 26px;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+.testimonial-card[hidden] {
+  display: none;
+}
+
+.testimonial-card .testimonial-meta {
+  margin: 0;
+  align-items: center;
+}
+
+.testimonial-card .testimonial-text {
+  max-width: none;
+  font-size: 0.92rem;
+}
+
+.testimonial-source {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-text);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}

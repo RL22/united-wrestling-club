@@ -21,3 +21,9 @@ Thumbs.db
 /site/node_modules/
 /site/dist/
 /site/.astro/
+
+# Site scratch output
+site/output/
+
+# Regression baselines and screenshots (large; regenerate with scripts/fingerprint.mjs)
+/site/tests/baselines/*/

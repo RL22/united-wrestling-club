@@ -1,0 +1,13 @@
+---
+// Page hero for interior pages: one H1. `titleBrand` is the red tail of the title.
+interface Props { eyebrow?: string; title: string; titleBrand?: string; lead?: string; compact?: boolean; id?: string }
+const { eyebrow, title, titleBrand, lead, compact = false, id = 'page-heading' } = Astro.props;
+---
+<section class:list={['page-hero', { 'page-hero--compact': compact }]} aria-labelledby={id}>
+  <div class="container">
+    {eyebrow && <span class="section-eyebrow">{eyebrow}</span>}
+    <h1 class="page-title" id={id}>{title}{titleBrand && <> <span class="text-brand">{titleBrand}</span></>}</h1>
+    {lead && <p class="section-lead">{lead}</p>}
+    <slot />
+  </div>
+</section>
