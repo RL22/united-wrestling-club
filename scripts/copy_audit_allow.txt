@@ -59,3 +59,6 @@ site/src/components/home/Coaches.astro|29|767fb7e617851554a127025a2e7896e46d3898
 site/src/pages/reviews.astro|10|a3ee8b423b2fcc5b0a21b0f2283c50929ea02d7fdc247765bcd0ed76022eeb6d|42+|D26
 dist_sha256|site/src/components/home/Coaches.astro|29|bb9b3df190ff0afffed6eda32bab375b0caad9796f6f2deb7fca73d377abeabc
 dist_sha256|site/src/pages/reviews.astro|10|6e1dcd6f1e092c9dfde461bb68cf8e5051f7b9c756bdd98590acb0cfa8ab6dbe
+# 2026-11-06 owner decision: Karim's Aliyev medal is bronze (copy updated in Coaches.astro; source element now line 29).
+dist_sha256|site/src/components/home/Coaches.astro|29|d96580c784022a55dc4930abfebe0b4fe2b94a983d81ad5357947ecf773423c2
+site/src/components/home/Coaches.astro|28|ae34d58683a826dd485caf4982d21a9a747f669413291e39c44e9a667e2f2ec5|dagestan|owner decision 2026-11-06: Aliyev medal is bronze
