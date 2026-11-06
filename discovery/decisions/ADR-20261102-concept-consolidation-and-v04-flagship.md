@@ -36,4 +36,4 @@ During the pre-pitch design sprint for United Wrestling Club (Hayward, CA), four
 - `v01/index.html`
 - `v04/index.html`
 - `v03/index.html`
-- `discovery/executive_pitch_deck_copy.md`
+- `discovery/strategy/executive_pitch_deck_copy.md`

@@ -1,130 +1,177 @@
-# United Wrestling Club (UWC) Discovery Index
+# UWC Discovery Index
 
-> **Client:** Naweed Zemaryalai & Karim Zemaryalai  
-> **Brand:** United Wrestling Club  
-> **Headquarters:** 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544  
-> **Prepared By:** Sprintz Growth OS  
-> **Date:** October 30, 2026  
+- **Client:** Naweed Zemaryalai and Karim Zemaryalai, United Wrestling Club, 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544
+- **Last reorganized:** 2026-11-06
+- **Use:** Find the right source before you cite a fact. Start with the table below. Each file's status is in the index. Status values are defined in the legend.
 
 ---
 
-## Master Directory Structure
+## Start here: source of truth
 
-All discovery assets, audits, technical extractions, and growth roadmaps for United Wrestling Club are organized below:
+| Question | Read this |
+|---|---|
+| What is built and live? | [`sitemap_status.md`](site/sitemap_status.md). The data behind it is `site/src/data/routes.ts`. |
+| What has been decided? | [`decisions/INDEX.md`](decisions/INDEX.md) (ADRs) |
+| What is open or in progress? | [`../todos.md`](../todos.md) (repo root). This folder's `todos.md` is an older copy. |
+| What did the client say? | [`call_notes_naweed_20261102_uwc.md`](client/call_notes_naweed_20261102_uwc.md) (primary source, Nov 2) and [`naweed_discovery_questions.md`](client/naweed_discovery_questions.md) |
+| What facts can the site or responder state? | [`knowledge_base/uwc_kb_v1.md`](knowledge_base/uwc_kb_v1.md). Draft, not live. Answer only from Verified or Client-confirmed entries. |
+| What forms exist and where do they post? | [`forms_map_full_sitemap.md`](site/forms_map_full_sitemap.md) and [`decisions/ADR-20261105-forms-per-form-endpoints.md`](decisions/ADR-20261105-forms-per-form-endpoints.md) |
+| Which design rules apply? | [`decisions/ADR-20261105-design-system.md`](decisions/ADR-20261105-design-system.md), [`decisions/ADR-20261106-astro-design-system.md`](decisions/ADR-20261106-astro-design-system.md), and `DESIGN.md` at repo root |
+| What is the current marketing plan? | [`uwc_marketing_plan.md`](strategy/uwc_marketing_plan.md) (partly superseded, see its banner) and [`uwc_marketing_plan_research.md`](strategy/uwc_marketing_plan_research.md) |
+
+## Status legend
+
+| Status | Meaning | Cite it? |
+|---|---|---|
+| **Current** | Maintained. Reflects the site and decisions as of 2026-11-06. | Yes |
+| **Reference** | Research or analysis. Its sources still hold. Not tracked for changes. | Yes, with the date |
+| **Partly superseded** | Findings still apply. Some recommendations were replaced. The banner says which. | Findings only |
+| **Snapshot** | Describes the pre-rebuild site (late Oct 2026). Use as history. | Only as history |
+| **Superseded** | Concept work for a homepage design that was not built. | No. Do not implement from it. |
+| **Asset** | Image, video, or data file. Inventories describe them. | As a file |
+
+---
+
+## 1. Client and calls
+
+| File | Status | What it is |
+|---|---|---|
+| [`call_notes_naweed_20261102_uwc.md`](client/call_notes_naweed_20261102_uwc.md) | Current | Discovery call with Naweed, Nov 2. Primary source for client facts. |
+| [`naweed_discovery_questions.md`](client/naweed_discovery_questions.md) | Current | Open questions for Naweed and Karim |
+| [`company_profile.md`](client/company_profile.md) | Reference | Client dossier: lineage, coaching credentials, offers, ICPs (Oct 29) |
+| [`uwc_live_funnel_test_log.md`](client/uwc_live_funnel_test_log.md) | Current | Mystery-shopper test of the live funnel, Nov 4 |
+| [`knowledge_base/uwc_kb_v1.md`](knowledge_base/uwc_kb_v1.md) | Current (draft) | Verified facts for the lead responder. Not live until Naweed approves. |
+
+## 2. Site: build status and specs
+
+| File | Status | What it is |
+|---|---|---|
+| [`sitemap_status.md`](site/sitemap_status.md) | Current | Route-by-route status, 2026-11-06 |
+| [`forms_map_full_sitemap.md`](site/forms_map_full_sitemap.md) | Current | Nine forms, their fields, and their endpoints |
+| [`website_rebuild_spec.md`](site/website_rebuild_spec.md) | Reference (plan) | Nov 5 rebuild plan. Section 4 is the original 32-route plan. |
+| [`trial_modal_dataflow_ux_spec.md`](site/trial_modal_dataflow_ux_spec.md) | Reference | Trial modal UX, touchpoints, and data flow |
+| [`site_audit.md`](archive/snapshots/site_audit.md) | Snapshot | Architecture and conversion audit of the pre-rebuild site |
+| [`current_design.md`](archive/snapshots/current_design.md) | Snapshot | Design tokens extracted from the pre-rebuild site |
+| [`live_site_content/`](archive/snapshots/live_site_content/README.md) | Snapshot | Verbatim copy and JSON from the pre-rebuild Next.js site (`live_site_content/README.md` indexes it). Still the best source for verbatim old copy. |
+| [`live_site_icons.json`](archive/snapshots/live_site_icons.json) | Snapshot | Icon map from the pre-rebuild site |
+| [`local_seo_audit.md`](archive/snapshots/local_seo_audit.md) | Snapshot | OpenSEO baseline, 368 ranked keywords, rendering diagnosis (Oct 29) |
+| [`ai_readiness_audit.md`](archive/snapshots/ai_readiness_audit.md) | Snapshot | AI-search readiness score, pre-rebuild |
+| [`local_seo_keyword_reroute_map.md`](market/local_seo_keyword_reroute_map.md) | Reference | Keyword-to-URL map. Several targets are omitted routes (see `sitemap_status.md`). |
+| [`social_media_audit.md`](strategy/social_media_audit.md) | Current | Facebook and Instagram teardown, NAP discrepancy, archived assets |
+
+## 3. Strategy, offers, and operations
+
+| File | Status | What it is |
+|---|---|---|
+| [`uwc_marketing_plan.md`](strategy/uwc_marketing_plan.md) | Partly superseded | 12-month growth plan, draft v1 (Nov 3). Its v04 flagship and sitemap counts are out of date. |
+| [`uwc_marketing_plan_research.md`](strategy/uwc_marketing_plan_research.md) | Reference | Research record behind the plan |
+| [`master_discovery_findings.md`](strategy/master_discovery_findings.md) | Partly superseded | Decision brief. Its v04 recommendation was replaced by the Astro build. |
+| [`lead_response_system.md`](strategy/lead_response_system.md) | Current (proposed) | Lead channels, automated responder, staff handoff. Decisions in section 10 are open. |
+| [`revops_lead_vetting.md`](strategy/revops_lead_vetting.md) | Current | RevOps review of the lead pipeline as designed and as built |
+| [`moat_assessment.md`](strategy/moat_assessment.md) | Current | Whether the 1980 lineage is the moat |
+| [`offers_audit_and_design.md`](strategy/offers_audit_and_design.md) | Reference | Offer redesign for athletes, and the B2B proposal |
+| [`offers_research_companion.md`](strategy/offers_research_companion.md) | Reference | Competitor pricing and LTV benchmarks |
+| [`commercial_and_financial_model_synthesis.md`](strategy/commercial_and_financial_model_synthesis.md) | Reference | Commercial and financial model |
+| [`womens_self_defense_financial_model.md`](strategy/womens_self_defense_financial_model.md) | Reference | Women's self-defense economics. Program still undecided (D4). |
+| [`referral_program_architecture.md`](strategy/referral_program_architecture.md) | Reference | Mat-partner referral program design |
+| [`uwc_attribution_model.md`](strategy/uwc_attribution_model.md) | Reference | SEO and SMS/email attribution model |
+| [`uwc_email_marketing_playbook.md`](strategy/uwc_email_marketing_playbook.md) | Reference | Email lifecycle playbook |
+| [`uwc_sms_marketing_playbook.md`](strategy/uwc_sms_marketing_playbook.md) | Reference | SMS lifecycle playbook |
+| [`rudis_stories_editorial_pitch.md`](strategy/rudis_stories_editorial_pitch.md) | Reference | Editorial pitch draft for RUDIS Stories. Outreach, not sent. |
+| [`executive_pitch_deck_copy.md`](strategy/executive_pitch_deck_copy.md) | Reference | Pitch deck copy |
+| [`todos.md`](archive/snapshots/todos_2026-10-30.md) | Snapshot | Older copy of the to-do list (Oct 30). Use `../todos.md`. |
+
+## 4. Market, competitors, and links
+
+| File | Status | What it is |
+|---|---|---|
+| [`alameda_county_local_footprint.md`](market/alameda_county_local_footprint.md) | Reference | Google Maps rankings across the county |
+| [`competitors/README.md`](market/competitors/README.md) | Reference | Index to the 4-tier and 5-group SERP competitor files (nine files) |
+| [`attack_style_wrestling_and_competitor_offers.md`](market/attack_style_wrestling_and_competitor_offers.md) | Reference | Competitor offers and positioning |
+| [`top_20_wrestling_authority_backlinks.md`](market/top_20_wrestling_authority_backlinks.md) | Reference | Link-equity targets and outreach kit |
+| [`link_equity/`](market/link_equity/) | Reference | Endemic link dossiers, three categories |
+| [`local_seo/`](market/local_seo/) | Reference | Local SEO strategy and 10 programmatic landing-page blueprints |
+
+## 5. Brand, creative, and visual
+
+| File | Status | What it is |
+|---|---|---|
+| [`brand_ethos_and_analogous_influences.md`](brand/brand_ethos_and_analogous_influences.md) | Reference | Brand ethos and aesthetic influences |
+| [`top_10_non_clothing_analogous_brands.md`](brand/top_10_non_clothing_analogous_brands.md) | Reference | Analogous-brand matrix |
+| [`analogous_brands/`](brand/analogous_brands/README.md) | Reference | Three cluster dossiers |
+| [`darc_sport_and_gymshark_analysis.md`](brand/darc_sport_and_gymshark_analysis.md) | Reference | Cult-brand analysis |
+| [`edc_motto_graphic_architecture.md`](brand/edc_motto_graphic_architecture.md) | Reference | Motto and monogram graphic specification |
+| [`moodboards/`](brand/moodboards/README.md) | Reference | Moodboard directions (A, B, C, AC, and 1–3) with stills and screenshots |
+| [`video_assets/`](video_assets/) | Asset | Hero video, stills, and inventories (133 files) |
+| [`assets/`](assets/) | Asset | Lead-modal cards and photos |
+
+## 6. Decisions and plans
+
+| Folder | Status | What it is |
+|---|---|---|
+| [`decisions/`](decisions/INDEX.md) | Current | 14 ADRs with an index. Decided rules live here. |
+| [`plans/astro-design-system-and-buildout.md`](plans/astro-design-system-and-buildout.md) | Reference | Plan v4 for the Astro build |
+| [`plans/phase1-log.md`](plans/phase1-log.md) | Reference | Build log for phase 1 |
+
+## 7. Superseded concept work
+
+These were written for homepage concepts that were not built. Do not implement from them. The production site is the Astro build (ADR-20261106).
+
+| File | What it was |
+|---|---|
+| [`argon_creative_context.md`](archive/superseded/argon_creative_context.md) | Creative-freedom redesign brief |
+| [`argon_redesign_context.md`](archive/superseded/argon_redesign_context.md) | Mandatory redesign context brief |
+| [`homepage_creative_freedom_spec.md`](archive/superseded/homepage_creative_freedom_spec.md) | "Olympic Mat Sanctuary" concept spec |
+| [`homepage_creative_freedom.html`](archive/superseded/homepage_creative_freedom.html), [`homepage_redesign.html`](archive/superseded/homepage_redesign.html) | Concept pages |
+| [`minimal_context_brief.md`](archive/superseded/minimal_context_brief.md) | Context brief for a model-driven homepage pass |
+| [`opus_prompt.md`](archive/superseded/opus_prompt.md), [`sol_refinement_prompt.md`](archive/superseded/sol_refinement_prompt.md) | Model prompts for the v04 and v03 concepts |
+| [`v03_editorial_and_functional_spec.md`](archive/superseded/v03_editorial_and_functional_spec.md), [`v03_visual_fixes_spec.md`](archive/superseded/v03_visual_fixes_spec.md) | v03 concept specs |
+
+## 8. Root files: assets and clutter
+
+| File | Status | Note |
+|---|---|---|
+| `screenshot_mobile_375_verified.png`, `screenshot_mobile_390_verified.png` | Snapshot | Pre-rebuild screenshots, 2.6 MB each. Candidates to move or delete. |
+| `uwc hayward - Google Search-screenshot.png` | Asset | Search-result screenshot. The space in the name breaks some tools. |
+| `wrestling-clipart-original.png`, `unsplash-grunge-001.jpg` | Asset | Source art. The grunge texture is used by the site. |
+| `.DS_Store` | Delete | macOS metadata |
+
+`scratch/` is git-ignored working material (39 MB). Do not cite it.
+
+---
+
+## Conventions for new documents
+
+1. Add frontmatter to every library doc: `status` (current, reference, partly-superseded, snapshot, superseded, or asset) and `group` (the top folder). `python3 scripts/discovery_check.py check` enforces this.
+2. Name the file for its topic. Put a date in the name only for calls and decisions.
+3. Use relative links. Never absolute paths. `scripts/discovery_check.py check` validates them.
+4. Do not copy route lists or facts that another file owns. Link to the owner (`routes.ts`, an ADR, `knowledge_base/uwc_kb_v1.md`).
+5. When a document is superseded, change its status to `superseded` or `partly-superseded`, add a banner that names the replacement, and move it to `archive/`. Do not delete it.
+6. After adding or changing docs, run `python3 scripts/discovery_check.py manifest` to refresh `manifest.json`.
+
+## Layout
 
 ```text
-clients/prospects/united-wrestling-club/
-├── discovery/
-│   ├── README.md                                  # This master navigation index
-│   ├── company_profile.md                         # Business dossier, Olympic authority, pricing, ICPs
-│   ├── offers_audit_and_design.md                 # B2C athlete offer redesign & B2B Sprintz proposal offer
-│   ├── offers_research_companion.md               # Competitor offer benchmarks, LTV math & data intake checklist
-│   ├── naweed_discovery_questions.md              # Questionnaire for Naweed/co-owner (Items #1–#7)
-│   ├── todos.md                                   # Deferred pre-pitch decisions (Item #5) & execution backlog
-│   ├── rudis_stories_editorial_pitch.md           # Turnkey pitch deck, email copy & editorial angles for RUDIS Stories
-│   ├── website_rebuild_spec.md                    # Master 32-route sitemap, 301 map, UX & Core Web Vitals spec
-│   ├── trial_modal_dataflow_ux_spec.md            # Native 1-click modal architecture, UX diagrams, touchpoints & schema
-│   ├── local_seo_keyword_reroute_map.md           # 22-cluster mapping rerouting all 368 ranked & high-volume keywords
-│   ├── live_site_content/                         # Extracted verbatim copy, JSON schedules/pricing & brand assets
-│   │   ├── README.md                              # Index of all extracted live pages & downloaded images/logos
-│   │   ├── schedule.md / schedule.json            # Full Mon–Sat schedule matrix & UI rendering bug diagnosis
-│   │   ├── pricing.md / pricing.json              # All 8 WrestlingIQ (Team 513) session IDs & checkout URLs
-│   │   ├── index.md / about.md / events.md        # Homepage, coach bios, and 41-event 2026–2027 tournament list
-│   │   ├── faqs.md / rules.md / contact.md        # Verbatim 10 FAQs, 10 Club Rules & Formspree config
-│   │   ├── classes/                               # All 14 /classes/* sub-page extractions
-│   │   └── assets/                                # High-res UWC crest logo, schedule screenshot & coach portraits
-│   ├── current_design.md                          # Baseline design system tokens, typography & CSS extraction
-│   ├── brand_ethos_and_analogous_influences.md    # UWC brand ethos, aesthetic DNA & initial analogous brands
-│   ├── top_10_non_clothing_analogous_brands.md    # Master Top 10 non-clothing analogous brands & visual DNA synthesis
-│   ├── darc_sport_and_gymshark_analysis.md        # Deconstruction of DARC Sport & Gymshark: cult tribalism vs parent friction
-│   ├── analogous_brands/                          # Deep-dive dossiers across 3 non-clothing industrial clusters
-│   │   ├── cluster_a_heavy_equipment_and_field_gear.md # Rogue Fitness, YETI, Concept2, Eleiko
-│   │   ├── cluster_b_tools_tactical_and_machines.md    # Milwaukee Tool, G-Shock, Toyota TRD, Sinn/Tudor
-│   │   └── cluster_c_documentary_science_and_craft.md  # Leica Camera, LMNT, The Surfer's Journal, IronMind
-│   ├── top_20_wrestling_authority_backlinks.md    # Master Top 20 wrestling brands link equity blueprint & outreach kit
-│   ├── link_equity/                               # Categorized link equity dossiers across endemic wrestling verticals
-│   │   ├── category1_gear_and_apparel.md          # 8 gear, mat & apparel brands (RUDIS, ScrapLife, Cliff Keen, Defense Soap)
-│   │   ├── category2_media_and_streaming.md       # 7 media & streaming networks (FloWrestling, Trackwrestling, InterMat, WIN)
-│   │   └── category3_governing_bodies_and_foundations.md # 6 governing bodies & foundations (USAW, NWCA, NWHOF, BTSBA)
-│   ├── moodboards/                                # Master brand identity exploration & moodboard suite (2027)
-│   ├── video_assets/                              # Hero video inventory, silent master, contact sheet & clip taxonomy
-│   │   ├── UWC_hero_silent.mp4                    # Silent H.264 copy for mobile autoplay optimization
-│   │   ├── contact_sheet.png                      # 47-keyframe 2400x2188 master visual contact sheet with timestamps
-│   │   ├── video_inventory.json                   # Master structured video inventory schema
-│   │   └── video_inventory.md                     # Comprehensive scene taxonomy, B-roll mapping & athlete tags
-│   │   ├── README.md                              # Executive Creative Director brief & comparative evaluation matrix
-│   │   ├── new_directions_showcase.html           # Master interactive HTML showcase (Directions A, B, C & Sol conversion matrix)
-│   │   ├── direction_A_darc_combat_brotherhood.md # Direction A Spec: The Mat Wolfpack (DARC Sport x Combat Brotherhood)
-│   │   ├── direction_A_darc_combat_brotherhood.html # Direction A Standalone Interactive Showcase
-│   │   ├── direction_B_industrial_iron_foundry.md # Direction B Spec: The Industrial Iron Foundry (Rogue x Milwaukee x Concept2)
-│   │   ├── direction_B_industrial_iron_foundry.html # Direction B Standalone Interactive Showcase
-│   │   ├── direction_C_olympic_field_archive.md   # Direction C Spec: The Olympic Field Archive (Leica x Surfer's Journal x Eleiko)
-│   │   ├── direction_C_olympic_field_archive.html # Direction C Standalone Interactive Showcase
-│   │   ├── moodboard_showcase.html                # Initial exploration showcase (Directions 1, 2, 3)
-│   │   └── screenshots/                           # Full-depth PNG screenshots of all moodboards (1440x2000+)
-│   ├── site_audit.md                              # Information architecture audit, ASCII/Mermaid sitemaps
-│   ├── ai_readiness_audit.md                      # AI readiness score (18/100), GEO blindspots, offer packages
-│   ├── local_seo_audit.md                         # OpenSEO project setup, ranked keywords, crawl diagnosis
-│   ├── alameda_county_local_footprint.md          # Multi-city Maps analysis (Hayward, Tri-City, Oakland)
-│   ├── competitors/                               # 4-Tier & 5-Group SERP Competitor Intelligence
-│   │   ├── README.md                              # Master 4-tier + 5-group Top 5s matrix & SEO blueprints
-│   │   ├── tier1_local_hayward_tricity.md         # Top 5 Local (Hayward, Union City, Fremont, Newark)
-│   │   ├── tier2_county_alameda.md                # Top 5 County (Alameda County: Smash, CSA, Iron WC, Alameda BJJ)
-│   │   ├── tier3_regional_bay_area.md             # Top 5 Regional (SF Bay Area: AKA, DC/AWA, Belmont, Discipline)
-│   │   ├── tier4_state_california.md              # Top 5 State (California: LAWC, Reign, Silverback, Threshold)
-│   │   ├── groupA_directories_and_governing_bodies.md # Top 5 Gatekeepers (TheMat, USAW CA, Yelp, CalGrappler, BPN)
-│   │   ├── groupB_nonprofits_and_pal_programs.md  # Top 5 Non-Profits & PAL (BTS/DSAL Hayward, SFPAL, SF Elite)
-│   │   ├── groupC_scholastic_and_college_programs.md # Top 5 College/Scholastic (Chabot, SFSU, Cal, Stanford, MVAL)
-│   │   ├── groupD_forums_reddit_and_ai_citations.md # Top 5 Reddit, Forums & AI Citation Channels
-│   │   └── groupE_pro_wrestling_serp_polluters.md # Top 5 Pro-Wrestling Polluters + Wikidata Q327223 Disambiguation
-│   └── local_seo/
-│       ├── strategy_what_why_how.md               # Complete local SEO strategy with data citations
-│       └── top_10_programmatic_lps.md             # Data-driven blueprint for 10 geo/discipline landing pages
-└── design-extract-output/united-wrestling-club/   # 33 visual design tokens, brand book, Tailwind config
+discovery/
+├── README.md          this index
+├── manifest.json      generated: path, title, status, group for every library doc
+├── client/            call notes, discovery questions, company profile, funnel log
+├── site/              sitemap status, rebuild spec, forms map, trial modal spec
+├── strategy/          marketing plan, offers, financial models, playbooks, pitch
+├── market/            competitors, link equity, local SEO, county footprint
+├── brand/             ethos, analogous brands, moodboards, motto graphics
+├── archive/
+│   ├── superseded/    concept work for homepage designs that were not built
+│   └── snapshots/     pre-rebuild site audits and captures (Oct 2026)
+├── decisions/         ADRs (own status fields)
+├── plans/             build plans and logs
+├── knowledge_base/    responder fact base (draft)
+├── assets/            loose images
+└── video_assets/      hero video, stills, inventories
 ```
 
----
+## Known cleanup (open)
 
-## Document Index & Core Deliverables
-
-| File | Scope & Purpose | Link |
-| :--- | :--- | :--- |
-| **Master 4-Tier Competitors** | Top 5 Local, County, Regional & State competitors with OpenSEO data & `/vs/` blueprints | [`competitors/README.md`](competitors/README.md) |
-| **Tier 1: Local Competitors** | Top 5 in Hayward & Tri-City (Osorio, Mindset, One World, EDGE, Dragon's Den) | [`competitors/tier1_local_hayward_tricity.md`](competitors/tier1_local_hayward_tricity.md) |
-| **Tier 2: County Competitors** | Top 5 in Alameda County (Smash Gyms, CSA Dublin, Iron WC, Alameda BJJ, Baem/10th Planet) | [`competitors/tier2_county_alameda.md`](competitors/tier2_county_alameda.md) |
-| **Tier 3: Regional Competitors** | Top 5 in SF Bay Area (AKA San Jose, DC/AWA, Belmont/Peninsula, Discipline/Sunnyvale, Royalty) | [`competitors/tier3_regional_bay_area.md`](competitors/tier3_regional_bay_area.md) |
-| **Tier 4: State Competitors** | Top 5 in California (LAWC, Reign WC, Silverback/OCRTC, 951/Threshold, Clovis/San Diego WC) | [`competitors/tier4_state_california.md`](competitors/tier4_state_california.md) |
-| **Group A: Directories & Governing Bodies** | Top 5 Gatekeepers (`themat.com`, `usawmembership.com`, `yelp.com`, `calgrappler.com`, `berkeleyparentsnetwork.org`) | [`competitors/groupA_directories_and_governing_bodies.md`](competitors/groupA_directories_and_governing_bodies.md) |
-| **Group B: Non-Profits & PAL** | Top 5 `.org` Programs (Beat the Streets/DSAL Hayward, SFPAL, SF Elite, Paragon, Petaluma/Lamorinda) | [`competitors/groupB_nonprofits_and_pal_programs.md`](competitors/groupB_nonprofits_and_pal_programs.md) |
-| **Group C: Scholastic & College** | Top 5 College/HS Feeders (Chabot College, SFSU, UC Berkeley, Stanford/CRTC, MVAL/WACC Camps) | [`competitors/groupC_scholastic_and_college_programs.md`](competitors/groupC_scholastic_and_college_programs.md) |
-| **Group D: Reddit & Forums (AI Citations)** | Top 5 Discussion Channels (`r/bayarea`, `r/AskSF`/`r/bjj`, California Wrestler Forum, BPN, FB Groups) | [`competitors/groupD_forums_reddit_and_ai_citations.md`](competitors/groupD_forums_reddit_and_ai_citations.md) |
-| **Group E: Pro-Wrestling Polluters** | Top 5 Theatrical Polluters (West Coast Pro, EBPW, PWR, OASIS, CWL/CWA) + Wikidata `Q327223` Schema | [`competitors/groupE_pro_wrestling_serp_polluters.md`](competitors/groupE_pro_wrestling_serp_polluters.md) |
-| **Offer Audit & Design** | Complete B2C athlete membership offer reconstruction + B2B Sprintz pitch offer | [`offers_audit_and_design.md`](offers_audit_and_design.md) |
-| **Offer Research Companion** | Competitor pricing/seasonal/sibling/gear matrix, LTV unit economics & data intake | [`offers_research_companion.md`](offers_research_companion.md) |
-| **Women's Self-Defense Financial Model** | 60/40 split, dead mat monetization, tuition rollover math & B2B corporate clinic pricing | [`womens_self_defense_financial_model.md`](womens_self_defense_financial_model.md) |
-| **Naweed Discovery Questions** | Structured questionnaire for Naweed/co-owner covering Items #1–#4 & competitor offers | [`naweed_discovery_questions.md`](naweed_discovery_questions.md) |
-| **Project To-Dos & Backlog** | Deferred Sprintz pricing decision (Item #5) and pre/post-close execution checklist | [`todos.md`](todos.md) |
-| **Website Rebuild & UX Spec** | Master 32-route sitemap, 6-route 301 redirect map, Core Web Vitals fixes & 1-Click Trial Modal | [`website_rebuild_spec.md`](website_rebuild_spec.md) |
-| **Native Trial Modal & Data Flow Spec** | Complete UX diagrams, 7-touchpoint matrix, `/api/trial-lead` Zod route & WrestlingIQ SMS bridge | [`trial_modal_dataflow_ux_spec.md`](trial_modal_dataflow_ux_spec.md) |
-| **Social Media & Facebook Audit** | Meta profile teardown, NAP phone discrepancy (`[retired number]`), 10 archived assets & Olympic reels | [`social_media_audit.md`](social_media_audit.md) |
-| **Keyword Rerouting Map** | 22-cluster matrix mapping all 368 ranked keywords & high-volume search clusters to dedicated URLs | [`local_seo_keyword_reroute_map.md`](local_seo_keyword_reroute_map.md) |
-| **Live Site Content Archive** | Verbatim copy from all 27 live Next.js chunks + `schedule.json`, `pricing.json` & high-res crest logo | [`live_site_content/README.md`](live_site_content/README.md) |
-| **Strategy: What, Why & How** | Complete strategic playbook citing OpenSEO crawl data, GBP audits, and market vacuum analysis | [`local_seo/strategy_what_why_how.md`](local_seo/strategy_what_why_how.md) |
-| **Top 10 Programmatic LPs** | Exact keyword targets, search volume, KD, hero copy, and blueprints for 10 geo/discipline pages | [`local_seo/top_10_programmatic_lps.md`](local_seo/top_10_programmatic_lps.md) |
-| **Alameda County Footprint** | Google Maps SERP rankings across Hayward, Fremont, Union City, Newark, Castro Valley & Oakland | [`alameda_county_local_footprint.md`](alameda_county_local_footprint.md) |
-| **Local SEO Baseline Audit** | 368 ranked keywords, striking-distance opportunities, and Next.js rendering diagnosis | [`local_seo_audit.md`](local_seo_audit.md) |
-| **Company Profile Dossier** | Karim Zemaryalai Olympic lineage, Naweed coaching credentials, 7 membership offers, and ICP avatars | [`company_profile.md`](company_profile.md) |
-| **Site Architecture Audit** | Page hierarchy, crawler failure analysis, and current vs. target navigation specs | [`site_audit.md`](site_audit.md) |
-| **AI Readiness Evaluation** | 18/100 AI readiness score, machine-discovery failure (404s on llms.txt), and 3 Sprintz AI packages | [`ai_readiness_audit.md`](ai_readiness_audit.md) |
-| **Current Design Spec** | Visual DNA, `#902524` crimson tokens, Montserrat type scale, pill radii, and Tailwind v4 theme | [`current_design.md`](current_design.md) |
-| **Brand Ethos & Analogous Brands** | UWC true ethos, anti-McDojo posture, aesthetic DNA & initial analogous brands | [`brand_ethos_and_analogous_influences.md`](brand_ethos_and_analogous_influences.md) |
-| **Top 10 Non-Clothing Analogous Brands** | Master ranking matrix, design DNA & UI translations for 10 heavy equipment, tool, optic & science brands | [`top_10_non_clothing_analogous_brands.md`](top_10_non_clothing_analogous_brands.md) |
-| **DARC Sport & Gymshark Strategic Analysis** | Deconstruction of hype fitness brands: cult tribalism, merch drops vs. parent trust friction | [`darc_sport_and_gymshark_analysis.md`](darc_sport_and_gymshark_analysis.md) |
-| **Cluster A: Heavy Equipment & Field Gear** | Rogue Fitness, YETI, Concept2, Eleiko design specs, palettes & UI components | [`analogous_brands/cluster_a_heavy_equipment_and_field_gear.md`](analogous_brands/cluster_a_heavy_equipment_and_field_gear.md) |
-| **Cluster B: Tools, Tactical & Machines** | Milwaukee Tool, G-Shock, Toyota TRD, Sinn/Tudor design specs, palettes & UI components | [`analogous_brands/cluster_b_tools_tactical_and_machines.md`](analogous_brands/cluster_b_tools_tactical_and_machines.md) |
-| **Cluster C: Documentary, Science & Craft** | Leica Camera, LMNT, The Surfer's Journal, IronMind design specs, palettes & UI components | [`analogous_brands/cluster_c_documentary_science_and_craft.md`](analogous_brands/cluster_c_documentary_science_and_craft.md) |
-| **3 New Brand Directions (A, B, C)** | DARC Sport Combat Brotherhood, Rogue/Milwaukee Industrial Foundry, Leica/Surfer's Journal Field Archive | [`moodboards/new_directions_showcase.html`](moodboards/new_directions_showcase.html) & [`moodboards/direction_A_darc_combat_brotherhood.md`](moodboards/direction_A_darc_combat_brotherhood.md) |
-| **Initial Moodboard Exploration** | Executive CD brief, comparative matrix, 3 initial directions & legacy showcase | [`moodboards/README.md`](moodboards/README.md) & [`moodboards/moodboard_showcase.html`](moodboards/moodboard_showcase.html) |
-| **Top 20 Wrestling Link Equity & Outreach** | Master ranking table, DataForSEO metrics, pitch angles, 3 outreach email templates & 12-month roadmap | [`top_20_wrestling_authority_backlinks.md`](top_20_wrestling_authority_backlinks.md) |
-| **Endemic Link Equity Dossiers** | Category 1 (Gear & Apparel), Category 2 (Media & Streaming), and Category 3 (Governing Bodies) | [`link_equity/category1_gear_and_apparel.md`](link_equity/category1_gear_and_apparel.md) |
-| **Visual Brand Book** | 33 extracted design tokens, Tailwind v3/v4 theme, Figma variables, and visual HTML brand book | [Visual Brand Book Preview](../../../../design-extract-output/united-wrestling-club/unitedwrestlingclub-com.brand.html) |
+- The competitor and keyword maps in `market/` still target several omitted routes. Check them against `routes.ts` before use.
+- `strategy/uwc_marketing_plan.md` Weeks 1–2 still name the v04 flagship. Left as written because the plan's owner should decide how it's rewritten.
+- `brand/edc_motto_graphic_architecture.md` describes the live `/about` creed section. Its preview page was removed in commit c6b7153.

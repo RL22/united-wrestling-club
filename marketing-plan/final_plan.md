@@ -4,7 +4,7 @@
 **For:** Head Coach Naweed Zemaryalai & Founder Karim Zemaryalai (United Wrestling Club LLC)  
 **Facility:** 30139 Industrial Pkwy SW, Suite C, Hayward, CA 94544 | USA Wrestling Regional Training Center (RTC) #513  
 **Date:** 2026-11-03  
-**Status:** Draft v1 — Grounded in Master Discovery Findings (`discovery/master_discovery_findings.md`) & Nov 2 Founder Mandate  
+**Status:** Draft v1 — Grounded in Master Discovery Findings (`discovery/strategy/master_discovery_findings.md`) & Nov 2 Founder Mandate  
 
 ---
 
@@ -230,7 +230,7 @@ Activation is UWC's single largest conversion bottleneck:
 - **Move 3 — Automated 10DLC SMS Sequence 1 ("Instant Confirmation & First-Day Anxiety Killer") & Sequence 3 ("Abandoned Checkout Recovery"):**
   - *If the parent submits the modal but abandons WrestlingIQ checkout:* **SMS Sequence 3** fires at `+15 mins` (`TXT-3.1`), `+24 hours` (`TXT-3.2`), and `+72 hours` (`TXT-3.3`, offering to switch to a `$15 Saturday Open Mat Drop-In` `#2664`), recovering 20%–30% of abandoned checkouts.
   - *As soon as the pass is claimed:* **SMS Sequence 1** (`TXT-1.1` immediate, `TXT-1.2` -24h reminder, `TXT-1.3` +2h post-practice check-in from Coach Naweed) + **Email #1.1** deliver exact `30139 Industrial Pkwy SW, Suite C` parking instructions, 15-minute early arrival timing, and pocketless shorts/t-shirt gear rules—lifting trial show-up rate from **~45%–55% → 75%–82%**.
-- **Move 4 — 5-Email Trial Welcome & Parent Trust Sequence (Days 0–9):** While the athlete completes their 3 consecutive practices (`discovery/uwc_email_marketing_playbook.md`), parents receive 5 plain-text-style emails from `@unitedwrestlingclub.com`:
+- **Move 4 — 5-Email Trial Welcome & Parent Trust Sequence (Days 0–9):** While the athlete completes their 3 consecutive practices (`discovery/strategy/uwc_email_marketing_playbook.md`), parents receive 5 plain-text-style emails from `@unitedwrestlingclub.com`:
   - *Email 1.1 (Immediate):* First-Day Suite C Arrival Guide & Waiver link.
   - *Email 1.2 (Day 2):* Coaching Pedigree — Karim's 1980 Olympic qualification + Naweed's SFSU Kinesiology methodology & 1:6 ratio.
   - *Email 1.3 (Day 4):* Parent Safety & Hygiene — 3,000 sq ft Dollamur mats & 2× daily EPA hospital-grade sanitization.
@@ -263,7 +263,7 @@ UWC's working baseline assumes **~7.5% monthly churn** (~13.33-month average ten
 
 ### The plan (4 Retention Moves)
 
-- **Move 1 — 30-Day Active Member Onboarding Sequence (Email Sequence 2 + SMS Onboarding):** Immediately upon WrestlingIQ Team #513 enrollment, trigger the 3-email Member Onboarding sequence (`discovery/uwc_email_marketing_playbook.md`):
+- **Move 1 — 30-Day Active Member Onboarding Sequence (Email Sequence 2 + SMS Onboarding):** Immediately upon WrestlingIQ Team #513 enrollment, trigger the 3-email Member Onboarding sequence (`discovery/strategy/uwc_email_marketing_playbook.md`):
   - *Email 2.1 (Day 1 of Membership):* Welcome to Team #513 — step-by-step links to secure the athlete's **USA Wrestling card (`usawmembership.com`)** and **SCWAY card (`scwaywrestling.org/sign-up`)**, how to order the UWC tournament singlet/warm-up kit at the front desk, and a bookmark link to the prerendered `/events/` 41-tournament schedule.
   - *Email 2.2 (Day 10):* The First 90 Days on the Mat — setting parent expectations around mat conditioning, learning how to fall/hand-fight before worrying about tournament medals, and how our 1:6 coaching ratio tracks individual progress.
   - *Email 2.3 (Day 21):* First-Month Milestone Check-In + GBP Review & Buddy Pass invitation.
@@ -329,7 +329,7 @@ UWC currently generates **~$6,299/mo MRR (~$75,588 annualized membership run rat
 
 - **Move 1 — Core Plan Inventory Cleanup & Sibling/Tier Packaging (`WrestlingIQ Team #513`):** Reconcile the 8 WrestlingIQ plans with published website schedules (specifically resolving the Kids 4-Day `#4981` M–Th vs. M/W/F schedule conflict), standardize the **`$15 3-Day Mat Pass (#6327)` → `$139.99/mo Core Unlimited`** upgrade path, position **`$89.99/mo Kids 2-Day (#1087)`** as a structured down-sell/save offer for busy multi-sport youth families, and promote the **`$150/mo Competition Youth (#3574)`** tier (including tournament coaching support across the 41-event `/events/` calendar) as an ARPU expansion lever.
 - **Move 2 — Seasonal 6-Month & 12-Month Paid-In-Full (PIF) Cashflow Engine (ADR-004):** Offer eligible active members the **6-Month PIF ($699.95 — 5 months paid, 6th free)** and **12-Month PIF ($1,399.90 — 10 months paid, 2 free, or $1,500 with limited 400 GSM EDC team kit)** 30–45 days before November and May. *Accounting guardrail:* As documented in `master_discovery_findings.md` §5–6, 10 annual PIF purchases generate **$13,999 in immediate upfront cash**, which accelerates working capital (e.g., for mat expansion or Q1 2027 Pep Boys deposits) and locks in retention, while recognizing tuition over the 6/12-month service period without double-counting in MRR/ARR.
-- **Move 3 — 4-Tier Women's Self-Defense & Corporate Clinic Program (Growth Lever 2):** Once instructor availability (e.g., Louisa / qualified female lead coach), mat slot, and insurance are confirmed by Naweed, launch the 4-tier self-defense revenue ladder (`discovery/master_discovery_findings.md` §5 Lever 2):
+- **Move 3 — 4-Tier Women's Self-Defense & Corporate Clinic Program (Growth Lever 2):** Once instructor availability (e.g., Louisa / qualified female lead coach), mat slot, and insurance are confirmed by Naweed, launch the 4-tier self-defense revenue ladder (`discovery/strategy/master_discovery_findings.md` §5 Lever 2):
   1. **Tier 1 — Introductory 2-Hour Workshop:** 20 seats × `$49` = **`$980 gross`** (~$380 net to UWC at 40% club / 60% instructor split after processing).
   2. **Tier 2 — 6-Week Practical Self-Defense Cohort:** 16 seats × `$199` = **`$3,184 gross`** (~$1,236 net to UWC at 40/60 split before gear).
   3. **Tier 3 — East Bay Corporate Wellness & Safety Clinics:** **`$1,000–$1,500 per booking`** ($300–$450 net to UWC at 30/70 split).
@@ -655,7 +655,7 @@ Sections 4–8 prescribe what UWC is executing now. This section cross-reference
 ### Measurement — the metrics that matter
 
 - **North-Star Metric:** **Net Active Recurring Athletes in WrestlingIQ (Team #513) Above the 45-Member Baseline** (Directly governs UWC's monthly recurring tuition growth from `$6,299/mo → $10,500/mo (90d) → $16,800/mo (12m)` and reconciles Sprintz's `$25/mo` per-athlete performance rev-share).
-- **Attribution Governance (`discovery/uwc_attribution_model.md`):**
+- **Attribution Governance (`discovery/strategy/uwc_attribution_model.md`):**
   1. **Primary Acquisition Proof (First-Touch Model — 100% Credit):** Credits the initial Organic Search / GBP Map Pack touch (`$initial_landing_page`, `$initial_referrer`, `$initial_utm_*` locked by `assets/js/uwc-attribution.js`) so downstream SMS and Email follow-ups can convert the parent without overwriting Organic SEO credit.
   2. **Diagnostic Lifecycle Model (Position-Based U-Shaped 40 / 20 / 40):** Allocates **40% credit** to First Organic Touch, **20% credit** across nurturing SMS/Email touches in `touch_path[]`, and **40% credit** to the final conversion trigger before WrestlingIQ Team #513 enrollment.
   3. **Dark-Social & Word-of-Mouth Verification:** Cross-checked against the mandatory `self_reported_source` dropdown (*"How did you first find United Wrestling Club?"*) inside the `<dialog>` modal.
@@ -711,14 +711,14 @@ Sections 4–8 prescribe what UWC is executing now. This section cross-reference
 ### Appendix — Deep-Dive Repository Links (`RL22/united-wrestling-club`)
 
 **Core Strategic & Discovery Documents:**
-- `discovery/master_discovery_findings.md` — Master Discovery Findings & Strategic Transformation Report
-- `discovery/call_notes_naweed_20261102_uwc.md` — Nov 2, 2026 Founder Call Transcript Excerpts & Operational Brief
-- `discovery/uwc_marketing_plan_research.md` — Phase 1 fCMO Research Record & 17-Section Rubric Breakdown
+- `discovery/strategy/master_discovery_findings.md` — Master Discovery Findings & Strategic Transformation Report
+- `discovery/client/call_notes_naweed_20261102_uwc.md` — Nov 2, 2026 Founder Call Transcript Excerpts & Operational Brief
+- `discovery/strategy/uwc_marketing_plan_research.md` — Phase 1 fCMO Research Record & 17-Section Rubric Breakdown
 
 **Post-Capture Lifecycle & Attribution Playbooks:**
-- `discovery/uwc_sms_marketing_playbook.md` — A2P 10DLC Setup, TCPA `STOP` Opt-Out & 4 Automated SMS Sequences
-- `discovery/uwc_email_marketing_playbook.md` — Route 53 SPF/DKIM/DMARC Setup & 11-Email Lifecycle Sequences
-- `discovery/uwc_attribution_model.md` — First-Party Identity Stitcher (`uwc_lead_id`), 40/20/40 U-Shaped Model & Rev-Share Ledger
+- `discovery/strategy/uwc_sms_marketing_playbook.md` — A2P 10DLC Setup, TCPA `STOP` Opt-Out & 4 Automated SMS Sequences
+- `discovery/strategy/uwc_email_marketing_playbook.md` — Route 53 SPF/DKIM/DMARC Setup & 11-Email Lifecycle Sequences
+- `discovery/strategy/uwc_attribution_model.md` — First-Party Identity Stitcher (`uwc_lead_id`), 40/20/40 U-Shaped Model & Rev-Share Ledger
 - `assets/js/uwc-attribution.js` — Production JavaScript Stitcher (19 Hidden Fields + WrestlingIQ Link Decorator)
 
 **Binding Architectural Decision Records (ADRs):**

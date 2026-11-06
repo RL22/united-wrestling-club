@@ -27,4 +27,4 @@ Every form posted to one legacy Formspree endpoint in an old account. The attrib
 - `register/index.html`
 - `contact/index.html`
 - `reviews/index.html`
-- `discovery/forms_map_full_sitemap.md`
+- `discovery/site/forms_map_full_sitemap.md`

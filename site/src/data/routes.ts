@@ -1,4 +1,4 @@
-// Every route in the sitemap (discovery/website_rebuild_spec.md section 5, plus /reviews/). Plan 4.2:
+// Every route in the sitemap (discovery/site/website_rebuild_spec.md section 5, plus /reviews/). Plan 4.2:
 //  built     the page exists in site/src/pages
 //  planned   a group owns it and has not merged yet (allowed only with a `group`)
 //  omitted   not built until the owner decision named in `unlock` (D0); 404s and nothing links to it
@@ -40,7 +40,6 @@ export const routes: Route[] = [
   { path: '/guides/high-school-off-season-wrestling/', title: 'High School Off-Season Wrestling', status: 'omitted', reason: 'Needs sources outside the KB.', unlock: 'D12' },
   { path: '/guides/dsal-hayward-wrestling-pathway/', title: 'DSAL Hayward Wrestling Pathway', status: 'omitted', reason: 'Needs sources outside the KB.', unlock: 'D12' },
   { path: '/reviews/', title: 'Reviews', group: 'G1', status: 'built' },
-  { path: '/submit-review/', title: 'Submit a Review', group: 'G1', status: 'redirect', reason: 'Kept as a redirect page (D14).' },
 ];
 
 /** Machine files, owned by group G6. */

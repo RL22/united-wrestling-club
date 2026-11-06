@@ -29,5 +29,5 @@ Combat sports academies often debate whether to lock members into 12-month legal
 - `v01/index.html`
 - `v04/index.html`
 - `v03/index.html`
-- `discovery/offers_audit_and_design.md`
-- `discovery/executive_pitch_deck_copy.md`
+- `discovery/strategy/offers_audit_and_design.md`
+- `discovery/strategy/executive_pitch_deck_copy.md`

@@ -7,7 +7,7 @@
 
 ## 0. Scope and reading
 
-"The remaining 32 pages" means every route in `discovery/website_rebuild_spec.md` section 5, plus `/reviews/` (route 33 in `discovery/forms_map_full_sitemap.md`). The Astro site must cover the sitemap without depending on the root static pages, so `/`, `/reviews/`, `/register/`, `/contact/`, `/about/` are ported into `site/`. `/submit-review/` stays a redirect page. Machine files (`robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`) are one extra group.
+"The remaining 32 pages" means every route in `discovery/site/website_rebuild_spec.md` section 5, plus `/reviews/` (route 33 in `discovery/site/forms_map_full_sitemap.md`). The Astro site must cover the sitemap without depending on the root static pages, so `/`, `/reviews/`, `/register/`, `/contact/`, `/about/` are ported into `site/`. `/submit-review/` stays a redirect page. Machine files (`robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`) are one extra group.
 
 **D0, owner must confirm.** The user asked for all 32 routes. 15 cannot be written honestly from Verified KB facts, or need a form endpoint that does not exist (section 3, OMIT). The default is to **omit** them. They stay in `src/data/routes.ts` as `omitted` with a reason and an unlock decision. The owner confirms D0 before Phase 2, or names routes to build with the facts to support them.
 

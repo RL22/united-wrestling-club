@@ -17,7 +17,7 @@ with open("index.html", "r", encoding="utf-8") as f:
 with open("v01/index.html", "w", encoding="utf-8") as f:
     f.write(v01_html)
 
-with open("discovery/homepage_creative_freedom.html", "r", encoding="utf-8") as f:
+with open("discovery/archive/superseded/homepage_creative_freedom.html", "r", encoding="utf-8") as f:
     v02_html = adjust_paths(f.read())
 with open("02/index.html", "w", encoding="utf-8") as f:
     f.write(v02_html)

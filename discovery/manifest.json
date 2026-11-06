@@ -1,0 +1,575 @@
+{
+  "generated_by": "scripts/discovery_check.py manifest",
+  "docs": [
+    {
+      "path": "archive/snapshots/ai_readiness_audit.md",
+      "title": "AI Readiness & Growth Audit: United Wrestling Club",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/current_design.md",
+      "title": "United Wrestling Club: Current Design System & Visual Identity Specification",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/README.md",
+      "title": "Live Site Content & Asset Archive (`unitedwrestlingclub.com`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/_global_nav_and_footer.md",
+      "title": "Live Site Global Navigation, Footer & Shared Config (`shared_710.js`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/about.md",
+      "title": "Live Site Content: About Us (`/about`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/adult-wrestling.md",
+      "title": "Live Site Content: Adult Wrestling (`/classes/adult-wrestling`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/boxing-fundamentals.md",
+      "title": "Live Site Content: Boxing Fundamentals (`/classes/boxing-fundamentals`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/gi-jiu-jitsu.md",
+      "title": "Live Site Content: Gi Jiu Jitsu (`/classes/gi-jiu-jitsu`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/kid-wrestling.md",
+      "title": "Live Site Content: Kids Wrestling (`/classes/kid-wrestling`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/legacy_unlinked_classes.md",
+      "title": "Live Site Content: Legacy / Unlinked Class Routes",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/nogi-jiu-jitsu.md",
+      "title": "Live Site Content: No-Gi Jiu Jitsu / Wrestle-Jitsu (`/classes/nogi-jiu-jitsu`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/open-mat.md",
+      "title": "Live Site Content: Open Mat (`/classes/open-mat`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/sambo.md",
+      "title": "Live Site Content: Sambo (`/classes/sambo`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/classes/youth-wrestling.md",
+      "title": "Live Site Content: Competition Youth (`/classes/youth-wrestling`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/contact.md",
+      "title": "Live Site Content: Contact (`/contact`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/events.md",
+      "title": "Live Site Content: Events & Competition Schedule (`/events`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/faqs.md",
+      "title": "Live Site Content: Frequently Asked Questions (`/faqs`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/index.md",
+      "title": "Live Site Content: Homepage (`/`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/pricing.md",
+      "title": "Live Site Content: Pricing (`/pricing`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/rules.md",
+      "title": "Live Site Content: Club Rules (`/rules`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/schedule.md",
+      "title": "Live Site Content: Class Schedule (`/schedule`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/live_site_content/stubs_classes_donate_register.md",
+      "title": "Live Site Content: Empty / Stub Pages (`/classes`, `/donate`, `/register`)",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/local_seo_audit.md",
+      "title": "Local Organic SEO & OpenSEO Audit: United Wrestling Club",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/site_audit.md",
+      "title": "Site Architecture & Conversion Audit: United Wrestling Club",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/snapshots/todos_2026-10-30.md",
+      "title": "Sprintz Growth OS: UWC Project To-Dos & Deferred Decisions",
+      "status": "snapshot",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/argon_creative_context.md",
+      "title": "United Wrestling Club: Creative Freedom Redesign Brief",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/argon_redesign_context.md",
+      "title": "United Wrestling Club: Mandatory Homepage Redesign Context Brief",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/homepage_creative_freedom_spec.md",
+      "title": "United Wrestling Club: Creative Freedom Redesign (\"The Olympic Mat Sanctuary\")",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/minimal_context_brief.md",
+      "title": "United Wrestling Club: Minimal Context Brief (Sol & Opus)",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/opus_prompt.md",
+      "title": "Opus (Claude Opus 5.5) Homepage Redesign Prompt",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/sol_refinement_prompt.md",
+      "title": "Sol (GPT-6.1-Sol) Homepage Refinement Prompt: Iteration V03",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/v03_editorial_and_functional_spec.md",
+      "title": "United Wrestling Club (v03) \u2014 Editorial & Functional Specification",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "archive/superseded/v03_visual_fixes_spec.md",
+      "title": "United Wrestling Club Concept 03 (v03) Visual & Layout Enhancements Specification",
+      "status": "superseded",
+      "group": "archive"
+    },
+    {
+      "path": "brand/analogous_brands/README.md",
+      "title": "Non-Clothing Analogous Brand Research for United Wrestling Club (UWC)",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/analogous_brands/cluster_a_heavy_equipment_and_field_gear.md",
+      "title": "Cluster A: Heavy Equipment, Strength & Field Gear \u2014 Brand & Visual Design Archetypes for UWC 2027",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/analogous_brands/cluster_b_tools_tactical_and_machines.md",
+      "title": "Cluster B Analogous Brands: Industrial Tools, Tactical Hardware & Utility Machines",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/analogous_brands/cluster_c_documentary_science_and_craft.md",
+      "title": "United Wrestling Club: Analogous Brand Influences \u2014 Cluster C",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/brand_ethos_and_analogous_influences.md",
+      "title": "United Wrestling Club: Brand Ethos, Aesthetic DNA & Analogous Brand Influences",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/darc_sport_and_gymshark_analysis.md",
+      "title": "Deconstructing Gymshark & DARC Sport for United Wrestling Club",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/edc_motto_graphic_architecture.md",
+      "title": "Architectural Specification: UWC Triple Pillar Motto & EDC Monogram System",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/README.md",
+      "title": "United Wrestling Club: Brand Identity Strategic Exploration & Moodboard Suite",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_1_olympic_heritage.md",
+      "title": "Brand Direction 1: The Olympic Heritage & Dagestan Gold",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_2_modern_combat_athletic.md",
+      "title": "United Wrestling Club (UWC) \u2014 Brand Direction 2: \"Modern Combat Athleticism & East Bay Grit\"",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_3_community_family_academy.md",
+      "title": "Brand Direction 3: Community Family Academy & Civic Empowerment",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_AC_hybrid_olympic_wolfpack.md",
+      "title": "Direction AC (Flagship): \"The Olympic Wolfpack\"",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_A_darc_combat_brotherhood.md",
+      "title": "Direction A: \"The Mat Wolfpack\" (DARC Sport x Combat Brotherhood)",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_B_industrial_iron_foundry.md",
+      "title": "Direction B: \"The Industrial Iron Foundry\" (Rogue x Milwaukee x Concept2)",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/direction_C_olympic_field_archive.md",
+      "title": "Direction C: \"The Olympic Field Archive\" (Leica x Surfer's Journal x Eleiko)",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/iteration_AC_1_crucible_guild.md",
+      "title": "Refined Iteration AC-1: \"The Olympic Combat Guild & Crucible\"",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/moodboards/iteration_AC_2_bedrock_standard.md",
+      "title": "United Wrestling Club \u2014 Brand System Iteration AC-2",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "brand/top_10_non_clothing_analogous_brands.md",
+      "title": "Top 10 Non-Clothing Analogous Brands for United Wrestling Club (UWC)",
+      "status": "reference",
+      "group": "brand"
+    },
+    {
+      "path": "client/call_notes_naweed_20261102_uwc.md",
+      "title": "United Wrestling Club (UWC): Discovery & Strategy Call Notes",
+      "status": "current",
+      "group": "client"
+    },
+    {
+      "path": "client/company_profile.md",
+      "title": "Company Profile: United Wrestling Club",
+      "status": "reference",
+      "group": "client"
+    },
+    {
+      "path": "client/naweed_discovery_questions.md",
+      "title": "Client Discovery Questions for Coach Naweed & Karim Zemaryalai",
+      "status": "current",
+      "group": "client"
+    },
+    {
+      "path": "client/uwc_live_funnel_test_log.md",
+      "title": "UWC Live Sales Funnel Audit & Mystery-Shopper Test Log",
+      "status": "current",
+      "group": "client"
+    },
+    {
+      "path": "market/alameda_county_local_footprint.md",
+      "title": "Alameda County Local Search Footprint & Competitive Landscape: United Wrestling Club",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/attack_style_wrestling_and_competitor_offers.md",
+      "title": "Attack Style Wrestling & Competitor Offers Audit: Strategic Synthesis",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/README.md",
+      "title": "Master 4-Tier Competitive Intelligence & Comparison Matrix: United Wrestling Club",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/groupA_directories_and_governing_bodies.md",
+      "title": "Group A Competitor Research Dossier: Directory, Aggregator & Governing Body Gatekeepers",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/groupB_nonprofits_and_pal_programs.md",
+      "title": "Group B: Non-Profit, Police Activities League (PAL) & Community Wrestling Programs Dossier",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/groupC_scholastic_and_college_programs.md",
+      "title": "Group C Competitor & Feeder Dossier: High School Scholastic Programs, College Rooms & RTC Ecosystems",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/groupD_forums_reddit_and_ai_citations.md",
+      "title": "Group D Competitor & Channel Intelligence Dossier",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/groupE_pro_wrestling_serp_polluters.md",
+      "title": "Group E Competitor Intelligence & Semantic Disambiguation Dossier",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/tier1_local_hayward_tricity.md",
+      "title": "Tier 1 Local Competitor Research Dossier: Hayward & Tri-City",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/tier2_county_alameda.md",
+      "title": "Alameda County Competitor Dossier & Strategic Analysis: Tier 2 (Countywide)",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/tier3_regional_bay_area.md",
+      "title": "Tier 3 Regional Competitor Dossier: Greater SF Bay Area",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/competitors/tier4_state_california.md",
+      "title": "Tier 4 Competitor Research & Statewide Comparison Dossier",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/link_equity/category1_gear_and_apparel.md",
+      "title": "Category 1 Link Equity Dossier: Wrestling Apparel, Gear, Mats & Hygiene Brands",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/link_equity/category2_media_and_streaming.md",
+      "title": "Category 2: Media, Streaming & Documentary Networks (Tier 1 Link Equity)",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/link_equity/category3_governing_bodies_and_foundations.md",
+      "title": "Category 3: Governing Bodies, Hall of Fame & Non-Profit Advocacy Foundations",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/local_seo/strategy_what_why_how.md",
+      "title": "Local SEO Growth Strategy: United Wrestling Club (Alameda County)",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/local_seo/top_10_programmatic_lps.md",
+      "title": "Top 10 Data-Driven Programmatic Landing Pages: United Wrestling Club",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/local_seo_keyword_reroute_map.md",
+      "title": "United Wrestling Club: Local SEO Keyword-to-URL Rerouting Matrix",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "market/top_20_wrestling_authority_backlinks.md",
+      "title": "Top 20 Wrestling Brands with Tier 1 Link Equity & Editorial Authority",
+      "status": "reference",
+      "group": "market"
+    },
+    {
+      "path": "site/forms_map_full_sitemap.md",
+      "title": "Forms map: full sitemap",
+      "status": "current",
+      "group": "site"
+    },
+    {
+      "path": "site/sitemap_status.md",
+      "title": "Sitemap status",
+      "status": "current",
+      "group": "site"
+    },
+    {
+      "path": "site/trial_modal_dataflow_ux_spec.md",
+      "title": "Native 1-Click Trial Modal & WrestlingIQ Middleware Bridge",
+      "status": "reference",
+      "group": "site"
+    },
+    {
+      "path": "site/website_rebuild_spec.md",
+      "title": "United Wrestling Club (`unitedwrestlingclub.com`) \u2014 Master Website Rebuild & UX/Performance Specification",
+      "status": "reference",
+      "group": "site"
+    },
+    {
+      "path": "strategy/commercial_and_financial_model_synthesis.md",
+      "title": "United Wrestling Club (UWC): Commercial & Financial Model Synthesis",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/executive_pitch_deck_copy.md",
+      "title": "Executive Pitch Deck: United Wrestling Club Digital Evolution",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/lead_response_system.md",
+      "title": "Lead response system: channels, automation, knowledge base, and handoff",
+      "status": "current",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/master_discovery_findings.md",
+      "title": "United Wrestling Club: Master Discovery Findings & Strategic Transformation Report",
+      "status": "partly-superseded",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/moat_assessment.md",
+      "title": "Moat assessment: is lineage UWC's moat?",
+      "status": "current",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/offers_audit_and_design.md",
+      "title": "Offer Design & Value Architecture: United Wrestling Club (UWC)",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/offers_research_companion.md",
+      "title": "Offer Research, Market Benchmarking & Data Intake Companion: United Wrestling Club",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/referral_program_architecture.md",
+      "title": "United Wrestling Club (UWC): Mat Partner Referral Program Architecture",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/revops_lead_vetting.md",
+      "title": "RevOps vetting: UWC lead pipeline (as designed and as built)",
+      "status": "current",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/rudis_stories_editorial_pitch.md",
+      "title": "RUDIS Stories Editorial Submission & Co-Marketing Pitch",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/social_media_audit.md",
+      "title": "United Wrestling Club: Social Media Audit & Facebook Intel",
+      "status": "current",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/uwc_attribution_model.md",
+      "title": "United Wrestling Club (UWC): Organic SEO + SMS/Email Attribution Model & First-Party Stitching Architecture",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/uwc_email_marketing_playbook.md",
+      "title": "United Wrestling Club (UWC) \u2014 Email Marketing & Lifecycle Nurture Playbook",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/uwc_marketing_plan.md",
+      "title": "United Wrestling Club (UWC) \u2014 12-Month Growth Marketing Plan (v1)",
+      "status": "partly-superseded",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/uwc_marketing_plan_research.md",
+      "title": "United Wrestling Club (UWC) \u2014 Marketing Plan Research Record",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/uwc_sms_marketing_playbook.md",
+      "title": "United Wrestling Club (UWC): SMS Marketing & Lifecycle Playbook",
+      "status": "reference",
+      "group": "strategy"
+    },
+    {
+      "path": "strategy/womens_self_defense_financial_model.md",
+      "title": "Financial Architecture & Revenue Model: Women's Self-Defense Program",
+      "status": "reference",
+      "group": "strategy"
+    }
+  ]
+}

@@ -40,16 +40,16 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** `v01/index.html` (schedule line "Text (510) 303-4869 to confirm your first session"; trial form consent copy; "SMS Status: Opted In" line); `register/index.html`
   - **Acceptance Criteria:** No page asks people to text a line that is not staffed for texts. Consent copy matches what is sent. Decision recorded in `discovery/decisions/ADR-20261105-lead-response-ownership.md`.
 - [ ] **P0 lead response: knowledge base approved**
-  - **Target:** `discovery/knowledge_base/uwc_kb_v1.md`; questions in `discovery/naweed_discovery_questions.md` section 8
+  - **Target:** `discovery/knowledge_base/uwc_kb_v1.md`; questions in `discovery/client/naweed_discovery_questions.md` section 8
   - **Acceptance Criteria:** Naweed approves or corrects each entry. Unverified entries stay out of automated replies. Last-verified dates filled in.
 - [ ] **P0 lead response: staff responder and backup named**
-  - **Target:** `discovery/lead_response_system.md` section 2 and section 14
+  - **Target:** `discovery/strategy/lead_response_system.md` section 2 and section 14
   - **Acceptance Criteria:** A named staff responder with open-hours coverage. Backup named for class time. Both receive queue alerts.
 - [ ] **P1 lead response: SMS platform and 10DLC**
-  - **Target:** `discovery/lead_response_system.md` sections 9 and 10
+  - **Target:** `discovery/strategy/lead_response_system.md` sections 9 and 10
   - **Acceptance Criteria:** Platform chosen and approved. A2P 10DLC brand and campaign registered and approved. No automated text sent before approval.
 - [ ] **P2 lead response: automated text responder**
-  - **Target:** `discovery/lead_response_system.md` section 5C; `discovery/knowledge_base/uwc_kb_v1.md`
+  - **Target:** `discovery/strategy/lead_response_system.md` section 5C; `discovery/knowledge_base/uwc_kb_v1.md`
   - **Acceptance Criteria:** 40 scripted questions pass (30 FAQ, 10 escalation). Every automated reply cites a Verified KB ID. Handoff tested end to end.
 - [ ] **P0 accuracy: remove invented testimonial details from the homepage**
   - **Target:** `site/src/components/home/Testimonials.astro` lines 18 ("Youth Parent · Local Guide (17 reviews)"), 29 ("Local Guide (33 reviews)"), 38 ("Visiting Youth Parent · Out-of-State"), 47 ("Local Guide (30 reviews)"), and the location and date spans. Also `site/src/components/pages/reviews/ReviewGrid.astro` (filter labels) to check.
@@ -99,10 +99,10 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** Facebook page contact details (owner action; Facebook still shows the retired number)
   - **Acceptance Criteria:** Facebook page phone reads `(510) 303-4869`, or the phone field is removed. Checked after the change.
 - [ ] **Lead owner, hours, and fallback (from RevOps vetting C2 and M1)**
-  - **Target:** `discovery/revops_lead_vetting.md`; questions for Naweed in `discovery/naweed_discovery_questions.md` section 8; Formspree notification settings for all four forms
+  - **Target:** `discovery/strategy/revops_lead_vetting.md`; questions for Naweed in `discovery/client/naweed_discovery_questions.md` section 8; Formspree notification settings for all four forms
   - **Acceptance Criteria:** Naweed is the named owner of new leads (confirmed 2026-11-05). Record the hours he checks the inbox. Name a fallback for class time, when he is on the mat. Notifications go to Naweed and the fallback. The response SLA in the report is signed off.
 - [ ] **Retire the old Formspree inbox (`xyyavaaj`)**
-  - **Target:** old Formspree account; `discovery/uwc_live_funnel_test_log.md`, `discovery/uwc_sms_marketing_playbook.md`
+  - **Target:** old Formspree account; `discovery/client/uwc_live_funnel_test_log.md`, `discovery/strategy/uwc_sms_marketing_playbook.md`
   - **Acceptance Criteria:** Export any leads that arrived during pre-launch from the old inbox. Confirm no live page or playbook still posts there. The SMS playbook's "Formspree `xyyavaaj`" references are updated to the new trial form.
 - [x] **Publish to production (superseded 2026-11-05)**
   - Public repo `RL22/united-wrestling-club` made private, and GitHub Pages is off. Production is the Vercel project `united-wrestling-club` (procedure in `README.md` section 6). The `gPages` branch is no longer a publish target.
@@ -145,10 +145,10 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 ## P2: User Flow and Conversion
 
 - [ ] **Build the forms not yet built**
-  - **Target:** `discovery/forms_map_full_sitemap.md` (F3 RSVP, F4 self-defense waitlist, F5 scholarship, F8 affiliate)
+  - **Target:** `discovery/site/forms_map_full_sitemap.md` (F3 RSVP, F4 self-defense waitlist, F5 scholarship, F8 affiliate)
   - **Acceptance Criteria:** Each form posts with its own `form_name` and endpoint, uses the same consent and fail-closed pattern as the trial form, and has a success state.
 - [ ] **Decide `/donate` and the affiliate route**
-  - **Target:** `discovery/forms_map_full_sitemap.md` decisions 1 and 2
+  - **Target:** `discovery/site/forms_map_full_sitemap.md` decisions 1 and 2
   - **Acceptance Criteria:** `/donate` is built with the scholarship form, or hidden. Affiliate applications get a route, or go through contact with an "Affiliate" reason.
 - [ ] **Review photo uploads**
   - **Target:** dropzone in `reviews/index.html`
@@ -191,10 +191,10 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
   - **Target:** the legacy `assets/css/uwc.css` and `DESIGN.md` section 11. The Astro styles (`site/src/styles/`) follow ADR-20261106 and are checked by `site/scripts/css-homes.mjs`.
   - **Acceptance Criteria:** About 40 `!important` declarations reduced. The four `transition: all` declarations list their properties. Breakpoints cut from 13 to 5. Spacing moved to a 4pt scale. Section padding in five sections moved to `--space-section`. Checked with the computed-style comparison used in this milestone. If this is closed on the Astro styles, re-measure with `site/scripts/fingerprint.mjs`.
 - [ ] **Local SEO landing pages**
-  - **Target:** `discovery/local_seo/`
+  - **Target:** `discovery/market/local_seo/`
   - **Acceptance Criteria:** Five city pages (Fremont, Union City, Castro Valley, Newark, San Leandro) built and listed in the sitemap.
 - [ ] **Directory citations**
-  - **Target:** `discovery/top_20_wrestling_authority_backlinks.md`
+  - **Target:** `discovery/market/top_20_wrestling_authority_backlinks.md`
   - **Acceptance Criteria:** NAP submitted to Berkeley Parents Network, SCWAY, USA Wrestling club finder, and Yelp Local. Each has a confirmation.
 
 ---
@@ -202,19 +202,19 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 ## P4: Strategy, Campaigns, and Later Routes
 
 - [ ] **Build the remaining sitemap routes**
-  - **Target:** `discovery/website_rebuild_spec.md` section 5 (32-route sitemap). Status: 22 pages built (see `site/src/data/routes.ts`). Omitted routes wait on owner decisions named in `routes.ts`: donate, women's self-defense, the city pages, and the guides hub and guides.
-  - **Acceptance Criteria:** Each route has content, its forms per `discovery/forms_map_full_sitemap.md`, and a sitemap entry. Each omitted route moves to `built` or is removed from the plan.
+  - **Target:** `discovery/site/website_rebuild_spec.md` section 5 (32-route sitemap). Status: 22 pages built (see `site/src/data/routes.ts`). Omitted routes wait on owner decisions named in `routes.ts`: donate, women's self-defense, the city pages, and the guides hub and guides.
+  - **Acceptance Criteria:** Each route has content, its forms per `discovery/site/forms_map_full_sitemap.md`, and a sitemap entry. Each omitted route moves to `built` or is removed from the plan.
 - [ ] **Women's Self-Defense seminar series**
-  - **Target:** `discovery/womens_self_defense_financial_model.md`, `/classes/womens-self-defense` (F4)
+  - **Target:** `discovery/strategy/womens_self_defense_financial_model.md`, `/classes/womens-self-defense` (F4)
   - **Acceptance Criteria:** Curriculum and dates confirmed with Louisa and Neha's sister. Waitlist form live.
 - [ ] **Free Community Day and Holiday Open House Mixer**
-  - **Target:** `discovery/todos.md`; `/events` (F3 RSVP)
+  - **Target:** `discovery/archive/snapshots/todos_2026-10-30.md`; `/events` (F3 RSVP)
   - **Acceptance Criteria:** Date, time, and capacity confirmed. RSVP form live with the media release. Matside check-in and opt-out tagging planned.
 - [ ] **Seasonal Paid-In-Full loyalty campaign**
   - **Target:** `discovery/decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md`
   - **Acceptance Criteria:** SMS and email copy for existing 3+ month members, approved, before the holiday window.
 - [ ] **Former Pep Boys facility (30085 Industrial Pkwy SW)**
-  - **Target:** `discovery/call_notes_naweed_20261102_uwc.md`, `portal/index.html`
+  - **Target:** `discovery/client/call_notes_naweed_20261102_uwc.md`, `portal/index.html`
   - **Status:** Unconfirmed. Naweed and the city have not reached the property owner.
   - **Acceptance Criteria:** Follow up with Naweed in January 2027. Do not change the Hayward GBP (`30139 Industrial Pkwy SW`) until the lease or acquisition is confirmed.
 - [ ] **Evaluate the WrestlingIQ CLI (`wiq-cli`) for ops reporting**

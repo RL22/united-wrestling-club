@@ -122,11 +122,11 @@
 **Total Score: 28 / 85 (32.9%)** *(Live Baseline Scored from Discovery Materials)*
 
 ## Materials read
-- `discovery/master_discovery_findings.md` (read 2026-11-03)
-- `discovery/call_notes_naweed_20261102_uwc.md` (read 2026-11-03)
-- `discovery/uwc_sms_marketing_playbook.md` (read 2026-11-03)
-- `discovery/uwc_email_marketing_playbook.md` (read 2026-11-03)
-- `discovery/uwc_attribution_model.md` (read 2026-11-03)
+- `discovery/strategy/master_discovery_findings.md` (read 2026-11-03)
+- `discovery/client/call_notes_naweed_20261102_uwc.md` (read 2026-11-03)
+- `discovery/strategy/uwc_sms_marketing_playbook.md` (read 2026-11-03)
+- `discovery/strategy/uwc_email_marketing_playbook.md` (read 2026-11-03)
+- `discovery/strategy/uwc_attribution_model.md` (read 2026-11-03)
 - `discovery/decisions/ADR-20261102-facility-and-coaching-invariants.md` (read 2026-11-03)
 - `discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md` (read 2026-11-03)
 - `discovery/decisions/ADR-20261102-branded-reviews-and-submission-engine.md` (read 2026-11-03)

@@ -24,4 +24,4 @@ last_updated: 2026-11-03 17:06
 sections/01.md, sections/02.md, sections/03.md, sections/04.md, sections/05.md, sections/06.md, sections/07.md, sections/08.md, sections/09.md, sections/10.md, sections/11.md, sections/12.md, sections/13.md
 
 ## Notes
-Grounded in discovery/master_discovery_findings.md, discovery/call_notes_naweed_20261102_uwc.md, and the SMS, Email, and Attribution playbooks. Pep Boys (30085 Industrial Pkwy SW, Union City) parked in Q1 2027 New Year Backlog.
+Grounded in discovery/strategy/master_discovery_findings.md, discovery/client/call_notes_naweed_20261102_uwc.md, and the SMS, Email, and Attribution playbooks. Pep Boys (30085 Industrial Pkwy SW, Union City) parked in Q1 2027 New Year Backlog.

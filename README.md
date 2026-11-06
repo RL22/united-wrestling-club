@@ -20,7 +20,7 @@ This repository is the **internal working repo**. It holds the Astro site in `si
 
 ## 2. Site (Astro, `site/`)
 
-The published site is an Astro 7 static build (`site/astro.config.mjs`: `output: 'static'`, `trailingSlash: 'always'`). Each route is one file in `site/src/pages/`. The build emits 22 pages, including the `/submit-review/` redirect.
+The published site is an Astro 7 static build (`site/astro.config.mjs`: `output: 'static'`, `trailingSlash: 'always'`). Each route is one file in `site/src/pages/`. The build emits 21 pages.
 
 | Route | Source file |
 | :--- | :--- |
@@ -32,7 +32,6 @@ The published site is an Astro 7 static build (`site/astro.config.mjs`: `output:
 | `/reviews/` | `site/src/pages/reviews.astro` |
 | `/register/` ($15 3-Day Mat Pass, trial form) | `site/src/pages/register.astro` |
 | `/contact/` | `site/src/pages/contact.astro` |
-| `/submit-review/` (redirects to `/reviews/`) | `site/src/pages/submit-review.astro` |
 | `/sitemap.xml`, `/robots.txt`, `/llms.txt`, `/llms-full.txt` | `site/src/pages/*.ts` |
 
 Shared pieces:
@@ -41,7 +40,7 @@ Shared pieces:
 - **Components:** `site/src/components/` grouped as `shell/`, `home/`, `ui/`, `forms/`, `templates/`, `pages/`.
 - **Content data:** `site/src/data/` (facts, schedule, programs, FAQs, reviews, nav, routes, JSON-LD).
 - **Forms:** one Formspree endpoint per form (trial, contact, newsletter, review). Endpoints live in `site/public/assets/js/uwc-attribution.js` and in the trial form's `action` (ADR-20261105-forms-per-form-endpoints).
-- **Routes not built:** `site/src/data/routes.ts` lists each omitted route with the owner decision it waits on. The 32-route sitemap is in `discovery/website_rebuild_spec.md` and `discovery/forms_map_full_sitemap.md`.
+- **Routes not built:** `site/src/data/routes.ts` lists each omitted route with the owner decision it waits on. The 32-route sitemap is in `discovery/site/website_rebuild_spec.md` and `discovery/site/forms_map_full_sitemap.md`.
 
 **Legacy root pages (not deployed):** `v01/`, `reviews/`, `register/`, `contact/`, `about/`, `submit-review/`, and the root `assets/css/uwc.css`. They are the pre-rebuild static site. Keep them only as reference until the Astro site is final, then archive them under `discovery/`.
 

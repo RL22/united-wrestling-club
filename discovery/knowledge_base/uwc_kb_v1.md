@@ -57,4 +57,4 @@ Hand off immediately, with the full message and the lead record, for:
 
 ## Section D. Structure for the responder (later)
 
-Each entry is one record with: ID, topic, approved answer, status, source, owner, last verified date, and an escalate-if rule. The published subset (Verified entries only) can become `llms.txt` (see `discovery/ai_readiness_audit.md`).
+Each entry is one record with: ID, topic, approved answer, status, source, owner, last verified date, and an escalate-if rule. The published subset (Verified entries only) can become `llms.txt` (see `discovery/archive/snapshots/ai_readiness_audit.md`).
