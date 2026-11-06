@@ -6,7 +6,7 @@ import PricingPlans from '../components/pages/info/PricingPlans.astro';
 import TrialForm from '../components/forms/TrialForm.astro';
 import { facts } from '../data/facts';
 
-// Plans and checkout URLs: live_site_content/pricing.json, as sourced.
+// Plans and checkout URLs: discovery/archive/legacy-site/live_site_content/pricing.json, as sourced.
 const U = (id: number) => `https://www.wrestlingiq.com/users/sign_up?paid_session_id=${id}&show_registration=true&team_id=513`;
 const plans = [
   { name: 'DROP IN', price: '15.00', period: 'per day', schedule: 'Flexible attendance', featured: false, url: U(2664) },

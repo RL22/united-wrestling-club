@@ -1,4 +1,4 @@
-// JSON-LD for /reviews/, ported from reviews/index.html without the review[] array: copy_audit cannot exempt quotes inside
+// JSON-LD for /reviews/, ported from discovery/archive/legacy-site/reviews/index.html without the review[] array: copy_audit cannot exempt quotes inside
 // a JSON-LD script (em dashes and one blocked word). Restore review[] from data/reviews.ts if the audit gains that exemption.
 const base = {
   "@type": "SportsClub",
