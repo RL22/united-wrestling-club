@@ -1,0 +1,91 @@
+---
+// F1 trial form (F1 modal, F1a open mat, F1b schedule). Posts to the trial_pass Formspree endpoint; no other endpoint is allowed.
+// Defaults reproduce the modal form exactly (ids `trialForm`, `v01-*`).
+import ConsentSms from './ConsentSms.astro';
+import ConsentMedia from './ConsentMedia.astro';
+
+interface Props {
+  idPrefix?: string;
+  formId?: string;
+  preset?: 'youth' | 'varsity' | 'adult' | 'openmat';
+  /** Free tag for where the form sits; written as data-uwc-source only. */
+  sourceTag?: string;
+  variant?: 'modal' | 'page' | 'inline';
+  submitLabel?: string;
+}
+const { idPrefix = 'v01', formId = 'trialForm', preset, sourceTag, variant = 'modal', submitLabel = 'Confirm $15 3-Day Pass' } = Astro.props;
+---
+<form id={formId} action="https://formspree.io/f/mkjjyyep" method="POST" data-uwc-form="trial_pass" data-uwc-trial-form data-uwc-source={sourceTag} data-trial-variant={variant === "modal" ? undefined : variant}>
+  <div class="form-group">
+    <label class="form-label" for={`${idPrefix}-athlete`}>Athlete Full Name</label>
+    <input type="text" id={`${idPrefix}-athlete`} name="athlete_name" class="form-input" placeholder="e.g. Jordan Smith" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for={`${idPrefix}-parent`}>Parent / Guardian Name (If Youth Athlete)</label>
+    <input type="text" id={`${idPrefix}-parent`} name="parent_name" class="form-input" placeholder="e.g. Michael Smith">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for={`${idPrefix}-phone`}>Phone Number (For SMS Confirmation)</label>
+    <input type="tel" id={`${idPrefix}-phone`} name="phone" class="form-input" placeholder="(510) 303-4869" required>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for={`${idPrefix}-program`}>Target Program</label>
+    <select id={`${idPrefix}-program`} name="program" class="form-select" required>
+      <option value="youth" selected={preset === "youth"}>Youth Wrestling Academy (Ages 5–13)</option>
+      <option value="varsity" selected={preset === "varsity"}>Varsity &amp; Scholastic Prep (Ages 14–18)</option>
+      <option value="adult" selected={preset === "adult"}>Adult Wrestling &amp; Wrestle-Jitsu (18+)</option>
+      <option value="openmat" selected={preset === "openmat"}>Saturday Open Mat ($15 Drop-in)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label" for={`${idPrefix}-source`}>How did you first find United Wrestling Club?</label>
+    <select id={`${idPrefix}-source`} name="self_reported_source" class="form-select" required>
+      <option value="" disabled selected>Select one...</option>
+      <option value="google_search">Google Search (Wrestling near me)</option>
+      <option value="google_maps_reviews">Google Maps / 5-Star Reviews</option>
+      <option value="friend_family_referral">UWC Family / Coach / Teammate Referral</option>
+      <option value="school_tournament">High School / SCWAY Tournament</option>
+      <option value="instagram_social">Instagram / YouTube / Social Media</option>
+      <option value="drove_by_industrial_pkwy">Drove by Facility (Industrial Pkwy)</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <ConsentSms idPrefix={idPrefix} />
+
+  <ConsentMedia idPrefix={idPrefix} />
+
+  <!-- Hidden First-Party Attribution & TCPA Consent Audit Fields (Auto-populated by uwc-attribution.js) -->
+  <input type="hidden" name="uwc_lead_id" value="">
+  <input type="hidden" name="ga_client_id" value="">
+  <input type="hidden" name="initial_referrer" value="">
+  <input type="hidden" name="initial_referring_domain" value="">
+  <input type="hidden" name="initial_landing_page" value="">
+  <input type="hidden" name="initial_utm_source" value="">
+  <input type="hidden" name="initial_utm_medium" value="">
+  <input type="hidden" name="initial_utm_campaign" value="">
+  <input type="hidden" name="initial_channel" value="">
+  <input type="hidden" name="initial_taxonomy" value="">
+  <input type="hidden" name="last_utm_source" value="">
+  <input type="hidden" name="last_utm_medium" value="">
+  <input type="hidden" name="last_utm_campaign" value="">
+  <input type="hidden" name="touch_count" value="">
+  <input type="hidden" name="touch_path_json" value="">
+  <input type="hidden" name="consent_timestamp_utc" value="">
+  <input type="hidden" name="consent_source_url" value="">
+  <input type="hidden" name="consent_disclosure_version" value="v1.0-2026-11">
+  <input type="hidden" name="sms_opt_in_status" value="opted_out_or_unchecked">
+
+  <button type="submit" class="btn btn-primary btn-accent-glow btn-block btn-trial-submit">
+    {submitLabel}
+  </button>
+  <p class="form-status" id={`${idPrefix}-trial-status`} role="status" hidden></p>
+
+  <div class="modal-fineprint">
+    Your request goes to the UWC front desk. The waiver is completed on WrestlingIQ (Team #513). Reply STOP anytime to opt out of texts.
+  </div>
+</form>

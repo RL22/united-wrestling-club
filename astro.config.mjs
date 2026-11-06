@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 
 // Static output. The site is served from the root of its host.
 export default defineConfig({
+  site: 'https://www.unitedwrestlingclub.com',
   output: 'static',
-  build: { format: 'file' },
+  trailingSlash: 'always',
+  build: { format: 'directory' },
 });

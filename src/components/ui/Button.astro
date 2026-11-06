@@ -1,0 +1,23 @@
+---
+// Button or link styled as .btn. `trial` opens the trial modal (shell/PageScripts); `program` is read as data-program.
+interface Props {
+  variant?: 'primary' | 'outline' | 'accent';
+  href?: string;
+  trial?: boolean;
+  program?: 'youth' | 'varsity' | 'adult' | 'openmat';
+  block?: boolean;
+  class?: string;
+}
+const { variant = 'primary', href, trial = false, program, block = false, class: extra = '' } = Astro.props;
+const classes = [
+  'btn',
+  variant === 'outline' ? 'btn-outline' : 'btn-primary',
+  variant === 'accent' ? 'btn-accent-glow' : '',
+  block ? 'btn-block' : '',
+  trial ? 'open-trial-modal' : '',
+  extra,
+].filter(Boolean).join(' ');
+---
+{href && !trial
+  ? <a href={href} class={classes} data-program={program}><slot /></a>
+  : <button type="button" class={classes} data-program={program}><slot /></button>}

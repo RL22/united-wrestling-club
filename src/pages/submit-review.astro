@@ -1,0 +1,18 @@
+---
+// Redirect page (D14). Same behaviour as the root submit-review/index.html, pointed at the reviews form.
+import Layout from '../layouts/Layout.astro';
+const target = '/reviews/#submit-review';
+---
+<Layout title="Redirecting to United Wrestling Club Reviews..." description="Reviews and the submission form now live on one page." path="/reviews/" noindex>
+  <main class="section-block">
+    <div class="container">
+      <div class="redirect-card">
+        <span class="section-eyebrow">Reviews have moved</span>
+        <h1 class="section-title">United Wrestling Club Reviews</h1>
+        <p>Reviews and the submission form now live on one page. Redirecting you now.</p>
+        <a href={target} class="btn btn-primary btn-block">Continue to reviews &rarr;</a>
+      </div>
+    </div>
+  </main>
+  <script is:inline>window.location.replace("/reviews/#submit-review");</script>
+</Layout>

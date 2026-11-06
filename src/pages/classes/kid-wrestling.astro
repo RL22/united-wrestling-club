@@ -1,0 +1,32 @@
+---
+import ClassPage from '../../components/pages/classes-wrestling/ClassPage.astro';
+import { facts } from '../../data/facts';
+---
+<ClassPage
+  title="Kids Wrestling in Hayward, CA | United Wrestling Club"
+  description="Kids wrestling classes at United Wrestling Club in Hayward, CA. Fundamentals, conditioning, character, and fun. Try three practices for $15."
+  path="/classes/kid-wrestling/"
+  eyebrow="Kids (Pre K - 5th)"
+  heading="Kids Wrestling"
+  lead="Young athletes age 4 to 11 learn the fundamentals of wrestling while building discipline, dedication, and accountability, on the mat and off it."
+  facts={[
+    { label: 'Class', value: 'Kids (Pre K - 5th)' },
+    { label: facts.programs.youth.name, value: facts.programs.youth.ages },
+  ]}
+  sections={[
+    { title: 'Introduction to Wrestling', body: 'We introduce the basic concept and rules of wrestling in a fun and engaging way, so young athletes understand and appreciate the sport.' },
+    { title: 'Fundamental Techniques', body: 'Coaches teach stance, footwork, takedowns, escapes, and pinning combinations through repetitive drills and hands-on instruction.' },
+    { title: 'Physical Conditioning', body: 'Age-appropriate conditioning exercises and drills improve strength, agility, and endurance.' },
+    { title: 'Character Development', body: 'Through discussions, activities, and real-life examples, kids learn how discipline, dedication, and accountability help them reach their goals.' },
+    { title: 'Goal Setting', body: 'Kids learn to set specific, achievable goals and get the tools and strategies to work toward them with determination and perseverance.' },
+    { title: 'Teamwork and Sportsmanship', body: 'Wrestling is both an individual and a team sport. We emphasize teamwork, respect for coaches and teammates, and good sportsmanship in a supportive and inclusive room.' },
+    { title: 'Fun and Games', body: 'Classes include games, challenges, and friendly competitions to keep kids engaged.' },
+  ]}
+  prices={[
+    { label: 'Kids (Pre K - 5th) 2 Day', value: '$89.99 per month' },
+    { label: '4 Day Kids', value: '$139.99 per month' },
+  ]}
+  coachNames={['Naweed Zemaryalai', 'Sandeep Singh Gosal']}
+  schedule={{ program: 'youth', tag: 'kids' }}
+  trialProgram="youth"
+/>

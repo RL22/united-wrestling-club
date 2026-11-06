@@ -1,0 +1,40 @@
+---
+import TrialForm from '../forms/TrialForm.astro';
+---
+
+  <div class="modal-overlay" id="trialModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      
+      <div id="modalFormContainer">
+        <div class="modal-brand-row">
+          <img src="/live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Emblem" class="modal-logo">
+          <div>
+            <span class="section-eyebrow eyebrow-tight">3-DAY MAT PASS • $15</span>
+            <h3 class="modal-title">Step Onto the&nbsp;Mat</h3>
+          </div>
+        </div>
+        <p class="modal-sub">Enter your details below to claim your 3 consecutive training sessions. Coach Naweed will reach out to confirm your gear and class time.</p>
+
+        <TrialForm />
+        <p class="modal-fineprint"><a href="/register/">Prefer a full page? Reserve on our booking page &rarr;</a></p>
+      </div>
+
+      <!-- Success State -->
+      <div class="modal-success-state" id="modalSuccessState">
+        <div class="success-icon">✓</div>
+        <h3 class="modal-title modal-title--success">Pass Reserved!</h3>
+        <p class="modal-sub modal-sub--tight" id="v01-success-sub">
+          Coach Naweed has received your request. Complete your registration in WrestlingIQ or text Coach Naweed directly below.
+        </p>
+        <div class="pass-summary">
+          <div><strong>Address:</strong> 30139 Industrial Pkwy SW Ste C, Hayward, CA</div>
+          <div class="pass-summary-row"><strong>Locker Arrival:</strong> 15 minutes before scheduled class</div>
+          <div class="pass-summary-row"><strong>Attire:</strong> T-shirt and gym shorts (no pockets)</div>
+          <div class="pass-summary-row" id="v01-sms-status-row"><strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)</div>
+        </div>
+        <a href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" id="v01-wiq-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-accent-glow btn-block btn-wiq">Complete in WrestlingIQ (Team #513) &nearr;</a>
+        <button class="btn btn-outline btn-block" id="modalDoneBtn">Close</button>
+      </div>
+    </div>
+  </div>

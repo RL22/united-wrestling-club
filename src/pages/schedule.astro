@@ -1,0 +1,50 @@
+---
+import InteriorLayout from '../layouts/InteriorLayout.astro';
+import PageHero from '../components/ui/PageHero.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import ScheduleList from '../components/ui/ScheduleList.astro';
+import FactList from '../components/ui/FactList.astro';
+import TrialForm from '../components/forms/TrialForm.astro';
+import { facts } from '../data/facts';
+
+const groups = [
+  { id: 'youth', ...facts.programs.youth },
+  { id: 'varsity', ...facts.programs.varsity },
+  { id: 'adult', ...facts.programs.adult },
+  { id: 'open', ...facts.programs.openMat },
+];
+---
+<InteriorLayout
+  title="Class Schedule | United Wrestling Club Hayward"
+  description="Weekly class times for youth, varsity, and adult wrestling and jiu-jitsu at United Wrestling Club in Hayward, CA."
+  path="/schedule/"
+  cta={false}
+>
+  <PageHero eyebrow="CLASS TIMES" title="Class" titleBrand="Schedule" lead="View our comprehensive class schedule and find the perfect time to train." compact />
+  {groups.map((g) => (
+    <section class="section-block" aria-labelledby={`sch-${g.id}`}>
+      <div class="container">
+        <SectionHeader title={g.name} lead={g.ages} id={`sch-${g.id}`} />
+        <ScheduleList program={g.id} />
+      </div>
+    </section>
+  ))}
+  <section class="section-block section-block--raised" aria-labelledby="sch-hours">
+    <div class="container">
+      <SectionHeader title="Gym hours" id="sch-hours" />
+      <FactList show="hours" />
+    </div>
+  </section>
+  <section class="section-block" aria-labelledby="sch-trial">
+    <div class="container">
+      <SectionHeader title="Try three practices for $15" lead={facts.booking.howTo} id="sch-trial" />
+      <div class="schedule-trial-form">
+        <TrialForm idPrefix="sch" formId="scheduleTrialForm" variant="inline" sourceTag="schedule-f1b" />
+      </div>
+    </div>
+  </section>
+</InteriorLayout>
+
+<style>
+  .schedule-trial-form { max-width: 560px; margin: 0 auto; }
+</style>

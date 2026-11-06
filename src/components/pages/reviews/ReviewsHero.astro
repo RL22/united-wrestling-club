@@ -1,0 +1,20 @@
+---
+import PageHero from '../../ui/PageHero.astro';
+import PlatformCards from './PlatformCards.astro';
+---
+<PageHero
+  id="reviews-page-heading"
+  eyebrow="Verified Social Proof · Hayward, CA · RTC #513"
+  title="United Wrestling Club"
+  titleBrand="Reviews"
+  lead="5.0 ★ verified reviews from East Bay youth parents, CIF high school competitors, and adult grapplers training on the mat at 30139 Industrial Pkwy SW. Read authentic member experiences or share your story below."
+>
+  <div class="trust-score">
+    <span class="trust-score-figure">5.0</span>
+    <span class="trust-score-max">/ 5.0</span>
+    <span class="trust-stars" aria-label="5.0 out of 5 stars">★★★★★</span>
+    <!-- D13 resolved (D26): the owner confirmed the review stats from the Google Business Profile. -->
+    <p class="trust-score-sub">42+ Verified Reviews Across Platforms</p>
+  </div>
+  <PlatformCards />
+</PageHero>
