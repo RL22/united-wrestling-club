@@ -6,4 +6,5 @@
 | [`2026-11-02_naweed_discovery-call.md`](2026-11-02_naweed_discovery-call.md) | call | current | 2026-11-02 | United Wrestling Club (UWC): Discovery & Strategy Call Notes |
 | [`company_profile.md`](company_profile.md) | dossier | current | 2026-10-29 | Company Profile: United Wrestling Club |
 | [`naweed_discovery_questions.md`](naweed_discovery_questions.md) | dossier | current | 2026-10-30 | Client Discovery Questions for Coach Naweed & Karim Zemaryalai |
+| [`open_questions_for_naweed.md`](open_questions_for_naweed.md) | spec | draft | 2026-11-06 | Open questions for Naweed |
 | [`uwc_live_funnel_test_log.md`](uwc_live_funnel_test_log.md) | audit | current | 2026-11-04 | UWC Live Sales Funnel Audit & Mystery-Shopper Test Log |
