@@ -21,7 +21,7 @@ United Wrestling Club has an exceptional reputation in Alameda County (5.0 ★ o
      - Yelp: `https://biz.yelp.com` / UWC listing
      - Facebook: `https://www.facebook.com/unitedwrestlingclub`
 3. **Legacy Route Redirection:**
-   - Added a 0-second client-side `<meta http-equiv="refresh">` and JavaScript redirection at [`submit-review/index.html`](../archive/legacy-site/submit-review/index.html) pointing to `../reviews/`.
+   - Added a 0-second client-side `<meta http-equiv="refresh">` and JavaScript redirection at the legacy redirect page (removed 2026-11-06) pointing to `../reviews/`.
 
 ## Alternatives Rejected
 1. **Third-Party SaaS Review Gateways (e.g. Birdeye, Podium, Broadly):** Rejected due to high ongoing monthly SaaS costs (\$250–\$400/mo) and unnecessary complexity for a single-location gym.
@@ -29,7 +29,6 @@ United Wrestling Club has an exceptional reputation in Alameda County (5.0 ★ o
 
 ## Impacted Files
 - `reviews/index.html`
-- `submit-review/index.html`
 - `index.html`
 - `v01/index.html`
 - `v03/index.html`

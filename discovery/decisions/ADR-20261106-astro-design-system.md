@@ -26,7 +26,7 @@ The Astro homepage carried one 78 KB `global.css` plus component styles that dup
 
 ## Addendum (2026-11-05): production serves the Astro build
 
-1. **Deploy source changed.** Production (Vercel project `united-wrestling-club`) serves the Astro build output in `site/dist/`, deployed on 2026-11-05. The root static pages (`v01/`, `reviews/`, `register/`, `contact/`, `about/`, `submit-review/`) are no longer deployed.
+1. **Deploy source changed.** Production (Vercel project `united-wrestling-club`) serves the Astro build output in `site/dist/`, deployed on 2026-11-05. The root static pages (`v01/`, `reviews/`, `register/`, `contact/`, `about/`) are no longer deployed.
 2. **Publish allowlist.** `site/public/` is the only source of static files that ship besides Astro page output. Anything placed there is public. Build output is checked with `scripts/check_dist.py --final` and `scripts/copy_audit.sh site/dist` before deploy.
 3. **Build toolchain.** Astro requires Node `>=22.23.4` (`site/package.json` engines). Builds in this repo ran on Node 26.13.0 via mise.
 4. **Vercel link folder.** `vercel deploy` writes `site/dist/.vercel/`. Vercel does not serve dot-folders (verified: `/.vercel/project.json` returns 404), and `/site/dist/` is git-ignored.

@@ -90,7 +90,7 @@ sources: ["assets/js/uwc-attribution.js", "portal/index.html", "discovery/strate
   - *Live:* Ad-hoc coach check-ins and WrestlingIQ roster broadcasts; ~7.5%/mo estimated churn with November/May seasonal dips.
   - *Built & Ready:* 4-flow SMS Playbook + 3-sequence Email Playbook + Seasonal 6/12-month Paid-In-Full (PIF) loyalty architecture.
 - **Referral:**
-  - *Live:* Organic family word-of-mouth; 42 5.0★ Google reviews; legacy `/submit-review/` client-side redirect.
+  - *Live:* Organic family word-of-mouth; 42 5.0★ Google reviews.
   - *Built & Ready:* Branded `/reviews/` hub + Day-21 automated SMS/Email review & buddy-pass referral engine + Quarterly Community Day & BJJ Mixer.
 - **Revenue:**
   - *Live:* 8 WrestlingIQ plans ($139.99/mo core unlimited, $89.99/mo 2-day kids, $150/mo competition youth, $100/mo BJJ, $15 trial/drop-in).

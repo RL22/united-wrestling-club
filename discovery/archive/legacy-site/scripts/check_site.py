@@ -13,7 +13,7 @@ from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGES = ["v01/index.html", "reviews/index.html", "register/index.html",
-         "contact/index.html", "about/index.html", "submit-review/index.html"]
+         "contact/index.html", "about/index.html"]
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "param", "source", "track", "wbr"}
 SKIP_PREFIXES = ("http://", "https://", "mailto:", "tel:", "sms:", "#", "data:", "javascript:")

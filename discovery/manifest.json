@@ -1310,6 +1310,18 @@
       "replaced_by": null
     },
     {
+      "path": "client/open_questions_for_naweed.md",
+      "title": "Open questions for Naweed",
+      "status": "draft",
+      "group": "client",
+      "type": "spec",
+      "owner": "Rodney Lewis (Sprintz)",
+      "date": "2026-11-06",
+      "last_reviewed": "2026-11-06",
+      "sources": 11,
+      "replaced_by": null
+    },
+    {
       "path": "client/uwc_live_funnel_test_log.md",
       "title": "UWC Live Sales Funnel Audit & Mystery-Shopper Test Log",
       "status": "current",

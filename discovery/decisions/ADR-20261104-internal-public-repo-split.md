@@ -9,7 +9,7 @@ The project mixed client-confidential discovery, research, call notes, marketing
 
 ## Approved Solution
 1. **Internal repo is private.** `RL22/united-wrestling-club-internal` holds everything: discovery, research, call notes, marketing plans, the portal, ADRs, and the working site files.
-2. **Public repo holds site files only.** `RL22/united-wrestling-club` (branch `gPages`, Pages from root) contains the homepage at `/`, `reviews/`, `register/`, `contact/`, `submit-review/`, `assets/`, and the media the pages reference. Nothing else.
+2. **Public repo holds site files only.** `RL22/united-wrestling-club` (branch `gPages`, Pages from root) contains the homepage at `/`, `reviews/`, `register/`, `contact/`, `assets/`, and the media the pages reference. Nothing else.
 3. **Publishing is a deliberate copy.** Site files are copied from the internal repo into the public repo and pushed to `gPages`. There is no automated sync yet; the public root `index.html` is a one-off copy with `../` paths stripped.
 4. **Same public URL throughout:** `https://rl22.github.io/united-wrestling-club/`.
 
@@ -20,4 +20,4 @@ The project mixed client-confidential discovery, research, call notes, marketing
 
 ## Impacted Files
 - `discovery/` (internal only, never published)
-- Public repo `gPages` root: `index.html`, `assets/`, `reviews/`, `register/`, `contact/`, `submit-review/`
+- Public repo `gPages` root: `index.html`, `assets/`, `reviews/`, `register/`, `contact/`
