@@ -23,6 +23,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [x] Hosting: Vercel production deployed early on 2026-11-05 by owner decision; GitHub Pages staging retired (ADR-20261105-public-preview-github-pages addendum)
 - [x] README rewritten around current routes, run, and publish steps
 - [x] Static site check: `scripts/check_site.py` (passes on all five site pages)
+- [x] Depth section (parallax cutouts over "CHAMPIONS") removed from the homepage, with its CSS and scroll script (2026-11-05, owner decision). The three `video_assets/cutouts/naweed-*.webp` files are now unused.
 
 ---
 

@@ -468,22 +468,6 @@
     </div>
   </section>
 
-      <!-- 6b. Layered depth section: cutout coach over type, subtle scroll parallax -->
-  <section class="depth-section" aria-labelledby="depth-heading">
-    <div class="depth-outline-word" aria-hidden="true">CHAMPIONS</div>
-    <div class="container depth-inner">
-      <div class="depth-copy">
-        <span class="section-eyebrow">COACHED IN PERSON</span>
-        <h2 class="section-title" id="depth-heading">A coach on your mat, every practice.</h2>
-        <p class="section-lead">Head Coach Naweed Zemaryalai runs the room at a 1:6 coach-to-athlete ratio, so every athlete gets corrections on the mat.</p>
-        <a href="#schedule" class="btn btn-outline">See practice times</a>
-      </div>
-      <img class="depth-layer depth-back" data-depth="0.4" src="../video_assets/cutouts/naweed-hoodie-wall.webp" alt="" width="900" height="900" loading="lazy">
-      <img class="depth-layer depth-main" data-depth="0.7" src="../video_assets/cutouts/naweed-champion-portrait.webp" alt="Head Coach Naweed Zemaryalai" width="675" height="900" loading="lazy">
-      <img class="depth-layer depth-front" data-depth="1.1" src="../video_assets/cutouts/naweed-white-polo.webp" alt="" width="579" height="900" loading="lazy">
-    </div>
-  </section>
-
     <!-- 8. Pricing & The $15 Mat Pass - Balanced 3 Columns: 0 Orphans -->
   <section class="pricing-section" id="pricing">
     <div class="container">
@@ -1156,34 +1140,6 @@
           select(next);
         });
       });
-    })();
-  </script>
-  <script>
-    (function () {
-      var section = document.querySelector('.depth-section');
-      if (!section || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var layers = section.querySelectorAll('[data-depth]');
-      var ticking = false;
-
-      function update() {
-        var r = section.getBoundingClientRect();
-        var vh = window.innerHeight;
-        var progress = (vh - r.top) / (vh + r.height);
-        var p = Math.min(Math.max(progress, 0), 1) - 0.5;
-        layers.forEach(function (el) {
-          var offset = p * parseFloat(el.dataset.depth) * -120;
-          el.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0)';
-        });
-        ticking = false;
-      }
-
-      window.addEventListener('scroll', function () {
-        if (!ticking) {
-          ticking = true;
-          window.requestAnimationFrame(update);
-        }
-      }, { passive: true });
-      update();
     })();
   </script>
 </body>
