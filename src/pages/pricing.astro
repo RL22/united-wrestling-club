@@ -11,9 +11,8 @@ const U = (id: number) => `https://www.wrestlingiq.com/users/sign_up?paid_sessio
 const plans = [
   { name: 'DROP IN', price: '15.00', period: 'per day', schedule: 'Flexible attendance', featured: false, url: U(2664) },
   { name: 'Kids (Pre k - 5th) 2 Day', price: '89.99', period: '/mo', schedule: 'Monday & Wednesday Only', featured: false, url: U(1087) },
-  { name: '4 Day Kids', price: '139.99', period: '/mo', schedule: 'Monday - Thursday', featured: false, url: U(4981) },
   { name: 'Middle School / High School', price: '139.99', period: '/mo', schedule: 'Monday - Saturday', featured: false, url: U(2286) },
-  { name: 'Competition Youth (Pre K - 12th)', price: '150.00', period: '/mo', schedule: 'Monday - Saturday', featured: true, url: U(3574) },
+  { name: 'Competition Youth (K - 12th)', price: '150.00', period: '/mo', schedule: 'Monday - Saturday', featured: true, url: U(3574) },
   { name: 'ADULT / COLLEGE / HIGHSCHOOL', price: '139.99', period: '/mo', schedule: 'Monday - Saturday', featured: false, url: U(1084) },
   { name: 'BJJ / 3 days', price: '100', period: '/mo', schedule: '', featured: false, url: U(9536) },
 ];
@@ -22,6 +21,7 @@ const plans = [
   title="Membership Options and Pricing | United Wrestling Club Hayward"
   description="Membership options, drop-in rates, and the $15 3-day trial at United Wrestling Club in Hayward, CA."
   path="/pricing/"
+  current="pricing"
   cta={false}
 >
   <PageHero eyebrow="PRICING" title="Membership" titleBrand="Options" lead="Invest in your wrestling journey with our flexible membership plans designed to fit your needs." compact />

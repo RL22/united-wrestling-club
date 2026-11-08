@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <!-- Secondary 4-Column Coaching Staff Row -->
+      <!-- Secondary Coaching Staff Row -->
       <div class="coaches-secondary-wrap">
         <div class="coaches-secondary-header">
           <span class="section-eyebrow">THE CORNER · EAST BAY COACHING STAFF</span>
@@ -80,7 +80,7 @@
             </div>
           </article>
 
-          <!-- Coach 4: Farid Siddiq -->
+          <!-- Coach 3: Farid Siddiq -->
           <article class="coach-card-secondary">
             <div class="coach-photo-secondary">
               <img src="/video_assets/stills_selected/still_49_sergio_gomez_striking_usa_wrestling_olympic_banner.jpg" alt="Coach Farid Siddiq coaching combat striking mechanics under the USA Wrestling banner" loading="lazy" width="800" height="600">
@@ -164,7 +164,7 @@
 
   .coach-grid-secondary {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
   }
 
@@ -261,9 +261,9 @@
     text-wrap: pretty;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
     .coach-grid-secondary {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 

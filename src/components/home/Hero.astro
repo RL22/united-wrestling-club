@@ -52,10 +52,10 @@
 
   .hero-section {
     position: relative;
-    min-height: 75vh;
-    min-height: 75svh;
+    min-height: 95vh;
+    min-height: 95svh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     padding: 60px 0 70px;
     background-color: #060709;
     border-bottom: 1px solid var(--color-border-default);
@@ -78,6 +78,22 @@
     object-fit: cover;
     object-position: center 36%;
     filter: brightness(0.82) contrast(1.10) saturate(1.15);
+  }
+
+  /* Move only the footage; the scrim and copy stay anchored for readability. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-video {
+        animation: hero-parallax linear both;
+        animation-timeline: scroll(root block) !important;
+        animation-range: 0px 95svh;
+      }
+
+      @keyframes hero-parallax {
+        from { transform: scale(1.12) translateY(0); }
+        to { transform: scale(1.12) translateY(5%); }
+      }
+    }
   }
 
   /* Unsplash Grunge 001 Texture Overlay - Lightened for 1080p Mat Clarity */
@@ -158,13 +174,13 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 
   @media (max-width: 768px) {
     .hero-section {
-      min-height: 75vh;
-      min-height: 75svh;
+      min-height: 95vh;
+      min-height: 95svh;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -182,7 +198,7 @@
       flex-direction: column;
       justify-content: space-between;
       padding-top: 20px;
-      padding-bottom: 24px;
+      padding-bottom: 72px;
       box-sizing: border-box;
       position: relative;
       z-index: 3;

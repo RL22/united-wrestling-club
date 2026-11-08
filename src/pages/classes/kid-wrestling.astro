@@ -1,6 +1,5 @@
 ---
 import ClassPage from '../../components/pages/classes-wrestling/ClassPage.astro';
-import { facts } from '../../data/facts';
 ---
 <ClassPage
   title="Kids Wrestling in Hayward, CA | United Wrestling Club"
@@ -8,10 +7,9 @@ import { facts } from '../../data/facts';
   path="/classes/kid-wrestling/"
   eyebrow="Kids (Pre K - 5th)"
   heading="Kids Wrestling"
-  lead="Young athletes age 4 to 11 learn the fundamentals of wrestling while building discipline, dedication, and accountability, on the mat and off it."
+  lead="Young athletes in pre-K through 5th grade learn the fundamentals of wrestling while building discipline, dedication, and accountability, on the mat and off it."
   facts={[
     { label: 'Class', value: 'Kids (Pre K - 5th)' },
-    { label: facts.programs.youth.name, value: facts.programs.youth.ages },
   ]}
   sections={[
     { title: 'Introduction to Wrestling', body: 'We introduce the basic concept and rules of wrestling in a fun and engaging way, so young athletes understand and appreciate the sport.' },
@@ -24,7 +22,6 @@ import { facts } from '../../data/facts';
   ]}
   prices={[
     { label: 'Kids (Pre K - 5th) 2 Day', value: '$89.99 per month' },
-    { label: '4 Day Kids', value: '$139.99 per month' },
   ]}
   coachNames={['Naweed Zemaryalai', 'Sandeep Singh Gosal']}
   schedule={{ program: 'youth', tag: 'kids' }}

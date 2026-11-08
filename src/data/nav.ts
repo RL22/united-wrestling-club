@@ -2,26 +2,27 @@
 export type NavItem = { label: string; href: string; id?: string; optional?: boolean };
 
 export const primaryNav: NavItem[] = [
-  { id: 'classes', label: 'Classes', href: '#programs' },
-  { id: 'schedule', label: 'Schedule', href: '#schedule' },
-  { id: 'coaches', label: 'Coaches', href: '#coaches', optional: true },
-  { id: 'reviews', label: 'Reviews', href: '#testimonials' },
-  { id: 'pricing', label: 'Pricing', href: '#pricing' },
+  { id: 'classes', label: 'Classes', href: '/classes/' },
+  { id: 'schedule', label: 'Schedule', href: '/schedule/' },
+  { id: 'coaches', label: 'Coaches', href: '/#coaches', optional: true },
+  { id: 'reviews', label: 'Reviews', href: '/reviews/' },
+  { id: 'pricing', label: 'Pricing', href: '/pricing/' },
 ];
 
 export const mobileNav: NavItem[] = [
-  { label: 'Classes & Schedule', href: '#programs' },
-  { label: 'Coaches', href: '#coaches' },
-  { label: 'Reviews', href: '#testimonials' },
-  { label: 'Pricing ($139.99/mo)', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Find Us', href: '#visit' },
+  { label: 'Classes', href: '/classes/' },
+  { label: 'Schedule', href: '/schedule/' },
+  { label: 'Coaches', href: '/#coaches' },
+  { label: 'Reviews', href: '/reviews/' },
+  { label: 'Pricing', href: '/pricing/' },
+  { label: 'FAQ', href: '/faqs/' },
+  { label: 'Find Us', href: '/locations/hayward-ca/' },
   { label: 'Contact', href: '/contact/' },
 ];
 
 export const footerPrograms: NavItem[] = [
-  { label: 'Youth Wrestling (Ages 5–13)', href: '#programs' },
-  { label: 'Varsity Scholastic Prep (14–18)', href: '#programs' },
+  { label: 'Youth Wrestling', href: '#programs' },
+  { label: 'Varsity Scholastic Prep (Middle and high school)', href: '#programs' },
   { label: 'Adult Wrestling & Grappling', href: '#programs' },
   { label: 'Combat Sambo & BJJ', href: '#programs' },
   { label: 'Saturday Open Mat ($15)', href: '#programs' },

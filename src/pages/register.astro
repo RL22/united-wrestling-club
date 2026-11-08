@@ -7,32 +7,32 @@ import RegisterScript from '../components/pages/register/RegisterScript.astro';
 ---
 <InteriorLayout
   title="Start Your $15 3-Day Mat Pass | United Wrestling Club Hayward"
-  description="Reserve a $15 three-day mat pass at United Wrestling Club in Hayward, CA. Youth, scholastic, and adult classes. No contract."
+  description="Request a $15 three-day mat pass at United Wrestling Club in Hayward, CA. Youth, scholastic, and adult classes. No contract."
   path="/register/"
   cta={false}
 >
-  <PageHero id="register-heading" compact eyebrow="$15 · 3-Day Mat Pass" title="Try three practices" titleBrand="for $15" lead="Send your details and we text your confirmation, parking, and arrival instructions for Suite C. Then complete the waiver on WrestlingIQ (Team #513)." />
+  <PageHero id="register-heading" compact eyebrow="$15 · 3-Day Mat Pass" title="Try three practices" titleBrand="for $15" lead="Send your details to request a pass. For questions about your first visit, call the club. You can complete registration and the waiver on WrestlingIQ (Team #513)." />
   <section class="section-block" aria-labelledby="register-form-heading">
     <div class="container">
       <div class="register-grid">
         <div class="form-card">
-          <h2 class="section-title" id="register-form-heading">Reserve your pass</h2>
+          <h2 class="section-title" id="register-form-heading">Request your pass</h2>
           <p class="section-lead">Takes under a minute. No credit card on this form.</p>
           <TrialForm variant="page" formId="registerForm" idPrefix="reg" />
         </div>
         <aside class="contact-card" aria-label="What happens next">
           <h3 class="contact-card-title">What happens next</h3>
           <ol class="steps-list">
-            <li><strong>Send your details.</strong> The front desk gets your request.</li>
-            <li><strong>Get your confirmation.</strong> If you opted in, we text your arrival instructions for Suite C.</li>
-            <li><strong>Complete your waiver.</strong> The 60-second waiver is on WrestlingIQ (Team #513).</li>
+            <li><strong>Send your details.</strong> Submit the form to request a pass.</li>
+            <li><strong>Questions about your visit?</strong> Call the club for arrival information.</li>
+            <li><strong>Complete registration.</strong> Use the WrestlingIQ link to continue.</li>
           </ol>
           <p class="contact-card-note">Questions first? Call <a href={facts.phone.tel} class="footer-phone">{facts.phone.display}</a>.</p>
         </aside>
       </div>
       <div class="form-success" id="reg-success" hidden>
-        <h2 class="section-title">You're reserved</h2>
-        <p class="section-lead">Complete your 60-second waiver on WrestlingIQ to lock in your pass.</p>
+        <h2 class="section-title">Request sent</h2>
+        <p class="section-lead">Continue to WrestlingIQ to complete registration and the waiver.</p>
         <a href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513" id="reg-wiq-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-accent-glow btn-block">Complete waiver on WrestlingIQ &nearr;</a>
       </div>
     </div>
