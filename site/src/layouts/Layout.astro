@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { LAUNCHED } from '../data/indexing';
 
 interface Props {
   title?: string;
@@ -19,6 +20,7 @@ const {
   noindex = false,
 } = Astro.props;
 
+const isNoindex = noindex || !LAUNCHED;
 const canonical = path ? new URL(path, Astro.site ?? 'https://www.unitedwrestlingclub.com').href : undefined;
 const ldList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
@@ -29,7 +31,7 @@ const ldList = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content={description}>
-  {noindex && <meta name="robots" content="noindex, follow">}
+  {isNoindex && <meta name="robots" content="noindex, follow">}
   {canonical && <link rel="canonical" href={canonical}>}
 
   <!-- Favicon / Fonts -->
