@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { routes } from '../data/routes';
 import { facts } from '../data/facts';
+import { LAUNCHED } from '../data/indexing';
 
 type Section = { heading: string; lines: string[] };
 
@@ -23,7 +24,7 @@ const sectionsByPath: Record<string, Section[]> = {
     {
       heading: 'Programs',
       lines: [facts.programs.youth, facts.programs.varsity, facts.programs.adult, facts.programs.openMat].map(
-        (p) => `${p.name} (${p.ages})`,
+        (p) => `${p.name}`,
       ),
     },
     {
@@ -39,6 +40,9 @@ const sectionsByPath: Record<string, Section[]> = {
 
 // Full text of every built route, with its facts. Same route set as llms.txt.
 export const GET: APIRoute = ({ site }) => {
+  if (!LAUNCHED) {
+    return new Response('United Wrestling Club site preview. Not yet launched.\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+  }
   const blocks = routes
     .filter((r) => r.status === 'built')
     .map((r) => {

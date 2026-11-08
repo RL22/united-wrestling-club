@@ -1,4 +1,4 @@
-// The 10 FAQ items, verbatim from discovery/archive/legacy-site/live_site_content/faqs.md (owner confirmed). Whitespace only is collapsed.
+// FAQ content. Trial and grade guidance follow the recorded offer and OC-14.
 import type { Faq } from '../../../data/faqs';
 
 export const faqItems: Faq[] = [
@@ -6,10 +6,10 @@ export const faqItems: Faq[] = [
   { q: 'Do I need prior experience to join?', a: 'No prior experience is required to join our wrestling club. We welcome individuals of all skill levels from complete beginners to seasoned wrestlers. Our experienced coaches provide instruction tailored to the needs and abilities of each participant.' },
   { q: 'What should I wear to training sessions?', a: 'Participants should wear comfortable athletic attire suitable for physical activity such as shorts or athletic pants with no zippers and a t-shirt. Wrestling shoes are recommended but not required for beginners. For safety reasons jewelry and other accessories should be removed before training.' },
   { q: 'Are there any membership fees?', a: 'Yes we have membership fees to cover the cost of coaching facilities and equipment. Please contact us or visit our website for information on membership options and pricing. Resources are available for those who cannot cover the entire cost.' },
-  { q: 'Do you offer free trial sessions?', a: 'Yes we offer trial sessions for individuals interested in trying out our wrestling club before committing to a membership. Trial sessions provide an opportunity to experience our training environment, meet our coaches and learn more about our programs.' },
+  { q: 'Do you offer a trial?', a: 'New members can try three practices for $15. Contact the club or use the trial form to get started.' },
   { q: 'What can I expect during a typical training session?', a: 'Our training sessions typically include a combination of warm-up exercises skill drills technique instruction live wrestling and conditioning exercises. Sessions are structured to provide a comprehensive workout while focusing on skill development and improvement.' },
   { q: 'Do you offer competition opportunities?', a: 'Yes we offer competition opportunities for members who are interested in testing their skills in wrestling competitions. Our coaches can provide guidance and support to participants interested in competing at local regional and national levels.' },
-  { q: 'Is there a minimum age requirement for kid participants?', a: 'We typically recommend a minimum age of 4-5 years old for kids participants but exceptions may be made on a case-by-case basis. We prioritize safety and ensure that training sessions are age-appropriate for younger participants.' },
+  { q: 'Which grades can begin training?', a: 'The kids wrestling class is for athletes in pre-K through 5th grade. Contact the club for help choosing the right practice.' },
   { q: 'Can I train for fitness purposes only without competing?', a: 'Yes many of our members train for fitness and recreational purposes without any intention of competing in wrestling competitions. Our programs cater to individuals with diverse goals whether they\'re aiming to improve their fitness, learn self-defense skills or simply enjoy the sport of wrestling.' },
   { q: 'How do I get started?', a: 'Getting started is easy! Simply visit www.unitedwrestlingclub.com and register. You can also contact us to inquire about membership options, trial sessions or any other questions you may have. Our friendly staff will be happy to assist you in joining our wrestling club and embarking on your wrestling journey.' },
 ];

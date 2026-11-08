@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "astro build && node scripts/check-publish.mjs",
+    "preview": "astro preview",
+    "build:held-preview": "UWC_INCLUDE_HELD=true astro build"
   },
   "keywords": [],
   "author": "",
