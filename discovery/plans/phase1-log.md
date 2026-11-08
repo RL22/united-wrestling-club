@@ -172,3 +172,17 @@ B5 sha256:
     d0ba99c409f0bd59c83b4f82f7b4094f03ad59f60cae8e5c96beabb02457148c  home-768.json
     11657ab3b5305ca8e31b90964c18ad946a8c65b4724bcbad62ce1aa451c777db  home-900.json
     33a7742d714c962f291c062d1ceecd3b3e6031bf18de3210a1799ac55ac42f28  home-text.json
+
+## Owner decisions, 2026-11-07 (D-register follow-up)
+
+- **D1 (approved):** the Saturday 8:00 to 10:00 AM gi row is shown. `site/src/data/schedule.ts` row-11 no longer carries `pending`.
+- **D3 (approved for staging only):** the Combat Sambo page (`site/src/pages/classes/sambo.astro`) goes to a Vercel preview. It is held from the live site until the owner approves publishing.
+- **D4 (hold):** women's self-defense stays omitted.
+- **D5 (accepted):** minors' imagery stays as it is. No change.
+- **D6 (hold):** `/donate/` stays omitted.
+- **D7 (accepted):** `/rules/` text stays as it is.
+- **D9 (approved):** the homepage safety claims stand. The mat size changes from 3,000 to 3,800 sq ft to match OC-11 (`site/src/components/home/Safety.astro`).
+- **D10 (draft applied, owner to confirm):** footer tagline replaced with "Wrestling and grappling for kids, teens, and adults in Hayward, California." (the word "Olympic" is blocked by the copy audit in new text) (`site/src/components/shell/SiteFooter.astro`). The "Dagestani lineage" sentence on the About page is unchanged.
+- **D11 (hold):** city pages wait on research.
+- **D12 (hold):** guides wait on research and a named author.
+- **D20 (approved):** "forged in Dagestan" stays as written. No change.
