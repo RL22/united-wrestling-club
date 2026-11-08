@@ -1,0 +1,446 @@
+/* Forms, consent, status, newsletter, contact. A selector lives in exactly one file, with every @media override after its base rule. */
+
+.tcpa-consent-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+
+.tcpa-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--color-text-strong);
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.tcpa-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.tcpa-optout-note {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-top: 8px;
+  padding-left: 28px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-strong);
+  margin-bottom: 6px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  min-height: 46px;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  color: var(--color-text-strong);
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 2px rgba(144, 37, 36, 0.25);
+}
+
+/* Submission form */
+
+.form-card {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 40px);
+  background: var(--color-canvas);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+.form-card .section-head {
+  margin-bottom: 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0 20px;
+}
+
+.form-textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-strong);
+  transition: border-color 0.2s ease;
+}
+
+.form-textarea:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 2px rgba(144, 37, 36, 0.25);
+}
+
+.form-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.form-optional {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
+}
+
+.required {
+  color: var(--color-brand-text);
+}
+
+.star-selector {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+.star-buttons-group {
+  display: flex;
+  gap: 4px;
+}
+
+.star-btn {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--color-border-default);
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.star-btn.active,
+.star-btn.hover {
+  color: var(--color-accent);
+}
+
+.star-btn:hover {
+  transform: scale(1.08);
+}
+
+.star-rating-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-text-strong);
+}
+
+.dropzone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--color-surface-1);
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropzone:hover,
+.dropzone:focus-within,
+.dropzone.dragover {
+  border-color: var(--color-brand-text);
+  background-color: rgba(144, 37, 36, 0.12);
+}
+
+.dropzone input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropzone-icon {
+  font-size: 1.4rem;
+}
+
+.dropzone-text {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.dropzone-text strong {
+  color: var(--color-text-strong);
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.preview-grid:empty {
+  display: none;
+}
+
+.preview-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+}
+
+.preview-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-canvas);
+  color: var(--color-text-strong);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.platform-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.platform-checkbox:has(input:checked) {
+  border-color: var(--color-border-brand);
+}
+
+.platform-checkbox input {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--color-brand);
+}
+
+.platform-info strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: var(--color-text-strong);
+}
+
+.platform-info span {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.form-actions {
+  margin-top: 28px;
+}
+
+@media (max-width: 640px) {
+  .form-card {
+    padding: 22px 18px;
+  }
+}
+
+.form-status {
+  margin: 12px 0 0;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.form-success {
+  margin-top: 8px;
+  padding: 28px;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+.form-success .section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.newsletter-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.newsletter-form .form-input {
+  min-height: 44px;
+}
+
+.newsletter-form .tcpa-checkbox-label {
+  font-size: 0.8rem;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+.register-grid > .form-card {
+  max-width: none;
+  margin: 0;
+}
+
+.register-grid .section-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.contact-card {
+  padding: 28px;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+.contact-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-strong);
+  margin: 0 0 12px;
+}
+
+.contact-card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-text);
+  margin: 20px 0 8px;
+}
+
+.contact-card-note {
+  margin: 20px 0 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.contact-address {
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--color-text-default);
+}
+
+.contact-line {
+  margin: 12px 0 0;
+  font-size: 0.92rem;
+}
+
+.contact-line a {
+  color: var(--color-text-strong);
+  font-weight: 700;
+}
+
+.hours-list {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.hours-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: 8px;
+}
+
+.hours-list dt {
+  color: var(--color-text-muted);
+}
+
+.hours-list dd {
+  margin: 0;
+  color: var(--color-text-strong);
+  font-weight: 700;
+  text-align: right;
+}
+
+.steps-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.steps-list strong {
+  color: var(--color-text-strong);
+}
+
+@media (max-width: 860px) {
+  .register-grid {
+    grid-template-columns: 1fr;
+  }
+}

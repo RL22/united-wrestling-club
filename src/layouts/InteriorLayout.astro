@@ -1,0 +1,32 @@
+---
+// Interior pages: Layout + header + <main id="main-content"> + CTA + footer + modal + scripts (plan 1.2).
+import Layout from './Layout.astro';
+import SiteHeader from '../components/shell/SiteHeader.astro';
+import SiteFooter from '../components/shell/SiteFooter.astro';
+import TrialModal from '../components/shell/TrialModal.astro';
+import PageScripts from '../components/shell/PageScripts.astro';
+import CtaBanner from '../components/ui/CtaBanner.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  jsonLd?: object | object[];
+  noindex?: boolean;
+  /** Nav item to mark active, for example "pricing". */
+  current?: string;
+  /** Set false on pages that already end in their own call to action. */
+  cta?: boolean;
+}
+const { title, description, path, jsonLd, noindex, current, cta = true } = Astro.props;
+---
+<Layout title={title} description={description} path={path} jsonLd={jsonLd} noindex={noindex}>
+  <SiteHeader isHome={false} current={current} />
+  <main id="main-content">
+    <slot />
+    {cta && <CtaBanner />}
+  </main>
+  <SiteFooter isHome={false} />
+  <TrialModal />
+  <PageScripts />
+</Layout>

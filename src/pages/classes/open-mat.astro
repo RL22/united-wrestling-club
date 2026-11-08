@@ -1,0 +1,39 @@
+---
+import ProgramPage from '../../components/templates/ProgramPage.astro';
+import PriceFacts from '../../components/pages/classes-adult/PriceFacts.astro';
+import Topics from '../../components/pages/classes-adult/Topics.astro';
+import FactList from '../../components/ui/FactList.astro';
+import TrialForm from '../../components/forms/TrialForm.astro';
+const cta = 'Request an open mat visit';
+const topics = [
+  { head: 'Real mat time', body: 'Spar, drill, or work positions in a setting that feels like live training.' },
+  { head: 'Progress check', body: 'Test yourself against different partners and get feedback from coaches and peers.' },
+  { head: 'Skill application', body: 'Put what you learned in class to work, whether you train striking, grappling, or both.' },
+  { head: 'Your pace', body: 'Train within your limits, or push the pace. You choose what fits your goals.' },
+  { head: 'Supportive community', body: 'People of all backgrounds and skill levels train, learn, and encourage each other.' },
+];
+---
+<ProgramPage
+  title="Saturday Open Mat in Hayward, CA | United Wrestling Club"
+  description="Saturday open mat in Hayward, CA. Youth and adults get real mat time with partners of every level. $15 drop-in, included with membership."
+  path="/classes/open-mat/"
+  eyebrow="Drop-in"
+  heading="Saturday Open Mat"
+  lead="Real mat time with partners of varying skill levels and arts."
+  schedule={{ program: 'open', tag: 'openmat' }}
+  trialProgram="openmat"
+  ctaLabel={cta}
+>
+  <p>Youth and adults come together at open mat to get mat time in a supportive environment. Test your endurance, refine your technique, or enjoy a spirited practice while you train within your limits.</p>
+  <h2>What open mat offers</h2>
+  <Topics items={topics} />
+  <h2>Hours</h2>
+  <FactList show="hours" />
+  <h2>Prices</h2>
+  <PriceFacts openMat />
+  <h2>Class times</h2>
+  <Fragment slot="after-schedule">
+    <h2>{cta}</h2>
+    <TrialForm formId="openMatForm" idPrefix="om" preset="openmat" variant="page" sourceTag="open-mat-page" submitLabel={cta} />
+  </Fragment>
+</ProgramPage>

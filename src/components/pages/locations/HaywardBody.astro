@@ -1,0 +1,44 @@
+---
+// Body of /locations/hayward-ca/. Address, hours, phone, and map link come from data/facts.ts through ui/FactList.
+import { facts } from '../../../data/facts';
+import FactList from '../../ui/FactList.astro';
+import ScheduleList from '../../ui/ScheduleList.astro';
+import InfoCard from '../../ui/InfoCard.astro';
+import SectionHeader from '../../ui/SectionHeader.astro';
+import TrialForm from '../../forms/TrialForm.astro';
+const p = facts.programs;
+---
+<section class="section-block">
+  <div class="container">
+    <SectionHeader title="Find us" />
+    <h3>Address</h3>
+    <FactList show="address" />
+    <p><a href={facts.address.mapsUrl} rel="noopener">Open in Google Maps</a></p>
+    <h3>Hours</h3>
+    <FactList show="hours" />
+    <h3>Call</h3>
+    <FactList show="phone" />
+  </div>
+</section>
+<section class="section-block section-block--raised">
+  <div class="container">
+    <SectionHeader title="Programs at this location" />
+    <InfoCard title={p.youth.name} meta={p.youth.ages}>Wrestling classes for young athletes.</InfoCard>
+    <InfoCard title={p.varsity.name} meta={p.varsity.ages}>Wrestling practice for teen athletes.</InfoCard>
+    <InfoCard title={p.adult.name} meta={p.adult.ages}>Wrestling and jiu-jitsu for adults.</InfoCard>
+    <InfoCard title={p.openMat.name} meta={p.openMat.ages}>Open mat, all affiliations welcome.</InfoCard>
+  </div>
+</section>
+<section class="section-block">
+  <div class="container">
+    <SectionHeader title="Class times" />
+    <ScheduleList />
+  </div>
+</section>
+<section class="section-block section-block--raised">
+  <div class="container">
+    <SectionHeader title={`Try a ${facts.trialPass.name} for ${facts.trialPass.price}`} />
+    <p>{facts.trialPass.blurb}</p>
+    <TrialForm formId="locationTrialForm" idPrefix="loc" sourceTag="hayward" variant="page" submitLabel="Confirm $15 3-Day Pass" />
+  </div>
+</section>

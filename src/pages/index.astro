@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { homeJsonLd } from '../data/jsonld-home';
+import SiteHeader from '../components/shell/SiteHeader.astro';
+import Hero from '../components/home/Hero.astro';
+import Programs from '../components/home/Programs.astro';
+import Schedule from '../components/home/Schedule.astro';
+import Coaches from '../components/home/Coaches.astro';
+import Pricing from '../components/home/Pricing.astro';
+import Testimonials from '../components/home/Testimonials.astro';
+import Safety from '../components/home/Safety.astro';
+import Faq from '../components/home/Faq.astro';
+import CtaBanner from '../components/home/CtaBanner.astro';
+import SiteFooter from '../components/shell/SiteFooter.astro';
+import TrialModal from '../components/shell/TrialModal.astro';
+import PageScripts from '../components/shell/PageScripts.astro';
+---
+<Layout path="/" jsonLd={homeJsonLd}>
+  <SiteHeader isHome={true} />
+  <main id="main-content">
+    <Hero />
+    <Programs />
+    <Schedule />
+    <Coaches />
+    <Pricing />
+    <Testimonials />
+    <Safety />
+    <Faq />
+    <CtaBanner />
+  </main>
+  <SiteFooter isHome={true} />
+  <TrialModal />
+  <PageScripts />
+</Layout>

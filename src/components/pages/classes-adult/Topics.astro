@@ -1,0 +1,8 @@
+---
+// A titled list of topics (sentence-case head plus one sentence), used for the boxing and open mat sections.
+interface Props { items: { head: string; body: string }[] }
+const { items } = Astro.props;
+---
+<ul class="fact-list fact-list--topics">
+  {items.map((i) => <li><strong>{i.head}.</strong> {i.body}</li>)}
+</ul>

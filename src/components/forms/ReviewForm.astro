@@ -1,0 +1,113 @@
+---
+// F7 review form, ported verbatim from discovery/archive/legacy-site/reviews/index.html. The `review` endpoint is wired by assets/js/uwc-attribution.js.
+---
+<form id="review-form" novalidate data-uwc-form="review">
+            
+            
+            <div class="form-group">
+              <label class="form-label">Overall Rating <span class="required">*</span></label>
+              <div class="star-selector">
+                <div class="star-buttons-group" id="star-selector" role="radiogroup" aria-label="Star Rating">
+                  <button type="button" class="star-btn active" data-value="1" aria-label="1 star">★</button>
+                  <button type="button" class="star-btn active" data-value="2" aria-label="2 stars">★</button>
+                  <button type="button" class="star-btn active" data-value="3" aria-label="3 stars">★</button>
+                  <button type="button" class="star-btn active" data-value="4" aria-label="4 stars">★</button>
+                  <button type="button" class="star-btn active" data-value="5" aria-label="5 stars">★</button>
+                </div>
+                <span class="star-rating-label" id="star-label">5.0 / 5.0 (Exceptional)</span>
+              </div>
+              <input type="hidden" name="rating" id="rating-input" value="5">
+            </div>
+
+            <!-- Name and Perspective Inputs -->
+            <div class="form-row">
+              
+              <div class="form-group">
+                <label class="form-label" for="author-name">Your Full Name or Mat Handle <span class="required">*</span></label>
+                <input type="text" id="author-name" name="author" class="form-input" placeholder="e.g. David Johnson or Sarah (Mom of Alex)" required autocomplete="name">
+                <span class="form-hint">Displayed next to your testimonial</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="athlete-perspective">Your Role / Perspective <span class="required">*</span></label>
+                <select id="athlete-perspective" name="perspective" class="form-select" required>
+                  <option value="Youth Parent">Parent of Youth Wrestler (Ages 5–13)</option>
+                  <option value="Scholastic Athlete">High School / Scholastic Competitor (Ages 14–18)</option>
+                  <option value="Adult Grappler">Adult Grappler / Wrestle-Jitsu / BJJ</option>
+                  <option value="Visiting Athlete">Visiting Competitor / Out-of-State Drop-In</option>
+                  <option value="Community Supporter">Community Member / Friend of UWC</option>
+                </select>
+                <span class="form-hint">Helps route your testimonial to relevant families</span>
+              </div>
+
+            </div>
+
+            <!-- Longform Review Text -->
+            <div class="form-group">
+              <label class="form-label" for="review-body">Your Review &amp; Mat Story <span class="required">*</span></label>
+              <textarea id="review-body" name="review" class="form-textarea" placeholder="What has your or your child's experience been like? Consider mentioning coaching attention, technical progress, room cleanliness, or parent hospitality..." required></textarea>
+              <span class="form-hint">Tip: Specific stories about Coach Naweed, technical breakthroughs, or the welcoming culture make the deepest impact on hesitant parents.</span>
+            </div>
+
+            <!-- Photos & Attachments Dropzone -->
+            <div class="form-group">
+              <label class="form-label">Practice or Tournament Photos <span class="form-optional">(Optional)</span></label>
+              <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload practice or tournament photos">
+                <input type="file" id="photo-input" name="photos" accept="image/*" multiple>
+                <div class="dropzone-icon">📷</div>
+                <div class="dropzone-text">
+                  <strong>Click to upload photos</strong> or drag &amp; drop files here
+                </div>
+                <span class="form-hint">Tournament podiums, drilling, team gear photos (PNG, JPG, WebP)</span>
+              </div>
+              <div class="preview-grid" id="preview-grid" aria-live="polite"></div>
+            </div>
+
+            <!-- Target Platform Checkboxes -->
+            <div class="form-group">
+              <label class="form-label">Where Would You Like to Publish This Review?</label>
+              <div class="platform-grid">
+                
+                <label class="platform-checkbox">
+                  <input type="checkbox" name="platform-google" id="check-google" checked>
+                  <div class="platform-info">
+                    <strong>Google Business Profile (Highest Impact)</strong>
+                    <span>Powers our 5.0 ★ rating on Google Maps &amp; Local Search in Hayward</span>
+                  </div>
+                </label>
+
+                <label class="platform-checkbox">
+                  <input type="checkbox" name="platform-yelp" id="check-yelp">
+                  <div class="platform-info">
+                    <strong>Yelp</strong>
+                    <span>Supports East Bay combat martial arts discoverability</span>
+                  </div>
+                </label>
+
+                <label class="platform-checkbox">
+                  <input type="checkbox" name="platform-facebook" id="check-facebook">
+                  <div class="platform-info">
+                    <strong>Facebook Community</strong>
+                    <span>Shares with local grappling &amp; wrestling groups</span>
+                  </div>
+                </label>
+
+                <label class="platform-checkbox">
+                  <input type="checkbox" name="platform-website" id="check-website" checked>
+                  <div class="platform-info">
+                    <strong>United Wrestling Club Website</strong>
+                    <span>We review every submission before anything goes live on our site</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            
+            <div class="form-actions">
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                <span>Post Review &amp; Copy to Clipboard &rarr;</span>
+              </button>
+            </div>
+
+          </form>

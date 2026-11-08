@@ -1,0 +1,29 @@
+---
+import InteriorLayout from '../../layouts/InteriorLayout.astro';
+import PageHero from '../../components/ui/PageHero.astro';
+import InfoCard from '../../components/ui/InfoCard.astro';
+import { routes } from '../../data/routes';
+import { facts } from '../../data/facts';
+
+// Hub lists only built class pages. Blurbs are sourced from data/facts.ts (KB-05) and the class pages' own intros.
+const blurbs: Record<string, { badge: string; text: string }> = {
+  '/classes/kid-wrestling/': { badge: facts.programs.youth.ages, text: 'Fundamentals, conditioning, character, and fun for young athletes.' },
+  '/classes/youth-wrestling/': { badge: facts.programs.varsity.ages, text: 'An intensive program for middle school and high school students, built for competition.' },
+  '/classes/adult-wrestling/': { badge: facts.programs.adult.ages, text: 'Wrestling for beginners, former wrestlers, MMA fighters, and jiu-jitsu practitioners.' },
+};
+const classes = routes.filter((r) => r.path.startsWith('/classes/') && r.path !== '/classes/' && r.status === 'built');
+---
+<InteriorLayout title="Classes in Hayward, CA | United Wrestling Club" description="Wrestling classes at United Wrestling Club in Hayward, CA. Pick a class, then try three practices for $15." path="/classes/" current="classes">
+  <PageHero eyebrow="Classes" title="Classes at United Wrestling Club" lead="Pick a class, then try three practices for $15." compact />
+  <section class="section-block">
+    <div class="container">
+      <div class="class-grid">
+        {classes.map((c) => <InfoCard title={c.title} badge={blurbs[c.path]?.badge} href={c.path} linkLabel={`See ${c.title}`}>{blurbs[c.path]?.text ?? ''}</InfoCard>)}
+      </div>
+    </div>
+  </section>
+</InteriorLayout>
+
+<style>
+  .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+</style>

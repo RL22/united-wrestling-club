@@ -1,0 +1,27 @@
+---
+import ClassPage from '../../components/pages/classes-wrestling/ClassPage.astro';
+import { facts } from '../../data/facts';
+---
+<ClassPage
+  title="Adult Wrestling in Hayward, CA | United Wrestling Club"
+  description="Adult, college, and high school wrestling at United Wrestling Club in Hayward, CA. All levels welcome. Try three practices for $15."
+  path="/classes/adult-wrestling/"
+  eyebrow="Adult / College / High School"
+  heading="Adult Wrestling"
+  lead="People of all levels learn, train, and sharpen their wrestling. Beginners, former wrestlers, MMA fighters, and jiu-jitsu practitioners get a high-output, core-focused, enjoyable class."
+  facts={[
+    { label: 'Class', value: 'Adult / College / High School' },
+    { label: facts.programs.adult.name, value: facts.programs.adult.ages },
+  ]}
+  sections={[
+    { title: 'Fundamental Techniques', body: 'Coaches teach stance, footwork, takedowns, escapes, and transitions through solo drills, partner drills, and live wrestling.' },
+    { title: 'Core Strength and Conditioning', body: 'Dynamic warm-ups, core-focused exercises, and wrestling-specific conditioning drills build strength and endurance.' },
+    { title: 'Application to MMA and Jiu-Jitsu', body: 'We explore how takedowns, control positions, and ground transitions fit into mixed martial arts and grappling.' },
+    { title: 'Live Wrestling and Drilling', body: 'Live sessions and controlled drilling let you apply techniques in realistic scenarios, sharpening reflexes, timing, and adaptability in a safe and supportive room.' },
+    { title: 'Fun and Camaraderie', body: 'Teamwork, mutual support, and friendly competition help people forge lasting friendships while training.' },
+  ]}
+  prices={[{ label: 'Adult / College / High School', value: '$139.99 per month' }]}
+  coachNames={['Naweed Zemaryalai']}
+  schedule={{ program: 'adult', tag: 'adult' }}
+  trialProgram="adult"
+/>

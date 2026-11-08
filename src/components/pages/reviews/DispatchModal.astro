@@ -1,0 +1,25 @@
+---
+// Copy-and-post dialog, ported verbatim from discovery/archive/legacy-site/reviews/index.html.
+---
+<div class="modal-overlay" id="dispatch-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card modal-card--center">
+      <div class="modal-check" aria-hidden="true">✓</div>
+      <h2 class="modal-title" id="modal-title">Review Copied to Clipboard!</h2>
+      <p class="modal-sub">
+        Because Google, Yelp, and Facebook protect user privacy by requiring your personal account sign-in, reviews cannot be posted behind the scenes without your login. We’ve copied your review text so you can paste and publish in <strong>one click</strong>!
+      </p>
+
+      <div class="clipboard-box">
+        <div class="clipboard-header">
+          <span>Your review text (ready to paste)</span>
+          <span class="copied-badge" id="copied-pill">✓ Copied</span>
+        </div>
+        <div class="clipboard-text" id="modal-text-preview"></div>
+      </div>
+
+      <p class="form-status" id="modal-sent-status" role="status" hidden></p>
+      <div class="modal-actions-list" id="modal-platform-actions"></div>
+
+      <button type="button" class="btn btn-primary btn-block" id="modal-close-btn">Done / Close Window</button>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+---
+// Eyebrow, title, and lead in the shared .section-head block.
+interface Props { eyebrow?: string; title: string; lead?: string; id?: string; as?: 'h1' | 'h2' | 'h3' }
+const { eyebrow, title, lead, id, as: Tag = 'h2' } = Astro.props;
+---
+<div class="section-head">
+  {eyebrow && <span class="section-eyebrow">{eyebrow}</span>}
+  <Tag class="section-title" id={id}>{title}</Tag>
+  {lead && <p class="section-lead">{lead}</p>}
+</div>

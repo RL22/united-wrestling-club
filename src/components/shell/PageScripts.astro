@@ -1,0 +1,228 @@
+<script is:inline src="/assets/js/uwc-attribution.js?v=2026-11-05f"></script>
+
+<script is:inline>
+    // FAQ Accordion with Keyboard Support
+    document.querySelectorAll('.faq-question').forEach(header => {
+      header.setAttribute('tabindex', '0');
+      header.setAttribute('role', 'button');
+      const item = header.parentElement;
+      const isInitiallyActive = item.classList.contains('active');
+      header.setAttribute('aria-expanded', isInitiallyActive ? 'true' : 'false');
+
+      const toggleFAQ = () => {
+        const isActive = item.classList.toggle('active');
+        header.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      };
+
+      header.addEventListener('click', toggleFAQ);
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFAQ();
+        }
+      });
+    });
+
+    // Native Trial Modal Handling
+    const modal = document.getElementById('trialModal');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    const doneBtn = document.getElementById('modalDoneBtn');
+    const form = document.getElementById('trialForm');
+    const formContainer = document.getElementById('modalFormContainer');
+    const successState = document.getElementById('modalSuccessState');
+
+    function openModal() {
+      if (!modal) return;
+      if (window.UWCAttribution) window.UWCAttribution.syncForm();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      const firstInput = form ? form.querySelector('input:not([type="hidden"])') : null;
+      if (firstInput) setTimeout(() => firstInput.focus(), 100);
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (formContainer) formContainer.style.display = 'block';
+        if (successState) successState.style.display = 'none';
+        if (form) form.reset();
+        if (window.UWCAttribution) window.UWCAttribution.syncForm();
+      }, 300);
+    }
+
+    document.querySelectorAll('.open-trial-modal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (doneBtn) doneBtn.addEventListener('click', closeModal);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    if (form) {
+      const trialStatus = document.getElementById('v01-trial-status');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const smsOptInBox = document.getElementById('v01-sms-opt-in');
+        const smsStatusRow = document.getElementById('v01-sms-status-row');
+        const wiqBtn = document.getElementById('v01-wiq-btn');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const isOptedIn = Boolean(smsOptInBox && smsOptInBox.checked);
+        if (trialStatus) trialStatus.hidden = true;
+        if (submitBtn) submitBtn.disabled = true;
+
+        const pending = window.UWCAttribution
+          ? window.UWCAttribution.submitLead(form)
+          : Promise.reject(new Error('not_connected'));
+
+        pending.then(() => {
+          if (smsStatusRow) {
+            smsStatusRow.innerHTML = isOptedIn
+              ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
+              : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
+          }
+          if (wiqBtn && window.UWCAttribution) {
+            wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
+          }
+          if (formContainer) formContainer.style.display = 'none';
+          if (successState) successState.style.display = 'block';
+        }).catch(() => {
+          if (trialStatus) {
+            trialStatus.textContent = 'We could not send your request. Call (510) 303-4869 and we will reserve your pass.';
+            trialStatus.hidden = false;
+          }
+        }).finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+      });
+    }
+
+    // Newsletter (footer): explicit consent, unchecked by default.
+    document.querySelectorAll('form[data-uwc-form="newsletter"]').forEach((nf) => {
+      const status = nf.querySelector('.form-status');
+      const say = (msg) => {
+        if (!status) return;
+        status.textContent = msg;
+        status.hidden = false;
+      };
+      nf.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const consent = nf.querySelector('input[name="email_consent"]');
+        if (consent && !consent.checked) {
+          say('Tick the box to get the Mat Report.');
+          return;
+        }
+        const btn = nf.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+        window.UWCAttribution.submitLead(nf).then(() => {
+          nf.reset();
+          say("You're on the list. The first Mat Report is on its way.");
+        }).catch(() => {
+          say('We could not sign you up right now. Call (510) 303-4869 and we will add you.');
+        }).finally(() => {
+          if (btn) btn.disabled = false;
+        });
+      });
+    });
+
+    // Mobile Menu Toggle & Drawer Handling
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    function openMobileNav() {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.add('open');
+      if (mobileNavBackdrop) mobileNavBackdrop.classList.add('open');
+      if (mobileMenuToggle) {
+        mobileMenuToggle.classList.add('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'true');
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileNav() {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.remove('open');
+      if (mobileNavBackdrop) mobileNavBackdrop.classList.remove('open');
+      if (mobileMenuToggle) {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (mobileNavDrawer.classList.contains('open')) {
+          closeMobileNav();
+        } else {
+          openMobileNav();
+        }
+      });
+    }
+
+    if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
+    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileNav);
+
+    // Close mobile nav when clicking any link within it
+    if (mobileNavDrawer) {
+      mobileNavDrawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          closeMobileNav();
+        });
+      });
+    }
+
+    // Global Escape Key Listener for Modal and Mobile Drawer
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (modal && modal.classList.contains('open')) {
+          closeModal();
+        }
+        if (mobileNavDrawer && mobileNavDrawer.classList.contains('open')) {
+          closeMobileNav();
+        }
+      }
+    });
+
+</script>
+
+<script is:inline>
+    (function () {
+      var tabs = document.querySelectorAll('.schedule-tab');
+      var panels = document.querySelectorAll('.schedule-panel');
+
+      function select(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          t.tabIndex = on ? 0 : -1;
+        });
+        panels.forEach(function (p) {
+          p.hidden = p.id !== tab.getAttribute('aria-controls');
+        });
+      }
+
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { select(tab); });
+        tab.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+          var step = e.key === 'ArrowRight' ? 1 : tabs.length - 1;
+          var next = tabs[(i + step) % tabs.length];
+          next.focus();
+          select(next);
+        });
+      });
+    })();
+</script>

@@ -1,0 +1,17 @@
+---
+import InteriorLayout from '../layouts/InteriorLayout.astro';
+import ReviewsHero from '../components/pages/reviews/ReviewsHero.astro';
+import ReviewGrid from '../components/pages/reviews/ReviewGrid.astro';
+import SubmitReview from '../components/pages/reviews/SubmitReview.astro';
+import { reviewsJsonLd } from '../components/pages/reviews/jsonld';
+---
+<InteriorLayout
+  title="United Wrestling Club Reviews | 5.0 ★ Verified Google & Yelp Reviews | Hayward, CA"
+  description="Read 42+ verified 5.0-star reviews for United Wrestling Club in Hayward, CA. Real testimonials from youth parents, scholastic competitors, and adult grapplers. Submit your review or post directly to Google Maps."
+  path="/reviews/"
+  jsonLd={reviewsJsonLd}
+>
+  <ReviewsHero />
+  <ReviewGrid />
+  <SubmitReview />
+</InteriorLayout>
