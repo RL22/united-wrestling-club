@@ -31,3 +31,6 @@ site/output/
 
 # Regression baselines and screenshots (large; regenerate with scripts/fingerprint.mjs)
 /site/tests/baselines/*/
+
+# Local test fixtures and baselines (not part of the site)
+/site/tests/
