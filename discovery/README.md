@@ -1,8 +1,15 @@
 # UWC Discovery Index
 
 - **Client:** Naweed Zemaryalai and Karim Zemaryalai, United Wrestling Club, 30139 Industrial Pkwy SW Ste C, Hayward, CA 94544
-- **Last reorganized:** 2026-11-06
+- **Last reorganized:** 2026-11-08 (sharding and stale-detail archive pass)
 - **Use:** Find the right source before you cite a fact. Start with the table below. Each file's status is in the index. Status values are defined in the legend.
+
+## Sharding and archive (2026-11-08)
+
+- **Sharding.** Any doc over 250 lines is split on its `##` headings. The original path becomes an index file: frontmatter, a TL;DR, and a Parts table. The full text sits in a folder with the same name, as `NN-<section>.md` parts. Each part keeps the text verbatim, and only its links were rewritten. Cite the part file when you can. Ledger claims point at the part that holds the quote.
+- **Stale details.** A passage that states a fact changed on 2026-11-07 is replaced in place with a one-line `Superseded` note. The old text moves to [`archive/stale-2026-11-08/`](archive/stale-2026-11-08/README.md), with the source path and the reason.
+- **Captured URLs.** The `united-wrestling-club.vercel.app` links in market research are crawl evidence. The host was deleted on 2026-11-07, so each affected doc carries a note. The client's domain is `unitedwrestlingclub.com`.
+- **No `todos.md` in this folder.** The backlog is [`../todos.md`](../todos.md).
 
 ---
 
@@ -10,9 +17,9 @@
 
 | Question | Read this |
 |---|---|
-| What is built and live? | [`sitemap_status.md`](site/sitemap_status.md). The data behind it is `site/src/data/routes.ts`. |
+| What is built (not live; search indexing off until launch)? | [`sitemap_status.md`](site/sitemap_status.md). The data behind it is `site/src/data/routes.ts`. |
 | What has been decided? | [`decisions/INDEX.md`](decisions/INDEX.md) (ADRs) |
-| What is open or in progress? | [`../todos.md`](../todos.md) (repo root). This folder's `todos.md` is an older copy. |
+| What is open or in progress? | [`../todos.md`](../todos.md) (repo root). |
 | What did the client say? | [`2026-11-02_naweed_discovery-call.md`](client/2026-11-02_naweed_discovery-call.md) (primary source, Nov 2) and [`naweed_discovery_questions.md`](client/naweed_discovery_questions.md) |
 | What facts can the site or responder state? | [`knowledge_base/uwc_kb_v1.md`](knowledge_base/uwc_kb_v1.md). Draft, not live. Answer only from Verified or Client-confirmed entries. |
 | What forms exist and where do they post? | [`forms_map_full_sitemap.md`](site/forms_map_full_sitemap.md) and [`decisions/ADR-20261105-forms-per-form-endpoints.md`](decisions/ADR-20261105-forms-per-form-endpoints.md) |

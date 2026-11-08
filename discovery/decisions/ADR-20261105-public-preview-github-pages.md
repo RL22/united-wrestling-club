@@ -35,3 +35,7 @@ The owner chose to deploy production before launch. This overrides the timing ru
 5. **Forms:** production uses the same four Formspree endpoints as staging did.
 6. **Open media issue.** `video_assets/cards/program-youth.jpg` and `program-varsity.jpg` are live in production. `todos.md` says these stay off published pages until minors' releases are confirmed. Decision pending.
 7. **Corrected during deploy.** The first production deploy also exposed three unreferenced GBP photos in `assets/img/gbp/`, one of which shows a minor. They were removed and production was redeployed on 2026-11-05. Their URLs now return 404.
+
+## Amendment (2026-11-07)
+
+Items 1 and 3 are superseded. Both Vercel projects were deleted on 2026-11-07, so no production host is connected. The public repo `RL22/united-wrestling-club` was made public again on 2026-11-07, as a site-only import. GitHub Pages is still off. See [ADR-20261107-public-site-repo-and-noindex](ADR-20261107-public-site-repo-and-noindex.md).
