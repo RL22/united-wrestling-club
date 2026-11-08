@@ -1,9 +1,10 @@
 // Every route in the sitemap (discovery/site/website_rebuild_spec.md section 5, plus /reviews/). Plan 4.2:
 //  built     the page exists in site/src/pages
 //  planned   a group owns it and has not merged yet (allowed only with a `group`)
+//  held      preview-only; not listed in production navigation or machine-readable indexes
 //  omitted   not built until the owner decision named in `unlock` (D0); 404s and nothing links to it
 //  redirect  a redirect page
-export type RouteStatus = 'built' | 'planned' | 'omitted' | 'redirect';
+export type RouteStatus = 'built' | 'planned' | 'held' | 'omitted' | 'redirect';
 export type Route = { path: string; title: string; group?: string; status: RouteStatus; reason?: string; unlock?: string };
 
 export const routes: Route[] = [
@@ -15,7 +16,7 @@ export const routes: Route[] = [
   { path: '/classes/adult-wrestling/', title: 'Adult Wrestling', group: 'G2', status: 'built' },
   { path: '/classes/nogi-jiu-jitsu/', title: 'No-Gi Jiu-Jitsu', group: 'G3', status: 'built' },
   { path: '/classes/gi-jiu-jitsu/', title: 'Gi Jiu-Jitsu', group: 'G3', status: 'built' },
-  { path: '/classes/sambo/', title: 'Sambo', status: 'built' },
+  { path: '/classes/sambo/', title: 'Sambo', status: 'held', reason: 'Owner approved preview only.', unlock: 'D3' },
   { path: '/classes/boxing-fundamentals/', title: 'Boxing Fundamentals', group: 'G3', status: 'built' },
   { path: '/classes/open-mat/', title: 'Open Mat', group: 'G3', status: 'built' },
   { path: '/classes/womens-self-defense/', title: "Women's Self-Defense", status: 'omitted', reason: 'KB-19 unconfirmed; no waitlist endpoint.', unlock: 'D4' },

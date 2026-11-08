@@ -3,8 +3,6 @@
 <script is:inline>
     // FAQ Accordion with Keyboard Support
     document.querySelectorAll('.faq-question').forEach(header => {
-      header.setAttribute('tabindex', '0');
-      header.setAttribute('role', 'button');
       const item = header.parentElement;
       const isInitiallyActive = item.classList.contains('active');
       header.setAttribute('aria-expanded', isInitiallyActive ? 'true' : 'false');
@@ -15,12 +13,6 @@
       };
 
       header.addEventListener('click', toggleFAQ);
-      header.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleFAQ();
-        }
-      });
     });
 
     // Native Trial Modal Handling

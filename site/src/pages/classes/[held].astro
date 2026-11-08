@@ -1,0 +1,18 @@
+---
+import InteriorLayout from '../../layouts/InteriorLayout.astro';
+import PageHero from '../../components/ui/PageHero.astro';
+import SamboBody from '../../components/pages/unlocks/SamboBody.astro';
+import { routeByPath } from '../../data/routes';
+
+// D3: the held class is available for explicit local/preview builds only.
+// A production Vercel build must never generate the route, even if the flag is set.
+export function getStaticPaths() {
+  const status = routeByPath('/classes/sambo/')?.status;
+  const includeHeld = status === 'held' && import.meta.env.UWC_INCLUDE_HELD === 'true' && import.meta.env.VERCEL_ENV !== 'production';
+  return status === 'built' || includeHeld ? [{ params: { held: 'sambo' } }] : [];
+}
+---
+<InteriorLayout title="Sambo (9th - ADULT) | United Wrestling Club" description="Sambo class at United Wrestling Club in Hayward, CA: throws, leg locks, and wrestling pressure for adults." path="/classes/sambo/">
+  <PageHero title="Sambo (9th - ADULT)" compact />
+  <SamboBody />
+</InteriorLayout>

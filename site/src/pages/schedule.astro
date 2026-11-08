@@ -25,7 +25,7 @@ const groups = [
   {groups.map((g) => (
     <section class="section-block" aria-labelledby={`sch-${g.id}`}>
       <div class="container">
-        <SectionHeader title={g.name} lead={g.ages} id={`sch-${g.id}`} />
+        <SectionHeader title={g.name} id={`sch-${g.id}`} />
         <ScheduleList program={g.id} />
       </div>
     </section>

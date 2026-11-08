@@ -7,8 +7,8 @@ const { items } = Astro.props;
 <div class="faq-container">
   {items.map((f, i) => (
     <div class:list={['faq-item', { active: i === 0 }]}>
-      <div class="faq-question"><span>{f.q}</span><span class="faq-toggle">+</span></div>
-      <div class="faq-answer">{f.a}</div>
+      <button class="faq-question" type="button" aria-expanded={i === 0 ? "true" : "false"} aria-controls={`faq-page-answer-${i}`}><span>{f.q}</span><span class="faq-toggle" aria-hidden="true">+</span></button>
+      <div class="faq-answer" id={`faq-page-answer-${i}`}>{f.a}</div>
     </div>
   ))}
 </div>

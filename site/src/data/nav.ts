@@ -21,8 +21,8 @@ export const mobileNav: NavItem[] = [
 ];
 
 export const footerPrograms: NavItem[] = [
-  { label: 'Youth Wrestling (Ages 5–13)', href: '#programs' },
-  { label: 'Varsity Scholastic Prep (14–18)', href: '#programs' },
+  { label: 'Youth Wrestling', href: '#programs' },
+  { label: 'Varsity Scholastic Prep (Middle and high school)', href: '#programs' },
   { label: 'Adult Wrestling & Grappling', href: '#programs' },
   { label: 'Combat Sambo & BJJ', href: '#programs' },
   { label: 'Saturday Open Mat ($15)', href: '#programs' },
