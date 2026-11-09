@@ -1,0 +1,99 @@
+---
+type: spec
+status: current
+group: strategy
+owner: "Rodney Lewis — Sprintz Growth & Technical Systems Architecture (fCMO)"
+date: 2026-11-03
+last_reviewed: 2026-11-03
+sources: ["https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo", "https://rl22.github.io/united-wrestling-club/portal/#uwc", "https://rl22.github.io/united-wrestling-club/v04/", "discovery/decisions/ADR-20261106-astro-design-system.md", "discovery/strategy/master_discovery_findings.md", "portal/index.html", "v04/index.html", "assets/js/uwc-attribution.js", "discovery/strategy/uwc_email_marketing_playbook.md", "discovery/decisions/ADR-20261102-commercial-pricing-and-pif-promotions.md", "reviews/index.html", "discovery/strategy/uwc_attribution_model.md", "discovery/client/2026-11-02_naweed_discovery-call.md", "discovery/strategy/uwc_marketing_plan_research.md", "discovery/strategy/uwc_sms_marketing_playbook.md", "discovery/decisions/ADR-20261102-facility-and-coaching-invariants.md", "discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md", "discovery/decisions/ADR-20261102-branded-reviews-and-submission-engine.md", "v01/index.html", "v03/index.html"]
+caveat: "partly superseded, see banner"
+shard_of: "discovery/strategy/uwc_marketing_plan.md"
+part: "2 of 8"
+---
+
+> Part 2 of 8 of [uwc_marketing_plan](../uwc_marketing_plan.md). Text is verbatim from the original; only links were rewritten.
+
+## 3. Current state
+
+### Team composition (marketing & growth surface area)
+
+| Person | Role | Shape | Marketing & Operational Surface Area |
+|---|---|---|---|
+| **Naweed Zemaryalai** | Head Coach & Co-Founder (UWC) / CEO (TravaLab) | T-shaped Operator & Technical Coach | Owns mat curriculum (SFSU Kinesiology, Chabot College, UFC corner), parent/athlete mat-side conversion, 2-way SMS replies on `(510) 303-4869`, Instagram video capture, and final sign-off on commercial offers/policies. |
+| **Karim Zemaryalai** | Founder & Principal Coach | Deep Technical Authority | 1980 Olympic qualifier & Ali Aliyev medalist; anchors academy heritage, senior technical instruction, and legal/commercial co-signatory authority. |
+| **Rashad Rahimi, Sandeep Singh Gosal, Steve Siroy, Farid Siddiq** | 4-Coach Secondary Bench | Subject-Matter Specialists | Deliver the 1:6 coaching ratio across Freestyle, Greco-Roman, Scholastic Folkstyle, and Combat Footwork/Boxing; subjects for documentary coach spotlights and tournament cornering across the 41-event schedule. |
+| **Rodney Lewis (Sprintz Growth OS)** | Fractional CMO & Technical Growth Architect | **π-shaped Strategist + Engineer** (Local SEO + CRO/Full-Stack + Lifecycle Automation) | Owns the `v04` static redesign, 32-route Alameda County local SEO build, GBP/citation engineering, GA4 (`562010875`) + `uwc-attribution.js` instrumentation, and automated SMS/Email lifecycle campaigns. |
+
+**Team gap assessment:** UWC has no dedicated front-desk receptionist during evening practice hours (4:30 PM – 8:00 PM PT), resulting in an estimated **10–18 missed phone inquiries per month** while coaches are on the mat. At UWC's current stage ($75.6K ARR), hiring a $3,500/mo front-desk admin would consume >50% of MRR. Instead, our architecture solves this gap via **on-page `<dialog>` modal capture + instant automated 10DLC SMS (`TXT-1.1`) + missed-call text-back automation**, deferring a part-time Operations/Member Experience Coordinator hire until the roster crosses **90–100 active athletes (~$13K–$14K MRR)**.
+
+### Marketing budget (current & unit economics)
+
+- **Paid acquisition:** **$0 / month** (Permanent founder rule: 100% organic).
+- **fCMO & Growth OS Retainer (Sprintz — Invoice B):** **$1,000 / month flat base** + **$25 / month per incremental active recurring athlete above the 45-member baseline**.
+- **Tooling stack overhead:** **~$50–$120 / month**
+  - AWS Route 53 DNS + Static Hosting (`$5–$15/mo`)
+  - WrestlingIQ Team #513 (`already in core gym operations`)
+  - Formspree (`xyyavaaj`) + Amazon SES (`@unitedwrestlingclub.com`) + 10DLC SMS automation via HighLevel/Twilio (`~$45–$105/mo`).
+- **Total monthly marketing spend:** **~$1,050–$1,120 / month at baseline** (~16.7% of current $6,299 MRR; well within the 15%–25% growth-stage allocation benchmark).
+- **Blended CAC (modeled at 90-day trajectory):** Reaching 75 active athletes in 90 days (+30 net adds; ~38–42 gross adds accounting for churn, or ~13–14 gross new members/mo) at an average monthly marketing outlay of ~$1,375/mo ($1,000 base + ~$300 avg rev-share + ~$75 tools) yields a **blended CAC of ~$98–$106 per enrolled recurring athlete** against an indicative gross LTV of **$1,867 (at 7.5% churn) to $3,111 (at 4.5% churn)**—an exceptional **18× to 30× LTV:CAC ratio**.
+
+### Phase of business growth
+UWC is currently in the **$10K–$100K ARR "Treacherous Middle" ($75,588 annualized membership run rate at 45 athletes)**, where word-of-mouth and natural founder reputation have filled the first 45 spots, but uninstrumented digital leaks (>6.5s mobile load, 0-word SSR shell, cold third-party checkout redirects, and 7.5% seasonal churn) prevent the roster from compounding past 50. Section 9 (90-Day Roadmap) and Section 10 (12-Month Outlook) sequence the transition into the **$100K–$250K ARR Acceleration Phase (75 → 120 athletes)**.
+
+### What's already done (acknowledge, then build on)
+
+| Asset / Achievement | Current Status | Marketing Leverage in This Plan |
+|---|---|---|
+| **42 Google Reviews (5.0★ Rating)** (`Place ID: ChIJsQd_yMaVj4ARrXw93nb4euo`) | Live & verified in Hayward | Anchors the Authority Banner across all pages, powers the new `/reviews/` hub, and gives UWC #1 Hayward Map Pack credibility. |
+| **USA Wrestling RTC #513 + 6-Coach Olympic/State-Champ Bench** | Active in mat room | Differentiates UWC from every recreational martial arts studio in Alameda County; featured in structured `Person` schema and Email #2. |
+| **Natural Organic Search Footprint (~2,086 visits/mo, 368 keywords)** | Live (`#6 wrestling gym`, `#9 wrestling classes near me`, `#11 wrestling near me`) | Proves Google already trusts the domain despite the broken Next.js shell; fixing SSR and adding sub-market pages unlocks Page-1 top-3 rankings rapidly. |
+| **41-Tournament 2026–2027 Schedule (`/events`)** | Live in JS bundle (*North Coast Grapplers* at James Logan HS through Aug 2027) | Prerendering with `SportsEvent` schema turns `/events/` into an East Bay search magnet and fuels automated SMS/email tournament reminders. |
+| **Three Interactive Redesign Concepts (`v01`, `v03`, `v04` Flagship) + Executive Portal (`portal/index.html`)** | Built, tested & live on staging | Includes <2MB VP9/WebM video compression (94% reduction), 12-component parity, `<dialog>` modal, 19 hidden attribution fields (`uwc-attribution.js`), and TCPA `STOP` opt-out compliance. |
+| **4 Binding ADRs + SMS, Email & Attribution Playbooks** | Approved in repo | Ready for immediate production deployment once Naweed grants Editor/Admin access. |
+
+### What's in-flight (drafted/built, awaiting confirmation or access to ship)
+
+| Item | Status | Blocker |
+|---|---|---|
+| **Concept 02 (`v04` — *The Olympic Sanctuary*) Production Deployment** | Built & verified on staging (`v04/index.html`) | Client selection sign-off from Naweed/Karim + AWS Route 53 DNS handoff. |
+| **On-Page `<dialog>` Trial Pass Modal + `uwc-attribution.js` Stitcher** | Wired across `v01`, `v03`, `v04` (19 hidden fields + TCPA `STOP` opt-out) | Formspree (`xyyavaaj`) inbox access + WrestlingIQ Team #513 Admin access. |
+| **4-Sequence SMS Playbook & 11-Email Lifecycle Playbook** | Copy & triggers 100% written | A2P 10DLC EIN verification for `(510) 303-4869` + Route 53 SPF/DKIM records to clear DMARC `p=quarantine`. |
+| **6-City Alameda County Programmatic Local Landing Pages** | Architecture & keyword map complete | Final schedule/offer verification from Naweed before publishing live routes. |
+| **Former Pep Boys Facility Expansion (`30085 Industrial Pkwy SW`, Union City)** | Dual-GBP Annex Blueprint pre-staged | **Parked in Q1 2027 Backlog** — Naweed and the city have not yet been able to contact the property owner. |
+
+### What's stuck (and must unstick in Weeks 1–2)
+
+| Issue | Cost of Inaction | Immediate Action |
+|---|---|---|
+| **1. GA4 Measurement Blackout (`562010875`) & Missing GSC** | Recording **0 visitors** and **0 conversion events**; flying blind on which organic queries drive trials. | Naweed upgrades `lewis.rodneyl@gmail.com` from Viewer to **Editor** in GA4 and grants **Full** GSC access (Day 1). |
+| **2. Zero-Word Next.js CSR Shell & 404 Discovery Files** | Initial HTML has 0 readable words; `sitemap.xml` and `robots.txt` return 404; `/events` (41 tournaments) is invisible to non-JS crawlers and AI engines (18/100 AI score). | Deploy pre-rendered static build (`v04`) with valid `sitemap.xml`, `robots.txt`, `llms.txt`, and JSON-LD `@graph` (Week 1–2). |
+| **3. Cold Off-Site WrestlingIQ Bounce & Trial Copy Contradictions** | 40%–60% estimated mobile drop-off; homepage says `$15 3-Day Trial`, pricing says `$15 Drop-In`, FAQ says `Free Trial`. | Standardize `$15 3-Day Mat Pass (#6327)` + `$15 Saturday Open Mat Drop-In (#2664)` across all surfaces and route CTAs through the on-page `<dialog>` modal first (Week 1–2). |
+| **4. NAP Phone Mismatch & Plural GBP Name** | Website/GBP shows `(510) 303-4869`, Facebook shows `[retired number]`, and GBP name reads "United Wrestling Clubs"—eroding local Map Pack trust. | Confirm `(510) 303-4869` as primary voice/SMS line and synchronize exact NAP across GBP, Facebook, Yelp, Apple Maps, and schema (Week 2). |
+
+### Audit rubric snapshot (Scored from Discovery Materials — Nov 2026)
+
+| # | Section | Live Baseline Score | Post-90d Target | Note (Live S3 Site Baseline vs. Staged Sprintz Architecture) |
+|---|---|:---:|:---:|---|
+| 1 | **Positioning** | **3 / 5** | 5 / 5 | Real-world RTC #513 & Olympic lineage is world-class, but live site buries it in a JS shell and states unverified 5,000 sq ft (Superseded 2026-11-08: the mat footprint is 3,800 sq ft. Old text: [archive](../../archive/stale-2026-11-08/uwc_marketing_plan.md).). |
+| 2 | **Customer research** | **4 / 5** | 5 / 5 | 42 5.0★ parent reviews, founder call transcript, and East Bay commuter search demand mapped to 3 core personas. |
+| 3 | **Homepage** | **1 / 5** | 5 / 5 | Live site has >6.5s mobile LCP, 17.72 MB video, 0 SSR words, and cold off-site redirects. (`v04` flagship staged at <1.4s target LCP). |
+| 4 | **Sales / product pages** | **2 / 5** | 4 / 5 | 8 WrestlingIQ plans exist, but live site has conflicting trial/schedule copy and lacks dedicated Youth, Varsity, Adult, and Women's program pages. |
+| 5 | **Conversion pages** | **1 / 5** | 5 / 5 | Zero sub-market landing pages live for Union City, Fremont, Newark, Castro Valley, or San Leandro; `/events` is trapped in client-side JS. |
+| 6 | **Competitor comparison** | **1 / 5** | 4 / 5 | East Bay martial arts/BJJ competitors mapped in discovery, but zero live comparison guides ("Youth Wrestling vs. BJJ / Karate for East Bay Kids"). |
+| 7 | **Resources / content** | **1 / 5** | 4 / 5 | 41 tournaments + USAW/SCWAY rules exist on `/events` in JS, but no crawlable First-Day Parent Guide, Mat Hygiene protocol page, or Tournament Prep Hub. |
+| 8 | **Onboarding** | **1 / 5** | 5 / 5 | No automated Suite C arrival/parking guide or USAW/SCWAY card setup live today (~45%–55% show-up rate). SMS/Email onboarding playbooks now built. |
+| 9 | **Email lifecycle** | **1 / 5** | 5 / 5 | Domain has DMARC `p=quarantine`, but 0 automated trial welcome, member onboarding, or seasonal PIF flows live yet (11-email playbook ready to wire). |
+| 10 | **Sales material** | **3 / 5** | 4 / 5 | Executive portal (`portal/index.html`), 3 live interactive concepts, ROI calculator, and corporate/women's self-defense clinic models built. |
+| 11 | **Messaging** | **3 / 5** | 5 / 5 | Strong *Excellence / Discipline / Champions* creed, but live site has "$15 trial vs. free trial" FAQ contradictions and unverified coach bio claims. |
+| 12 | **Pricing** | **3 / 5** | 5 / 5 | Clear $139.99/mo core price and $15 3-day pass in WrestlingIQ, pending formal sign-off on 15% sibling discount, 7-day cancel notice, and 6/12-mo PIF tiers. |
+| 13 | **CRO** | **1 / 5** | 5 / 5 | Live site has 0 GA4 tracking and 40%–60% cold WrestlingIQ drop-off. (`uwc-attribution.js` + `<dialog>` modal with 19 hidden fields now wired in `v01/v03/v04`). |
+| 14 | **GTM launches** | **1 / 5** | 4 / 5 | No structured seasonal launch motion for CIF/NCS offseason, post-football crossover, Women's cohorts, or Summer Camps yet. |
+| 15 | **Ads (paid)** | **0 / 5** | 0 / 5 | Intentionally $0/mo per Naweed's strict 100% organic mandate (structural strategic choice, not a deficit). |
+| 16 | **SEO** | **2 / 5** | 5 / 5 | Strong natural authority (2,086 est. visits/mo, 368 keywords, #6 `wrestling gym`), but bottlenecked by 0-word SSR shell, 404 `sitemap.xml`/`robots.txt`, and NAP phone mismatch. |
+| 17 | **Internationalization** | **0 / 5** | 0 / 5 | N/A — Hyper-local East Bay academy serving a 20-minute drive radius in Alameda County. |
+
+**Total Baseline Score: 28 / 85 (32.9%) → 90-Day Target: 66 / 85 (77.6%)**
+
+**Shape interpretation:** UWC exhibits a classic **"World-Class Physical Product & Reputation (#1, #2, #11, #12), Broken Digital Plumbing & Lifecycle Execution (#3, #5, #8, #9, #13, #16)"** shape. The academy has already done the hardest thing in local business—building an Olympic-caliber coaching staff, a 3,000 sq ft mat room, 42 5.0-star reviews, and page-1/page-2 search rankings with zero SEO effort—while losing half its prospective families to a 0-word CSR web shell, cold off-site WrestlingIQ redirects, and missing SMS/email follow-up. Sections 4 (Acquisition), 5 (Activation), and 6 (Retention) are the longest sections in this plan because closing that digital execution gap unlocks immediate, compounding roster growth.
+
+---

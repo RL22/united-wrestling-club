@@ -3,9 +3,9 @@
 > **Note (2026-11-06):** the legacy root pages, concept folders, and the old Next.js snapshot now live in `discovery/archive/legacy-site/`. Paths in closed items below point to where they were.
 
 
-> **Last updated:** 2026-11-05
-> **Status:** The Astro site in `site/` (22 built pages) is live on Vercel production (https://united-wrestling-club.vercel.app, deployed 2026-11-05 from `site/dist/`). Four Formspree endpoints are wired. GitHub Pages is off (public repo made private 2026-11-05). Custom domain cutover is still pending.
-> **Target milestone:** Pre-launch QA, then publish and launch.
+> **Last updated:** 2026-11-07 (closeout, `/pm-capture-and-clean`)
+> **Status:** The Astro site in `site/` (21 built pages, 4 machine files) builds and passes both gates. **No production host is connected.** Both Vercel projects were deleted on 2026-11-07. The site lives in the public repo `RL22/united-wrestling-club` (one clean commit, site-only), with search indexing off (`site/src/data/indexing.ts`, `LAUNCHED = false`). Four Formspree endpoints are wired. Custom domain cutover is pending a new host.
+> **Target milestone:** Pre-launch QA, owner decisions, then publish and launch.
 
 Format: each item has a checkbox, the target file or system, and acceptance criteria. Decisions are recorded in `discovery/decisions/`.
 
@@ -25,16 +25,44 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [x] Invented review headlines and role lines removed (ADR-20261104-review-content-verbatim)
 - [x] Six ADRs written and indexed
 - [x] No CRM this year (ADR-20261105-no-crm-this-year); B2B pipelines deferred
-- [x] Hosting: Vercel production deployed early on 2026-11-05 by owner decision; GitHub Pages staging retired (ADR-20261105-public-preview-github-pages addendum)
-- [x] README rewritten for the Astro site: routes, run, publish, and verification steps (2026-11-05)
-- [x] Astro build gates: `scripts/check_dist.py --final` (22 pages, 765 references, 0 problems) and `scripts/copy_audit.sh site/dist` (0 violations), 2026-11-05
-- [x] Astro site deployed to Vercel production from `site/dist/` (2026-11-05; ADR-20261106 addendum). Routes `/`, `/reviews/`, `/register/`, `/contact/`, `/about/`, `/classes/`, `/pricing/`, `robots.txt`, and `sitemap.xml` return 200. `/assets/img/gbp/` returns 404.
+- [x] Hosting: Vercel production deployed early on 2026-11-05 by owner decision; GitHub Pages staging retired (ADR-20261105-public-preview-github-pages addendum). **Superseded 2026-11-07:** both Vercel projects deleted by the owner (see ADR-20261107-public-site-repo-and-noindex)
+- [x] README rewritten for the Astro site (2026-11-05); refreshed 2026-11-07 for the new repo and the deleted projects
+- [x] Astro build gates: `scripts/check_dist.py --final` (21 pages, 785 references, 0 problems) and `scripts/copy_audit.sh site/dist` (0 violations), re-run 2026-11-07
+- [x] Astro site deployed to Vercel production from `site/dist/` (2026-11-05; ADR-20261106 addendum). **Superseded 2026-11-07:** the deployment no longer exists; the URLs in that check are not live.
+- [x] Public site repo `RL22/united-wrestling-club`: single commit `7f0f759`, site-only, force-pushed over the earlier history (2026-11-07)
+- [x] Search indexing gate: `site/src/data/indexing.ts` `LAUNCHED = false`. Verified in `site/dist`: robots meta `noindex, follow`, `robots.txt` has no Sitemap line, `sitemap.xml` has 0 URLs (2026-11-07)
+- [x] Owner decisions D1, D5, D7, D9, D20 applied; D10 tagline draft applied; D3, D4, D6, D11, D12 held (ADR-20261107-owner-decisions-d-items)
 - [x] Legacy root pages still pass `scripts/check_site.py` (retired; the legacy checker now lives in `discovery/archive/legacy-site/scripts/`)
 - [x] Depth section (parallax cutouts over "CHAMPIONS") removed from the homepage, with its CSS and scroll script (2026-11-05, owner decision). The three `video_assets/cutouts/naweed-*.webp` files are now unused.
 
 ---
 
+## P0: Owner Approvals Blocking Publish (added 2026-11-07)
+
+- [ ] **Approve a new host and create the Vercel project for the public repo**
+  - **Target:** new Vercel project linked to `RL22/united-wrestling-club`; production branch set to a branch other than `main` (ADR-20261107-public-site-repo-and-noindex)
+  - **Acceptance Criteria:** Owner approves the host. Project created under the `sprintz` team. Pushes to `main` build preview only. Preview URL loads with `noindex` on every page. Nothing is promoted to production until launch.
+- [ ] **Decide launch: flip `LAUNCHED` and confirm the gate**
+  - **Target:** `site/src/data/indexing.ts` (`LAUNCHED = false`); `site/src/layouts/Layout.astro`; `site/src/pages/robots.txt.ts`; `site/src/pages/sitemap.xml.ts`
+  - **Acceptance Criteria:** Owner approves launch. Flip to `true`. Built output then has no noindex meta, a Sitemap line in robots.txt, and sitemap URLs for the 21 built routes. Re-run the gates.
+- [ ] **Gate `llms.txt` before launch**
+  - **Target:** `site/src/pages/llms.txt.ts` and `site/src/pages/llms-full.txt.ts`; `site/dist/llms.txt` currently lists 21 URLs and is not gated by `LAUNCHED`
+  - **Acceptance Criteria:** Before launch, `llms.txt` lists no pages, or the file is removed from the pre-launch build. Built output checked: no published URL list while `LAUNCHED` is false.
+- [x] **Decide the public-repo exposure of minors' photos** (owner decided 2026-11-08: keep them in the public repo; release check still open, see the "minors in program card photos" item below)
+  - **Target:** `RL22/united-wrestling-club` (public) containing `site/public/video_assets/cards/*.jpg`
+  - **Acceptance Criteria:** Owner decides to keep the files with releases on record, or replace them and re-export the public repo. A re-export is a force-push and needs approval.
+
 ## P1: Critical Path and Launch Blockers
+
+- [ ] **Clean up the working tree on `homepage-polish` before committing (2026-11-07 closeout)**
+  - **Target:** 12 modified files (`DESIGN.md`, `site/src/components/home/*`, `site/src/components/shell/*`, `site/src/data/nav.ts`, `site/src/pages/{pricing,reviews,schedule}.astro`); untracked `site/public/assets/logo--uwc-wordmark.svg`, `site/tests/baselines/allow-ds8-*.json`, and `scripts/__pycache__/` (now ignored)
+  - **Acceptance Criteria:** Owner says which changes to commit. `site/tests/baselines/allow-ds8-*.json` are either committed (they are small allowlist files) or ignored, with the reason recorded. `git status --porcelain` shows only intended files. Commit only on the owner's request.
+- [ ] **Re-point the local `origin` remote**
+  - **Target:** `git remote` in this repo. Currently `https://github.com/RL22/united-wrestling-club-internal.git`, which was deleted on 2026-11-07.
+  - **Acceptance Criteria:** `origin` is removed, or it points to a repo the owner still has. The `homepage-polish` and `owner-decisions-2026-11-07` work is not pushed to a deleted URL.
+- [ ] **Confirm the D-register items the owner has not closed**
+  - **Target:** D10 footer tagline (`site/src/components/shell/SiteFooter.astro`); D3 Sambo (`site/src/pages/classes/sambo.astro`, held from live); D4, D6, D11, D12 (held, see `site/src/data/routes.ts`)
+  - **Acceptance Criteria:** Owner confirms the D10 copy. Owner approves the Sambo promotion when ready. D4, D6, D11, and D12 stay omitted until their unlock condition is met, and the research or copy for each is recorded.
 
 - [ ] **Submit each form once on the live site and confirm the entry arrives**
   - **Target:** Formspree forms in the new account. Astro wiring: trial form `site/src/components/forms/TrialForm.astro` (`mkjjyyep`); contact, newsletter, and review forms use `data-uwc-form` with `FORM_ENDPOINTS` in `site/public/assets/js/uwc-attribution.js`
@@ -54,13 +82,14 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [ ] **P2 lead response: automated text responder**
   - **Target:** `discovery/strategy/lead_response_system.md` section 5C; `discovery/knowledge_base/uwc_kb_v1.md`
   - **Acceptance Criteria:** 40 scripted questions pass (30 FAQ, 10 escalation). Every automated reply cites a Verified KB ID. Handoff tested end to end.
-- [ ] **P0 accuracy: remove invented testimonial details from the homepage**
-  - **Target:** `site/src/components/home/Testimonials.astro` lines 18 ("Youth Parent · Local Guide (17 reviews)"), 29 ("Local Guide (33 reviews)"), 38 ("Visiting Youth Parent · Out-of-State"), 47 ("Local Guide (30 reviews)"), and the location and date spans. Also `site/src/components/pages/reviews/ReviewGrid.astro` (filter labels) to check.
+- [x] **P0 accuracy: remove invented testimonial details from the homepage**
+  - **Target:** `site/src/components/home/Testimonials.astro`
   - **Acceptance Criteria:** Homepage testimonials match the reviews page rule (ADR-20261104): verbatim text, reviewer name, and platform only. No invented role, reviewer count, or location lines.
-  - **Status (2026-11-05): OPEN, live in production.** The Astro homepage still shows the invented role and "Local Guide (N reviews)" lines. ADR-20261104 is recorded as done; it is not done on the homepage.
-- [ ] **P0 accuracy: reconcile Saturday hours**
-  - **Target:** `site/src/data/schedule.ts` row marked pending (D1, Saturday 8:00 to 10:00 AM gi), with `site/src/components/home/Schedule.astro`, `site/src/components/shell/SiteFooter.astro` (12:00 PM), `site/src/data/jsonld-home.ts`, and `discovery/knowledge_base/uwc_kb_v1.md` KB-03
-  - **Acceptance Criteria:** Naweed confirms every Saturday class. Footer, JSON-LD, schedule, and KB-03 agree. The pending row is either shown or deleted.
+  - **Status (2026-11-07):** Fixed in the working tree on `homepage-polish`. No "Local Guide" or "Youth Parent" testimonial lines remain in `site/src`. Not committed, not deployed.
+- [ ] **P0 accuracy: confirm Saturday hours with Naweed**
+  - **Target:** `site/src/data/schedule.ts` row-11 (Saturday 8:00 to 10:00 AM gi jiu-jitsu, now shown per D1), with `site/src/components/home/Schedule.astro`, `site/src/components/shell/SiteFooter.astro` (its hours block still shows Saturday 10:00 AM to 12:00 PM), `site/src/data/jsonld-home.ts`, and `discovery/knowledge_base/uwc_kb_v1.md` KB-03
+  - **Acceptance Criteria:** Naweed confirms every Saturday class. Footer, JSON-LD, schedule, and KB-03 agree.
+  - **Status (2026-11-07):** D1 approved the row to show. Confirmation from Naweed is still open.
 - [ ] **P0 accuracy: one membership price on the site**
   - **Target:** `$139.99` in `site/src/components/home/Hero.astro`, `Pricing.astro`, `site/src/data/nav.ts`, `site/src/data/jsonld-home.ts` (Offer), `site/src/data/facts.ts`, `site/src/pages/pricing.astro`, and the class pages (`kid-wrestling`, `youth-wrestling`, `adult-wrestling`). The FAQ (`site/src/data/faqs.ts`) says plans range from $89.99 to $150.00.
   - **Acceptance Criteria:** Owner decides the price the homepage leads with and whether to show the range. Hero, pricing section, nav, Offer JSON-LD, FAQ, and `llms-full.txt` then agree. KB-08 is the verified source for $139.99 per month.
@@ -88,7 +117,8 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [ ] **P0 before publishing: minors in program card photos**
   - **Target:** `site/public/video_assets/cards/program-youth.jpg` (three boys, identifiable) and `program-varsity.jpg` (athlete with name on singlet), shown by `site/src/components/home/Programs.astro`; `program-openmat.jpg` (teen in background)
   - **Acceptance Criteria:** Written media release confirmed for each identifiable minor shown, or the image is replaced with adults or coaches. Until then, the cards stay on staging only.
-  - **Status (2026-11-05): OPEN, live in production.** `program-youth.jpg` and `program-varsity.jpg` are on the Vercel production site at https://united-wrestling-club.vercel.app, including the Astro build deployed the same day. The owner chose to deploy before this release check was done. Decide: remove them from production (replace or crop), or confirm the releases.
+  - **Status (2026-11-08): OPEN.** Owner decided to keep the files in the public repo. Releases are not confirmed. The Vercel production site that showed these cards was deleted on 2026-11-07. The four card JPGs (`program-youth`, `program-varsity`, `program-adult`, `program-openmat`) are tracked in `RL22/united-wrestling-club`, which is public on GitHub. Owner decision D5 (2026-11-07) accepted minors' imagery on the site, but did not cover publishing the raw files on GitHub. Owner decided on 2026-11-08 to keep the files in the public repo. Written releases for the identifiable minors are still unconfirmed.
+  - **Also decide:** whether `site/public/video_assets/` belongs in a public repo at all, or only the built `site/dist/` output.
 - [x] **P0 Olympic claims: pulled from public copy (2026-11-05)**
   - Pulled: meta and JSON-LD, hero, lineage section and 1980 badge, Karim and Rashad bios, footers, the CTA headline, and the about page. Internal docs README and PRODUCT.md corrected.
   - Still open: re-add Karim's exact wording once he confirms it. PRODUCT.md principle 1 reworded to "Proof over pedigree" (2026-11-05).
@@ -107,11 +137,11 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 - [ ] **Retire the old Formspree inbox (`xyyavaaj`)**
   - **Target:** old Formspree account; `discovery/client/uwc_live_funnel_test_log.md`, `discovery/strategy/uwc_sms_marketing_playbook.md`
   - **Acceptance Criteria:** Export any leads that arrived during pre-launch from the old inbox. Confirm no live page or playbook still posts there. The SMS playbook's "Formspree `xyyavaaj`" references are updated to the new trial form.
-- [x] **Publish to production (superseded 2026-11-05)**
-  - Public repo `RL22/united-wrestling-club` made private, and GitHub Pages is off. Production is the Vercel project `united-wrestling-club` (procedure in `README.md` section 6). The `gPages` branch is no longer a publish target.
-- [ ] **Cut over the custom domain to Vercel**
-  - **Target:** Route 53 zone for `unitedwrestlingclub.com` ([ADR-20261103](discovery/decisions/ADR-20261103-hosting-on-vercel.md)); Vercel project `united-wrestling-club`
-  - **Acceptance Criteria:** Production already runs at https://united-wrestling-club.vercel.app. Follow the ADR-20261103 cutover steps, keeping the SES, DMARC, and `shop` records. Form endpoints unchanged. Post-cutover: check the four forms, the live homepage, and the reviews, register, and contact pages. Decide whether GitHub Pages returns as read-only staging, and record that in the ADR-20261105 addendum.
+- [x] **Publish to production (superseded 2026-11-07)**
+  - The 2026-11-05 Vercel production project and the public repo were both replaced on 2026-11-07. The public repo is `RL22/united-wrestling-club` (public, site-only). No production host is connected. Publishing steps are in `README.md` section 6.
+- [ ] **Cut over the custom domain to a new host**
+  - **Target:** Route 53 zone for `unitedwrestlingclub.com` ([ADR-20261103](discovery/decisions/ADR-20261103-hosting-on-vercel.md)); a new Vercel project linked to `RL22/united-wrestling-club` (not yet created)
+  - **Acceptance Criteria:** Blocked until the owner approves the new host and launch. Then follow the ADR-20261103 cutover steps, keeping the SES, DMARC, and `shop` records. Form endpoints unchanged. Post-cutover: check the four forms, the live homepage, and the reviews, register, and contact pages. Decide whether GitHub Pages returns as read-only staging, and record that in the ADR-20261105 addendum.
 - [ ] **Decide the flagship concept (conflict)**
   - **Target:** `discovery/decisions/ADR-20261102-concept-consolidation-and-v04-flagship.md`
   - **Acceptance Criteria:** ADR-20261102 names V04 as flagship. The live site is built on V01 at the client's direction. Decide which is the flagship, then update the ADR and `README.md` section 2.
@@ -205,7 +235,7 @@ Format: each item has a checkbox, the target file or system, and acceptance crit
 ## P4: Strategy, Campaigns, and Later Routes
 
 - [ ] **Build the remaining sitemap routes**
-  - **Target:** `discovery/site/website_rebuild_spec.md` section 5 (32-route sitemap). Status: 22 pages built (see `site/src/data/routes.ts`). Omitted routes wait on owner decisions named in `routes.ts`: donate, women's self-defense, the city pages, and the guides hub and guides.
+  - **Target:** `discovery/site/website_rebuild_spec.md` section 5 (32-route sitemap). Status: 21 pages built (see `site/src/data/routes.ts`). Omitted routes wait on owner decisions named in `routes.ts`: donate, women's self-defense, the city pages, and the guides hub and guides.
   - **Acceptance Criteria:** Each route has content, its forms per `discovery/site/forms_map_full_sitemap.md`, and a sitemap entry. Each omitted route moves to `built` or is removed from the plan.
 - [ ] **Women's Self-Defense seminar series**
   - **Target:** `discovery/strategy/womens_self_defense_financial_model.md`, `/classes/womens-self-defense` (F4)

@@ -21,9 +21,16 @@ Thumbs.db
 /site/node_modules/
 /site/dist/
 /site/.astro/
+/site/.vercel/
+
+# Python bytecode
+/scripts/__pycache__/
 
 # Site scratch output
 site/output/
 
 # Regression baselines and screenshots (large; regenerate with scripts/fingerprint.mjs)
 /site/tests/baselines/*/
+
+# Local test fixtures and baselines (not part of the site)
+/site/tests/

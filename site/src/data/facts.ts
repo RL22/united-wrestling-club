@@ -24,12 +24,12 @@ export const facts = {
     ],
     footnote: 'Times can shift around holidays and tournaments.',
   },
-  /** KB-05. The schedule uses grade ranges that differ from these ages; show both as sourced. */
+  /** KB-05. Use grade labels instead of unconfirmed age bands (OC-14). */
   programs: {
     id: 'KB-05',
-    youth: { name: 'Youth Wrestling Academy', ages: 'Ages 5 to 13' },
-    varsity: { name: 'Varsity and Scholastic Prep', ages: 'Ages 14 to 18' },
-    adult: { name: 'Adult Wrestling and Wrestle-Jitsu', ages: '18 and up' },
+    youth: { name: 'Youth Wrestling Academy', ages: 'Kids and youth' },
+    varsity: { name: 'Varsity and Scholastic Prep', ages: 'Middle and high school' },
+    adult: { name: 'Adult Wrestling and Wrestle-Jitsu', ages: 'Adults' },
     openMat: { name: 'Saturday Open Mat', ages: 'Drop-in' },
   },
   /** KB-06 */

@@ -3,13 +3,16 @@ import InteriorLayout from '../../layouts/InteriorLayout.astro';
 import PageHero from '../../components/ui/PageHero.astro';
 import InfoCard from '../../components/ui/InfoCard.astro';
 import { routes } from '../../data/routes';
-import { facts } from '../../data/facts';
 
 // Hub lists only built class pages. Blurbs are sourced from data/facts.ts (KB-05) and the class pages' own intros.
-const blurbs: Record<string, { badge: string; text: string }> = {
-  '/classes/kid-wrestling/': { badge: facts.programs.youth.ages, text: 'Fundamentals, conditioning, character, and fun for young athletes.' },
-  '/classes/youth-wrestling/': { badge: facts.programs.varsity.ages, text: 'An intensive program for middle school and high school students, built for competition.' },
-  '/classes/adult-wrestling/': { badge: facts.programs.adult.ages, text: 'Wrestling for beginners, former wrestlers, MMA fighters, and jiu-jitsu practitioners.' },
+const blurbs: Record<string, { badge?: string; text: string }> = {
+  '/classes/kid-wrestling/': { badge: 'Pre-K to 5th grade', text: 'Fundamentals, conditioning, character, and fun for young athletes.' },
+  '/classes/youth-wrestling/': { badge: 'K to 12th grade', text: 'An intensive program for students in kindergarten through 12th grade, built for competition.' },
+  '/classes/adult-wrestling/': { badge: 'Adult, college & high school', text: 'Wrestling for beginners, former wrestlers, MMA fighters, and jiu-jitsu practitioners.' },
+  '/classes/nogi-jiu-jitsu/': { text: 'Submission grappling taught with wrestling fundamentals.' },
+  '/classes/gi-jiu-jitsu/': { text: 'Technical grappling in the gi.' },
+  '/classes/boxing-fundamentals/': { text: 'Boxing fundamentals for beginners and developing athletes.' },
+  '/classes/open-mat/': { text: 'Mat time with training partners from a range of disciplines.' },
 };
 const classes = routes.filter((r) => r.path.startsWith('/classes/') && r.path !== '/classes/' && r.status === 'built');
 ---

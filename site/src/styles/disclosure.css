@@ -24,6 +24,8 @@
 }
 
 .faq-question {
+  width: 100%;
+  text-align: left;
   padding: 22px 26px;
   display: flex;
   justify-content: space-between;

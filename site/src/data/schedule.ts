@@ -1,6 +1,6 @@
 // Class times, copied verbatim from home/Schedule.astro (KB-04: the homepage schedule is the source of truth).
 // `programs` are the homepage tab ids (youth, varsity, adult, open); `tags` help the class pages pick rows.
-// `pending: "D1"` marks the Saturday 8:00 to 10:00 AM gi row (outside KB-03 hours); ui/ScheduleList hides it unless showPending is true.
+// The Saturday 8:00 to 10:00 AM gi row is shown (owner decision D1, 2026-11-07). `pending` remains available for any future unconfirmed row.
 export type ScheduleRow = {
   id: string;
   days: string;
@@ -22,6 +22,6 @@ export const scheduleRows: ScheduleRow[] = [
   {"id": "row-08", "days": "Mon, Wed & Fri", "time": "6:30 – 8:00 AM", "label": "Gi jiu-jitsu", "programs": ["adult"], "tags": ["gi"]},
   {"id": "row-09", "days": "Tue & Thu", "time": "6:30 – 7:30 PM", "label": "Gi jiu-jitsu", "programs": ["adult"], "tags": ["gi"]},
   {"id": "row-10", "days": "Fri", "time": "6:30 – 8:00 PM", "label": "Boxing & no-gi jiu-jitsu", "programs": ["adult"], "tags": ["nogi", "boxing"]},
-  {"id": "row-11", "days": "Saturday", "time": "8:00 – 10:00 AM", "label": "Gi jiu-jitsu", "programs": ["open"], "tags": ["gi"], "pending": "D1" },
+  {"id": "row-11", "days": "Saturday", "time": "8:00 – 10:00 AM", "label": "Gi jiu-jitsu", "programs": ["open"], "tags": ["gi"]},
   {"id": "row-12", "days": "Saturday", "time": "10:00 AM – 12:00 PM", "label": "Open mat, all affiliations welcome", "programs": ["open"], "tags": ["openmat"]},
 ];

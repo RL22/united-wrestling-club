@@ -21,3 +21,7 @@ The project mixed client-confidential discovery, research, call notes, marketing
 ## Impacted Files
 - `discovery/` (internal only, never published)
 - Public repo `gPages` root: `index.html`, `assets/`, `reviews/`, `register/`, `contact/`
+
+## Amendment (2026-11-07)
+
+The internal repo `RL22/united-wrestling-club-internal` was deleted by the owner on 2026-11-07. The public repo `RL22/united-wrestling-club` is now a clean, site-only, single-commit import, and it is public. Search indexing is off until launch (see [ADR-20261107-public-site-repo-and-noindex](ADR-20261107-public-site-repo-and-noindex.md)). Points 1 and 2 describe 2026-11-04 and are kept as history.

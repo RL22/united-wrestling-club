@@ -23,7 +23,7 @@ const mobile = forPage(mobileNav, isHome);
   <header class="site-nav">
     <div class="container nav-inner">
       <a href={isHome ? "./" : "/"} class="nav-brand" aria-label="United Wrestling Club Homepage">
-        <img src="/assets/logo--uwc_wrestlers.svg" alt="United Wrestling Club" class="brand-logo-lockup">
+        <picture><source media="(max-width: 768px)" srcset="/assets/logo--uwc-wordmark.svg"><img src="/assets/logo--uwc_wrestlers.svg" alt="United Wrestling Club" class="brand-logo-lockup"></picture>
       </a>
 
       <nav aria-label="Main Navigation" class="desktop-nav">
@@ -59,7 +59,7 @@ const mobile = forPage(mobileNav, isHome);
   <aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-nav-header">
       <div class="mobile-nav-brand">
-        <img src="/assets/logo--uwc_wrestlers.svg" alt="United Wrestling Club" class="brand-logo-lockup">
+        <img src="/assets/logo--uwc-wordmark.svg" alt="United Wrestling Club" class="brand-logo-lockup">
       </div>
       <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
     </div>

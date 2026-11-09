@@ -1,11 +1,11 @@
 ---
-// Price facts for the adult class pages. Every value comes from data/facts.ts (KB-06, KB-08, KB-09).
+// Shared trial and drop-in facts. Program membership tiers are listed on the pricing page.
 import { facts } from '../../../data/facts';
 interface Props { openMat?: boolean }
 const { openMat = false } = Astro.props;
 ---
 <div class="fact-list fact-list--prices">
   <div><strong>{facts.trialPass.name}:</strong> {facts.trialPass.price}. {facts.trialPass.blurb}</div>
-  <div><strong>Monthly membership:</strong> {facts.membership.price} {facts.membership.period}. {facts.membership.terms}</div>
+  <div>Membership options vary by program. <a href="/pricing/">View membership pricing</a>.</div>
   {openMat && <div><strong>Drop-in:</strong> {facts.dropIn.price} per {facts.dropIn.per}. {facts.dropIn.note}</div>}
 </div>

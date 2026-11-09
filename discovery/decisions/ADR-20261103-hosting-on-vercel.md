@@ -27,3 +27,7 @@ The full decision is in the TravaLab repo: [ADR-20261103-hosting-on-vercel](../.
 
 ## Resolved (Nov 5, 2026)
 Production moved to Vercel early, on 2026-11-05, by owner decision. The Vercel project is live at https://united-wrestling-club.vercel.app. GitHub Pages staging is off because the public repo was made private the same day. The custom-domain cutover (steps 1 to 5 above) is still pending. See the addendum in [ADR-20261105-public-preview-github-pages](ADR-20261105-public-preview-github-pages.md). Step 5 (the `staging.unitedwrestlingclub.com` subdomain on CloudFront) is revisited at cutover.
+
+## Amendment (2026-11-07)
+
+Both Vercel projects (`site`, `united-wrestling-club`) were deleted by the owner on 2026-11-07. `https://united-wrestling-club.vercel.app` is no longer served. No production host is connected. The re-link to the public repo is Proposed (see [ADR-20261107-public-site-repo-and-noindex](ADR-20261107-public-site-repo-and-noindex.md)). The paragraph above describes the state on 2026-11-05 and is kept as history.

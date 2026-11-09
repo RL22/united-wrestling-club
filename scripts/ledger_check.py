@@ -109,7 +109,8 @@ def validate(claims, final=False):
                 if len(ev) > 300:
                     problems.append(f"{where}: evidence longer than 300 chars")
                 body = source_text(src)
-                if ev and body is not None and norm(ev) not in body:
+                # superseded claims keep their old quote as history; the quote no longer has to be in the file
+                if ev and body is not None and norm(ev) not in body and c.get('verification') != 'superseded':
                     problems.append(f"{where}: evidence not found verbatim in {src}: {ev[:80]!r}")
         if final:
             for other in c.get('conflicts_with', []) or []:

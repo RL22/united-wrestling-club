@@ -3,5 +3,6 @@
 
 | Doc | Type | Status | Last reviewed | Title |
 |---|---|---|---|---|
+| [`seo_data_sources.md`](seo_data_sources.md) | inventory | draft | 2026-11-06 | SEO data sources (citation register) |
 | [`strategy_what_why_how.md`](strategy_what_why_how.md) | dossier | current | 2026-10-30 | Local SEO Growth Strategy: United Wrestling Club (Alameda County) |
 | [`top_10_programmatic_lps.md`](top_10_programmatic_lps.md) | dossier | current | 2026-10-30 | Top 10 Data-Driven Programmatic Landing Pages: United Wrestling Club |
