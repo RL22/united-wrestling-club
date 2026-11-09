@@ -5,7 +5,7 @@
        ========================================================================== */
 
 .faq-section {
-  padding: var(--space-section-tight);
+  padding: var(--space-section);
   background-color: var(--color-surface-0);
   border-top: 1px solid var(--color-border-default);
 }
