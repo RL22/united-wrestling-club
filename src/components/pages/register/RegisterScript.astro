@@ -3,8 +3,6 @@
       const form = document.getElementById('registerForm');
       if (!form) return;
       const status = document.getElementById('reg-trial-status');
-      const success = document.getElementById('reg-success');
-      const wiq = document.getElementById('reg-wiq-btn');
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         const smsBox = document.getElementById('reg-sms-opt-in');
@@ -12,16 +10,11 @@
         const btn = form.querySelector('button[type="submit"]');
         if (status) status.hidden = true;
         if (btn) btn.disabled = true;
-        window.UWCAttribution.submitLead(form).then(() => {
-          const row = document.getElementById('reg-sms-status-row');
-          if (row) {
-            row.innerHTML = isOptedIn
-              ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
-              : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
-          }
-          if (wiq) wiq.href = window.UWCAttribution.decorateUrl(wiq.href);
-          form.hidden = true;
-          if (success) success.hidden = false;
+        window.UWCAttribution.submitLead(form).then((payload) => {
+          window.UWCAttribution.redirectToThankYou(payload, {
+            form: 'trial_pass',
+            sms: isOptedIn ? 'opted_in' : 'opted_out_or_unchecked'
+          });
         }).catch(() => {
           if (status) {
             status.textContent = 'We could not send your request. Call (510) 303-4869 for help with your pass.';
@@ -32,6 +25,4 @@
         });
       });
     })();
-
-  
 </script>

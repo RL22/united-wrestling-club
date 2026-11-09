@@ -2,15 +2,13 @@
     (function () {
       document.querySelectorAll('form[data-uwc-form="contact"]').forEach((cf) => {
         const status = cf.querySelector('.form-status');
-        const success = cf.parentElement.querySelector('.form-success');
         cf.addEventListener('submit', (e) => {
           e.preventDefault();
           const btn = cf.querySelector('button[type="submit"]');
           if (status) status.hidden = true;
           if (btn) btn.disabled = true;
-          window.UWCAttribution.submitLead(cf).then(() => {
-            cf.hidden = true;
-            if (success) success.hidden = false;
+          window.UWCAttribution.submitLead(cf).then((payload) => {
+            window.UWCAttribution.redirectToThankYou(payload, { form: 'contact' });
           }).catch(() => {
             if (status) {
               status.textContent = 'We could not send your message. Call (510) 303-4869 and we will reply.';
@@ -22,6 +20,4 @@
         });
       });
     })();
-
-  
 </script>

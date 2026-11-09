@@ -41,6 +41,7 @@ export const routes: Route[] = [
   { path: '/guides/high-school-off-season-wrestling/', title: 'High School Off-Season Wrestling', status: 'omitted', reason: 'Needs sources outside the KB.', unlock: 'D12' },
   { path: '/guides/dsal-hayward-wrestling-pathway/', title: 'DSAL Hayward Wrestling Pathway', status: 'omitted', reason: 'Needs sources outside the KB.', unlock: 'D12' },
   { path: '/reviews/', title: 'Reviews', group: 'G1', status: 'built' },
+  { path: '/thank-you/', title: 'Thank You', group: 'G1', status: 'built' },
 ];
 
 /** Machine files, owned by group G6. */

@@ -64,8 +64,6 @@
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         const smsOptInBox = document.getElementById('v01-sms-opt-in');
-        const smsStatusRow = document.getElementById('v01-sms-status-row');
-        const wiqBtn = document.getElementById('v01-wiq-btn');
         const submitBtn = form.querySelector('button[type="submit"]');
         const isOptedIn = Boolean(smsOptInBox && smsOptInBox.checked);
         if (trialStatus) trialStatus.hidden = true;
@@ -75,17 +73,11 @@
           ? window.UWCAttribution.submitLead(form)
           : Promise.reject(new Error('not_connected'));
 
-        pending.then(() => {
-          if (smsStatusRow) {
-            smsStatusRow.innerHTML = isOptedIn
-              ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
-              : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
-          }
-          if (wiqBtn && window.UWCAttribution) {
-            wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
-          }
-          if (formContainer) formContainer.style.display = 'none';
-          if (successState) successState.style.display = 'block';
+        pending.then((payload) => {
+          window.UWCAttribution.redirectToThankYou(payload, {
+            form: 'trial_pass',
+            sms: isOptedIn ? 'opted_in' : 'opted_out_or_unchecked'
+          });
         }).catch(() => {
           if (trialStatus) {
             trialStatus.textContent = 'We could not send your request. Call (510) 303-4869 and we will reserve your pass.';
@@ -114,9 +106,9 @@
         }
         const btn = nf.querySelector('button[type="submit"]');
         if (btn) btn.disabled = true;
-        window.UWCAttribution.submitLead(nf).then(() => {
+        window.UWCAttribution.submitLead(nf).then((payload) => {
           nf.reset();
-          say("You're on the list. The first Mat Report is on its way.");
+          window.UWCAttribution.redirectToThankYou(payload, { form: 'newsletter' });
         }).catch(() => {
           say('We could not sign you up right now. Call (510) 303-4869 and we will add you.');
         }).finally(() => {
