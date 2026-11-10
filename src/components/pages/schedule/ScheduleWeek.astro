@@ -1,0 +1,142 @@
+---
+// Weekly schedule. A week calendar from lg up; program tabs with a list below that.
+// Times come from data/schedule.ts. Pending rows stay hidden, as they do on the homepage.
+import { scheduleRows, type ScheduleRow } from '../../../data/schedule';
+import { facts } from '../../../data/facts';
+
+const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const HOUR_PX = 56;
+const FIRST_HOUR = 6;
+const LAST_HOUR = 22;
+const GRID_MIN = FIRST_HOUR * 60;
+const GRID_HEIGHT = (LAST_HOUR - FIRST_HOUR) * HOUR_PX;
+
+// Tone classes are written out in full so Tailwind can find them.
+const programs = [
+  { id: 'youth', label: 'Kids and youth', name: facts.programs.youth.name, tone: 'border-primary/70 bg-primary/20' },
+  { id: 'varsity', label: 'Scholastic', name: facts.programs.varsity.name, tone: 'border-warning/70 bg-warning/15' },
+  { id: 'adult', label: 'Adults', name: facts.programs.adult.name, tone: 'border-info/70 bg-info/15' },
+  { id: 'open', label: 'Open mat', name: facts.programs.openMat.name, tone: 'border-success/70 bg-success/15' },
+];
+const toneFor = (id: string) => programs.find((p) => p.id === id)?.tone ?? '';
+
+const short = (day: string) => day.trim().slice(0, 3);
+
+// "Mon – Thu", "Mon & Wed", "Mon, Wed & Fri", "Fri", "Saturday" -> ["Mon", "Tue", ...]
+function expandDays(text: string): string[] {
+  const out: string[] = [];
+  for (const part of text.replace(/&/g, ',').split(',').map((s) => s.trim()).filter(Boolean)) {
+    const [from, to] = part.split('–').map((s) => s.trim());
+    if (to) {
+      for (let i = DAYS.indexOf(short(from)); i <= DAYS.indexOf(short(to)); i++) out.push(DAYS[i]);
+    } else {
+      out.push(short(part));
+    }
+  }
+  return [...new Set(out)].filter((d) => DAYS.includes(d));
+}
+
+// "6:30" with a fallback meridiem, or "7:30 PM", to minutes after midnight.
+function clockMinutes(clock: string, fallback = 'AM'): number {
+  const m = clock.trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)?$/i);
+  if (!m) throw new Error(`Unreadable class time: ${clock}`);
+  const meridiem = (m[3] ?? fallback).toUpperCase();
+  return ((Number(m[1]) % 12) + (meridiem === 'PM' ? 12 : 0)) * 60 + Number(m[2] ?? 0);
+}
+
+// "6:30 – 7:30 PM": the start borrows the end's meridiem when it has none.
+function span(time: string) {
+  const [from, to] = time.split('–').map((s) => s.trim());
+  const meridiem = to.match(/(AM|PM)/i)?.[1] ?? 'AM';
+  return { start: clockMinutes(from, meridiem), end: clockMinutes(to) };
+}
+
+const rows = scheduleRows.filter((r) => !r.pending);
+const firstDay = (r: ScheduleRow) => DAYS.indexOf(expandDays(r.days)[0] ?? 'Mon');
+const startOf = (r: ScheduleRow) => span(r.time).start;
+const sorted = rows.slice().sort((a, b) => firstDay(a) - firstDay(b) || startOf(a) - startOf(b));
+
+const blocks = rows.flatMap((row) => {
+  const { start, end } = span(row.time);
+  return expandDays(row.days).map((day) => ({ row, day, start, end, tone: toneFor(row.programs[0]) }));
+});
+
+const hours = Array.from({ length: LAST_HOUR - FIRST_HOUR }, (_, i) => FIRST_HOUR + i);
+const hourLabel = (h: number) => `${h % 12 === 0 ? 12 : h % 12} ${h < 12 ? 'AM' : 'PM'}`;
+const topPx = (minutes: number) => ((minutes - GRID_MIN) / 60) * HOUR_PX;
+const COLS = 'grid-cols-[56px_repeat(6,minmax(0,1fr))]';
+---
+
+<!-- Below lg: program tabs, one list at a time. The tab script in PageScripts drives these. -->
+<div class="lg:hidden">
+  <div role="tablist" aria-label="Programs" class="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
+    {programs.map((p, i) => (
+      <button
+        type="button"
+        role="tab"
+        id={`tab-${p.id}`}
+        aria-controls={`panel-${p.id}`}
+        aria-selected={i === 0 ? 'true' : 'false'}
+        tabindex={i === 0 ? 0 : -1}
+        class="schedule-tab btn btn-outline min-h-11 border-neutral px-3 text-[0.78rem] font-extrabold uppercase tracking-[0.06em] text-muted aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content"
+      >{p.label}</button>
+    ))}
+  </div>
+
+  {programs.map((p, i) => (
+    <div class="schedule-panel" role="tabpanel" id={`panel-${p.id}`} aria-labelledby={`tab-${p.id}`} hidden={i !== 0}>
+      <ul class="divide-y divide-base-300 overflow-hidden rounded-box border border-neutral bg-base-200">
+        {sorted.filter((r) => r.programs.includes(p.id)).map((r) => (
+          <li class="grid gap-1 px-[18px] py-4">
+            <span class="font-bold text-base-content">{r.days}</span>
+            <span class="font-semibold text-accent">{r.time}</span>
+            <span class="text-muted">{r.label}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</div>
+
+<!-- lg and up: the full week on one grid. -->
+<div class="hidden lg:block">
+  <div class="mb-5 flex flex-wrap gap-x-6 gap-y-2">
+    {programs.map((p) => (
+      <span class="flex items-center gap-2 text-[0.82rem] text-muted">
+        <span class={`size-3 rounded-field border ${p.tone}`} aria-hidden="true"></span>
+        {p.name}
+      </span>
+    ))}
+  </div>
+
+  <div class="overflow-hidden rounded-box border border-neutral bg-base-200">
+    <div class={`grid ${COLS} border-b border-neutral`}>
+      <div></div>
+      {DAYS.map((d) => (
+        <div class="px-2 py-3 text-center text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-base-content">{d}</div>
+      ))}
+    </div>
+
+    <div class={`grid ${COLS}`}>
+      <div class="relative" style={`height:${GRID_HEIGHT}px`}>
+        {hours.map((h) => (
+          <span class="absolute right-2 -translate-y-1/2 text-[0.7rem] text-muted" style={`top:${topPx(h * 60)}px`}>{hourLabel(h)}</span>
+        ))}
+      </div>
+      {DAYS.map((d) => (
+        <div class="relative border-l border-neutral [background-image:repeating-linear-gradient(to_bottom,#232733_0,#232733_1px,transparent_1px,transparent_56px)]" style={`height:${GRID_HEIGHT}px`}>
+          {blocks.filter((b) => b.day === d).map((b) => (
+            <div class={`absolute inset-x-1 overflow-hidden rounded-field border px-2 py-1 text-[0.72rem] leading-tight ${b.tone}`} style={`top:${topPx(b.start) + 1}px;height:${((b.end - b.start) / 60) * HOUR_PX - 2}px`}>
+              {b.end - b.start < 45
+                ? <span class="block truncate font-bold text-base-content">{b.row.time} · {b.row.label}</span>
+                : <>
+                    <span class="block font-bold text-base-content">{b.row.label}</span>
+                    <span class="block font-semibold text-accent">{b.row.time}</span>
+                  </>}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

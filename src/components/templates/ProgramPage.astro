@@ -23,12 +23,12 @@ const hasAfter = Astro.slots.has('after-schedule'); // a page that fills the slo
 ---
 <InteriorLayout title={title} description={description} path={path} current="classes">
   <PageHero eyebrow={eyebrow} title={heading} titleBrand={headingBrand} lead={lead} compact />
-  <section class="section-block">
-    <div class="container">
+  <section class="section-y border-t border-base-300">
+    <div class="container-uwc space-y-4">
       <slot />
       {schedule && <ScheduleList program={schedule.program} tag={schedule.tag} />}
       <slot name="after-schedule" />
-      {!hasAfter && <p><Button trial program={trialProgram}>{ctaLabel}</Button></p>}
+      {!hasAfter && <p class="pt-4"><Button trial program={trialProgram}>{ctaLabel}</Button></p>}
     </div>
   </section>
 </InteriorLayout>

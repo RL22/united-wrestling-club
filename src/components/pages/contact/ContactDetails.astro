@@ -2,12 +2,14 @@
 import FactList from '../../ui/FactList.astro';
 import { facts } from '../../../data/facts';
 ---
-<aside class="contact-card" aria-label="Club details">
-  <h2 class="contact-card-title">Hayward facility</h2>
-  <address class="contact-address">United Wrestling Club</address>
-  <FactList show="address" />
-  <FactList show="phone" />
-  <h3 class="contact-card-subtitle">Hours</h3>
-  <FactList show="hours" />
-  <p class="contact-line"><a href={facts.address.mapsUrl} target="_blank" rel="noopener noreferrer">Directions on Google Maps &nearr;</a></p>
+<aside class="card card-border border-border-default bg-base-200" aria-label="Club details">
+  <div class="card-body gap-0 p-7">
+    <h2 class="card-title mb-3 text-[1.05rem] font-extrabold tracking-[0.04em] text-base-content uppercase">Hayward facility</h2>
+    <address class="not-italic leading-[1.6] text-base-content">United Wrestling Club</address>
+    <FactList show="address" />
+    <FactList show="phone" />
+    <h3 class="mt-5 mb-2 text-[0.8rem] font-extrabold tracking-[0.08em] text-brand-text uppercase">Hours</h3>
+    <FactList show="hours" />
+    <p class="mt-3 mb-0 text-[0.92rem]"><a class="link link-hover font-bold text-base-content" href={facts.address.mapsUrl} target="_blank" rel="noopener noreferrer">Directions on Google Maps &nearr;</a></p>
+  </div>
 </aside>

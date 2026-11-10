@@ -1,14 +1,14 @@
 ---
-// Accordion markup that shell/PageScripts and styles/disclosure.css already drive (.faq-item, .faq-question, .faq-answer).
+// Native details/summary accordion styled with daisyUI collapse. No JS needed. The first item starts open.
 import type { Faq } from '../../../data/faqs';
 interface Props { items: Faq[] }
 const { items } = Astro.props;
 ---
-<div class="faq-container">
+<div class="mx-auto flex max-w-[860px] flex-col gap-3">
   {items.map((f, i) => (
-    <div class:list={['faq-item', { active: i === 0 }]}>
-      <button class="faq-question" type="button" aria-expanded={i === 0 ? "true" : "false"} aria-controls={`faq-page-answer-${i}`}><span>{f.q}</span><span class="faq-toggle" aria-hidden="true">+</span></button>
-      <div class="faq-answer" id={`faq-page-answer-${i}`}>{f.a}</div>
-    </div>
+    <details class="collapse collapse-arrow rounded-box border border-base-300 bg-base-200" open={i === 0}>
+      <summary class="collapse-title py-5 pr-14 pl-6 text-base font-semibold">{f.q}</summary>
+      <div class="collapse-content max-w-[68ch] px-6 pb-5 text-[0.94rem] text-base-content/80">{f.a}</div>
+    </details>
   ))}
 </div>

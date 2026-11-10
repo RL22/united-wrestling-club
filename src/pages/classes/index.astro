@@ -1,7 +1,6 @@
 ---
 import InteriorLayout from '../../layouts/InteriorLayout.astro';
 import PageHero from '../../components/ui/PageHero.astro';
-import InfoCard from '../../components/ui/InfoCard.astro';
 import { routes } from '../../data/routes';
 
 // Hub lists only built class pages. Blurbs are sourced from data/facts.ts (KB-05) and the class pages' own intros.
@@ -18,15 +17,22 @@ const classes = routes.filter((r) => r.path.startsWith('/classes/') && r.path !=
 ---
 <InteriorLayout title="Classes in Hayward, CA | United Wrestling Club" description="Wrestling classes at United Wrestling Club in Hayward, CA. Pick a class, then try three practices for $15." path="/classes/" current="classes">
   <PageHero eyebrow="Classes" title="Classes at United Wrestling Club" lead="Pick a class, then try three practices for $15." compact />
-  <section class="section-block">
-    <div class="container">
-      <div class="class-grid">
-        {classes.map((c) => <InfoCard title={c.title} badge={blurbs[c.path]?.badge} href={c.path} linkLabel={`See ${c.title}`}>{blurbs[c.path]?.text ?? ''}</InfoCard>)}
+  <section class="section-y border-t border-base-300">
+    <div class="container-uwc">
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {classes.map((c) => (
+          <div class="card card-border border-base-300 bg-base-200">
+            <div class="card-body gap-2 p-6">
+              {blurbs[c.path]?.badge && <span class="badge badge-outline w-fit whitespace-nowrap font-extrabold uppercase">{blurbs[c.path]?.badge}</span>}
+              <h3 class="card-title text-xl font-extrabold uppercase">{c.title}</h3>
+              <p class="grow text-sm leading-relaxed text-base-content/70">{blurbs[c.path]?.text ?? ''}</p>
+              <div class="card-actions justify-start border-t border-base-300 pt-4">
+                <a href={c.path} class="link link-hover text-sm font-extrabold uppercase tracking-[0.08em] no-underline">See {c.title}</a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 </InteriorLayout>
-
-<style>
-  .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-</style>

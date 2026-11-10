@@ -2,17 +2,10 @@
 import InteriorLayout from '../layouts/InteriorLayout.astro';
 import PageHero from '../components/ui/PageHero.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
-import ScheduleList from '../components/ui/ScheduleList.astro';
+import ScheduleWeek from '../components/pages/schedule/ScheduleWeek.astro';
 import FactList from '../components/ui/FactList.astro';
 import TrialForm from '../components/forms/TrialForm.astro';
 import { facts } from '../data/facts';
-
-const groups = [
-  { id: 'youth', ...facts.programs.youth },
-  { id: 'varsity', ...facts.programs.varsity },
-  { id: 'adult', ...facts.programs.adult },
-  { id: 'open', ...facts.programs.openMat },
-];
 ---
 <InteriorLayout
   title="Class Schedule | United Wrestling Club Hayward"
@@ -22,30 +15,24 @@ const groups = [
   cta={false}
 >
   <PageHero eyebrow="CLASS TIMES" title="Class" titleBrand="Schedule" lead="View our comprehensive class schedule and find the perfect time to train." compact />
-  {groups.map((g) => (
-    <section class="section-block" aria-labelledby={`sch-${g.id}`}>
-      <div class="container">
-        <SectionHeader title={g.name} id={`sch-${g.id}`} />
-        <ScheduleList program={g.id} />
-      </div>
-    </section>
-  ))}
-  <section class="section-block section-block--raised" aria-labelledby="sch-hours">
-    <div class="container">
+  <section class="section-y" aria-labelledby="sch-week">
+    <div class="container-uwc">
+      <h2 class="sr-only" id="sch-week">Weekly class times</h2>
+      <ScheduleWeek />
+    </div>
+  </section>
+  <section class="section-y bg-base-200" aria-labelledby="sch-hours">
+    <div class="container-uwc">
       <SectionHeader title="Gym hours" id="sch-hours" />
       <FactList show="hours" />
     </div>
   </section>
-  <section class="section-block" aria-labelledby="sch-trial">
-    <div class="container">
+  <section class="section-y" aria-labelledby="sch-trial">
+    <div class="container-uwc">
       <SectionHeader title="Try three practices for $15" lead={facts.booking.howTo} id="sch-trial" />
-      <div class="schedule-trial-form">
+      <div class="mx-auto max-w-[560px]">
         <TrialForm idPrefix="sch" formId="scheduleTrialForm" variant="inline" sourceTag="schedule-f1b" />
       </div>
     </div>
   </section>
 </InteriorLayout>
-
-<style>
-  .schedule-trial-form { max-width: 560px; margin: 0 auto; }
-</style>

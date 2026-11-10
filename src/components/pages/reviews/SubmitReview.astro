@@ -4,16 +4,18 @@ import ReviewForm from '../../forms/ReviewForm.astro';
 import DispatchModal from './DispatchModal.astro';
 import ReviewsScript from './ReviewsScript.astro';
 ---
-<section class="section-block section-block--raised" id="review-form" aria-labelledby="submission-heading">
-  <div class="container">
-    <div class="form-card">
-      <SectionHeader
-        eyebrow="Share your experience"
-        id="submission-heading"
-        title="Share Your Experience on the Mat"
-        lead="Your review helps other East Bay families, high school wrestlers, and grapplers find their place in our room. Submit below, attach practice or podium photos, and dispatch to Google Maps or Yelp in one click!"
-      />
-      <ReviewForm />
+<section class="section-y border-t border-border-default bg-base-200" id="review-form" aria-labelledby="submission-heading">
+  <div class="container-uwc">
+    <div class="card card-border mx-auto max-w-[860px] border-border-default bg-base-100">
+      <div class="card-body p-[clamp(24px,4vw,40px)]">
+        <SectionHeader
+          eyebrow="Share your experience"
+          id="submission-heading"
+          title="Share Your Experience on the Mat"
+          lead="Your review helps other East Bay families, high school wrestlers, and grapplers find their place in our room. Submit below, attach practice or podium photos, and dispatch to Google Maps or Yelp in one click!"
+        />
+        <ReviewForm />
+      </div>
     </div>
   </div>
 </section>

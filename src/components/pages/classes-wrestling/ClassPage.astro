@@ -1,7 +1,6 @@
 ---
 // Shared body for the three wrestling class pages. All copy is passed in by the page; times come from ui/ScheduleList via the template.
 import ProgramPage from '../../templates/ProgramPage.astro';
-import InfoCard from '../../ui/InfoCard.astro';
 import { facts } from '../../../data/facts';
 
 interface Props {
@@ -22,32 +21,40 @@ const { title, description, path, eyebrow, heading, lead, facts: factRows, secti
 const coaches = facts.coaches.filter((c) => coachNames.includes(c.name));
 ---
 <ProgramPage title={title} description={description} path={path} eyebrow={eyebrow} heading={heading} lead={lead} schedule={schedule} trialProgram={trialProgram}>
-  <h2 class="section-title">Who it is for</h2>
-  <div class="fact-list">
-    {factRows.map((f) => <div><strong>{f.label}:</strong> {f.value}</div>)}
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Who it is for</h2>
+  <ul class="list rounded-box border border-base-300 bg-base-200">
+    {factRows.map((f) => (
+      <li><strong>{f.label}:</strong> <span>{f.value}</span></li>
+    ))}
+  </ul>
+
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">What you work on</h2>
+  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {sections.map((s) => (
+      <div class="card card-border border-base-300 bg-base-200">
+        <div class="card-body gap-2 p-6">
+          <h3 class="card-title text-xl font-extrabold uppercase">{s.title}</h3>
+          <p class="text-sm leading-relaxed text-base-content/70">{s.body}</p>
+        </div>
+      </div>
+    ))}
   </div>
 
-  <h2 class="section-title class-heading">What you work on</h2>
-  <div class="class-grid">
-    {sections.map((s) => <InfoCard title={s.title}>{s.body}</InfoCard>)}
-  </div>
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Coaches</h2>
+  <ul class="list rounded-box border border-base-300 bg-base-200">
+    {coaches.map((c) => (
+      <li><strong>{c.name}:</strong> <span>{c.role}</span></li>
+    ))}
+  </ul>
 
-  <h2 class="section-title class-heading">Coaches</h2>
-  <div class="fact-list">
-    {coaches.map((c) => <div><strong>{c.name}:</strong> {c.role}</div>)}
-  </div>
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Price</h2>
+  <ul class="list rounded-box border border-base-300 bg-base-200">
+    {prices.map((p) => (
+      <li><strong>{p.label}:</strong> <span>{p.value}</span></li>
+    ))}
+    <li><strong>{facts.trialPass.name}:</strong> <span>{facts.trialPass.price}. {facts.trialPass.blurb}</span></li>
+    <li><span>{facts.membership.terms}</span></li>
+  </ul>
 
-  <h2 class="section-title class-heading">Price</h2>
-  <div class="fact-list">
-    {prices.map((p) => <div><strong>{p.label}:</strong> {p.value}</div>)}
-    <div><strong>{facts.trialPass.name}:</strong> {facts.trialPass.price}. {facts.trialPass.blurb}</div>
-    <div>{facts.membership.terms}</div>
-  </div>
-
-  <h2 class="section-title class-heading">Class times</h2>
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Class times</h2>
 </ProgramPage>
-
-<style>
-  .class-heading { margin-top: 40px; }
-  .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 16px; }
-</style>

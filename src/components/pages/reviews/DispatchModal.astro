@@ -1,24 +1,24 @@
 ---
 // Copy-and-post dialog, ported verbatim from discovery/archive/legacy-site/reviews/index.html.
 ---
-<div class="modal-overlay" id="dispatch-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-card modal-card--center">
-      <div class="modal-check" aria-hidden="true">✓</div>
-      <h2 class="modal-title" id="modal-title">Review Copied to Clipboard!</h2>
-      <p class="modal-sub">
-        Because Google, Yelp, and Facebook protect user privacy by requiring your personal account sign-in, reviews cannot be posted behind the scenes without your login. We’ve copied your review text so you can paste and publish in <strong>one click</strong>!
+<div class="modal bg-[rgba(5,6,8,0.88)] p-5" id="dispatch-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box max-w-[520px] border border-border-default bg-base-300 p-8 text-center shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_30px_rgba(144,37,36,0.25)]">
+      <div class="mx-auto mb-4 grid size-14 place-items-center rounded-full bg-success/16 text-2xl font-extrabold text-success" aria-hidden="true">✓</div>
+      <h2 class="text-[1.45rem] leading-tight font-black uppercase text-base-content" id="modal-title">Review Copied to Clipboard!</h2>
+      <p class="mb-0 text-[0.88rem] text-muted">
+        Because Google, Yelp, and Facebook protect user privacy by requiring your personal account sign-in, reviews cannot be posted behind the scenes without your login. We’ve copied your review text so you can paste and publish in <strong class="text-base-content">one click</strong>!
       </p>
 
-      <div class="clipboard-box">
-        <div class="clipboard-header">
+      <div class="my-5 rounded-field border border-border-default bg-base-100 p-4 text-left">
+        <div class="mb-2.5 flex items-center justify-between gap-3 text-[0.72rem] font-extrabold tracking-[0.08em] text-muted uppercase">
           <span>Your review text (ready to paste)</span>
-          <span class="copied-badge" id="copied-pill">✓ Copied</span>
+          <span class="text-success" id="copied-pill">✓ Copied</span>
         </div>
-        <div class="clipboard-text" id="modal-text-preview"></div>
+        <div class="max-h-[180px] overflow-y-auto text-[0.9rem] leading-relaxed whitespace-pre-wrap text-base-content" id="modal-text-preview"></div>
       </div>
 
-      <p class="form-status" id="modal-sent-status" role="status" hidden></p>
-      <div class="modal-actions-list" id="modal-platform-actions"></div>
+      <p class="form-status mt-3 mb-0 text-[0.86rem] font-bold text-accent" id="modal-sent-status" role="status" hidden></p>
+      <div class="mb-3.5 flex flex-col gap-2.5" id="modal-platform-actions"></div>
 
       <button type="button" class="btn btn-primary btn-block" id="modal-close-btn">Done / Close Window</button>
     </div>

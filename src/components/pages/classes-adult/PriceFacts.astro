@@ -4,8 +4,8 @@ import { facts } from '../../../data/facts';
 interface Props { openMat?: boolean }
 const { openMat = false } = Astro.props;
 ---
-<div class="fact-list fact-list--prices">
-  <div><strong>{facts.trialPass.name}:</strong> {facts.trialPass.price}. {facts.trialPass.blurb}</div>
-  <div>Membership options vary by program. <a href="/pricing/">View membership pricing</a>.</div>
-  {openMat && <div><strong>Drop-in:</strong> {facts.dropIn.price} per {facts.dropIn.per}. {facts.dropIn.note}</div>}
-</div>
+<ul class="list rounded-box border border-base-300 bg-base-200">
+  <li><strong>{facts.trialPass.name}:</strong> <span>{facts.trialPass.price}. {facts.trialPass.blurb}</span></li>
+  <li><span>Membership options vary by program. <a href="/pricing/" class="link link-hover">View membership pricing</a>.</span></li>
+  {openMat && <li><strong>Drop-in:</strong> <span>{facts.dropIn.price} per {facts.dropIn.per}. {facts.dropIn.note}</span></li>}
+</ul>
