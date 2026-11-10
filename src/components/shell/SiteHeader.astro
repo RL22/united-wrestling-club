@@ -10,78 +10,82 @@ interface Props {
 const { isHome = true, current } = Astro.props;
 const desktop = forPage(primaryNav, isHome);
 const mobile = forPage(mobileNav, isHome);
+
+const navLinkClass = "relative inline-block whitespace-nowrap py-1.5 font-sans text-[0.77rem] max-[1240px]:text-[0.74rem] max-[1040px]:text-[0.72rem] font-bold uppercase tracking-[0.06em] text-muted no-underline transition-colors duration-300 hover:text-base-content aria-[current=page]:text-base-content after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:rounded-[1px] after:bg-primary after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full aria-[current=page]:after:w-full";
 ---
-<a class="skip-link" href="#main-content">Skip to main content</a>
-  <div class="noise-bg"></div>
+<a href="#main-content" class="absolute left-3 -top-[60px] z-[3000] rounded-field bg-primary px-3.5 py-2.5 font-extrabold text-primary-content no-underline focus:top-3">Skip to main content</a>
+<div class="pointer-events-none fixed inset-0 z-[999] bg-[length:24px_24px] bg-[radial-gradient(rgba(255,255,255,0.02)_1px,transparent_0)] opacity-80" aria-hidden="true"></div>
 
   <!-- 1. Top Local Sanctioning & Schedule Marquee -->
-  <aside class="top-bar" aria-label="Sanctioning">
-    <p class="top-bar-line">USA Wrestling RTC #513 Sanctioned<span class="top-bar-extra">&nbsp;•&nbsp; Hayward, CA</span></p>
+  <aside class="relative z-[101] flex h-[34px] w-full select-none items-center justify-center overflow-hidden border-b border-base-content/10 bg-base-100 px-4 text-center text-[0.72rem] font-semibold uppercase tracking-[0.08em] text-muted" aria-label="Sanctioning">
+    <p class="m-0 leading-none">USA Wrestling RTC #513 Sanctioned<span class="max-[600px]:hidden">&nbsp;•&nbsp; Hayward, CA</span></p>
   </aside>
 
   <!-- 2. Sticky Navigation with Real UWC Emblem -->
-  <header class="site-nav">
-    <div class="container nav-inner">
-      <a href={isHome ? "./" : "/"} class="nav-brand" aria-label="United Wrestling Club Homepage">
-        <picture><source media="(max-width: 768px)" srcset="/assets/logo--uwc-wordmark.svg"><img src="/assets/logo--uwc_wrestlers.svg" alt="United Wrestling Club" class="brand-logo-lockup"></picture>
-      </a>
+  <header class="sticky top-0 z-[100] w-full border-b border-white/[0.07] bg-base-100/95 transition-colors duration-300">
+    <div class="navbar container-uwc h-[74px] gap-4 max-md:h-16 max-md:gap-2 max-[380px]:gap-1.5">
+      <div class="navbar-start w-auto flex-none">
+        <a href={isHome ? "./" : "/"} class="flex shrink-0 items-center gap-3 whitespace-nowrap no-underline max-md:min-h-11 max-md:min-w-11 max-md:justify-center" aria-label="United Wrestling Club Homepage">
+          <picture><source media="(max-width: 768px)" srcset="/assets/logo--uwc-wordmark.svg"><img src="/assets/logo--uwc_wrestlers.svg" alt="United Wrestling Club" class="block h-[52px] w-auto max-w-full max-[480px]:h-11"></picture>
+        </a>
+      </div>
 
-      <nav aria-label="Main Navigation" class="desktop-nav">
-        <ul class="nav-links">
+      <nav aria-label="Main Navigation" class="navbar-center hidden flex-1 justify-center min-[961px]:flex">
+        <ul class="m-0 flex list-none items-center gap-[18px] whitespace-nowrap p-0 max-[1240px]:gap-[15px] max-[1040px]:gap-3">
           {desktop.map((item) => (
-            <li class={item.optional ? 'nav-optional' : undefined}><a href={item.href} class:list={['nav-link', { active: current === item.id }]} aria-current={current === item.id ? 'page' : undefined}>{item.label}</a></li>
+            <li class={item.optional ? 'max-[1240px]:hidden' : undefined}><a href={item.href} class={navLinkClass} aria-current={current === item.id ? 'page' : undefined}>{item.label}</a></li>
           ))}
         </ul>
       </nav>
 
-      <div class="nav-actions">
-        <a href="tel:5103034869" class="nav-phone" aria-label="Call United Wrestling Club at 510-303-4869">
-          <svg class="phone-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <div class="navbar-end ml-auto flex w-auto flex-none items-center gap-3.5 whitespace-nowrap max-[1240px]:gap-3 max-md:gap-2 max-[380px]:gap-1.5">
+        <a href="tel:5103034869" class="group inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap font-accent text-[0.8rem] max-[1240px]:text-[0.78rem] font-bold tracking-[0.02em] text-base-content no-underline transition-colors duration-300 hover:text-accent max-[768px]:hidden" aria-label="Call United Wrestling Club at 510-303-4869">
+          <svg class="size-3.5 shrink-0 text-brand-text transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110 group-hover:text-accent" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
           </svg>
-          <span class="phone-number">(510)&nbsp;303-4869</span>
+          <span class="max-[1240px]:hidden">(510)&nbsp;303-4869</span>
         </a>
-        <button class="btn btn-nav-cta open-trial-modal">
-          <span class="btn-text-full">Try three practices for $15</span>
-          <span class="btn-text-mobile">Try for $15</span>
+        <button type="button" class="btn btn-primary open-trial-modal h-[42px] border-white/20 px-5 text-[0.82rem] font-extrabold uppercase tracking-[0.07em] whitespace-nowrap shadow-[0_3px_12px_rgba(144,37,36,0.45)] max-[1240px]:px-3.5 max-[1240px]:text-[0.74rem] max-md:h-11 max-md:px-3.5 max-md:text-[0.8rem] max-[380px]:px-2.5 max-[380px]:text-[0.72rem]">
+          <span class="max-[768px]:hidden">Try three practices for $15</span>
+          <span class="hidden max-[768px]:inline">Try for $15</span>
         </button>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
+        <button type="button" class="btn btn-ghost btn-square group hidden size-11 min-h-11 flex-col gap-[5px] border border-white/[0.12] bg-white/[0.04] hover:bg-white/[0.1] max-[960px]:inline-flex" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNavDrawer">
+          <span class="block h-0.5 w-5 rounded-sm bg-base-content transition-transform duration-300 group-aria-expanded:translate-y-[7px] group-aria-expanded:rotate-45"></span>
+          <span class="block h-0.5 w-5 rounded-sm bg-base-content transition-opacity duration-300 group-aria-expanded:opacity-0"></span>
+          <span class="block h-0.5 w-5 rounded-sm bg-base-content transition-transform duration-300 group-aria-expanded:-translate-y-[7px] group-aria-expanded:-rotate-45"></span>
         </button>
       </div>
     </div>
   </header>
 
   <!-- Mobile Navigation Overlay & Drawer -->
-  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
-  <aside class="mobile-nav-drawer" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-    <div class="mobile-nav-header">
-      <div class="mobile-nav-brand">
-        <img src="/assets/logo--uwc-wordmark.svg" alt="United Wrestling Club" class="brand-logo-lockup">
+  <div class="invisible fixed inset-0 z-[998] bg-black/80 opacity-0 transition-[opacity,visibility] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]" id="mobileNavBackdrop"></div>
+  <aside class="invisible fixed inset-y-0 right-0 z-[999] flex w-[min(320px,86vw)] translate-x-full flex-col justify-between overflow-y-auto border-l border-white/[0.12] bg-base-200 p-5 shadow-[-10px_0_35px_rgba(0,0,0,0.85)] transition-[transform,visibility] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]" id="mobileNavDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mb-3.5 flex items-center justify-between border-b border-white/[0.08] pb-[18px]">
+      <div class="flex items-center gap-2.5">
+        <img src="/assets/logo--uwc-wordmark.svg" alt="United Wrestling Club" class="block h-[52px] w-auto max-w-full max-[480px]:h-11">
       </div>
-      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+      <button type="button" class="btn btn-ghost btn-square size-11 min-h-11 border border-white/[0.12] text-[1.6rem] font-normal leading-none hover:bg-white/[0.1]" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
     </div>
 
-    <nav aria-label="Mobile Navigation Links">
-      <ul class="mobile-nav-links">
+    <nav aria-label="Mobile Navigation Links" class="grow">
+      <ul class="menu w-full grow gap-1 p-0">
         {mobile.map((item) => (
-          <li><a href={item.href} class="mobile-nav-link">{item.label}</a></li>
+          <li><a href={item.href} class="flex min-h-12 items-center justify-between rounded-field border-b border-white/[0.04] px-3.5 py-3 text-[0.92rem] font-extrabold uppercase tracking-[0.04em] text-base-content no-underline transition-[background-color,padding] duration-300 hover:bg-primary/15 hover:pl-[18px] active:bg-primary/15 active:pl-[18px]">{item.label}</a></li>
         ))}
       </ul>
     </nav>
 
-    <div class="mobile-nav-footer">
-      <button class="btn btn-primary mobile-nav-cta open-trial-modal">
+    <div class="mt-5 flex flex-col gap-3.5 border-t border-white/[0.08] pt-[18px]">
+      <button type="button" class="btn btn-primary open-trial-modal h-12 min-h-12 w-full text-[0.88rem] font-extrabold uppercase tracking-[0.04em]">
         Try three practices for $15
       </button>
-      <div class="mobile-nav-contact">
-        <a href="tel:5103034869" class="mobile-nav-contact-link" aria-label="Call (510) 303-4869">
+      <div class="flex flex-col gap-1.5">
+        <a href="tel:5103034869" class="inline-flex min-h-11 items-center gap-2 px-1 py-1.5 text-[0.82rem] text-muted no-underline transition-colors duration-300 hover:text-base-content" aria-label="Call (510) 303-4869">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           (510) 303-4869
         </a>
-        <a href="https://maps.google.com/?q=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" class="mobile-nav-contact-link" aria-label="Directions to Hayward gym">
+        <a href="https://maps.google.com/?q=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" class="inline-flex min-h-11 items-center gap-2 px-1 py-1.5 text-[0.82rem] text-muted no-underline transition-colors duration-300 hover:text-base-content" aria-label="Directions to Hayward gym">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           30139 Industrial Pkwy SW, Hayward
         </a>

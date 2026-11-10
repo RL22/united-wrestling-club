@@ -25,24 +25,19 @@ const plans = [
   cta={false}
 >
   <PageHero eyebrow="PRICING" title="Membership" titleBrand="Options" lead="Invest in your wrestling journey with our flexible membership plans designed to fit your needs." compact />
-  <section class="section-block" aria-labelledby="plans-heading">
-    <div class="container">
+  <section class="section-y" aria-labelledby="plans-heading">
+    <div class="container-uwc">
       <SectionHeader title="Plans" lead={`${facts.trialPass.name}: ${facts.trialPass.price} for three practices. ${facts.trialPass.blurb}`} id="plans-heading" />
       <PricingPlans plans={plans} />
-      <p class="plans-note">{facts.booking.payment.note}</p>
+      <p class="mt-7 text-center text-base-content/70">{facts.booking.payment.note}</p>
     </div>
   </section>
-  <section class="section-block section-block--raised" aria-labelledby="member-heading">
-    <div class="container">
+  <section class="section-y bg-base-200" aria-labelledby="member-heading">
+    <div class="container-uwc">
       <SectionHeader title="Ask about membership" lead={facts.booking.howTo} id="member-heading" />
-      <div class="member-form">
+      <div class="mx-auto max-w-[560px]">
         <TrialForm idPrefix="prc" formId="pricingMemberForm" variant="page" sourceTag="pricing-membership" submitLabel="Confirm $15 3-Day Pass" />
       </div>
     </div>
   </section>
 </InteriorLayout>
-
-<style>
-  .plans-note { text-align: center; margin-top: 28px; color: var(--color-text-muted); }
-  .member-form { max-width: 560px; margin: 0 auto; }
-</style>

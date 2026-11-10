@@ -1,20 +1,25 @@
 ---
-// Card using the shared .card-* slots (cards.css). Pass `href` for a footer link.
+// daisyUI card. Pass `href` for a footer link.
 interface Props { title: string; badge?: string; meta?: string; href?: string; linkLabel?: string; image?: { src: string; alt: string } }
 const { title, badge, meta, href, linkLabel, image } = Astro.props;
+const badgeClass = 'badge badge-sm border-white/20 bg-base-100/85 text-[0.68rem] font-extrabold uppercase tracking-[0.1em] whitespace-nowrap text-base-content';
 ---
-<div class="program-card info-card">
+<div class="card h-full overflow-hidden rounded-box border border-neutral bg-base-200">
   {image && (
-    <div class="card-media">
-      {badge && <span class="card-badge">{badge}</span>}
-      <img class="card-img" src={image.src} alt={image.alt} loading="lazy">
-    </div>
+    <figure class="relative m-0 block">
+      {badge && <span class={`${badgeClass} absolute top-3 left-3`}>{badge}</span>}
+      <img class="block h-auto w-full" src={image.src} alt={image.alt} loading="lazy">
+    </figure>
   )}
-  <div class="card-body">
-    {!image && badge && <span class="card-badge">{badge}</span>}
-    <h3 class="card-title">{title}</h3>
-    {meta && <div class="card-meta">{meta}</div>}
-    <p class="card-desc"><slot /></p>
-    {href && <div class="card-footer"><a href={href} class="card-link">{linkLabel ?? 'Learn more'}</a></div>}
+  <div class="card-body gap-0 p-6">
+    {!image && badge && <span class={`${badgeClass} mb-3 self-start`}>{badge}</span>}
+    <h3 class="card-title mb-2 text-[1.22rem] font-extrabold uppercase leading-[1.2] text-base-content">{title}</h3>
+    {meta && <div class="mb-3 flex items-center gap-2 text-[0.74rem] font-semibold uppercase tracking-[0.05em] text-brand-text">{meta}</div>}
+    <p class="mb-[22px] grow text-[0.88rem] leading-[1.55] text-pretty text-muted"><slot /></p>
+    {href && (
+      <div class="card-actions justify-start border-t border-base-300 pt-4">
+        <a href={href} class="link link-hover inline-flex min-h-11 items-center gap-1.5 py-2.5 text-[0.8rem] font-extrabold uppercase tracking-[0.08em] text-base-content no-underline">{linkLabel ?? 'Learn more'}</a>
+      </div>
+    )}
   </div>
 </div>

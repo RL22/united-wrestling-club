@@ -12,40 +12,40 @@ const excerpts = [
 ];
 if (reviews.some((review, index) => !review.body.includes(excerpts[index]))) throw new Error('Testimonial excerpt does not match its source');
 ---
-<section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
-  <div class="container">
-    <header class="testimonials-head">
-      <span class="section-eyebrow">COMMUNITY PROOF · REVIEWS FROM THE MAT</span>
-      <h2 id="testimonials-heading" class="section-title">Voices From the Mat. Unfiltered &amp; Earned.</h2>
-      <p class="section-lead">Hear from parents, competitors, and everyday grinders training in Hayward.</p>
+<section class="testimonials-section section-y border-t border-neutral bg-base-100" id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container-uwc">
+    <header class="mx-auto mb-12 max-w-[760px] text-center">
+      <span class="mb-3 inline-block text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-brand-text">COMMUNITY PROOF · REVIEWS FROM THE MAT</span>
+      <h2 id="testimonials-heading" class="mb-4 text-[clamp(2rem,3.8vw,2.9rem)] font-black uppercase leading-[1.12] tracking-[-0.01em] text-text-strong">Voices From the Mat. Unfiltered &amp; Earned.</h2>
+      <p class="mx-auto max-w-[640px] text-[1.05rem] leading-[1.6] text-muted text-pretty">Hear from parents, competitors, and everyday grinders training in Hayward.</p>
     </header>
-    <div class="slider-heading">
-      <p>Stories from our community</p>
-      <div class="slider-controls" role="group" aria-label="Testimonial controls">
-        <button type="button" data-direction="-1" aria-label="Previous testimonials">←</button>
-        <button type="button" data-direction="1" aria-label="Next testimonials">→</button>
+    <div class="mb-[18px] flex items-center justify-between gap-4">
+      <p class="m-0 text-[0.8rem] font-extrabold tracking-[0.08em] uppercase">Stories from our community</p>
+      <div class="flex gap-2" role="group" aria-label="Testimonial controls">
+        <button type="button" class="btn btn-square btn-outline size-11 border-neutral bg-base-200 text-xl text-text-strong hover:border-accent focus-visible:border-accent" data-direction="-1" aria-label="Previous testimonials">←</button>
+        <button type="button" class="btn btn-square btn-outline size-11 border-neutral bg-base-200 text-xl text-text-strong hover:border-accent focus-visible:border-accent" data-direction="1" aria-label="Next testimonials">→</button>
       </div>
     </div>
-    <div class="testimonial-track" role="region" tabindex="0" aria-label="Community testimonials; scroll horizontally to see more">
+    <div class="carousel testimonial-carousel w-full gap-5 pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="region" tabindex="0" aria-label="Community testimonials; scroll horizontally to see more">
       {reviews.map((review, index) => (
-        <article class="testimonial-card">
-          <span class="testimonial-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}</span>
-          <p class="testimonial-quote">“{excerpts[index]}”</p>
-          <div class="testimonial-attribution"><strong>{review.author}</strong><span>{review.platform} review</span></div>
+        <article class="carousel-item card w-[86%] border border-neutral bg-base-200 p-[22px] min-[601px]:w-[44%] min-[601px]:p-[26px] min-[901px]:w-[calc((100%_-_60px)/3.25)]">
+          <span class="text-accent" role="img" aria-label={`${review.rating} out of 5 stars`}>{'★'.repeat(review.rating)}</span>
+          <p class="mt-5 mb-6 leading-[1.6] text-text-strong text-pretty">“{excerpts[index]}”</p>
+          <div class="mt-auto flex flex-col gap-1 text-[0.85rem] text-muted"><strong class="text-base text-text-strong">{review.author}</strong><span>{review.platform} review</span></div>
         </article>
       ))}
     </div>
-    <div class="testimonials-actions">
+    <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-neutral pt-6">
       <a href="https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Leave a Google Review ↗</a>
     </div>
   </div>
 </section>
 <script>
   document.querySelectorAll<HTMLElement>('.testimonials-section').forEach((section) => {
-    const track = section.querySelector<HTMLElement>('.testimonial-track');
+    const track = section.querySelector<HTMLElement>('.testimonial-carousel');
     section.querySelectorAll<HTMLButtonElement>('[data-direction]').forEach((button) => {
       button.addEventListener('click', () => {
-        const card = track?.querySelector<HTMLElement>('.testimonial-card');
+        const card = track?.querySelector<HTMLElement>('.carousel-item');
         if (!track || !card) return;
         const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
         track.scrollBy({ left: Number(button.dataset.direction) * (card.offsetWidth + gap), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
@@ -53,22 +53,3 @@ if (reviews.some((review, index) => !review.body.includes(excerpts[index]))) thr
     });
   });
 </script>
-<style>
-  .testimonials-section { --color-star: var(--color-accent); background: var(--color-canvas); padding: var(--space-section) 0; border-top: 1px solid var(--color-border-default); }
-  .testimonials-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
-  .testimonials-head .section-lead { margin: 0 auto; }
-  .slider-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 18px; }
-  .slider-heading p { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; }
-  .slider-controls { display: flex; gap: 8px; }
-  .slider-controls button { width: 44px; height: 44px; background: var(--color-surface-1); border: 1px solid var(--color-border-default); color: var(--color-text-strong); font-size: 1.3rem; cursor: pointer; }
-  .slider-controls button:hover, .slider-controls button:focus-visible { border-color: var(--color-accent); }
-  .testimonial-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * 20px) / 3.25); gap: 20px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: none; }
-  .testimonial-track::-webkit-scrollbar { display: none; }
-  .testimonial-card { scroll-snap-align: start; display: flex; flex-direction: column; min-width: 0; padding: 26px; background: var(--color-surface-1); border: 1px solid var(--color-border-default); border-radius: var(--radius-sm); }
-  .testimonial-quote { color: var(--color-text-strong); line-height: 1.6; margin: 20px 0 24px; text-wrap: pretty; }
-  .testimonial-attribution { display: flex; flex-direction: column; gap: 4px; margin-top: auto; color: var(--color-text-muted); font-size: .85rem; }
-  .testimonial-attribution strong { color: var(--color-text-strong); font-size: 1rem; }
-  .testimonials-actions { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--color-border-default); display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
-  @media (max-width: 900px) { .testimonial-track { grid-auto-columns: 44%; } }
-  @media (max-width: 600px) { .testimonial-track { grid-auto-columns: 86%; } .testimonial-card { padding: 22px; } }
-</style>

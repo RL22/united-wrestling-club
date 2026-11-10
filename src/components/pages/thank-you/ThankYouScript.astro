@@ -13,9 +13,9 @@
     const sms = (params.get('sms') || stored.sms || '').toLowerCase();
     const reason = (params.get('reason') || stored.reason || '').toLowerCase();
 
-    const eyebrowEl = document.querySelector('.page-hero .section-eyebrow');
+    const eyebrowEl = document.querySelector('[data-page-hero="eyebrow"]');
     const headingEl = document.getElementById('thank-you-heading');
-    const leadEl = document.querySelector('.page-hero .section-lead');
+    const leadEl = document.querySelector('[data-page-hero="lead"]');
     const cardHeadingEl = document.getElementById('ty-card-heading');
     const cardLeadEl = document.getElementById('ty-card-lead');
     const smsRowEl = document.getElementById('ty-sms-status-row');
@@ -50,7 +50,7 @@
         headingEl.textContent = titleText + ' ';
         if (brandText) {
           const span = document.createElement('span');
-          span.className = 'text-brand';
+          span.className = 'text-brand-text';
           span.textContent = brandText;
           headingEl.appendChild(span);
         }
@@ -125,7 +125,7 @@
             a.href = href;
             a.target = '_blank';
             a.rel = 'noopener noreferrer';
-            a.className = 'btn btn-primary btn-accent-glow btn-block';
+            a.className = 'btn btn-block h-auto min-h-12 py-3 font-extrabold tracking-[0.08em] whitespace-normal uppercase ' + (reviewPlatformsEl.childElementCount ? 'btn-outline' : 'btn-primary');
             a.textContent = label;
             reviewPlatformsEl.appendChild(a);
           };

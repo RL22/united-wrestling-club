@@ -24,10 +24,10 @@ const topics = [
   trialProgram="adult"
 >
   <p>Our boxing fundamentals class is for people of all skill levels, from anyone starting their first day of boxing to intermediate boxers who want to sharpen their tools. The structure is steady and the pace is lively, covering a wide range of topics.</p>
-  <h2>What you will work on</h2>
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">What you will work on</h2>
   <Topics items={topics} />
   {boxingCoach && <p><strong>Coach:</strong> {boxingCoach.name}, {boxingCoach.role.toLowerCase()}.</p>}
-  <h2>Prices</h2>
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Prices</h2>
   <PriceFacts />
-  <h2>Class times</h2>
+  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Class times</h2>
 </ProgramPage>

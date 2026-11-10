@@ -7,30 +7,33 @@ const category: Record<string, 'youth' | 'adult' | 'visiting'> = {
 };
 const source = (platform: string) => (platform === 'Facebook' ? 'Facebook Recommendation' : `${platform} Review`);
 const count = (c: string) => reviews.filter((r) => category[r.author] === c).length;
+const tabClass = 'tab h-auto min-h-11 gap-2 rounded-selector border border-border-default bg-transparent px-[18px] py-2.5 text-[0.8rem] font-extrabold uppercase tracking-[0.06em] text-muted transition-colors hover:border-muted hover:text-base-content aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content';
 ---
-<section class="section-block" id="curated-reviews" aria-labelledby="curated-heading">
-  <div class="container">
-    <div class="reviews-toolbar">
+<section class="section-y border-t border-border-default" id="curated-reviews" aria-labelledby="curated-heading">
+  <div class="container-uwc">
+    <div class="mb-8 flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
       <div>
-        <span class="section-eyebrow">Real testimonials from real grapplers</span>
-        <h2 class="section-title" id="curated-heading">Voices from the Mat</h2>
+        <span class="mb-3 inline-block text-[0.78rem] font-extrabold tracking-[0.18em] text-brand-text uppercase">Real testimonials from real grapplers</span>
+        <h2 class="mb-4 text-[clamp(2rem,3.8vw,2.9rem)] leading-[1.12] font-black tracking-[-0.01em] text-base-content uppercase" id="curated-heading">Voices from the Mat</h2>
       </div>
-      <div class="tab-list" role="tablist" aria-label="Review categories">
-        <button type="button" class="tab" data-filter="all" role="tab" aria-selected="true">All Reviews <span class="tab-count" id="count-all">{reviews.length}</span></button>
-        <button type="button" class="tab" data-filter="youth" role="tab" aria-selected="false">Youth Parents <span class="tab-count" id="count-youth">{count('youth')}</span></button>
-        <button type="button" class="tab" data-filter="adult" role="tab" aria-selected="false">Adult &amp; MMA <span class="tab-count" id="count-adult">{count('adult')}</span></button>
-        <button type="button" class="tab" data-filter="visiting" role="tab" aria-selected="false">Visiting Athletes <span class="tab-count" id="count-visiting">{count('visiting')}</span></button>
+      <div class="tabs flex-wrap gap-2" role="tablist" aria-label="Review categories">
+        <button type="button" class={tabClass} data-filter="all" role="tab" aria-selected="true">All Reviews <span class="font-accent font-bold opacity-85" id="count-all">{reviews.length}</span></button>
+        <button type="button" class={tabClass} data-filter="youth" role="tab" aria-selected="false">Youth Parents <span class="font-accent font-bold opacity-85" id="count-youth">{count('youth')}</span></button>
+        <button type="button" class={tabClass} data-filter="adult" role="tab" aria-selected="false">Adult &amp; MMA <span class="font-accent font-bold opacity-85" id="count-adult">{count('adult')}</span></button>
+        <button type="button" class={tabClass} data-filter="visiting" role="tab" aria-selected="false">Visiting Athletes <span class="font-accent font-bold opacity-85" id="count-visiting">{count('visiting')}</span></button>
       </div>
     </div>
-    <div class="testimonial-grid" id="reviews-container">
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" id="reviews-container">
       {reviews.map((r) => (
-        <article class="testimonial-card" data-category={category[r.author]}>
-          <div class="testimonial-meta">
-            <strong>{r.author}</strong>
-            <span class="testimonial-stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}</span>
-            <span class="testimonial-source">{source(r.platform)}</span>
+        <article class="review-card card card-border border-border-default bg-base-200 [&[hidden]]:hidden" data-category={category[r.author]}>
+          <div class="card-body gap-3.5 p-[26px]">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
+              <strong class="text-[0.92rem] font-bold text-base-content">{r.author}</strong>
+              <span class="text-[0.85rem] tracking-[2px] text-warning" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}</span>
+              <span class="text-[0.7rem] font-extrabold tracking-[0.08em] text-brand-text uppercase">{source(r.platform)}</span>
+            </div>
+            <p class="m-0 text-[0.92rem] leading-[1.7] text-pretty text-muted">“{r.body}”</p>
           </div>
-          <p class="testimonial-text">“{r.body}”</p>
         </article>
       ))}
     </div>

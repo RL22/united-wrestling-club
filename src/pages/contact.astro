@@ -12,13 +12,15 @@ import ContactScript from '../components/pages/contact/ContactScript.astro';
   cta={false}
 >
   <PageHero id="contact-heading" compact eyebrow="Contact" title="Talk to the" titleBrand="coaches" lead="Questions about classes, tuition, the schedule, a clinic, or a sponsorship? Send a message or call the front desk." />
-  <section class="section-block" aria-labelledby="contact-form-heading">
-    <div class="container">
-      <div class="register-grid">
+  <section class="section-y border-t border-border-default" aria-labelledby="contact-form-heading">
+    <div class="container-uwc">
+      <div class="grid grid-cols-1 items-start gap-[clamp(24px,4vw,48px)] min-[861px]:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
         <ContactDetails />
-        <div class="form-card">
-          <h2 class="section-title" id="contact-form-heading">Send a message</h2>
-          <ContactForm />
+        <div class="card card-border border-border-default bg-base-100">
+          <div class="card-body p-[clamp(24px,4vw,40px)]">
+            <h2 class="mb-2 text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.12] font-black text-base-content uppercase" id="contact-form-heading">Send a message</h2>
+            <ContactForm />
+          </div>
         </div>
       </div>
     </div>

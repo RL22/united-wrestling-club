@@ -20,73 +20,77 @@ import ThankYouScript from '../components/pages/thank-you/ThankYouScript.astro';
     lead="Coach Naweed received your request. Complete your digital waiver and registration on WrestlingIQ (Team #513) before your first practice."
   />
 
-  <section class="section-block" aria-labelledby="ty-card-heading">
-    <div class="container">
-      <div class="register-grid">
-        <div class="form-card" id="ty-primary-card">
-          <div id="ty-trial-checklist">
-            <h2 class="section-title" id="ty-card-heading">Complete your waiver on WrestlingIQ</h2>
-            <p class="section-lead" id="ty-card-lead">
-              Your details are saved with our front desk. Finish your waiver online so you can step straight onto the mat when you arrive.
-            </p>
+  <section class="section-y border-t border-border-default" aria-labelledby="ty-card-heading">
+    <div class="container-uwc">
+      <div class="grid grid-cols-1 items-start gap-[clamp(24px,4vw,48px)] min-[861px]:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
+        <div class="card card-border border-border-default bg-base-100" id="ty-primary-card">
+          <div class="card-body p-[clamp(24px,4vw,40px)]">
+            <div id="ty-trial-checklist">
+              <h2 class="mb-2 text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.12] font-black text-base-content uppercase" id="ty-card-heading">Complete your waiver on WrestlingIQ</h2>
+              <p class="text-[1.05rem] leading-[1.6] text-muted" id="ty-card-lead">
+                Your details are saved with our front desk. Finish your waiver online so you can step straight onto the mat when you arrive.
+              </p>
 
-            <div class="pass-summary">
-              <div><strong>Selected Track:</strong> <span id="ty-program-row">$15 · 3-Day Mat Pass</span></div>
-              <div class="pass-summary-row"><strong>Facility Address:</strong> {facts.address.full}</div>
-              <div class="pass-summary-row"><strong>Locker Arrival:</strong> 15 minutes before scheduled practice</div>
-              <div class="pass-summary-row"><strong>Attire:</strong> T-shirt and gym shorts (no pockets or zippers)</div>
-              <div class="pass-summary-row"><strong>SMS Status:</strong> <span id="ty-sms-status-row">Opted Out (No automated texts will be sent)</span></div>
-            </div>
+              <div class="my-5 rounded-field border border-border-default bg-base-100 p-4 text-left text-[0.82rem]">
+                <div><strong>Selected Track:</strong> <span id="ty-program-row">$15 · 3-Day Mat Pass</span></div>
+                <div class="mt-1"><strong>Facility Address:</strong> {facts.address.full}</div>
+                <div class="mt-1"><strong>Locker Arrival:</strong> 15 minutes before scheduled practice</div>
+                <div class="mt-1"><strong>Attire:</strong> T-shirt and gym shorts (no pockets or zippers)</div>
+                <div class="mt-1"><strong>SMS Status:</strong> <span id="ty-sms-status-row">Opted Out (No automated texts will be sent)</span></div>
+              </div>
 
-            <a
-              href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513"
-              id="ty-wiq-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary btn-accent-glow btn-block btn-wiq"
-            >
-              Complete waiver on WrestlingIQ (Team #513) &nearr;
-            </a>
-          </div>
-
-          <div id="ty-review-dispatch" hidden>
-            <h2 class="section-title">Post your copied review</h2>
-            <p class="section-lead">
-              Your review text is copied to your clipboard. Select a platform below and paste your review.
-            </p>
-            <blockquote class="pass-summary" id="ty-review-preview">"Thank you for training at United Wrestling Club."</blockquote>
-            <div class="form-actions" id="ty-review-platforms">
               <a
-                href="https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo"
+                href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513"
+                id="ty-wiq-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-primary btn-accent-glow btn-block"
+                class="btn btn-primary btn-block mb-2.5 h-auto min-h-12 py-3 font-extrabold tracking-[0.08em] whitespace-normal uppercase"
               >
-                1. Open Google Maps &amp; paste review &nearr;
+                Complete waiver on WrestlingIQ (Team #513) &nearr;
               </a>
             </div>
-            <p class="contact-card-note">
-              <button type="button" class="btn btn-outline btn-block" id="ty-recopy-btn">Copy review text again</button>
-            </p>
+
+            <div id="ty-review-dispatch" hidden>
+              <h2 class="mb-2 text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.12] font-black text-base-content uppercase">Post your copied review</h2>
+              <p class="text-[1.05rem] leading-[1.6] text-muted">
+                Your review text is copied to your clipboard. Select a platform below and paste your review.
+              </p>
+              <blockquote class="mx-0 my-5 rounded-field border border-border-default bg-base-100 p-4 text-left text-[0.82rem]" id="ty-review-preview">"Thank you for training at United Wrestling Club."</blockquote>
+              <div class="mt-7 grid gap-2.5" id="ty-review-platforms">
+                <a
+                  href="https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary btn-block h-auto min-h-12 py-3 font-extrabold tracking-[0.08em] whitespace-normal uppercase"
+                >
+                  1. Open Google Maps &amp; paste review &nearr;
+                </a>
+              </div>
+              <p class="mt-5 mb-0 text-[0.9rem] text-muted">
+                <button type="button" class="btn btn-outline btn-block" id="ty-recopy-btn">Copy review text again</button>
+              </p>
+            </div>
           </div>
         </div>
 
-        <aside class="contact-card" aria-label="Fast-track arrival checklist">
-          <h3 class="contact-card-title">Fast-track checklist</h3>
-          <ol class="steps-list">
-            <li>
-              <strong>1. Skip the optional USAW screen.</strong> On Step 3 of WrestlingIQ (<em>Wrestler Info</em>), click <strong>Next</strong> past the optional USA Wrestling screen. You do not need a USAW card for a 3-day trial.
-            </li>
-            <li>
-              <strong>2. Sign the online waiver.</strong> Complete the digital release form on WrestlingIQ before arriving at Suite C.
-            </li>
-            <li>
-              <strong>3. Arrive 15 minutes early.</strong> Park in the main Industrial Pkwy lot and check in at the front desk.
-            </li>
-          </ol>
-          <p class="contact-card-note">
-            Need help with your pass? Call <a href={facts.phone.tel} class="footer-phone">{facts.phone.display}</a> or view the <a href="/schedule/">practice schedule</a>.
-          </p>
+        <aside class="card card-border border-border-default bg-base-200" aria-label="Fast-track arrival checklist">
+          <div class="card-body gap-0 p-7">
+            <h3 class="card-title mb-3 text-[1.05rem] font-extrabold tracking-[0.04em] text-base-content uppercase">Fast-track checklist</h3>
+            <ol class="list-decimal space-y-3 pl-5 text-[0.92rem] leading-[1.6] text-muted">
+              <li>
+                <strong class="text-base-content">1. Skip the optional USAW screen.</strong> On Step 3 of WrestlingIQ (<em>Wrestler Info</em>), click <strong class="text-base-content">Next</strong> past the optional USA Wrestling screen. You do not need a USAW card for a 3-day trial.
+              </li>
+              <li>
+                <strong class="text-base-content">2. Sign the online waiver.</strong> Complete the digital release form on WrestlingIQ before arriving at Suite C.
+              </li>
+              <li>
+                <strong class="text-base-content">3. Arrive 15 minutes early.</strong> Park in the main Industrial Pkwy lot and check in at the front desk.
+              </li>
+            </ol>
+            <p class="mt-5 mb-0 text-[0.9rem] text-muted">
+              Need help with your pass? Call <a href={facts.phone.tel} class="link link-hover font-bold text-base-content">{facts.phone.display}</a> or view the <a href="/schedule/" class="link link-hover font-bold text-base-content">practice schedule</a>.
+            </p>
+          </div>
         </aside>
       </div>
     </div>

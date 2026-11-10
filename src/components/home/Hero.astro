@@ -1,276 +1,36 @@
 ---
 ---
-  <section class="hero-section">
-    <div class="hero-media">
-      <video class="hero-video" autoplay loop muted playsinline poster="/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg">
+  <section class="hero relative flex min-h-[95svh] items-end overflow-hidden border-b border-neutral bg-base-100 pt-[60px] pb-[70px] max-md:h-auto max-md:flex-col max-md:items-stretch max-md:justify-between max-md:p-0">
+    <div class="absolute inset-0 z-[1] overflow-hidden">
+      <video class="size-full object-cover [object-position:center_36%] [filter:brightness(0.82)_contrast(1.10)_saturate(1.15)] max-md:[filter:brightness(0.78)_contrast(1.12)_saturate(1.15)]" autoplay loop muted playsinline poster="/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg">
         <source src="/video_assets/loops/loop_homepage_hero_18s.mp4" type="video/mp4">
         <!-- Fallback Poster Still if video fails -->
         <img src="/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg" alt="Coach Naweed directing mat practice under United Wrestling Club banner in Hayward">
       </video>
-      <div class="hero-grunge-overlay"></div>
-      <div class="hero-scrim"></div>
+      <div class="pointer-events-none absolute inset-0 z-[2] bg-[url('/unsplash-grunge-001.jpg')] bg-cover bg-center opacity-5 mix-blend-overlay"></div>
+      <div class="absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgba(9,10,13,0.92)_0%,rgba(9,10,13,0.84)_50%,rgba(9,10,13,0.30)_78%,rgba(9,10,13,0.06)_100%),linear-gradient(180deg,rgba(9,10,13,0.45)_0%,transparent_40%,rgba(9,10,13,0.85)_100%)] max-md:bg-[linear-gradient(180deg,rgba(9,10,13,0.50)_0%,rgba(9,10,13,0.12)_18%,rgba(9,10,13,0.02)_45%,rgba(9,10,13,0.40)_55%,rgba(9,10,13,0.78)_66%,rgba(9,10,13,0.95)_100%)]"></div>
     </div>
 
-    <div class="container hero-container">
-      <div class="hero-content">
-        
-        <div class="hero-body-block">
-          <h1 class="hero-title">
+    <div class="container-uwc relative z-[3] max-md:box-border max-md:flex max-md:min-h-0 max-md:w-full max-md:flex-1 max-md:flex-col max-md:justify-between max-md:pt-5 max-md:pb-[72px]">
+      <div class="max-w-[820px] max-md:flex max-md:h-auto max-md:w-full max-md:max-w-full max-md:min-h-0 max-md:flex-1 max-md:flex-col max-md:justify-between max-md:text-left">
+
+        <div class="block max-md:mt-auto max-md:w-full max-md:pt-6">
+          <h1 class="mb-[22px] text-[clamp(2.5rem,6.2vw,4.6rem)] leading-[1.05] font-black tracking-[-0.02em] text-text-strong uppercase max-md:mb-3 max-md:text-[clamp(2.1rem,9.2vw,2.75rem)] max-md:[text-shadow:0_2px_10px_rgba(0,0,0,0.85)]">
             Wrestling in Hayward. <br>
-            <span class="crimson">For every stage.</span>
+            <span class="text-accent [text-shadow:0_2px_10px_rgba(9,10,13,0.85)]">For every stage.</span>
           </h1>
 
-          <p class="hero-subtitle">
+          <p class="mb-9 max-w-[700px] text-[clamp(1.08rem,1.8vw,1.3rem)] leading-[1.6] font-normal text-muted text-pretty max-md:mb-[18px] max-md:max-w-[95%] max-md:text-[clamp(0.92rem,3.8vw,1.04rem)] max-md:leading-[1.55] max-md:text-base-content max-md:[text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
             A wrestling room in Hayward with named coaches. Try three practices for $15, then $139.99 a month with no contract.
           </p>
 
-          <div class="hero-cta-group">
-            <button class="btn btn-primary btn-accent-glow open-trial-modal">
+          <div class="flex flex-wrap items-center gap-4 max-md:block max-md:w-full max-md:max-w-[340px]">
+            <button class="btn btn-primary open-trial-modal max-md:flex max-md:h-[50px] max-md:min-h-[50px] max-md:w-full max-md:items-center max-md:justify-center max-md:px-5 max-md:text-[0.9rem] max-md:font-extrabold max-md:tracking-[0.04em] max-md:shadow-[0_6px_24px_rgba(144,37,36,0.6),0_0_20px_rgba(144,37,36,0.4)]">
               Try three practices for $15
             </button>
-            
-                      </div>
+          </div>
 
-          
         </div>
       </div>
     </div>
   </section>
-
-  <!-- 5. Structured Program Silos (Balanced 4 Columns: Zero Orphans) -->
-
-<style>
-  /* Universal No-Wrap & Box Sizing on All Pill Badges */
-
-  .hero-badge-strip,
-      .hero-badge-strip span,
-      .trial-callout-pill,
-      .trial-callout-pill span,
-      .trial-callout-pill strong {
-    white-space: nowrap !important;
-  }
-
-  .hero-section {
-    position: relative;
-    min-height: 95vh;
-    min-height: 95svh;
-    display: flex;
-    align-items: flex-end;
-    padding: 60px 0 70px;
-    background-color: #060709;
-    border-bottom: 1px solid var(--color-border-default);
-    overflow: hidden;
-  }
-
-  .hero-media {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  .hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 36%;
-    filter: brightness(0.82) contrast(1.10) saturate(1.15);
-  }
-
-  /* Move only the footage; the scrim and copy stay anchored for readability. */
-  @supports (animation-timeline: view()) {
-    @media (prefers-reduced-motion: no-preference) {
-      .hero-video {
-        animation: hero-parallax linear both;
-        animation-timeline: scroll(root block) !important;
-        animation-range: 0px 95svh;
-      }
-
-      @keyframes hero-parallax {
-        from { transform: scale(1.12) translateY(0); }
-        to { transform: scale(1.12) translateY(5%); }
-      }
-    }
-  }
-
-  /* Unsplash Grunge 001 Texture Overlay - Lightened for 1080p Mat Clarity */
-
-  .hero-grunge-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/unsplash-grunge-001.jpg');
-    background-size: cover;
-    background-position: center;
-    mix-blend-mode: overlay;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  /* Directional Scrim: Dark on left for text legibility, wide open center & right for mat action */
-
-  .hero-scrim {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(9, 10, 13, 0.92) 0%, rgba(9, 10, 13, 0.84) 50%, rgba(9, 10, 13, 0.30) 78%, rgba(9, 10, 13, 0.06) 100%),
-                    linear-gradient(180deg, rgba(9, 10, 13, 0.45) 0%, transparent 40%, rgba(9, 10, 13, 0.85) 100%);
-    z-index: 2;
-  }
-
-  .hero-container {
-    position: relative;
-    z-index: 3;
-  }
-
-  .hero-content {
-    max-width: 820px;
-  }
-
-  .hero-body-block {
-    display: block;
-  }
-
-  .hero-title {
-    font-size: clamp(2.5rem, 6.2vw, 4.6rem);
-    font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: var(--color-text-strong);
-    margin-bottom: 22px;
-  }
-
-  .hero-title span.crimson {
-    color: var(--color-accent);
-    text-shadow: 0 2px 10px rgba(9, 10, 13, 0.85);
-  }
-
-  .hero-subtitle {
-    font-size: clamp(1.08rem, 1.8vw, 1.3rem);
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--color-text-muted);
-    margin-bottom: 36px;
-    max-width: 700px;
-    text-wrap: pretty;
-  }
-
-  .hero-subtitle strong {
-    color: var(--color-text-strong);
-    font-weight: 600;
-  }
-
-  .hero-cta-group {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 768px) {
-    .hero-section {
-      min-height: 95vh;
-      min-height: 95svh;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 0 !important;
-      position: relative;
-      border-bottom: 1px solid var(--color-border-default);
-      box-sizing: border-box;
-    }
-    .hero-container {
-      width: 100%;
-      flex: 1 1 auto;
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-top: 20px;
-      padding-bottom: 72px;
-      box-sizing: border-box;
-      position: relative;
-      z-index: 3;
-    }
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex: 1 1 auto;
-      height: auto;
-      min-height: 0;
-      width: 100%;
-      max-width: 100%;
-      text-align: left;
-    }
-    .hero-body-block {
-      width: 100%;
-      margin-top: auto;
-      /* Drops H1, subtitle, and CTA down to the bottom */
-      padding-top: 24px;
-    }
-    .hero-title {
-      font-size: clamp(2.1rem, 9.2vw, 2.75rem);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
-    }
-    .hero-subtitle {
-      font-size: clamp(0.92rem, 3.8vw, 1.04rem);
-      line-height: 1.55;
-      color: var(--color-text-default);
-      margin-bottom: 18px;
-      max-width: 95%;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-    }
-    .hero-cta-group {
-      display: block;
-      width: 100%;
-      max-width: 340px;
-      margin-bottom: 0;
-    }
-    .hero-cta-group .btn.btn-primary {
-      width: 100%;
-      height: 50px;
-      min-height: 50px;
-      padding: 0 20px;
-      font-size: 0.90rem;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 24px rgba(144, 37, 36, 0.6), 0 0 20px rgba(144, 37, 36, 0.4);
-    }
-    .hero-video {
-      filter: brightness(0.78) contrast(1.12) saturate(1.15) !important;
-      object-position: center 36% !important;
-    }
-    .hero-grunge-overlay {
-      opacity: 0.05 !important;
-    }
-    .hero-scrim {
-      background: linear-gradient(
-            180deg,
-            rgba(9, 10, 13, 0.50) 0%,
-            rgba(9, 10, 13, 0.12) 18%,
-            rgba(9, 10, 13, 0.02) 45%,
-            rgba(9, 10, 13, 0.40) 55%,
-            rgba(9, 10, 13, 0.78) 66%,
-            rgba(9, 10, 13, 0.95) 100%
-          ) !important;
-    }
-  }
-</style>

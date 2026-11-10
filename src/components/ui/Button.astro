@@ -1,5 +1,5 @@
 ---
-// Button or link styled as .btn. `trial` opens the trial modal (shell/PageScripts); `program` is read as data-program.
+// Button or link styled with daisyUI btn. `trial` opens the trial modal (shell/PageScripts); `program` is read as data-program.
 interface Props {
   variant?: 'primary' | 'outline' | 'accent';
   href?: string;
@@ -9,10 +9,15 @@ interface Props {
   class?: string;
 }
 const { variant = 'primary', href, trial = false, program, block = false, class: extra = '' } = Astro.props;
+// `accent` is the glowing primary CTA: daisy primary with a stronger brand shadow.
+const variantClass = {
+  primary: 'btn-primary shadow-[0_4px_18px_rgba(144,37,36,0.35)]',
+  accent: 'btn-primary shadow-[0_4px_24px_rgba(144,37,36,0.55)]',
+  outline: 'btn-outline border-neutral',
+}[variant];
 const classes = [
-  'btn',
-  variant === 'outline' ? 'btn-outline' : 'btn-primary',
-  variant === 'accent' ? 'btn-accent-glow' : '',
+  'btn h-auto min-h-10 px-[26px] py-3.5 text-[0.88rem] font-extrabold uppercase tracking-[0.08em] whitespace-nowrap',
+  variantClass,
   block ? 'btn-block' : '',
   trial ? 'open-trial-modal' : '',
   extra,

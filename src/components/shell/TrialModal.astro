@@ -2,39 +2,40 @@
 import TrialForm from '../forms/TrialForm.astro';
 ---
 
-  <div class="modal-overlay" id="trialModal">
-    <div class="modal-card">
-      <button class="modal-close" id="modalCloseBtn">&times;</button>
-      
+  <div class="modal" id="trialModal">
+    <div class="modal-box relative max-h-[calc(100dvh-32px)] w-[92%] max-w-[520px] overflow-y-auto rounded-box border border-neutral bg-base-200 p-[26px_18px] shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_30px_rgba(144,37,36,0.25)] sm:px-7 sm:py-8">
+      <button type="button" class="btn btn-ghost btn-circle absolute top-3.5 right-3.5 size-11 min-h-11 text-[1.5rem] font-normal text-muted hover:text-base-content" id="modalCloseBtn">&times;</button>
+
       <div id="modalFormContainer">
-        <div class="modal-brand-row">
-          <img src="/live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Emblem" class="modal-logo">
+        <div class="mb-4 flex items-center gap-3.5">
+          <img src="/live_site_content/assets/uwc_wrestlers.svg" alt="United Wrestling Club Official Emblem" class="h-11 w-auto max-w-[68px] object-contain">
           <div>
-            <span class="section-eyebrow eyebrow-tight">3-DAY MAT PASS • $15</span>
-            <h3 class="modal-title">Step Onto the&nbsp;Mat</h3>
+            <span class="mb-0.5 inline-block text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-brand-text">3-DAY MAT PASS • $15</span>
+            <h3 class="text-[1.45rem] font-black uppercase leading-[1.15] text-base-content">Step Onto the&nbsp;Mat</h3>
           </div>
         </div>
-        <p class="modal-sub">Enter your details below to claim your 3 consecutive training sessions. Coach Naweed will reach out to confirm your gear and class time.</p>
+        <p class="mb-6 text-[0.88rem] text-muted">Enter your details below to claim your 3 consecutive training sessions. Coach Naweed will reach out to confirm your gear and class time.</p>
 
         <TrialForm />
-        <p class="modal-fineprint"><a href="/register/">Prefer a full page? Reserve on our booking page &rarr;</a></p>
+        <p class="mt-3 text-center text-[0.72rem] text-muted"><a href="/register/" class="link text-base-content underline-offset-[3px]">Prefer a full page? Reserve on our booking page &rarr;</a></p>
       </div>
 
       <!-- Success State -->
-      <div class="modal-success-state" id="modalSuccessState">
-        <div class="success-icon">✓</div>
-        <h3 class="modal-title modal-title--success">Pass Reserved!</h3>
-        <p class="modal-sub modal-sub--tight" id="v01-success-sub">
+      <div class="pt-5 pb-5 text-center" id="modalSuccessState" hidden>
+        <div class="mb-3 text-[3rem] text-success">✓</div>
+        <h3 class="text-[1.45rem] font-black uppercase leading-[1.15] text-success">Pass Reserved!</h3>
+        <p class="mt-2 mb-6 text-[0.88rem] text-muted" id="v01-success-sub">
           Coach Naweed has received your request. Complete your registration in WrestlingIQ or text Coach Naweed directly below.
         </p>
-        <div class="pass-summary">
+        <div class="my-5 rounded-field bg-base-100 p-4 text-left text-[0.82rem]">
           <div><strong>Address:</strong> 30139 Industrial Pkwy SW Ste C, Hayward, CA</div>
-          <div class="pass-summary-row"><strong>Locker Arrival:</strong> 15 minutes before scheduled class</div>
-          <div class="pass-summary-row"><strong>Attire:</strong> T-shirt and gym shorts (no pockets)</div>
-          <div class="pass-summary-row" id="v01-sms-status-row"><strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)</div>
+          <div class="mt-1"><strong>Locker Arrival:</strong> 15 minutes before scheduled class</div>
+          <div class="mt-1"><strong>Attire:</strong> T-shirt and gym shorts (no pockets)</div>
+          <div class="mt-1" id="v01-sms-status-row"><strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)</div>
         </div>
-        <a href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" id="v01-wiq-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-accent-glow btn-block btn-wiq">Complete in WrestlingIQ (Team #513) &nearr;</a>
-        <button class="btn btn-outline btn-block" id="modalDoneBtn">Close</button>
+        <a href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&amp;show_registration=true&amp;team_id=513" id="v01-wiq-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block mb-2.5 shadow-[0_4px_18px_rgba(144,37,36,0.35)] font-extrabold uppercase tracking-[0.08em]">Complete in WrestlingIQ (Team #513) &nearr;</a>
+        <button type="button" class="btn btn-outline btn-block border-neutral font-extrabold uppercase tracking-[0.08em]" id="modalDoneBtn">Close</button>
       </div>
     </div>
+    <div class="modal-backdrop" aria-hidden="true"></div>
   </div>

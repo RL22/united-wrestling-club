@@ -39,7 +39,7 @@
 
     // Category filter
     const filterTabs = document.querySelectorAll('.tab');
-    const reviewCards = document.querySelectorAll('#reviews-container .testimonial-card');
+    const reviewCards = document.querySelectorAll('#reviews-container .review-card');
     let activeFilter = 'all';
 
     function applyFilter() {
@@ -85,13 +85,14 @@
         const reader = new FileReader();
         reader.onload = event => {
           const item = document.createElement('div');
-          item.className = 'preview-item';
+          item.className = 'relative size-24 overflow-hidden rounded-field border border-border-default';
           const img = document.createElement('img');
+          img.className = 'size-full object-cover';
           img.src = event.target.result;
           img.alt = 'Review attachment preview';
           const remove = document.createElement('button');
           remove.type = 'button';
-          remove.className = 'preview-remove';
+          remove.className = 'btn btn-circle btn-xs btn-neutral absolute top-1 right-1';
           remove.setAttribute('aria-label', 'Remove photo');
           remove.textContent = '✕';
           remove.addEventListener('click', () => item.remove());
@@ -103,7 +104,7 @@
     }
 
     // Submission: copy to clipboard, then open each selected platform
-    const form = document.getElementById('review-form');
+    const form = document.querySelector('form[data-uwc-form="review"]');
     const modal = document.getElementById('dispatch-modal');
     const modalText = document.getElementById('modal-text-preview');
     const modalActions = document.getElementById('modal-platform-actions');
@@ -115,7 +116,7 @@
       a.href = href;
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
-      a.className = 'btn btn-outline btn-block';
+      a.className = 'btn btn-outline btn-block h-auto min-h-12 py-3 whitespace-normal';
       a.textContent = label;
       return a;
     }
@@ -167,6 +168,8 @@
       } catch (sendErr) {
         sentPayload = null;
       }
+
+      const sent = Boolean(sentPayload);
 
       // Keep a copy in this browser only
       const submission = {
@@ -225,49 +228,53 @@
       });
       modalActions.appendChild(recopyBtn);
 
-      modal.classList.add('open');
+      modal.classList.add('modal-open');
       document.body.style.overflow = 'hidden';
       closeBtn.focus();
     });
 
     function closeDispatch() {
-      modal.classList.remove('open');
+      modal.classList.remove('modal-open');
       document.body.style.overflow = '';
     }
     closeBtn.addEventListener('click', closeDispatch);
     modal.addEventListener('click', e => { if (e.target === modal) closeDispatch(); });
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) closeDispatch();
+      if (e.key === 'Escape' && modal.classList.contains('modal-open')) closeDispatch();
     });
 
     // Show a submission in this browser's feed. Built with textContent, never innerHTML.
     function prependSubmission(item) {
       const container = document.getElementById('reviews-container');
       const card = document.createElement('article');
-      card.className = 'testimonial-card';
+      card.className = 'review-card card card-border border-border-default bg-base-200 [&[hidden]]:hidden';
       let cat = 'youth';
       if (item.perspective.includes('Adult')) cat = 'adult';
       if (item.perspective.includes('Visiting')) cat = 'visiting';
       card.dataset.category = cat;
 
       const meta = document.createElement('div');
-      meta.className = 'testimonial-meta';
+      meta.className = 'flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted';
       const strong = document.createElement('strong');
+      strong.className = 'text-[0.92rem] font-bold text-base-content';
       strong.textContent = item.name;
       const starSpan = document.createElement('span');
-      starSpan.className = 'testimonial-stars';
+      starSpan.className = 'text-[0.85rem] tracking-[2px] text-warning';
       starSpan.setAttribute('aria-label', item.rating + ' out of 5 stars');
       starSpan.textContent = '★'.repeat(parseInt(item.rating, 10));
       const source = document.createElement('span');
-      source.className = 'testimonial-source';
+      source.className = 'text-[0.7rem] font-extrabold tracking-[0.08em] text-brand-text uppercase';
       source.textContent = 'Sent for review';
       meta.append(strong, starSpan, source);
 
       const text = document.createElement('p');
-      text.className = 'testimonial-text';
+      text.className = 'm-0 max-w-none text-[0.92rem] leading-[1.7] text-pretty text-muted';
       text.textContent = '“' + item.reviewText + '”';
 
-      card.append(meta, text);
+      const body = document.createElement('div');
+      body.className = 'card-body gap-3.5 p-[26px]';
+      body.append(meta, text);
+      card.append(body);
       container.prepend(card);
       applyFilter();
     }

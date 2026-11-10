@@ -1,77 +1,57 @@
 ---
 ---
-  <section class="schedule-section" id="schedule" aria-labelledby="schedule-heading">
-    <div class="container">
-      <div class="schedule-header">
-        <span class="section-eyebrow">PRACTICE SCHEDULE</span>
-        <h2 class="section-title" id="schedule-heading">Find Your Practice Time</h2>
-        <p class="section-lead">Pick a program to see its weekly times at 30139 Industrial Pkwy SW, Hayward.</p>
+  <section class="section-y bg-base-100" id="schedule" aria-labelledby="schedule-heading">
+    <div class="container-uwc">
+      <div class="mx-auto mb-10 max-w-[680px] text-center">
+        <span class="mb-3 inline-block text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-brand-text">PRACTICE SCHEDULE</span>
+        <h2 class="mb-4 text-[clamp(2rem,3.8vw,2.9rem)] font-black uppercase leading-[1.12] tracking-[-0.01em] text-text-strong" id="schedule-heading">Find Your Practice Time</h2>
+        <p class="mx-auto max-w-[640px] text-[1.05rem] leading-[1.6] text-muted text-pretty">Pick a program to see its weekly times at 30139 Industrial Pkwy SW, Hayward.</p>
       </div>
 
-      <div class="schedule-tabs" role="tablist" aria-label="Programs">
-        <button class="schedule-tab" role="tab" id="tab-youth" aria-controls="panel-youth" aria-selected="true" tabindex="0" type="button">Kids and youth</button>
-        <button class="schedule-tab" role="tab" id="tab-varsity" aria-controls="panel-varsity" aria-selected="false" tabindex="-1" type="button">Scholastic</button>
-        <button class="schedule-tab" role="tab" id="tab-adult" aria-controls="panel-adult" aria-selected="false" tabindex="-1" type="button">Adults</button>
-        <button class="schedule-tab" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="false" tabindex="-1" type="button">Saturday Open Mat</button>
+      <div class="mb-7 flex flex-wrap justify-center gap-2.5" role="tablist" aria-label="Programs">
+        <button class="schedule-tab btn btn-outline rounded-selector h-auto min-h-11 border-neutral bg-transparent px-5 py-3 text-[0.82rem] font-bold tracking-[0.06em] text-muted uppercase hover:border-border-brand hover:bg-transparent hover:text-text-strong aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content" role="tab" id="tab-youth" aria-controls="panel-youth" aria-selected="true" tabindex="0" type="button">Kids and youth</button>
+        <button class="schedule-tab btn btn-outline rounded-selector h-auto min-h-11 border-neutral bg-transparent px-5 py-3 text-[0.82rem] font-bold tracking-[0.06em] text-muted uppercase hover:border-border-brand hover:bg-transparent hover:text-text-strong aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content" role="tab" id="tab-varsity" aria-controls="panel-varsity" aria-selected="false" tabindex="-1" type="button">Scholastic</button>
+        <button class="schedule-tab btn btn-outline rounded-selector h-auto min-h-11 border-neutral bg-transparent px-5 py-3 text-[0.82rem] font-bold tracking-[0.06em] text-muted uppercase hover:border-border-brand hover:bg-transparent hover:text-text-strong aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content" role="tab" id="tab-adult" aria-controls="panel-adult" aria-selected="false" tabindex="-1" type="button">Adults</button>
+        <button class="schedule-tab btn btn-outline rounded-selector h-auto min-h-11 border-neutral bg-transparent px-5 py-3 text-[0.82rem] font-bold tracking-[0.06em] text-muted uppercase hover:border-border-brand hover:bg-transparent hover:text-text-strong aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content" role="tab" id="tab-open" aria-controls="panel-open" aria-selected="false" tabindex="-1" type="button">Saturday Open Mat</button>
       </div>
 
       <div class="schedule-panel" role="tabpanel" id="panel-youth" aria-labelledby="tab-youth">
-        <ul class="schedule-list">
-          <li><span class="schedule-days">Mon &amp; Wed</span><span class="schedule-time">6:30 – 7:30 PM</span><span class="schedule-class">Kids, pre-K to 5th grade</span></li>
-          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">5:00 – 6:30 PM</span><span class="schedule-class">Team &amp; competition, K–12</span></li>
-          <li><span class="schedule-days">Fri</span><span class="schedule-time">5:00 – 6:30 PM</span><span class="schedule-class">Kids competition</span></li>
+        <ul class="list mx-auto max-w-[860px] overflow-hidden rounded-box border border-neutral bg-base-200">
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon &amp; Wed</span><span class="font-semibold text-accent">6:30 – 7:30 PM</span><span class="text-muted">Kids, pre-K to 5th grade</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon – Thu</span><span class="font-semibold text-accent">5:00 – 6:30 PM</span><span class="text-muted">Team &amp; competition, K–12</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Fri</span><span class="font-semibold text-accent">5:00 – 6:30 PM</span><span class="text-muted">Kids competition</span></li>
         </ul>
       </div>
 
       <div class="schedule-panel" role="tabpanel" id="panel-varsity" aria-labelledby="tab-varsity" hidden>
-        <ul class="schedule-list">
-          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">5:00 – 6:30 PM</span><span class="schedule-class">Team &amp; competition, K–12</span></li>
-          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">7:30 – 9:00 PM</span><span class="schedule-class">Adult &amp; high school</span></li>
-          <li><span class="schedule-days">Tue &amp; Thu</span><span class="schedule-time">8:00 – 9:30 AM</span><span class="schedule-class">Adult, college &amp; high school</span></li>
+        <ul class="list mx-auto max-w-[860px] overflow-hidden rounded-box border border-neutral bg-base-200">
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon – Thu</span><span class="font-semibold text-accent">5:00 – 6:30 PM</span><span class="text-muted">Team &amp; competition, K–12</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon – Thu</span><span class="font-semibold text-accent">7:30 – 9:00 PM</span><span class="text-muted">Adult &amp; high school</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Tue &amp; Thu</span><span class="font-semibold text-accent">8:00 – 9:30 AM</span><span class="text-muted">Adult, college &amp; high school</span></li>
         </ul>
       </div>
 
       <div class="schedule-panel" role="tabpanel" id="panel-adult" aria-labelledby="tab-adult" hidden>
-        <ul class="schedule-list">
-          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">7:30 – 9:00 PM</span><span class="schedule-class">Adult &amp; high school</span></li>
-          <li><span class="schedule-days">Mon – Thu</span><span class="schedule-time">9:00 – 9:30 PM</span><span class="schedule-class">Open, technique, conditioning &amp; strength</span></li>
-          <li><span class="schedule-days">Fri</span><span class="schedule-time">8:00 – 9:30 PM</span><span class="schedule-class">Adult wrestling</span></li>
-          <li><span class="schedule-days">Tue &amp; Thu</span><span class="schedule-time">8:00 – 9:30 AM</span><span class="schedule-class">Adult, college &amp; high school</span></li>
-          <li><span class="schedule-days">Mon, Wed &amp; Fri</span><span class="schedule-time">6:30 – 8:00 AM</span><span class="schedule-class">Gi jiu-jitsu</span></li>
-          <li><span class="schedule-days">Tue &amp; Thu</span><span class="schedule-time">6:30 – 7:30 PM</span><span class="schedule-class">Gi jiu-jitsu</span></li>
-          <li><span class="schedule-days">Fri</span><span class="schedule-time">6:30 – 8:00 PM</span><span class="schedule-class">Boxing &amp; no-gi jiu-jitsu</span></li>
+        <ul class="list mx-auto max-w-[860px] overflow-hidden rounded-box border border-neutral bg-base-200">
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon – Thu</span><span class="font-semibold text-accent">7:30 – 9:00 PM</span><span class="text-muted">Adult &amp; high school</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon – Thu</span><span class="font-semibold text-accent">9:00 – 9:30 PM</span><span class="text-muted">Open, technique, conditioning &amp; strength</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Fri</span><span class="font-semibold text-accent">8:00 – 9:30 PM</span><span class="text-muted">Adult wrestling</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Tue &amp; Thu</span><span class="font-semibold text-accent">8:00 – 9:30 AM</span><span class="text-muted">Adult, college &amp; high school</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Mon, Wed &amp; Fri</span><span class="font-semibold text-accent">6:30 – 8:00 AM</span><span class="text-muted">Gi jiu-jitsu</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Tue &amp; Thu</span><span class="font-semibold text-accent">6:30 – 7:30 PM</span><span class="text-muted">Gi jiu-jitsu</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Fri</span><span class="font-semibold text-accent">6:30 – 8:00 PM</span><span class="text-muted">Boxing &amp; no-gi jiu-jitsu</span></li>
         </ul>
       </div>
 
       <div class="schedule-panel" role="tabpanel" id="panel-open" aria-labelledby="tab-open" hidden>
-        <ul class="schedule-list">
-          <li><span class="schedule-days">Saturday</span><span class="schedule-time">8:00 – 10:00 AM</span><span class="schedule-class">Gi jiu-jitsu</span></li>
-          <li><span class="schedule-days">Saturday</span><span class="schedule-time">10:00 AM – 12:00 PM</span><span class="schedule-class">Open mat, all affiliations welcome</span></li>
+        <ul class="list mx-auto max-w-[860px] overflow-hidden rounded-box border border-neutral bg-base-200">
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Saturday</span><span class="font-semibold text-accent">8:00 – 10:00 AM</span><span class="text-muted">Gi jiu-jitsu</span></li>
+          <li class="grid grid-cols-[150px_190px_1fr] items-center gap-4 border-b border-base-300 px-6 py-[18px] last:border-b-0 max-sm:grid-cols-1 max-sm:gap-1 max-sm:px-[18px] max-sm:py-4"><span class="font-bold text-text-strong">Saturday</span><span class="font-semibold text-accent">10:00 AM – 12:00 PM</span><span class="text-muted">Open mat, all affiliations welcome</span></li>
         </ul>
       </div>
 
-      <p class="schedule-note"><a class="card-link" href="/schedule/">View full schedule &rarr;</a></p>
-      <p class="schedule-note">Open Mon–Fri 6 AM–10 PM · Sat 10 AM–12 PM · Sun closed. Times can shift around holidays and tournaments. Call (510) 303-4869 to confirm your first session.</p>
-      <p class="schedule-note"><a href="https://maps.google.com/?q=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" rel="noopener">30139 Industrial Pkwy SW Ste C, Hayward, CA 94544 · Get directions</a></p>
+      <p class="mt-5 text-center text-[0.9rem] text-muted"><a class="link link-hover font-extrabold tracking-[0.08em] text-text-strong uppercase" href="/schedule/">View full schedule &rarr;</a></p>
+      <p class="mt-5 text-center text-[0.9rem] text-muted">Open Mon–Fri 6 AM–10 PM · Sat 10 AM–12 PM · Sun closed. Times can shift around holidays and tournaments. Call (510) 303-4869 to confirm your first session.</p>
+      <p class="mt-5 text-center text-[0.9rem] text-muted"><a href="https://maps.google.com/?q=30139+Industrial+Pkwy+SW+Ste+C+Hayward+CA+94544" target="_blank" rel="noopener" class="link link-hover text-text-strong">30139 Industrial Pkwy SW Ste C, Hayward, CA 94544 · Get directions</a></p>
     </div>
   </section>
-
-<style>
-  .schedule-section {
-    padding: var(--space-section) 0;
-    background: var(--color-canvas);
-  }
-
-  .schedule-header {
-    text-align: center;
-    max-width: 680px;
-    margin: 0 auto 40px;
-  }
-
-  .schedule-note {
-    text-align: center;
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-</style>

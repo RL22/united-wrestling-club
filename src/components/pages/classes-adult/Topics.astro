@@ -3,6 +3,6 @@
 interface Props { items: { head: string; body: string }[] }
 const { items } = Astro.props;
 ---
-<ul class="fact-list fact-list--topics">
-  {items.map((i) => <li><strong>{i.head}.</strong> {i.body}</li>)}
+<ul class="list rounded-box border border-base-300 bg-base-200">
+  {items.map((i) => <li class="list-row"><strong>{i.head}.</strong> <span class="list-col-wrap text-base-content/70">{i.body}</span></li>)}
 </ul>
