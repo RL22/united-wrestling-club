@@ -40,7 +40,7 @@ Keep status colors purposeful and preserve sufficient contrast. Program tints on
 - Vertical section spacing uses the `section-y` utility (`clamp(70px, 9vw, 130px)`); `section-y-tight` is `52px`. Use these instead of a shorthand padding, so the sides stay at zero on mobile.
 - Radius tokens: 4px for fields and selectors (`rounded-field`, and checkboxes and toggles), 8px for boxes and cards (`rounded-box`), and pills only where a control is intentionally round.
 - The desktop navigation switches to a mobile drawer at 960px. The wordmark without wrestlers is used at 768px and below; the drawer always uses that wordmark. Larger screens use the full lockup.
-- Footer link columns: four columns from 961px, two columns from 769px (Programs and Academy stack under the brand), and one column below 769px.
+- Footer columns: from 961px, the brand and Mat Report newsletter share the first column, followed by Programs, Academy, and Hayward Headquarters in one row. From 769px, Programs and Academy stack under the brand in the first column. Below 769px, one column.
 - Breakpoints vary by component. Check each component's classes rather than assuming a single site-wide scale.
 
 ## Homepage
