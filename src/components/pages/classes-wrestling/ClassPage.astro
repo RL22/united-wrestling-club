@@ -24,7 +24,7 @@ const coaches = facts.coaches.filter((c) => coachNames.includes(c.name));
   <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Who it is for</h2>
   <ul class="list rounded-box border border-base-300 bg-base-200">
     {factRows.map((f) => (
-      <li class="list-row"><strong>{f.label}:</strong> <span class="list-col-grow">{f.value}</span></li>
+      <li><strong>{f.label}:</strong> <span>{f.value}</span></li>
     ))}
   </ul>
 
@@ -43,17 +43,17 @@ const coaches = facts.coaches.filter((c) => coachNames.includes(c.name));
   <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Coaches</h2>
   <ul class="list rounded-box border border-base-300 bg-base-200">
     {coaches.map((c) => (
-      <li class="list-row"><strong>{c.name}:</strong> <span class="list-col-grow">{c.role}</span></li>
+      <li><strong>{c.name}:</strong> <span>{c.role}</span></li>
     ))}
   </ul>
 
   <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Price</h2>
   <ul class="list rounded-box border border-base-300 bg-base-200">
     {prices.map((p) => (
-      <li class="list-row"><strong>{p.label}:</strong> <span class="list-col-grow">{p.value}</span></li>
+      <li><strong>{p.label}:</strong> <span>{p.value}</span></li>
     ))}
-    <li class="list-row"><strong>{facts.trialPass.name}:</strong> <span class="list-col-grow">{facts.trialPass.price}. {facts.trialPass.blurb}</span></li>
-    <li class="list-row"><span class="list-col-grow">{facts.membership.terms}</span></li>
+    <li><strong>{facts.trialPass.name}:</strong> <span>{facts.trialPass.price}. {facts.trialPass.blurb}</span></li>
+    <li><span>{facts.membership.terms}</span></li>
   </ul>
 
   <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Class times</h2>

@@ -54,7 +54,7 @@ import { events } from './events-data';
       <h2 class="mb-5 text-2xl font-bold" id="all-heading">2026–2027 tournament schedule</h2>
       <ol class="list" data-event-count={events.length}>
         {events.map((e) => (
-          <li class="list-row grid-flow-row grid-cols-1 gap-1 border-t border-base-300 px-0 py-3.5 min-[900px]:grid-cols-[11rem_1fr_15rem] min-[900px]:items-baseline min-[900px]:gap-4" value={e.n}>
+          <li class="grid-flow-row grid-cols-1 gap-1 border-t border-base-300 px-0 py-3.5 min-[900px]:grid-cols-[11rem_1fr_15rem] min-[900px]:items-baseline min-[900px]:gap-4" value={e.n}>
             <span class="font-bold">{e.date}</span>
             <span>{e.name}</span>
             <span class="text-sm text-base-content/85">{e.status}</span>

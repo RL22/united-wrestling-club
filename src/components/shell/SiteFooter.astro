@@ -11,7 +11,7 @@ const academy = forPage(footerAcademy, isHome);
   <footer class="footer bg-[#060709] px-0 pt-[70px] pb-[30px] text-[0.88rem] text-muted" id="visit">
     <div class="container-uwc">
       <div class="mb-[60px] grid grid-cols-1 gap-10 min-[769px]:grid-cols-2 min-[961px]:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
-        <div>
+        <div class="min-[769px]:col-start-1 min-[769px]:row-start-1 min-[961px]:col-auto min-[961px]:row-auto">
           <div class="mb-4">
             <picture><source media="(max-width: 768px)" srcset="/assets/logo--uwc-wordmark.svg"><img src="/assets/logo--uwc_wrestlers.svg" alt="United Wrestling Club" class="block h-[52px] w-auto max-w-full max-[480px]:h-11"></picture>
           </div>
@@ -34,27 +34,27 @@ const academy = forPage(footerAcademy, isHome);
           </div>
         </div>
 
-        <div>
+        <div class="min-[769px]:col-start-2 min-[769px]:row-start-1 min-[961px]:col-auto min-[961px]:row-auto">
           <div class="footer-title mb-5 text-[0.82rem] font-extrabold uppercase tracking-[0.12em] text-base-content opacity-100">Team #513 Mat Report</div>
           <p class="mb-4 text-[0.85rem] leading-[1.6] text-muted">Monthly news on events and clinics.</p>
           <NewsletterForm />
         </div>
 
-        <div>
+        <div class="min-[769px]:col-start-1 min-[769px]:row-start-2 min-[961px]:col-auto min-[961px]:row-auto">
           <div class="footer-title mb-5 text-[0.82rem] font-extrabold uppercase tracking-[0.12em] text-base-content opacity-100">Programs</div>
           <ul class="m-0 flex list-none flex-col gap-3 p-0">
             {programs.map((item) => <li><a href={item.href} class="inline-flex min-h-11 items-center py-1 text-muted no-underline transition-colors duration-300 hover:text-base-content">{item.label}</a></li>)}
           </ul>
         </div>
 
-        <div>
+        <div class="min-[769px]:col-start-1 min-[769px]:row-start-3 min-[961px]:col-auto min-[961px]:row-auto">
           <div class="footer-title mb-5 text-[0.82rem] font-extrabold uppercase tracking-[0.12em] text-base-content opacity-100">Academy</div>
           <ul class="m-0 flex list-none flex-col gap-3 p-0">
             {academy.map((item) => <li><a href={item.href} class="inline-flex min-h-11 items-center py-1 text-muted no-underline transition-colors duration-300 hover:text-base-content">{item.label}</a></li>)}
           </ul>
         </div>
 
-        <div>
+        <div class="min-[769px]:col-start-2 min-[769px]:row-start-2 min-[769px]:row-span-2 min-[961px]:col-auto min-[961px]:row-auto min-[961px]:row-span-1">
           <div class="footer-title mb-5 text-[0.82rem] font-extrabold uppercase tracking-[0.12em] text-base-content opacity-100">Hayward Headquarters</div>
           <div class="flex flex-col gap-2.5 leading-normal">
             <div><strong class="text-base-content">United Wrestling Club</strong></div>

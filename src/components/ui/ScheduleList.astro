@@ -8,6 +8,6 @@ const rows = scheduleRows.filter((r) => (showPending || !r.pending) && (!program
 ---
 <ul class="list mx-auto max-w-[860px] overflow-hidden rounded-box border border-neutral bg-base-200">
   {rows.map((r) => (
-    <li class="list-row grid grid-flow-row grid-cols-1 items-center gap-1 border-b border-base-300 px-[18px] py-4 last:border-b-0 sm:grid-cols-[150px_190px_1fr] sm:gap-4 sm:px-6 sm:py-[18px]"><span class="font-bold text-base-content">{r.days}</span><span class="font-semibold text-accent">{r.time}</span><span class="text-muted">{r.label}</span></li>
+    <li class="grid grid-flow-row grid-cols-1 items-center gap-1 border-b border-base-300 px-[18px] py-4 last:border-b-0 sm:grid-cols-[150px_190px_1fr] sm:gap-4 sm:px-6 sm:py-[18px]"><span class="font-bold text-base-content">{r.days}</span><span class="font-semibold text-accent">{r.time}</span><span class="text-muted">{r.label}</span></li>
   ))}
 </ul>
