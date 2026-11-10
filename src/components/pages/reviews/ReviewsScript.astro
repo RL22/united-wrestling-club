@@ -161,12 +161,11 @@
       }
 
       // Send to the club for review (photos are not sent yet)
-      let sent = false;
+      let sentPayload = null;
       try {
-        await window.UWCAttribution.submitLead(form, null, { omitFiles: true });
-        sent = true;
+        sentPayload = await window.UWCAttribution.submitLead(form, null, { omitFiles: true });
       } catch (sendErr) {
-        sent = false;
+        sentPayload = null;
       }
 
       // Keep a copy in this browser only
@@ -182,8 +181,16 @@
         console.warn('localStorage not accessible', storageErr);
       }
 
-      if (postWebsite && sent) {
-        prependSubmission(submission);
+      if (window.UWCAttribution && typeof window.UWCAttribution.redirectToThankYou === 'function') {
+        window.UWCAttribution.redirectToThankYou(sentPayload || {}, {
+          form: 'review',
+          reviewText: reviewText,
+          google: Boolean(document.getElementById('check-google')?.checked),
+          yelp: Boolean(document.getElementById('check-yelp')?.checked),
+          facebook: Boolean(document.getElementById('check-facebook')?.checked),
+          sent: Boolean(sentPayload)
+        });
+        return;
       }
 
       // Dialog with the copied text and one launch button per selected platform

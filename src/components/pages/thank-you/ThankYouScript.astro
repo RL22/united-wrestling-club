@@ -1,0 +1,175 @@
+<script is:inline>
+  (function () {
+    'use strict';
+
+    const params = new URLSearchParams(window.location.search);
+    const stored =
+      window.UWCAttribution && typeof window.UWCAttribution.getThankYouContext === 'function'
+        ? window.UWCAttribution.getThankYouContext() || {}
+        : {};
+
+    const formType = (params.get('form') || stored.form || 'trial_pass').toLowerCase();
+    const program = (params.get('program') || stored.program || '').toLowerCase();
+    const sms = (params.get('sms') || stored.sms || '').toLowerCase();
+    const reason = (params.get('reason') || stored.reason || '').toLowerCase();
+
+    const eyebrowEl = document.querySelector('.page-hero .section-eyebrow');
+    const headingEl = document.getElementById('thank-you-heading');
+    const leadEl = document.querySelector('.page-hero .section-lead');
+    const cardHeadingEl = document.getElementById('ty-card-heading');
+    const cardLeadEl = document.getElementById('ty-card-lead');
+    const smsRowEl = document.getElementById('ty-sms-status-row');
+    const programRowEl = document.getElementById('ty-program-row');
+    const wiqBtn = document.getElementById('ty-wiq-btn');
+    const trialChecklistEl = document.getElementById('ty-trial-checklist');
+    const reviewBlockEl = document.getElementById('ty-review-dispatch');
+    const reviewPreviewEl = document.getElementById('ty-review-preview');
+    const reviewPlatformsEl = document.getElementById('ty-review-platforms');
+    const recopyBtn = document.getElementById('ty-recopy-btn');
+
+    const PROGRAM_NAMES = {
+      youth: 'Youth Wrestling Academy ($15 · 3-Day Mat Pass)',
+      varsity: 'Varsity & Scholastic Prep ($15 · 3-Day Mat Pass)',
+      adult: 'Adult Wrestling & Wrestle-Jitsu ($15 · 3-Day Mat Pass)',
+      openmat: 'Saturday Open Mat ($15 Drop-in)'
+    };
+
+    const CONTACT_REASONS = {
+      trial_or_schedule: 'Questions about a trial pass or the weekly schedule',
+      tuition_billing: 'Tuition or membership billing inquiry',
+      corporate_clinic: 'Corporate or team wrestling clinic request',
+      sponsorship: 'Sponsorship or community partnership inquiry',
+      affiliate: 'Affiliate or coaching partnership inquiry',
+      media_press: 'Media or press inquiry',
+      other: 'General front-desk message'
+    };
+
+    function setHero(eyebrow, titleText, brandText, leadText) {
+      if (eyebrowEl && eyebrow) eyebrowEl.textContent = eyebrow;
+      if (headingEl && titleText) {
+        headingEl.textContent = titleText + ' ';
+        if (brandText) {
+          const span = document.createElement('span');
+          span.className = 'text-brand';
+          span.textContent = brandText;
+          headingEl.appendChild(span);
+        }
+      }
+      if (leadEl && leadText) leadEl.textContent = leadText;
+    }
+
+    if (programRowEl) {
+      if (PROGRAM_NAMES[program]) {
+        programRowEl.textContent = PROGRAM_NAMES[program];
+      } else if (formType === 'contact' && CONTACT_REASONS[reason]) {
+        programRowEl.textContent = CONTACT_REASONS[reason];
+      }
+    }
+
+    if (smsRowEl) {
+      smsRowEl.textContent =
+        sms === 'opted_in'
+          ? 'Opted In (Reply STOP anytime to opt out)'
+          : 'Opted Out (No automated texts will be sent)';
+    }
+
+    if (wiqBtn && window.UWCAttribution && typeof window.UWCAttribution.decorateUrl === 'function') {
+      wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
+    }
+
+    if (formType === 'contact') {
+      const topicLabel = CONTACT_REASONS[reason] || 'your message';
+      setHero(
+        'Message Received · Hayward, CA',
+        'Thanks for reaching',
+        'out to UWC',
+        'Coach Naweed and the front desk received ' +
+          topicLabel.toLowerCase() +
+          '. We reply by email or phone. If you also want to step onto the mat right away, you can complete the $15 3-Day Mat Pass waiver below.'
+      );
+      if (cardHeadingEl) cardHeadingEl.textContent = 'Want to reserve a $15 3-Day Mat Pass too?';
+      if (cardLeadEl) {
+        cardLeadEl.textContent =
+          'Your message is in our queue. If you are ready to try three practices, complete your waiver on WrestlingIQ (Team #513).';
+      }
+    } else if (formType === 'newsletter') {
+      setHero(
+        'The Mat Report · Confirmed',
+        'You are on',
+        'the list',
+        'You will receive clinic announcements, tournament updates, and schedule news from United Wrestling Club in Hayward.'
+      );
+      if (cardHeadingEl) cardHeadingEl.textContent = 'Ready to train in person?';
+      if (cardLeadEl) {
+        cardLeadEl.textContent =
+          'Your email is confirmed for the Mat Report. To book three consecutive practices for $15, complete your registration and waiver on WrestlingIQ (Team #513).';
+      }
+    } else if (formType === 'review') {
+      setHero(
+        'Review Received · Thank You',
+        'Thanks for sharing',
+        'your experience',
+        'Your review was sent to United Wrestling Club and copied to your clipboard. Use the buttons below to post your review on Google Maps, Yelp, or Facebook.'
+      );
+      if (trialChecklistEl) trialChecklistEl.hidden = true;
+      if (reviewBlockEl) {
+        reviewBlockEl.hidden = false;
+        const reviewText = String(stored.reviewText || '').trim();
+        if (reviewPreviewEl && reviewText) {
+          reviewPreviewEl.textContent = '"' + reviewText + '"';
+        }
+        if (reviewPlatformsEl) {
+          reviewPlatformsEl.replaceChildren();
+          const addPlatformBtn = function (href, label) {
+            const a = document.createElement('a');
+            a.href = href;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.className = 'btn btn-primary btn-accent-glow btn-block';
+            a.textContent = label;
+            reviewPlatformsEl.appendChild(a);
+          };
+          if (stored.google !== false) {
+            addPlatformBtn(
+              'https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo',
+              '1. Open Google Maps & paste review (Cmd+V / Ctrl+V) ↗'
+            );
+          }
+          if (stored.yelp) {
+            addPlatformBtn(
+              'https://www.yelp.com/writeareview/biz/united-wrestling-club-hayward',
+              '2. Open Yelp & paste review ↗'
+            );
+          }
+          if (stored.facebook) {
+            addPlatformBtn(
+              'https://www.facebook.com/unitedwrestlingclub/reviews',
+              '3. Open Facebook & paste review ↗'
+            );
+          }
+        }
+        if (recopyBtn && reviewText) {
+          recopyBtn.addEventListener('click', async function () {
+            try {
+              await navigator.clipboard.writeText(reviewText);
+              recopyBtn.textContent = '✓ Copied to clipboard';
+              setTimeout(function () {
+                recopyBtn.textContent = 'Copy review text again';
+              }, 2000);
+            } catch (_) {
+              recopyBtn.textContent = 'Select the quote above to copy';
+            }
+          });
+        }
+      }
+    } else {
+      const progEyebrow = PROGRAM_NAMES[program] || '$15 · 3-Day Mat Pass Reserved';
+      setHero(
+        progEyebrow,
+        'Pass reserved.',
+        'Next step: WrestlingIQ',
+        'Coach Naweed received your request. Complete your digital waiver and registration on WrestlingIQ (Team #513) before your first practice.'
+      );
+    }
+  })();
+</script>

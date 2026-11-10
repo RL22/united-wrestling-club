@@ -37,8 +37,6 @@ if (reviews.some((review, index) => !review.body.includes(excerpts[index]))) thr
     </div>
     <div class="testimonials-actions">
       <a href="https://search.google.com/local/writereview?placeid=ChIJsQd_yMaVj4ARrXw93nb4euo" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Leave a Google Review ↗</a>
-      <a href="/reviews/" class="card-link testimonials-link">Read all reviews &rarr;</a>
-      <a href="/reviews/#review-form" class="card-link testimonials-link">Share Your Story &amp; Photos &rarr;</a>
     </div>
   </div>
 </section>
@@ -56,7 +54,7 @@ if (reviews.some((review, index) => !review.body.includes(excerpts[index]))) thr
   });
 </script>
 <style>
-  .testimonials-section { --color-star: var(--color-accent); background: var(--color-canvas); padding: var(--space-section-tight); border-top: 1px solid var(--color-border-default); }
+  .testimonials-section { --color-star: var(--color-accent); background: var(--color-canvas); padding: var(--space-section) 0; border-top: 1px solid var(--color-border-default); }
   .testimonials-head { text-align: center; max-width: 760px; margin: 0 auto 48px; }
   .testimonials-head .section-lead { margin: 0 auto; }
   .slider-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 18px; }
@@ -64,7 +62,8 @@ if (reviews.some((review, index) => !review.body.includes(excerpts[index]))) thr
   .slider-controls { display: flex; gap: 8px; }
   .slider-controls button { width: 44px; height: 44px; background: var(--color-surface-1); border: 1px solid var(--color-border-default); color: var(--color-text-strong); font-size: 1.3rem; cursor: pointer; }
   .slider-controls button:hover, .slider-controls button:focus-visible { border-color: var(--color-accent); }
-  .testimonial-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * 20px) / 3.25); gap: 20px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: thin; }
+  .testimonial-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * 20px) / 3.25); gap: 20px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: none; }
+  .testimonial-track::-webkit-scrollbar { display: none; }
   .testimonial-card { scroll-snap-align: start; display: flex; flex-direction: column; min-width: 0; padding: 26px; background: var(--color-surface-1); border: 1px solid var(--color-border-default); border-radius: var(--radius-sm); }
   .testimonial-quote { color: var(--color-text-strong); line-height: 1.6; margin: 20px 0 24px; text-wrap: pretty; }
   .testimonial-attribution { display: flex; flex-direction: column; gap: 4px; margin-top: auto; color: var(--color-text-muted); font-size: .85rem; }
