@@ -3,9 +3,9 @@
 interface Props { idPrefix?: string }
 const { idPrefix = 'v01' } = Astro.props;
 ---
-<div class="tcpa-consent-box">
-  <label class="tcpa-checkbox-label" for={`${idPrefix}-media-release`}>
-    <input type="checkbox" id={`${idPrefix}-media-release`} name="media_release" value="yes" checked>
+<div class="my-3.5 rounded-box border border-base-300 bg-base-content/[0.03] px-3.5 py-3">
+  <label class="label flex cursor-pointer items-start gap-2.5 whitespace-normal text-sm leading-relaxed text-base-content" for={`${idPrefix}-media-release`}>
+    <input type="checkbox" id={`${idPrefix}-media-release`} name="media_release" value="yes" checked class="checkbox checkbox-accent mt-0.5 shrink-0">
     <span><strong>Media &amp; content notice.</strong> UWC films and photographs classes, open mats, and events for coaching and promotion on our website and social channels. Included by default. Uncheck to opt out.</span>
   </label>
 </div>

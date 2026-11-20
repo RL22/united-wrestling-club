@@ -1,10 +1,10 @@
 ---
-// Eyebrow, title, and lead in the shared .section-head block.
+// Eyebrow, title, and lead, centered over the section.
 interface Props { eyebrow?: string; title: string; lead?: string; id?: string; as?: 'h1' | 'h2' | 'h3' }
 const { eyebrow, title, lead, id, as: Tag = 'h2' } = Astro.props;
 ---
-<div class="section-head">
-  {eyebrow && <span class="section-eyebrow">{eyebrow}</span>}
-  <Tag class="section-title" id={id}>{title}</Tag>
-  {lead && <p class="section-lead">{lead}</p>}
+<div class="mx-auto mb-10 max-w-[760px] text-center">
+  {eyebrow && <span class="mb-3 inline-block text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-brand-text">{eyebrow}</span>}
+  <Tag class="mb-4 text-balance text-[clamp(2rem,3.8vw,2.9rem)] font-black uppercase leading-[1.12] tracking-[-0.01em] text-base-content" id={id}>{title}</Tag>
+  {lead && <p class="mx-auto max-w-[640px] text-[1.05rem] leading-[1.6] text-pretty text-muted">{lead}</p>}
 </div>

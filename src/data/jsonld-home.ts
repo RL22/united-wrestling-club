@@ -52,7 +52,7 @@ export const homeJsonLd = {
       "dayOfWeek": [
         "Saturday"
       ],
-      "opens": "10:00",
+      "opens": "08:00",
       "closes": "12:00"
     }
   ],

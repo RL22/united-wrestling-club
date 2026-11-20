@@ -13,11 +13,6 @@ const rules = [
   ['Club Policies', 'All members are expected to familiarize themselves with and adhere to club policies including membership dues scheduling and any additional rules or guidelines specific to United Wrestling Club.'],
 ];
 ---
-<ol class="uwc-rules">
+<ol class="mx-auto grid max-w-[760px] list-decimal gap-4 pl-6 leading-relaxed marker:font-bold marker:text-accent">
   {rules.map(([name, text]) => <li><strong>{name}:</strong> {text}</li>)}
 </ol>
-<style>
-  .uwc-rules { max-width: 760px; margin: 0 auto; padding-left: 1.5rem; display: grid; gap: 1rem; line-height: 1.6; }
-  .uwc-rules li::marker { color: var(--color-brand, currentColor); font-weight: 700; }
-  .uwc-rules strong { color: var(--color-text-primary, inherit); }
-</style>

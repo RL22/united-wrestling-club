@@ -1,21 +1,7 @@
 <script is:inline src="/assets/js/uwc-attribution.js?v=2026-11-05f"></script>
 
 <script is:inline>
-    // FAQ Accordion with Keyboard Support
-    document.querySelectorAll('.faq-question').forEach(header => {
-      const item = header.parentElement;
-      const isInitiallyActive = item.classList.contains('active');
-      header.setAttribute('aria-expanded', isInitiallyActive ? 'true' : 'false');
-
-      const toggleFAQ = () => {
-        const isActive = item.classList.toggle('active');
-        header.setAttribute('aria-expanded', isActive ? 'true' : 'false');
-      };
-
-      header.addEventListener('click', toggleFAQ);
-    });
-
-    // Native Trial Modal Handling
+    // Trial modal: daisyUI modal, shown by adding modal-open.
     const modal = document.getElementById('trialModal');
     const closeBtn = document.getElementById('modalCloseBtn');
     const doneBtn = document.getElementById('modalDoneBtn');
@@ -23,10 +9,37 @@
     const formContainer = document.getElementById('modalFormContainer');
     const successState = document.getElementById('modalSuccessState');
 
+    // Mobile drawer state: open means the drawer carries translate-x-0 and visible.
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+    const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+
+    function isMobileNavOpen() {
+      return Boolean(mobileNavDrawer && mobileNavDrawer.classList.contains('translate-x-0'));
+    }
+
+    function setMobileNav(open) {
+      if (!mobileNavDrawer) return;
+      mobileNavDrawer.classList.toggle('translate-x-0', open);
+      mobileNavDrawer.classList.toggle('translate-x-full', !open);
+      mobileNavDrawer.classList.toggle('visible', open);
+      mobileNavDrawer.classList.toggle('invisible', !open);
+      if (mobileNavBackdrop) {
+        mobileNavBackdrop.classList.toggle('opacity-100', open);
+        mobileNavBackdrop.classList.toggle('opacity-0', !open);
+        mobileNavBackdrop.classList.toggle('visible', open);
+        mobileNavBackdrop.classList.toggle('invisible', !open);
+      }
+      if (mobileMenuToggle) mobileMenuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
     function openModal() {
       if (!modal) return;
+      if (isMobileNavOpen()) setMobileNav(false);
       if (window.UWCAttribution) window.UWCAttribution.syncForm();
-      modal.classList.add('open');
+      modal.classList.add('modal-open');
       document.body.style.overflow = 'hidden';
       const firstInput = form ? form.querySelector('input:not([type="hidden"])') : null;
       if (firstInput) setTimeout(() => firstInput.focus(), 100);
@@ -34,11 +47,11 @@
 
     function closeModal() {
       if (!modal) return;
-      modal.classList.remove('open');
+      modal.classList.remove('modal-open');
       document.body.style.overflow = '';
       setTimeout(() => {
-        if (formContainer) formContainer.style.display = 'block';
-        if (successState) successState.style.display = 'none';
+        if (formContainer) formContainer.hidden = false;
+        if (successState) successState.hidden = true;
         if (form) form.reset();
         if (window.UWCAttribution) window.UWCAttribution.syncForm();
       }, 300);
@@ -54,8 +67,9 @@
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (doneBtn) doneBtn.addEventListener('click', closeModal);
     if (modal) {
+      // Clicks on the daisyUI backdrop or the empty margin around the box close the modal.
       modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
+        if (e.target === modal || e.target.classList.contains('modal-backdrop')) closeModal();
       });
     }
 
@@ -64,8 +78,6 @@
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         const smsOptInBox = document.getElementById('v01-sms-opt-in');
-        const smsStatusRow = document.getElementById('v01-sms-status-row');
-        const wiqBtn = document.getElementById('v01-wiq-btn');
         const submitBtn = form.querySelector('button[type="submit"]');
         const isOptedIn = Boolean(smsOptInBox && smsOptInBox.checked);
         if (trialStatus) trialStatus.hidden = true;
@@ -75,17 +87,11 @@
           ? window.UWCAttribution.submitLead(form)
           : Promise.reject(new Error('not_connected'));
 
-        pending.then(() => {
-          if (smsStatusRow) {
-            smsStatusRow.innerHTML = isOptedIn
-              ? '<strong>SMS Status:</strong> Opted In (Reply STOP anytime to opt out)'
-              : '<strong>SMS Status:</strong> Opted Out (No automated texts will be sent)';
-          }
-          if (wiqBtn && window.UWCAttribution) {
-            wiqBtn.href = window.UWCAttribution.decorateUrl(wiqBtn.href);
-          }
-          if (formContainer) formContainer.style.display = 'none';
-          if (successState) successState.style.display = 'block';
+        pending.then((payload) => {
+          window.UWCAttribution.redirectToThankYou(payload, {
+            form: 'trial_pass',
+            sms: isOptedIn ? 'opted_in' : 'opted_out_or_unchecked'
+          });
         }).catch(() => {
           if (trialStatus) {
             trialStatus.textContent = 'We could not send your request. Call (510) 303-4869 and we will reserve your pass.';
@@ -114,9 +120,9 @@
         }
         const btn = nf.querySelector('button[type="submit"]');
         if (btn) btn.disabled = true;
-        window.UWCAttribution.submitLead(nf).then(() => {
+        window.UWCAttribution.submitLead(nf).then((payload) => {
           nf.reset();
-          say("You're on the list. The first Mat Report is on its way.");
+          window.UWCAttribution.redirectToThankYou(payload, { form: 'newsletter' });
         }).catch(() => {
           say('We could not sign you up right now. Call (510) 303-4869 and we will add you.');
         }).finally(() => {
@@ -125,69 +131,31 @@
       });
     });
 
-    // Mobile Menu Toggle & Drawer Handling
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileNavDrawer = document.getElementById('mobileNavDrawer');
-    const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
-    const mobileNavClose = document.getElementById('mobileNavClose');
-
-    function openMobileNav() {
-      if (!mobileNavDrawer) return;
-      mobileNavDrawer.classList.add('open');
-      if (mobileNavBackdrop) mobileNavBackdrop.classList.add('open');
-      if (mobileMenuToggle) {
-        mobileMenuToggle.classList.add('active');
-        mobileMenuToggle.setAttribute('aria-expanded', 'true');
-      }
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeMobileNav() {
-      if (!mobileNavDrawer) return;
-      mobileNavDrawer.classList.remove('open');
-      if (mobileNavBackdrop) mobileNavBackdrop.classList.remove('open');
-      if (mobileMenuToggle) {
-        mobileMenuToggle.classList.remove('active');
-        mobileMenuToggle.setAttribute('aria-expanded', 'false');
-      }
-      document.body.style.overflow = '';
-    }
-
+    // Mobile menu toggle and drawer
     if (mobileMenuToggle) {
       mobileMenuToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        if (mobileNavDrawer.classList.contains('open')) {
-          closeMobileNav();
-        } else {
-          openMobileNav();
-        }
+        setMobileNav(!isMobileNavOpen());
       });
     }
 
-    if (mobileNavClose) mobileNavClose.addEventListener('click', closeMobileNav);
-    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileNav);
+    if (mobileNavClose) mobileNavClose.addEventListener('click', () => setMobileNav(false));
+    if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', () => setMobileNav(false));
 
     // Close mobile nav when clicking any link within it
     if (mobileNavDrawer) {
       mobileNavDrawer.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          closeMobileNav();
-        });
+        link.addEventListener('click', () => setMobileNav(false));
       });
     }
 
     // Global Escape Key Listener for Modal and Mobile Drawer
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        if (modal && modal.classList.contains('open')) {
-          closeModal();
-        }
-        if (mobileNavDrawer && mobileNavDrawer.classList.contains('open')) {
-          closeMobileNav();
-        }
+        if (modal && modal.classList.contains('modal-open')) closeModal();
+        if (isMobileNavOpen()) setMobileNav(false);
       }
     });
-
 </script>
 
 <script is:inline>

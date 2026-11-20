@@ -1,209 +1,68 @@
 ---
 ---
-<section class="pricing-section" id="pricing">
-    <div class="container">
-      <div style="text-align: center; max-width: 680px; margin: 0 auto;">
-        <span class="section-eyebrow">TRANSPARENT TUITION</span>
-        <h2 class="section-title">No Contracts. No Hidden&nbsp;Fees.</h2>
-        <p class="section-lead" style="margin: 0 auto;">
+<section class="section-y relative border-y border-neutral bg-base-100" id="pricing">
+    <div class="container-uwc">
+      <div class="mx-auto max-w-[680px] text-center">
+        <span class="mb-3 inline-block text-[0.78rem] font-extrabold uppercase tracking-[0.18em] text-brand-text">TRANSPARENT TUITION</span>
+        <h2 class="mb-4 text-[clamp(2rem,3.8vw,2.9rem)] font-black uppercase leading-[1.12] tracking-[-0.01em] text-text-strong">No Contracts. No Hidden&nbsp;Fees.</h2>
+        <p class="mx-auto max-w-[640px] text-[1.05rem] leading-[1.6] text-muted text-pretty">
           Month-to-month, no contracts, no initiation fees. Try three practices first, then decide.
         </p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="mx-auto mt-12 grid w-full grid-cols-1 items-stretch gap-5 min-[769px]:max-w-[480px] min-[961px]:max-w-none min-[961px]:grid-cols-3 min-[961px]:gap-7">
         <!-- 3-Day Mat Pass -->
-        <div class="pricing-card">
-          <h3 class="price-name">3-Day Mat Pass</h3>
-          <p class="price-desc">Three practices to see if the room fits. New members only.</p>
-          <div class="price-figure">
-            <span class="price-val">$15</span>
-            <span class="price-period">/ 3 practices</span>
+        <div class="card relative border border-neutral bg-base-200">
+          <div class="card-body gap-0 px-[30px] py-9 max-md:px-[18px] max-md:py-7">
+            <h3 class="mb-2 text-[1.3rem] font-extrabold uppercase text-text-strong">3-Day Mat Pass</h3>
+            <p class="mb-6 min-h-10 text-[0.85rem] text-muted text-pretty">Three practices to see if the room fits. New members only.</p>
+            <div class="mb-7 flex items-baseline gap-1 border-b border-base-300 pb-6">
+              <span class="font-accent text-[2.8rem] leading-none font-black text-text-strong">$15</span>
+              <span class="text-[0.88rem] font-semibold text-muted uppercase">/ 3 practices</span>
+            </div>
+            <ul class="mb-9 flex grow flex-col gap-3.5">
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">Any age-appropriate class</li>
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">Gear fitting and 1-on-1 check-in with Coach Naweed</li>
+            </ul>
+            <button class="btn btn-outline open-trial-modal">Try three practices for $15</button>
           </div>
-          <ul class="price-features">
-            <li class="price-feature">Any age-appropriate class</li>
-            <li class="price-feature">Gear fitting and 1-on-1 check-in with Coach Naweed</li>
-          </ul>
-          <button class="btn btn-outline open-trial-modal">Try three practices for $15</button>
         </div>
 
         <!-- Monthly Unlimited (Featured) -->
-        <div class="pricing-card featured">
-          <span class="featured-tag">MOST POPULAR</span>
-          <h3 class="price-name">Monthly Unlimited</h3>
-          <p class="price-desc">All weekly practices and Saturday open mat.</p>
-          <div class="price-figure">
-            <span class="price-val">$139.99</span>
-            <span class="price-period">/&nbsp;Month</span>
+        <div class="card relative border-2 border-primary bg-[linear-gradient(180deg,#181b24_0%,#111319_100%)] shadow-[0_12px_40px_rgba(144,37,36,0.25)] min-[769px]:scale-[1.02]">
+          <span class="badge badge-primary absolute -top-3.5 left-1/2 h-auto -translate-x-1/2 px-4 py-[5px] text-[0.72rem] font-extrabold tracking-[0.12em] whitespace-nowrap uppercase">MOST POPULAR</span>
+          <div class="card-body gap-0 px-[30px] py-9 max-md:px-[18px] max-md:py-7">
+            <h3 class="mb-2 text-[1.3rem] font-extrabold uppercase text-text-strong">Monthly Unlimited</h3>
+            <p class="mb-6 min-h-10 text-[0.85rem] text-muted text-pretty">All weekly practices and Saturday open mat.</p>
+            <div class="mb-7 flex items-baseline gap-1 border-b border-base-300 pb-6">
+              <span class="font-accent text-[2.8rem] leading-none font-black text-text-strong">$139.99</span>
+              <span class="text-[0.88rem] font-semibold text-muted uppercase">/&nbsp;Month</span>
+            </div>
+            <ul class="mb-9 flex grow flex-col gap-3.5">
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">Month-to-month, no contracts</li>
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">No initiation fees</li>
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">Saturday open mat included</li>
+            </ul>
+            <button class="btn btn-primary open-trial-modal">Start Monthly Membership</button>
           </div>
-          <ul class="price-features">
-            <li class="price-feature">Month-to-month, no contracts</li>
-            <li class="price-feature">No initiation fees</li>
-            <li class="price-feature">Saturday open mat included</li>
-          </ul>
-          <button class="btn btn-primary btn-accent-glow open-trial-modal">Start Monthly Membership</button>
         </div>
 
         <!-- Single Mat Drop-In -->
-        <div class="pricing-card">
-          <h3 class="price-name">Single Mat Drop-In</h3>
-          <p class="price-desc">For visiting wrestlers and Saturday open mat guests.</p>
-          <div class="price-figure">
-            <span class="price-val">$15</span>
-            <span class="price-period">/&nbsp;Visit</span>
+        <div class="card relative border border-neutral bg-base-200">
+          <div class="card-body gap-0 px-[30px] py-9 max-md:px-[18px] max-md:py-7">
+            <h3 class="mb-2 text-[1.3rem] font-extrabold uppercase text-text-strong">Single Mat Drop-In</h3>
+            <p class="mb-6 min-h-10 text-[0.85rem] text-muted text-pretty">For visiting wrestlers and Saturday open mat guests.</p>
+            <div class="mb-7 flex items-baseline gap-1 border-b border-base-300 pb-6">
+              <span class="font-accent text-[2.8rem] leading-none font-black text-text-strong">$15</span>
+              <span class="text-[0.88rem] font-semibold text-muted uppercase">/&nbsp;Visit</span>
+            </div>
+            <ul class="mb-9 flex grow flex-col gap-3.5">
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">One practice or Saturday open mat</li>
+              <li class="flex items-start gap-2.5 text-[0.9rem] text-base-content">Pay at the door</li>
+            </ul>
+            <button class="btn btn-outline open-trial-modal">Pay Drop-In at Door</button>
           </div>
-          <ul class="price-features">
-            <li class="price-feature">One practice or Saturday open mat</li>
-            <li class="price-feature">Pay at the door</li>
-          </ul>
-          <button class="btn btn-outline open-trial-modal">Pay Drop-In at Door</button>
         </div>
       </div>
     </div>
   </section>
-
-<style>
-  .pricing-section {
-    padding: var(--space-section) 0;
-    background-color: #0b0c10;
-    border-top: 1px solid var(--color-border-default);
-    border-bottom: 1px solid var(--color-border-default);
-  }
-
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: 48px;
-    align-items: stretch;
-  }
-
-  .pricing-card {
-    background: var(--color-surface-1);
-    border: 1px solid var(--color-border-default);
-    border-radius: var(--radius-md);
-    padding: 36px 30px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .pricing-card.featured {
-    background: linear-gradient(180deg, #181b24 0%, #111319 100%);
-    border: 2px solid var(--color-brand);
-    box-shadow: 0 12px 40px rgba(144, 37, 36, 0.25);
-    transform: scale(1.02);
-  }
-
-  .featured-tag {
-    white-space: nowrap !important;
-  }
-
-  .featured-tag {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--color-brand);
-    color: var(--color-text-strong);
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 5px 16px;
-    border-radius: var(--radius-pill);
-    white-space: nowrap !important;
-  }
-
-  .price-name {
-    font-size: 1.3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--color-text-strong);
-    margin-bottom: 8px;
-  }
-
-  .price-desc {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-bottom: 24px;
-    min-height: 40px;
-    text-wrap: pretty;
-  }
-
-  .price-figure {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-    margin-bottom: 28px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--color-border-subtle);
-  }
-
-  .price-val {
-    font-size: 2.8rem;
-    font-weight: 900;
-    font-family: var(--font-accent);
-    color: var(--color-text-strong);
-    line-height: 1;
-  }
-
-  .price-period {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-  }
-
-  .price-features {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-bottom: 36px;
-    flex-grow: 1;
-  }
-
-  .price-feature {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.9rem;
-    color: var(--color-text-default);
-  }
-
-  @media (max-width: 960px) {
-    .pricing-grid {
-      grid-template-columns: 1fr;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .pricing-grid {
-      grid-template-columns: minmax(0, 1fr) !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      gap: 20px !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-    .pricing-card {
-      padding: 28px 18px !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-    }
-    .pricing-card.featured {
-      transform: none !important;
-    }
-    .pricing-card .btn {
-      width: 100% !important;
-      padding: 14px 16px !important;
-      font-size: 0.85rem !important;
-      white-space: normal !important;
-      box-sizing: border-box !important;
-    }
-  }
-</style>

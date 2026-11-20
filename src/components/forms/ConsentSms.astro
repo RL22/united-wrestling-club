@@ -3,12 +3,12 @@
 interface Props { idPrefix?: string }
 const { idPrefix = 'v01' } = Astro.props;
 ---
-<div class="tcpa-consent-box">
-  <label class="tcpa-checkbox-label" for={`${idPrefix}-sms-opt-in`}>
-    <input type="checkbox" id={`${idPrefix}-sms-opt-in`} name="sms_opt_in" value="true">
+<div class="my-3.5 rounded-box border border-base-300 bg-base-content/[0.03] px-3.5 py-3">
+  <label class="label flex cursor-pointer items-start gap-2.5 whitespace-normal text-sm leading-relaxed text-base-content" for={`${idPrefix}-sms-opt-in`}>
+    <input type="checkbox" id={`${idPrefix}-sms-opt-in`} name="sms_opt_in" value="true" class="checkbox checkbox-accent mt-0.5 shrink-0">
     <span>Text me my 3-Day Mat Pass confirmation, Suite C arrival instructions, and club updates from <strong>United Wrestling Club</strong>.</span>
   </label>
-  <div class="tcpa-optout-note">
+  <div class="mt-2 pl-7 text-xs leading-relaxed text-base-content/60">
     Optional. Consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies (up to 6 msgs/mo). Reply <strong>STOP</strong> to opt out at any time or <strong>HELP</strong> for help.
   </div>
 </div>

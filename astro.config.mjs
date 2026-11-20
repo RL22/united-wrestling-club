@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 
 // Held pages are for explicit preview builds, never the normal production artifact.
 const heldPreview = process.env.UWC_INCLUDE_HELD === 'true';
@@ -13,4 +14,7 @@ export default defineConfig({
   outDir: heldPreview ? './output/held-preview/' : './dist/',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

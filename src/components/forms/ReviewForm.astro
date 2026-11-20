@@ -1,110 +1,109 @@
 ---
 // F7 review form, ported verbatim from discovery/archive/legacy-site/reviews/index.html. The `review` endpoint is wired by assets/js/uwc-attribution.js.
 ---
-<form id="review-form" novalidate data-uwc-form="review">
-            
-            
-            <div class="form-group">
-              <label class="form-label">Overall Rating <span class="required">*</span></label>
-              <div class="star-selector">
-                <div class="star-buttons-group" id="star-selector" role="radiogroup" aria-label="Star Rating">
-                  <button type="button" class="star-btn active" data-value="1" aria-label="1 star">★</button>
-                  <button type="button" class="star-btn active" data-value="2" aria-label="2 stars">★</button>
-                  <button type="button" class="star-btn active" data-value="3" aria-label="3 stars">★</button>
-                  <button type="button" class="star-btn active" data-value="4" aria-label="4 stars">★</button>
-                  <button type="button" class="star-btn active" data-value="5" aria-label="5 stars">★</button>
+<form novalidate data-uwc-form="review">
+
+            <!-- Overall rating. Stars keep the star-btn / active / hover hooks used by ReviewsScript. -->
+            <fieldset class="fieldset min-w-0 mb-[18px]">
+              <legend class="fieldset-legend font-bold uppercase tracking-wider">Overall Rating <span class="text-error">*</span></legend>
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
+                <div class="flex gap-1" id="star-selector" role="radiogroup" aria-label="Star Rating">
+                  <button type="button" class="star-btn btn btn-ghost btn-square size-11 text-[1.6rem] leading-none font-normal text-neutral transition-transform hover:scale-[1.08] hover:bg-transparent [&.active]:text-accent [&.hover]:text-accent active" data-value="1" aria-label="1 star">★</button>
+                  <button type="button" class="star-btn btn btn-ghost btn-square size-11 text-[1.6rem] leading-none font-normal text-neutral transition-transform hover:scale-[1.08] hover:bg-transparent [&.active]:text-accent [&.hover]:text-accent active" data-value="2" aria-label="2 stars">★</button>
+                  <button type="button" class="star-btn btn btn-ghost btn-square size-11 text-[1.6rem] leading-none font-normal text-neutral transition-transform hover:scale-[1.08] hover:bg-transparent [&.active]:text-accent [&.hover]:text-accent active" data-value="3" aria-label="3 stars">★</button>
+                  <button type="button" class="star-btn btn btn-ghost btn-square size-11 text-[1.6rem] leading-none font-normal text-neutral transition-transform hover:scale-[1.08] hover:bg-transparent [&.active]:text-accent [&.hover]:text-accent active" data-value="4" aria-label="4 stars">★</button>
+                  <button type="button" class="star-btn btn btn-ghost btn-square size-11 text-[1.6rem] leading-none font-normal text-neutral transition-transform hover:scale-[1.08] hover:bg-transparent [&.active]:text-accent [&.hover]:text-accent active" data-value="5" aria-label="5 stars">★</button>
                 </div>
-                <span class="star-rating-label" id="star-label">5.0 / 5.0 (Exceptional)</span>
+                <span class="text-sm font-bold text-base-content" id="star-label">5.0 / 5.0 (Exceptional)</span>
               </div>
               <input type="hidden" name="rating" id="rating-input" value="5">
-            </div>
+            </fieldset>
 
             <!-- Name and Perspective Inputs -->
-            <div class="form-row">
-              
-              <div class="form-group">
-                <label class="form-label" for="author-name">Your Full Name or Mat Handle <span class="required">*</span></label>
-                <input type="text" id="author-name" name="author" class="form-input" placeholder="e.g. David Johnson or Sarah (Mom of Alex)" required autocomplete="name">
-                <span class="form-hint">Displayed next to your testimonial</span>
-              </div>
+            <div class="grid grid-cols-1 gap-x-5 sm:grid-cols-2">
 
-              <div class="form-group">
-                <label class="form-label" for="athlete-perspective">Your Role / Perspective <span class="required">*</span></label>
-                <select id="athlete-perspective" name="perspective" class="form-select" required>
+              <fieldset class="fieldset min-w-0 mb-[18px]">
+                <label class="label whitespace-normal font-bold uppercase tracking-wider text-base-content" for="author-name">Your Full Name or Mat Handle <span class="text-error">*</span></label>
+                <input type="text" id="author-name" name="author" class="input validator w-full h-auto min-h-[46px] text-sm" placeholder="e.g. David Johnson or Sarah (Mom of Alex)" required autocomplete="name">
+                <p class="label whitespace-normal">Displayed next to your testimonial</p>
+              </fieldset>
+
+              <fieldset class="fieldset min-w-0 mb-[18px]">
+                <label class="label whitespace-normal font-bold uppercase tracking-wider text-base-content" for="athlete-perspective">Your Role / Perspective <span class="text-error">*</span></label>
+                <select id="athlete-perspective" name="perspective" class="select validator w-full h-auto min-h-[46px] text-sm" required>
                   <option value="Youth Parent">Parent of Youth Wrestler</option>
                   <option value="Scholastic Athlete">High School / Scholastic Competitor</option>
                   <option value="Adult Grappler">Adult Grappler / Wrestle-Jitsu / BJJ</option>
                   <option value="Visiting Athlete">Visiting Competitor / Out-of-State Drop-In</option>
                   <option value="Community Supporter">Community Member / Friend of UWC</option>
                 </select>
-                <span class="form-hint">Helps route your testimonial to relevant families</span>
-              </div>
+                <p class="label whitespace-normal">Helps route your testimonial to relevant families</p>
+              </fieldset>
 
             </div>
 
             <!-- Longform Review Text -->
-            <div class="form-group">
-              <label class="form-label" for="review-body">Your Review &amp; Mat Story <span class="required">*</span></label>
-              <textarea id="review-body" name="review" class="form-textarea" placeholder="What has your or your child's experience been like? Consider mentioning coaching attention, technical progress, room cleanliness, or parent hospitality..." required></textarea>
-              <span class="form-hint">Tip: Specific stories about Coach Naweed, technical breakthroughs, or the welcoming culture make the deepest impact on hesitant parents.</span>
-            </div>
+            <fieldset class="fieldset min-w-0 mb-[18px]">
+              <label class="label whitespace-normal font-bold uppercase tracking-wider text-base-content" for="review-body">Your Review &amp; Mat Story <span class="text-error">*</span></label>
+              <textarea id="review-body" name="review" class="textarea validator w-full min-h-[140px] resize-y text-sm leading-relaxed" placeholder="What has your or your child's experience been like? Consider mentioning coaching attention, technical progress, room cleanliness, or parent hospitality..." required></textarea>
+              <p class="label whitespace-normal">Tip: Specific stories about Coach Naweed, technical breakthroughs, or the welcoming culture make the deepest impact on hesitant parents.</p>
+            </fieldset>
 
             <!-- Photos & Attachments Dropzone -->
-            <div class="form-group">
-              <label class="form-label">Practice or Tournament Photos <span class="form-optional">(Optional)</span></label>
-              <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload practice or tournament photos">
-                <input type="file" id="photo-input" name="photos" accept="image/*" multiple>
-                <div class="dropzone-icon">📷</div>
-                <div class="dropzone-text">
-                  <strong>Click to upload photos</strong> or drag &amp; drop files here
+            <fieldset class="fieldset min-w-0 mb-[18px]">
+              <legend class="fieldset-legend font-bold uppercase tracking-wider">Practice or Tournament Photos <span class="font-normal normal-case tracking-normal text-base-content/60">(Optional)</span></legend>
+              <div class="relative flex cursor-pointer flex-col items-center gap-1.5 rounded-field border border-dashed border-neutral bg-base-200 px-5 py-7 text-center text-base-content/60 transition-colors hover:border-accent hover:bg-primary/10 focus-visible:border-accent [&.dragover]:border-accent [&.dragover]:bg-primary/10" id="dropzone" role="button" tabindex="0" aria-label="Upload practice or tournament photos">
+                <input type="file" id="photo-input" name="photos" accept="image/*" multiple class="pointer-events-none absolute h-px w-px opacity-0">
+                <div class="text-[1.4rem]">📷</div>
+                <div class="text-sm text-base-content/60">
+                  <strong class="text-base-content">Click to upload photos</strong> or drag &amp; drop files here
                 </div>
-                <span class="form-hint">Tournament podiums, drilling, team gear photos (PNG, JPG, WebP)</span>
+                <p class="label whitespace-normal">Tournament podiums, drilling, team gear photos (PNG, JPG, WebP)</p>
               </div>
-              <div class="preview-grid" id="preview-grid" aria-live="polite"></div>
-            </div>
+              <div class="mt-3 grid grid-cols-[repeat(auto-fill,minmax(96px,1fr))] gap-2.5 empty:hidden" id="preview-grid" aria-live="polite"></div>
+            </fieldset>
 
             <!-- Target Platform Checkboxes -->
-            <div class="form-group">
-              <label class="form-label">Where Would You Like to Publish This Review?</label>
-              <div class="platform-grid">
-                
-                <label class="platform-checkbox">
-                  <input type="checkbox" name="platform-google" id="check-google" checked>
-                  <div class="platform-info">
-                    <strong>Google Business Profile (Highest Impact)</strong>
-                    <span>Powers our 5.0 ★ rating on Google Maps &amp; Local Search in Hayward</span>
+            <fieldset class="fieldset min-w-0 mb-[18px]">
+              <legend class="fieldset-legend font-bold uppercase tracking-wider">Where Would You Like to Publish This Review?</legend>
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+                <label class="card card-border flex-row cursor-pointer items-start gap-3 bg-base-200 p-4 has-[:checked]:border-primary/40">
+                  <input type="checkbox" name="platform-google" id="check-google" checked class="checkbox checkbox-accent mt-0.5 shrink-0">
+                  <div class="min-w-0">
+                    <strong class="mb-1 block text-sm text-base-content">Google Business Profile (Highest Impact)</strong>
+                    <span class="block text-xs leading-normal text-base-content/60">Powers our 5.0 ★ rating on Google Maps &amp; Local Search in Hayward</span>
                   </div>
                 </label>
 
-                <label class="platform-checkbox">
-                  <input type="checkbox" name="platform-yelp" id="check-yelp">
-                  <div class="platform-info">
-                    <strong>Yelp</strong>
-                    <span>Supports East Bay combat martial arts discoverability</span>
+                <label class="card card-border flex-row cursor-pointer items-start gap-3 bg-base-200 p-4 has-[:checked]:border-primary/40">
+                  <input type="checkbox" name="platform-yelp" id="check-yelp" class="checkbox checkbox-accent mt-0.5 shrink-0">
+                  <div class="min-w-0">
+                    <strong class="mb-1 block text-sm text-base-content">Yelp</strong>
+                    <span class="block text-xs leading-normal text-base-content/60">Supports East Bay combat martial arts discoverability</span>
                   </div>
                 </label>
 
-                <label class="platform-checkbox">
-                  <input type="checkbox" name="platform-facebook" id="check-facebook">
-                  <div class="platform-info">
-                    <strong>Facebook Community</strong>
-                    <span>Shares with local grappling &amp; wrestling groups</span>
+                <label class="card card-border flex-row cursor-pointer items-start gap-3 bg-base-200 p-4 has-[:checked]:border-primary/40">
+                  <input type="checkbox" name="platform-facebook" id="check-facebook" class="checkbox checkbox-accent mt-0.5 shrink-0">
+                  <div class="min-w-0">
+                    <strong class="mb-1 block text-sm text-base-content">Facebook Community</strong>
+                    <span class="block text-xs leading-normal text-base-content/60">Shares with local grappling &amp; wrestling groups</span>
                   </div>
                 </label>
 
-                <label class="platform-checkbox">
-                  <input type="checkbox" name="platform-website" id="check-website" checked>
-                  <div class="platform-info">
-                    <strong>United Wrestling Club Website</strong>
-                    <span>We review every submission before anything goes live on our site</span>
+                <label class="card card-border flex-row cursor-pointer items-start gap-3 bg-base-200 p-4 has-[:checked]:border-primary/40">
+                  <input type="checkbox" name="platform-website" id="check-website" checked class="checkbox checkbox-accent mt-0.5 shrink-0">
+                  <div class="min-w-0">
+                    <strong class="mb-1 block text-sm text-base-content">United Wrestling Club Website</strong>
+                    <span class="block text-xs leading-normal text-base-content/60">We review every submission before anything goes live on our site</span>
                   </div>
                 </label>
 
               </div>
-            </div>
+            </fieldset>
 
-            
-            <div class="form-actions">
+            <div class="mt-7">
               <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
                 <span>Post Review &amp; Copy to Clipboard &rarr;</span>
               </button>

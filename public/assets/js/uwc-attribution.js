@@ -430,6 +430,26 @@
       body: formData
     }).then((res) => {
       if (!res.ok) throw new Error("http_" + res.status);
+      // Optional secondary relay to the UWC -> WrestlingIQ (/api/v1) Webhook Worker
+      // when configured via window.UWC_WIQ_WEBHOOK_URL (or handled server-side by Formspree webhook).
+      const wiqWebhookUrl =
+        typeof window.UWC_WIQ_WEBHOOK_URL === "string"
+          ? window.UWC_WIQ_WEBHOOK_URL.trim()
+          : "";
+      if (
+        wiqWebhookUrl &&
+        (payloadObj.form_name === "trial_pass" || payloadObj.form_name === "contact")
+      ) {
+        fetch(wiqWebhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify(payloadObj),
+          keepalive: true
+        }).catch(() => {});
+      }
       if (typeof window.gtag === "function") {
         window.gtag("event", "generate_lead", {
           form_name: payloadObj.form_name || "",
@@ -441,6 +461,58 @@
       }
       return payloadObj;
     });
+  }
+
+  const THANK_YOU_CTX_KEY = "uwc_thank_you_ctx_v1";
+
+  function buildThankYouUrl(payloadObj, extra) {
+    const p = payloadObj || window.UWCAttribution.lastSubmittedPayload || {};
+    const extraObj = extra && typeof extra === "object" ? extra : {};
+    const formName = String(extraObj.form || p.form_name || "trial_pass").trim();
+    const program = String(extraObj.program || p.program || "").trim();
+    const sms = String(extraObj.sms || p.sms_opt_in_status || "").trim();
+    const reason = String(extraObj.reason || p.reason || "").trim();
+    const lid = isAnonymousLeadId(p.uwc_lead_id) ? p.uwc_lead_id : "";
+
+    const ctx = {
+      utm: "dyno",
+      form: formName,
+      program: program,
+      sms: sms,
+      reason: reason,
+      lid: lid,
+      route: String(p.route || window.location.pathname || "/"),
+      self_reported_source: String(p.self_reported_source || ""),
+      submitted_at: new Date().toISOString(),
+      ...extraObj
+    };
+
+    try {
+      sessionStorage.setItem(THANK_YOU_CTX_KEY, JSON.stringify(ctx));
+    } catch (_) {}
+
+    const qs = new URLSearchParams();
+    qs.set("utm", "dyno");
+    if (formName) qs.set("form", formName);
+    if (program) qs.set("program", program);
+    if (sms) qs.set("sms", sms);
+    if (reason) qs.set("reason", reason);
+    if (lid) qs.set("lid", lid);
+
+    return "/thank-you/?" + qs.toString();
+  }
+
+  function redirectToThankYou(payloadObj, extra) {
+    const targetUrl = buildThankYouUrl(payloadObj, extra);
+    window.location.assign(targetUrl);
+  }
+
+  function getThankYouContext() {
+    try {
+      return JSON.parse(sessionStorage.getItem(THANK_YOU_CTX_KEY) || "null");
+    } catch (_) {
+      return null;
+    }
   }
 
   const currentState = syncAttributionState();
@@ -456,6 +528,9 @@
     syncForm: () => populateTrialModalFields(),
     decorateUrl: decorateUrlString,
     submitLead: dispatchFormspreePayload,
+    buildThankYouUrl: buildThankYouUrl,
+    redirectToThankYou: redirectToThankYou,
+    getThankYouContext: getThankYouContext,
     lastSubmittedPayload: null
   };
 

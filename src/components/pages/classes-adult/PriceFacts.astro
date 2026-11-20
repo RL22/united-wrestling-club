@@ -1,11 +1,13 @@
 ---
-// Shared trial and drop-in facts. Program membership tiers are listed on the pricing page.
+// Trial and drop-in rows for class pages. Membership tiers are listed on the pricing page.
+import RowList from './RowList.astro';
 import { facts } from '../../../data/facts';
 interface Props { openMat?: boolean }
 const { openMat = false } = Astro.props;
+const items = [
+  { head: facts.trialPass.name, body: `${facts.trialPass.price}. ${facts.trialPass.blurb}` },
+  ...(openMat ? [{ head: 'Drop-in', body: `${facts.dropIn.price} per ${facts.dropIn.per}. ${facts.dropIn.note}` }] : []),
+];
 ---
-<div class="fact-list fact-list--prices">
-  <div><strong>{facts.trialPass.name}:</strong> {facts.trialPass.price}. {facts.trialPass.blurb}</div>
-  <div>Membership options vary by program. <a href="/pricing/">View membership pricing</a>.</div>
-  {openMat && <div><strong>Drop-in:</strong> {facts.dropIn.price} per {facts.dropIn.per}. {facts.dropIn.note}</div>}
-</div>
+<RowList items={items} />
+<p class="text-muted">Membership options vary by program. <a href="/pricing/" class="link link-hover text-base-content">View membership pricing</a>.</p>

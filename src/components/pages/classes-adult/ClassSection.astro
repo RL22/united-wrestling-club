@@ -1,0 +1,10 @@
+---
+// One section of a class page: an H2 and its content. Spacing between sections comes from the parent's flex gap.
+interface Props { title: string }
+const { title } = Astro.props;
+const headingId = `class-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+---
+<section class="flex flex-col gap-4" aria-labelledby={headingId}>
+  <h2 class="text-3xl font-black uppercase leading-tight md:text-[2.75rem]" id={headingId}>{title}</h2>
+  <slot />
+</section>

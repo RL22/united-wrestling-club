@@ -17,7 +17,7 @@ const sectionsByPath: Record<string, Section[]> = {
     {
       heading: 'Hours',
       lines: [
-        ...facts.hours.rows.filter((r) => !r.days.includes('Saturday')).map((r) => `${r.days}: ${r.time}`),
+        ...facts.hours.rows.map((r) => `${r.days}: ${r.time}`),
         facts.hours.footnote,
       ],
     },

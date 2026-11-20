@@ -1,7 +1,8 @@
 ---
-// Shared body for the three wrestling class pages. All copy is passed in by the page; times come from ui/ScheduleList via the template.
+// Shared body for the three wrestling class pages. Copy comes from each page; coaches and trial terms come from data/facts.ts.
 import ProgramPage from '../../templates/ProgramPage.astro';
-import InfoCard from '../../ui/InfoCard.astro';
+import ClassSection from '../classes-adult/ClassSection.astro';
+import RowList from '../classes-adult/RowList.astro';
 import { facts } from '../../../data/facts';
 
 interface Props {
@@ -11,43 +12,30 @@ interface Props {
   eyebrow: string;
   heading: string;
   lead: string;
-  facts: { label: string; value: string }[];
   sections: { title: string; body: string }[];
   prices: { label: string; value: string }[];
   coachNames: string[];
   schedule: { program?: string; tag?: string };
   trialProgram: 'youth' | 'varsity' | 'adult';
 }
-const { title, description, path, eyebrow, heading, lead, facts: factRows, sections, prices, coachNames, schedule, trialProgram } = Astro.props;
+const { title, description, path, eyebrow, heading, lead, sections, prices, coachNames, schedule, trialProgram } = Astro.props;
 const coaches = facts.coaches.filter((c) => coachNames.includes(c.name));
+const priceRows = [
+  ...prices.map((p) => ({ head: p.label, body: p.value })),
+  { head: facts.trialPass.name, body: `${facts.trialPass.price}. ${facts.trialPass.blurb}` },
+];
 ---
 <ProgramPage title={title} description={description} path={path} eyebrow={eyebrow} heading={heading} lead={lead} schedule={schedule} trialProgram={trialProgram}>
-  <h2 class="section-title">Who it is for</h2>
-  <div class="fact-list">
-    {factRows.map((f) => <div><strong>{f.label}:</strong> {f.value}</div>)}
-  </div>
+  <ClassSection title="What you work on">
+    <RowList items={sections.map((s) => ({ head: s.title, body: s.body }))} />
+  </ClassSection>
 
-  <h2 class="section-title class-heading">What you work on</h2>
-  <div class="class-grid">
-    {sections.map((s) => <InfoCard title={s.title}>{s.body}</InfoCard>)}
-  </div>
+  <ClassSection title="Coaches">
+    <RowList items={coaches.map((c) => ({ head: c.name, body: c.role }))} />
+  </ClassSection>
 
-  <h2 class="section-title class-heading">Coaches</h2>
-  <div class="fact-list">
-    {coaches.map((c) => <div><strong>{c.name}:</strong> {c.role}</div>)}
-  </div>
-
-  <h2 class="section-title class-heading">Price</h2>
-  <div class="fact-list">
-    {prices.map((p) => <div><strong>{p.label}:</strong> {p.value}</div>)}
-    <div><strong>{facts.trialPass.name}:</strong> {facts.trialPass.price}. {facts.trialPass.blurb}</div>
-    <div>{facts.membership.terms}</div>
-  </div>
-
-  <h2 class="section-title class-heading">Class times</h2>
+  <ClassSection title="Prices">
+    <RowList items={priceRows} />
+    <p class="text-muted">{facts.membership.terms} <a href="/pricing/" class="link link-hover text-base-content">View membership pricing</a>.</p>
+  </ClassSection>
 </ProgramPage>
-
-<style>
-  .class-heading { margin-top: 40px; }
-  .class-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 16px; }
-</style>

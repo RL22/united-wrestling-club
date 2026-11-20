@@ -8,20 +8,20 @@ import SectionHeader from '../../ui/SectionHeader.astro';
 import TrialForm from '../../forms/TrialForm.astro';
 const p = facts.programs;
 ---
-<section class="section-block">
-  <div class="container">
+<section class="section-y">
+  <div class="container-uwc">
     <SectionHeader title="Find us" />
-    <h3>Address</h3>
+    <h3 class="mt-6 mb-2 text-xl font-bold">Address</h3>
     <FactList show="address" />
-    <p><a href={facts.address.mapsUrl} rel="noopener">Open in Google Maps</a></p>
-    <h3>Hours</h3>
+    <p><a class="link link-accent" href={facts.address.mapsUrl} rel="noopener">Open in Google Maps</a></p>
+    <h3 class="mt-6 mb-2 text-xl font-bold">Hours</h3>
     <FactList show="hours" />
-    <h3>Call</h3>
+    <h3 class="mt-6 mb-2 text-xl font-bold">Call</h3>
     <FactList show="phone" />
   </div>
 </section>
-<section class="section-block section-block--raised">
-  <div class="container">
+<section class="section-y bg-base-200">
+  <div class="container-uwc">
     <SectionHeader title="Programs at this location" />
     <InfoCard title={p.youth.name}>Wrestling classes for young athletes.</InfoCard>
     <InfoCard title={p.varsity.name}>Wrestling practice for teen athletes.</InfoCard>
@@ -29,14 +29,14 @@ const p = facts.programs;
     <InfoCard title={p.openMat.name} meta={p.openMat.ages}>Open mat, all affiliations welcome.</InfoCard>
   </div>
 </section>
-<section class="section-block">
-  <div class="container">
+<section class="section-y">
+  <div class="container-uwc">
     <SectionHeader title="Class times" />
     <ScheduleList />
   </div>
 </section>
-<section class="section-block section-block--raised">
-  <div class="container">
+<section class="section-y bg-base-200">
+  <div class="container-uwc">
     <SectionHeader title={`Try a ${facts.trialPass.name} for ${facts.trialPass.price}`} />
     <p>{facts.trialPass.blurb}</p>
     <TrialForm formId="locationTrialForm" idPrefix="loc" sourceTag="hayward" variant="page" submitLabel="Confirm $15 3-Day Pass" />

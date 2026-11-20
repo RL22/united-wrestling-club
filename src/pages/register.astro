@@ -12,28 +12,27 @@ import RegisterScript from '../components/pages/register/RegisterScript.astro';
   cta={false}
 >
   <PageHero id="register-heading" compact eyebrow="$15 · 3-Day Mat Pass" title="Try three practices" titleBrand="for $15" lead="Send your details to request a pass. For questions about your first visit, call the club. You can complete registration and the waiver on WrestlingIQ (Team #513)." />
-  <section class="section-block" aria-labelledby="register-form-heading">
-    <div class="container">
-      <div class="register-grid">
-        <div class="form-card">
-          <h2 class="section-title" id="register-form-heading">Request your pass</h2>
-          <p class="section-lead">Takes under a minute. No credit card on this form.</p>
-          <TrialForm variant="page" formId="registerForm" idPrefix="reg" />
+  <section class="section-y border-t border-border-default" aria-labelledby="register-form-heading">
+    <div class="container-uwc">
+      <div class="grid grid-cols-1 items-start gap-[clamp(24px,4vw,48px)] min-[861px]:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
+        <div class="card card-border border-border-default bg-base-100">
+          <div class="card-body p-[clamp(24px,4vw,40px)]">
+            <h2 class="mb-2 text-[clamp(1.7rem,3vw,2.4rem)] leading-[1.12] font-black text-base-content uppercase" id="register-form-heading">Request your pass</h2>
+            <p class="text-[1.05rem] leading-[1.6] text-muted">Takes under a minute. No credit card on this form.</p>
+            <TrialForm variant="page" formId="registerForm" idPrefix="reg" />
+          </div>
         </div>
-        <aside class="contact-card" aria-label="What happens next">
-          <h3 class="contact-card-title">What happens next</h3>
-          <ol class="steps-list">
-            <li><strong>Send your details.</strong> Submit the form to request a pass.</li>
-            <li><strong>Questions about your visit?</strong> Call the club for arrival information.</li>
-            <li><strong>Complete registration.</strong> Use the WrestlingIQ link to continue.</li>
-          </ol>
-          <p class="contact-card-note">Questions first? Call <a href={facts.phone.tel} class="footer-phone">{facts.phone.display}</a>.</p>
+        <aside class="card card-border border-border-default bg-base-200" aria-label="What happens next">
+          <div class="card-body gap-0 p-7">
+            <h3 class="card-title mb-3 text-[1.05rem] font-extrabold tracking-[0.04em] text-base-content uppercase">What happens next</h3>
+            <ol class="list-decimal space-y-3 pl-5 text-[0.92rem] leading-[1.6] text-muted">
+              <li><strong class="text-base-content">Send your details.</strong> Submit the form to request a pass.</li>
+              <li><strong class="text-base-content">Questions about your visit?</strong> Call the club for arrival information.</li>
+              <li><strong class="text-base-content">Complete registration.</strong> Use the WrestlingIQ link to continue.</li>
+            </ol>
+            <p class="mt-5 mb-0 text-[0.9rem] text-muted">Questions first? Call <a href={facts.phone.tel} class="link link-hover font-bold text-base-content">{facts.phone.display}</a>.</p>
+          </div>
         </aside>
-      </div>
-      <div class="form-success" id="reg-success" hidden>
-        <h2 class="section-title">Request sent</h2>
-        <p class="section-lead">Continue to WrestlingIQ to complete registration and the waiver.</p>
-        <a href="https://www.wrestlingiq.com/users/sign_up?paid_session_id=6327&show_registration=true&team_id=513" id="reg-wiq-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-accent-glow btn-block">Complete waiver on WrestlingIQ &nearr;</a>
       </div>
     </div>
   </section>

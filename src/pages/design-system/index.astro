@@ -1,0 +1,280 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const label = 'mb-5 block text-[0.72rem] font-extrabold tracking-[0.14em] uppercase text-brand-text';
+const sectionNumber = 'pt-2 text-[0.72rem] font-extrabold tracking-[0.14em] uppercase text-brand-text';
+const sectionHead = 'mb-10 grid grid-cols-1 gap-2 md:grid-cols-[100px_1fr] md:gap-6';
+const sectionTitle = 'text-[clamp(2rem,4vw,3.4rem)] font-black uppercase leading-[1.08] tracking-[-0.02em]';
+const sectionLead = 'mt-3.5 max-w-[65ch] text-muted';
+const panel = 'card card-border bg-base-200';
+const panelBody = 'card-body p-[clamp(24px,3vw,36px)]';
+const gutter = 'max-sm:px-4';
+const logoPanel = 'flex min-h-[180px] items-center justify-center';
+
+const swatches = [
+  { name: 'Brand crimson', value: '#902524', note: 'fills', swatch: 'bg-primary' },
+  { name: 'Brand text', value: '#E0524F', note: 'labels', swatch: 'bg-brand-text' },
+  { name: 'Accent', value: '#FF5252', note: 'focus', swatch: 'bg-accent' },
+  { name: 'Canvas', value: '#090A0D', note: 'background', swatch: 'bg-base-100' },
+  { name: 'Surface 1', value: '#111318', note: 'cards', swatch: 'bg-base-200' },
+  { name: 'Surface 2', value: '#181B22', note: 'raised', swatch: 'bg-base-300' },
+  { name: 'Text', value: '#F0F2F5', note: 'body', swatch: 'bg-base-content' },
+  { name: 'Muted text', value: '#9FA6B2', note: 'secondary', swatch: 'bg-muted' },
+];
+
+const flow = [
+  { n: '01', title: 'Hero video', note: 'Bottom-aligned copy' },
+  { n: '02', title: 'Subtle parallax', note: 'Footage moves on scroll' },
+  { n: '03', title: 'Review slider', note: 'Visitor controlled' },
+  { n: '04', title: 'Reduced motion', note: 'Parallax is disabled' },
+];
+
+const roles = [
+  { name: 'primary', value: '#902524', use: 'Main brand color', swatch: 'bg-primary' },
+  { name: 'accent', value: '#ff5252', use: 'Focus and highlights', swatch: 'bg-accent' },
+  { name: 'base-100', value: '#090a0d', use: 'Page canvas', swatch: 'bg-base-100' },
+  { name: 'base-200', value: '#111318', use: 'Cards and navigation', swatch: 'bg-base-200' },
+  { name: 'base-300', value: '#181b22', use: 'Raised surfaces', swatch: 'bg-base-300' },
+  { name: 'base-content', value: '#f0f2f5', use: 'Text on base colors', swatch: 'bg-base-content' },
+  { name: 'success', value: '#22c55e', use: 'Safe-state messages', swatch: 'bg-success' },
+  { name: 'warning', value: '#f59e0b', use: 'Caution messages', swatch: 'bg-warning' },
+  { name: 'error', value: '#ff5252', use: 'Errors and destructive actions', swatch: 'bg-error' },
+];
+
+const radii = [
+  { name: 'rounded-box', value: '8px', role: 'Cards, modals, alerts', shape: 'rounded-box' },
+  { name: 'rounded-field', value: '4px', role: 'Buttons, inputs, tabs', shape: 'rounded-field' },
+  { name: 'rounded-selector', value: 'pill', role: 'Badges, toggles, checkboxes', shape: 'rounded-selector' },
+];
+---
+
+<Layout title="UWC Design System" description="A visual reference for the United Wrestling Club design system.">
+  <a class="sr-only focus:not-sr-only focus:fixed focus:top-5 focus:left-5 focus:z-50 focus:bg-base-200 focus:p-3" href="#main">Skip to content</a>
+
+  <header class="border-b border-base-300">
+    <div class={`navbar container-uwc ${gutter} min-h-0 justify-between gap-5 py-4`}>
+      <img class="h-auto w-[180px]" src="/assets/logo--uwc-wordmark.svg" alt="United Wrestling Club">
+      <span class="hidden text-[0.72rem] font-extrabold tracking-[0.14em] uppercase text-muted min-[700px]:inline">Visual system / Homepage</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <div
+      class="hero"
+      style="background-image: linear-gradient(90deg, rgba(9, 10, 13, 0.96), rgba(9, 10, 13, 0.66)), url('/video_assets/stills_selected/still_44_coach_naweed_mat_command_uwc_banner.jpg'); background-position: center 35%; background-size: cover;"
+    >
+      <div class={`hero-content container-uwc ${gutter} w-full flex-col items-start justify-center py-0 pt-[clamp(72px,10vw,140px)] pb-16 text-left`}>
+        <span class="text-[0.72rem] font-extrabold tracking-[0.14em] uppercase text-brand-text">United Wrestling Club / Design reference</span>
+        <h1 class="mt-[18px] mb-6 max-w-[800px] text-[clamp(2.9rem,7vw,6rem)] font-black uppercase leading-[1.08] tracking-[-0.035em]">Built for<br><span class="text-accent">the mat.</span></h1>
+        <p class="max-w-[610px] text-[clamp(1rem,1.7vw,1.2rem)]">A visual guide to the colors, type, components, and interaction patterns shaping the current UWC homepage.</p>
+        <div class="mt-[30px] flex flex-wrap gap-3">
+          <a class="btn btn-primary text-[0.78rem] font-extrabold tracking-[0.06em] uppercase" href="#colors">Explore the system</a>
+          <a class="btn btn-outline text-[0.78rem] font-extrabold tracking-[0.06em] uppercase" href="/">View the homepage</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="overflow-x-auto border-b border-base-300 bg-base-200" aria-label="Design system sections">
+      <div class={`container-uwc ${gutter}`}>
+        <ul class="menu menu-horizontal flex-nowrap gap-2 py-2 text-[0.76rem] font-extrabold tracking-[0.08em] uppercase">
+          <li><a class="whitespace-nowrap text-muted hover:text-base-content" href="#colors">Color</a></li>
+          <li><a class="whitespace-nowrap text-muted hover:text-base-content" href="#type">Typography</a></li>
+          <li><a class="whitespace-nowrap text-muted hover:text-base-content" href="#identity">Identity</a></li>
+          <li><a class="whitespace-nowrap text-muted hover:text-base-content" href="#components">Components</a></li>
+          <li><a class="whitespace-nowrap text-muted hover:text-base-content" href="#experience">Experience</a></li>
+          <li><a class="whitespace-nowrap text-muted hover:text-base-content" href="#theme">daisyUI theme</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="colors" class="section-y border-b border-base-300">
+      <div class={`container-uwc ${gutter}`}>
+        <header class={sectionHead}>
+          <span class={sectionNumber}>01 / Color</span>
+          <div>
+            <h2 class={sectionTitle}>A dark room.<br>One hot color.</h2>
+            <p class={sectionLead}>Crimson leads actions and emphasis. Tinted dark surfaces, light text, and restrained status colors carry the rest.</p>
+          </div>
+        </header>
+        <div class="grid grid-cols-2 gap-3.5 md:grid-cols-4">
+          {swatches.map((s) => (
+            <div class={`${panel} overflow-hidden`}>
+              <div class={`h-28 ${s.swatch}`}></div>
+              <div class="card-body gap-1 p-4">
+                <h3 class="card-title text-[0.86rem] font-semibold">{s.name}</h3>
+                <p class="font-accent text-[0.78rem] font-bold text-muted">{s.value} / {s.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="type" class="section-y border-b border-base-300">
+      <div class={`container-uwc ${gutter}`}>
+        <header class={sectionHead}>
+          <span class={sectionNumber}>02 / Type</span>
+          <div>
+            <h2 class={sectionTitle}>Strong voice.<br>Clear detail.</h2>
+            <p class={sectionLead}>Montserrat brings weight to headlines and clarity to body copy. Space Grotesk gives numbers a distinct rhythm.</p>
+          </div>
+        </header>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Montserrat / Display 900</span>
+              <p class="text-[clamp(2.4rem,5vw,4.4rem)] font-black uppercase leading-[1.05] tracking-[-0.035em]">For every<br>stage.</p>
+            </div>
+          </div>
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Montserrat / Body 400</span>
+              <p class="max-w-[50ch] text-base leading-[1.65]">A wrestling room in Hayward with named coaches. Clear information, generous line height, and useful detail help every visitor find their place.</p>
+              <span class={`${label} mt-9`}>Space Grotesk / Figures 700</span>
+              <p class="font-accent text-[clamp(2.4rem,5vw,4rem)] leading-none font-bold">$139.99 <span class="text-base text-muted">/ month</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="identity" class="section-y border-b border-base-300">
+      <div class={`container-uwc ${gutter}`}>
+        <header class={sectionHead}>
+          <span class={sectionNumber}>03 / Identity</span>
+          <div>
+            <h2 class={sectionTitle}>One identity.<br>Three marks.</h2>
+            <p class={sectionLead}>The original club logo sits alongside the current full desktop lockup and compact mobile wordmark.</p>
+          </div>
+        </header>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Original / Club logo</span>
+              <div class={logoPanel}>
+                <img class="w-[190px] max-w-full" src="/live_site_content/assets/logo.png" alt="Original United Wrestling Club circular logo with wrestlers">
+              </div>
+            </div>
+          </div>
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Desktop / Full lockup</span>
+              <div class={logoPanel}>
+                <img class="w-[330px] max-w-full" src="/assets/logo--uwc_wrestlers.svg" alt="Full United Wrestling Club logo with wrestlers">
+              </div>
+            </div>
+          </div>
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Mobile / Wordmark</span>
+              <div class={logoPanel}>
+                <img class="w-[190px] max-w-full" src="/assets/logo--uwc-wordmark.svg" alt="United Wrestling Club wordmark">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="components" class="section-y border-b border-base-300">
+      <div class={`container-uwc ${gutter}`}>
+        <header class={sectionHead}>
+          <span class={sectionNumber}>04 / Components</span>
+          <div>
+            <h2 class={sectionTitle}>Simple, direct,<br>ready to act.</h2>
+            <p class={sectionLead}>Controls use strong labels, clear contrast, and a visible focus ring. Cards use dark surfaces, fine borders, and modest corners.</p>
+          </div>
+        </header>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Buttons / Links</span>
+              <div class="flex flex-wrap gap-3">
+                <a class="btn btn-primary text-[0.78rem] font-extrabold tracking-[0.06em] uppercase" href="/#programs">Primary action</a>
+                <a class="btn btn-outline text-[0.78rem] font-extrabold tracking-[0.06em] uppercase" href="/classes/">Secondary action</a>
+              </div>
+              <p class="mt-[22px] max-w-[70ch] text-[0.9rem] text-muted">Primary actions use crimson fill. Secondary actions use an outline. Links use concise, descriptive labels.</p>
+            </div>
+          </div>
+          <div class={panel}>
+            <div class={panelBody}>
+              <span class={label}>Review / Card treatment</span>
+              <div class="card card-border bg-base-300">
+                <div class="card-body gap-3 p-6">
+                  <div class="tracking-[0.08em] text-accent" role="img" aria-label="Five stars">★★★★★</div>
+                  <h3 class="card-title text-[1.35rem] font-bold uppercase">Community voices</h3>
+                  <p class="text-sm text-muted">Review cards combine a verbatim excerpt, a name, and a source. The homepage track keeps cards at a consistent height.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-y border-b border-base-300">
+      <div class={`container-uwc ${gutter}`}>
+        <header class={sectionHead}>
+          <span class={sectionNumber}>05 / Experience</span>
+          <div>
+            <h2 class={sectionTitle}>Movement with<br>a purpose.</h2>
+            <p class={sectionLead}>The homepage balances cinematic atmosphere with fast access to the practical details visitors need.</p>
+          </div>
+        </header>
+        <ol class="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {flow.map((step) => (
+            <li class={panel}>
+              <div class="card-body min-h-[110px] gap-2 p-5">
+                <span class="font-accent text-[0.8rem] font-bold text-brand-text">{step.n}</span>
+                <strong class="text-[0.85rem] font-bold uppercase">{step.title}</strong>
+                <p class="text-sm text-muted">{step.note}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <p class="mt-[22px] max-w-[70ch] text-[0.9rem] text-muted">The hero video currently autoplays without a pause control. The documentation records this as an accessibility issue to resolve.</p>
+      </div>
+    </section>
+
+    <section id="theme" class="section-y border-b border-base-300">
+      <div class={`container-uwc ${gutter}`}>
+        <header class={sectionHead}>
+          <span class={sectionNumber}>06 / daisyUI theme</span>
+          <div>
+            <h2 class={sectionTitle}>Named roles.<br>Real tokens.</h2>
+            <p class={sectionLead}>The uwc theme in global.css maps these roles to daisyUI color names. Components read the roles, so one token change updates every component that uses it.</p>
+          </div>
+        </header>
+        <div class="grid grid-cols-2 gap-3.5 lg:grid-cols-3">
+          {roles.map((r) => (
+            <div class={`${panel} overflow-hidden`}>
+              <div class={`h-20 ${r.swatch}`}></div>
+              <div class="card-body gap-1 p-4">
+                <h3 class="card-title text-[0.86rem] font-semibold">{r.name}</h3>
+                <p class="font-accent text-[0.78rem] font-bold text-muted">{r.value} / {r.use}</p>
+                <code class="text-[0.78rem] text-muted">{r.swatch}</code>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="divider mt-10 text-[0.72rem] font-extrabold tracking-[0.14em] uppercase text-muted">Radius tokens</div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {radii.map((r) => (
+            <div class={panel}>
+              <div class="card-body gap-3 p-5">
+                <div class={`h-16 w-full bg-primary ${r.shape}`}></div>
+                <h3 class="card-title text-[0.86rem] font-semibold">{r.name}</h3>
+                <p class="text-sm text-muted">{r.value} / {r.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class={`footer sm:footer-horizontal container-uwc ${gutter} items-center justify-between gap-5 py-9 text-[0.8rem] text-muted`}>
+    <span>United Wrestling Club / Design system</span>
+    <span>Companion to DESIGN.md</span>
+  </footer>
+</Layout>
