@@ -23,17 +23,15 @@ const tabClass = 'tab h-auto min-h-11 gap-2 rounded-selector border border-borde
         <button type="button" class={tabClass} data-filter="visiting" role="tab" aria-selected="false">Visiting Athletes <span class="font-accent font-bold opacity-85" id="count-visiting">{count('visiting')}</span></button>
       </div>
     </div>
-    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3" id="reviews-container">
+    <div class="columns-1 gap-x-10 sm:columns-2 lg:columns-3" id="reviews-container">
       {reviews.map((r) => (
-        <article class="review-card card card-border border-border-default bg-base-200 [&[hidden]]:hidden" data-category={category[r.author]}>
-          <div class="card-body gap-3.5 p-[26px]">
-            <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
-              <strong class="text-[0.92rem] font-bold text-base-content">{r.author}</strong>
-              <span class="text-[0.85rem] tracking-[2px] text-warning" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}</span>
-              <span class="text-[0.7rem] font-extrabold tracking-[0.08em] text-brand-text uppercase">{source(r.platform)}</span>
-            </div>
-            <p class="m-0 text-[0.92rem] leading-[1.7] text-pretty text-muted">“{r.body}”</p>
+        <article class="review-card mb-6 break-inside-avoid border-l-2 border-primary pl-6 [&[hidden]]:hidden" data-category={category[r.author]}>
+          <div class="mb-3.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
+            <strong class="text-[0.92rem] font-bold text-base-content">{r.author}</strong>
+            <span class="text-[0.85rem] tracking-[2px] text-warning" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}</span>
+            <span class="text-[0.7rem] font-extrabold tracking-[0.08em] text-brand-text uppercase">{source(r.platform)}</span>
           </div>
+          <p class="m-0 text-[0.95rem] leading-[1.7] text-pretty text-muted">“{r.body}”</p>
         </article>
       ))}
     </div>

@@ -215,7 +215,7 @@
 
       const recopyBtn = document.createElement('button');
       recopyBtn.type = 'button';
-      recopyBtn.className = 'btn btn-outline btn-block';
+      recopyBtn.className = 'btn btn-outline btn-block min-h-11';
       recopyBtn.textContent = 'Copy text again';
       recopyBtn.addEventListener('click', async () => {
         try {
@@ -247,14 +247,14 @@
     function prependSubmission(item) {
       const container = document.getElementById('reviews-container');
       const card = document.createElement('article');
-      card.className = 'review-card card card-border border-border-default bg-base-200 [&[hidden]]:hidden';
+      card.className = 'review-card mb-6 break-inside-avoid border-l-2 border-primary pl-6 [&[hidden]]:hidden';
       let cat = 'youth';
       if (item.perspective.includes('Adult')) cat = 'adult';
       if (item.perspective.includes('Visiting')) cat = 'visiting';
       card.dataset.category = cat;
 
       const meta = document.createElement('div');
-      meta.className = 'flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted';
+      meta.className = 'mb-3.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted';
       const strong = document.createElement('strong');
       strong.className = 'text-[0.92rem] font-bold text-base-content';
       strong.textContent = item.name;
@@ -268,13 +268,10 @@
       meta.append(strong, starSpan, source);
 
       const text = document.createElement('p');
-      text.className = 'm-0 max-w-none text-[0.92rem] leading-[1.7] text-pretty text-muted';
+      text.className = 'm-0 text-[0.95rem] leading-[1.7] text-pretty text-muted';
       text.textContent = '“' + item.reviewText + '”';
 
-      const body = document.createElement('div');
-      body.className = 'card-body gap-3.5 p-[26px]';
-      body.append(meta, text);
-      card.append(body);
+      card.append(meta, text);
       container.prepend(card);
       applyFilter();
     }

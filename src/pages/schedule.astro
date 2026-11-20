@@ -15,21 +15,23 @@ import { facts } from '../data/facts';
   cta={false}
 >
   <PageHero eyebrow="CLASS TIMES" title="Class" titleBrand="Schedule" lead="View our comprehensive class schedule and find the perfect time to train." compact />
-  <section class="section-y" aria-labelledby="sch-week">
+  <section class="section-y-tight" aria-labelledby="sch-week">
     <div class="container-uwc">
       <h2 class="sr-only" id="sch-week">Weekly class times</h2>
       <ScheduleWeek />
     </div>
   </section>
-  <section class="section-y bg-base-200" aria-labelledby="sch-hours">
+  <section class="section-y-tight bg-base-200" aria-labelledby="sch-hours">
     <div class="container-uwc">
       <SectionHeader title="Gym hours" id="sch-hours" />
-      <FactList show="hours" />
+      <div class="mx-auto max-w-[460px] rounded-box border border-neutral bg-base-100 p-6 text-center">
+        <FactList show="hours" />
+      </div>
     </div>
   </section>
   <section class="section-y" aria-labelledby="sch-trial">
     <div class="container-uwc">
-      <SectionHeader title="Try three practices for $15" lead={facts.booking.howTo} id="sch-trial" />
+      <SectionHeader title={`Try three practices for ${facts.trialPass.price}`} lead={facts.booking.howTo} id="sch-trial" />
       <div class="mx-auto max-w-[560px]">
         <TrialForm idPrefix="sch" formId="scheduleTrialForm" variant="inline" sourceTag="schedule-f1b" />
       </div>

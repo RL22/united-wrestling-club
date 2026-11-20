@@ -14,12 +14,12 @@ export const facts = {
   /** KB-02. Say "Call". "Text" appears only in forms/ConsentSms.astro. */
   phone: { id: 'KB-02', display: '(510) 303-4869', tel: 'tel:5103034869', digits: '5103034869' },
   email: 'unitedwrestlingclub@gmail.com',
-  /** KB-03. The Saturday end time is unconfirmed (D1, D2). Hours appear on a page only through ui/FactList. */
+  /** KB-03. Hours appear on a page only through ui/FactList. */
   hours: {
     id: 'KB-03',
     rows: [
       { days: 'Mon–Fri', time: '6:00 AM – 10:00 PM' },
-      { days: 'Saturday', time: '10:00 AM – 12:00 PM', note: 'open mat' },
+      { days: 'Saturday', time: '8:00 AM – 12:00 PM', note: 'gi jiu-jitsu and open mat' },
       { days: 'Sunday', time: 'Closed' },
     ],
     footnote: 'Times can shift around holidays and tournaments.',

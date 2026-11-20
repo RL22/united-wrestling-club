@@ -2,21 +2,23 @@
 // Weekly schedule. A week calendar from lg up; program tabs with a list below that.
 // Times come from data/schedule.ts. Pending rows stay hidden, as they do on the homepage.
 import { scheduleRows, type ScheduleRow } from '../../../data/schedule';
-import { facts } from '../../../data/facts';
 
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const HOUR_PX = 56;
+// Short classes grow to this height so the time and a two-line label both fit.
+const MIN_BLOCK_PX = 52;
 const FIRST_HOUR = 6;
 const LAST_HOUR = 22;
 const GRID_MIN = FIRST_HOUR * 60;
 const GRID_HEIGHT = (LAST_HOUR - FIRST_HOUR) * HOUR_PX;
 
 // Tone classes are written out in full so Tailwind can find them.
+// `label` is the one name for each program, used by both the tabs and the calendar legend.
 const programs = [
-  { id: 'youth', label: 'Kids and youth', name: facts.programs.youth.name, tone: 'border-primary/70 bg-primary/20' },
-  { id: 'varsity', label: 'Scholastic', name: facts.programs.varsity.name, tone: 'border-warning/70 bg-warning/15' },
-  { id: 'adult', label: 'Adults', name: facts.programs.adult.name, tone: 'border-info/70 bg-info/15' },
-  { id: 'open', label: 'Open mat', name: facts.programs.openMat.name, tone: 'border-success/70 bg-success/15' },
+  { id: 'youth', label: 'Kids and youth', tone: 'border-primary/70 bg-primary/20' },
+  { id: 'varsity', label: 'Scholastic', tone: 'border-warning/70 bg-warning/15' },
+  { id: 'adult', label: 'Adults', tone: 'border-info/70 bg-info/15' },
+  { id: 'open', label: 'Open mat', tone: 'border-success/70 bg-success/15' },
 ];
 const toneFor = (id: string) => programs.find((p) => p.id === id)?.tone ?? '';
 
@@ -58,13 +60,15 @@ const sorted = rows.slice().sort((a, b) => firstDay(a) - firstDay(b) || startOf(
 
 const blocks = rows.flatMap((row) => {
   const { start, end } = span(row.time);
-  return expandDays(row.days).map((day) => ({ row, day, start, end, tone: toneFor(row.programs[0]) }));
+  const height = Math.max(((end - start) / 60) * HOUR_PX - 2, MIN_BLOCK_PX);
+  return expandDays(row.days).map((day) => ({ row, day, start, height, tone: toneFor(row.programs[0]) }));
 });
 
 const hours = Array.from({ length: LAST_HOUR - FIRST_HOUR }, (_, i) => FIRST_HOUR + i);
 const hourLabel = (h: number) => `${h % 12 === 0 ? 12 : h % 12} ${h < 12 ? 'AM' : 'PM'}`;
 const topPx = (minutes: number) => ((minutes - GRID_MIN) / 60) * HOUR_PX;
 const COLS = 'grid-cols-[56px_repeat(6,minmax(0,1fr))]';
+const GRID_LINES = `repeating-linear-gradient(to bottom, var(--color-neutral) 0, var(--color-neutral) 1px, transparent 1px, transparent ${HOUR_PX}px)`;
 ---
 
 <!-- Below lg: program tabs, one list at a time. The tab script in PageScripts drives these. -->
@@ -78,19 +82,21 @@ const COLS = 'grid-cols-[56px_repeat(6,minmax(0,1fr))]';
         aria-controls={`panel-${p.id}`}
         aria-selected={i === 0 ? 'true' : 'false'}
         tabindex={i === 0 ? 0 : -1}
-        class="schedule-tab btn btn-outline min-h-11 border-neutral px-3 text-[0.78rem] font-extrabold uppercase tracking-[0.06em] text-muted aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content"
+        class="schedule-tab btn btn-outline h-auto min-h-11 whitespace-normal border-neutral px-3 py-2.5 text-sm font-extrabold uppercase leading-tight tracking-[0.06em] text-muted hover:border-border-brand hover:bg-transparent hover:text-base-content aria-selected:border-primary aria-selected:bg-primary aria-selected:text-primary-content aria-selected:hover:bg-primary aria-selected:hover:text-primary-content"
       >{p.label}</button>
     ))}
   </div>
 
   {programs.map((p, i) => (
     <div class="schedule-panel" role="tabpanel" id={`panel-${p.id}`} aria-labelledby={`tab-${p.id}`} hidden={i !== 0}>
-      <ul class="divide-y divide-base-300 overflow-hidden rounded-box border border-neutral bg-base-200">
+      <ul class="divide-y divide-neutral overflow-hidden rounded-box border border-neutral bg-base-200">
         {sorted.filter((r) => r.programs.includes(p.id)).map((r) => (
-          <li class="grid gap-1 px-[18px] py-4">
-            <span class="font-bold text-base-content">{r.days}</span>
-            <span class="font-semibold text-accent">{r.time}</span>
-            <span class="text-muted">{r.label}</span>
+          <li class="flex flex-col gap-1 px-4 py-3.5 sm:px-[18px] sm:py-4">
+            <span class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+              <span class="font-bold text-base-content">{r.days}</span>
+              <span class="font-semibold tabular-nums text-accent">{r.time}</span>
+            </span>
+            <span class="text-sm text-muted">{r.label}</span>
           </li>
         ))}
       </ul>
@@ -102,9 +108,9 @@ const COLS = 'grid-cols-[56px_repeat(6,minmax(0,1fr))]';
 <div class="hidden lg:block">
   <div class="mb-5 flex flex-wrap gap-x-6 gap-y-2">
     {programs.map((p) => (
-      <span class="flex items-center gap-2 text-[0.82rem] text-muted">
+      <span class="flex items-center gap-2 text-sm text-muted">
         <span class={`size-3 rounded-field border ${p.tone}`} aria-hidden="true"></span>
-        {p.name}
+        {p.label}
       </span>
     ))}
   </div>
@@ -113,26 +119,22 @@ const COLS = 'grid-cols-[56px_repeat(6,minmax(0,1fr))]';
     <div class={`grid ${COLS} border-b border-neutral`}>
       <div></div>
       {DAYS.map((d) => (
-        <div class="px-2 py-3 text-center text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-base-content">{d}</div>
+        <div class="px-2 py-3 text-center text-[0.8rem] font-extrabold uppercase tracking-[0.12em] text-base-content">{d}</div>
       ))}
     </div>
 
     <div class={`grid ${COLS}`}>
       <div class="relative" style={`height:${GRID_HEIGHT}px`}>
         {hours.map((h) => (
-          <span class="absolute right-2 -translate-y-1/2 text-[0.7rem] text-muted" style={`top:${topPx(h * 60)}px`}>{hourLabel(h)}</span>
+          <span class="absolute right-2 -translate-y-1/2 text-xs text-muted" style={`top:${topPx(h * 60)}px`}>{hourLabel(h)}</span>
         ))}
       </div>
       {DAYS.map((d) => (
-        <div class="relative border-l border-neutral [background-image:repeating-linear-gradient(to_bottom,#232733_0,#232733_1px,transparent_1px,transparent_56px)]" style={`height:${GRID_HEIGHT}px`}>
+        <div class="relative border-l border-neutral" style={`height:${GRID_HEIGHT}px;background-image:${GRID_LINES}`}>
           {blocks.filter((b) => b.day === d).map((b) => (
-            <div class={`absolute inset-x-1 overflow-hidden rounded-field border px-2 py-1 text-[0.72rem] leading-tight ${b.tone}`} style={`top:${topPx(b.start) + 1}px;height:${((b.end - b.start) / 60) * HOUR_PX - 2}px`}>
-              {b.end - b.start < 45
-                ? <span class="block truncate font-bold text-base-content">{b.row.time} · {b.row.label}</span>
-                : <>
-                    <span class="block font-bold text-base-content">{b.row.label}</span>
-                    <span class="block font-semibold text-accent">{b.row.time}</span>
-                  </>}
+            <div class={`absolute inset-x-1 overflow-hidden rounded-field border px-2 py-1 text-xs leading-tight ${b.tone}`} style={`top:${topPx(b.start) + 1}px;height:${b.height}px`}>
+              <span class="block font-semibold tabular-nums text-accent">{b.row.time}</span>
+              <span class="block font-bold text-base-content">{b.row.label}</span>
             </div>
           ))}
         </div>

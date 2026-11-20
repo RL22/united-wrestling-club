@@ -1,21 +1,27 @@
 ---
-// Plan cards from discovery/archive/legacy-site/live_site_content/pricing.json (prices and URLs as sourced). Card markup follows home/Pricing.astro.
+// Plan rows from discovery/archive/legacy-site/live_site_content/pricing.json (prices and URLs as sourced).
+// Rows, not cards: the price and the sign-up action line up in columns on desktop and stack on phones.
 import Button from '../../ui/Button.astro';
 export type Plan = { name: string; price: string; period: string; schedule: string; featured: boolean; url: string };
 interface Props { plans: Plan[] }
 const { plans } = Astro.props;
+const money = (value: string) => Number(value).toFixed(2);
 ---
-<div class="mx-auto grid max-w-[480px] grid-cols-1 gap-6 min-[960px]:max-w-none min-[960px]:grid-cols-3">
+<ul class="mx-auto max-w-[960px] divide-y divide-neutral border-y border-neutral">
   {plans.map((p) => (
-    <div class:list={['card relative flex flex-col rounded-box border border-base-300 bg-base-200 px-[26px] py-8', { 'border-2 border-primary': p.featured }]}>
-      {p.featured && <span class="badge badge-accent absolute -top-3.5 left-1/2 h-auto -translate-x-1/2 px-4 py-1 text-xs font-extrabold uppercase tracking-[0.12em] whitespace-nowrap">Featured</span>}
-      <h3 class="mb-3.5 text-lg font-extrabold uppercase">{p.name}</h3>
-      <div class="mb-3.5 flex items-baseline gap-1.5">
-        <span class="font-accent text-[2.4rem] leading-none font-black">${p.price}</span>
-        <span class="text-sm font-semibold uppercase text-base-content/70">{p.period}</span>
+    <li class:list={['grid gap-4 border-l-4 py-6 pl-5 min-[960px]:grid-cols-[minmax(0,1fr)_200px_260px] min-[960px]:items-center min-[960px]:gap-10', p.featured ? 'border-primary' : 'border-transparent']}>
+      <div class="min-w-0">
+        <h3 class="mb-1.5 flex flex-wrap items-center gap-x-3 gap-y-2 text-lg leading-snug font-extrabold uppercase">
+          {p.name}
+          {p.featured && <span class="badge badge-accent h-auto px-3 py-1 text-xs font-extrabold tracking-[0.12em] uppercase">Featured</span>}
+        </h3>
+        {p.schedule && <p class="m-0 text-sm text-muted">{p.schedule}</p>}
       </div>
-      {p.schedule && <p class="mb-5 grow text-sm text-base-content/70">{p.schedule}</p>}
-      <Button href={p.url} variant={p.featured ? 'primary' : 'outline'} block class="mt-auto">Sign up on WrestlingIQ</Button>
-    </div>
+      <div class="flex items-baseline gap-1.5">
+        <span class="font-accent text-[2.2rem] leading-none font-black">${money(p.price)}</span>
+        <span class="text-sm font-semibold uppercase text-muted">{p.period}</span>
+      </div>
+      <Button href={p.url} variant={p.featured ? 'primary' : 'outline'} class="min-h-11 w-full min-[960px]:w-auto">Sign up on WrestlingIQ</Button>
+    </li>
   ))}
-</div>
+</ul>

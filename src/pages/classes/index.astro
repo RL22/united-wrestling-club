@@ -19,20 +19,18 @@ const classes = routes.filter((r) => r.path.startsWith('/classes/') && r.path !=
   <PageHero eyebrow="Classes" title="Classes at United Wrestling Club" lead="Pick a class, then try three practices for $15." compact />
   <section class="section-y border-t border-base-300">
     <div class="container-uwc">
-      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="list overflow-hidden rounded-box border border-neutral bg-base-200">
         {classes.map((c) => (
-          <div class="card card-border border-base-300 bg-base-200">
-            <div class="card-body gap-2 p-6">
-              {blurbs[c.path]?.badge && <span class="badge badge-outline w-fit whitespace-nowrap font-extrabold uppercase">{blurbs[c.path]?.badge}</span>}
-              <h3 class="card-title text-xl font-extrabold uppercase">{c.title}</h3>
-              <p class="grow text-sm leading-relaxed text-base-content/70">{blurbs[c.path]?.text ?? ''}</p>
-              <div class="card-actions justify-start border-t border-base-300 pt-4">
-                <a href={c.path} class="link link-hover text-sm font-extrabold uppercase tracking-[0.08em] no-underline">See {c.title}</a>
-              </div>
+          <li class="grid gap-3 border-b border-base-300 px-[18px] py-6 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:gap-6 sm:px-6">
+            <div class="flex flex-col gap-1.5">
+              {blurbs[c.path]?.badge && <span class="text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-brand-text">{blurbs[c.path]?.badge}</span>}
+              <h2 class="text-xl font-black uppercase leading-tight">{c.title}</h2>
+              <p class="text-muted">{blurbs[c.path]?.text ?? ''}</p>
             </div>
-          </div>
+            <a href={c.path} class="link link-hover inline-flex min-h-11 items-center text-sm font-extrabold uppercase tracking-[0.08em] text-base-content no-underline">See {c.title}</a>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   </section>
 </InteriorLayout>

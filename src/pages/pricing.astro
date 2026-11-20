@@ -2,6 +2,7 @@
 import InteriorLayout from '../layouts/InteriorLayout.astro';
 import PageHero from '../components/ui/PageHero.astro';
 import SectionHeader from '../components/ui/SectionHeader.astro';
+import Button from '../components/ui/Button.astro';
 import PricingPlans from '../components/pages/info/PricingPlans.astro';
 import TrialForm from '../components/forms/TrialForm.astro';
 import { facts } from '../data/facts';
@@ -27,14 +28,21 @@ const plans = [
   <PageHero eyebrow="PRICING" title="Membership" titleBrand="Options" lead="Invest in your wrestling journey with our flexible membership plans designed to fit your needs." compact />
   <section class="section-y" aria-labelledby="plans-heading">
     <div class="container-uwc">
-      <SectionHeader title="Plans" lead={`${facts.trialPass.name}: ${facts.trialPass.price} for three practices. ${facts.trialPass.blurb}`} id="plans-heading" />
+      <SectionHeader title="Plans" lead={facts.membership.terms} id="plans-heading" />
       <PricingPlans plans={plans} />
-      <p class="mt-7 text-center text-base-content/70">{facts.booking.payment.note}</p>
+      <div class="mx-auto mt-10 flex max-w-[960px] flex-col gap-5 min-[640px]:flex-row min-[640px]:items-center min-[640px]:justify-between">
+        <div class="max-w-[520px]">
+          <p class="m-0 text-base font-extrabold uppercase text-base-content">New here? {facts.trialPass.name}: {facts.trialPass.price}</p>
+          <p class="m-0 mt-1 text-sm text-muted">{facts.trialPass.blurb}</p>
+        </div>
+        <Button trial variant="accent" class="min-h-11 w-full min-[640px]:w-auto">Start the 3-Day Mat Pass</Button>
+      </div>
+      <p class="mx-auto mt-7 mb-0 max-w-[960px] text-sm text-muted">{facts.booking.payment.note}</p>
     </div>
   </section>
   <section class="section-y bg-base-200" aria-labelledby="member-heading">
     <div class="container-uwc">
-      <SectionHeader title="Ask about membership" lead={facts.booking.howTo} id="member-heading" />
+      <SectionHeader title="Start with the 3-Day Mat Pass" lead={facts.booking.howTo} id="member-heading" />
       <div class="mx-auto max-w-[560px]">
         <TrialForm idPrefix="prc" formId="pricingMemberForm" variant="page" sourceTag="pricing-membership" submitLabel="Confirm $15 3-Day Pass" />
       </div>

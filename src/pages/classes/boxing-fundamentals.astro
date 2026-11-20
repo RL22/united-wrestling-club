@@ -1,7 +1,8 @@
 ---
 import ProgramPage from '../../components/templates/ProgramPage.astro';
+import ClassSection from '../../components/pages/classes-adult/ClassSection.astro';
 import PriceFacts from '../../components/pages/classes-adult/PriceFacts.astro';
-import Topics from '../../components/pages/classes-adult/Topics.astro';
+import RowList from '../../components/pages/classes-adult/RowList.astro';
 import { facts } from '../../data/facts';
 const boxingCoach = facts.coaches.find((c) => c.role === 'Boxing');
 const topics = [
@@ -24,10 +25,15 @@ const topics = [
   trialProgram="adult"
 >
   <p>Our boxing fundamentals class is for people of all skill levels, from anyone starting their first day of boxing to intermediate boxers who want to sharpen their tools. The structure is steady and the pace is lively, covering a wide range of topics.</p>
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">What you will work on</h2>
-  <Topics items={topics} />
-  {boxingCoach && <p><strong>Coach:</strong> {boxingCoach.name}, {boxingCoach.role.toLowerCase()}.</p>}
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Prices</h2>
-  <PriceFacts />
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Class times</h2>
+  <ClassSection title="What you work on">
+    <RowList items={topics} />
+  </ClassSection>
+  {boxingCoach && (
+    <ClassSection title="Coaches">
+      <RowList items={[{ head: boxingCoach.name, body: boxingCoach.role }]} />
+    </ClassSection>
+  )}
+  <ClassSection title="Prices">
+    <PriceFacts />
+  </ClassSection>
 </ProgramPage>

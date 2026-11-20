@@ -1,6 +1,8 @@
 ---
-// Shared body for the three wrestling class pages. All copy is passed in by the page; times come from ui/ScheduleList via the template.
+// Shared body for the three wrestling class pages. Copy comes from each page; coaches and trial terms come from data/facts.ts.
 import ProgramPage from '../../templates/ProgramPage.astro';
+import ClassSection from '../classes-adult/ClassSection.astro';
+import RowList from '../classes-adult/RowList.astro';
 import { facts } from '../../../data/facts';
 
 interface Props {
@@ -10,51 +12,30 @@ interface Props {
   eyebrow: string;
   heading: string;
   lead: string;
-  facts: { label: string; value: string }[];
   sections: { title: string; body: string }[];
   prices: { label: string; value: string }[];
   coachNames: string[];
   schedule: { program?: string; tag?: string };
   trialProgram: 'youth' | 'varsity' | 'adult';
 }
-const { title, description, path, eyebrow, heading, lead, facts: factRows, sections, prices, coachNames, schedule, trialProgram } = Astro.props;
+const { title, description, path, eyebrow, heading, lead, sections, prices, coachNames, schedule, trialProgram } = Astro.props;
 const coaches = facts.coaches.filter((c) => coachNames.includes(c.name));
+const priceRows = [
+  ...prices.map((p) => ({ head: p.label, body: p.value })),
+  { head: facts.trialPass.name, body: `${facts.trialPass.price}. ${facts.trialPass.blurb}` },
+];
 ---
 <ProgramPage title={title} description={description} path={path} eyebrow={eyebrow} heading={heading} lead={lead} schedule={schedule} trialProgram={trialProgram}>
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Who it is for</h2>
-  <ul class="list rounded-box border border-base-300 bg-base-200">
-    {factRows.map((f) => (
-      <li><strong>{f.label}:</strong> <span>{f.value}</span></li>
-    ))}
-  </ul>
+  <ClassSection title="What you work on">
+    <RowList items={sections.map((s) => ({ head: s.title, body: s.body }))} />
+  </ClassSection>
 
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">What you work on</h2>
-  <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-    {sections.map((s) => (
-      <div class="card card-border border-base-300 bg-base-200">
-        <div class="card-body gap-2 p-6">
-          <h3 class="card-title text-xl font-extrabold uppercase">{s.title}</h3>
-          <p class="text-sm leading-relaxed text-base-content/70">{s.body}</p>
-        </div>
-      </div>
-    ))}
-  </div>
+  <ClassSection title="Coaches">
+    <RowList items={coaches.map((c) => ({ head: c.name, body: c.role }))} />
+  </ClassSection>
 
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Coaches</h2>
-  <ul class="list rounded-box border border-base-300 bg-base-200">
-    {coaches.map((c) => (
-      <li><strong>{c.name}:</strong> <span>{c.role}</span></li>
-    ))}
-  </ul>
-
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Price</h2>
-  <ul class="list rounded-box border border-base-300 bg-base-200">
-    {prices.map((p) => (
-      <li><strong>{p.label}:</strong> <span>{p.value}</span></li>
-    ))}
-    <li><strong>{facts.trialPass.name}:</strong> <span>{facts.trialPass.price}. {facts.trialPass.blurb}</span></li>
-    <li><span>{facts.membership.terms}</span></li>
-  </ul>
-
-  <h2 class="mt-10 mb-4 text-3xl font-black uppercase leading-tight md:text-[2.75rem]">Class times</h2>
+  <ClassSection title="Prices">
+    <RowList items={priceRows} />
+    <p class="text-muted">{facts.membership.terms} <a href="/pricing/" class="link link-hover text-base-content">View membership pricing</a>.</p>
+  </ClassSection>
 </ProgramPage>
